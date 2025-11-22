@@ -1,0 +1,890 @@
+---
+title: "Git and GitHub ![](images/04-git/github-mark.png)"
+subtitle: "MATH/COSC 3570 Introduction to Data Science"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+# date: "`r format(Sys.time(), '%B %d %Y')`"
+# macros: _macros.tex # import a list of TeX/LaTeX definitions
+format: 
+  revealjs:
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    # include-in-header:
+    #     - "macros.tex"
+    highlight-style: github
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t
+    incremental: false
+    width: 1800
+    height: 1000
+    margin: 0.05
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[math3570-s25.github.io/website](https://math3570-s25.github.io/website/)"
+    theme: ["simple", "slides.scss"]
+    echo: false
+    multiplex: true
+    code-link: true
+    fig-cap-location: bottom
+    fig-align: center
+    transition: none ## fade slide convex concave zoom
+    code-line-numbers: false
+    title-slide-attributes:
+      data-background-color: "#447099"
+      # data-background-image: images/paper-texture.jpg
+      # data-background-size: cover
+      # data-background-color: "#698ED5"
+editor: source
+execute:
+  freeze: true
+---
+
+
+# {visibility="hidden"}
+
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fontawesome)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    fig.retina = 10,
+    fig.path = "images/04-git/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+
+# Version Control and Collaboration <br> Git and GitHub {background-color="#A7D5E8"}
+
+
+
+::: notes
+
+file:///Users/chenghanyu/Dropbox/academia/books/r/teach-r-online-master/03-git/03-git.html#14
+- How's your weekend? Did you do any fun?
+- Last week, we set up RStudio Cloud, and we learned how to create a new project in a workspace, and how to create a new workspace.
+- Did you also install R and RStudio locally on your computer? It's totally optional. You can do everything we need in this class using RStudio Cloud. 
+- Today, we'll learn how to use version control, or more specifically something called Git/GitHub in RStudio.
+- If you like to be a software developer or data scientist, version control is a must have in your toolkit. You will be using Git and GitHub very often. OK.
+- I am actually teaching you to be a real data scientist. In real world, when you work in a company, you will be using the tools I teach you today.
+
+:::
+
+## Git and GitHub
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| out-width: 55%
+knitr::include_graphics("images/04-git/git-logo.png")
+```
+
+- [**Git**](https://git-scm.com/) is a **version control** system -- like **Track Changes** features from MS Word, on steroids.
+- It's not the only version control system, but it's a popular one.
+
+:::
+
+
+::: {.column width="50%"}
+
+```{r}
+#| out-width: 50%
+knitr::include_graphics("images/04-git/github-mark.png")
+```
+
+- [**GitHub**](https://github.com/) is a home for Git-based projects (repository, or **repo**) **on the cloud** -- like Dropbox but much better.
+- We'll use GitHub for web hosting homework.
+
+:::
+
+::::
+
+::: notes
+
+- R and RStudio are two different things. Same here. Git and GitHub are two different things.
+- Git is a version control system like Track Changes features from Microsoft Word, but it is much more powerful.
+- Basically Git helps us keep track of changes or progress of projects, so we can more easily manage our project because we can check what we did on our project on any given day.
+- I'll talk more about version control in a minute.
+- GitHub is the home for Git-based projects (repository, or repo) on the internet -- like Dropbox but much better.
+- Once we put those projects on the cloud in GitHub, we share our projects with others, usually our collaborators, or the entire team, so every team member can work on this project, make changes, and Git and GitHub will record who, when, and what the changes are made.
+- I don't need to teach you data science this way, but I hope you will appreciate I introduce git/github to you because knowing version control is really important for a developer.
+
+:::
+
+
+
+## Versioning
+
+::: small
+
+```{r}
+#| out-width: 67%
+#| fig-cap: "Source: Data Science in a Box Unit 1 - Deck 3"
+knitr::include_graphics("images/04-git/lego-steps.png")
+```
+
+:::
+
+::: notes
+
+- So think about this figure here. Versioning is like this. If you are playing Lego, and you want to build a house using Lego bricks, you would lay them out layer by layer, and you might along the way actually record what's happening at each step.
+- Base floor, walls, pillars, roof.
+
+:::
+
+
+# When we want to take a snapshot of our current work, we create a [commit]{.blue}.
+
+
+::: notes
+
+The idea is with Git, When we want to take a snapshot of our current work, we create something called commit, which is a message telling us what the version being committed is about.
+
+:::
+
+
+## Versioning with human readable messages
+
+- Informative messages: let the next person know what happened with each change.
+
+::: small
+
+```{r}
+#| out-width: 60%
+#| fig-cap: "Source: Data Science in a Box Unit 1 - Deck 3"
+knitr::include_graphics("images/04-git/lego-steps-commit-messages.png")
+```
+
+:::
+
+
+::: notes
+
+- Version control with git feels a lit more like this, where you have the versions, but then you actually have some human readable messages.
+- Remember usually there are several people working on the same project, Adding a message on a particular version of your work let other people know what changes you made in this version comparing to the previous version. 
+- Even the project is an individual project, adding messages remind ourselves of what we did previously at each stage of the work.
+- In Git, The first commit which is a human readable message you make in a repository is always called the first commit or initial commit.
+- Then after that you get to choose what you wanna say about it.
+- Like here in version 2, we have built back and front of the base, and then in version 3, finished building base, so we are actually letting the next person who come after you that could be you looking back at a project of yours or somebody else you are collaborating with know what happened with each change
+<!-- - When I say each change, I don't mean every time you make change to a document. You as a human get to decide where to put these version points, so it's not every single letter you change, it's not every single piece of code you write. -->
+<!-- - But at some point, you feel like I have added something to this project that is meaningful or noteworthy, or I'm done today, and I'm going to leave things where it is. It's useful to leave a human readable message along with that commit that you make for that particular version. -->
+- Installation instruction.
+- furniture assembly guide
+
+:::
+
+
+
+## Why Need Version Control
+
+```{r}
+#| out-width: 45%
+knitr::include_graphics("images/04-git/phd_comics_vc.gif")
+```
+
+
+
+::: notes
+
+<!-- - Why we might need version control?  -->
+- Think if you are not using version control, you very much can end up in a situation like this where you have a document you are working on, and you know we are humans feel like ok i'm almost done, I'm going to call this particular version I have final.doc.
+- But then you actually get some maybe revision comments from your advisor, and then that becomes final_rev2.doc. And you go back and forth lots of times. At the end, it's everything like final, final3, final10, final_last whatever, it just keeps going.
+- The thing is these file names are not really very informative because final or final revisions don't really say anything.
+- But if you really had tagged the changes you make between the final and the final 2, that could actually be informative if you actually have to go back to them.
+
+:::
+
+
+
+
+# {background-image="images/04-git/file_management_1.png" background-size="80%" background-position="50% 50%"}
+
+
+# {background-image="images/04-git/file_management_2.png" background-size="80%" background-position="50% 50%"}
+
+
+# {background-image="images/04-git/file_management_3.png" background-size="80%" background-position="50% 50%"}
+
+# {background-image="images/04-git/file_management_4.png" background-size="80%" background-position="50% 50%"}
+
+
+# {background-image="images/04-git/file_management_5.png" background-size="80%" background-position="50% 50%"}
+
+
+# {background-image="images/04-git/file_management_6.png" background-size="80%" background-position="50% 50%"}
+
+
+# {background-image="images/04-git/file_management_7.png" background-size="80%" background-position="50% 50%"}
+
+
+# When you [commit]{.blue} a file or set of files, <br>Git will save some information automatically.
+
+
+
+## How We Use Git and GitHub
+
+- On GitHub, I create organization [**math3570-s25** and repos](https://github.com/math3570-s25).
+
+::: small
+
+```{r}
+#| out-width: 80%
+#| fig-cap: "Source: Data Science in a Box Unit 1 - Deck 3"
+knitr::include_graphics("images/04-git/whole-game-02.png")
+```
+
+:::
+
+::: notes
+
+- How are we going to use Git/GitHub in this class?
+- We have a course organization (**2024-spring-math-3570**) I created on GitHub.
+- Within the organization, there will be a bunch of repositories I created for you.
+- Think each repo as a project you will be working on. It is basically your homework assignment.
+<!-- - When we are working with these, I'll prepare these repositories for you, where for each of these assignments, you have a repository for yourself. -->
+<!-- - And what you will do is you are going to go to GitHub, find the repo that's named after you, and then clone this as an rstudio project. -->
+<!-- - We talked about creating projects in our rstudio, but just lauching them there within Rstudio. -->
+<!-- - This time we are going to bring it from GitHub, and that's called cloning -->
+
+:::
+
+
+
+
+## How We Use Git and GitHub
+
+- You **clone** the repo I create for you to your Posit Cloud as an project.
+
+::: small
+
+```{r}
+#| out-width: 80%
+#| fig-cap: "Source: Data Science in a Box Unit 1 - Deck 3"
+knitr::include_graphics("images/04-git/whole-game-03.png")
+```
+
+:::
+
+::: notes
+
+- And what you will do is you are going to go to your GitHub, find the repo that's named after you, and then clone this as an rstudio project.
+- We talked about creating projects in our rstudio, but just lauching them there within Rstudio.
+- This time we are going to create a project from GitHub, and that's called cloning
+
+:::
+
+
+
+## How We Use Git and GitHub
+
+- You **push** your updated work in Posit Cloud back to GitHub.
+
+::: small
+
+```{r}
+#| out-width: 80%
+#| fig-cap: "Source: Data Science in a Box Unit 1 - Deck 3"
+knitr::include_graphics("images/04-git/whole-game-04.png")
+```
+
+:::
+
+
+
+::: notes
+
+- So you are going to clone them in Posit Cloud, and then you are going to do your assignment, write R code, and finally version control your files with Git.
+- So along the way, as you make some changes, you are going to tag these changes as commits, then every once a while, you are going to push your changes back to the repo, which means that by the deadline of an assignment, your changes need to appear in your repo, because what I will be looking at for you is not what's happening in Posit Cloud, but actually what's happening on GitHub. The process of of uploading your new version of work into GitHub is called **Push**
+- You **push** your updated work in Rstudio back to GitHub, so that as your collaborator, I can see your updated work.
+
+:::
+
+
+
+
+
+## Git Ready for Data Science
+
+::: {.lab}
+
+- Go to [https://github.com/](https://github.com/) to create a GitHub account if you don't have one. 
+  - Use the **same** username and email address of your Posit Cloud.
+
+- **Account (topright) > Settings**
+  - `r fa("envelope") `  **Emails** > [*Uncheck*]{.red} "Keep my email address private" (Link your R/Python work to GitHub)
+  - `r fa("user") `  **Public Profile** > Name and nice picture!
+
+- Share your GitHub **username** at <https://forms.office.com/r/RUmTn3gadG>, so I can invite you to join our course organization **math3570-s25**. 
+
+:::
+
+
+::: notes
+
+- Verify your GitHub email
+Adjust your GitHub settings for a more pleasant GitHub experience. 
+- We'll work with R, RStudio, Git, and GitHub together, like a real data scientist!
+
+:::
+
+
+
+## Git Ready for Data Science
+
+- Please accept my invitation to join the GitHub organization **math3570-s25**.
+
+```{r}
+#| out-width: 50%
+#| label: join-org
+knitr::include_graphics("images/04-git/join-org-2025.png")
+```
+
+
+::: notes
+
+- use ghclass_code.R and add usernames in students vector.
+- Check Who is already in and make sure there are 29 of them.
+
+:::
+
+
+## Git and GitHub Tips
+
+- Posit Cloud has installed Git for us! `r emo::ji('smile')`
+- There are millions of git commands, and very few people know them all. 
+- 99% of the time you will use Git to **add**, **commit**, **push**, and **pull**.
+
+::: notes
+
+ok, that's an exaggeration, but there are a lot of them
+
+:::
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- If you google for help and this is the solution...
+- Skip that and move on to the next resource!
+
+:::
+
+
+::: {.column width="50%"}
+
+```{r}
+#| out-width: 100%
+knitr::include_graphics("images/04-git/git-command.png")
+```
+:::
+::::
+
+
+
+
+::: notes
+
+- We will be doing Git things and interfacing with GitHub through RStudio.
+<!-- - I don't expect you to read every single chapter of it, but just know that that is a good place to look when you are looking for git advice that specific for r and rstudio users. -->
+- If you google for help you might come across methods for doing these things in the *command line*.
+- Skip that and move on to the next resource unless you feel comfortable trying it out.
+
+<!-- -- -->
+<!-- - There is a great resource for working with Git and R: [happygitwithr.com](http://happygitwithr.com/).  -->
+<!--   + Some of the content in there is beyond the scope of this course, but it's a good place to look for help. -->
+
+:::
+
+
+
+
+
+# Connecting Posit Cloud and GitHub Together {background-color="#A7D5E8"}
+
+
+
+::: notes
+
+- OK now you all have a GitHub account and Posit Cloud. We are gonna connect these two together, so that we can bring a repo in GitHub into Posit Cloud, and submit your work in Posit Cloud to your GitHub. Alright.
+
+:::
+
+
+
+## Connect Posit Cloud and GitHub: Step 1
+
+- Posit Cloud cannot recognize your GitHub account unless you connect them each other.
+
+- In Posit Cloud, click on your name on the top-right corner to open the right menu.
+
+- Click on **Authentication**.
+
+```{r}
+#| out-width: 78%
+#| label: github-auth-1
+knitr::include_graphics("images/04-git/github-auth-1-23.png")
+```
+
+
+
+## Connect Posit Cloud and GitHub: Step 2
+
+- In the Authentication window, check the box for **Enabled**.
+
+```{r}
+#| out-width: 90%
+#| label: github-auth-2
+knitr::include_graphics("images/04-git/github-auth-2-23.png")
+```
+
+
+::: notes
+
+- When check Enabled, will jump to GitHub page shown in the next.
+
+:::
+
+
+## Connect Posit Cloud and GitHub: Step 3
+
+-  For your GitHub page, click on the green box that says "**Authorize posit-hosted**".
+
+```{r}
+#| out-width: 85%
+#| label: github-auth-3
+knitr::include_graphics("images/04-git/github-auth-3-25.png")
+```
+
+
+
+## Connect Posit Cloud and GitHub: Step 4
+
+:::: {.columns}
+
+::: {.column width="61%"}
+
+- Back to the Authentication of Posit Cloud, check **Private repo access also enabled**.
+
+<!-- # ```{r} -->
+<!-- # #| out-width: "30%" -->
+<!-- # #| label: github-auth-4-1 -->
+<!-- # knitr::include_graphics("images/04-git/github-auth-4-24.png") -->
+<!-- # ``` -->
+
+- Make sure **math3570-s25** shows up under **Organization access**. 
+
+- Click on **Grant**.
+
+- Click on the green box "**Authorize posit-hosted**".
+
+:::
+
+::: {.column width="39%"}
+
+```{r}
+#| out-width: 75%
+#| label: github-auth-4
+knitr::include_graphics("images/04-git/github-auth-4-25.png")
+```
+
+:::
+
+::::
+
+
+
+::: notes
+
+- When check Private repo access also enabled, will jump to GitHub page as shown.
+<!-- If it does not, this means you have not yet accepted the GitHub invitation to join the course, and you should go back and do that. -->
+
+:::
+
+
+## Connect Posit Cloud and GitHub: Step 5
+
+- Once you're done, both of these boxes should be checked.
+
+```{r}
+#| out-width: 90%
+#| label: github-auth-5
+knitr::include_graphics("images/04-git/github-auth-5-23.png")
+```
+
+<!-- ## Connect Posit Cloud and GitHub: Step 5-1 -->
+
+<!-- ```{r} -->
+<!-- #| out-width: "100%" -->
+<!-- knitr::include_graphics("images/04-git/org-access.png") -->
+<!-- ``` -->
+
+
+## Connect Posit Cloud and GitHub: Step 6
+
+- Confirm that you've linked up your GitHub and Posit Cloud accounts [GitHub settings > Applications](https://github.com/settings/applications). Should see Posit Cloud listed as an authorized app under *Authorized OAuth Apps*.
+
+
+```{r}
+#| out-width: 70%
+#| label: github-auth-6
+knitr::include_graphics("images/04-git/github-auth-6-25.png")
+```
+
+
+::: notes
+
+- If you see RStudio is under the Authorized Apps, congratulations! Your RStudio and GitHub are now linked together!
+
+:::
+
+
+# GitHub to Posit Cloud {background-color="#A7D5E8"}
+
+## GitHub to Posit Cloud: Step 1
+
+- Each of your assignments will begin with the following steps.
+- Go to the repo named **hw00-yourusername** I created for you.
+
+```{r}
+#| out-width: 80%
+#| label: hw-repo
+knitr::include_graphics("images/04-git/hw00_repo_2025.png")
+```
+
+
+
+::: notes
+
+https://mine-cetinkaya-rundel.github.io/teach-r-online/
+- OK. Now let's see how to clone a repo in GitHub to your RStudio.
+
+- Use the code
+```{r, eval=FALSE}
+## Create assignments
+org_create_assignment(
+    org = "math3570-s25",
+    repo = paste0("hw00-", students),
+    user = students,
+    source_repo = "chenghanyustats/hw01"
+)
+```
+
+- This repo contains a template you can build on to complete your assignment.
+
+:::
+
+
+## GitHub to Posit Cloud: Step 2
+<!-- (this might already be selected by default, and if it is, you’ll see the text Clone with HTTPS as in the image below) -->
+
++ Click on the green **Code** button, select **HTTPS**. 
++ Click on the clipboard icon on the right to copy the repo URL, such as  `https://github.com/math3570-s25/hw00-chenghanyu.git`
+
+
+```{r}
+#| out-width: 50%
+#| label: clone-repo-link
+knitr::include_graphics("images/04-git/clone-repo-link-2025.png")
+```
+
+
+## GitHub to Posit Cloud: Step 3
+
+- Go to Posit Cloud and into the course workspace **2025-spring-math-3570**. 
+- New Project > **New Project from Git Repo**.
+
+```{r}
+#| out-width: 45%
+#| label: new-project-from-option
+knitr::include_graphics("images/04-git/new-project-option-24.png")
+```
+
+
+::: notes
+
+You will need to click on the down arrow next to the **New Project** button to see this option.
+
+:::
+
+
+## GitHub to Posit Cloud: Step 4
+
+- Copy and paste the URL of your assignment repo into the dialog box.
+- Hit `OK`, and you're good to go!
+
+```{r}
+#| out-width: 90%
+#| fig-width: 5
+#| label: paste-gh-repo-url
+knitr::include_graphics("images/04-git/paste-gh-repo-url-2025.png")
+```
+
+
+
+## GitHub to Posit Cloud: Step 5
+
+- Click **hw00-yourusername** to do your assignment in Posit Cloud!
+
+```{r}
+#| out-width: 100%
+#| label: rcloud-project
+knitr::include_graphics("images/04-git/rcloud_project_hw00_2025.png")
+```
+
+- Done! We learned the entire process of cloning a repo on GitHub to Posit Cloud as a project.
+
+- Next, we'll see how to keep your revision record (**commit**) and send (**push**) the latest revised version of your work from Posit Cloud to GitHub!
+
+# Posit Cloud to GitHub {background-color="#A7D5E8"}
+
+## Personal Access Token (PAT): Step 1
+
+- GitHub has removed the support for Password Authentication for Git operations.
+
+- Before we can send our work in Posit Cloud to GitHub, we need **Personal Access Token (PAT)**
+
+- **Settings > Developer settings**
+
+```{r}
+#| out-width: 90%
+#| label: pat-1
+knitr::include_graphics("images/04-git/pat_1.png")
+```
+
+
+::: notes
+
+- GitHub has removed the support for Password Authentication for Git operations.
+- for more safety.
+- from 08/13/2021.
+
+:::
+ 
+
+## Personal Access Token (PAT): Step 2
+
+```{r}
+#| out-width: 100%
+#| label: pat-2
+knitr::include_graphics("images/04-git/pat_2-25.png")
+```
+
+
+
+## Personal Access Token (PAT): Step 3
+
+```{r}
+#| out-width: 90%
+#| label: pat-3
+knitr::include_graphics("images/04-git/pat_3-25.png")
+```
+
+
+
+## Personal Access Token (PAT): Step 4
+
+```{r}
+#| out-width: 100%
+#| label: pat-4
+knitr::include_graphics("images/04-git/pat_4-23.png")
+```
+
+
+
+## Personal Access Token (PAT): Step 5
+
+- Copy and paste your PAT to a [**secrete and safe space**]{.blue}!!
+
+```{r}
+#| out-width: 100%
+#| label: pat-5
+knitr::include_graphics("images/04-git/pat_5-23.png")
+```
+
+
+
+## Posit Cloud to GitHub: Step 1 - Edit your file
+
+- Open the quarto file `hw-00-test.qmd`, in YAML change the author to your name.
+
+- Click **Render** to generate your beautiful document. (If asked to install any packages, please do!)
+
+```{r}
+#| label: yaml-raw-to-rendered
+knitr::include_graphics("images/04-git/yaml-raw-to-rendered_hw00-24.png")
+```
+
+
+
+## Posit Cloud to GitHub: Step 2 - Commit changes
+
+- Go to the Git tab in your RStudio. 
+- Click on **Commit**. This shows you the *difference* between the last committed state of the document and its current state that includes your changes.
+- Check **Staged** box to add files to be committed.
+- Write "*Update author's name*" in the **Commit message** box and hit **Commit**.
+
+```{r}
+#| label: update-author-name-commit
+#| out-width: 80%
+knitr::include_graphics("images/04-git/update-author-name-commit-2023.png")
+```
+
+<!-- You don’t have to commit after every change, this would get quite cumbersome. You should consider committing states that are meaningful to you for inspection, comparison, or restoration. In the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions. -->
+
+
+## Posit Cloud to GitHub: Step 3 - Push changes
+
+- We've made an update and committed this change *locally*. 
+- It’s time to **push** the changes to your repo on GitHub, so that others (Dr. Yu) can see your changes. 
+- Click on **Push**.
+- In the prompted dialogue box, enter your *GitHub user name*, and your *password (PAT)*.
+
+```{r}
+#| label: update-author-name-commit-push
+#| out-width: 80%
+knitr::include_graphics("images/04-git/update-author-name-commit-2023.png")
+```
+
+
+::: notes
+
+https://inbo.github.io/git-course/course_rstudio.html
+<!-- https://inbo.github.io/git-course/course_rstudio.html -->
+
+:::
+
+
+## Posit Cloud to GitHub: Step 3 - Updated Repo
+
+- Back to your GitHub repo and refresh it.
+
+- The online repo is now *synced* with your local project in Posit Cloud.
+
+
+```{r}
+#| label: update-repo
+#| out-width: 70%
+knitr::include_graphics("images/04-git/update-repo-2024.png")
+```
+
+
+## Resources
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- [Create a personal access token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- [Two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
+- [Git hands-on session within RStudio](https://inbo.github.io/git-course/course_rstudio.html)
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+- [Happier version control with Git and GitHub](https://bcjaeger.github.io/seminar-git/#1)
+:::
+
+
+::: {.column width="50%"}
+
+```{r}
+#| out-width: 100%
+knitr::include_graphics("images/04-git/happy-git.png")
+```
+
+:::
+::::
+
+::: notes
+
+Exercise:
+Click on the more button in the git pane and select Shell
+Type git config --global credential.helper store
+Type exit to quit the shell
+<!-- --- -->
+
+<!-- <script async class="speakerdeck-embed" data-slide="3" data-id="36f08b8e3b054847be7d072a1194e88a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script> -->
+
+<!-- https://speakerdeck.com/jennybc/happy-git-and-github-for-the-user?slide=3 -->
+
+
+<!-- # ```{r showChoro1} -->
+<!-- # htmltools::includeHTML("../../slides.Rhtml") -->
+<!-- # ``` -->
+:::
+
+
+
+
+
+
+

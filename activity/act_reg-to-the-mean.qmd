@@ -1,0 +1,99 @@
+---
+title: "In-class Activity: Regression to the Mean"
+---
+
+
+## Historical Origins of Regression
+
+> "Regression" is defined in the dictionary as "the process or returning to a former or less developed state." How did this term come to be used for statistical prediction? This connection comes from Francis Galton, one of the original quantitative social scientists, who fit linear models to under stand the heredity of human height. Predicting children's heights from parent's heights, he noticed that children of tall parents tended to be taller than average but less tall than their parents. From the other direction, children of shorter parents tended to be shorter than average but less short than their parents. Thus, from one generation to the next, people's heights have "regressed" to the average or *mean*, in statistics jargon. [^1] 
+
+[^1]: [Regression and other stories, Page 85](https://users.aalto.fi/~ave/ROS.pdf).
+
+
+
+
+The following activities demonstrate **regression to the mean**.
+
+## [[Team]]{.blue} Activity: Before-after Memory Quiz [^2]
+
+[^2]: [Active Statistics, Page 101](https://users.aalto.fi/~ave/ActiveStatistics.pdf).
+
+```{r}
+#| echo: false
+#| column: margin
+knitr::include_graphics("../images/QRCode_memory.png")
+```
+
+- [Step 1] I will be displaying 20 randomly chosen verbs on the screen for 20 seconds.
+
+- [Step 2] Each team should try to memorize as many as they can.
+
+- [Step 3] After displaying the words for 20 seconds we do another activity for three minutes.
+
+- [Step 4] Give each team a minute to write down as many words as they remember
+
+- [Step 5] Display the words again and ask them each to count how many they got correct.
+
+- [Step 6] With another set of 20 new verbs, ask them to predict the score they will get. 
+
+- [Step 7] Repeat Step 3 to 5 for the new set of words.
+
+
+- As one team please jointly enter (1) your score on first quiz; (2) guessed score on second quiz; (3) actual score on second quiz at the [MS form](https://forms.office.com/r/NceM6z4R7v) or the QR code below. 
+
+
+
+<!-- `rise` `hinder` `tell` `omit` `view` `display` `welcome` `snap` `reply` `refer` `betray` `sling` `tree` `conserve` `dash` `purify` `plot` `submit` `wave` `constrain`  -->
+
+
+
+<!-- `notify` `savvy` `work` `appear` `immolate` `float` `mistake` `renew` `observe` `store` `shear` `click` `zoom` `initiate` `occur` `subscribe` `weep` `acquire` `inject` `curb` -->
+
+
+
+## [[Individual]]{.blue} Activity: Compare Your Height with Your Father/Mother
+
+```{r}
+#| echo: false
+#| column: margin
+knitr::include_graphics("../images/QRCode_height.png")
+```
+
+
+- If you are male, record your height and your *father's* height. If you are female, record your height and your *mother's* height.
+
+- Use [feet-to-inch conversion](https://www.rapidtables.com/convert/length/feet-inch-to-inch.html) to help you get the heights in inches.
+
+- Please enter the heights in **inches** at the [MS form](https://forms.office.com/r/GdXshW5Tuu) or the QR code below. 
+
+
+## Discussion
+
+::: {.callout-caution collapse="true"}
+## Compare the second quiz prediction to what actually happens. Is your actual score higher or lower than your prediction?
+
+You may expect to do about the same on the second quiz as the first, but I guess *who do worst on the first quiz tend to improve, and who do best tend to decline*.
+:::
+
+
+::: {.callout-caution collapse="true"}
+## Why these improvments and declines occurred?
+
+Are you trying to give an explanation on why such result is occurred? You may think the teams who did the best relaxed on the 2nd quiz, and the teams who did poorly tried harder, and so forth.
+
+However, you DO NOT know if your team did well or poorly, comparing to other teams, right?!
+
+It would be more accurate to say that some do better on this quiz than others, but the very best scores on the first quiz are from people who are both **good and lucky**. They will still probably do well on the second quiz, but most of them will not be so lucky the second time.
+:::
+
+
+::: {.callout-caution collapse="true"}
+## What does the regression coefficient $< 1$ mean in the heights example?
+
+If a parent is taller than the average, the regression predicts that his/her child is also taller than the average, but not as much as their parent.
+
+If a parent is shorter than the average, the regression predicts that his/her child is also shorter than the average, but again not as much as their parent.
+
+Therefore, form one generation to the next, people's heights have "regressed" to the average or *mean*, in statistics jargon. 
+
+:::

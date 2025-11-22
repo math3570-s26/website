@@ -1,0 +1,57 @@
+---
+title: "Week 8"
+subtitle: "Data Wrangling"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - Data Wrangling (one data frame)](/slides/12-dplyr-1.html)
+
+🖥️ [Slides - Data Wrangling - two data frames](/slides/13-dplyr-2.html)
+
+`r fontawesome::fa("table")` Data - Pop_x and elec_vote_y
+
+```{r}
+#| eval: false
+library(tidyverse)
+library(dslabs)
+pop_x <- murders |> 
+    slice(1:6) |>
+    select(state, population)
+
+elec_vote_y <- results_us_election_2016 |> 
+    filter(state %in% c("Alabama", "Alaska", "Arizona", 
+                        "California", "Connecticut", "Delaware")) |> 
+    select(state, electoral_votes) |> 
+    rename(elec_vote = electoral_votes)
+```
+
+`r fontawesome::fa("table")` [Data - Customers](/slides/data/sales/customers.csv)
+
+## Reading and Resources
+
+📖 [R for Data Science - Joins](https://r4ds.hadley.nz/joins)
+
+📖 [R for Data Science - Data tidying](https://r4ds.hadley.nz/data-tidy)
+
+## Exercise
+
+📋 [Lab-15 dplyr](/exercise/lab15-dplyr.html)
+
+`r fontawesome::fa("table")` [Data - Murders](/slides/data/murders.csv)
+
+📋 [Lab-16 Joining tables](/exercise/lab16-join.html)
+
+`r fontawesome::fa("table")` <https://www.jaredlander.com/data/DiamondColors.csv>
+
+`r fontawesome::fa("table")` **`ggplot2::diamonds`**
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

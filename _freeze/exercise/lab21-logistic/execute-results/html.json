@@ -1,0 +1,15 @@
+{
+  "hash": "06f43be07ae32e7d287a12589fd97cc3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 21: Logistic Regression\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\nIn **lab.qmd** `## Lab 21` section,\n\n- Use our fitted logistic regression model to predict whether you are male or female! Change `175` to your height (cm).\n\n- Use [the converter](https://www.thecalculatorsite.com/conversions/common/cm-to-feet-inches.php) to get your height in cm!\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\n# Fit the logistic regression\n\npredict(logis_out$fit, newdata = data.frame(HEIGHT = 175), \n        type = \"response\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

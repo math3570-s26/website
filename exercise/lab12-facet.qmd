@@ -1,0 +1,53 @@
+---
+title: "Lab 12: Faceting"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/09-ggplot2/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+```
+
+::: callout-note
+
+:::
+
+
+
+In **lab.qmd** `## Lab 12` section,
+
+```{r}
+#| warning: false
+#| echo: true
+#| eval: false
+ggplot(data = _______, 
+       mapping = aes(x = ______, y = ______, ______ = drv, shape = _____)) +
+    geom______(______ = 3, ______ = 0.8) + 
+    facet_grid(______ ~ _______) +
+    guides(______ = "none")
+```
+
+```{r}
+#| warning: false
+#| echo: false
+ggplot(data = mpg, 
+       mapping = aes(x = displ, y = cty, color = drv, shape = fl)) +
+    geom_point(size = 3, alpha = 0.8) + 
+    facet_grid(drv ~ fl) +
+    guides(color = "none")
+```

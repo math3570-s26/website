@@ -1,0 +1,91 @@
+---
+title: "Lab 17: tidyr"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/14-tidyr/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+```
+
+::: callout-note
+
+:::
+
+In **lab.qmd** `## Lab 17` section,
+
+<!-- - Create a R script named **lab15-tidyr.R** -->
+- Import `trump.csv`. Call it `trump_data` as below on the left.
+
+- Use `pivot_longer()` to transform `trump_data` into the data set `trump_longer` on the right.
+
+
+```{r}
+#| echo: false
+trump_data <- read_csv("../slides/data/trump.csv")
+```
+
+```{r}
+trump_data
+```
+
+
+```{r}
+#| purl: false
+#| eval: false
+trump_longer <- ______________
+    pivot_longer(
+        cols = ____________,
+        names_to = _______________,
+        values_to = _______________
+    ) 
+```
+
+```{r echo=3}
+#| purl: false
+trump_longer <- trump_data |> 
+    pivot_longer(
+      cols = c(approval, disapproval),
+      names_to = "rating_type",
+      values_to = "rating_value"
+    ) 
+trump_longer
+```
+
+
+**BONUS** `r emo::ji("money")`: Use `trump_longer` to generate a plot like the one below.
+
+
+```{r}
+#| purl: false
+#| eval: false
+#| echo: false
+trump_longer |> 
+    ggplot(aes(x = ______, y = _______, color = ________)) +
+    geom______() +
+    facet_______(________)
+```
+
+```{r}
+#| purl: false
+#| echo: false
+trump_longer |> 
+    ggplot(aes(x = date, y = rating_value, color = rating_type)) +
+    geom_line() +
+    facet_wrap(~ subgroup)
+```

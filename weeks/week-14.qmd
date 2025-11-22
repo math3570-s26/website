@@ -1,0 +1,28 @@
+---
+title: "Week 14"
+subtitle: "K Nearest Neighbors"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - K Nearest Neighbors](/slides/18-knn.html)
+
+`r fontawesome::fa("table")` [Data - body](/slides/data/body.csv)
+
+## Reading
+
+📖
+
+## Exercise
+
+📋 [Lab-22 K Nearest Neighbors](/exercise/lab22-knn.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

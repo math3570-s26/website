@@ -1,0 +1,44 @@
+---
+title: "Lab 21: Logistic Regression"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/17-logistic-reg/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+library(tidymodels)
+```
+
+::: callout-note
+
+:::
+
+In **lab.qmd** `## Lab 21` section,
+
+- Use our fitted logistic regression model to predict whether you are male or female! Change `175` to your height (cm).
+
+- Use [the converter](https://www.thecalculatorsite.com/conversions/common/cm-to-feet-inches.php) to get your height in cm!
+
+```{r}
+#| eval: false
+
+# Fit the logistic regression
+
+predict(logis_out$fit, newdata = data.frame(HEIGHT = 175), 
+        type = "response")
+```

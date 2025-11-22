@@ -1,0 +1,909 @@
+---
+title: "Data Wrangling - two data frames `r emo::ji('hammer_and_wrench')`"
+subtitle: "MATH/COSC 3570 Introduction to Data Science"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+# date: "`r format(Sys.time(), '%B %d %Y')`"
+# macros: _macros.tex # import a list of TeX/LaTeX definitions
+format: 
+  revealjs:
+    #     - "macros.tex"
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    # include-in-header:
+    highlight-style: arrow
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t
+    incremental: false
+    width: 1800
+    height: 1000
+    margin: 0.05
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[math3570-s25.github.io/website](https://math3570-s25.github.io/website/)"
+    theme: ["simple", "slides.scss"]
+    multiplex: true
+    code-link: true
+    fig-cap-location: bottom
+    fig-align: center
+    transition: none ## fade slide convex concave zoom
+    code-line-numbers: false
+    title-slide-attributes:
+      data-background-color: "#447099"
+      # data-background-image: images/paper-texture.jpg
+      # data-background-size: cover
+      # data-background-color: "#698ED5"
+editor: source
+execute:
+  freeze: true
+  echo: true
+---
+
+#  {visibility="hidden"}
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fontawesome)
+library(rmarkdown)
+library(reticulate)
+library(lattice)
+library(openintro)
+library(plotly)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/13-dplyr-2/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 9,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/dplyr.png" background-size="30%" background-position="90% 50%"}
+
+::: {.left}
+<h1> Joining data frames </h1>
+:::
+
+## [Joining data frames](https://dplyr.tidyverse.org/reference/mutate-joins.html)
+
+- **Have** multiple data frames
+
+- **Want** to bring them together
+
+- [SQL](https://www.w3schools.com/sql/sql_join.asp)-like functions
+    - `left_join(x, y)`
+    - `right_join(x, y)`
+    - `full_join(x, y)`
+    - `inner_join(x, y)`
+    - `semi_join(x, y)`
+    - `anti_join(x, y)`
+
+::: notes
+<!-- # ```{r eval=FALSE} -->
+<!-- # #| eval: false -->
+<!-- # something_join(x, y)   -->
+<!-- # ``` -->
+- OK, back to dplyr. Here the idea is that we have two or more data frames, and we want to bring them together as one single combined data set.
+- How? we are gonna use dplyr functions with name something_join(x, y).
+- These functions borrow the idea of SQL for relational database management. They are similar to the join functions of SQL.
+- And so we can do something that SQL usually does in R, and it's probably easier because we don't need to use R and SQL back and forth, and integrate data manipulation and analysis together.
+- In particular, we are gonna go through the following 6 join functions.
+- Here x and y are data frames. OK.
+:::
+
+
+
+## Setup
+
+Data sets `x` and `y` share the same variable `id`.
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false 
+x <- tibble(
+    id = c("01", "02", "03"),
+    var_x = c("x1", "x2", "x3")
+    )
+```
+```{r}
+x
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| purl: false 
+y <- tibble(
+    id = c("01", "02", "04"),
+    var_y = c("y1", "y2", "y4")
+    )
+```
+```{r}
+#| purl: false 
+y
+```
+:::
+
+::::
+
+
+::: notes
+- I am going to use these two data frames as an illustration of join functions.
+- data frame x has variable id and var_x
+- data frame y has variable again id and but another variable var_y.
+- Data frame `x` and `y` have the common variable `id`, so it's quite reasonable to merge the two data sets together by the common variable `id`. But x has id 1, 2, 3 and y has id 1, 2, 4. And so there are many different ways to combine the two.
+- You can think id is marquette ID, and var_x stores GPA and var_y stores say students' height. And we are gonna combine the two data sets into one student personal information data set.
+:::
+
+
+
+## `left_join(x, y)`: all rows from x
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| out-extra: 'style="background-color: #FDF6E3"'
+#| echo: false
+include_graphics("images/13-dplyr-2/left-join.gif")
+```
+:::
+
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| message: true
+## by = keys
+left_join(x, y, by = "id")
+```
+
+- `NA` is added to the `id` not appearing in `y`.  
+
+```{r}
+#| purl: false
+#| echo: false
+include_graphics("images/13-dplyr-2/left_join_venn.png")
+```
+:::
+::::
+
+::: notes
+- OK first left_join. Look at this gif. 
+- The idea is that left_join(x, y) keeps all the rows or observations from x, and keep all the variables in x and y, including id, var_x and var_y.
+- The variables used to connect two data tables are called **keys**, and we use by argument to tell dplyr which variable is the key
+- By default, the function uses all variables that appear in both tables as keys. So here, the default key is also "id" because "id" is the only variable that appears in both data sets.
+- The resulting data frame is shown here. The left join function basically keeps the entire data set x, and attaches the data set y to x with "id" in x.
+- Because y doesn't have id 3, its value of var_y is a missing value NA.
+- We can use the venn diagram to visualize the idea of joining tables. And basically, the main data set is A or x. We keep everything of A, and we add stuff of B or y for observations that are in A or x only.
+:::
+
+
+
+## `left_join()` Example
+
+
+::::: {.panel-tabset}
+
+## Left join
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r highlight.output=c(5, 7)}
+#| purl: false
+#| echo: !expr -c(1, 2, 3, 4)
+library(tidyverse)
+library(dslabs)
+pop_x <- murders |> 
+    slice(1:6) |>
+    select(state, population)
+elec_vote_y <- results_us_election_2016 |> 
+    filter(state %in% c("Alabama", "Alaska", "Arizona", 
+                        "California", "Connecticut", "Delaware")) |> 
+    select(state, electoral_votes) |> 
+    rename(elec_vote = electoral_votes)
+pop_x
+```
+```{r, highlight.output=c(5, 7)}
+#| purl: false
+elec_vote_y
+```
+
+:::
+
+
+
+::: {.column width="50%"}
+
+```{r}
+#| label: left-join
+pop_x |> 
+    left_join(elec_vote_y) #<<
+```
+
+- `Connecticut` and `Delaware` in `elec_vote_y` will not be shown in the left-joined data because they are not in `pop_x`.
+
+:::
+
+::::
+
+
+## Code for generating the data sets
+
+```{r}
+#| label: data-for-join
+
+library(tidyverse)
+library(dslabs)
+pop_x <- murders |> 
+    slice(1:6) |>
+    select(state, population)
+
+elec_vote_y <- results_us_election_2016 |> 
+    filter(state %in% c("Alabama", "Alaska", "Arizona", 
+                        "California", "Connecticut", "Delaware")) |> 
+    select(state, electoral_votes) |> 
+    rename(elec_vote = electoral_votes)
+```
+
+:::::
+
+::: notes
+- Let's see an example. Here we have two data sets, pop_x and elec_vote_y.
+- The left_join() function uses the common variable "state" to combine the two data sets.
+- And the result of left joining will be that we keep the entire data set pop_x, and attach the variable elec_vote to the data. 
+- If there is no such state or observation in y, its corresponding value of elec_vote is NA.
+:::
+
+
+
+
+## `right_join(x, y)`: all rows from y
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| out-extra: 'style="background-color: #FDF6E3"'
+#| echo: false
+include_graphics("images/13-dplyr-2/right-join.gif")
+```
+:::
+
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| message: true
+right_join(x, y)
+```
+
+- `NA` is in the column coming from `x`.
+
+```{r}
+#| purl: false
+#| echo: false 
+include_graphics("images/13-dplyr-2/right_join_venn.png")
+```
+:::
+::::
+
+
+::: notes
+- OK. If you get the idea of left_join, you =should be able to guess what right_join() function is doing.
+- Basically right_join(x, y) keeps all the rows or observations from y, and second data set, and again keep all the variablesin both x and y, including id, var_x and var_y.
+- For any observation that is not in x, its corresponding value of var_x becomes a missing value NA.
+- So here because x does not have id 4, its value of var_x is NA.
+- In the venn diagram, the main data set is B or y. We keep everything of B, and we add stuff of A or x for observations that are in B or y only.
+:::
+
+
+
+## `right_join()` Example
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r, highlight.output=c(5, 7)}
+#| purl: false
+pop_x
+```
+```{r}
+#| purl: false
+elec_vote_y
+```
+:::
+
+
+::: {.column width="50%"}
+```{r}
+#| label: right-join
+pop_x |> 
+    right_join(elec_vote_y) #<<
+```
+- `Arkansas` and `Colorado` in `pop_x` will not be shown in the right-joined data because they are not in `elec_vote_y`.
+:::
+
+::::
+
+::: notes
+- Back to the example, if we are doing right-join, we keep the entire data set elec_vote_y, and attach the variable population of pop_x to the data. 
+- If there is no such state or observation in x, its corresponding value of population is NA.
+- Since x does not have Connecticut and Delaware, their population is NA.
+- `Arkansas` and `Colorado` in `pop_x` will not be shown in the right-joined data because they are not in `elec_vote_y`.
+:::
+
+
+
+
+## `full_join(x, y)`: all rows from both x and y
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| purl: false
+#| out-extra: 'style="background-color: #FDF6E3"'
+#| echo: false
+include_graphics("images/13-dplyr-2/full-join.gif")
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| purl: false
+#| message: true
+
+full_join(x, y)
+```
+
+- Keep [*all the rows*]{.green} and fill the missing parts with `NA`s.
+
+```{r}
+#| purl: false
+#| echo: false
+include_graphics("images/13-dplyr-2/full_join_venn.png")
+```
+
+:::
+
+::::
+
+::: notes
+- The next is full_join(). full_join() preserves all the rows or observations either in x or in y or in both x and y.
+- In x, we have 1, 2, 3, and in y, we have 1, 2, 4. So the resulting full-joined data frame will have observations 1, 2, 3, 4, and fill the missing parts with NAs.
+- x does not have id 4, so its var_x is NA. y does not have id 3, so its var_y is NA
+:::
+
+
+
+## `full_join()`  Example
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+pop_x
+elec_vote_y
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| label: full-join
+pop_x |> 
+    full_join(elec_vote_y) #<<
+```
+- `full_join()` takes the union of observations of `x` and `y`, so it produces the data set with the most rows.
+:::
+::::
+
+::: notes
+- In this example, the full-joined data set will contain observations either in x or in y or in both x and y.
+- Because Arkansas and Colorado are not in elec_vote_y, their elec_vote value is NA
+- Because Connecticut and Delaware are not in pop_x, their population value is NA
+- full_join() takes the union of x and y, so it produces the data set with the most rows.
+:::
+
+
+## `inner_join(x, y)`: only rows w/ keys in both x and y
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| purl: false
+#| out-extra: 'style="background-color: #FDF6E3"'
+#| echo: false
+include_graphics("images/13-dplyr-2/inner-join.gif")
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| purl: false
+#| message: true
+inner_join(x, y)
+```
+
+- Keep only the rows that have information in [*both*]{.green} tables.
+
+```{r}
+#| purl: false
+#| echo: false
+include_graphics("images/13-dplyr-2/inner_join_venn.png")
+```
+
+:::
+
+::::
+
+
+::: notes
+- OK inner_join(). inner_join() preserves only rows with keys or id here in both x and y.
+- And we know id 1 and id 2 are in both x and y, so these two observations are preserved.
+- id 3 is in x, but not in y, id 4 is in y, but not in x, so both are not included in the data.
+- Because we are taking intersection of the rows of x and y, we will get the fewest rows when inner_join() is used. 
+:::
+
+
+## `inner_join()`  Example
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+pop_x
+```
+```{r}
+#| purl: false
+elec_vote_y
+```
+:::
+
+
+::: {.column width="50%"}
+```{r}
+#| label: inner-join
+pop_x |> 
+    inner_join(elec_vote_y) #<<
+```
+:::
+
+::::
+
+::: notes
+- In this example, there are 4 states in both x and y, Alabama, Alaska, Arizona, and California.
+- The inner-joined data set only keep the 4 states data.
+:::
+
+
+
+## `semi_join(x, y)`: inner_join(x, y) with columns of x  {visibility="hidden"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| out-extra: 'style="background-color: #FDF6E3"'
+#| echo: false
+include_graphics("images/13-dplyr-2/semi-join.gif")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| message: true
+
+semi_join(x, y)
+```
+
+- Keep the part of first table for which we have information in the second.
+
+```{r}
+#| purl: false
+#| echo: false
+include_graphics("images/13-dplyr-2/semi_join_venn.png")
+```
+:::
+
+::::
+
+
+::: notes
+- OK. semi_join() is  inner_join(x, y) with columns of x only.
+- So you can see that like inner_join(), we only keep id 1 and id 2. 
+- Moreover, we only keep variables id and var_x. No var_y variable in the data set.
+:::
+
+
+
+## `semi_join()` Example  {visibility="hidden"}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+pop_x
+elec_vote_y
+```
+:::
+
+
+::: {.column width="50%"}
+```{r}
+#| label: semi-join
+pop_x |> 
+    semi_join(elec_vote_y) #<<
+```
+:::
+
+::::
+
+::: notes
+- The result here becomes straightforward. The four states that are ion both x and y are kept and the data only keep the variables state and population in pop_x data set.
+:::
+
+
+## `anti_join(x, y)` (Opposite of `semi_join(x, y)`)  {visibility="hidden"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| out-extra: 'style="background-color: #FDF6E3"'
+#| echo: false
+include_graphics("images/13-dplyr-2/anti-join.gif")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| message: true
+anti_join(x, y)
+```
+
+- Keep the elements of first table for which there is **NO** information in the second.
+
+```{r}
+#| purl: false
+#| echo: false
+include_graphics("images/13-dplyr-2/anti_join_venn.png")
+```
+:::
+
+::::
+
+::: notes
+- OK. finally `anti_join(x, y)`. `anti_join(x, y)` can be viewed as the opposite of `semi_join(x, y)`.
+- It keeps rows in x that do not have a match in y. In our example, it is id 3 that is kept in the output data.
+- And again, same as `anti_join(x, y)`. Only columns of x are preserved in the output. so we have var_x, but no var_y. 
+:::
+
+
+## `anti_join()` Example  {visibility="hidden"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| purl=FALSE
+pop_x
+elec_vote_y
+```
+
+:::
+
+
+::: {.column width="50%"}
+
+```{r}
+#| label: anti-join
+pop_x |> 
+    anti_join(elec_vote_y) #<<
+```
+
+:::
+
+::::
+
+::: notes
+- Here, because Arkansas and Colorado are in x, but not in y, they are kept in the anti-joined output.
+- Also state and population are the variables of pop_x.
+:::
+
+
+
+##
+
+::: {.lab}
+<span style="color:blue"> **16-Joining tables** </span>
+
+<!-- - Create the R script **lab14-jointable.R** -->
+
+In **lab.qmd** `## Lab 16` section
+
+- Import the data at <https://www.jaredlander.com/data/DiamondColors.csv>. Call it `diamond_color`.
+
+```{r, eval=FALSE}
+#| purl=FALSE
+diamond_color <- readr::read_csv("the url")
+```
+
+- Use `left_join()` to combine the data set `diamonds` in **ggplot2** and `diamond_color` by the key variable `color`. 
+
+<!-- We keep all the rows of `diamonds`. -->
+
+- Select the variables `carat`, `color`, `Description`, `Details`.
+
+```{r, eval=FALSE}
+#| purl=FALSE
+## Variable "color" in diamonds but "Color" in diamond_color
+
+joined_df <- diamonds |>  
+    _______(_______, by = c('color' = 'Color')) |>  ## join
+    _______(_________________________________________)  ## select
+
+```
+
+- Create a bar chart of the variable `color`.
+
+<!-- - Find the count of the most frequent color G. -->
+:::
+
+
+
+
+##
+
+```{r}
+#| echo: false
+#| out-width: 55%
+diamond_color <- read_csv("https://www.jaredlander.com/data/DiamondColors.csv")
+joined_df <- left_join(diamonds, diamond_color, 
+                       by = c('color' = 'Color')) |> 
+    select(carat, color, Description, Details)
+joined_df
+
+# joined_df %>% count(color, sort = TRUE) 
+
+joined_df |> ggplot(aes(x = color)) + 
+  geom_bar()
+```
+
+
+
+
+
+# {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" background-size="40%" background-position="90% 50%"}
+
+
+::: {.left}
+<h1> Joining Data Frames </h1>
+
+<h2> pd.merge() </h2>
+:::
+
+
+
+
+## [pd.merge()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
+
+
+::::: {.panel-tabset}
+
+
+## Left join
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+```{python}
+import numpy as np
+import pandas as pd
+```
+
+```{python}
+#| echo: false
+murders = pd.read_csv('./data/murders.csv')
+pop_x = murders[0:6][['state','population']]
+
+election = pd.read_csv('./data/results_us_election_2016.csv')
+raws1 = ["Alabama", "Alaska", "Arizona", "California", "Connecticut", "Delaware"]
+cols1 = ["state", "electoral_votes"]
+df = election[cols1]
+pop = []
+for i in raws1:
+    mask = df["state"] == i
+    pos = np.flatnonzero(mask)
+    pop.append(pos)
+
+pop = np.array(pop)
+pop = np.resize(pop, 6)
+elec_vote_y = df.iloc[pop]
+```
+
+
+```{python}
+pop_x
+elec_vote_y
+```
+
+:::
+
+
+
+::: {.column width="60%"}
+
+```{python}
+## dplyr::left_join()
+pop_x.merge(right=elec_vote_y, how='left', on='state')
+```
+:::
+
+::::
+
+## Code for generating the data sets
+
+```{python}
+#| class-output: myclass_full
+
+murders = pd.read_csv('./data/murders.csv')
+pop_x = murders[0:6][['state','population']]
+
+election = pd.read_csv('./data/results_us_election_2016.csv')
+raws1 = ["Alabama", "Alaska", "Arizona", "California", "Connecticut", "Delaware"]
+cols1 = ["state", "electoral_votes"]
+df = election[cols1]
+pop = []
+for i in raws1:
+    mask = df["state"] == i
+    pos = np.flatnonzero(mask)
+    pop.append(pos)
+
+pop = np.array(pop)
+pop = np.resize(pop, 6)
+elec_vote_y = df.iloc[pop]
+```
+
+
+:::::
+
+
+
+## 
+
+:::{.midi}
+
+```{python}
+#| eval: true
+
+## dplyr::right_join()
+pop_x.merge(elec_vote_y, how = 'right')
+```
+
+:::
+
+
+. . .
+
+:::{.midi}
+
+```{python}
+#| eval: true
+## dplyr::full_join()
+pop_x.merge(elec_vote_y, how = 'outer')
+```
+
+:::
+
+. . .
+
+
+:::{.midi}
+
+```{python}
+#| eval: true
+## dplyr::inner_join()
+pop_x.merge(elec_vote_y, how = 'inner')
+```
+
+:::
+
+
+
+
+
+

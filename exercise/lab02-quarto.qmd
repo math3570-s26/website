@@ -1,0 +1,39 @@
+---
+title: "Lab 02: Quarto File"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: false
+---
+
+```{r}
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/05-quarto/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+```
+
+::: callout-note
+
+:::
+
+- Go to your GitHub repo **lab-yourusername**. Clone it to your Posit Cloud as a project in 2025-Spring-Math-3570 workspace.
+
+- Open the file **lab.qmd**.
+
+- Change `author` in YAML.
+
+- Click on ![](../slides/images/05-quarto/render.png) or `Ctrl/Cmd + Shift + K` to produce a HTML document.
+
+- How can we show the current date every time we compile the file? *\[Hint:\]* Check your *hw00*. Compile your document and make sure the date shows up.
+
+- How do we [hide the code](https://quarto.org/docs/reference/formats/html.html#code) so that the document is shorter? Describe it in `## Lab 2: Quarto`
+
+- Once done, commit with message [_"02-quarto"_]{style="color:green"} and push your version to GitHub.

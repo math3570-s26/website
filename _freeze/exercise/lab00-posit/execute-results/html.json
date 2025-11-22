@@ -1,0 +1,15 @@
+{
+  "hash": "400a6d129e113e1e68df1980da4842a0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab Exercise: Posit Cloud\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\n## Install Posit Cloud\n\n- *Step 1*: In the Posit website [https://posit.co/](https://posit.co/), choose **Products > Posit Cloud** as shown below.\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/03-posit/posit-cloud-s25.png){fig-align='center' width=100%}\n:::\n:::\n\n- *Step 2*: Click **GET STARTED**.\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/03-posit/landing-1-posit.png){fig-align='center' width=50%}\n:::\n:::\n\n<!-- # ```{r} -->\n<!-- # #| fig-align: \"center\" -->\n<!-- # knitr::include_graphics(\"../slides/images/03-posit/posit-free-plan.png\") -->\n<!-- # ``` -->\n\n\n- *Step 3*: [**Cloud Student**]{.red} **\\> Sign Up** using your Marquette email address.\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/03-posit/posit-student-plan-s25.png){fig-align='center' width=50%}\n:::\n:::\n\nThe student plan has more computing power and resources that help you do homework and data science project more efficiently!\n\n\n### New project\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/03-posit/new-project-cloud-posit.png){fig-align='center' width=100%}\n:::\n:::\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/03-posit/new-project-option-24.png){fig-align='center' width=30%}\n:::\n:::\n\n\n## Welcome to 3570 Data Science!\n\n- I'm sending you a link via email for joining the course workspace **2025-spring-math-3570**. Please join.\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/03-posit/join-space.png){fig-align='center' width=60%}\n:::\n:::\n\n\n- In the bar, click workspace **2025-spring-math-3570**.\n\n- Click **New Project > New RStudio Project** to get into the IDE.\n\n- In _Untitled Project_, name your project as **3570-project**.\n\n- In the Console pane, write R code: a string **`\"Hello WoRld!\"`** or math **`2 + 4`**.\n\n- **Tools > Global Options > Appearance** to select your favorite editor theme.\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/03-posit/rcloud_project.png){fig-align='center' width=100%}\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

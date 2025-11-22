@@ -1,0 +1,55 @@
+---
+title: "Week 1"
+subtitle: "Welcome to MATH/COSC 3570 and Posit Cloud"
+editor: visual
+---
+
+## Prepare
+
+📖 Read the [syllabus](/course-syllabus.html)
+
+📖 Get your laptop and computing environment ready!
+
+## Reading and Resources
+
+📖 [R for Data Science - Introduction](https://r4ds.hadley.nz/intro)
+
+📖 [R for Data Science - Whole game](https://r4ds.hadley.nz/whole-game)
+
+📖 [RStudio IDE Cheatsheet](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html?_gl=1*zsoe73*_ga*MTA1OTM3NDA3MC4xNzAyOTMyNDk4*_ga_2C0WZ1JHG0*MTcwMzM1MTM3Ni4yLjEuMTcwMzM1MTQ1Ni4wLjAuMA..)
+
+📖 [Posit Cloud Documentation](https://docs.posit.co/cloud/)
+
+## Participate
+
+🖥️ [Slides - Welcome to MATH/COSC 3570](/slides/01-syllabus.html)
+
+🖥️ [Slides - Overview of Data Science](/slides/02-datascience.html "02-datascience")
+
+🖥️ [Slides - Posit Cloud](/slides/03-posit.html "03-posit")
+
+🖥️ [Slides - Git/GitHub](/slides/04-git.html)
+
+```{r}
+#| echo: false
+fontawesome::fa("table")
+```
+`ggplot2::mpg`
+
+<!-- # ```{r} -->
+<!-- # #| echo: false -->
+<!-- # fontawesome::fa("table") -->
+<!-- # ``` -->
+<!-- # `ggplot2::diamond` -->
+
+## Perform
+
+📋 [Lab-00 Posit Cloud](/exercise/lab00-posit.html)
+
+📋 [Lab-01 Running R Script](/exercise/lab01-rscript.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

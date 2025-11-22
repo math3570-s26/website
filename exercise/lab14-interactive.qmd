@@ -1,0 +1,48 @@
+---
+title: "Lab 14: plotly"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/11-interactive-viz/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+library(plotly)
+```
+
+::: callout-note
+
+:::
+
+In **lab.qmd** `## Lab 14` section,
+
+- Load **tidyverse** and **plotly** and the `loans.csv` data.
+
+- Generate a plot using plotly. An example is shown below. Welcome to create a more fancy one!
+
+<!-- # ```{r, eval=FALSE} -->
+<!-- # p <- plot_ly(______, x = ~_____, alpha = 0.5) -->
+<!-- # p ___ add_______(y = ~_____, color = ~_____) -->
+<!-- # ``` -->
+
+```{r}
+#| echo: false
+loans <- read_csv("../slides/data/loans.csv")
+p <- plot_ly(loans, x = ~interest_rate, alpha = 0.5)
+p |> add_boxplot(y = ~grade, color = ~grade)
+```
+

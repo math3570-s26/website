@@ -1,0 +1,15 @@
+{
+  "hash": "b3c08addc7b205f3f7068ac4644177cd",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 05: R Data Type Summary\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\nIn **lab.qmd** Lab 5,\n\n- Create R objects vector `v1`, factor `f2`, list `l3`, matrix `m4` and data frame `d5`.\n\n- Check `typeof()` and `class()` of those objects, and create a list having the output below.\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nv1 <- c(__________)\nf2 <- f_____(__________)\nl3 <- l_____(__________)\nm4 <- m_____(__________)\nd5 <- d_____.f_____(__________)\nv <- c(type = typeof(v1), class = class(v1))\nf <- c(type = __________, class = _________)\nl <- c(type = __________, class = _________)\nm <- c(type = __________, class = _________)\nd <- c(type = __________, class = _________)\n____(vec    =   v,\n     ______ = ___,\n     ______ = ___,\n     ______ = ___,\n     ______ = ___)\n```\n:::\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output .cell-output-stdout}\n\n```\n$vec\n     type     class \n \"double\" \"numeric\" \n\n$fac\n     type     class \n\"integer\"  \"factor\" \n\n$lst\n  type  class \n\"list\" \"list\" \n\n$mat\n     type    class1    class2 \n\"integer\"  \"matrix\"   \"array\" \n\n$df\n        type        class \n      \"list\" \"data.frame\" \n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

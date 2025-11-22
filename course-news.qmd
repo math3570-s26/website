@@ -1,0 +1,36 @@
+---
+title: "News/Announcements"
+---
+
+Any announcement will be posted in this page. The latest news will also be put on top of the main page.
+
+## Jan 17, 2025
+
+- TA help desk hours at **Cudahy Hall 301**
+
+  + *Monday: 1 – 2 PM*
+  + *Tuesday: 12 – 1 PM*, 
+  + *Thursday: 12 – 2 PM*
+
+
+## Jan 14, 2025
+
+-   No office hours first week.
+
+## Jan 7, 2025
+
+-   The background survey form is at [https://forms.office.com/r/3ntBAWupYS](https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2Fr%2F3ntBAWupYS&data=05%7C02%7Ccheng-han.yu%40marquette.edu%7C754dacb312df459315d508dd2f48107e%7Cabe32f68c72d420db5bd750c63a268e4%7C0%7C0%7C638718708750586481%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=hqHeIw%2Btk05LxhBz%2Bx6SG1WDKPyNvnFIH0sL18IuMLM%3D&reserved=0).
+
+
+
+<!-- ## Jan 16, 2024 -->
+
+<!-- -   Please bring your laptop this Thursday. We'll set up our computing environment and get it ready for doing data science. -->
+
+<!-- ## Jan 17, 2024 -->
+
+<!-- <https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=03db93ed-1b1c-4447-805d-a674958c23e6&ccId=19000101_000001&jobId=480911&lang=en_US> -->
+
+<!-- Deadline -->
+
+<!-- Applicants should submit their application by February 1, 2024. -->

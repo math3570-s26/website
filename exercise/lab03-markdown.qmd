@@ -1,0 +1,35 @@
+---
+title: "Lab 03: Markdown"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: false
+---
+
+```{r}
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/05-quarto/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+```
+
+::: callout-note
+
+:::
+
+- Back to your **lab.qmd**. In `## Lab 3: Markdown` section, add a self-introduction paragraph containing a header, **bold** and *italic* text.
+
+- Add another paragraph that contains
+  - listed items
+  - a hyperlink
+  - a blockquote
+  - math expression
+  
+- Once done, commit with message [_"03-markdown"_]{style="color:green"} and push it to GitHub.

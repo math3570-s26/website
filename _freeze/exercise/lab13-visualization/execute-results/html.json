@@ -1,0 +1,15 @@
+{
+  "hash": "b0d47d2c0e54f552799287a01801064d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 13: Visualization\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\nIn **lab.qmd** `## Lab 13` section,\n\n- Import the data **penguins.csv**.\n\n- Generate the following\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/10-viz/unnamed-chunk-2-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_bin()`).\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](../slides/images/10-viz/unnamed-chunk-3-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\n# library(tidyverse)\npenguins <- read_csv(__________________)\n________ |> ggplot(_______________________) +  ## mapping layer  \n    ___________________ +  ## geometry layer\n    _____________________________  ## label layer\n```\n:::\n\n<br>\n<br>\n<br>\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\n________ |> ggplot(______________________________) +  ## mapping layer  \n    _______________ +  ## geometry layer\n    _______________ +  ## label layer\n    ______________________________  +   ## facet layer\n    ______________________________      ## theme layer (set legend.position = \"none\")\n```\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

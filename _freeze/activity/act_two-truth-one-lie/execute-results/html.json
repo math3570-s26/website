@@ -1,0 +1,15 @@
+{
+  "hash": "7abebd90a6fa013d4c3ff8bfd7ac0c7d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"In-class Activity: Two truths and a lie\"\n---\n\nThe following activity demonstrates **probability calibration**.\n\n## [[Team]]{.blue} Activity: Two truths and a lie [^2]\n\n[^2]: [Active Statistics, Page 179](https://users.aalto.fi/~ave/ActiveStatistics.pdf).\n\n::: {.cell .column-margin}\n::: {.cell-output-display}\n![](../images/QRCode_truth.png){width=945}\n:::\n:::\n\nWithin your group:\n\n1. One person tells three personal statements one of which is a lie.\n\n2. Others discuss and guess which statement is the lie and they jointly construct a numerical statement of their **certainty** in the guess on a 0–10 scale.\n\n3. The storyteller reveals which was the lie.\n\n4. Enter the certainty estimate and the outcome success or failure and submit in the [Microsoft form](https://forms.office.com/r/J6dwWdvfc0).\n\n5. Rotate through everyone in your group so that each person plays the storyteller role once.\n\n\n\n## Discussion\n\n::: {.callout-caution collapse=\"true\"}\n## What do you think the range of centainty scores will look like?\n\n\n:::\n\n\n::: {.callout-caution collapse=\"true\"}\n## Will there be a positive relation between $x$ and binary $y$: are guesses with higher certainty be more accurate, on average?\n\n\n:::\n\n\n::: {.callout-caution collapse=\"true\"}\n## How strong will the relation be between $x$ and $y$: what will the curve look like?\n\n\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

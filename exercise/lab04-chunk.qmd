@@ -1,0 +1,43 @@
+---
+title: "Lab 04: Code Chunk"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: false
+---
+
+```{r}
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/05-quarto/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+```
+
+::: callout-note
+
+:::
+
+- In **lab.qmd** `## Lab 4: Code Chunk`, use code chunks to
+
+  - include an image with `knitr::include_graphics("URL or file path")`
+  <https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png>
+  
+  - include a plot `plot(mtcars$disp, mtcars$mpg)`
+  
+  - Show dataset `mtcars` as a table using `knitr::kable()`
+  
+- Do some inline code calculation like <span>&#96;</span>r ncol(mtcars)&#96;, <span>&#96;</span>r log(100, base = 10) + sqrt(4)&#96;.
+
+- Add option `fig-height: 4`, `fig-width: 6` and `fig-align: right` to the chunk for your plot. What are the changes?
+  
+- How do we set global chunk options to not show the code in every chunk in the document?
+
+- Once done, commit with message [_"04-codechunk"_]{style="color:green"} and push your work to GitHub.
+

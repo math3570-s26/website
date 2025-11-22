@@ -1,0 +1,15 @@
+{
+  "hash": "4de3b8edd53d9db587f184e179550ff2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 11: ggplot2\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\n\n\nIn **lab.qmd** `## Lab 11` section,\n\n- Use `readr::read_csv()` to import the data **penguins.csv** into your R workspace.\n\n- Generate the following ggplot:\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/09-ggplot2/unnamed-chunk-2-1.png){fig-align='center' width=100%}\n:::\n:::\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\npenguins <- read_csv(_________________)\n________ |> \n  ggplot(mapping = ____(x = ______________,\n                        y = ______________,\n                        colour = ________)) +\n  geom______() +\n  ____(title = ____________________,\n       _________ = \"Dimensions for Adelie, Chinstrap, and Gentoo Penguins\",\n       x = _____________, y = _______________,\n       _______ = \"Species\",\n       _______ = \"Source: Palmer Station LTER / palmerpenguins package\")\n```\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

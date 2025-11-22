@@ -1,0 +1,15 @@
+{
+  "hash": "f830dd916ee7ce17e6014b0b8034de16",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 10: Import Data\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\n\n- If you haven't, install and load the `tidyverse` package.\n\nIn **lab.qmd** `## Lab 10` section,\n<!-- - If you haven't, upload data.zip posted in D2L Week 5 module to your lab project workspace. -->\n<!-- - Run the following code to see the data sets saved in the `dslabs` package: -->\n<!-- ```{r, eval=FALSE} -->\n<!-- path <- system.file(\"extdata\", package = \"dslabs\") -->\n<!-- files <- list.files(path) -->\n<!-- files -->\n<!-- ``` -->\n<!-- - Use `file.path()` to create the file path for the file **\"ssa-death-probability.csv\"**.  -->\n\n\n- Import **ssa_male_prob.csv** and **ssa_female_prob.Rds** in the data folder using `read_csv()` and call them `ssa_male` and `ssa_female`, respectively.\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nssa_male <- readr::read____(____________)\nssa_female <- readr::read____(____________)\n```\n:::\n\n- Plot `Age` (x-axis) vs. `LifeExp` (y-axis) for `Female`. The type should be \"line\", and the line color is red. Add x-label, y-label and title to your plot.\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nplot(x = _____, y = _____, type = ______, col = ______,\n     xlab = ______, ylab = _______, main = ____________)\n```\n:::\n\n- Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue.\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nlines(x = _____, y = _____, col = ______)\n```\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

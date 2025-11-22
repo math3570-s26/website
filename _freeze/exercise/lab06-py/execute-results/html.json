@@ -1,0 +1,15 @@
+{
+  "hash": "ec6a32ece401fa2a546675a5413992d9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 06: Python Data Structure\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n:::\n\n\nIn **lab.qmd** Lab 6,\n\n- Create a Python list and dictionary similar to the R list below.\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code  code-line-numbers=\"false\"}\nx_lst <- list(idx = 1:3, \n              \"a\", \n              c(TRUE, FALSE))\n```\n:::\n\nRemember to create Python code chunk\n\n::: {.cell layout-align=\"center\"}\n\n````{.cell-code  code-line-numbers=\"false\"}\n```{{Python}}\n#| echo: true\n#| eval: false\n#| code-line-numbers: false\n\n```\n````\n:::\n\n[Any issue of this Python chunk?]{.red}\n\n\nCommit and Push your work once you are done.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

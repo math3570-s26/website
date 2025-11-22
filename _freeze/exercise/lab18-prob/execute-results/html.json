@@ -1,0 +1,15 @@
+{
+  "hash": "a411e76f453d599a3598c0a54a5c0f6b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 18: Probability\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\n\nIn **lab.qmd** `## Lab 18` section,\n\n- Plot the probability function $P(X = x)$ of $X \\sim \\text{binomial}(n = 5, \\pi = 0.3)$. \n\nTo use ggplot,\n\n1. Create a data frame saving all possible values of $x$ and their corresponding probability using `dbinom(x, size = ___, prob = ___)`.\n  \n::: {.cell layout-align=\"center\"}\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 6 × 2\n      x       y\n  <int>   <dbl>\n1     0 0.168  \n2     1 0.360  \n3     2 0.309  \n4     3 0.132  \n5     4 0.0284 \n6     5 0.00243\n```\n\n\n:::\n:::\n\n\n2. Add `geom_col()`\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/15-probstat/binom-ggplt-1.png){fig-align='center' width=100%}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

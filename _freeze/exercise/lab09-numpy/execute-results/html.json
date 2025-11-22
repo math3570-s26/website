@@ -1,0 +1,15 @@
+{
+  "hash": "7d2804eb166ac6aa3fb404bde372c176",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 09: NumPy and pandas\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\nIn **lab.qmd** `## Lab 9` section, create a Python pandas.DataFrame equivalent to the R tibble\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\ntibble(x = 1:5, y = 5:1, z = LETTERS[1:5])\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 5 × 3\n      x     y z    \n  <int> <int> <chr>\n1     1     5 A    \n2     2     4 B    \n3     3     3 C    \n4     4     2 D    \n5     5     1 E    \n```\n\n\n:::\n:::\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.python .cell-code}\nimport numpy as np\nimport pandas as pd\nimport string\nlist(string.ascii_uppercase)\ndic = {'__': ____________, \n       '__': reversed(____________),\n       '__': list(string.ascii_uppercase)[______]}\npd._____________(dic)\n```\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

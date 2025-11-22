@@ -1,0 +1,24 @@
+---
+title: "Week 11"
+subtitle: "Probabilistic and Statistical Simulation"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - Probability and Statistics](/slides/15-probstat.html)
+
+## Exercise
+
+📋 [Lab-18 Probability](/exercise/lab18-prob.html "lab18-prob")
+
+📋 [Lab-19 Confidence Interval](/exercise/lab19-ci.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

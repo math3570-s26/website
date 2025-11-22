@@ -1,0 +1,655 @@
+---
+title: "Data Science Overview `r emo::ji('book')`"
+subtitle: "MATH/COSC 3570 Introduction to Data Science"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+# date: "`r format(Sys.time(), '%B %d %Y')`"
+# macros: _macros.tex # import a list of TeX/LaTeX definitions
+format: 
+  revealjs:
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    # include-in-header:
+    #     - "macros.tex"
+    highlight-style: github
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t
+    incremental: false
+    width: 1800
+    height: 1000
+    margin: 0.05
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[math3570-s25.github.io/website](https://math3570-s25.github.io/website/)"
+    theme: ["simple", "slides.scss"]
+    echo: false
+    multiplex: true
+    code-link: true
+    fig-cap-location: bottom
+    fig-align: center
+    transition: none ## fade slide convex concave zoom
+    code-line-numbers: false
+    title-slide-attributes:
+      data-background-color: "#447099"
+      # data-background-image: images/paper-texture.jpg
+      # data-background-size: cover
+      # data-background-color: "#698ED5"
+editor: source
+execute:
+  freeze: true
+---
+
+
+# {visibility="hidden"}
+
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/02-datascience/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+
+# What is Data Science or a Data Scientist?
+
+
+
+## [A Little History of Data Science](https://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/?sh=7786e51d55cf)
+- In 1985, Dr. Jeff Wu used the term [Data Science for the first time as an alternative name for Statistics.](./documents/fazhan.pdf)
+<!-- - In 1997, Dr. Wu calls for [statistics to be renamed data science and statisticians to be renamed data scientists.](./documents/datascience.pdf) -->
+<!-- - In 2001, Dr. William S. Cleveland advocated an [expansion of statistics beyond theory into six technical areas, and the altered expanded field will be called data science.](http://brenocon.com/Cleveland1991DataScience.pdf) -->
+
+
+```{r}
+#| out-width: 70%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/ds_trend_s25.png")
+```
+
+
+::: notes
+- The first question is What is DS? Actually this is a really hard question to answer, at least at this moment.
+
+- (1985) Originally, DS was proposed to replace statistics. DS is just another name or maybe better name for statistics.
+
+- (1997) But still at that time, nobody cares. Statisticians are weird guys in math departments who deal with proofs and theorems and sometimes real data, and they are stubborn, not willing to change. But if you wiki the definition of statistics, statistics is a science of data, and you tell me what is the difference of science of data and data science?
+
+- (2001) Using this definition, DS becomes a broader term than statistics. Anything related to data can be a part of data sicence, while statistics now becomes a narrower subject focusing on inference and data analysis part.
+
+- Here shows the google trend of DS. When I was in college or beginning of PHD studies, very few people used DS as a term. And all of sudden, DS become more and more popular, and everybody is talking about it.
+:::
+
+
+
+##
+
+::: small
+:::: {.columns}
+::: {.column width="50%"}
+```{r}
+#| out-width: "70%"
+#| fig-align: "center"
+#| fig-cap: "Source: https://www.reddit.com/r/meme/comments/floq3q/reality_behind_data_science/"
+knitr::include_graphics("./images/02-datascience/ds-stats.jpeg")
+```
+:::
+
+
+::: {.column width="50%"}
+::: fragment
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+#| fig-cap: "Source: https://br.ifunny.co/picture/we-will-work-together-statistics-computer-science-please-teach-now-h4hdtthT9?s=cl"
+knitr::include_graphics("./images/02-datascience/ds_animal.png")
+```
+:::
+:::
+::::
+
+:::
+
+
+#
+
+::: {.center}
+::: {style="font-size: 2em;"}
+::: {.r-fit-text}
+[`r emo::ji('confused')` Still what on earth is data science?]{.pink}
+:::
+:::
+:::
+
+
+
+## Battle of the Data Science Venn Diagrams
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- [2010 Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/venn_2010_conway.png")
+```
+:::
+
+
+::: {.column width="50%"}
+
+- [2012 Brendan Tierney](https://oralytics.com/2012/06/13/data-science-is-multidisciplinary)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/venn_2012_tierney.png")
+```
+:::
+::::
+
+
+## Battle of the Data Science Venn Diagrams
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- [2013 Ulrich Matter](http://giventhedata.blogspot.com/2013/03/data-science-in-businesscomputational.html)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/venn_2013_matter.jpeg")
+```
+:::
+
+
+::: {.column width="50%"}
+
+<!-- - [2013 Joel Grus](https://joelgrus.com/) -->
+
+<!-- ```{r} -->
+<!-- #| out-width: 100% -->
+<!-- #| fig-align: center -->
+<!-- knitr::include_graphics("./images/02-datascience/venn_2013_grus.png") -->
+<!-- ``` -->
+<!-- - [2013 Harlan Harris](https://www.datacommunitydc.org/blog/2013/09/the-data-products-venn-diagram) -->
+
+<!-- ```{r} -->
+<!-- #| out-width: 100% -->
+<!-- #| fig-align: center -->
+<!-- knitr::include_graphics("./images/02-datascience/venn_2013_harris.png") -->
+<!-- ``` -->
+- [2014 Michael Malak](http://datascienceassn.org/content/fourth-bubble-data-science-venn-diagram-social-sciences)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/venn_2014_malak.png")
+```
+:::
+::::
+
+
+::: notes
+- Starting 2010, people tried to use venn diagrams to define DS, what should be include, what should be not. It's a subset of something, or superset of something. 
+
+- We have to do DS on some subject/field. 
+
+- (left) ML use CS and STAT but doesn't care about domain knowledge.
+
+- If you apply CS to substantive expertise without solid math and stats, you are doing bullshit basically. 
+
+- (right) DS is a subset of KDD - Knowledge Discovery in Data
+:::
+
+
+## Battle of the Data Science Venn Diagrams
+
+:::: {.columns}
+::: {.column width="50%"}
+
+- [2015 Stephan Kolassa](https://datascience.stackexchange.com/questions/2403/data-science-without-knowledge-of-a-specific-topic-is-it-worth-pursuing-as-a-ca)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/venn_2015_kolassa.png")
+```
+:::
+
+
+::: {.column width="50%"}
+
+- [2016 Gregory Piatetsky-Shapiro](https://www.kdnuggets.com/2016/03/data-science-puzzle-explained.html)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/venn_2016_shapiro.jpg")
+```
+:::
+::::
+
+## Shall We Continue?
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- [2017 Longbing Cao](https://cacm.acm.org/magazines/2017/8/219605-data-science/fulltext)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/venn_2017_cao.jpg")
+```
+:::
+
+
+::: {.column width="50%"}
+
+- [totally-not-a-Venn-diagram by Calvin Andrus](https://en.wikipedia.org/wiki/File:DataScienceDisciplines.png)
+
+```{r}
+#| out-width: 90%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/not_venn_2012_andrus.png")
+```
+:::
+::::
+
+
+<!-- ## Shall We Continue? -->
+<!-- :::: {.columns} -->
+
+<!-- ::: {.column width="50%"} -->
+
+<!-- ::: -->
+
+
+<!-- ::: {.column width="50%"} -->
+<!-- ```{r} -->
+<!-- #| out-width: "90%" -->
+<!-- #| fig-align: "center" -->
+<!-- knitr::include_graphics("./images/02-datascience/venn_7_way.jpg") -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- :::: -->
+
+##
+
+- You probably get the idea. There are so many ways to define *data science*.
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("./images/02-datascience/ds_venn.png")
+```
+
+## What is Data Scientist
+
+- `r emo::ji('moneybag')` `r emo::ji('moneybag')` Dr. Grant [(*Statistics Education Research Journal*, 2017)](https://iase-web.org/documents/SERJ/SERJ16(1)_Grant.pdf): Data science is the field of people who decide to print "Data Scientist" on their business cards to get a salary bump! `r emo::ji('dollar')` `r emo::ji('dollar')`
+
+. . .
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("./images/02-datascience/data_science_stats.png")
+```
+
+. . .
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("./images/02-datascience/data_science_sf.png")
+```
+
+. . .
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("./images/02-datascience/data_science_mac.png")
+```
+
+
+<!-- ## -->
+<!-- ```{r} -->
+<!-- #| out-width: "100%" -->
+<!-- #| fig-align: "center" -->
+<!-- knitr::include_graphics("./images/02-datascience/ds_meme.png") -->
+<!-- ``` -->
+
+
+## What is Data Scientist
+::::: {.columns}
+
+:::: small
+::: {.column width="50%"}
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+#| fig-cap: "Source: https://www.instagram.com/data_science_learn/"
+knitr::include_graphics("./images/02-datascience/ds_radar.png")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+#| fig-cap: "Source: https://www.instagram.com/data_science_dojo/"
+knitr::include_graphics("./images/02-datascience/ds_de_bs.png")
+```
+:::
+::::
+:::::
+
+
+
+## What Wiki Defines
+
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/02-datascience/ds-wiki-1.png")
+```
+
+
+## Data Science in This Course
+
+- Data science is an discipline that allows us to *turn raw data into understanding, insight, and knowledge*.
+
+- We're going to learn to do this in a **tidy** way -- more on that later!
+
+- This is a introductory data science course with an emphasis on important tools of R/Python that help us do data science.
+
+
+
+# A Data Science Project {background-color="#447099"}
+
+
+
+## Data Science Workflow
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/whole-game.png")
+```
+
+
+
+
+## 
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/import.png")
+```
+
+- **Import**: Take data stored somewhere and load it into your workspace.
+- **Tidy**: Storing data in a *consistent rectangular* form, i.e., a **data matrix**.
+- **Transform**: Narrowing in on observations of interest, creating new variables, calculating statistics.
+
+
+::: notes
+- To do DS, we need data, so the first step is to import data (------).
+
+- But usually the raw data are very messy, so we need tidy the data by storing data in a consistent rectangular form (**data frame** in R), which is easy for modeling and analysis.
+
+- Depending on our research goal, we may just want to focus on some variables , or observations in the data, or we may want to create some variables for example, the data use feet, but we want to use meter instead. This data transformation further cleans the data, so that we can extract any information we need from data more easily and efficiently. In other words, we improve the quality of data.
+
+:::
+
+## Data Matrix
+- Each *row* corresponds to a *unique case* or *observational unit*.
+- Each *column* represents a *characteristic* or *variable*.
+- This structure allows new cases to be added as rows or new variables as new columns.
+
+. . .
+
+```{r}
+#| echo: true
+#| class-output: "my_class600"
+ggplot2::mpg |> print(n = 10)
+```
+
+<!-- # ```{r} -->
+<!-- # #| out-width: "100%" -->
+<!-- # #| fig-align: "center" -->
+<!-- # knitr::include_graphics("./images/02-datascience/mu_data.png") -->
+<!-- # ``` -->
+
+
+
+##
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/wrangle.png")
+```
+
+::: notes
+- The process of importing, tidying and transforming data is called data wrangling or data munging.
+:::
+
+
+##
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/visualize.png")
+```
+
+- **Visualisation**: A good visualisation shows you things that you did not expect or raise new questions about the data.
+
+
+::: notes
+- Once the data are ready, it's time to explore our data.
+
+- My recommendation is that always plot your data before building any model or algorithm or doing analysis because good visualization let you understand more about your data, and may provide some hints about how to build your statistical model, machine learning algorithms or how to do analysis. 
+
+- And good visualization shows you things that you did not expect or raise new questions about the data. (outliers, missing data)
+
+- So after visualizing your data, you may have better idea of how to transforming your data so that you can be better prepared for modeling and answer your research questions. (nonlinear relationship <-> linear relationship)
+:::
+
+
+
+
+## 
+
+```{r}
+#| echo: true
+#| out-width: "100%"
+mpg |> ggplot(aes(x = displ, y = hwy)) +
+    geom_point(aes(color = class)) + 
+    geom_smooth() + 
+    theme_bw()
+```
+
+
+
+
+##
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("./images/02-datascience/data-science-model.png")
+```
+
+- **Model**: Models are complementary tools to visualisation. Once you have made your questions sufficiently precise, you can use a model to answer them.
+
+
+::: notes
+- The next step is to use or build a rigorous statistical or machine learning model to answer our research questions. For example, forecasting stock prices, classifying images.
+
+- And transform-visualize-model becomes a loop of understanding or learning from data. We keep transforming, visualizing and modeling our data until our questions are properly answered by our data and model.
+:::
+
+
+##
+
+```{r}
+#| echo: true
+library(tidymodels)
+linear_reg() |>  
+    set_engine("lm") |> 
+    fit(hwy ~ displ, data = mpg)
+```
+
+
+
+##
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/communicate.png")
+```
+
+- **Communication**: It doesn't matter how well your models and visualization have led you to understand the data unless you can also communicate your results to others.
+
+::: notes
+- Finally we have to share our analysis results with others.
+
+- At this stage, visualization plays an important role as well.
+
+- Figures/tables speak louder than words.
+
+- We can have different types of deployment. In addition to papers or reports, we can create a website, a software package, a mobile app, dashboard and so on. 
+:::
+
+
+
+##
+
+```{r}
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/program.png")
+```
+
+- **Programming**: Surrounding all these tools is programming.
+
+::: notes
+- Of course, every aspect of DS is done by programming. DS cannot be done by pieces of paper and pens. It has to be done using computers.
+:::
+
+
+## R for Data Science
+
+::: small
+```{r}
+#| out-width: 85%
+#| fig-align: center
+#| fig-cap: "Source: https://teachdatascience.com/tidyverse/"
+knitr::include_graphics("./images/02-datascience/pkg-workflow.png")
+```
+:::
+
+![](images/02-datascience/tidymodels.png){.absolute top="650" right="645" width="180"}
+
+![](images/02-datascience/quarto.png){.absolute top="415" right="105" width="180"}
+
+::: notes
+- If you are ready, let's dive in and learn all these tools. Well not all, but some of these tools. 
+
+- By the way, you see these hex stickers? It kind of becomes a trend that when we create an R package, or software, we also create a hex logo associated with it, so it works as product or brand logo. It may be easier for you to promote your package if you have a cute or beautiful hex logo. 
+:::
+
+## Python for Data Science
+
+::: small
+```{r}
+#| out-width: 70%
+#| fig-align: center
+#| fig-cap: "Source: https://www.e2enetworks.com/blog/9-python-libraries-for-data-science-and-artificial-intelligence"
+knitr::include_graphics("./images/02-datascience/pkg-workflow-py.png")
+```
+:::
+

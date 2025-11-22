@@ -1,0 +1,704 @@
+---
+title: "Posit Cloud `r emo::ji('cloud')`"
+subtitle: "MATH/COSC 3570 Introduction to Data Science"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+format: 
+  revealjs:
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    # include-in-header:
+    #     - "macros.tex"
+    highlight-style: github
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t
+    incremental: false
+    width: 1800
+    height: 1000
+    margin: 0.05
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[math3570-s25.github.io/website](https://math3570-s25.github.io/website/)"
+    theme: ["simple", "slides.scss"]
+    echo: false
+    multiplex: true
+    code-link: true
+    fig-cap-location: bottom
+    fig-align: center
+    transition: none ## fade slide convex concave zoom
+    code-line-numbers: false
+    title-slide-attributes:
+      data-background-color: "#447099"
+# editor: source
+# execute:
+#   freeze: true
+---
+
+#  {visibility="hidden"}
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fontawesome)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    fig.retina = 10,
+    fig.path = "images/03-posit/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+# **Let's get equipped with data science tools!**
+
+::: notes
+-   All right. Let's set up our computing environment, so we can start coding, and doing data science.
+-   The set-up is important. It ensures that you can do what you need to do, including your homework and projects.
+-   And I would like to make sure everyone is on the same page. OK
+:::
+
+## Integrated Development Environment
+
+:::::: columns
+::: {.column width="40%"}
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/posit.png")
+```
+:::
+
+::: {.column width="30%"}
+<br>
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/rstudio-logo.png")
+```
+:::
+
+::: {.column width="30%"}
+```{r}
+#| out-width: 50%
+#| fig-align: center
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg")
+```
+:::
+::::::
+
+-   R and Python are programming languages.
+
+-   [Posit Cloud](https://posit.cloud/) offers two integrated development environments (IDE):
+
+    -   [RStudio](https://posit.co/products/open-source/rstudio/)
+    -   [JupyterLab/Jupyter Notebook](https://jupyter.org/)
+
+which are software for efficiently writing computer programs.
+
+::: notes
+-   We'll use Posit Cloud to write R and Python code.
+-   The first tool we need is Posit Cloud which is a cloud service provided by the company Posit. <!-- - With packages, we can do lots of things without writing our own code, and we can just use the functions provided in packages to do our job. It saves us lots of time. --> <!-- - A language with many great add-on packages can become a very useful language. --> <!-- - packages: which is a collection of functions and data for people to use. -->
+-   R is not a general-purpose programming language like python or java, but it is specifically for data science. And that's probably why you don't learn R in an intro programming course.
+-   So you can view Python as a smart phone. It can do many different things, phone, camera, email, social media. But R is like a high quality camera. You cannot use it to write emails, text messages, but it produces high quality photos.
+-   RStudio is not a programming language, but a software application.
+-   Code itself is just a text file. You can use any text editor or software to write your code.
+-   So RStudio makes programming in R more easily and efficiently. It provides so many useful functions for you that doing data science becomes a piece of cake.
+-   Today, You are gonna have a chance to play with different panes and functions in RStudio. OK.
+:::
+
+## `r emo::ji('cloud')` Posit Cloud - Data Science w/o hardware hassles
+
+-   `r emo::ji('sunglasses')` Implement R/Python programs *without* needing to install R/Python and the IDE in your laptop!
+
+-   `r emo::ji('sunglasses')` [**Posit Cloud**](https://rstudio.cloud/) lets you do, share and learn data science **entirely online**!
+
+:::::: columns
+::: {.column width="50%"}
+### `r emo::ji('disappointed')` Get everything ready locally: Lots of friction
+
+-   Download and install R/Python
+-   Download and install IDE
+-   Install wanted R/Python packages:
+    -   tidymodels
+    -   tidyverse
+    -   NumPy
+    -   ...
+-   Download and install tools like Git
+:::
+
+:::: {.column width="50%"}
+::: fragment
+### `r emo::ji('nerd_face')` Posit Cloud: Much less friction
+
+```{r}
+#| echo: false
+#| out-width: 40%
+knitr::include_graphics("images/03-posit/cloud.png")
+```
+
+-   Go to <https://posit.cloud/>
+
+-   Log in
+
+    `> hello world!`
+:::
+::::
+::::::
+
+::: notes
+-   Why I choose posit cloud for you to code in R? Well if I want every one of you use R/Python and RStudio locally in your computer, you have to (\_\_\_\_\_). And we need some magic to make sure everyone gets the coding environment ready.
+-   Instead, with the Cloud-based solution, you just need to login, then you start writing code right away.
+-   Posit Cloud provides you with the latest version of R and RStudio. No installation is required.
+-   Doesn't mean you should always use Posit Cloud version. It's not free if you need more resources.
+-   If later you program a lot, you should absolutely install them locally into your laptop.
+:::
+
+## Install Posit Cloud
+
+::: lab
+-   *Step 1*: In the Posit website <https://posit.co/>, choose **Products \> Posit Cloud** as shown below.
+:::
+
+```{r}
+#| out-width: 50%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/posit-cloud-s25.png")
+```
+
+## Install Posit Cloud
+
+::: lab
+*Step 2*: Click **GET STARTED**.
+
+*Step 3*: [**Cloud Student**]{.red} **\> Sign Up** using your Marquette email address.
+:::
+
+::::: columns
+::: {.column width="30%"}
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/landing-1-posit.png")
+```
+:::
+
+::: {.column width="70%"}
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/posit-student-plan-s25.png")
+```
+:::
+:::::
+
+::: notes
+file:///Users/chenghanyu/Dropbox/academia/books/r/teach-r-online-master/01-cloud/01-cloud.html#37
+:::
+
+## New Projects
+
+::::: columns
+::: {.column width="85%"}
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/new-project-cloud-posit.png")
+```
+:::
+
+::: {.column width="15%"}
+```{r}
+#| out-width: 100%
+knitr::include_graphics("images/03-posit/new-project-option-24.png")
+```
+:::
+:::::
+
+-   We will talk about Git/GitHub shortly.
+
+## Workspaces
+
+-   When you create an account on Posit Cloud you get a **workspace** of your own.
+-   You can add a new workspace (click **+ New Space** in sidebar) and control its permissions.
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/posit-cloud-hide-sidebar.png")
+```
+
+## Welcome to 3570 Data Science!
+
+::: lab
+-   I'm sending you a link via email for joining the course workspace **2025-spring-math-3570**. Please join.
+
+```{r}
+#| out-width: 70%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/join-space.png")
+```
+:::
+
+::: notes
+Go to D2l to send Posit Cloud invitation
+
+Subject Posit Cloud Invitation Message https://posit.cloud/spaces/598911/join?access_code=6SiLjVJc37hZPq5Qi6uvzip3vtPCE1z46u0dwKig
+
+Best, Dr. Yu
+:::
+
+## 
+
+::: lab
+<br>
+
+-   In the bar, click workspace **2025-spring-math-3570**.
+
+-   [In the workspace]{.red}, click **New Project \> New RStudio Project** to get into the IDE.
+
+-   In *Untitled Project*, name your project as **3570-project**.
+
+-   In the Console pane, write R code: a string **`"Hello WoRld!"`** or math **`2 + 4`**.
+
+-   **Tools \> Global Options \> Appearance** to select your favorite editor theme.
+:::
+
+## 
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/rcloud_project.png")
+```
+
+## More Tips
+
+-   Read the [Posit Cloud Documentation](https://docs.posit.co/cloud/)
+
+```{r}
+#| out-width: 70%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/posit-cloud-doc.png")
+```
+
+# Working in Posit Cloud {background-color="#447099"}
+
+## Panes
+
+```{r}
+#| out-width: 85%
+#| fig-align: center
+#| label: rstudio-panes
+knitr::include_graphics("images/03-posit/rstudio_panes.png")
+```
+
+::: notes
+-   In RStudio, there are 4 main panes, source pane, console pane, pane for environment/history and version control, and the pane for files plots packages and help page.
+-   Source pane is where you write your code. Your code will not be evaluated or interpreted until you "run" them or source them to the console.
+-   Try to write your code in R/Python scripts in the Source, so that the code can be saved and reused later.
+-   You type code into the Console if the code is short or you want to do some quick calculations or analysis. The code you type in the Console will not be saved in a script.
+-   In the environment/history, you can check any objects you create in the R/Python environment and you can also view your command history in the history tab.
+-   And you will see how the pane for file/plot/package/help can be used as we learn more about RStudio.
+:::
+
+## R Script
+
+-   A R script is a **.R** file that contains R code.
+
+-   To create a R script, go to **File \> New \> R Script**, or click the green-plus icon on the topleft corner, and select R Script.
+
+```{r}
+#| out-width: 85%
+#| fig-align: center
+#| label: script-r
+knitr::include_graphics("images/03-posit/script.png")
+```
+
+::: notes
+-   Here you see in this r script, I create two objects x and y, and I also load the data called mtcars into R environment.
+-   Don't worry if you don't know these syntax. I will teach you basic R syntax and programming next week.
+:::
+
+## Run Code
+
+-   [ **Run** ]{style="color:blue"}: run the **current line** or **selection of code**.
+    -   `ctrl + enter` (Win) or `cmd + enter` (Mac)
+-   [ **Icon right to the Run** ]{style="color:blue"}: re-run the **previous** code.
+    -   `alt + ctrl + p` (Win) or `option + cmd + p` (Mac)
+-   [ **Source** ]{style="color:blue"}: run **all** the code in the R script.
+    -   `shift + ctrl + s` (Win) or `shift + cmd + s` (Mac)
+-   [ **Source with Echo** ]{style="color:blue"}: run **all** the code in the R script *with the code printed in the console*.
+    -   `shift + ctrl + enter` (Win) or `shift + cmd + enter` (Mac)
+
+```{r}
+#| label: run-r
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/script.png")
+```
+
+::: notes
+-   [ **Source** ]{style="color:blue"}: run **all** the code in the R script with **NO** output
+-   [ **Source with Echo** ]{style="color:blue"}: run **all** the code in the R script *and show output*
+-   Depending on your purpose, you can run code line by line or run the entire code.
+-   To run the R code line by line, Click Run icon to run the current line or selection of code. Or use key-binding `ctrl + enter` (windows) or `cmd + enter` (mac)
+:::
+
+## Environment Tab
+
+-   The (global) environment is where we are currently working.
+
+-   Anything created or imported into the current R/Python session is stored in the environment and shown in the **Environment** tab.
+
+-   After we run the R script, objects stored in the environment are
+
+    -   Data set `mtcars`
+    -   Object `x` storing integer values 1 to 10.
+    -   Object `y` storing three numeric values 3, 5, 9.
+
+```{r}
+#| label: env
+#| out-width: 70%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/environment.png")
+```
+
+::: notes
+-   Anything created or imported into the current R session is stored in our environment and shown in the **Environment** tab.
+-   We'll talk about the R data type in detail later.
+:::
+
+## Python Script
+
+-   A Python script is a **.py** file that contains Python code.
+
+-   To create a Python script, go to **File \> New \> Python Script**, or click the green-plus icon on the topleft corner, and select Python Script.
+
+```{r}
+#| out-width: 85%
+#| fig-align: center
+#| label: script-py
+knitr::include_graphics("images/03-posit/script-py.png")
+```
+
+## Run Python Code
+
+-   Running Python code may need to update some packages. Please say *YES!*
+
+-   When you run the Python code in the R console, or type `reticulate::repl_python()`, the console will switch from R to Python.
+
+-   In the Python console `>>> quit` to switch back to the R console.
+
+```{r}
+#| label: run-py
+#| fig-align: center
+#| out-height: "4.5in"
+#| out-width: "10in"
+knitr::include_graphics("images/03-posit/run-py-pkg.png")
+```
+
+::: notes
+REPL = Read, Evaluate, Print, and Loop
+
+or type `reticulate::repl_python()`
+:::
+
+## Environment Tab
+
+-   After we run the Python script, the object stored in the environment is
+    -   Object `b` storing a string `Hello World!`
+
+```{r}
+#| label: env-py
+#| out-width: 80%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/environment-py.png")
+```
+
+::: notes
+-   Anything created or imported into the current R session is stored in our environment and shown in the **Environment** tab.
+-   We'll talk about the R data type in detail later.
+:::
+
+## History Tab
+
+-   The **History** tab keeps a record of all previous commands.
+    -   [**save icon**]{style="color:blue"}: save all history to a file
+    -   [**To Console**]{style="color:blue"}: send the selected commands to the console.
+    -   [**To Source** ]{style="color:blue"}: inserted the selected commands into the current script.
+
+```{r}
+#| label: history
+#| out-width: 40%
+#| fig-align: center
+#| echo: false
+knitr::include_graphics("images/03-posit/history.png")
+```
+
+## History Tab
+
+-   The **History** tab keeps a record of all previous commands.
+    -   [**save icon**]{style="color:blue"}: save all history to a file
+    -   [**To Console**]{style="color:blue"}: send the selected commands to the console.
+    -   [**To Source** ]{style="color:blue"}: inserted the selected commands into the current script.
+
+::: tip
+In the console pane, use `r emo::ji('arrow_up')` to show the previous commands.
+:::
+
+## R Packages `r emo::ji('package')`
+
+-   When we start a R session, only built-in packages like **base**, **stats**, **graphics**, etc are available.
+-   Installing packages is an easy way to get access to others data and functions.
+
+. . .
+
+![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readr.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readxl.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/haven.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/tidyverse.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidyr.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/dplyr.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/sparklyr.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png){width="150"}![](https://raw.githubusercontent.com/slowkow/ggrepel/master/man/figures/logo.svg){width="150"}![](https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png){width="150"}![](https://raw.githubusercontent.com/sjmgarnier/viridis/master/hex_logo/viridis.svg){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/tibble.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/gt.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/purrr.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/lubridate.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/stringr.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/rvest.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/rmarkdown.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/knitr.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/quarto.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/shiny.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/devtools.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/flexdashboard.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/reticulate.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/broom.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidymodels.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidyposterior.png){width="150"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidypredict.png){width="150"} and [more](https://github.com/rstudio/hex-stickers)!
+
+::: notes
+-   A language with many great add-on packages can become a very useful language.
+-   packages: which is a collection of functions and data for people to use.
+:::
+
+#  {background-color="#447099" background-image="images/03-posit/hex_laptop.jpeg" background-size="cover"}
+
+<!-- ::: {style="vertical-align: text-bottom;"} -->
+
+<!-- **ohi-science.org/news/takeaways-from-rstudioconf** -->
+
+<!-- ::: -->
+
+<!-- ::: {.bottom} -->
+
+<!-- **ohi-science.org/news/takeaways-from-rstudioconf** -->
+
+<!-- ::: -->
+
+## Installing R Packages `r emo::ji('package')`
+
+::::: columns
+::: {.column width="50%"}
+-   To install a package, for example, the [**ggplot2**](https://ggplot2.tidyverse.org/) package, we use the command
+
+```{r}
+#| label: package
+#| echo: true
+#| eval: false
+install.packages("ggplot2")
+```
+
+<!-- # ```{r package, echo=5, eval=FALSE} -->
+
+<!-- # #| label: package -->
+
+<!-- # #| echo: false -->
+
+<!-- # # install.packages("car", repos = "http://cran.us.r-project.org") -->
+
+<!-- # r = getOption("repos") -->
+
+<!-- # r["CRAN"] = "http://cran.us.r-project.org" -->
+
+<!-- # options(repos = r) -->
+
+<!-- # install.packages("ggplot2") -->
+
+<!-- # # install.packages("car") -->
+
+<!-- # ``` -->
+
+-   In the right-bottom pane, **Packages \> Install**
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("./images/03-posit/pkg_install.png")
+```
+:::
+
+::: {.column width="50%"}
+<p align="center">
+
+<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" style="width:660px;"/>
+
+</p>
+:::
+:::::
+
+## Loading R Packages `r emo::ji('package')`
+
+:::::::: columns
+::::: {.column width="50%"}
+::: question
+What happened when you run
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot(mpg, aes(x = displ, 
+                y = hwy, 
+                colour = class)) + 
+    geom_point()
+```
+:::
+
+::: fragment
+-   To use any function or data in **ggplot2**, we write `ggplot2::` followed by the name of the function or data.
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot2::ggplot(ggplot2::mpg, 
+                ggplot2::aes(
+                    x = displ, 
+                    y = hwy, 
+                    colour = class)
+                ) + 
+    ggplot2::geom_point()
+```
+:::
+:::::
+
+:::: {.column width="50%"}
+::: fragment
+-   We can load the package into our R session using `library()`.
+-   **With library(ggplot2)**, R knows the function and data are from the **ggplot2** package.
+
+```{r}
+#| echo: true
+#| eval: false
+library(ggplot2)
+ggplot(mpg, aes(x = displ, 
+                y = hwy, 
+                colour = class)) + 
+    geom_point()
+```
+:::
+::::
+::::::::
+
+## Help
+
+-   Don't know how a function works or what a data set is about `r emo::ji('question')`
+-   `r emo::ji('point_right')` Simply type `?` followed by the data name or function name like
+
+```{r}
+#| echo: true
+#| label: help
+?mean
+?mpg
+```
+
+. . .
+
+::: question
+What does the function `mean()` do? What is the size of `mpg`?
+:::
+
+. . .
+
+```{r}
+#| out-width: 50%
+knitr::include_graphics("images/03-posit/mpg_help.png")
+```
+
+::: notes
+A document will show up in the Help tab, teaching you how to use the function or explaining the data set.
+:::
+
+## 
+
+::: lab
+[ **01-Running R Script** ]{style="color:blue"}
+
+-   Load R package **ggplot2** into your Posit Cloud.
+
+```{r}
+#| echo: true
+#| eval: false
+## install the package if you haven't!
+________(ggplot2)
+```
+
+-   Create a R script named **lab01-run-script.R** in your **3570-project**.
+
+-   Copy and paste the code below into the script, and save it.
+
+```{r}
+#| eval: false
+#| echo: true
+bar <- ggplot(data = diamonds) + 
+    geom_bar(mapping = aes(x = cut, fill = cut), 
+             show.legend = FALSE, width = 1) + 
+    theme(aspect.ratio = 1) +
+    labs(x = NULL, y = NULL)
+bar + coord_flip()
+bar + coord_polar()
+```
+
+-   Source the script. A pretty plot showing up?! <!-- - Change `4` to `12` and `3` to `20`. Hit Run line by line. What happened? --> <!-- - Use `?mpg` to see what `displ` and `hwy` mean, and use `?ggplot` and `?geom_point` to see more on creating a ggplot. -->
+:::

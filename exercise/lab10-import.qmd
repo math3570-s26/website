@@ -1,0 +1,66 @@
+---
+title: "Lab 10: Import Data"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/08-import/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+```
+
+::: callout-note
+
+:::
+
+
+- If you haven't, install and load the `tidyverse` package.
+
+In **lab.qmd** `## Lab 10` section,
+<!-- - If you haven't, upload data.zip posted in D2L Week 5 module to your lab project workspace. -->
+<!-- - Run the following code to see the data sets saved in the `dslabs` package: -->
+<!-- ```{r, eval=FALSE} -->
+<!-- path <- system.file("extdata", package = "dslabs") -->
+<!-- files <- list.files(path) -->
+<!-- files -->
+<!-- ``` -->
+<!-- - Use `file.path()` to create the file path for the file **"ssa-death-probability.csv"**.  -->
+
+
+- Import **ssa_male_prob.csv** and **ssa_female_prob.Rds** in the data folder using `read_csv()` and call them `ssa_male` and `ssa_female`, respectively.
+
+```{r}
+#| eval: false
+#| purl: false
+ssa_male <- readr::read____(____________)
+ssa_female <- readr::read____(____________)
+```
+
+- Plot `Age` (x-axis) vs. `LifeExp` (y-axis) for `Female`. The type should be "line", and the line color is red. Add x-label, y-label and title to your plot.
+
+```{r}
+#| eval: false
+#| purl: false
+plot(x = _____, y = _____, type = ______, col = ______,
+     xlab = ______, ylab = _______, main = ____________)
+```
+
+- Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue.
+
+```{r}
+#| eval: false
+#| purl: false
+lines(x = _____, y = _____, col = ______)
+```

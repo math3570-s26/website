@@ -1,0 +1,72 @@
+---
+title: "Lab 15: dplyr"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/12-dplyr-1/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+library(plotly)
+```
+
+::: callout-note
+
+:::
+
+In **lab.qmd** `## Lab 15` section, import the `murders.csv` data and 
+
+1. Add **(mutate)** the variable `rate = total / population * 100000` to `murders` data (as I did).
+
+2. **Filter** states that are in *region Northeast or West* and their *murder rate is less than 1*.
+
+3. **Select** variables `state`, `region`, `rate`. 
+
+- Print the output table after you do 1. to 3., and save it as object `my_states`.
+
+- **Group** `my_states` **by** `region`. Then **summarize** data by creating variables `avg` and `stdev` that compute the mean and standard deviation of `rate`. 
+
+- **Arrange** the summarized table by `avg`.
+
+```{r}
+#| eval: false
+_______ <- _______ |> 
+    mutate(_______) |> 
+    filter(_______) |> 
+    select(_______)
+
+_______ |>  
+    group_by(______) |> 
+    summarize(______) |> 
+    arrange(_______)
+```
+
+
+```{r}
+#| echo: false
+#| eval: true
+library(dslabs)
+data(murders)
+(my_states <- murders |> 
+    mutate(rate = total / population * 100000) %>% 
+    filter(region %in% c("West", "Northeast"), rate < 1) %>% 
+    select(state, region, rate))
+my_states %>% 
+    group_by(region) %>% 
+    summarize(avg = mean(rate), std_dev = sd(rate)) %>% 
+    arrange(desc(avg))
+```

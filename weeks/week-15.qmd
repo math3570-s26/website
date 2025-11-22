@@ -1,0 +1,30 @@
+---
+title: "Week 15"
+subtitle: "Principal Component Analysis"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - Principal Component Analysis](slides/15-var-select.html)
+
+`r fontawesome::fa("table")` `USArrests`
+
+## Reading
+
+📖
+
+## Exercise
+
+📋 [Lab-23 Principal Component Analysis](/exercise/lab22-pca.html)
+
+`r fontawesome::fa("table")` `iris`
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

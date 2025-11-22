@@ -1,0 +1,49 @@
+---
+title: "Lab 20: Simple Linear Regression"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/16-linear-reg/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+library(tidymodels)
+```
+
+::: callout-note
+
+:::
+
+
+In **lab.qmd** `## Lab 20` section,
+
+- Use the `mpg` data to fit a simple linear regression where $y$ is `hwy` and $x$ is `cty`.
+
+- Produce the plot below. (add the layer `geom_smooth(method = "lm", se = FALSE)`)
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(tidymodels)
+ggplot(data = mpg, aes(x = cty, y = hwy)) +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE, color = "#003366") + 
+    labs(title = "Highway MPG vs. City MPG",
+         x = "City MPG",
+         y = "Highway MPG") +
+    theme_bw()
+```

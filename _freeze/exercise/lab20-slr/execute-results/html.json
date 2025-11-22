@@ -1,0 +1,15 @@
+{
+  "hash": "1065cc901180bb12a24431858416abe5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 20: Simple Linear Regression\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\n\nIn **lab.qmd** `## Lab 20` section,\n\n- Use the `mpg` data to fit a simple linear regression where $y$ is `hwy` and $x$ is `cty`.\n\n- Produce the plot below. (add the layer `geom_smooth(method = \"lm\", se = FALSE)`)\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/16-linear-reg/unnamed-chunk-2-1.png){fig-align='center' width=100%}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,37 @@
+---
+title: "Week 16"
+subtitle: "K-Means Clustering"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - K-Means Clustering](/slides/20-kmeans.html)
+
+`r fontawesome::fa("table")` [Data - clus_data](/slides/data/clus_data.csv)
+
+## Reading
+
+📖
+
+## Exercise
+
+📋 [Lab-24 K-Means Clustering](/exercise/lab24-kmeans.html)
+
+`r fontawesome::fa("table")` [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/)`::penguins`
+
+```{r}
+#| eval: false
+library(palmerpenguins)
+peng <- penguins[complete.cases(penguins), ] |> 
+    select(flipper_length_mm, bill_length_mm)
+```
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

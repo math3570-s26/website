@@ -1,0 +1,63 @@
+---
+title: "Lab 19: Confidence Interval"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/15-probstat/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+```
+
+::: callout-note
+
+:::
+
+In **lab.qmd** `## Lab 19` section,
+
+- Run the code I give you for simulating 100 $95\%$ CIs. Change the random generator seed to another number you like.
+
+```{r}
+#| purl: false
+#| eval: false
+set.seed(a number you like) Birthday? Lucky number?
+```
+
+- How many CIs do not cover the true mean $\mu$?
+
+
+```{r}
+#| echo: false
+par(mar = c(3.5, 3.5, 0, 0), mgp = c(2.5, 1, 0))
+mu <- 120; sig <- 5 
+al <- 0.05; M <- 100; n <- 16
+
+set.seed(2024)
+x_rep <- replicate(M, rnorm(n, mu, sig))
+xbar_rep <- apply(x_rep, 2, mean)
+E <- qnorm(p = 1 - al / 2) * sig / sqrt(n)
+ci_lwr <- xbar_rep - E
+ci_upr <- xbar_rep + E
+
+plot(NULL, xlim = range(c(ci_lwr, ci_upr)), ylim = c(0, 100), 
+     xlab = "95% CI", ylab = "Sample", las = 1)
+mu_out <- (mu < ci_lwr | mu > ci_upr)
+segments(x0 = ci_lwr, y0 = 1:M, x1 = ci_upr, col = "navy", lwd = 2)
+segments(x0 = ci_lwr[mu_out], y0 = (1:M)[mu_out], x1 = ci_upr[mu_out], col = 2, lwd = 2)
+abline(v = mu, col = "#FFCC00", lwd = 2)
+```
+

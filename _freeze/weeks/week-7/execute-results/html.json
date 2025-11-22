@@ -1,0 +1,14 @@
+{
+  "hash": "503eea024a89dbe16815d449d462c7f6",
+  "result": {
+    "markdown": "---\ntitle: \"Week 7\"\nsubtitle: \"Data Visualization\"\neditor: visual\n---\n\n\n::: callout-important\n:::\n\n## Participate\n\n🖥️ [Slides -Visualizing Data](/slides/10-viz.html)\n\n🖥️ [Slides - Interactive Visualization](/slides/10-interactive-viz.html)\n\n`<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 512 512\" style=\"height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z\"/></svg>`{=html} [Data - loans](/slides/data/loans.csv)\n\n`<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 512 512\" style=\"height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z\"/></svg>`{=html} [Data - Murders](/slides/data/murders.csv)\n\n## Reading and Resources\n\n📖 More add-on 📦: [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/)\n\n📖 [The R Graph Gallery](https://www.r-graph-gallery.com/index.html)\n\n📖 [R Graphics Cookbook](https://r-graphics.org/)\n\n📖 [R CHARTS](https://r-charts.com/)\n\n📖 [R for Data Science - Data Transformation](https://r4ds.hadley.nz/data-transform)\n\n## Exercise\n\n📋 [Lab-12 Faceting](/exercise/lab12-facet.html)\n\n📋 [Lab-13 Visualization](/exercise/lab13-visualization.html)\n\n📋 [Lab-14 Interactive Visualization](/exercise/lab14-interactive.html) (Present)\n\n<br><br>\n\n::: {style=\"font-size: 0.875em;\"}\nBack to [course schedule](/ \"Course schedule\") ⏎\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

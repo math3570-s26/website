@@ -1,0 +1,14 @@
+{
+  "hash": "d2d9b9a6a2ac4c201dbb54609ab8740e",
+  "result": {
+    "markdown": "---\ntitle: \"Lab 24: K-Means Clustering\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n\n::: callout-note\n\n:::\n\n\nIn **lab.qmd** `## Lab 24` section, \n\n1. Install R package `palmerpenguins` at <https://allisonhorst.github.io/palmerpenguins/>\n\n2. Perform K-Means to with $K = 3$ to cluster penguins based on `bill_length_mm` and `flipper_length_mm` of data `peng`.\n\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nlibrary(palmerpenguins)\npeng <- penguins[complete.cases(penguins), ] |> \n    select(flipper_length_mm, bill_length_mm)\n```\n:::\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/20-kmeans/unnamed-chunk-3-1.png){fig-align='center' width=100%}\n:::\n:::\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output .cell-output-stderr}\n```\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n```\n:::\n\n::: {.cell-output-display}\n![](../slides/images/20-kmeans/unnamed-chunk-4-1.png){fig-align='center' width=100%}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

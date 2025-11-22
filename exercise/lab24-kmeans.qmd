@@ -1,0 +1,95 @@
+---
+title: "Lab 24: K-Means Clustering"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/20-kmeans/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+library(tidymodels)
+```
+
+::: callout-note
+
+:::
+
+
+In **lab.qmd** `## Lab 24` section, 
+
+1. Install R package `palmerpenguins` at <https://allisonhorst.github.io/palmerpenguins/>
+
+2. Perform K-Means to with $K = 3$ to cluster penguins based on `bill_length_mm` and `flipper_length_mm` of data `peng`.
+
+
+```{r}
+library(palmerpenguins)
+peng <- penguins[complete.cases(penguins), ] |> 
+    select(flipper_length_mm, bill_length_mm)
+```
+
+
+```{r}
+#| echo: false
+#| out-width: 100%
+kclust <- kmeans(x = peng, centers = 3)
+df_clust_k <- augment(kclust, peng)
+tidy_kclust <- tidy(kclust)
+df_clust_k |>  
+    ggplot(aes(x = flipper_length_mm, 
+               y = bill_length_mm)) + 
+    geom_point(aes(color = .cluster), 
+               alpha = 0.9, size = 3) + 
+    geom_point(data = tidy_kclust |>  
+                   select(1:2),
+               size = 8,
+               fill = "black",
+               shape = "o") +
+    theme_minimal() +
+    theme(legend.position = "bottom",
+          axis.text=element_text(size=15),
+          axis.title=element_text(size=18,face="bold"),
+          legend.text = element_text(size=20),
+          legend.title = element_text(size=20),
+          legend.key.size = unit(2, 'cm'))
+```
+
+```{r}
+#| echo: false
+#| out-width: 100%
+flipper_bill <- ggplot(data = penguins,
+                         aes(x = flipper_length_mm,
+                             y = bill_length_mm)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Flipper and bill length",
+       subtitle = "Dimensions for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       x = "Flipper length (mm)",
+       y = "Bill length (mm)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.85, 0.15),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+
+flipper_bill
+```
+

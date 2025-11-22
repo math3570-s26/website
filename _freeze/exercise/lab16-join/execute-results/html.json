@@ -1,0 +1,15 @@
+{
+  "hash": "38f9dc9dbf9784a3af9fd7618662f212",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 16: Joining tables\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n\n::: callout-note\n\n:::\n\nIn **lab.qmd** `## Lab 16` section\n\n- Import the data at <https://www.jaredlander.com/data/DiamondColors.csv>. Call it `diamond_color`.\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\ndiamond_color <- readr::read_csv(\"the url\")\n```\n:::\n\n\n- Use `left_join()` to combine the data set `diamonds` in **ggplot2** and `diamond_color` by the key variable `color`. \n\n<!-- We keep all the rows of `diamonds`. -->\n\n- Select the variables `carat`, `color`, `Description`, `Details`.\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\n## Variable \"color\" in diamonds but \"Color\" in diamond_color\n\njoined_df <- diamonds |>  \n    _______(_______, by = c('color' = 'Color')) |>  ## join\n    _______(_________________________________________)  ## select\n```\n:::\n\n\n- Create a bar chart of the variable `color`.\n\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 53,940 × 4\n   carat color Description    Details                    \n   <dbl> <chr> <chr>          <chr>                      \n 1  0.23 E     Colorless      Minute traces of color     \n 2  0.21 E     Colorless      Minute traces of color     \n 3  0.23 E     Colorless      Minute traces of color     \n 4  0.29 I     Near Colorless Slightly detectable color  \n 5  0.31 J     Near Colorless Slightly detectable color  \n 6  0.24 J     Near Colorless Slightly detectable color  \n 7  0.24 I     Near Colorless Slightly detectable color  \n 8  0.26 H     Near Colorless Color is dificult to detect\n 9  0.22 E     Colorless      Minute traces of color     \n10  0.23 H     Near Colorless Color is dificult to detect\n# ℹ 53,930 more rows\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](../slides/images/13-dplyr-2/unnamed-chunk-4-1.png){fig-align='center' width=100%}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

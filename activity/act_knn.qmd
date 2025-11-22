@@ -1,0 +1,79 @@
+---
+title: "In-class Activity: Dogs or Cats"
+---
+
+The following activity practices **K Nearest Neighbors**.
+
+## [[Team]]{.blue} Activity: Dogs or Cats
+
+```{r}
+#| echo: false
+library(mvnfast)
+par(mar = c(3, 4, 2, 0), mgp = c(2, 0.8, 0))
+set.seed(2021)
+x1 <- rmvn(10, mu = c(4.5, 4.5), sigma = matrix(c(1, 0.5, 0.5, 1), 2, 2))
+x2 <- rmvn(10, mu = c(5.5, 5.5), sigma = matrix(c(1, 0.5, 0.5, 1), 2, 2))
+x1 <- ceiling(x1)
+x2 <- ceiling(x2)
+class <- rep(c(1, 2),each = 40/4)
+mat = cbind(rbind(x1, x2), class)
+
+knn_ex = tibble::tibble(
+  body_size = mat[, 1],
+  food_intake = mat[, 2],
+  class = mat[, 3],
+  image = c(rep("../images/maru.png", 10), rep("../images/dog.png", 10)))
+
+library(ggplot2)
+library(ggimage)
+ggplot(knn_ex, aes(x = body_size, y = food_intake)) +
+  geom_image(aes(image = image), size = 0.06) +
+  theme_bw() +
+  labs(x = "Body Size", y = "Food Intake") +
+  theme(axis.text.x = element_text(size=12, face="bold"),
+        axis.text.y = element_text(size=12, face="bold"),
+        axis.title.x = element_text(size = 14),
+        axis.title.y = element_text(size = 14))+
+  scale_x_continuous(breaks = seq(1, 7, by = 1)) +
+  scale_y_continuous(breaks = seq(1, 7, by = 1)) +
+  annotate("point", x = 5.5, y = 7, color = "red", size = 10) +
+  annotate("point", x = 6.5, y = 5, color = "blue", size = 10) +
+  annotate("point", x = 4.5, y = 5, color = "green3", size = 10)
+```
+
+
+Here we use features `Body Size` and `Food Intake` to classify cats and dogs. The training data are shown as cat or dog images, and there are three test data to be labeled: [green]{.green}, [red]{.red}, and [blue]{.blue} points.
+
+Consider K Nearest Neighbors with $K = 1, 2, 3, 4$, and discuss the following questions.
+
+## Discussion
+
+::: {.callout-caution collapse="true"}
+
+## For which test data point, the classification result is uncertain or unstable?
+
+
+:::
+
+
+::: {.callout-caution collapse="true"}
+
+## Which data point can be labelled as one particular category with 100% certainty, for all different $K$s?
+
+
+:::
+
+
+::: {.callout-caution collapse="true"}
+
+## For the blue point, what happened when $K$ increases? Do we change the prediction? What about uncertainty?
+
+
+:::
+
+
+::: {.callout-caution collapse="true"}
+
+## If you would like to make a classification rule or set the decision boundary to predict cats or dogs, what would the decision boundary look like? Why?
+
+:::

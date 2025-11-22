@@ -1,0 +1,70 @@
+---
+title: "Lab 16: Joining tables"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/13-dplyr-2/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+```
+
+::: callout-note
+
+:::
+
+In **lab.qmd** `## Lab 16` section
+
+- Import the data at <https://www.jaredlander.com/data/DiamondColors.csv>. Call it `diamond_color`.
+
+```{r, eval=FALSE}
+#| purl=FALSE
+diamond_color <- readr::read_csv("the url")
+```
+
+- Use `left_join()` to combine the data set `diamonds` in **ggplot2** and `diamond_color` by the key variable `color`. 
+
+<!-- We keep all the rows of `diamonds`. -->
+
+- Select the variables `carat`, `color`, `Description`, `Details`.
+
+```{r}
+#| purl: false
+#| eval: false
+## Variable "color" in diamonds but "Color" in diamond_color
+
+joined_df <- diamonds |>  
+    _______(_______, by = c('color' = 'Color')) |>  ## join
+    _______(_________________________________________)  ## select
+
+```
+
+- Create a bar chart of the variable `color`.
+
+
+
+```{r}
+#| echo: false
+diamond_color <- read_csv("https://www.jaredlander.com/data/DiamondColors.csv")
+joined_df <- left_join(diamonds, diamond_color, 
+                       by = c('color' = 'Color')) |> 
+    select(carat, color, Description, Details)
+joined_df
+
+joined_df |> ggplot(aes(x = color)) + 
+  geom_bar()
+```

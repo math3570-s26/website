@@ -1,0 +1,65 @@
+---
+title: "Lab 07: Plotting"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: false
+---
+
+```{r}
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/06-syntax/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+```
+
+::: callout-note
+<!-- - *Find your mate and work in pairs. * -->
+
+<!-- - *Two volunteer pairs teach us how to make beautiful plots next Tuesday (Feb 13)!* -->
+
+<!-- - *The presenters will be awarded a hex sticker! 😎* -->
+:::
+
+In **lab.qmd** `## Lab 7`,
+
+- For the `mtcars` data, use R or Python to 
+  + make a scatter plot of `miles per gallon` vs. `weight`. Decorate your plot using arguments, `col`, `pch`, `xlab`, etc.
+  
+  + create a histogram of 1/4 mile time. Make it beautiful!
+  
+- Commit and Push your work once you are done.
+
+
+```{r}
+plot(mtcars$mpg, mtcars$wt, xlab = "MPG", ylab = "Weight")
+```
+
+```{r}
+hist(mtcars$qsec, xlab = "1/4 mile time", main = "")
+```
+
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+mtcars = pd.read_csv('../slides/data/mtcars.csv')
+plt.scatter(x = mtcars.mpg, y = mtcars.wt)
+plt.xlabel("Miles per gallon")
+plt.ylabel("Weight")
+plt.show()
+plt.clf()
+plt.hist(mtcars.qsec)
+plt.xlabel("1/4 mile time")
+plt.title("Histogram of 1/4 mile time")
+plt.show()
+```
+
+

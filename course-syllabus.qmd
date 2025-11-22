@@ -1,0 +1,217 @@
+---
+title: "Syllabus"
+---
+
+[**Click here**](/documents/syllabus-3570-s25.pdf "PDF of syllabus") **to download the syllabus.**
+
+## Time and location
+
+|          | Day and Time           | Location             |
+|----------|-------------------------|----------------------|
+| Lectures | Tu & Th  2:00 - 3:15 PM | Lalumiere Language Hall 232 |
+| Office hours     | Tu & Th  4:50 - 5:50 PM;  Wed 12 - 1 PM      | Cudahy Hall 353                 |
+| TA Help Desk     | To be determined (TBD)                | TBD                 |
+| Lab Section     | None               | None                 |
+
+
+## TA Information
+
+- Name: Qishi Zhan 
+
+- Email: <qishi.zhan@marquette.edu>
+
+
+
+## Office Hours
+
+-   My in-person office hours are TuTh 4:50 - 5:50 PM, and Wed 12 - 1 PM in Cudahy Hall room 353.
+
+-   You are welcome to schedule an online meeting via Microsoft Teams if you need/prefer.
+
+## Learning objectives
+
+By the end of the semester, you will be able to...
+
+-   Represent and manipulate data in effective ways
+-   Manipulate data using packages/tools and by ad hoc data handling
+-   Use mathematical, computational and statistical tools to detect patterns and model performance
+-   Use computational principles and tools to tackle issues addressable by data science
+-   Use a solid foundation in data science to independently learn new methodologies and technologies in the field of data science
+
+## Prerequisites
+
+-   COSC 1010 (Intro to Programming) and MATH 4720 (Intro to Statistics), or MATH 2780 (Intro to Regression and Classification).
+
+-   Programming experience is helpful because the course involves doing regression analysis using [\textsf{R}](https://www.r-project.org/about.html) programming language.
+
+-   The course will also assume facility with using the internet and a personal computer/laptop. The course involves coding in [R](https://www.r-project.org/) and [Python](https://www.python.org/) using [Posit Cloud](https://posit.cloud/), a cloud integrated development environment (IDE).
+
+-   Talk to me if you are not sure whether or not this is the right course for you.
+
+## E-mail Policy
+
+-   I will attempt to reply your email quickly, at least **within 24 hours**.
+
+-   **Expect a reply on Monday if you send a question during weekends**. If you do not receive a response from me within two days, re-send your question/comment in case there was a "mix-up" with email communication (Hope this won't happen!).
+
+-   Please start your subject line with **\[math3570\]** or **\[cosc3570\]** followed by a clear description of your question. See an example below.
+
+![Email Subject Line Example](./images/3570_email.png)
+
+-   Email etiquette is important. Please read this [article](https://www.insidehighered.com/views/2015/04/16/advice-students-so-they-dont-sound-silly-emails-essay) to learn more about email etiquette.
+
+-   I am more than happy to answer your questions about this course or data science/statistics in general. However, with tons of email messages everyday, I may choose **NOT** to respond to students' e-mail if
+
+    1.  The student could answer his/her own inquiry by reading the syllabus or information on the course website or D2L.
+
+    2.  The student is asking for an extra credit opportunity. The answer is "no".
+
+    3.  The student is requesting an extension on homework. The answer is "no".
+
+    4.  The student is asking for a grade to be raised for no legitimate reason. The answer is "no".
+
+    5.  The student is sending an email with no etiquette.
+
+## Textbooks
+
+<!-- ### Required Textbook -->
+
+*No textbook is required* for this course. Course materials are mainly Dr. Yu's slides. Below are some good references.
+
+-   [*(**r4ds**) R for Data Science (2e)*](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
+
+-   [*(**tmwr**) Tidy Modeling with R*](https://www.tmwr.org/) by Max Kuhn and Julia Silge.
+
+-   [*(**py4da**) Python for Data Analysis*](https://wesmckinney.com/book/) by Wes McKinney.
+
+-   [(**IS**) *Introduction to Statistics*](https://chenghanyu-introstatsbook.netlify.app/) by Cheng-Han Yu. (Good resource for brushing up your basic probability, statistics and simple linear regression knowledge.)
+
+## Grading Policy
+
+- Your grade is from the following categories and distribution
+
+  +   **30%** In-class lab exercises and participation.
+  
+  +   **30%** Homework
+  
+  +   **15%** Midterm mini project
+  
+  +   **25%** Final project competition
+  
+  +   *Extra credit opportunities*
+
+-   Every student has to participate (in-person) in the final presentation to pass the course.
+
+-   You will **NOT** be allowed any extra credit projects/homework/exam to compensate for a poor grade. Everyone is given the same opportunity to do well in this class. I may use class participation to make grade adjustments at the end of the semester.
+
+-   The final grade is based on the grade-percentage conversion Table 1 on the next page. $[x, y)$ means greater than or equal to $x$ and less than $y$. For example, 94.1 is in $[94, 100]$ and the grade is A and 93.8 is in $[90, 94)$ and the grade is A-.
+
+```{r, echo=FALSE}
+letter <- c("A", "A-", "B+", "B", "B-", "C+", "C", "C-",
+                       "D+", "D", "F")
+percentage <- c("[94, 100]", "[90, 94)", "[87, 90)", "[83, 87)", "[80, 83)",
+                "[77, 80)", "[73, 77)", "[70, 73)", 
+                "[65, 70)", "[60, 65)", "[0, 60)")
+grade_dist <- data.frame(Grade = letter, Percentage = percentage)
+knitr::kable(grade_dist, longtable = TRUE, caption = "Grade-Percentage Conversion")
+```
+
+### Lab exercises
+
+-   There are several **in-class** lab exercises, which are graded as **complete/incomplete** and used as evidence of attendance and class participation.
+
+-   You are allowed to have **one** incomplete lab exercise without penalty. Beyond that, **2%** grade percentage will be taken off for each missing/incomplete exercise.
+
+<!-- -   **No make-up lab exercises** for any reason. -->
+
+### Homework
+
+-   The homework assignments are *individual*. You should submit your own work.
+
+-   **You may not directly share or discuss answers/code with anyone other than the instructor**. But you are welcome to discuss the problems in general and ask for advice.
+
+-   Homework will be assigned through GitHub. You need to clone/pull the homework repo into Posit Cloud and work on the Quarto file in the repo. A step-by-step guide will be discussed in class before homework is assigned.
+
+-   You will have *at least one week* to complete your assignment.
+
+-   **No make-up homework** for any reason unless you have [excused absences](https://bulletin.marquette.edu/policies/attendance/undergraduate/).
+
+-   If you miss a homework assignment due to excused absence, the homework percentage will be added to your final project. If you miss more than one assignment, only one assignment percentage can be added to the final project percentage. You get 0% for the other assignment.
+
+
+### Midterm mini project
+
+-   You will be team up to do the midterm mini project. 
+
+-   More details about the mini project presentation will be released later.
+
+### Final project competition
+
+-   You will be team up to do the final project. Your project can be in either of the following categories:
+
+    1.  **Data analysis** using statistical models or machine learning algorithms
+
+    2.  Introduce a **R or Python package** not learned in class, including **live demo**
+
+    3.  Introduce a **data science tool (visualization, computing, etc)** not learned in class, including **live demo**
+    
+    4.  Introduce a **programming language** not learned in class for doing data science, including **live demo**, Julia, SQL, MATLAB, SAS for example.
+    
+    5.  **Web development**: Shiny website or dashboard, including **live demo**
+
+-   Details about the project will be provided as the course progresses. You must complete the final project and be in class to present it in order to pass this course.
+
+<!-- -   The final project will consist of analysis on a data set of your own choosing. More information will be released later (page limit, format, etc). -->
+
+<!-- -   Your project is individual. You work on your own project. \textcolor{red}{(may change to group project)} -->
+
+<!-- -   Submit your one-page project proposal before **Friday, 3/19 11:59 PM**. -->
+
+-   The final project presentation is on **Thursday, May 1, 2 PM** and **Monday, May 5, 10:30 AM - 12:30 PM**.
+
+
+
+
+## Generative AI and Sharing/Reusing Code Policy
+
+### Generative AI ![](images/genai.png){fig-alt="You can use AI in this assignment at will, but it should be cited." width="50"}
+
+-   You are responsible for the content of all work submitted for this course. You may use generative AI tools such as ChatGPT or DALL-E to generate a first draft of text for your assignments, provided that this use is [documented and cited]{.underline}.
+
+### Sharing/Reusing Code
+
+-   Unless explicitly stated otherwise, you may make use of any online resources, but you must **explicitly cite** where you obtained any code you directly use or use as inspiration in your solutions.
+
+-   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.
+
+
+## University and college policies
+
+As a student in this course, you have agreed to comply with [Marquette undergraduate policies and regulations](https://bulletin.marquette.edu/policies/).
+
+<!-- ```{=html} -->
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> -->
+
+<!-- </iframe> -->
+
+<!-- ``` -->
+
+## Accommodation
+
+If you need to request accommodations, or modify existing accommodations that address disability-related needs, please contact [Disability Service](https://www.marquette.edu/disability-services/).
+
+## Important dates
+
+-   **Jan 21:** Last day to add/swap/drop
+-   **Mar 10-16:** Spring break
+-   **Mar 11:** Midterm grade submission
+-   **Apr 11:** Withdrawal deadline
+-   **Apr 17 - Apr 20:** Easter break
+-   **May 3**: Last day of class
+-   **May 1**: Final project presentation I 
+-   **May 5**: Final project presentation II
+-   **May 13**: Final grade submission
+
+Click [here](https://www.marquette.edu/central/registrar/2025-spring-academic-calendar.php) for the full Marquette academic calendar.
+

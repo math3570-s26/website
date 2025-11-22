@@ -1,0 +1,68 @@
+---
+title: "Lab 11: ggplot2"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/09-ggplot2/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+```
+
+::: callout-note
+
+:::
+
+
+
+In **lab.qmd** `## Lab 11` section,
+
+- Use `readr::read_csv()` to import the data **penguins.csv** into your R workspace.
+
+- Generate the following ggplot:
+
+```{r}
+#| echo: false
+#| warning: false
+penguins <- read_csv("../slides/data/penguins.csv")
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+       subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+       x = "Bill depth (mm)", y = "Bill length (mm)",
+       colour = "Species",
+       caption = "Source: Palmer Station LTER / palmerpenguins package") +
+  scale_colour_viridis_d()
+```
+
+```{r}
+#| eval: false
+penguins <- read_csv(_________________)
+________ |> 
+  ggplot(mapping = ____(x = ______________,
+                        y = ______________,
+                        colour = ________)) +
+  geom______() +
+  ____(title = ____________________,
+       _________ = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+       x = _____________, y = _______________,
+       _______ = "Species",
+       _______ = "Source: Palmer Station LTER / palmerpenguins package")
+```

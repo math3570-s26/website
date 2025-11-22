@@ -1,0 +1,28 @@
+---
+title: "Week 13"
+subtitle: "Logistic Regression"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - Logistic Regression](/slides/17-logistic-reg.html)
+
+`r fontawesome::fa("table")` [Data - body](/slides/data/body.csv)
+
+## Reading
+
+📖
+
+## Exercise
+
+📋 [Lab-21 Logistic Regression](/exercise/lab21-logistic.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

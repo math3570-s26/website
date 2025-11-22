@@ -1,0 +1,763 @@
+---
+title: "Interactive Visualization `r emo::ji('chart_with_upwards_trend')`"
+subtitle: "MATH/COSC 3570 Introduction to Data Science"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+# date: "`r format(Sys.time(), '%B %d %Y')`"
+# macros: _macros.tex # import a list of TeX/LaTeX definitions
+format: 
+  revealjs:
+    #     - "macros.tex"
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    # include-in-header:
+    highlight-style: arrow
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t
+    incremental: false
+    width: 1800
+    height: 1000
+    margin: 0.05
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[math3570-s25.github.io/website](https://math3570-s25.github.io/website/)"
+    theme: ["simple", "slides.scss"]
+    echo: true
+    multiplex: true
+    code-link: true
+    fig-cap-location: bottom
+    fig-align: center
+    transition: none ## fade slide convex concave zoom
+    code-line-numbers: false
+    title-slide-attributes:
+      data-background-color: "#447099"
+      # data-background-image: images/paper-texture.jpg
+      # data-background-size: cover
+      # data-background-color: "#698ED5"
+editor: source
+execute:
+  freeze: true
+---
+
+#  {visibility="hidden"}
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fontawesome)
+library(rmarkdown)
+library(reticulate)
+library(lattice)
+library(openintro)
+library(plotly)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/11-interactive-viz/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 8, 
+  dplyr.print_max = 9,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+
+<!-- ```{python} -->
+<!-- #| eval: false -->
+<!-- import numpy as np -->
+<!-- import pandas as pd -->
+<!-- import matplotlib.pyplot as plt -->
+<!-- ``` -->
+
+
+
+<!-- # {background-color="#A7D5E8"} -->
+
+# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/ropensci/plotly/master/man/figures/plotly.png" background-size="40%" background-position="80% 50%"}
+
+
+::: {.left}
+<h1> Interactive Visualization </h1>
+<!-- <h3>[htmlwidgets](http://www.htmlwidgets.org/): leaflet, dygraphs, networkD3</h3> -->
+:::
+
+::: notes
+- Interactive graphics better communicate data science results and provide more information.
+- It is easy to generate interactive web graphics using R without knowing JavaScript!
+- Above all of that, making simple interactive plots are a sure-fire way to impress your coworkers!
+- A word of caution: if the interactivity doesn’t add anything to your visualization, don’t do it.
+:::
+
+
+
+
+## Boring Static ggplot
+
+```{r}
+#| echo: false
+#| out-width: 100%
+mpg |> ggplot(aes(displ, hwy)) + geom_point()
+```
+
+::: notes
+- Just a scatter plot showing the relationship between hwy and displ. And that's it.
+- It cannot provide any other information or functionality.
+:::
+
+
+
+## Informative Inteactive ggplot
+
+::: {.tiny}
+```{r}
+#| echo: false
+#| class-output: my_classfull
+#| classes: my_classfull
+#| class-source: my_classfull
+#| out-width: 100%
+#| fig-asp: 1
+library(plotly)
+colnames(mpg) <- c("brand", "model", "displ", "year", "cyl", "trans", "drv", "cty", "hwy", "fl", "class")
+m <- highlight_key(mpg)
+p <- ggplot(m, aes(displ, hwy)) + geom_point()
+gg <- highlight(ggplotly(p), "plotly_selected")
+crosstalk::bscols(gg, DT::datatable(m))
+```
+:::
+
+::: notes
+- How about this!
+- We can actually create a more informative Inteactive ggplot with more functionality!
+- You see here, if we put our cursor on any data point, the exact value of hwy and displ will be shown ot us.
+- Also, several useful funcitons are shown on the top of the plot.
+- We can download the plot.
+- We can zoom the plot.
+- We can drag the plot.
+- We can also select any data points we are interested and like to further investigate.
+- Notice that the interactive data table are automatically changed to show the selected data point information. 
+- How cool is that!
+- https://www.rebeccabarter.com/blog/2017-04-20-interactive/
+:::
+
+
+
+
+# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/ropensci/plotly/master/man/figures/plotly.png" background-size="100%" background-position="50% 50%"}
+
+
+
+## [Plotly](https://plotly.com/r/) `r emo::ji('package')`
+
+- To create a **plotly** object
+  + directly initializing a **plotly** object with `plot_ly()`, `plot_geo()`, etc.
+  + transforming a **ggplot2** object via `ggplotly()` into a **plotly** object
+
+- Both are powered by the JavaScript graphing library plotly.js, so many of the same concepts and tools for one interface can be reused in the other.
+
+```{r}
+#| echo: false
+#| out-width: 10%
+knitr::include_graphics("./images/11-interactive-viz/js.png")
+```
+
+
+
+::: notes
+
+Both approaches have somewhat complementary strengths and weaknesses, so it can pay off to learn both approaches. Moreover, both approaches are an implementation of the Grammar of Graphics and both are powered by the JavaScript graphing library plotly.js
+
+```{r}
+#| echo: false
+#| out-height: 100%
+#| out-width: 100%
+#| eval: false
+library(plotly)
+plotly::plot_ly(diamonds, x = ~cut, color = ~clarity, colors = "Accent")
+```
+
+:::
+
+
+
+
+## plot_ly()
+
+- Mapping homeownership to x yields a *bar chart*
+
+```{r}
+#| cache: false
+#| fig-width: 6
+#| fig-asp: 0.8
+library(plotly)
+loans <- readr::read_csv("./data/loans.csv")
+loans |> plot_ly(x = ~homeownership) 
+# plot_ly(loans, x = loans$homeownership)
+# plot_ly(loans, x = ~homeownership, type = "histogram")
+```
+
+::: notes
+
+plotly tries to find a sensible geometric representation of that information for us
+plot_ly(loans, x = ~homeownership, type = "histogram")
+'bar', 'barpolar', 'box', 'candlestick', 'carpet', 'choropleth', 'choroplethmapbox', 'cone', 'contour', 'contourcarpet', 'densitymapbox', 'funnel', 'funnelarea', 'heatmap', 'heatmapgl', 'histogram', 'histogram2d', 'histogram2dcontour', 'icicle', 'image', 'indicator', 'isosurface', 'mesh3d', 'ohlc', 'parcats', 'parcoords', 'pie', 'pointcloud', 'sankey', 'scatter', 'scatter3d', 'scattercarpet', 'scattergeo', 'scattergl', 'scattermapbox', 'scatterpolar', 'scatterpolargl', 'scatterternary', 'splom', 'streamtube', 'sunburst', 'surface', 'table', 'treemap', 'violin', 'volume', 'waterfall'
+
+:::
+
+
+## plot_ly()
+
+```{r}
+#| cache: false
+#| fig-asp: 0.8
+loans |> plot_ly(x = ~homeownership, color = I("pink"), stroke = I("green3"), span = I(5))
+```
+
+
+::: notes
+- We can specify the bar color we like using color argument.
+- Note that we cannot simply use the name of color as we do in R plotting, but have to add the function I().
+- It is because when we call the plot_ly(), it actually translate the R code into Javascript, and for some reason, we need to add I() to make the code work.
+- If you like to change the border color of the bar, you can specify a color in the stroke argument. 
+- Span controls the width of the border.
+# doesn't produce black bars
+plot_ly(loans, x = ~homeownership, color = "black")
+
+:::
+
+
+## plot_ly()
+
+- Mapping homeownership & grade to x & y yields a *heatmap*
+
+```{r}
+#| cache: false
+#| fig-asp: 0.6
+loans |> plot_ly(x = ~homeownership, y = ~grade)
+# plot_ly(loans, x = ~homeownership, y = ~grade, type = "histogram2d")
+```
+
+
+::: notes
+- Color in cells represents the the count of some type of homeownership and the grade of loans.
+- For example, we know there are 1285 loans that is classified as grade A, and the loan applicant has a mortgage.
+- The most frequency is grade B and mortgage.
+:::
+
+
+
+## plot_ly()
+
+- Mapping homeownership & grade to x & color yields a *dodged bar chart*
+<!-- - `"Accent"` is a color palette from the [**RColorBrewer**](http://applied-r.com/rcolorbrewer-palettes/) package -->
+
+```{r}
+#| cache: false
+#| fig-asp: 0.6
+loans |> plot_ly(x = ~homeownership, color = ~grade)
+# plot_ly(loans, x = ~homeownership, color = ~grade, type = "histogram")
+```
+
+
+::::: notes
+
+- We actually create a bar chart of grade of loan separated by homeownership, and each bar has a color corresponding to a grade of loan.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| out-height: 40%
+#| fig-asp: 0.5
+#| cache: false
+loans |> plot_ly(x = ~homeownership, 
+        color = ~grade, colors = "Accent")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| out-width: 90%
+#| cache: false
+#| echo: false
+knitr::include_graphics("./images/11-interactive-viz/accent.png")
+```
+:::
+
+::::
+
+:::::
+
+
+
+## [layout()](https://plotly.com/r/reference/#Layout_and_layout_style_objects)
+
+- The 1st argument is a **plotly** object.
+
+- Other arguments include `legend`, `margins`, `size`, etc.
+
+```{r}
+#| cache: false
+#| fig-asp: 0.6
+#| label: layout
+
+plotly::layout(p = plot_ly(loans, x = ~homeownership),
+               title = "My beatiful bar chart")
+```
+
+
+::: notes
+- If we want to decorate our plot, in plotly, we use the layout function.
+- You can also change the X-label and Y-label in the layout function.
+
+
+
+layout(                        # all of layout's properties: /r/reference/#layout
+             title = "Unemployment", # layout's title: /r/reference/#layout-title
+             xaxis = list(           # layout's xaxis is a named list. List of valid keys: /r/reference/#layout-xaxis
+                title = "Time",      # xaxis's title: /r/reference/#layout-xaxis-title
+                showgrid = F),       # xaxis's showgrid: /r/reference/#layout-xaxis-showgrid
+             yaxis = list(           # layout's yaxis is a named list. List of valid keys: /r/reference/#layout-yaxis
+                title = "uidx")     # yaxis's title: /r/reference/#layout-yaxis-title
+      )
+:::
+
+
+
+## add_*() Functions
+
+- Define how to render data into geometric objects, `add_contour()`, `add_boxplot()`, etc.
+
+- `add_markers()` for scatterplots.
+
+```{r}
+#| cache: false
+#| fig-asp: 0.6
+# plot_ly(mpg, x = ~cty, y = ~hwy, type = "scatter", mode = "markers", alpha = 0.5)
+base_plot <- mpg |> plot_ly(x = ~cty, y = ~hwy)
+base_plot |> add_markers(alpha = 0.7, size = 2)
+```
+
+
+::: notes
+- One advantage of using add_* family functions is that, if we haven't decided what kind of plot we'd like to generate, we can first create a base plotly object, and then add any geometric object we like later. 
+- We can try several geometric objects, and choose our favorite one.
+plot_ly(mpg, x = ~cty, y = ~hwy, type = "scatter", mode = "markers", alpha = 0.5)
+:::
+
+
+
+## add_paths()
+
+```{r}
+#| fig-asp: 0.6
+base_plot |> add_paths()
+```
+
+
+::: notes
+- Here we add another geometry path. You can see that using point markers makes more sense in this case. 
+- But the point is, we can repeatedly using the same base 
+:::
+
+
+
+
+## Color
+
+```{r}
+#| fig-asp: 0.6
+## alpha here is "setting", not "mapping"
+p <- mpg |> plot_ly(x = ~cty, y = ~hwy, alpha = 0.7) 
+p |> add_markers(color = ~factor(cyl), size = 3)
+```
+
+::: notes
+- map the number of cylinders to point color. 
+- Because the variable is actually numerical, I make it categorical as a factor before doing the mapping.
+:::
+
+
+
+## Symbols
+
+```{r}
+#| fig-asp: 0.7
+p |> add_markers(symbol = ~factor(cyl), color = I("red"))
+```
+
+
+::: notes
+- We can also use different symbols or point shapes to represent different number of cylinders. Very simple, we just use the symbol argument instead.
+- In ggplot2, we use "shape"
+:::
+
+
+
+## Stroke and Span {visibility="hidden"}
+
+```{r}
+#| out-height: 70%
+p |> add_markers(symbol = I(18), stroke = I("black"), span = I(1))
+```
+
+
+::: notes
+-The stroke argument follows the same semantics as color and symbol when it comes to variable mappings and specifying visual ranges. Typically you don’t want to map data values to stroke, you just want to specify a fixed outline color. 
+- By default, the span, or width of the stroke, is zero, you’ll likely want to set the width to be around one pixel.
+:::
+
+
+
+## Size {visibility="hidden"}
+
+```{r}
+#| out-height: 70%
+#| warning: false
+p |> add_markers(size = ~cyl)
+```
+
+
+
+
+## add_lines()
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r}
+#| eval: false
+p <- tx5 |> plot_ly(x = ~date, y = ~median)
+p |> add_lines(linetype = ~city)
+```
+
+```{r ref.label = "lines"}
+#| echo: false
+#| warning: false
+#| fig-asp: 0.6
+```
+
+
+## Code
+
+```{r}
+#| label: lines
+#| eval: false 
+#| warning: false
+
+top5 <- txhousing |> 
+    group_by(city) |> 
+    summarise(m = mean(sales, na.rm = TRUE)) |> 
+    arrange(desc(m)) |> 
+    top_n(5)
+tx5 <- semi_join(txhousing, top5, by = "city")
+p <- tx5 |> plot_ly(x = ~date, y = ~median)
+p |> add_lines(linetype = ~city)
+```
+
+:::
+
+::: notes
+- We can also create a line plot. It is useful if you have some time series data.
+- Here I create a data called tx5, and I am trying see the trend of the median home price of the 5 cities in Texas.
+- First, we can create plotly object, assigning the x and y variables, which are date and median.
+- Then we can add the line plot, one linetype for one city.
+:::
+
+
+
+## Linetypes {visibility="hidden"}
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-asp: 0.6
+ltys <- c(Austin = "dashdot", `Collin County` = "longdash", Dallas = "dash",
+          Houston = "solid", `San Antonio` = "dot")
+p |> add_lines(linetype = ~city, linetypes = ltys)
+```
+
+
+
+
+## ggplotly()
+
+- `plotly::ggplotly()` translate **ggplot2** to **plotly**.
+
+```{r}
+#| fig-asp: 0.6
+p <- loans |> 
+    ggplot(aes(x = debt_to_income, y = interest_rate)) +
+    geom_point(alpha = 0.5) +
+    theme_bw()
+ggplotly(p)
+```
+
+
+::: notes
+- If you think the syntax is hard and not intuitive, and you love using ggplot, well here is good news.
+- The function ggplotly() translate ggplot2 to plotly.
+- You just create your ggplot, save it as an object, and then plug the object into the ggplotly function.
+- Bang! your ggplot becomes interactive!
+- How cool is that! Very cool and convenient!
+- That's one of the reasons why we learn ggplot!
+- But so far the translation is not 100 percent working. 
+:::
+
+
+
+
+## ggplotly()
+
+- Easily compare levels of grade (loan quality) by leveraging the legend filtering capabilities.
+
+```{r}
+#| warning: false
+#| fig-asp: 0.6
+p <- loans |> ggplot(aes(x = log(debt_to_income), color = grade)) + 
+    geom_freqpoly(stat = "density") + xlim(0, 5) + theme_bw()
+ggplotly(p)
+```
+
+
+
+##
+
+:::{.lab}
+
+<span style="color:blue"> **14-plotly** </span>
+
+In **lab.qmd** `## Lab 14` section,
+
+- Load **tidyverse** and **plotly** and the `loans.csv` data.
+
+- Generate a plot using plotly. An example is shown below. Welcome to create a more fancy one!
+
+<!-- # ```{r, eval=FALSE} -->
+<!-- # p <- plot_ly(______, x = ~_____, alpha = 0.5) -->
+<!-- # p ___ add_______(y = ~_____, color = ~_____) -->
+<!-- # ``` -->
+
+```{r}
+#| echo: false
+p <- plot_ly(loans, x = ~interest_rate, alpha = 0.5)
+p |> add_boxplot(y = ~grade, color = ~grade)
+```
+
+:::
+
+
+::: notes
+
+```{r}
+# x = interest_rate, y = grade won't work
+gg <- loans |> ggplot(aes(x = grade, y = interest_rate, color = grade)) + 
+    geom_boxplot() + theme_minimal() + coord_flip()
+ggplotly(gg)
+```
+
+:::
+
+
+## Dumbell Chart
+
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r ref.label = "dumbell"}
+#| echo: false
+#| warning: false
+#| fig-asp: 0.7
+```
+
+## Code
+
+```{r}
+#| eval: false
+#| cache: false
+#| label: dumbell
+mpg |> 
+    group_by(model) |> 
+    summarise(c = mean(cty), h = mean(hwy)) |> 
+    mutate(model = forcats::fct_reorder(model, c)) |> 
+    plot_ly() |> 
+    add_segments(x = ~c, y = ~model,
+                 xend = ~h, yend = ~model, 
+                 color = I("gray"), showlegend = FALSE) |> 
+    add_markers(x = ~c, y = ~model, 
+                color = I("blue"), 
+                name = "mpg city") |> 
+    add_markers(x = ~h, y = ~model, 
+                color = I("red"),
+                name  = "mpg highway") |> 
+    plotly::layout(xaxis = list(title = "Miles per gallon"))
+```
+
+:::
+
+
+
+
+## [Maps](https://plotly-r.com/maps.html)
+
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r ref.label = "maps"}
+#| echo: false
+#| warning: false
+#| fig-asp: 0.7
+```
+
+## Code
+
+```{r}
+#| eval: false
+#| cache: false
+#| label: maps
+pop_den <- datasets::state.x77[, "Population"] / state.x77[, "Area"]
+
+g <- list(scope = 'usa',
+          projection = list(type = 'albers usa'),
+          lakecolor = toRGB('white'))
+
+plot_geo() |> 
+    add_trace(z = ~pop_den, text = state.name, span = I(0),
+              locations = state.abb, locationmode = 'USA-states') |> 
+    plotly::layout(geo = g)
+```
+
+:::
+
+
+
+## 3D Scatterplots
+
+```{r}
+#| fig-asp: 0.7
+mpg |> plot_ly(x = ~cty, y = ~hwy, z = ~cyl) |> 
+    add_markers(color = ~factor(cyl))
+```
+
+
+## 3D Surfaces
+
+```{r}
+#| fig-asp: 0.7
+x <- 1:nrow(datasets::volcano); y <- 1:ncol(datasets::volcano)
+plot_ly() |> add_surface(x = ~x, y = ~y, z = ~volcano)
+```
+
+
+
+
+## Animations using Frames
+
+```{r}
+#| fig-asp: 0.6
+library(gapminder)
+p <- gapminder |> ggplot(aes(gdpPercap, lifeExp, color = continent)) +
+  geom_point(aes(size = pop, frame = year, ids = country)) +
+  scale_x_log10()
+
+ggplotly(p)
+```
+
+::: notes
+Now, along with data and layout, frames is added to the keys that figure allows. Your frames key points to a list of figures, each of which will be cycled through upon instantiation of the plot.
+:::
+
+
+
+
+# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/thomasp85/gganimate/main/man/figures/logo.png" background-size="20%" background-position="70% 50%"}
+
+
+::: {.left}
+<h1> Animation </h1>
+<!-- <h3>[htmlwidgets](http://www.htmlwidgets.org/): leaflet, dygraphs, networkD3</h3> -->
+:::
+
+
+## Dynamic Bar Chart using [`gganimate`](https://gganimate.com/)
+
+::: tiny
+
+```{r}
+#| echo: false
+#| out-width: 50%
+#| fig-cap: "Source: https://github.com/amrrs/animated_bar_charts_in_R"
+knitr::include_graphics("./images/11-interactive-viz/file_show.gif")
+```
+
+:::

@@ -1,0 +1,937 @@
+---
+title: 'K-Means Clustering `r fontawesome::fa("circle-nodes")`'
+subtitle: "MATH/COSC 3570 Introduction to Data Science"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+# date: "`r format(Sys.time(), '%B %d %Y')`"
+# macros: _macros.tex # import a list of TeX/LaTeX definitions
+format: 
+  revealjs:
+    #     - "macros.tex"
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    # include-in-header:
+    highlight-style: arrow
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t    
+    incremental: false
+    width: 1800
+    height: 1000
+    margin: 0.05
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[math3570-s25.github.io/website](https://math3570-s25.github.io/website/)"
+    theme: ["simple", "slides.scss"]
+    multiplex: true
+    code-link: true
+    fig-cap-location: bottom
+    fig-align: center
+    transition: none ## fade slide convex concave zoom
+    code-line-numbers: true
+    title-slide-attributes:
+      data-background-color: "#447099"
+      # data-background-image: images/paper-texture.jpg
+      # data-background-size: cover
+      # data-background-color: "#698ED5"
+editor: source
+execute:
+  freeze: true
+  echo: true
+---
+
+#  {visibility="hidden"}
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fontawesome)
+library(rmarkdown)
+library(reticulate)
+library(lattice)
+library(openintro)
+library(plotly)
+library(ggridges)
+library(patchwork)
+library(skimr)
+library(class)
+library(caret)
+library(skimr)
+set.seed(1234)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/20-kmeans/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 12,
+  tibble.width = 80,
+  width = 80,
+  digits = 2
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+
+theme_set(theme_minimal(base_size = 25))
+```
+
+
+<!-- # Clustering -->
+
+## Clustering Methods
+
+- **Clustering**: *unsupervised learning* technique for finding *subgroups* or *clusters* in a data set.
+
+- GOAL: [**Homogeneous within groups; heterogeneous between groups**]{.blue}
+
+
+::: notes
+
+- When we group data points together, we hope the points in the same group look very much like each other, and the points in the different groups or clusters look very different.
+- When I say they look like each other, I mean the points share similar characteristics. In other words, their variables' values are pretty similar.
+
+:::
+
+. . .
+
+- [Customer/Marketing Segmentation]{.green}
+    + Divide customers into clusters on age, income, etc.
+    + Each subgroup might be more receptive to a particular form of advertising, or more likely to purchase a particular product.
+    
+:::{.xsmall}
+
+```{r}
+#| echo: false
+#| out-width: 30%
+#| fig-cap: "Source: https://www.datacamp.com/community/tutorials/introduction-customer-segmentation-python"
+knitr::include_graphics("./images/20-kmeans/clustering.png")
+```
+
+:::
+
+
+::: notes
+- Divide customers into clusters on the basis of common characteristics.
+- Students: the price shouldn't be that high, and the item should be good-looking and maybe colorful, so it looks young.
+- If we target this group, the low price is not that important, but the item should be beautiful, high-class and high quality.
+:::
+
+
+
+## K-Means Clustering
+
+- Partition observations into $K$ **distinct, non-overlapping** clusters: assign each to **exactly one** of the $K$ clusters.
+
+- Must pre-specify the number of clusters $K \ll n$.
+
+::: xsmall
+
+```{r}
+#| purl: false
+#| echo: false
+#| out-width: 75%
+#| fig-cap: "Source: Introduction to Statistical Learning Fig 12.7"
+knitr::include_graphics("./images/20-kmeans/kmeans.png")
+```
+
+:::
+
+
+::: notes
+- A data point cannot belong to two clusters at the same time.
+- As KNN, we have to decide how many clusters the data are partitioned into.
+:::
+
+
+
+## K-Means Algorithm Illustration (K = 3) {visibility="hidden"}
+
+
+:::: {.columns}
+
+::: {.column width="52%"}
+
+:::{.xsmall}
+
+```{r}
+#| purl: false
+#| echo: false
+#| out-width: 100%
+#| fig-cap: "Source: Introduction to Statistical Learning Fig 12.8"
+knitr::include_graphics("./images/20-kmeans/kmeans_algo.png")
+```
+
+:::
+
+:::
+
+
+
+::: {.column width="48%"}
+
+:::{.instructions}
+
+**K-Means Algorithm**
+
+- Choose a value of $K$.
+- _Randomly_ assign a number, from 1 to $K$, to each of the observations.
+- Iterate until the cluster assignments stop changing:
+    + **[1]** For each of the $K$ clusters, compute its cluster *centroid*.
+    + **[2]** Assign each observation to the cluster _whose centroid is closest_.
+    
+:::
+
+:::
+
+::::
+
+
+::: notes
+
+- Choose a value of $K$.
+- _Randomly_ assign a number, from 1 to $K$, here the color, to each of the observations.
+- Then we find the mean of each cluster. Because we start from random assignment, it's not surprising that the three means are close. But still, they are not exactly equal.
+- Now, with the means, Assign each observation to the cluster _whose centroid is closest_. Clearly, all points on the top should be colored in brown, because they are close to the brown mean the most. Right? And the points right here are pink, and data right here are green.
+- Now based on this new assignment, we can re-compute new group means because now we have new group assignment.
+- And the new means are shown here.
+- Based on the new means, we reassign data to a group.
+- Then we compute new means, then do new assignment. 
+- We keep iterating the two steps until all the data points are stick with a group without changing.
+
+:::
+
+
+
+
+## K-Means Illustration
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Data** (Let's choose $K=2$)
+
+
+```{r}
+#| fig-asp: 1
+#| echo: false
+set.seed(3)
+x = replicate(2, rnorm(6))
+par(mar=rep(0, 4))
+plot(x[,1], x[, 2], xaxt = 'n', yaxt = 'n', cex = 5, xlim = c(-1.35, 0.45), ylim = c(-1.51, 1.61), pch = 19)
+```
+
+:::
+
+
+::: {.column width="50%"}
+
+:::{.instructions}
+
+**K-Means Algorithm**
+
+- [Choose a value of $K$.]{.blue}
+- _Randomly_ assign a number, from 1 to $K$, to each of the observations.
+- Iterate until the cluster assignments stop changing:
+    + **[1]** For each of the $K$ clusters, compute its cluster *centroid*.
+    + **[2]** Assign each observation to the cluster _whose centroid is closest_.
+    
+:::
+
+:::
+
+::::
+
+
+
+
+## K-Means Illustration
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Random assignment**
+
+```{r}
+#| fig-asp: 1
+#| echo: false
+set.seed(3)
+C = sample(1:2, 6, replace = TRUE)
+par(mar=rep(0, 4))  
+plot(x[,1], x[, 2], xaxt = 'n', yaxt = 'n', cex = 5, 
+     xlim = c(-1.35, 0.45), ylim = c(-1.51, 1.61), pch = 19, col = c(2, 4)[C])
+```
+
+:::
+
+::: {.column width="50%"}
+
+:::{.instructions}
+
+**K-Means Algorithm**
+
+- Choose a value of $K$.
+- [_Randomly_ assign a number, from 1 to $K$, to each of the observations.]{.blue}
+- Iterate until the cluster assignments stop changing:
+    + **[1]** For each of the $K$ clusters, compute its cluster *centroid*.
+    + **[2]** Assign each observation to the cluster _whose centroid is closest_.
+    
+:::
+
+:::
+
+::::
+
+
+
+
+## K-Means Illustration
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Compute the cluster centroid**
+
+
+```{r}
+#| fig-asp: 1
+#| echo: false
+par(mar=rep(0, 4)) 
+plot(x[,1], x[, 2], xaxt = 'n', yaxt = 'n', cex = 5, 
+     xlim = c(-1.35, 0.45), ylim = c(-1.51, 1.61), pch = 19, col = c(2, 4)[C])
+m1 = colMeans(x[C==1, ])
+m2 = colMeans(x[C==2, ])
+points(m1[1], m1[2], col = 2, pch = 4, cex = 5, lwd = 5)
+points(m2[1], m2[2], col = 4, pch = 4, cex = 5, lwd = 5)
+```
+:::
+
+
+::: {.column width="50%"}
+
+:::{.instructions}
+
+**K-Means Algorithm**
+
+- Choose a value of $K$.
+- _Randomly_ assign a number, from 1 to $K$, to each of the observations.
+- Iterate until the cluster assignments stop changing:
+    + **[1]** [For each of the $K$ clusters, compute its cluster *centroid*.]{.blue}
+    + **[2]** Assign each observation to the cluster _whose centroid is closest_.
+    
+:::
+
+:::
+
+::::
+
+
+
+## K-Means Illustration
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Do new assignment**
+
+```{r}
+#| fig-asp: 1
+#| echo: false
+par(mar=rep(0, 4)) 
+plot(x[,1], x[, 2], xaxt = 'n', yaxt = 'n', cex = 5, 
+     xlim = c(-1.35, 0.45), ylim = c(-1.51, 1.61), pch = 19, col = c(2, 4)[C])
+points(m1[1], m1[2], col = 2, pch = 4, cex = 5, lwd = 5)
+points(m2[1], m2[2], col = 4, pch = 4, cex = 5, lwd = 5)
+arrows(x[2, 1], x[2, 2], -0.9041313, 0.7644366, length = 0.15, lwd = 5)
+```
+
+:::
+
+::: {.column width="50%"}
+
+:::{.instructions}
+
+**K-Means Algorithm**
+
+- Choose a value of $K$.
+- _Randomly_ assign a number, from 1 to $K$, to each of the observations.
+- Iterate until the cluster assignments stop changing:
+    + **[1]** For each of the $K$ clusters, compute its cluster *centroid*.
+    + **[2]** [Assign each observation to the cluster _whose centroid is closest_.]{.blue}
+    
+:::
+
+:::
+
+::::
+
+
+
+
+## K-Means Illustration
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Do new assignment**
+
+```{r}
+#| fig-asp: 1
+#| echo: false
+par(mar=rep(0, 4)) 
+C[2] = 1
+plot(x[,1], x[, 2], xaxt = 'n', yaxt = 'n', cex = 5, 
+     xlim = c(-1.35, 0.45), ylim = c(-1.51, 1.61), pch = 19, col = c(2, 4)[C])
+# points(m1[1], m1[2], col = 2, pch = 4, cex = 5, lwd = 4)
+# points(m2[1], m2[2], col = 4, pch = 4, cex = 5, lwd = 4)
+# arrows(x[2, 1], x[2, 2], -0.9041313, 0.7644366, length = 0.15)
+```
+
+:::
+
+
+::: {.column width="50%"}
+
+**Compute the cluster centroid** ...
+
+```{r}
+#| fig-asp: 1
+#| echo: false
+C[2] = 1
+par(mar=rep(0, 4)) 
+plot(x[,1], x[, 2], xaxt = 'n', yaxt = 'n', cex = 5, 
+     xlim = c(-1.35, 0.45), ylim = c(-1.51, 1.61), pch = 19, col = c(2, 4)[C])
+m1 = colMeans(x[C==1, ])
+m2 = colMeans(x[C==2, ])
+points(m1[1], m1[2], col = 2, pch = 4, cex = 5, lwd = 5)
+points(m2[1], m2[2], col = 4, pch = 4, cex = 5, lwd = 5)
+```
+
+:::
+
+::::
+
+
+
+## 
+
+::: xsmall
+
+```{r}
+#| purl: false
+#| echo: false
+#| out-width: 53%
+#| fig-cap: "Source: Introduction to Statistical Learning Fig 12.8"
+knitr::include_graphics("./images/20-kmeans/kmeans_algo.png")
+```
+
+:::
+
+
+## K-Means Algorithm
+
+<!-- :::{.tip} -->
+<!-- - The K-means algorithm finds a _local_ rather than a global optimum. -->
+<!-- - The results depend on the initial cluster assignment of each observation. So run the algorithm multiple times, then select the one producing the smallest **within-cluster variation**. -->
+<!-- - Standardize the data so that distance is not affected by variable unit. -->
+<!-- ::: -->
+
+:::{.callout-note}
+
+:::{style="font-size: 1.2em;"}
+
+- The K-means algorithm finds a **local** rather than global optimum.
+- The results depend on the *initial cluster assignment of each observation.* 
+  + Run the algorithm multiple times, then select the one producing the smallest **within-cluster variation**.
+- Standardize the data so that distance is not affected by variable unit.
+
+:::
+
+:::
+
+
+::: notes
+
+- What is **within-cluster variation**? I avoid using mathematical formula. But the idea is if the data points in the same group are very close to their group mean, their within-cluster variation will be small.
+- We will have K within-cluster variation, one for each group.
+- So we hope the sum of K within-cluster variations or the total within-cluster variation is as small as possible.
+
+:::
+
+
+
+##
+
+::: xsmall
+
+```{r}
+#| purl: false
+#| echo: false
+#| out-width: 53%
+#| fig-cap: "Source: Introduction to Statistical Learning Fig 12.9"
+knitr::include_graphics("./images/20-kmeans/kmeans_local.png")
+```
+
+:::
+
+
+
+## Data for K-Means
+
+```{r}
+#| purl: false
+#| eval: false
+#| echo: false
+income_low <- rnorm(70, 50, 20)
+income_mid <- rnorm(70, 65, 20)
+income_high <- rnorm(100, 150, 60)
+young_age <- jitter(sample(20:42, 70, replace = TRUE), factor = 2)
+mid_age <- jitter(sample(26:55, 100, replace = TRUE), factor = 2)
+old_age <- jitter(sample(45:65, 70, replace = TRUE), factor = 2)
+
+clus_data <- tibble(age = c(young_age, old_age, mid_age),
+                    income = c(income_low, income_mid, income_high))
+clus_data <- clus_data[sample(1:nrow(clus_data)), ]
+write_csv(clus_data, "./data/clus_data.csv")
+# plot(clus_data$age, clus_data$income)
+```
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| code-line-numbers: false
+df <- read_csv("./data/clus_data.csv")
+df  ## income in thousands
+```
+
+:::
+
+
+::: {.column width="50%"}
+
+```{r}
+#| code-line-numbers: false
+df_clust <- as_tibble(scale(df))
+df_clust
+```
+
+:::
+
+::::
+
+
+::: notes
+
+library(factoextra)
+https://bookdown.org/tpinto_home/Unsupervised-learning/k-means-clustering.html#KM1
+https://towardsdatascience.com/k-means-clustering-concepts-and-implementation-in-r-for-data-science-32cae6a3ceba
+https://www.datanovia.com/en/lessons/k-means-clustering-in-r-algorith-and-practical-examples/
+https://uc-r.github.io/kmeans_clustering#optimal
+https://www.statology.org/k-means-clustering-in-r/
+
+:::
+
+## Data for K-Means
+
+```{r}
+#| code-line-numbers: false
+#| out-width: 65%
+df_clust |> ggplot(aes(x = age, y = income)) + 
+    geom_point()
+```
+
+
+
+
+## `kmeans()`
+
+::: midi
+
+```{r}
+#| class-output: my_classfull
+(kclust <- kmeans(x = df_clust, centers = 3))
+```
+
+:::
+
+
+
+
+## `kmeans()`
+
+```{r}
+#| code-line-numbers: false
+kclust$centers
+kclust$size
+head(kclust$cluster, 20)
+```
+
+
+
+
+## Cluster Info
+
+```{r}
+#| code-line-numbers: false
+(df_clust_k <- augment(kclust, df_clust))
+```
+
+```{r}
+#| code-line-numbers: false
+(tidy_kclust <- tidy(kclust))
+```
+
+
+::: notes
+augment adds the point classifications to the original data set:
+:::
+
+
+
+## K-Means in R
+
+::: {.panel-tabset}
+
+## Clustering Result
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+```{r}
+#| echo: false
+#| out-width: 90%
+df_clust_k |> ggplot(aes(x = age, 
+                        y = income)) + 
+    geom_point(aes(color = .cluster), alpha = 0.8, size = 5) + 
+    geom_point(data = tidy_kclust %>% 
+                   select(1:2),
+               size = 10,
+               fill = "black",
+               shape = "o",
+               ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+```
+
+:::
+
+::: {.column width="20%"}
+
+Proposed group label:
+
+- [Steady-income family]{.green}
+- [New college graduates/mid-class young family]{.blue}
+- [High socioeconomic class]{.red}
+
+:::
+
+::::
+
+
+## Code
+
+```{r}
+#| eval: false
+#| code-line-numbers: false
+df_clust_k |>  
+    ggplot(aes(x = age, 
+               y = income)) + 
+    geom_point(aes(color = .cluster), 
+               alpha = 0.8) + 
+    geom_point(data = tidy_kclust |>  
+                   select(1:2),
+               size = 8,
+               fill = "black",
+               shape = "o") +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+```
+:::
+
+
+
+
+## K-Means in R: [factoextra](https://rpkgs.datanovia.com/factoextra/index.html)
+
+```{r}
+#| code-line-numbers: false
+library(factoextra)
+fviz_cluster(object = kclust, data = df_clust, label = NA) + 
+    theme_bw()
+```
+
+
+
+
+## Choose K: Total Withing Sum of Squares
+
+```{r}
+#| code-line-numbers: false
+## wss = total within sum of squares
+fviz_nbclust(x = df_clust, FUNcluster = kmeans, method = "wss",  
+             k.max = 10)
+```
+
+
+
+## Choose K: Average Silhouette Method {visibility="hidden"}
+
+```{r}
+## silhouette = Average Silhouette Width Method
+fviz_nbclust(df_clust, kmeans, method = "silhouette",  k.max = 10)
+```
+
+
+::: notes
+measuring how well each data point lies within its cluster
+:::
+
+
+
+## Choose K: Gap Statistics {visibility="hidden"}
+
+```{r}
+#| code-line-numbers: false
+## gap_stat = Gap Statistics
+fviz_nbclust(df_clust, kmeans, method = "gap_stat",  k.max = 10)
+```
+
+::: notes
+compares the total intracluster variation for different number of cluster k with their expected values under a data with no clustering (these data generated using Monte Carlo simulations). The higher the gap between the observed and expected, the better the clustering.
+:::
+
+
+
+
+## Practical Issues
+
+- Try several different $K$s, and look for the one with the most useful or interpretable solution.
+
+:::{.alert}
+Clustering is not beneficial for decision making or strategic plan if the clusters found are not meaningful based on their features.
+:::
+
+- The clusters found may be heavily distorted due to outliers that do not belong to any cluster. 
+
+- Clustering methods are not very robust to perturbations of the data.
+
+
+##
+
+::: {.lab}
+
+<span style="color:blue"> **23-K means Clustering** </span>
+
+In **lab.qmd** `## Lab 24` section, 
+
+1. Install R package `palmerpenguins` at <https://allisonhorst.github.io/palmerpenguins/>
+
+2. Perform K-Means to with $K = 3$ to cluster penguins based on `bill_length_mm` and `flipper_length_mm` of data `peng`.
+
+
+```{r}
+#| code-line-numbers: false
+library(palmerpenguins)
+peng <- penguins[complete.cases(penguins), ] |> 
+    select(flipper_length_mm, bill_length_mm)
+```
+
+:::
+
+
+##
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| out-width: 100%
+kclust <- kmeans(x = peng, centers = 3)
+df_clust_k <- augment(kclust, peng)
+tidy_kclust <- tidy(kclust)
+df_clust_k |>  
+    ggplot(aes(x = flipper_length_mm, 
+               y = bill_length_mm)) + 
+    geom_point(aes(color = .cluster), 
+               alpha = 0.9, size = 3) + 
+    geom_point(data = tidy_kclust |>  
+                   select(1:2),
+               size = 8,
+               fill = "black",
+               shape = "o") +
+    theme_minimal() +
+    theme(legend.position = "bottom",
+          axis.text=element_text(size=15),
+          axis.title=element_text(size=18,face="bold"),
+          legend.text = element_text(size=20),
+          legend.title = element_text(size=20),
+          legend.key.size = unit(2, 'cm'))
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| out-width: 100%
+flipper_bill <- ggplot(data = penguins,
+                         aes(x = flipper_length_mm,
+                             y = bill_length_mm)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Flipper and bill length",
+       subtitle = "Dimensions for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       x = "Flipper length (mm)",
+       y = "Bill length (mm)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.85, 0.15),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+
+flipper_bill
+```
+
+:::
+
+::::
+
+
+
+# {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" background-size="40%" background-position="90% 50%"}
+
+
+::: {.left}
+<h1> sklearn.cluster </h1>
+<!-- <h1> sklearn.preprocessing </h1> -->
+
+:::
+
+
+
+
+## [sklearn.cluster.KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans)
+
+```{python}
+#| code-line-numbers: false
+import numpy as np
+import pandas as pd
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+```
+
+
+```{python}
+#| code-line-numbers: false
+df_clus = pd.read_csv('./data/clus_data.csv')
+```
+
+
+
+```{python}
+#| code-line-numbers: false
+scaler = StandardScaler()
+X = scaler.fit_transform(df_clus.values)
+```
+
+
+<br>
+
+
+. . .
+
+```{python}
+#| code-line-numbers: false
+#| warning: false
+kmeans = KMeans(n_clusters=3,  n_init=10).fit(X)
+```
+
+```{python}
+#| code-line-numbers: false
+kmeans.labels_[0:10]
+```
+
+<br>
+
+```{python}
+#| code-line-numbers: false
+np.round(kmeans.cluster_centers_, 2)
+```
+

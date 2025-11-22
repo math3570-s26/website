@@ -1,0 +1,65 @@
+---
+title: "Lab 23: Principal Component Analysis"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/19-pca/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+library(tidymodels)
+```
+
+::: callout-note
+
+:::
+
+
+In **lab.qmd** `## Lab 23` section, 
+
+1. Use `slice()` to print the first six rows of `iris` data.
+
+2. Perform PCA on `Sepal.Length`, `Sepal.Width`, `Petal.Length`, and `Petal.Width`.
+
+3. Generate biplot, and explain it.
+
+```{r}
+#| echo: false
+iris |> slice(1:6)
+```
+
+```{r}
+#| echo: false
+pca_out <- prcomp(iris |> select(1:4), scale. = TRUE)
+```
+
+```{r}
+#| echo: false
+#| fig-height: 6
+par(mar = c(4, 4, 2.5, 2.5))
+biplot(pca_out, scale = 0, xlabs = iris$Species)
+```
+
+
+```{r}
+#| echo: false
+#| out-width: 100%
+data.frame(pca_out$x[,1:2], Species = iris$Species) |>
+    ggplot(aes(PC1, PC2, fill = Species)) +
+    geom_point(cex = 5, pch = 21)
+```
+

@@ -1,0 +1,16 @@
+---
+title: "Week 9"
+subtitle: "NO CLASS: Spring break"
+editor: visual
+---
+
+::: callout-important
+:::
+
+Happy spring break! Remember to work on your project!
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

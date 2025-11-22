@@ -1,0 +1,17 @@
+{
+  "hash": "be32f7257cdab2a538a91fe3f0e65ae8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"In-class Activity: Dogs or Cats\"\n---\n\nThe following activity practices **K Nearest Neighbors**.\n\n## [[Team]]{.blue} Activity: Dogs or Cats\n\n::: {.cell}\n::: {.cell-output-display}\n![](act_knn_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nHere we use features `Body Size` and `Food Intake` to classify cats and dogs. The training data are shown as cat or dog images, and there are three test data to be labeled: [green]{.green}, [red]{.red}, and [blue]{.blue} points.\n\nConsider K Nearest Neighbors with $K = 1, 2, 3, 4$, and discuss the following questions.\n\n## Discussion\n\n::: {.callout-caution collapse=\"true\"}\n\n## For which test data point, the classification result is uncertain or unstable?\n\n\n:::\n\n\n::: {.callout-caution collapse=\"true\"}\n\n## Which data point can be labelled as one particular category with 100% certainty, for all different $K$s?\n\n\n:::\n\n\n::: {.callout-caution collapse=\"true\"}\n\n## For the blue point, what happened when $K$ increases? Do we change the prediction? What about uncertainty?\n\n\n:::\n\n\n::: {.callout-caution collapse=\"true\"}\n\n## If you would like to make a classification rule or set the decision boundary to predict cats or dogs, what would the decision boundary look like? Why?\n\n:::\n",
+    "supporting": [
+      "act_knn_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

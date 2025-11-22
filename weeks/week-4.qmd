@@ -1,0 +1,32 @@
+---
+title: "Week 4"
+subtitle: "R and Python Syntax"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - R/Python Syntax](/slides/06-syntax.html)
+
+## Reading and Resources
+
+📖 [The R Graph Gallery](https://www.r-graph-gallery.com/)
+
+📖 [matplotlib](https://matplotlib.org/stable/plot_types/index.html)
+
+## Perform
+
+📋 [Lab-05 R Data Summary](/exercise/lab05-rtype.html)
+
+📋 [Lab-06 Python Data Structure](/exercise/lab06-py.html)
+
+📋 [Lab-07 Plotting](/exercise/lab07-plot.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

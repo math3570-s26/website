@@ -1,0 +1,56 @@
+---
+title: "Lab 18: Probability"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/15-probstat/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+```
+
+::: callout-note
+
+:::
+
+
+In **lab.qmd** `## Lab 18` section,
+
+- Plot the probability function $P(X = x)$ of $X \sim \text{binomial}(n = 5, \pi = 0.3)$. 
+
+To use ggplot,
+
+1. Create a data frame saving all possible values of $x$ and their corresponding probability using `dbinom(x, size = ___, prob = ___)`.
+  
+```{r}
+#| echo: false
+binom_df <- tibble(x = 0:5,
+                   y = dbinom(x, size = 5, prob = 0.3))
+binom_df
+```
+
+
+2. Add `geom_col()`
+
+```{r}
+#| echo: false
+#| label: binom-ggplt
+binom_df |> ggplot(aes(x = x, y = y)) + 
+    geom_col(width = 0.2, fill = "black") + 
+    xlab("Number of successes") + ylab("Pr(X = x)") +
+    labs(title = "binomial(5, 0.3)")
+```

@@ -1,0 +1,362 @@
+---
+title: "In-Class Lab Exercises"
+subtitle: "MATH/COSC 3570 Spring 2025"
+date: today
+author: "Dr. Cheng-Han Yu"
+format: 
+  html:
+    toc: true
+    code-fold: false
+execute:
+  echo: true
+  eval: true
+editor: source
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(reticulate)
+# don't show code unless we explicitly set echo = TRUE
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Lab 1: Running R Script
+
+```{r}
+#| label: lab-1
+#| echo: !expr c(-1)
+library(ggplot2)
+x <- 4; y <- 3
+bar <- ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = cut), 
+           show.legend = FALSE, width = 1) + 
+  theme(aspect.ratio = 1) +
+  labs(x = NULL, y = NULL)
+bar + coord_flip()
+bar + coord_polar()
+```
+
+## Lab 2: Quarto
+
+Briefly describe how we produce a pdf.
+
+## Lab 3: Markdown
+
+Hello everyone, I am **Cheng-Han Yu**, an assistant professor at Marquette University. I love *data science*!
+
+My main research interests include
+
+-   Bayesian spatiotemporal modeling
+    -   MCMC
+    -   Variational Inference
+-   Neuroimaging
+    -   fMRI
+    -   EEG/ERP
+-   [R programming](https://www.r-project.org/)
+
+My favorite quote is
+
+> All models are wrong, but some are useful. George Box
+
+Here I write a simple math equation $\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+## Lab 4: Code Chunk
+
+```{r}
+#| out-width: 40%
+# include image
+knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png")
+```
+
+```{r}
+#| fig-cap: "MPG vs. Displacement"
+#| fig-height: 4
+#| fig-width: 6
+#| fig-align: right
+# include plot
+plot(x = mtcars$disp, y = mtcars$mpg)
+```
+
+```{r}
+# show dataset `mtcars`
+knitr::kable(mtcars, caption = "A knitr kable table of mtcars data set")
+```
+
+There are `r ncol(mtcars)` variables in the `mtcars` data set.
+
+Answer to the questions.
+
+```{python}
+radius = 5
+```
+
+The radius of the circle is `{python} print(radius)`
+
+## Lab 5: R Data Type Summary
+
+```{r}
+#| class-output: "my_classfull"
+v1 <- c(3, 8, 4, 5)
+fac <- factor(c("bad", "neutral", "good"))
+x_lst <- list(idx = 1:3, 
+              "a", 
+              c(TRUE, FALSE))
+mat <- matrix(data = 1:6, 
+              nrow = 3, 
+              ncol = 2)
+df <- data.frame(age = c(19, 21, 40), 
+                 gender = c("m","f", "m"))
+vec <- c(type = typeof(v1), class = class(v1))
+fac <- c(type = typeof(fac), class = class(fac))
+lst <- c(type = typeof(x_lst), class = class(x_lst))
+mat <- c(type = typeof(mat), class = class(mat))
+df <- c(type = typeof(df), class = class(df))
+list(vector = vec,
+     factor = fac,
+     list = lst,
+     matrix = mat,
+     dataframe = df)
+```
+
+## Lab 6: Python Data Structure
+
+```{r}
+x_lst <- list(idx = 1:3, 
+              word = "a", 
+              bool = c(TRUE, FALSE))
+```
+
+```{python}
+py_lst = [[1, 2, 3], "a", [True, False]]
+py_lst
+py_dic = {"idx": [1, 2, 3], "word": "a", "bool": [True, False]}
+py_dic
+```
+
+## Lab 7: Plotting
+
+```{r}
+plot(mtcars$mpg, mtcars$wt, 
+     col = 4, pch = 8, cex = 2,
+     xlab = "MPG", ylab = "Wt. (1000 lbs)", 
+     main = "MPG vs. Weight")
+hist(mtcars$qsec, breaks = 20, border = "#FFCC00", 
+     col = 2, main = "Histogram of 1/4 mile time")
+boxplot(mpg ~ gear, 
+        data = mtcars, 
+        col = 2:4, 
+        las = 1, 
+        horizontal = TRUE,
+        xlab = "Miles per gallon", 
+        ylab = "Number of forward gears")
+```
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+mtcars = pd.read_csv('./data/mtcars.csv')
+mtcars
+plt.scatter(x = mtcars.mpg, 
+            y = mtcars.wt, 
+            color = "r")
+plt.xlabel("Miles per gallon")
+plt.ylabel("Weight")
+plt.title("Scatter plot")
+plt.show()
+plt.clf()
+```
+
+```{python}
+plt.hist(mtcars.qsec, 
+         bins = 19, 
+         color="#003366",
+         edgecolor="#FFCC00")
+plt.xlabel("1/4 mile time")
+plt.title("Histogram of 1/4 mile time")
+plt.show()
+```
+
+## Lab 8: Tibbles and Pipes
+
+```{r}
+df <- data.frame(abc = 1:2, 
+                 xyz = c("a", "b"))
+# list method
+df$x
+df[[2]]
+df["xyz"]
+df[c("abc", "xyz")]
+# matrix method
+df[, 2]
+df[, "xyz"]
+df[, c("abc", "xyz")]
+```
+
+```{r}
+library(tidyverse)
+tib <- tibble(abc = 1:2, 
+              xyz = c("a", "b"))
+# list method
+tib$x
+tib[[2]]
+tib["xyz"]
+tib[c("abc", "xyz")]
+# matrix method
+tib[, 2]
+tib[, "xyz"]
+tib[, c("abc", "xyz")]
+```
+
+Explain their differences.
+
+With data.frames,
+
+-   The `$` operator will match any column name that starts with the name following it. Since there is a column named xyz, the expression `df$x` will be expanded to `df$xyz.` This behavior of the `$` operator saves a few keystrokes, but it can result in accidentally using a different column than you thought you were using.\
+-   With `[` the type of object that is returned differs on the number of columns. If it is one column, it won't return a data.frame, but instead will return a vector. With more than one column, then it will return a data.frame. This is fine if you know what you are passing in, but suppose you did `df[ , vars]` where `vars` was a variable. Then what that code does depends on `length(vars)` and you'd have to write code to account for those situations or risk bugs.
+
+For tibbles,
+
+> When using the matrix subsetting method, a tibble always return a tibble.
+
+> When using \$ to grab an element, tibbles never do partial matching.
+
+> `[]` always returns another tibble, regardless of list or matrix subsetting method.
+
+> `$` and `[[]]` return a vector.
+
+> Tibbles *never do partial matching* and name "x" cannot be recognized.
+
+-   What does `tibble::enframe()` do? Try `enframe(c(a = 1, b = 2, c = 3))`. Check `?enframe` for more details.
+
+-   The function `tibble::enframe()` converts named vectors to a data frame with names and values
+
+```{r}
+iris |> tail(n = 12) |> summary()
+```
+
+## Lab 9: NumPy and pandas
+
+```{r}
+tibble(x = 1:5, y = 5:1, z = LETTERS[1:5])
+```
+
+```{python}
+import numpy as np
+import pandas as pd
+import string
+list(string.ascii_uppercase)
+
+dic = {'x':np.arange(1, 6), 'y': np.arange(5, 0, -1), 'z':list(string.ascii_uppercase)[0:5]}
+pd.DataFrame(dic)
+```
+
+## Lab 10: Import Data
+
+```{r}
+library(tidyverse)
+# ssa <- read_csv(file = "./data/ssa-death-probability.csv")
+
+# ssa_male <- ssa[ssa$Sex == "Male",]
+# ssa_female <- ssa[ssa$Sex == "Female",]
+ssa_male <- readr::read_csv("./data/ssa_male_prob.csv")
+ssa_female <- readr::read_rds("./data/ssa_female_prob.Rds")
+plot(x = ssa_female$Age, y = ssa_female$LifeExp, 
+     type = "l", col = 2, lwd = 3,
+     xlab = "Age", ylab = "Life Exp",
+     main = "Age vs. Life Exp by Gender")
+lines(ssa_male$Age, ssa_male$LifeExp, col = 4, lwd = 3) 
+```
+
+## Lab 11: ggplot2
+
+```{r}
+penguins <- read_csv("./data/penguins.csv")
+penguins |> 
+  ggplot(mapping = aes(x = bill_depth_mm,
+                       y = bill_length_mm,
+                       colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+       subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+       x = "Bill depth (mm)", y = "Bill length (mm)",
+       colour = "Species",
+       caption = "Source: Palmer Station LTER / palmerpenguins package") +
+  scale_colour_viridis_d()
+```
+
+## Lab 12: Faceting
+
+```{r}
+mpg |> ggplot(mapping = aes(x = displ, y = cty, color = drv, shape = fl)) +
+    geom_point(size = 3, alpha = 0.8) + 
+    facet_grid(drv ~ fl) +
+    guides(color = "none")
+```
+
+## Lab 13: Visualization
+
+```{r}
+penguins <- read_csv("./data/penguins.csv")
+penguins |> ggplot(aes(x = species, fill = species)) +
+    geom_bar() +
+    labs(x = "Species of Penguins", 
+         title = "Species Counts in Penguins Data")
+```
+
+```{r}
+penguins |> ggplot(aes(x = bill_length_mm, 
+                       fill = species)) +
+    geom_histogram() +
+    labs(x = "Bill Length (mm)",
+         y = "Frequency",
+         title = "Penguins Bill Length by Species") +
+    facet_wrap(~ species, nrow = 1) + 
+    theme(legend.position = "none")
+
+```
+
+## Lab 14: plotly
+
+```{r}
+library(plotly)
+loans <- readr::read_csv("./data/loans.csv")
+p <- plot_ly(loans, x = ~interest_rate, alpha = 0.5)
+p |> add_boxplot(y = ~grade, color = ~grade)
+```
+
+```{r}
+# x = interest_rate, y = grade won't work
+gg <- loans %>% ggplot(aes(x = grade, y = interest_rate, color = grade)) + 
+    geom_boxplot() + theme_minimal() + coord_flip()
+ggplotly(gg)
+```
+
+## Lab 15: dplyr
+
+```{r}
+murders <- read.csv("./data/murders.csv")
+(my_states <- murders |> 
+    mutate(rate = total / population * 100000) |> 
+    filter(region %in% c("West", "Northeast"), rate < 1) |> 
+    select(state, region, rate))
+my_states |> 
+    group_by(region) |> 
+    summarize(avg = mean(rate), std_dev = sd(rate)) |> 
+    arrange(desc(avg))
+```
+
+## Lab 16: Joining Tables
+
+```{r}
+diamond_color <- read_csv("https://www.jaredlander.com/data/DiamondColors.csv")
+joined_df <- left_join(diamonds, diamond_color, by = c('color' = 'Color')) |> 
+    select(carat, color, price, Description, Details)
+joined_df
+
+joined_df |> ggplot(aes(x = color)) + 
+  geom_bar()
+
+joined_df |> count(color, sort = TRUE)
+```

@@ -1,0 +1,15 @@
+{
+  "hash": "e79023d9b95c8e400ef214d450352efc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab 19: Confidence Interval\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\nIn **lab.qmd** `## Lab 19` section,\n\n- Run the code I give you for simulating 100 $95\\%$ CIs. Change the random generator seed to another number you like.\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nset.seed(a number you like) Birthday? Lucky number?\n```\n:::\n\n- How many CIs do not cover the true mean $\\mu$?\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/15-probstat/unnamed-chunk-3-1.png){fig-align='center' width=100%}\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

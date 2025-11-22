@@ -1,0 +1,65 @@
+---
+title: "Lab 08: Tibbles and Pipes"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: false
+---
+
+```{r}
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/07-package/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+```
+
+::: callout-note
+
+:::
+In **lab.qmd** `## Lab 8` section,
+
+1. Compare and contrast the following operations on a `data.frame` and equivalent `tibble`. What are the differences?
+
+
+```{r}
+#| echo: true
+#| eval: false
+df <- data.frame(abc = 1:2, 
+                 xyz = c("a", "b"))
+# list method
+df$x
+df[[2]]
+df["xyz"]
+df[c("abc", "xyz")]
+# matrix method
+df[, 2]
+df[, "xyz"]
+df[, c("abc", "xyz")]
+```
+
+
+```{r}
+#| echo: true
+#| eval: false
+tib <- tibble(abc = 1:2, 
+              xyz = c("a", "b"))
+# list method
+tib$x
+tib[[2]]
+tib["xyz"]
+tib[c("abc", "xyz")]
+# matrix method
+tib[, 2]
+tib[, "xyz"]
+tib[, c("abc", "xyz")]
+```
+
+
+2. Use ` |> ` to first select last 12 rows of `iris` data set using `tail()`, then provides summary statistics on its columns using `summary()`.

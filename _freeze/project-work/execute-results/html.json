@@ -1,0 +1,15 @@
+{
+  "hash": "e2470cb694145d5f520ab632b39cc350",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Project work\"\n---\n\n\n## Group project's proposal\n\n-   **GitClub**: Ally Olsen, Josh Wilder, Aniya Lentz, Jazmin Muro, Christian Kasiake\n\n    + [R package] [Web Development: Utilizing Quarto to Creat a Website](./documents/proposal_GitClub.pdf)\n\n-   **ggplot3**: Arik Zintel, Iris Murphy, Yesenia Tavizon, Lauren Barrile\n\n    + [R package] [Leaflet: An Introduction to Geographic Data Visualization](./documents/proposal_ggplot3.pdf)\n\n-   **Ctrl + Alt + Elite**: Mia Kwiatkoski, Sienna Ifill, Mridula Geddam, Bridget Clark\n\n    + [R package] [Do you Believe in Magick?](./documents/proposal_CtrlAltDelete.pdf)\n\n-   **Big Meta Watchers**: Miguel Basurto, Nicholas Paulick, Christopher Purney, Darius Dahl\n\n    + [Data analysis; Python package] [How to Use Data Science in Real-Life](./documents/proposal_bigmeta.pdf)\n\n-   **Win Rs**: Allan Akkathara, Michael Hankins, Katy Carter, Maddie Flint\n\n    + [Data analysis] [How You Can Sleep Better: A Data Analysis](./documents/proposal_WinR.pdf)\n    \n    \n-   **Red Pandas**: Michael Gephart, Rich Lukas, Candice Watson, Fike Carter\n\n    + [R package] [RGL: 3D Visualization of Trails](./documents/proposal_RedPandas.pdf)\n\n-   **Data Dawgs**: Patrick Dunleavy, Alex Kusek, Arianna Smith, Luke Baumer\n\n    + [Data analysis] [Datadawgs Take on College](./documents/proposal_datadawg.pdf)\n\n## Presentation order\n\n\n::: {.cell}\n\n```{.r .cell-code}\nteam <- c(\"GitClub\", \"ggplot3\", \"Ctrl + Alt + Elite\", \n          \"Big Meta Watchers\", \"Win Rs\", \"Red Pandas\", \"Data Dawgs\")\nset.seed(2024)\n(present_order <- sample(team, size = 7, replace = FALSE))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"ggplot3\"            \"Win Rs\"             \"Red Pandas\"        \n[4] \"Big Meta Watchers\"  \"Ctrl + Alt + Elite\" \"GitClub\"           \n[7] \"Data Dawgs\"        \n```\n\n\n:::\n:::\n\n\n- Every individual is welcome to ask questions to any group.\n\n- Each group asks **as least one** question.\n\n- `Win Rs` ask questions about `ggplot3`'s project.\n\n- `Red Pandas` ask questions about `Win Rs`'s project.\n\n- `Big Meta Watchers` ask questions about `Red Pandas`'s project.\n\n- `Ctrl + Alt + Elite` ask questions about `Big Meta Watchers`'s project.\n\n- `GitClub` ask questions about `Ctrl + Alt + Elite`'s project.\n\n- `Data Dawgs` ask questions about `GitClub`'s project.\n\n- `ggplot3` ask questions about `Data Dawgs`'s project.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

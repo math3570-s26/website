@@ -1,0 +1,1723 @@
+[
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Click here to download the syllabus.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#time-and-location",
+    "href": "course-syllabus.html#time-and-location",
+    "title": "Syllabus",
+    "section": "Time and location",
+    "text": "Time and location\n\n\n\n\n\n\n\n\n\nDay and Time\nLocation\n\n\n\n\nLectures\nTu & Th 2:00 - 3:15 PM\nLalumiere Language Hall 232\n\n\nOffice hours\nTu & Th 4:50 - 5:50 PM; Wed 12 - 1 PM\nCudahy Hall 353\n\n\nTA Help Desk\nTo be determined (TBD)\nTBD\n\n\nLab Section\nNone\nNone",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#ta-information",
+    "href": "course-syllabus.html#ta-information",
+    "title": "Syllabus",
+    "section": "TA Information",
+    "text": "TA Information\n\nName: Qishi Zhan\nEmail: qishi.zhan@marquette.edu",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#office-hours",
+    "href": "course-syllabus.html#office-hours",
+    "title": "Syllabus",
+    "section": "Office Hours",
+    "text": "Office Hours\n\nMy in-person office hours are TuTh 4:50 - 5:50 PM, and Wed 12 - 1 PM in Cudahy Hall room 353.\nYou are welcome to schedule an online meeting via Microsoft Teams if you need/prefer.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#learning-objectives",
+    "href": "course-syllabus.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nBy the end of the semester, you will be able to…\n\nRepresent and manipulate data in effective ways\nManipulate data using packages/tools and by ad hoc data handling\nUse mathematical, computational and statistical tools to detect patterns and model performance\nUse computational principles and tools to tackle issues addressable by data science\nUse a solid foundation in data science to independently learn new methodologies and technologies in the field of data science",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#prerequisites",
+    "href": "course-syllabus.html#prerequisites",
+    "title": "Syllabus",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nCOSC 1010 (Intro to Programming) and MATH 4720 (Intro to Statistics), or MATH 2780 (Intro to Regression and Classification).\nProgramming experience is helpful because the course involves doing regression analysis using  programming language.\nThe course will also assume facility with using the internet and a personal computer/laptop. The course involves coding in R and Python using Posit Cloud, a cloud integrated development environment (IDE).\nTalk to me if you are not sure whether or not this is the right course for you.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#e-mail-policy",
+    "href": "course-syllabus.html#e-mail-policy",
+    "title": "Syllabus",
+    "section": "E-mail Policy",
+    "text": "E-mail Policy\n\nI will attempt to reply your email quickly, at least within 24 hours.\nExpect a reply on Monday if you send a question during weekends. If you do not receive a response from me within two days, re-send your question/comment in case there was a “mix-up” with email communication (Hope this won’t happen!).\nPlease start your subject line with [math3570] or [cosc3570] followed by a clear description of your question. See an example below.\n\n\n\n\nEmail Subject Line Example\n\n\n\nEmail etiquette is important. Please read this article to learn more about email etiquette.\nI am more than happy to answer your questions about this course or data science/statistics in general. However, with tons of email messages everyday, I may choose NOT to respond to students’ e-mail if\n\nThe student could answer his/her own inquiry by reading the syllabus or information on the course website or D2L.\nThe student is asking for an extra credit opportunity. The answer is “no”.\nThe student is requesting an extension on homework. The answer is “no”.\nThe student is asking for a grade to be raised for no legitimate reason. The answer is “no”.\nThe student is sending an email with no etiquette.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\n\nNo textbook is required for this course. Course materials are mainly Dr. Yu’s slides. Below are some good references.\n\n(r4ds) R for Data Science (2e) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\n(tmwr) Tidy Modeling with R by Max Kuhn and Julia Silge.\n(py4da) Python for Data Analysis by Wes McKinney.\n(IS) Introduction to Statistics by Cheng-Han Yu. (Good resource for brushing up your basic probability, statistics and simple linear regression knowledge.)",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#grading-policy",
+    "href": "course-syllabus.html#grading-policy",
+    "title": "Syllabus",
+    "section": "Grading Policy",
+    "text": "Grading Policy\n\nYour grade is from the following categories and distribution\n\n30% In-class lab exercises and participation.\n30% Homework\n15% Midterm mini project\n25% Final project competition\nExtra credit opportunities\n\nEvery student has to participate (in-person) in the final presentation to pass the course.\nYou will NOT be allowed any extra credit projects/homework/exam to compensate for a poor grade. Everyone is given the same opportunity to do well in this class. I may use class participation to make grade adjustments at the end of the semester.\nThe final grade is based on the grade-percentage conversion Table 1 on the next page. \\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.1 is in \\([94, 100]\\) and the grade is A and 93.8 is in \\([90, 94)\\) and the grade is A-.\n\n\n\n\nGrade-Percentage Conversion\n\n\nGrade\nPercentage\n\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[73, 77)\n\n\nC-\n[70, 73)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)\n\n\n\n\n\n\nLab exercises\n\nThere are several in-class lab exercises, which are graded as complete/incomplete and used as evidence of attendance and class participation.\nYou are allowed to have one incomplete lab exercise without penalty. Beyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\n\n\n\n\nHomework\n\nThe homework assignments are individual. You should submit your own work.\nYou may not directly share or discuss answers/code with anyone other than the instructor. But you are welcome to discuss the problems in general and ask for advice.\nHomework will be assigned through GitHub. You need to clone/pull the homework repo into Posit Cloud and work on the Quarto file in the repo. A step-by-step guide will be discussed in class before homework is assigned.\nYou will have at least one week to complete your assignment.\nNo make-up homework for any reason unless you have excused absences.\nIf you miss a homework assignment due to excused absence, the homework percentage will be added to your final project. If you miss more than one assignment, only one assignment percentage can be added to the final project percentage. You get 0% for the other assignment.\n\n\n\nMidterm mini project\n\nYou will be team up to do the midterm mini project.\nMore details about the mini project presentation will be released later.\n\n\n\nFinal project competition\n\nYou will be team up to do the final project. Your project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nIntroduce a programming language not learned in class for doing data science, including live demo, Julia, SQL, MATLAB, SAS for example.\nWeb development: Shiny website or dashboard, including live demo\n\nDetails about the project will be provided as the course progresses. You must complete the final project and be in class to present it in order to pass this course.\n\n\n\n\n\nThe final project presentation is on Thursday, May 1, 2 PM and Monday, May 5, 10:30 AM - 12:30 PM.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#generative-ai-and-sharingreusing-code-policy",
+    "href": "course-syllabus.html#generative-ai-and-sharingreusing-code-policy",
+    "title": "Syllabus",
+    "section": "Generative AI and Sharing/Reusing Code Policy",
+    "text": "Generative AI and Sharing/Reusing Code Policy\n\nGenerative AI \n\nYou are responsible for the content of all work submitted for this course. You may use generative AI tools such as ChatGPT or DALL-E to generate a first draft of text for your assignments, provided that this use is documented and cited.\n\n\n\nSharing/Reusing Code\n\nUnless explicitly stated otherwise, you may make use of any online resources, but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solutions.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#university-and-college-policies",
+    "href": "course-syllabus.html#university-and-college-policies",
+    "title": "Syllabus",
+    "section": "University and college policies",
+    "text": "University and college policies\nAs a student in this course, you have agreed to comply with Marquette undergraduate policies and regulations.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#accommodation",
+    "href": "course-syllabus.html#accommodation",
+    "title": "Syllabus",
+    "section": "Accommodation",
+    "text": "Accommodation\nIf you need to request accommodations, or modify existing accommodations that address disability-related needs, please contact Disability Service.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#important-dates",
+    "href": "course-syllabus.html#important-dates",
+    "title": "Syllabus",
+    "section": "Important dates",
+    "text": "Important dates\n\nJan 21: Last day to add/swap/drop\nMar 10-16: Spring break\nMar 11: Midterm grade submission\nApr 11: Withdrawal deadline\nApr 17 - Apr 20: Easter break\nMay 3: Last day of class\nMay 1: Final project presentation I\nMay 5: Final project presentation II\nMay 13: Final grade submission\n\nClick here for the full Marquette academic calendar.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "exercise/lab15-dplyr.html",
+    "href": "exercise/lab15-dplyr.html",
+    "title": "Lab 15: dplyr",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 15 section, import the murders.csv data and\n\nAdd (mutate) the variable rate = total / population * 100000 to murders data (as I did).\nFilter states that are in region Northeast or West and their murder rate is less than 1.\nSelect variables state, region, rate.\n\n\nPrint the output table after you do 1. to 3., and save it as object my_states.\nGroup my_states by region. Then summarize data by creating variables avg and stdev that compute the mean and standard deviation of rate.\nArrange the summarized table by avg.\n\n\n_______ &lt;- _______ |&gt; \n    mutate(_______) |&gt; \n    filter(_______) |&gt; \n    select(_______)\n\n_______ |&gt;  \n    group_by(______) |&gt; \n    summarize(______) |&gt; \n    arrange(_______)\n\n\n\n          state    region      rate\n1        Hawaii      West 0.5145920\n2         Idaho      West 0.7655102\n3         Maine Northeast 0.8280881\n4 New Hampshire Northeast 0.3798036\n5        Oregon      West 0.9396843\n6          Utah      West 0.7959810\n7       Vermont Northeast 0.3196211\n8       Wyoming      West 0.8871131\n\n\n# A tibble: 2 × 3\n  region      avg std_dev\n  &lt;fct&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 West      0.781   0.164\n2 Northeast 0.509   0.278"
+  },
+  {
+    "objectID": "exercise/lab00-git.html",
+    "href": "exercise/lab00-git.html",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "",
+    "text": "Note"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-1",
+    "href": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-1",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Connect Posit Cloud and GitHub: Step 1",
+    "text": "Connect Posit Cloud and GitHub: Step 1\n\nPosit Cloud cannot recognize your GitHub account unless you connect them each other.\nIn Posit Cloud, click on your name on the top-right corner to open the right menu.\nClick on Authentication."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-2",
+    "href": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-2",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Connect Posit Cloud and GitHub: Step 2",
+    "text": "Connect Posit Cloud and GitHub: Step 2\n\nIn the Authentication window, check the box for Enabled.\n\n\n\n\n\n\n\n\n\n\nWhen check Enabled, will jump to GitHub page shown in the next."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-3",
+    "href": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-3",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Connect Posit Cloud and GitHub: Step 3",
+    "text": "Connect Posit Cloud and GitHub: Step 3\n\nFor your GitHub page, click on the green box that says “Authorize posit-hosted”."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-4",
+    "href": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-4",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Connect Posit Cloud and GitHub: Step 4",
+    "text": "Connect Posit Cloud and GitHub: Step 4\n\nBack to the Authentication of Posit Cloud, check Private repo access also enabled.\nMake sure math3570-s25 shows up under Organization access.\nClick on Grant.\nClick on the green box “Authorize posit-hosted”.\n\n\n\n\n\n\n\n\n\n\nWhen check Private repo access also enabled, will jump to GitHub page as shown."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-5",
+    "href": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-5",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Connect Posit Cloud and GitHub: Step 5",
+    "text": "Connect Posit Cloud and GitHub: Step 5\n\nOnce you’re done, both of these boxes should be checked."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-6",
+    "href": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-6",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Connect Posit Cloud and GitHub: Step 6",
+    "text": "Connect Posit Cloud and GitHub: Step 6\n\nConfirm that you’ve linked up your GitHub and Posit Cloud accounts GitHub settings &gt; Applications. Should see Posit Cloud listed as an authorized app under Authorized OAuth Apps.\n\n\n\n\n\n\n\n\n\n\nIf you see RStudio is under the Authorized Apps, congratulations! Your RStudio and GitHub are now linked together!"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#github-to-posit-cloud-step-1",
+    "href": "exercise/lab00-git.html#github-to-posit-cloud-step-1",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "GitHub to Posit Cloud: Step 1",
+    "text": "GitHub to Posit Cloud: Step 1\n\nEach of your assignments will begin with the following steps.\nGo to the repo named hw00-yourusername I created for you."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#github-to-posit-cloud-step-2",
+    "href": "exercise/lab00-git.html#github-to-posit-cloud-step-2",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "GitHub to Posit Cloud: Step 2",
+    "text": "GitHub to Posit Cloud: Step 2\n\nOn GitHub,\n\nclick on the green Code button, select HTTPS.\nclick on the clipboard icon on the right to copy the repo URL, such as https://github.com/math3570-s25/hw00-chenghanyu.git"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#github-to-posit-cloud-step-3",
+    "href": "exercise/lab00-git.html#github-to-posit-cloud-step-3",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "GitHub to Posit Cloud: Step 3",
+    "text": "GitHub to Posit Cloud: Step 3\n\nGo to Posit Cloud and into the course workspace 2025-spring-math-3570.\nCreate a New Project from Git Repo.\n\n\n\n\n\n\n\n\n\n\nYou will need to click on the down arrow next to the New Project button to see this option."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#github-to-posit-cloud-step-4",
+    "href": "exercise/lab00-git.html#github-to-posit-cloud-step-4",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "GitHub to Posit Cloud: Step 4",
+    "text": "GitHub to Posit Cloud: Step 4\n\nCopy and paste the URL of your assignment repo into the dialog box.\nHit OK, and you’re good to go!"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#github-to-posit-cloud-step-5",
+    "href": "exercise/lab00-git.html#github-to-posit-cloud-step-5",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "GitHub to Posit Cloud: Step 5",
+    "text": "GitHub to Posit Cloud: Step 5\n\nClick hw00-yourusername to do your assignment in Posit Cloud!\n\n\n\n\n\n\n\n\n\n\n\nDone! We learned the entire process of cloning a repo on GitHub to Posit Cloud as a project.\nNext, we’ll see how to keep your revision record (commit) and send (push) the latest revised version of your work from Posit Cloud to GitHub!"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#personal-access-token-pat-step-1",
+    "href": "exercise/lab00-git.html#personal-access-token-pat-step-1",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Personal Access Token (PAT): Step 1",
+    "text": "Personal Access Token (PAT): Step 1\n\nGitHub has removed the support for Password Authentication for Git operations.\nBefore we can send our work in Posit Cloud to GitHub, we need Personal Access Token (PAT)\nSettings &gt; Developer settings\n\n\n\n\n\n\n\n\n\n\nGitHub has removed the support for Password Authentication for Git operations for more safety from 08/13/2021."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#personal-access-token-pat-step-2",
+    "href": "exercise/lab00-git.html#personal-access-token-pat-step-2",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Personal Access Token (PAT): Step 2",
+    "text": "Personal Access Token (PAT): Step 2"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#personal-access-token-pat-step-3",
+    "href": "exercise/lab00-git.html#personal-access-token-pat-step-3",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Personal Access Token (PAT): Step 3",
+    "text": "Personal Access Token (PAT): Step 3"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#personal-access-token-pat-step-4",
+    "href": "exercise/lab00-git.html#personal-access-token-pat-step-4",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Personal Access Token (PAT): Step 4",
+    "text": "Personal Access Token (PAT): Step 4"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#personal-access-token-pat-step-5",
+    "href": "exercise/lab00-git.html#personal-access-token-pat-step-5",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Personal Access Token (PAT): Step 5",
+    "text": "Personal Access Token (PAT): Step 5\n\nCopy and paste your PAT to a secrete and safe space!!"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#posit-cloud-to-github-step-1---edit-your-file",
+    "href": "exercise/lab00-git.html#posit-cloud-to-github-step-1---edit-your-file",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Posit Cloud to GitHub: Step 1 - Edit your file",
+    "text": "Posit Cloud to GitHub: Step 1 - Edit your file\n\nOpen the quarto file hw-00-test.qmd, in YAML change the author to your name.\nClick Render to generate your beautiful document. (If asked to install any packages, please do!)"
+  },
+  {
+    "objectID": "exercise/lab00-git.html#posit-cloud-to-github-step-2---commit-changes",
+    "href": "exercise/lab00-git.html#posit-cloud-to-github-step-2---commit-changes",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Posit Cloud to GitHub: Step 2 - Commit changes",
+    "text": "Posit Cloud to GitHub: Step 2 - Commit changes\n\nGo to the Git tab in your RStudio.\nClick on Commit. This shows you the difference between the last committed state of the document and its current state that includes your changes.\nCheck Staged box to add files to be committed.\nWrite “Update author’s name” in the Commit message box and hit Commit."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#posit-cloud-to-github-step-3---push-changes",
+    "href": "exercise/lab00-git.html#posit-cloud-to-github-step-3---push-changes",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Posit Cloud to GitHub: Step 3 - Push changes",
+    "text": "Posit Cloud to GitHub: Step 3 - Push changes\n\nWe’ve made an update and committed this change locally.\nIt’s time to push the changes to your repo on GitHub, so that others (Dr. Yu) can see your changes.\nClick on Push.\nIn the prompted dialogue box, enter your GitHub user name, and your password (PAT)."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#posit-cloud-to-github-step-3---updated-repo",
+    "href": "exercise/lab00-git.html#posit-cloud-to-github-step-3---updated-repo",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Posit Cloud to GitHub: Step 3 - Updated Repo",
+    "text": "Posit Cloud to GitHub: Step 3 - Updated Repo\n\nBack to your GitHub repo and refresh it.\nThe online repo is now synced with your local project in Posit Cloud."
+  },
+  {
+    "objectID": "exercise/lab00-git.html#resources",
+    "href": "exercise/lab00-git.html#resources",
+    "title": "Lab Exercise: Git/GitHub",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nCreate a personal access token (PAT)\nTwo-factor authentication\nGit hands-on session within RStudio\nHappy Git and GitHub for the useR\nHappier version control with Git and GitHub"
+  },
+  {
+    "objectID": "exercise/lab02-quarto.html",
+    "href": "exercise/lab02-quarto.html",
+    "title": "Lab 02: Quarto File",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\n\nGo to your GitHub repo lab-yourusername. Clone it to your Posit Cloud as a project in 2025-Spring-Math-3570 workspace.\nOpen the file lab.qmd.\nChange author in YAML.\nClick on  or Ctrl/Cmd + Shift + K to produce a HTML document.\nHow can we show the current date every time we compile the file? [Hint:] Check your hw00. Compile your document and make sure the date shows up.\nHow do we hide the code so that the document is shorter? Describe it in ## Lab 2: Quarto\nOnce done, commit with message “02-quarto” and push your version to GitHub."
+  },
+  {
+    "objectID": "exercise/lab19-ci.html",
+    "href": "exercise/lab19-ci.html",
+    "title": "Lab 19: Confidence Interval",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 19 section,\n\nRun the code I give you for simulating 100 \\(95\\%\\) CIs. Change the random generator seed to another number you like.\n\n\nset.seed(a number you like) Birthday? Lucky number?\n\n\nHow many CIs do not cover the true mean \\(\\mu\\)?"
+  },
+  {
+    "objectID": "exercise/lab03-markdown.html",
+    "href": "exercise/lab03-markdown.html",
+    "title": "Lab 03: Markdown",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\n\nBack to your lab.qmd. In ## Lab 3: Markdown section, add a self-introduction paragraph containing a header, bold and italic text.\nAdd another paragraph that contains\n\nlisted items\na hyperlink\na blockquote\nmath expression\n\nOnce done, commit with message “03-markdown” and push it to GitHub."
+  },
+  {
+    "objectID": "exercise/lab08-tibble.html",
+    "href": "exercise/lab08-tibble.html",
+    "title": "Lab 08: Tibbles and Pipes",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 8 section,\n\nCompare and contrast the following operations on a data.frame and equivalent tibble. What are the differences?\n\n\ndf &lt;- data.frame(abc = 1:2, \n                 xyz = c(\"a\", \"b\"))\n# list method\ndf$x\ndf[[2]]\ndf[\"xyz\"]\ndf[c(\"abc\", \"xyz\")]\n# matrix method\ndf[, 2]\ndf[, \"xyz\"]\ndf[, c(\"abc\", \"xyz\")]\n\n\ntib &lt;- tibble(abc = 1:2, \n              xyz = c(\"a\", \"b\"))\n# list method\ntib$x\ntib[[2]]\ntib[\"xyz\"]\ntib[c(\"abc\", \"xyz\")]\n# matrix method\ntib[, 2]\ntib[, \"xyz\"]\ntib[, c(\"abc\", \"xyz\")]\n\n\nUse |&gt; to first select last 12 rows of iris data set using tail(), then provides summary statistics on its columns using summary()."
+  },
+  {
+    "objectID": "exercise/lab09-numpy.html",
+    "href": "exercise/lab09-numpy.html",
+    "title": "Lab 09: NumPy and pandas",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 9 section, create a Python pandas.DataFrame equivalent to the R tibble\n\ntibble(x = 1:5, y = 5:1, z = LETTERS[1:5])\n\n# A tibble: 5 × 3\n      x     y z    \n  &lt;int&gt; &lt;int&gt; &lt;chr&gt;\n1     1     5 A    \n2     2     4 B    \n3     3     3 C    \n4     4     2 D    \n5     5     1 E    \n\n\n\nimport numpy as np\nimport pandas as pd\nimport string\nlist(string.ascii_uppercase)\ndic = {'__': ____________, \n       '__': reversed(____________),\n       '__': list(string.ascii_uppercase)[______]}\npd._____________(dic)"
+  },
+  {
+    "objectID": "exercise/lab14-interactive.html",
+    "href": "exercise/lab14-interactive.html",
+    "title": "Lab 14: plotly",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 14 section,\n\nLoad tidyverse and plotly and the loans.csv data.\nGenerate a plot using plotly. An example is shown below. Welcome to create a more fancy one!"
+  },
+  {
+    "objectID": "exercise/lab01-rscript.html",
+    "href": "exercise/lab01-rscript.html",
+    "title": "Lab-01: Running R Script",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\n\nLoad R package ggplot2 into your Posit Cloud.\n\n\n## install the package if you haven't!\n________(ggplot2)\n\n\nCreate a R script named lab01-run-script.R in your 3570-project.\nCopy and paste the code below into the script, and save it.\n\n\nbar &lt;- ggplot(data = diamonds) + \n  geom_bar(mapping = aes(x = cut, fill = cut), \n           show.legend = FALSE, width = 1) + \n  theme(aspect.ratio = 1) +\n  labs(x = NULL, y = NULL)\nbar + coord_flip()\nbar + coord_polar()\n\n\nSource the script. A pretty plot showing up?!"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html",
+    "href": "exercise/lab-sol-s25-midterm.html",
+    "title": "In-Class Lab Exercises",
+    "section": "",
+    "text": "x &lt;- 4; y &lt;- 3\nbar &lt;- ggplot(data = diamonds) + \n  geom_bar(mapping = aes(x = cut, fill = cut), \n           show.legend = FALSE, width = 1) + \n  theme(aspect.ratio = 1) +\n  labs(x = NULL, y = NULL)\nbar + coord_flip()\n\n\n\n\n\n\n\nbar + coord_polar()"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-1-running-r-script",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-1-running-r-script",
+    "title": "In-Class Lab Exercises",
+    "section": "",
+    "text": "x &lt;- 4; y &lt;- 3\nbar &lt;- ggplot(data = diamonds) + \n  geom_bar(mapping = aes(x = cut, fill = cut), \n           show.legend = FALSE, width = 1) + \n  theme(aspect.ratio = 1) +\n  labs(x = NULL, y = NULL)\nbar + coord_flip()\n\n\n\n\n\n\n\nbar + coord_polar()"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-2-quarto",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-2-quarto",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 2: Quarto",
+    "text": "Lab 2: Quarto\nBriefly describe how we produce a pdf."
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-3-markdown",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-3-markdown",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 3: Markdown",
+    "text": "Lab 3: Markdown\nHello everyone, I am Cheng-Han Yu, an assistant professor at Marquette University. I love data science!\nMy main research interests include\n\nBayesian spatiotemporal modeling\n\nMCMC\nVariational Inference\n\nNeuroimaging\n\nfMRI\nEEG/ERP\n\nR programming\n\nMy favorite quote is\n\nAll models are wrong, but some are useful. George Box\n\nHere I write a simple math equation \\(\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\)."
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-4-code-chunk",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-4-code-chunk",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 4: Code Chunk",
+    "text": "Lab 4: Code Chunk\n\n# include image\nknitr::include_graphics(\"https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png\")\n\n\n\n\n\n\n\n\n\n# include plot\nplot(x = mtcars$disp, y = mtcars$mpg)\n\n\n\n\nMPG vs. Displacement\n\n\n\n\n\n# show dataset `mtcars`\nknitr::kable(mtcars, caption = \"A knitr kable table of mtcars data set\")\n\n\nA knitr kable table of mtcars data set\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\n\n\n\nThere are 11 variables in the mtcars data set.\nAnswer to the questions.\n\nradius = 5\n\nThe radius of the circle is {python} print(radius)"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-5-r-data-type-summary",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-5-r-data-type-summary",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 5: R Data Type Summary",
+    "text": "Lab 5: R Data Type Summary\n\nv1 &lt;- c(3, 8, 4, 5)\nfac &lt;- factor(c(\"bad\", \"neutral\", \"good\"))\nx_lst &lt;- list(idx = 1:3, \n              \"a\", \n              c(TRUE, FALSE))\nmat &lt;- matrix(data = 1:6, \n              nrow = 3, \n              ncol = 2)\ndf &lt;- data.frame(age = c(19, 21, 40), \n                 gender = c(\"m\",\"f\", \"m\"))\nvec &lt;- c(type = typeof(v1), class = class(v1))\nfac &lt;- c(type = typeof(fac), class = class(fac))\nlst &lt;- c(type = typeof(x_lst), class = class(x_lst))\nmat &lt;- c(type = typeof(mat), class = class(mat))\ndf &lt;- c(type = typeof(df), class = class(df))\nlist(vector = vec,\n     factor = fac,\n     list = lst,\n     matrix = mat,\n     dataframe = df)\n\n$vector\n     type     class \n \"double\" \"numeric\" \n\n$factor\n     type     class \n\"integer\"  \"factor\" \n\n$list\n  type  class \n\"list\" \"list\" \n\n$matrix\n     type    class1    class2 \n\"integer\"  \"matrix\"   \"array\" \n\n$dataframe\n        type        class \n      \"list\" \"data.frame\""
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-6-python-data-structure",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-6-python-data-structure",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 6: Python Data Structure",
+    "text": "Lab 6: Python Data Structure\n\nx_lst &lt;- list(idx = 1:3, \n              word = \"a\", \n              bool = c(TRUE, FALSE))\n\n\npy_lst = [[1, 2, 3], \"a\", [True, False]]\npy_lst\n\n[[1, 2, 3], 'a', [True, False]]\n\npy_dic = {\"idx\": [1, 2, 3], \"word\": \"a\", \"bool\": [True, False]}\npy_dic\n\n{'idx': [1, 2, 3], 'word': 'a', 'bool': [True, False]}"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-7-plotting",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-7-plotting",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 7: Plotting",
+    "text": "Lab 7: Plotting\n\nplot(mtcars$mpg, mtcars$wt, \n     col = 4, pch = 8, cex = 2,\n     xlab = \"MPG\", ylab = \"Wt. (1000 lbs)\", \n     main = \"MPG vs. Weight\")\n\n\n\n\n\n\n\nhist(mtcars$qsec, breaks = 20, border = \"#FFCC00\", \n     col = 2, main = \"Histogram of 1/4 mile time\")\n\n\n\n\n\n\n\nboxplot(mpg ~ gear, \n        data = mtcars, \n        col = 2:4, \n        las = 1, \n        horizontal = TRUE,\n        xlab = \"Miles per gallon\", \n        ylab = \"Number of forward gears\")\n\n\n\n\n\n\n\n\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nmtcars = pd.read_csv('./data/mtcars.csv')\nmtcars\n\n     mpg  cyl   disp   hp  drat     wt   qsec  vs  am  gear  carb\n0   21.0    6  160.0  110  3.90  2.620  16.46   0   1     4     4\n1   21.0    6  160.0  110  3.90  2.875  17.02   0   1     4     4\n2   22.8    4  108.0   93  3.85  2.320  18.61   1   1     4     1\n3   21.4    6  258.0  110  3.08  3.215  19.44   1   0     3     1\n4   18.7    8  360.0  175  3.15  3.440  17.02   0   0     3     2\n5   18.1    6  225.0  105  2.76  3.460  20.22   1   0     3     1\n6   14.3    8  360.0  245  3.21  3.570  15.84   0   0     3     4\n7   24.4    4  146.7   62  3.69  3.190  20.00   1   0     4     2\n8   22.8    4  140.8   95  3.92  3.150  22.90   1   0     4     2\n9   19.2    6  167.6  123  3.92  3.440  18.30   1   0     4     4\n10  17.8    6  167.6  123  3.92  3.440  18.90   1   0     4     4\n11  16.4    8  275.8  180  3.07  4.070  17.40   0   0     3     3\n12  17.3    8  275.8  180  3.07  3.730  17.60   0   0     3     3\n13  15.2    8  275.8  180  3.07  3.780  18.00   0   0     3     3\n14  10.4    8  472.0  205  2.93  5.250  17.98   0   0     3     4\n15  10.4    8  460.0  215  3.00  5.424  17.82   0   0     3     4\n16  14.7    8  440.0  230  3.23  5.345  17.42   0   0     3     4\n17  32.4    4   78.7   66  4.08  2.200  19.47   1   1     4     1\n18  30.4    4   75.7   52  4.93  1.615  18.52   1   1     4     2\n19  33.9    4   71.1   65  4.22  1.835  19.90   1   1     4     1\n20  21.5    4  120.1   97  3.70  2.465  20.01   1   0     3     1\n21  15.5    8  318.0  150  2.76  3.520  16.87   0   0     3     2\n22  15.2    8  304.0  150  3.15  3.435  17.30   0   0     3     2\n23  13.3    8  350.0  245  3.73  3.840  15.41   0   0     3     4\n24  19.2    8  400.0  175  3.08  3.845  17.05   0   0     3     2\n25  27.3    4   79.0   66  4.08  1.935  18.90   1   1     4     1\n26  26.0    4  120.3   91  4.43  2.140  16.70   0   1     5     2\n27  30.4    4   95.1  113  3.77  1.513  16.90   1   1     5     2\n28  15.8    8  351.0  264  4.22  3.170  14.50   0   1     5     4\n29  19.7    6  145.0  175  3.62  2.770  15.50   0   1     5     6\n30  15.0    8  301.0  335  3.54  3.570  14.60   0   1     5     8\n31  21.4    4  121.0  109  4.11  2.780  18.60   1   1     4     2\n\nplt.scatter(x = mtcars.mpg, \n            y = mtcars.wt, \n            color = \"r\")\nplt.xlabel(\"Miles per gallon\")\nplt.ylabel(\"Weight\")\nplt.title(\"Scatter plot\")\nplt.show()\n\n\n\n\n\n\n\nplt.clf()\n\n\n\n\n\n\n\n\n\nplt.hist(mtcars.qsec, \n         bins = 19, \n         color=\"#003366\",\n         edgecolor=\"#FFCC00\")\nplt.xlabel(\"1/4 mile time\")\nplt.title(\"Histogram of 1/4 mile time\")\nplt.show()"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-8-tibbles-and-pipes",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-8-tibbles-and-pipes",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 8: Tibbles and Pipes",
+    "text": "Lab 8: Tibbles and Pipes\n\ndf &lt;- data.frame(abc = 1:2, \n                 xyz = c(\"a\", \"b\"))\n# list method\ndf$x\n\n[1] \"a\" \"b\"\n\ndf[[2]]\n\n[1] \"a\" \"b\"\n\ndf[\"xyz\"]\n\n  xyz\n1   a\n2   b\n\ndf[c(\"abc\", \"xyz\")]\n\n  abc xyz\n1   1   a\n2   2   b\n\n# matrix method\ndf[, 2]\n\n[1] \"a\" \"b\"\n\ndf[, \"xyz\"]\n\n[1] \"a\" \"b\"\n\ndf[, c(\"abc\", \"xyz\")]\n\n  abc xyz\n1   1   a\n2   2   b\n\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.3     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntib &lt;- tibble(abc = 1:2, \n              xyz = c(\"a\", \"b\"))\n# list method\ntib$x\n\nWarning: Unknown or uninitialised column: `x`.\n\n\nNULL\n\ntib[[2]]\n\n[1] \"a\" \"b\"\n\ntib[\"xyz\"]\n\n# A tibble: 2 × 1\n  xyz  \n  &lt;chr&gt;\n1 a    \n2 b    \n\ntib[c(\"abc\", \"xyz\")]\n\n# A tibble: 2 × 2\n    abc xyz  \n  &lt;int&gt; &lt;chr&gt;\n1     1 a    \n2     2 b    \n\n# matrix method\ntib[, 2]\n\n# A tibble: 2 × 1\n  xyz  \n  &lt;chr&gt;\n1 a    \n2 b    \n\ntib[, \"xyz\"]\n\n# A tibble: 2 × 1\n  xyz  \n  &lt;chr&gt;\n1 a    \n2 b    \n\ntib[, c(\"abc\", \"xyz\")]\n\n# A tibble: 2 × 2\n    abc xyz  \n  &lt;int&gt; &lt;chr&gt;\n1     1 a    \n2     2 b    \n\n\nExplain their differences.\nWith data.frames,\n\nThe $ operator will match any column name that starts with the name following it. Since there is a column named xyz, the expression df$x will be expanded to df$xyz. This behavior of the $ operator saves a few keystrokes, but it can result in accidentally using a different column than you thought you were using.\n\nWith [ the type of object that is returned differs on the number of columns. If it is one column, it won’t return a data.frame, but instead will return a vector. With more than one column, then it will return a data.frame. This is fine if you know what you are passing in, but suppose you did df[ , vars] where vars was a variable. Then what that code does depends on length(vars) and you’d have to write code to account for those situations or risk bugs.\n\nFor tibbles,\n\nWhen using the matrix subsetting method, a tibble always return a tibble.\n\n\nWhen using $ to grab an element, tibbles never do partial matching.\n\n\n[] always returns another tibble, regardless of list or matrix subsetting method.\n\n\n$ and [[]] return a vector.\n\n\nTibbles never do partial matching and name “x” cannot be recognized.\n\n\nWhat does tibble::enframe() do? Try enframe(c(a = 1, b = 2, c = 3)). Check ?enframe for more details.\nThe function tibble::enframe() converts named vectors to a data frame with names and values\n\n\niris |&gt; tail(n = 12) |&gt; summary()\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :5.800   Min.   :2.500   Min.   :4.800   Min.   :1.800  \n 1st Qu.:6.150   1st Qu.:3.000   1st Qu.:5.100   1st Qu.:1.900  \n Median :6.600   Median :3.050   Median :5.200   Median :2.200  \n Mean   :6.450   Mean   :3.033   Mean   :5.292   Mean   :2.133  \n 3rd Qu.:6.725   3rd Qu.:3.125   3rd Qu.:5.450   3rd Qu.:2.300  \n Max.   :6.900   Max.   :3.400   Max.   :5.900   Max.   :2.500  \n       Species  \n setosa    : 0  \n versicolor: 0  \n virginica :12"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-9-numpy-and-pandas",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-9-numpy-and-pandas",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 9: NumPy and pandas",
+    "text": "Lab 9: NumPy and pandas\n\ntibble(x = 1:5, y = 5:1, z = LETTERS[1:5])\n\n# A tibble: 5 × 3\n      x     y z    \n  &lt;int&gt; &lt;int&gt; &lt;chr&gt;\n1     1     5 A    \n2     2     4 B    \n3     3     3 C    \n4     4     2 D    \n5     5     1 E    \n\n\n\nimport numpy as np\nimport pandas as pd\nimport string\nlist(string.ascii_uppercase)\n\n['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']\n\ndic = {'x':np.arange(1, 6), 'y': np.arange(5, 0, -1), 'z':list(string.ascii_uppercase)[0:5]}\npd.DataFrame(dic)\n\n   x  y  z\n0  1  5  A\n1  2  4  B\n2  3  3  C\n3  4  2  D\n4  5  1  E"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-10-import-data",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-10-import-data",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 10: Import Data",
+    "text": "Lab 10: Import Data\n\nlibrary(tidyverse)\n# ssa &lt;- read_csv(file = \"./data/ssa-death-probability.csv\")\n\n# ssa_male &lt;- ssa[ssa$Sex == \"Male\",]\n# ssa_female &lt;- ssa[ssa$Sex == \"Female\",]\nssa_male &lt;- readr::read_csv(\"./data/ssa_male_prob.csv\")\n\nRows: 120 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): Sex\ndbl (4): Age, DeathProb, NumberOfLives, LifeExp\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nssa_female &lt;- readr::read_rds(\"./data/ssa_female_prob.Rds\")\nplot(x = ssa_female$Age, y = ssa_female$LifeExp, \n     type = \"l\", col = 2, lwd = 3,\n     xlab = \"Age\", ylab = \"Life Exp\",\n     main = \"Age vs. Life Exp by Gender\")\nlines(ssa_male$Age, ssa_male$LifeExp, col = 4, lwd = 3)"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-11-ggplot2",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-11-ggplot2",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 11: ggplot2",
+    "text": "Lab 11: ggplot2\n\npenguins &lt;- read_csv(\"./data/penguins.csv\")\n\nRows: 344 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): species, island, sex\ndbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\npenguins |&gt; \n  ggplot(mapping = aes(x = bill_depth_mm,\n                       y = bill_length_mm,\n                       colour = species)) +\n  geom_point() +\n  labs(title = \"Bill depth and length\",\n       subtitle = \"Dimensions for Adelie, Chinstrap, and Gentoo Penguins\",\n       x = \"Bill depth (mm)\", y = \"Bill length (mm)\",\n       colour = \"Species\",\n       caption = \"Source: Palmer Station LTER / palmerpenguins package\") +\n  scale_colour_viridis_d()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-12-faceting",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-12-faceting",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 12: Faceting",
+    "text": "Lab 12: Faceting\n\nmpg |&gt; ggplot(mapping = aes(x = displ, y = cty, color = drv, shape = fl)) +\n    geom_point(size = 3, alpha = 0.8) + \n    facet_grid(drv ~ fl) +\n    guides(color = \"none\")"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-13-visualization",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-13-visualization",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 13: Visualization",
+    "text": "Lab 13: Visualization\n\npenguins &lt;- read_csv(\"./data/penguins.csv\")\n\nRows: 344 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): species, island, sex\ndbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\npenguins |&gt; ggplot(aes(x = species, fill = species)) +\n    geom_bar() +\n    labs(x = \"Species of Penguins\", \n         title = \"Species Counts in Penguins Data\")\n\n\n\n\n\n\n\n\n\npenguins |&gt; ggplot(aes(x = bill_length_mm, \n                       fill = species)) +\n    geom_histogram() +\n    labs(x = \"Bill Length (mm)\",\n         y = \"Frequency\",\n         title = \"Penguins Bill Length by Species\") +\n    facet_wrap(~ species, nrow = 1) + \n    theme(legend.position = \"none\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_bin()`)."
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-14-plotly",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-14-plotly",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 14: plotly",
+    "text": "Lab 14: plotly\n\nlibrary(plotly)\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nloans &lt;- readr::read_csv(\"./data/loans.csv\")\n\nRows: 10000 Columns: 5\n\n\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): grade, homeownership\ndbl (3): loan_amount, interest_rate, debt_to_income\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\np &lt;- plot_ly(loans, x = ~interest_rate, alpha = 0.5)\np |&gt; add_boxplot(y = ~grade, color = ~grade)\n\n\n\n\n\n\n# x = interest_rate, y = grade won't work\ngg &lt;- loans %&gt;% ggplot(aes(x = grade, y = interest_rate, color = grade)) + \n    geom_boxplot() + theme_minimal() + coord_flip()\nggplotly(gg)"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-15-dplyr",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-15-dplyr",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 15: dplyr",
+    "text": "Lab 15: dplyr\n\nmurders &lt;- read.csv(\"./data/murders.csv\")\n(my_states &lt;- murders |&gt; \n    mutate(rate = total / population * 100000) |&gt; \n    filter(region %in% c(\"West\", \"Northeast\"), rate &lt; 1) |&gt; \n    select(state, region, rate))\n\n          state    region      rate\n1        Hawaii      West 0.5145920\n2         Idaho      West 0.7655102\n3         Maine Northeast 0.8280881\n4 New Hampshire Northeast 0.3798036\n5        Oregon      West 0.9396843\n6          Utah      West 0.7959810\n7       Vermont Northeast 0.3196211\n8       Wyoming      West 0.8871131\n\nmy_states |&gt; \n    group_by(region) |&gt; \n    summarize(avg = mean(rate), std_dev = sd(rate)) |&gt; \n    arrange(desc(avg))\n\n# A tibble: 2 × 3\n  region      avg std_dev\n  &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 West      0.781   0.164\n2 Northeast 0.509   0.278"
+  },
+  {
+    "objectID": "exercise/lab-sol-s25-midterm.html#lab-16-joining-tables",
+    "href": "exercise/lab-sol-s25-midterm.html#lab-16-joining-tables",
+    "title": "In-Class Lab Exercises",
+    "section": "Lab 16: Joining Tables",
+    "text": "Lab 16: Joining Tables\n\ndiamond_color &lt;- read_csv(\"https://www.jaredlander.com/data/DiamondColors.csv\")\n\nRows: 10 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): Color, Description, Details\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\njoined_df &lt;- left_join(diamonds, diamond_color, by = c('color' = 'Color')) |&gt; \n    select(carat, color, price, Description, Details)\njoined_df\n\n# A tibble: 53,940 × 5\n   carat color price Description    Details                    \n   &lt;dbl&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;                      \n 1  0.23 E       326 Colorless      Minute traces of color     \n 2  0.21 E       326 Colorless      Minute traces of color     \n 3  0.23 E       327 Colorless      Minute traces of color     \n 4  0.29 I       334 Near Colorless Slightly detectable color  \n 5  0.31 J       335 Near Colorless Slightly detectable color  \n 6  0.24 J       336 Near Colorless Slightly detectable color  \n 7  0.24 I       336 Near Colorless Slightly detectable color  \n 8  0.26 H       337 Near Colorless Color is dificult to detect\n 9  0.22 E       337 Colorless      Minute traces of color     \n10  0.23 H       338 Near Colorless Color is dificult to detect\n# ℹ 53,930 more rows\n\njoined_df |&gt; ggplot(aes(x = color)) + \n  geom_bar()\n\n\n\n\n\n\n\njoined_df |&gt; count(color, sort = TRUE)\n\n# A tibble: 7 × 2\n  color     n\n  &lt;chr&gt; &lt;int&gt;\n1 G     11292\n2 E      9797\n3 F      9542\n4 H      8304\n5 D      6775\n6 I      5422\n7 J      2808"
+  },
+  {
+    "objectID": "exercise/lab06-py.html",
+    "href": "exercise/lab06-py.html",
+    "title": "Lab 06: Python Data Structure",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd Lab 6,\n\nCreate a Python list and dictionary similar to the R list below.\n\n\nx_lst &lt;- list(idx = 1:3, \n              \"a\", \n              c(TRUE, FALSE))\n\nRemember to create Python code chunk\n\n```{Python}\n#| echo: true\n#| eval: false\n#| code-line-numbers: false\n\n```\n\nAny issue of this Python chunk?\nCommit and Push your work once you are done."
+  },
+  {
+    "objectID": "exercise/lab12-facet.html",
+    "href": "exercise/lab12-facet.html",
+    "title": "Lab 12: Faceting",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 12 section,\n\nggplot(data = _______, \n       mapping = aes(x = ______, y = ______, ______ = drv, shape = _____)) +\n    geom______(______ = 3, ______ = 0.8) + \n    facet_grid(______ ~ _______) +\n    guides(______ = \"none\")"
+  },
+  {
+    "objectID": "exercise/lab13-visualization.html",
+    "href": "exercise/lab13-visualization.html",
+    "title": "Lab 13: Visualization",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 13 section,\n\nImport the data penguins.csv.\nGenerate the following\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n# library(tidyverse)\npenguins &lt;- read_csv(__________________)\n________ |&gt; ggplot(_______________________) +  ## mapping layer  \n    ___________________ +  ## geometry layer\n    _____________________________  ## label layer\n\n  \n\n________ |&gt; ggplot(______________________________) +  ## mapping layer  \n    _______________ +  ## geometry layer\n    _______________ +  ## label layer\n    ______________________________  +   ## facet layer\n    ______________________________      ## theme layer (set legend.position = \"none\")"
+  },
+  {
+    "objectID": "course-news.html",
+    "href": "course-news.html",
+    "title": "News/Announcements",
+    "section": "",
+    "text": "Any announcement will be posted in this page. The latest news will also be put on top of the main page.",
+    "crumbs": [
+      "Course information",
+      "News/Annoucements"
+    ]
+  },
+  {
+    "objectID": "course-news.html#jan-17-2025",
+    "href": "course-news.html#jan-17-2025",
+    "title": "News/Announcements",
+    "section": "Jan 17, 2025",
+    "text": "Jan 17, 2025\n\nTA help desk hours at Cudahy Hall 301\n\nMonday: 1 – 2 PM\nTuesday: 12 – 1 PM,\nThursday: 12 – 2 PM",
+    "crumbs": [
+      "Course information",
+      "News/Annoucements"
+    ]
+  },
+  {
+    "objectID": "course-news.html#jan-14-2025",
+    "href": "course-news.html#jan-14-2025",
+    "title": "News/Announcements",
+    "section": "Jan 14, 2025",
+    "text": "Jan 14, 2025\n\nNo office hours first week.",
+    "crumbs": [
+      "Course information",
+      "News/Annoucements"
+    ]
+  },
+  {
+    "objectID": "course-news.html#jan-7-2025",
+    "href": "course-news.html#jan-7-2025",
+    "title": "News/Announcements",
+    "section": "Jan 7, 2025",
+    "text": "Jan 7, 2025\n\nThe background survey form is at https://forms.office.com/r/3ntBAWupYS.",
+    "crumbs": [
+      "Course information",
+      "News/Annoucements"
+    ]
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2025)",
+    "section": "",
+    "text": "This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic R and Python programming, Git and GitHub, and interactive publishing system Quarto. Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R tidyverse and tidymodels packages. For Python, Pandas, NumPy, and Scikit-Learn libraries are introduced.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "activity/act_knn.html",
+    "href": "activity/act_knn.html",
+    "title": "In-class Activity: Dogs or Cats",
+    "section": "",
+    "text": "The following activity practices K Nearest Neighbors."
+  },
+  {
+    "objectID": "activity/act_knn.html#team-activity-dogs-or-cats",
+    "href": "activity/act_knn.html#team-activity-dogs-or-cats",
+    "title": "In-class Activity: Dogs or Cats",
+    "section": "[Team] Activity: Dogs or Cats",
+    "text": "[Team] Activity: Dogs or Cats\n\n\n\n\n\n\n\n\n\nHere we use features Body Size and Food Intake to classify cats and dogs. The training data are shown as cat or dog images, and there are three test data to be labeled: green, red, and blue points.\nConsider K Nearest Neighbors with \\(K = 1, 2, 3, 4\\), and discuss the following questions."
+  },
+  {
+    "objectID": "activity/act_knn.html#discussion",
+    "href": "activity/act_knn.html#discussion",
+    "title": "In-class Activity: Dogs or Cats",
+    "section": "Discussion",
+    "text": "Discussion\n\n\n\n\n\n\nCautionFor which test data point, the classification result is uncertain or unstable?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWhich data point can be labelled as one particular category with 100% certainty, for all different \\(K\\)s?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionFor the blue point, what happened when \\(K\\) increases? Do we change the prediction? What about uncertainty?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionIf you would like to make a classification rule or set the decision boundary to predict cats or dogs, what would the decision boundary look like? Why?"
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html",
+    "href": "activity/act_reg-to-the-mean.html",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "",
+    "text": "“Regression” is defined in the dictionary as “the process or returning to a former or less developed state.” How did this term come to be used for statistical prediction? This connection comes from Francis Galton, one of the original quantitative social scientists, who fit linear models to under stand the heredity of human height. Predicting children’s heights from parent’s heights, he noticed that children of tall parents tended to be taller than average but less tall than their parents. From the other direction, children of shorter parents tended to be shorter than average but less short than their parents. Thus, from one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon. 1\n\nThe following activities demonstrate regression to the mean."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#historical-origins-of-regression",
+    "href": "activity/act_reg-to-the-mean.html#historical-origins-of-regression",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "",
+    "text": "“Regression” is defined in the dictionary as “the process or returning to a former or less developed state.” How did this term come to be used for statistical prediction? This connection comes from Francis Galton, one of the original quantitative social scientists, who fit linear models to under stand the heredity of human height. Predicting children’s heights from parent’s heights, he noticed that children of tall parents tended to be taller than average but less tall than their parents. From the other direction, children of shorter parents tended to be shorter than average but less short than their parents. Thus, from one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon. 1\n\nThe following activities demonstrate regression to the mean."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#team-activity-before-after-memory-quiz-2",
+    "href": "activity/act_reg-to-the-mean.html#team-activity-before-after-memory-quiz-2",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "[Team] Activity: Before-after Memory Quiz 2",
+    "text": "[Team] Activity: Before-after Memory Quiz 2\n\n\n\n\n\n\n\n\n\n\n[Step 1] I will be displaying 20 randomly chosen verbs on the screen for 20 seconds.\n[Step 2] Each team should try to memorize as many as they can.\n[Step 3] After displaying the words for 20 seconds we do another activity for three minutes.\n[Step 4] Give each team a minute to write down as many words as they remember\n[Step 5] Display the words again and ask them each to count how many they got correct.\n[Step 6] With another set of 20 new verbs, ask them to predict the score they will get.\n[Step 7] Repeat Step 3 to 5 for the new set of words.\nAs one team please jointly enter (1) your score on first quiz; (2) guessed score on second quiz; (3) actual score on second quiz at the MS form or the QR code below."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#individual-activity-compare-your-height-with-your-fathermother",
+    "href": "activity/act_reg-to-the-mean.html#individual-activity-compare-your-height-with-your-fathermother",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "[Individual] Activity: Compare Your Height with Your Father/Mother",
+    "text": "[Individual] Activity: Compare Your Height with Your Father/Mother\n\n\n\n\n\n\n\n\n\n\nIf you are male, record your height and your father’s height. If you are female, record your height and your mother’s height.\nUse feet-to-inch conversion to help you get the heights in inches.\nPlease enter the heights in inches at the MS form or the QR code below."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#discussion",
+    "href": "activity/act_reg-to-the-mean.html#discussion",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "Discussion",
+    "text": "Discussion\n\n\n\n\n\n\nCautionCompare the second quiz prediction to what actually happens. Is your actual score higher or lower than your prediction?\n\n\n\n\n\nYou may expect to do about the same on the second quiz as the first, but I guess who do worst on the first quiz tend to improve, and who do best tend to decline.\n\n\n\n\n\n\n\n\n\nCautionWhy these improvments and declines occurred?\n\n\n\n\n\nAre you trying to give an explanation on why such result is occurred? You may think the teams who did the best relaxed on the 2nd quiz, and the teams who did poorly tried harder, and so forth.\nHowever, you DO NOT know if your team did well or poorly, comparing to other teams, right?!\nIt would be more accurate to say that some do better on this quiz than others, but the very best scores on the first quiz are from people who are both good and lucky. They will still probably do well on the second quiz, but most of them will not be so lucky the second time.\n\n\n\n\n\n\n\n\n\nCautionWhat does the regression coefficient \\(&lt; 1\\) mean in the heights example?\n\n\n\n\n\nIf a parent is taller than the average, the regression predicts that his/her child is also taller than the average, but not as much as their parent.\nIf a parent is shorter than the average, the regression predicts that his/her child is also shorter than the average, but again not as much as their parent.\nTherefore, form one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#footnotes",
+    "href": "activity/act_reg-to-the-mean.html#footnotes",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRegression and other stories, Page 85.↩︎\nActive Statistics, Page 101.↩︎"
+  },
+  {
+    "objectID": "weeks/week-14.html",
+    "href": "weeks/week-14.html",
+    "title": "Week 14",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html#participate",
+    "href": "weeks/week-14.html#participate",
+    "title": "Week 14",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - K Nearest Neighbors\nr fontawesome::fa(\"table\") Data - body",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html#reading",
+    "href": "weeks/week-14.html#reading",
+    "title": "Week 14",
+    "section": "Reading",
+    "text": "Reading\n📖",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html#exercise",
+    "href": "weeks/week-14.html#exercise",
+    "title": "Week 14",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-22 K Nearest Neighbors\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14"
+    ]
+  },
+  {
+    "objectID": "weeks/week-8.html",
+    "href": "weeks/week-8.html",
+    "title": "Week 8",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "weeks/week-8.html#participate",
+    "href": "weeks/week-8.html#participate",
+    "title": "Week 8",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Data Wrangling (one data frame)\n🖥️ Slides - Data Wrangling - two data frames\n Data - Pop_x and elec_vote_y\n\nlibrary(tidyverse)\nlibrary(dslabs)\npop_x &lt;- murders |&gt; \n    slice(1:6) |&gt;\n    select(state, population)\n\nelec_vote_y &lt;- results_us_election_2016 |&gt; \n    filter(state %in% c(\"Alabama\", \"Alaska\", \"Arizona\", \n                        \"California\", \"Connecticut\", \"Delaware\")) |&gt; \n    select(state, electoral_votes) |&gt; \n    rename(elec_vote = electoral_votes)\n\n Data - Customers",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "weeks/week-8.html#reading-and-resources",
+    "href": "weeks/week-8.html#reading-and-resources",
+    "title": "Week 8",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Joins\n📖 R for Data Science - Data tidying",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "weeks/week-8.html#exercise",
+    "href": "weeks/week-8.html#exercise",
+    "title": "Week 8",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-15 dplyr\n Data - Murders\n📋 Lab-16 Joining tables\n https://www.jaredlander.com/data/DiamondColors.csv\n ggplot2::diamonds\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "weeks/week-9.html",
+    "href": "weeks/week-9.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "Important\n\n\n\n\n\n\nHappy spring break! Remember to work on your project!\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 9"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html",
+    "href": "weeks/week-12.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#participate",
+    "href": "weeks/week-12.html#participate",
+    "title": "Week 12",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Linear Regression\nr fontawesome::fa(\"table\") ggplot2::mpg\nClass Activity: Regression to the mean",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#reading",
+    "href": "weeks/week-12.html#reading",
+    "title": "Week 12",
+    "section": "Reading",
+    "text": "Reading\n📖",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#exercise",
+    "href": "weeks/week-12.html#exercise",
+    "title": "Week 12",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-20 Simple Linear Regression\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html#participate",
+    "href": "weeks/week-11.html#participate",
+    "title": "Week 11",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Probability and Statistics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html#exercise",
+    "href": "weeks/week-11.html#exercise",
+    "title": "Week 11",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-18 Probability\n📋 Lab-19 Confidence Interval\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11"
+    ]
+  },
+  {
+    "objectID": "weeks/week-2.html",
+    "href": "weeks/week-2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "weeks/week-2.html#participate",
+    "href": "weeks/week-2.html#participate",
+    "title": "Week 2",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Git/GitHub\n🖥️ Slides - Quarto",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "weeks/week-2.html#perform",
+    "href": "weeks/week-2.html#perform",
+    "title": "Week 2",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-00 Git/GitHub\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "weeks/week-2.html#reading-and-resources",
+    "href": "weeks/week-2.html#reading-and-resources",
+    "title": "Week 2",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n\nGit/GitHub\n📖 Create a personal access token (PAT)\n📖 Two-factor authentication\n📖 Git hands-on session within RStudio\n📖 Happy Git and GitHub for the useR\n📖 Happier version control with Git and GitHub\n\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "weeks/week-1.html",
+    "href": "weeks/week-1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "weeks/week-1.html#prepare",
+    "href": "weeks/week-1.html#prepare",
+    "title": "Week 1",
+    "section": "",
+    "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "weeks/week-1.html#reading-and-resources",
+    "href": "weeks/week-1.html#reading-and-resources",
+    "title": "Week 1",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Introduction\n📖 R for Data Science - Whole game\n📖 RStudio IDE Cheatsheet\n📖 Posit Cloud Documentation",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "weeks/week-1.html#participate",
+    "href": "weeks/week-1.html#participate",
+    "title": "Week 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Welcome to MATH/COSC 3570\n🖥️ Slides - Overview of Data Science\n🖥️ Slides - Posit Cloud\n🖥️ Slides - Git/GitHub\n\n\n\n\n\nggplot2::mpg",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "weeks/week-1.html#perform",
+    "href": "weeks/week-1.html#perform",
+    "title": "Week 1",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-00 Posit Cloud\n📋 Lab-01 Running R Script\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html",
+    "href": "weeks/week-5.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html#participate",
+    "href": "weeks/week-5.html#participate",
+    "title": "Week 5",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - R/Python for Data Science",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html#reading-and-resources",
+    "href": "weeks/week-5.html#reading-and-resources",
+    "title": "Week 5",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 tibbles\n📖 pipes\n📖 NumPy\n📖 pandas",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html#exercise",
+    "href": "weeks/week-5.html#exercise",
+    "title": "Week 5",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-08 tibbles and pipe\n📋 Lab-09 NumPy and pandas\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "weeks/week-6.html",
+    "href": "weeks/week-6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6"
+    ]
+  },
+  {
+    "objectID": "weeks/week-6.html#participate",
+    "href": "weeks/week-6.html#participate",
+    "title": "Week 6",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - ggplot2\nr fontawesome::fa(\"table\") openintro::loans_full_schema",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6"
+    ]
+  },
+  {
+    "objectID": "weeks/week-6.html#reading-and-resources",
+    "href": "weeks/week-6.html#reading-and-resources",
+    "title": "Week 6",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 More add-on r emo::ji(\"package\"): ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6"
+    ]
+  },
+  {
+    "objectID": "weeks/week-6.html#exercise",
+    "href": "weeks/week-6.html#exercise",
+    "title": "Week 6",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-11 ggplot2\nr fontawesome::fa(\"table\") penguins.csv\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6"
+    ]
+  },
+  {
+    "objectID": "present-work-final.html",
+    "href": "present-work-final.html",
+    "title": "Final Project",
+    "section": "",
+    "text": "team &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(2025)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Data Detectives\"       \"The Whales\"            \"The Outliers\"         \n [4] \"The Back Right corner\" \"Syntax Squad\"          \"Analytics Avengers\"   \n [7] \"Intermediate Wizards\"  \"Noname\"                \"Hala Madrid\"          \n[10] \"Block Blasters\"       \n\n\n\nTeams presented on May 1: Data Detectives, The Whales, The Outliers, The Back Right corner\nTeams presented on May 5: Syntax Squad, Analytics Avengers, Intermediate Wizards, Noname, Hala Madrid, Block Blasters",
+    "crumbs": [
+      "Final Project",
+      "Project Group and Proposal"
+    ]
+  },
+  {
+    "objectID": "present-work-final.html#presentation-order",
+    "href": "present-work-final.html#presentation-order",
+    "title": "Final Project",
+    "section": "",
+    "text": "team &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(2025)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Data Detectives\"       \"The Whales\"            \"The Outliers\"         \n [4] \"The Back Right corner\" \"Syntax Squad\"          \"Analytics Avengers\"   \n [7] \"Intermediate Wizards\"  \"Noname\"                \"Hala Madrid\"          \n[10] \"Block Blasters\"       \n\n\n\nTeams presented on May 1: Data Detectives, The Whales, The Outliers, The Back Right corner\nTeams presented on May 5: Syntax Squad, Analytics Avengers, Intermediate Wizards, Noname, Hala Madrid, Block Blasters",
+    "crumbs": [
+      "Final Project",
+      "Project Group and Proposal"
+    ]
+  },
+  {
+    "objectID": "present-work-final.html#group-projects-proposal",
+    "href": "present-work-final.html#group-projects-proposal",
+    "title": "Final Project",
+    "section": "Group project’s proposal",
+    "text": "Group project’s proposal\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nPractical Data Cleaning in R: A Look at the janitor Package\n\nThe Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nInteractive data with shiny\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nIntroduction to Scikit-Learn\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nIntroducing Naniar: How to put the “NA” values to use!\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nUnderstanding and Applying the ‘landscapemetrics’ Package\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nMapping Using ggspatial\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nFactors That Attribute to a Song Becoming Popular\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nMatplotlib Library Introduction\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nPlay, Predict, Profit?",
+    "crumbs": [
+      "Final Project",
+      "Project Group and Proposal"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+  },
+  {
+    "objectID": "present-description.html",
+    "href": "present-description.html",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "",
+    "text": "This is the latest version of project guideline. It may be revised later.\nThe midterm mini project is about data visualization. Show your fun project! Let’s go!! 😎",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description.html#team-up",
+    "href": "present-description.html#team-up",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Team up!",
+    "text": "Team up!\n\nYou lose 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou will be randomly assigned to a group if you do not belong to any group before the deadline.",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description.html#proposal",
+    "href": "present-description.html#proposal",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Proposal",
+    "text": "Proposal\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYour proposal (in PDF) should include three parts:\n\nProject title\nMembers duty. For example,\n\nJohn and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc.\n\nThe description of the data set you use in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in Section 3.1.\nThe goal of your project. For example, what are questions you’d like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested?\n\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else.",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description.html#materials",
+    "href": "present-description.html#materials",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Materials",
+    "text": "Materials\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, etc so that anyone is able to reproduce your outputs and plots shown in the slides.\nThe code must be shared via a Quarto file.",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description.html#presentation",
+    "href": "present-description.html#presentation",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Presentation",
+    "text": "Presentation\n\nEach group presentation is about 5 and 6 minute long, followed by about 1 minute Q&A. If your presentation is too short or too long, every one of you loses 3 points of your project grade.",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description.html#sec-data",
+    "href": "present-description.html#sec-data",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Data",
+    "text": "Data\nThe available data sets for this projects can be downloaded from kaggle, a data science competition platform sharing various data and projects. Please choose one data set for your project from the following:\n\nWorld Happiness Report\n\n\n\nSupermarket Sales Data\nNBA Players stats since 1950\nAirline Passenger Satisfaction\n\n\n\nAuto-mpg dataset\nNetflix Movies and TV Shows\nStudents Performance in Exams\nVideo Game Sales\nSpotify Tracks Dataset\nUS Census Demographic Data\n\n[Note:] Those are real data sets that contains many observations and variables. You just need to pick a few variables for plotting and analysis.\n[Note:] You may use some other data, but the data set cannot be the one used in the course (like ggplot2::mpg). The data set needs to be as sophisticated as the listed data sets above. Dr. Yu and TA will evaluate your data quality.",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description.html#sec-grading",
+    "href": "present-description.html#sec-grading",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Evaluation and Grading",
+    "text": "Evaluation and Grading\n\nYour project performance is evaluated by Dr. Yu and the TA that is based on the following rubric:\n\n\nRubric\n\n\n\n\n\n\n\n\n\nCriteria\nExcellent\nGood\nFair\nEmerging\n\n\n\n\nData Understanding (15%)\nClearly explains the dataset, its source, and key variables. Provides meaningful insights.\nShows good understanding with clear explanations and some strong insights. A few minor details could be expanded.\nShows a basic grasp of the dataset but needs more clarity or depth in explaining its significance and insights.\nNeeds further understanding of the dataset. More details and insights would strengthen the analysis.\n\n\nVisualization Quality (30%)\nVisualizations are clear, well-chosen, and enhance understanding. Thoughtful design choices make the data engaging and accessible.\nStrong visuals that support the data well. Some minor refinements could improve clarity or impact.\nBasic visuals that convey information but could be more refined or better suited to the dataset.\nNeeds improvement in visualization selection or clarity. More attention to detail will enhance effectiveness.\n\n\nOutput Interpretation and Insights (25%)\nThoughtful and well-supported insights demonstrate strong analytical skills. Patterns and trends are clearly explained with compelling interpretations.\nProvides solid insights with good explanations. Some areas could benefit from deeper analysis.\nInsights are present but may lack depth or clear connections to the data. Some interpretations need more support.\nInsights need further development. Strengthening data interpretation will enhance overall understanding.\n\n\nSlides quality (15%)\nSlides are visually appealing, well-organized, and complement the spoken presentation. Effective use of text, images, and color enhances clarity.\nSlides are clear and well-structured but could be slightly improved in design or organization.\nSlides contain useful content but may be text-heavy, cluttered, or lack visual appeal.\nSlides need better organization and design to support the presentation effectively.\n\n\nPresentation Clarity and Interaction (15%)\nThe presentation is well-organized, engaging, and confident. The team communicates ideas effectively and transitions smoothly.\nA well-structured and clear presentation. Minor adjustments could improve flow or engagement.\nThe presentation is understandable but could be more organized or engaging. Some transitions may be unclear.\nMore practice and organization will help improve clarity and engagement.\n\n\n\n\nYour project grade will be\n\n\nProject grade = performance grade - points lost due to violation of policy\n\nwith adjustement based on your performance of duty.",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description.html#peer-individual-performance-evaluation",
+    "href": "present-description.html#peer-individual-performance-evaluation",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Peer Individual Performance Evaluation",
+    "text": "Peer Individual Performance Evaluation\n\nIn each team, two group members will win the best contribution reward that add extra points to the project grade.\nEach one of you has two votes to nominate one or two of your teammates who you think contribute the most to your group project.\nYou can nominate\n\ntwo teammates, each receiving one vote.\none teammate who receives two votes.\n\nYou cannot nominate yourself.\nIf you don’t vote, or you just use one vote, you can’t be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward.\nIf there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward.",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-work.html",
+    "href": "present-work.html",
+    "title": "Midterm Visualization Project",
+    "section": "",
+    "text": "The Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nHow do game sales correlate to console popularity by global region\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nNo Project Title\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow do Movies and Tv Shows differ by Country?\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap",
+    "crumbs": [
+      "Mini Project",
+      "Topics and Works"
+    ]
+  },
+  {
+    "objectID": "present-work.html#group-projects-proposal",
+    "href": "present-work.html#group-projects-proposal",
+    "title": "Midterm Visualization Project",
+    "section": "",
+    "text": "The Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nHow do game sales correlate to console popularity by global region\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nNo Project Title\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow do Movies and Tv Shows differ by Country?\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap",
+    "crumbs": [
+      "Mini Project",
+      "Topics and Works"
+    ]
+  },
+  {
+    "objectID": "present-work.html#presentation-order",
+    "href": "present-work.html#presentation-order",
+    "title": "Midterm Visualization Project",
+    "section": "Presentation order",
+    "text": "Presentation order\n\nteam &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(3570)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Intermediate Wizards\"  \"Data Detectives\"       \"Analytics Avengers\"   \n [4] \"The Outliers\"          \"The Whales\"            \"Block Blasters\"       \n [7] \"The Back Right corner\" \"Hala Madrid\"           \"Syntax Squad\"         \n[10] \"Noname\"",
+    "crumbs": [
+      "Mini Project",
+      "Topics and Works"
+    ]
+  },
+  {
+    "objectID": "present-work.html#presentation-slides",
+    "href": "present-work.html#presentation-slides",
+    "title": "Midterm Visualization Project",
+    "section": "Presentation Slides",
+    "text": "Presentation Slides\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nThe Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nVideo Game Sales\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow Does Netflix Differ between North America and Asia?\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nGlobal Video Game Sales Assessment\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nNBA Shots Analysis (2001 - Present)",
+    "crumbs": [
+      "Mini Project",
+      "Topics and Works"
+    ]
+  },
+  {
+    "objectID": "weeks/week-7.html",
+    "href": "weeks/week-7.html",
+    "title": "Week 7",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "weeks/week-7.html#participate",
+    "href": "weeks/week-7.html#participate",
+    "title": "Week 7",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides -Visualizing Data\n🖥️ Slides - Interactive Visualization\nr fontawesome::fa(\"table\") Data - loans\nr fontawesome::fa(\"table\") Data - Murders",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "weeks/week-7.html#reading-and-resources",
+    "href": "weeks/week-7.html#reading-and-resources",
+    "title": "Week 7",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 More add-on r emo::ji(\"package\"): ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS\n📖 R for Data Science - Data Transformation",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "weeks/week-7.html#exercise",
+    "href": "weeks/week-7.html#exercise",
+    "title": "Week 7",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-12 Faceting\n📋 Lab-13 Visualization\n📋 Lab-14 Interactive Visualization (Present)\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "weeks/week-4.html",
+    "href": "weeks/week-4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "weeks/week-4.html#participate",
+    "href": "weeks/week-4.html#participate",
+    "title": "Week 4",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - R/Python Syntax",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "weeks/week-4.html#reading-and-resources",
+    "href": "weeks/week-4.html#reading-and-resources",
+    "title": "Week 4",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "weeks/week-4.html#perform",
+    "href": "weeks/week-4.html#perform",
+    "title": "Week 4",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html",
+    "href": "weeks/week-3.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#participate",
+    "href": "weeks/week-3.html#participate",
+    "title": "Week 3",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Quarto\n🖥️ Slides - R/Python Syntax",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#exercise",
+    "href": "weeks/week-3.html#exercise",
+    "title": "Week 3",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html#reading-and-resources",
+    "href": "weeks/week-3.html#reading-and-resources",
+    "title": "Week 3",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 10",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#participate",
+    "href": "weeks/week-10.html#participate",
+    "title": "Week 10",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Tidying Data\n🖥️ Slides - Probability and Statistics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#exercise",
+    "href": "weeks/week-10.html#exercise",
+    "title": "Week 10",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-17 tidyr\nr fontawesome::fa(\"table\") trump.csv\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html",
+    "href": "weeks/week-13.html",
+    "title": "Week 13",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#participate",
+    "href": "weeks/week-13.html#participate",
+    "title": "Week 13",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Logistic Regression\nr fontawesome::fa(\"table\") Data - body",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#reading",
+    "href": "weeks/week-13.html#reading",
+    "title": "Week 13",
+    "section": "Reading",
+    "text": "Reading\n📖",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#exercise",
+    "href": "weeks/week-13.html#exercise",
+    "title": "Week 13",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-21 Logistic Regression\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5-old.html",
+    "href": "weeks/week-5-old.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-5-old.html#participate",
+    "href": "weeks/week-5-old.html#participate",
+    "title": "Week 6",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Data Importing\nr fontawesome::fa(\"table\") murders.csv\nr fontawesome::fa(\"table\") df-na.csv\nr fontawesome::fa(\"table\") cars.rds\nr fontawesome::fa(\"table\") 2010_bigfive_regents.xls"
+  },
+  {
+    "objectID": "weeks/week-5-old.html#reading-and-resources",
+    "href": "weeks/week-5-old.html#reading-and-resources",
+    "title": "Week 6",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Data Import\n📖 R for Data Science - Data Visualization"
+  },
+  {
+    "objectID": "weeks/week-5-old.html#exercise",
+    "href": "weeks/week-5-old.html#exercise",
+    "title": "Week 6",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-10 Data Importing\nr fontawesome::fa(\"table\") ssa_male_prob.csv\nr fontawesome::fa(\"table\") ssa_female_prob.Rds\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-16.html",
+    "href": "weeks/week-16.html",
+    "title": "Week 16",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#participate",
+    "href": "weeks/week-16.html#participate",
+    "title": "Week 16",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - K-Means Clustering\n Data - clus_data",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#reading",
+    "href": "weeks/week-16.html#reading",
+    "title": "Week 16",
+    "section": "Reading",
+    "text": "Reading\n📖",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#exercise",
+    "href": "weeks/week-16.html#exercise",
+    "title": "Week 16",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-24 K-Means Clustering\n palmerpenguins::penguins\n\nlibrary(palmerpenguins)\npeng &lt;- penguins[complete.cases(penguins), ] |&gt; \n    select(flipper_length_mm, bill_length_mm)\n\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html",
+    "href": "weeks/week-15.html",
+    "title": "Week 15",
+    "section": "",
+    "text": "Important",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#participate",
+    "href": "weeks/week-15.html#participate",
+    "title": "Week 15",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Principal Component Analysis\nr fontawesome::fa(\"table\") USArrests",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#reading",
+    "href": "weeks/week-15.html#reading",
+    "title": "Week 15",
+    "section": "Reading",
+    "text": "Reading\n📖",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#exercise",
+    "href": "weeks/week-15.html#exercise",
+    "title": "Week 15",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-23 Principal Component Analysis\nr fontawesome::fa(\"table\") iris\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15"
+    ]
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html",
+    "href": "activity/act_two-truth-one-lie.html",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "",
+    "text": "The following activity demonstrates probability calibration."
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
+    "href": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "[Team] Activity: Two truths and a lie 1",
+    "text": "[Team] Activity: Two truths and a lie 1\n\n\n\n\n\n\n\n\n\nWithin your group:\n\nOne person tells three personal statements one of which is a lie.\nOthers discuss and guess which statement is the lie and they jointly construct a numerical statement of their certainty in the guess on a 0–10 scale.\nThe storyteller reveals which was the lie.\nEnter the certainty estimate and the outcome success or failure and submit in the Microsoft form.\nRotate through everyone in your group so that each person plays the storyteller role once."
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html#discussion",
+    "href": "activity/act_two-truth-one-lie.html#discussion",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "Discussion",
+    "text": "Discussion\n\n\n\n\n\n\nCautionWhat do you think the range of centainty scores will look like?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWill there be a positive relation between \\(x\\) and binary \\(y\\): are guesses with higher certainty be more accurate, on average?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionHow strong will the relation be between \\(x\\) and \\(y\\): what will the curve look like?"
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html#footnotes",
+    "href": "activity/act_two-truth-one-lie.html#footnotes",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nActive Statistics, Page 179.↩︎"
+  },
+  {
+    "objectID": "present-description-final.html",
+    "href": "present-description-final.html",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "",
+    "text": "This is the latest version of project guideline. It may be revised later.\nThe final project is about new tools or data analysis. Show your fun project! Let’s go!! 😎",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#meeting",
+    "href": "present-description-final.html#meeting",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Meeting",
+    "text": "Meeting\n\nYou lose 5 points of your project grade if you don’t meet the requirement or don’t meet with Dr. Yu at least once.\nPlease choose a meeting time in the Excel form.\nYou must let Dr. Yu know in advance if you need to change your meeting time.\nYou can change your meeting time once.\nBriefly talk about your project idea.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#proposal",
+    "href": "present-description-final.html#proposal",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Proposal",
+    "text": "Proposal\n\nEach one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.\nYour proposal (in PDF) should include three parts:\n\nProject title\nMembers duty. For example,\n\nJohn and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc.\n\nThe description of the data set you use in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in ?@sec-data.\nThe goal of your project. For example, what are questions you’d like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested?\n\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#presentation",
+    "href": "present-description-final.html#presentation",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Presentation",
+    "text": "Presentation\n\nEach one of you loses 5 points of your project grade if you don’t meet the presentation requirement.\nEach group presentation is about 15 and 16 minute long, followed by about 1 to 2 minutes Q&A.\nFour groups present on May 1, and six on May 5. Presentation order is decided by random sampling.\nEvery student has to participate (in-person) in the final presentation in order to pass the course.\nEvery group member has to present some part of the group work. The one who does not present receives no point.\nEveryone is welcome to ask any questions about the projects. It helps everyone evaluate every group’s project and presentation performance. See Section 4 for grading policy.\nEach group is required to ask as least one question.\n\nThe \\(k\\)-th group should ask at least one question to the \\((k+1)\\)-th group in Q&A, \\(k = 1, \\dots, 9\\).\nThe last group to present will ask the first group questions about their project.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#materials",
+    "href": "present-description-final.html#materials",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Materials",
+    "text": "Materials\n\nEach one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, etc so that anyone is able to reproduce your outputs and plots shown in the slides.\nThe code must be shared via a Quarto file.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#rpython-packages",
+    "href": "present-description-final.html#rpython-packages",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "R/Python Packages",
+    "text": "R/Python Packages\nFor your R/Python package project,\n\nyou need to\n\nshow how and why the package greatly helps us do data science.\nexplain how to use the functions in the packages by providing data science examples with some real data set.\nPlease don’t use the toy examples in the package documentation.\n\nIf the functions of the package return any results or outputs, please explain them, teaching your audience how to appropriately read the outputs.\nIf the functions return graphics, explain why the visualizations are informative and useful for understanding data and analysis results.\nYou can choose a package that helps us do what we cannot do with the packages and tools learned in class.\n\nFor example, we only learn readr and readxl packages to help us import data files into R, and we don’t know how to extract data from a website. The rvest package helps us scrape data from web pages.\n\nIf you choose a package that provides the same functionality as the packages we learned, please show the packages you choose are better.\n\nFor example, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc. For example, data.table package provides a high-performance version of base R’s data.frame with syntax and feature enhancements for ease of use, convenience and programming speed.\n\nBelow are a list of popular R packages that you can start with.\n\nQuick list of useful R packages\nFavorite R Packages by Roel Verbelen\nGreat R packages for data import, wrangling, and visualization\n\nBelow are a list of popular Python packages that you can start with.\n\nTop 26 Python Libraries for Data Science in 2025\n20 Python Libraries for Data Science\n\nYou can introduce other data science software or tools, such as Tableau, D3.js, KNIME, etc. Make sure you demo them with an understandable example.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#data-analysis",
+    "href": "present-description-final.html#data-analysis",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Data Analysis",
+    "text": "Data Analysis\nFor your data analysis project,\n\nYou need to show that you are good at asking meaningful questions and answering them with results of data analysis.\nYour presentation should include data visualization. Your graphics should be informative that help you\n\nexplore relationships between variables in your data\ndecide which statistical/machine learning model is used, so that your research questions can be properly answered.\n\nYou should discuss how and why statistical methods/machine learning algorithms are chosen for analyzing your data set.\n\nThe methods we learn in class may not be appropriate for your data and answering your research questions. If this happens, critique your own methods and provide suggestions for improving your analysis. Any issues of your data, and appropriateness of the statistical analysis should be discussed.\n\nYou can choose a data set that is publicly available or you may collect your own data using a survey or by conducting an experiment. The dataset you choose cannot be any datasets used in class, including homework assignments and lab exercises.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#group-performance-evaluation",
+    "href": "present-description-final.html#group-performance-evaluation",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Group Performance Evaluation",
+    "text": "Group Performance Evaluation\n\nInstructor Evaluation\n\nDr. Yu and the TA evaluate your group performance based on the four criteria\n\nProject Content and Organization\nPresentation Material (Slides) Quality\nOral Presentation Skill and Delivery\nInteractions and Q&A\n\nHow do you get the full points for each category? Check the requirements below. Note that for Content and Organization, data analysis and package projects have different requirements.\nContent and Organization (Data Analysis)\n\nBeautiful visualization helps find out relationship of variables and specification of models\nAll questions are answered accurately by the models\nDiscuss how and why the models are chosen\nApply sophisticated models and detailed analysis\nAll ideas are presented in logical order\n\nContent and Organization (Packages)\n\nShow how and why the package greatly helps us do data science\nExplain how to use the functions in the package by providing concrete real data science applications and examples with data sets\nTeach audience with understandable examples of how to appropriately read the outputs and/or why the visualizations are informative and useful for understanding data and analysis results\nShow the package is better in some sense, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc\nAll ideas are presented in logical order\n\nPresentation Material Quality\n\nPresentation material show code and output beautifully\nPresentation material clearly aid the speaker in telling a coherent story\nAll tables and graphics are informative and related to the topic and make it easier to understand\nAttractive design, layout, and neatness.\n\nOral Presentation Skill\n\nGood volume and energy\nProper pace and diction\nAvoidance of distracting gestures\n\nInteractions and Q&A\n\nGood eye contact with audience\nExcellent listening skills\nAnswers audience questions with authority and accuracy\n\n\n\n\n\n\n\n\n\n\n\n\n\nPeer Group Evaluation\n\n\n\n\n\n\n\n\n\n\nPlease go to the link or scan the QR code to vote your top 3 projects!\nYou choose your top 3 teams (Gold🥇, Silver🥈, Bronze🥉)\nYou cannot nominate your team as one of the top 3.\nMate Favorite Score (MFS) = \\(🥇 \\times 5 + 🥈 \\times 3 + 🥉 \\times 1\\)\nThe team project grade is a combination of instructor evaluation scores and MFS.\n\n\nIf you don’t participate, your team loses 2 points.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "present-description-final.html#peer-individual-performance-evaluation",
+    "href": "present-description-final.html#peer-individual-performance-evaluation",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Peer Individual Performance Evaluation",
+    "text": "Peer Individual Performance Evaluation\n\n\n\n\n\n\n\n\n\n\nPlease go to the link or scan the QR code to nominate the best contributor!\nIn each team, two group members will win the best contribution reward that add extra points to the project grade.\nEach one of you has two votes to nominate one or two of your teammates who you think contribute the most to your group project.\nYou can nominate\n\ntwo teammates, each receiving one vote.\none teammate who receives two votes.\n\nYou cannot nominate yourself.\nIf you don’t vote, or you just use one vote, you can’t be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward.\nIf there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2025)",
+    "section": "",
+    "text": "New Homework 3 deadline: 05/02 11:59 PM.\nTA help desk hours at Cudahy Hall 301 Monday: 1 – 2 PM, Tuesday: 12 – 1 PM, Thursday: 12 – 2 PM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nLab Exercise\nHomework\nProject\n\n\n\n\n1\nTue, Jan 14\nGreetings + Overview of Data Science\n📖\n🖥️syllabus 🖥️overview\n\n\n\n\n\n\nThu, Jan 16\nPosit Cloud\n\n🖥️posit\n📋 posit 📋01\n\n\n\n\n2\nTue, Jan 21\nNo CLASS: Cold Weather\n📖\n\n\n\n\n\n\n\nThu, Jan 23\nGit/GitHub Introduction\n\n🖥️git\n📋github\n\n\n\n\n3\nTue, Jan 28\nQuarto: YAML and Markdown\n📖\n🖥️quarto\n📋02 📋03 📋04\n\n\n\n\n\nThu, Jan 30\nQuarto: Code Chunk\n\n\n\n\n\n\n\n4\nTue, Feb 4\nR Syntax\n📖\n🖥️syntax\n📋05\n\n\n\n\n\nThu, Feb 6\nPython Syntax\n\n\n📋06 📋 07(opt)\n✍️ HW1\n\n\n\n5\nTue, Feb 11\nR Tidyverse\n📖\n🖥️package\n📋08\n\n\n\n\n\nThu, Feb 13\nPython NumPy/Pandas\n\n\n📋09\n\n\n\n\n6\nTue, Feb 18\nData Importing\n📖\n🖥️import\n📋10\n\n\n\n\n\nThu, Feb 20\nData Visualization-ggplot2\n\n🖥️ggplot\n📋11 📋12\n\n\n\n\n7\nTue, Feb 25\nData Visualization-categorical and numerical data\n📖\n🖥️visualization\n📋13\n\n\n\n\n\nThu, Feb 27\nInteractive Data Visualization\n\n🖥️interactive-viz\n📋14 (opt)\nHW 1 Due\n✅ Team up Due\n\n\n8\nTue, Mar 4\nData Wrangling - one data frame\n📖\n🖥️dplyr-1\n📋15\n\n\n\n\n\nThu, Mar 6\nData Wrangling - two data frames\n\n🖥️dplyr-2\n📋16\n\n✅ Proposal Due\n\n\n9\nTue, Mar 11\nNO CLASS: Spring break\n📖\n\n📋 Lab Solution\n\n\n\n\n\nThu, Mar 13\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 18\nData Wrangling - tidyr\n📖\n🖥️tidyr\n📋17\n✍️ HW2\n✅ Materials Due\n\n\n\nThu, Mar 20\nMini Project Presentation\n\n\n\n\n\n\n\n11\nTue, Mar 25\nProbabilistic and Statistical Simulation\n📖\n🖥️probstat\n📋18\n\n\n\n\n\nThu, Mar 27\nStatistical Simulation Activity: Monte Carlo simulation\n\n\n📋19\n\n\n\n\n12\nTue, Apr 1\nLinear Regression\n📖\n🖥️linear-regression\n📋20\n\n\n\n\n\nThu, Apr 3\nLinear Regression Activity: Regression to the mean\n\n\n\nHW 2 Due\n\n\n\n13\nTue, Apr 8\nLogistic Regression\n📖\n🖥️logistic-regression\n📋21\n✍️ HW3\n\n\n\n\nThu, Apr 10\nLogistic Regression Activity: Two truths and a lie\n\n\n\n\n\n\n\n14\nTue, Apr 15\nK-Nearest Neighbors Activity: Dogs or Cats\n📖\n🖥️ K-Nearest Neighbors\n📋22\n\n\n\n\n\nThu, Apr 17\nNO CLASS: Easter break\n\n\n\n\n\n\n\n15\nTue, Apr 22\nPrincipal Component Analysis\n📖\n🖥️Principal Component Analysis\n\n\n\n\n\n\nThu, Apr 24\nPrincipal Component Analysis\n\n\n📋23\n\nFinal Project Proposal Due\n\n\n16\nTue, Apr 29\nK-Means Clustering (Self-learning)\n📖\n🖥️K-means Clustering\n📋24\n\n\n\n\n\nThu, May 1\nFinal Project Presentation I\n\n\n\nExtension: HW 3 Due\n\n\n\n17\nMon, May 5\nFinal Project Presentation II\n\n\n\n\nFinal Project Materials Due\n\n\n\n\nThis schedule will be updated as the semester progresses, with all changes documented here. Dr. Yu reserve the right to make changes to the schedule.",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "exercise/lab11-ggplot2.html",
+    "href": "exercise/lab11-ggplot2.html",
+    "title": "Lab 11: ggplot2",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 11 section,\n\nUse readr::read_csv() to import the data penguins.csv into your R workspace.\nGenerate the following ggplot:\n\n\n\n\n\n\n\n\n\n\n\npenguins &lt;- read_csv(_________________)\n________ |&gt; \n  ggplot(mapping = ____(x = ______________,\n                        y = ______________,\n                        colour = ________)) +\n  geom______() +\n  ____(title = ____________________,\n       _________ = \"Dimensions for Adelie, Chinstrap, and Gentoo Penguins\",\n       x = _____________, y = _______________,\n       _______ = \"Species\",\n       _______ = \"Source: Palmer Station LTER / palmerpenguins package\")"
+  },
+  {
+    "objectID": "exercise/lab18-prob.html",
+    "href": "exercise/lab18-prob.html",
+    "title": "Lab 18: Probability",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 18 section,\n\nPlot the probability function \\(P(X = x)\\) of \\(X \\sim \\text{binomial}(n = 5, \\pi = 0.3)\\).\n\nTo use ggplot,\n\nCreate a data frame saving all possible values of \\(x\\) and their corresponding probability using dbinom(x, size = ___, prob = ___).\n\n\n\n# A tibble: 6 × 2\n      x       y\n  &lt;int&gt;   &lt;dbl&gt;\n1     0 0.168  \n2     1 0.360  \n3     2 0.309  \n4     3 0.132  \n5     4 0.0284 \n6     5 0.00243\n\n\n\nAdd geom_col()"
+  },
+  {
+    "objectID": "exercise/lab05-rtype.html",
+    "href": "exercise/lab05-rtype.html",
+    "title": "Lab 05: R Data Type Summary",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd Lab 5,\n\nCreate R objects vector v1, factor f2, list l3, matrix m4 and data frame d5.\nCheck typeof() and class() of those objects, and create a list having the output below.\n\n\nv1 &lt;- c(__________)\nf2 &lt;- f_____(__________)\nl3 &lt;- l_____(__________)\nm4 &lt;- m_____(__________)\nd5 &lt;- d_____.f_____(__________)\nv &lt;- c(type = typeof(v1), class = class(v1))\nf &lt;- c(type = __________, class = _________)\nl &lt;- c(type = __________, class = _________)\nm &lt;- c(type = __________, class = _________)\nd &lt;- c(type = __________, class = _________)\n____(vec    =   v,\n     ______ = ___,\n     ______ = ___,\n     ______ = ___,\n     ______ = ___)\n\n\n\n$vec\n     type     class \n \"double\" \"numeric\" \n\n$fac\n     type     class \n\"integer\"  \"factor\" \n\n$lst\n  type  class \n\"list\" \"list\" \n\n$mat\n     type    class1    class2 \n\"integer\"  \"matrix\"   \"array\" \n\n$df\n        type        class \n      \"list\" \"data.frame\""
+  },
+  {
+    "objectID": "exercise/lab22-knn.html",
+    "href": "exercise/lab22-knn.html",
+    "title": "Lab 22: K Nearest Neighbors",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 22 section,\n\n\nuse HEIGHT and WAIST to predict GENDER using KNN with \\(K = 3\\).\nGenerate the (test) confusion matrix.\nCalculate (test) accuracy rate.\nDoes using more predictors predict better?\n\n\nR Code\n\nlibrary(tidymodels)\n\n## load data\nbodydata &lt;- read_csv(\"./data/body.csv\")\nbody &lt;- bodydata |&gt; \n    select(GENDER, HEIGHT, WAIST) |&gt; \n    mutate(GENDER = as.factor(GENDER))\n\n## training and test data\nset.seed(2025)\ndf_split &lt;- initial_split(data = body, prop = 0.8)\ndf_trn &lt;- training(df_split)\ndf_tst &lt;- testing(df_split)\n\n## KNN training\nknn_recipe &lt;- recipe(GENDER ~ HEIGHT + WAIST, data = df_trn) |&gt; \n    step_normalize(all_predictors())\nknn_mdl &lt;- nearest_neighbor(neighbors = 3, mode = \"classification\")\nknn_out &lt;- workflow() |&gt; \n    add_recipe(knn_recipe) |&gt; \n    add_model(knn_mdl) |&gt; \n    fit(data = df_trn)\n\n## KNN prediction\nknn_pred &lt;- pull(predict(knn_out, df_tst))\ntable(knn_pred, df_tst$GENDER)\nmean(knn_pred == df_tst$GENDER)\n\n\n\nPython Code\n\nimport numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\n\n## load data\nbody = pd.read_csv('./data/body.csv')\nX = body[['HEIGHT', 'WAIST']]\ny = body['GENDER']\n\n## training and test data\nX_trn, X_tst, y_trn, y_tst = train_test_split(X, y, test_size=0.2, random_state=2025)\n\n## KNN training\nknn = KNeighborsClassifier(n_neighbors = 3)\n# X_trn = np.array(X_trn)\n# X_tst = np.array(X_tst)\nknn.fit(X_trn, y_trn)\n\n## KNN prediction\ny_pred = knn.predict(X_tst)\nfrom sklearn.metrics import confusion_matrix\nconfusion_matrix(y_tst, y_pred)\nnp.mean(y_tst == y_pred)"
+  },
+  {
+    "objectID": "exercise/lab24-kmeans.html",
+    "href": "exercise/lab24-kmeans.html",
+    "title": "Lab 24: K-Means Clustering",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 24 section,\n\nInstall R package palmerpenguins at https://allisonhorst.github.io/palmerpenguins/\nPerform K-Means to with \\(K = 3\\) to cluster penguins based on bill_length_mm and flipper_length_mm of data peng.\n\n\nlibrary(palmerpenguins)\npeng &lt;- penguins[complete.cases(penguins), ] |&gt; \n    select(flipper_length_mm, bill_length_mm)\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+  },
+  {
+    "objectID": "exercise/lab16-join.html",
+    "href": "exercise/lab16-join.html",
+    "title": "Lab 16: Joining tables",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 16 section\n\nImport the data at https://www.jaredlander.com/data/DiamondColors.csv. Call it diamond_color.\n\n\ndiamond_color &lt;- readr::read_csv(\"the url\")\n\n\nUse left_join() to combine the data set diamonds in ggplot2 and diamond_color by the key variable color.\n\n\n\nSelect the variables carat, color, Description, Details.\n\n\n## Variable \"color\" in diamonds but \"Color\" in diamond_color\n\njoined_df &lt;- diamonds |&gt;  \n    _______(_______, by = c('color' = 'Color')) |&gt;  ## join\n    _______(_________________________________________)  ## select\n\n\nCreate a bar chart of the variable color.\n\n\n\n# A tibble: 53,940 × 4\n   carat color Description    Details                    \n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;                      \n 1  0.23 E     Colorless      Minute traces of color     \n 2  0.21 E     Colorless      Minute traces of color     \n 3  0.23 E     Colorless      Minute traces of color     \n 4  0.29 I     Near Colorless Slightly detectable color  \n 5  0.31 J     Near Colorless Slightly detectable color  \n 6  0.24 J     Near Colorless Slightly detectable color  \n 7  0.24 I     Near Colorless Slightly detectable color  \n 8  0.26 H     Near Colorless Color is dificult to detect\n 9  0.22 E     Colorless      Minute traces of color     \n10  0.23 H     Near Colorless Color is dificult to detect\n# ℹ 53,930 more rows"
+  },
+  {
+    "objectID": "exercise/lab20-slr.html",
+    "href": "exercise/lab20-slr.html",
+    "title": "Lab 20: Simple Linear Regression",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 20 section,\n\nUse the mpg data to fit a simple linear regression where \\(y\\) is hwy and \\(x\\) is cty.\nProduce the plot below. (add the layer geom_smooth(method = \"lm\", se = FALSE))"
+  },
+  {
+    "objectID": "exercise/lab21-logistic.html",
+    "href": "exercise/lab21-logistic.html",
+    "title": "Lab 21: Logistic Regression",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 21 section,\n\nUse our fitted logistic regression model to predict whether you are male or female! Change 175 to your height (cm).\nUse the converter to get your height in cm!\n\n\n# Fit the logistic regression\n\npredict(logis_out$fit, newdata = data.frame(HEIGHT = 175), \n        type = \"response\")"
+  },
+  {
+    "objectID": "exercise/lab23-pca.html",
+    "href": "exercise/lab23-pca.html",
+    "title": "Lab 23: Principal Component Analysis",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 23 section,\n\nUse slice() to print the first six rows of iris data.\nPerform PCA on Sepal.Length, Sepal.Width, Petal.Length, and Petal.Width.\nGenerate biplot, and explain it.\n\n\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
+  },
+  {
+    "objectID": "exercise/lab04-chunk.html",
+    "href": "exercise/lab04-chunk.html",
+    "title": "Lab 04: Code Chunk",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\n\nIn lab.qmd ## Lab 4: Code Chunk, use code chunks to\n\ninclude an image with knitr::include_graphics(\"URL or file path\") https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png\ninclude a plot plot(mtcars$disp, mtcars$mpg)\nShow dataset mtcars as a table using knitr::kable()\n\nDo some inline code calculation like `r ncol(mtcars)`, `r log(100, base = 10) + sqrt(4)`.\nAdd option fig-height: 4, fig-width: 6 and fig-align: right to the chunk for your plot. What are the changes?\nHow do we set global chunk options to not show the code in every chunk in the document?\nOnce done, commit with message “04-codechunk” and push your work to GitHub."
+  },
+  {
+    "objectID": "exercise/lab17-tidyr.html",
+    "href": "exercise/lab17-tidyr.html",
+    "title": "Lab 17: tidyr",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 17 section,\n\n\nImport trump.csv. Call it trump_data as below on the left.\nUse pivot_longer() to transform trump_data into the data set trump_longer on the right.\n\n\ntrump_data\n\n# A tibble: 2,702 × 4\n   subgroup date       approval disapproval\n   &lt;chr&gt;    &lt;date&gt;        &lt;dbl&gt;       &lt;dbl&gt;\n 1 Voters   2020-10-04     44.7        52.2\n 2 Adults   2020-10-04     43.2        52.6\n 3 Adults   2020-10-03     43.2        52.6\n 4 Voters   2020-10-03     45.0        51.7\n 5 Adults   2020-10-02     43.3        52.4\n 6 Voters   2020-10-02     44.5        52.1\n 7 Voters   2020-10-01     44.1        52.8\n 8 Adults   2020-10-01     42.7        53.3\n 9 Adults   2020-09-30     42.2        53.7\n10 Voters   2020-09-30     44.2        52.7\n# ℹ 2,692 more rows\n\n\n\ntrump_longer &lt;- ______________\n    pivot_longer(\n        cols = ____________,\n        names_to = _______________,\n        values_to = _______________\n    ) \n\n\n\n# A tibble: 5,404 × 4\n   subgroup date       rating_type rating_value\n   &lt;chr&gt;    &lt;date&gt;     &lt;chr&gt;              &lt;dbl&gt;\n 1 Voters   2020-10-04 approval            44.7\n 2 Voters   2020-10-04 disapproval         52.2\n 3 Adults   2020-10-04 approval            43.2\n 4 Adults   2020-10-04 disapproval         52.6\n 5 Adults   2020-10-03 approval            43.2\n 6 Adults   2020-10-03 disapproval         52.6\n 7 Voters   2020-10-03 approval            45.0\n 8 Voters   2020-10-03 disapproval         51.7\n 9 Adults   2020-10-02 approval            43.3\n10 Adults   2020-10-02 disapproval         52.4\n# ℹ 5,394 more rows\n\n\nBONUS 💷: Use trump_longer to generate a plot like the one below."
+  },
+  {
+    "objectID": "exercise/lab10-import.html",
+    "href": "exercise/lab10-import.html",
+    "title": "Lab 10: Import Data",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\n\nIf you haven’t, install and load the tidyverse package.\n\nIn lab.qmd ## Lab 10 section,        \n\nImport ssa_male_prob.csv and ssa_female_prob.Rds in the data folder using read_csv() and call them ssa_male and ssa_female, respectively.\n\n\nssa_male &lt;- readr::read____(____________)\nssa_female &lt;- readr::read____(____________)\n\n\nPlot Age (x-axis) vs. LifeExp (y-axis) for Female. The type should be “line”, and the line color is red. Add x-label, y-label and title to your plot.\n\n\nplot(x = _____, y = _____, type = ______, col = ______,\n     xlab = ______, ylab = _______, main = ____________)\n\n\nUse lines() to add a line of Age (x-axis) vs. LifeExp (y-axis) for Male to the plot. The color is blue.\n\n\nlines(x = _____, y = _____, col = ______)"
+  },
+  {
+    "objectID": "exercise/lab00-posit.html",
+    "href": "exercise/lab00-posit.html",
+    "title": "Lab Exercise: Posit Cloud",
+    "section": "",
+    "text": "Note"
+  },
+  {
+    "objectID": "exercise/lab00-posit.html#install-posit-cloud",
+    "href": "exercise/lab00-posit.html#install-posit-cloud",
+    "title": "Lab Exercise: Posit Cloud",
+    "section": "Install Posit Cloud",
+    "text": "Install Posit Cloud\n\nStep 1: In the Posit website https://posit.co/, choose Products &gt; Posit Cloud as shown below.\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Click GET STARTED.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStep 3: Cloud Student &gt; Sign Up using your Marquette email address.\n\n\n\n\n\n\n\n\n\n\nThe student plan has more computing power and resources that help you do homework and data science project more efficiently!\n\nNew project"
+  },
+  {
+    "objectID": "exercise/lab00-posit.html#welcome-to-3570-data-science",
+    "href": "exercise/lab00-posit.html#welcome-to-3570-data-science",
+    "title": "Lab Exercise: Posit Cloud",
+    "section": "Welcome to 3570 Data Science!",
+    "text": "Welcome to 3570 Data Science!\n\nI’m sending you a link via email for joining the course workspace 2025-spring-math-3570. Please join.\n\n\n\n\n\n\n\n\n\n\n\nIn the bar, click workspace 2025-spring-math-3570.\nClick New Project &gt; New RStudio Project to get into the IDE.\nIn Untitled Project, name your project as 3570-project.\nIn the Console pane, write R code: a string \"Hello WoRld!\" or math 2 + 4.\nTools &gt; Global Options &gt; Appearance to select your favorite editor theme."
+  },
+  {
+    "objectID": "exercise/lab07-plot.html",
+    "href": "exercise/lab07-plot.html",
+    "title": "Lab 07: Plotting",
+    "section": "",
+    "text": "Note\n\n\n\n\n\n\n\n\nIn lab.qmd ## Lab 7,\n\nFor the mtcars data, use R or Python to\n\nmake a scatter plot of miles per gallon vs. weight. Decorate your plot using arguments, col, pch, xlab, etc.\ncreate a histogram of 1/4 mile time. Make it beautiful!\n\nCommit and Push your work once you are done."
+  }
+]

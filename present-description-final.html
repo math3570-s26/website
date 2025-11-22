@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MATH/COSC 3570 Final Project Presentation – MATH/COSC 3570 - Spring 2025</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./present-work-final.html" rel="next">
+<link href="./present-work.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-238b7dab1bde4684d4de8122b9beee70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="MATH/COSC 3570 Final Project Presentation – MATH/COSC 3570 - Spring 2025">
+<meta property="og:description" content="Homepage for MATH/COSC 3570 - Introduction to Data Science at Marquette University, Spring 2025.">
+<meta property="og:image" content="https://math3570-s26.github.io/website/images/evaluation.png">
+<meta property="og:site_name" content="MATH/COSC 3570 - Spring 2025">
+<meta property="og:image:height" content="914">
+<meta property="og:image:width" content="2752">
+</head>
+
+<body class="nav-sidebar docked slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description-final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./present-description-final.html">Guideline and Policy</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://d2l.mu.edu/d2l/home/589422" title="D2L" class="quarto-navigation-tool px-1" aria-label="D2L"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./course-news.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">News/Annoucements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mini Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./present-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./present-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topics and Works</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./present-description-final.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./present-work-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Group and Proposal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Weekly materials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 12</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 14</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 15</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weeks/week-16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 16</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#timeline-and-things-to-do" id="toc-timeline-and-things-to-do" class="nav-link active" data-scroll-target="#timeline-and-things-to-do">Timeline and Things to Do</a></li>
+  <li><a href="#policy" id="toc-policy" class="nav-link" data-scroll-target="#policy">Policy</a>
+  <ul class="collapse">
+  <li><a href="#meeting" id="toc-meeting" class="nav-link" data-scroll-target="#meeting"><strong>Meeting</strong></a></li>
+  <li><a href="#proposal" id="toc-proposal" class="nav-link" data-scroll-target="#proposal"><strong>Proposal</strong></a></li>
+  <li><a href="#presentation" id="toc-presentation" class="nav-link" data-scroll-target="#presentation"><strong>Presentation</strong></a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials"><strong>Materials</strong></a></li>
+  </ul></li>
+  <li><a href="#project-content" id="toc-project-content" class="nav-link" data-scroll-target="#project-content">Project Content</a>
+  <ul class="collapse">
+  <li><a href="#rpython-packages" id="toc-rpython-packages" class="nav-link" data-scroll-target="#rpython-packages">R/Python Packages</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a></li>
+  </ul></li>
+  <li><a href="#sec-grading" id="toc-sec-grading" class="nav-link" data-scroll-target="#sec-grading">Evaluation and Grading</a>
+  <ul class="collapse">
+  <li><a href="#group-performance-evaluation" id="toc-group-performance-evaluation" class="nav-link" data-scroll-target="#group-performance-evaluation">Group Performance Evaluation</a>
+  <ul class="collapse">
+  <li><a href="#instructor-evaluation" id="toc-instructor-evaluation" class="nav-link" data-scroll-target="#instructor-evaluation">Instructor Evaluation</a></li>
+  <li><a href="#peer-group-evaluation" id="toc-peer-group-evaluation" class="nav-link" data-scroll-target="#peer-group-evaluation">Peer Group Evaluation</a></li>
+  </ul></li>
+  <li><a href="#peer-individual-performance-evaluation" id="toc-peer-individual-performance-evaluation" class="nav-link" data-scroll-target="#peer-individual-performance-evaluation">Peer Individual Performance Evaluation</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/present-description-final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description-final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./present-description-final.html">Guideline and Policy</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">MATH/COSC 3570 Final Project Presentation</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 21, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="red"><strong>This is the latest version of project guideline. It may be revised later.</strong></span></p>
+<p>The final project is about <span class="blue"><strong>new tools</strong></span> or <span class="blue"><strong>data analysis</strong></span>. <strong>Show your fun project! Let’s go!!</strong> 😎</p>
+<section id="timeline-and-things-to-do" class="level1">
+<h1>Timeline and Things to Do</h1>
+<ul>
+<li><p><strong>Meeting</strong>. Schedule a meeting with Dr.&nbsp;Yu discussing your project. Please book a time slot in the <a href="https://marq-my.sharepoint.com/:x:/g/personal/cheng-han_yu_marquette_edu/EaFrQA2DvG5HnjCTOJOEkfABdYF4Ca1YrnabWtcKxsgA3w?e=5VhAPe">Excel form</a>. <span class="blue"><em>Starts on April 10, ends on April 30</em>.</span></p></li>
+<li><p><strong>Proposal</strong>. Please send me a <span class="blue"><strong>one-page PDF</strong></span> describing what you are going to do for your project (no word limit) with your <strong>project title</strong> by <span class="red"><strong>Friday, 4/25 11:59 PM</strong></span>.</p></li>
+<li><p><strong>Presentation</strong>. You will be presenting your project in class on <span class="red"><strong>Thursday, 5/1, 2 - 3:15 PM</strong></span> and <span class="red"><strong>Monday, 5/5, 10:30 AM - 12:30 PM</strong></span>.</p></li>
+<li><p><strong>Materials</strong>. Please share your <span class="blue"><strong>entire work</strong></span> (slides, code, data, etc) by <span class="red"><strong>Monday, 5/5, 11:59 PM</strong></span>.</p></li>
+</ul>
+<p><strong>[Note]:</strong> <strong>04/17 - 04/21</strong> is Easter break. Be aware of time, and plan early!</p>
+</section>
+<section id="policy" class="level1">
+<h1>Policy</h1>
+<section id="meeting" class="level2">
+<h2 class="anchored" data-anchor-id="meeting"><strong>Meeting</strong></h2>
+<ul>
+<li><p><em>You lose 5 points of your project grade if you don’t meet the requirement or don’t meet with Dr.&nbsp;Yu at least once.</em></p></li>
+<li><p>Please choose a meeting time in the <a href="https://marq-my.sharepoint.com/:x:/g/personal/cheng-han_yu_marquette_edu/EaFrQA2DvG5HnjCTOJOEkfABdYF4Ca1YrnabWtcKxsgA3w?e=5VhAPe">Excel form</a>.</p></li>
+<li><p>You must let Dr.&nbsp;Yu know <em>in advance</em> if you need to change your meeting time.</p></li>
+<li><p>You can change your meeting time <em>once</em>.</p></li>
+<li><p>Briefly talk about your project idea.</p></li>
+</ul>
+</section>
+<section id="proposal" class="level2">
+<h2 class="anchored" data-anchor-id="proposal"><strong>Proposal</strong></h2>
+<ul>
+<li><p><em>Each one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.</em></p></li>
+<li><p>Your proposal (in PDF) should include three parts:</p>
+<ul>
+<li>Project <strong>title</strong></li>
+<li>Members <strong>duty</strong>. For example,
+<ul>
+<li>John and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc.</li>
+</ul></li>
+<li>The <strong>description of the data set you use</strong> in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in <strong>?@sec-data</strong>.</li>
+<li>The <strong>goal of your project</strong>. For example, what are questions you’d like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested?</li>
+</ul></li>
+<li><p>Although it is risky, you can change your project topic after you submit your proposal if you decide to do something else.</p></li>
+</ul>
+</section>
+<section id="presentation" class="level2">
+<h2 class="anchored" data-anchor-id="presentation"><strong>Presentation</strong></h2>
+<ul>
+<li><p><em>Each one of you loses 5 points of your project grade if you don’t meet the presentation requirement.</em></p></li>
+<li><p>Each group presentation is about <span class="blue"><strong>15 and 16 minute</strong></span> long, followed by about <span class="blue"><strong>1 to 2 minutes</strong></span> Q&amp;A.</p></li>
+<li><p>Four groups present on May 1, and six on May 5. <a href="./present-work-final.html#presentation-order">Presentation order</a> is decided by random sampling.</p></li>
+<li><p><span class="red">Every student has to participate (in-person) in the final presentation in order to pass the course</span>.</p></li>
+<li><p>Every group member has to present some part of the group work. <strong>The one who does not present receives no point.</strong></p></li>
+<li><p>Everyone is welcome to ask any questions about the projects. It helps everyone evaluate every group’s project and presentation performance. See <a href="#sec-grading" class="quarto-xref">Section&nbsp;4</a> for grading policy.</p></li>
+<li><p><strong>Each group is required to ask as least one question</strong>.</p>
+<ul>
+<li>The <span class="math inline">\(k\)</span>-th group should ask at least one question to the <span class="math inline">\((k+1)\)</span>-th group in Q&amp;A, <span class="math inline">\(k = 1, \dots, 9\)</span>.</li>
+<li>The last group to present will ask the first group questions about their project.</li>
+</ul></li>
+</ul>
+</section>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials"><strong>Materials</strong></h2>
+<ul>
+<li><p><em>Each one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.</em></p></li>
+<li><p>You need to share your entire work, including slides, code, etc so that anyone is able to <strong>reproduce your outputs and plots shown in the slides</strong>.</p></li>
+<li><p><del>The code must be shared via a <strong>Quarto file</strong>.</del></p></li>
+</ul>
+</section>
+</section>
+<section id="project-content" class="level1">
+<h1>Project Content</h1>
+<p>Your project can be either of the two categories:</p>
+<ol type="1">
+<li><p>Introduce one <strong>R or Python package</strong> never learned in class, or introduce some R or Python functions in our learned packages, but they are never discussed in class.</p></li>
+<li><p><strong>Data analysis</strong> including</p>
+<ul>
+<li>data visualization</li>
+<li>estimation/prediction using <em>learned or new</em> statistical or machine learning models</li>
+</ul></li>
+</ol>
+<section id="rpython-packages" class="level2">
+<h2 class="anchored" data-anchor-id="rpython-packages">R/Python Packages</h2>
+<p>For your R/Python package project,</p>
+<ul>
+<li><p>you need to</p>
+<ul>
+<li>show <em>how and why</em> the package greatly helps us do data science.</li>
+<li>explain how to use the functions in the packages by providing data science examples with some real data set.</li>
+<li>Please <em>don’t use the toy examples</em> in the package documentation.</li>
+</ul></li>
+<li><p>If the functions of the package return any results or outputs, please explain them, teaching your audience how to appropriately read the outputs.</p></li>
+<li><p>If the functions return graphics, explain why the visualizations are informative and useful for understanding data and analysis results.</p></li>
+<li><p>You can choose a package that helps us do what we cannot do with the packages and tools learned in class.</p>
+<ul>
+<li>For example, we only learn <code>readr</code> and <code>readxl</code> packages to help us import data files into R, and we don’t know how to extract data from a website. The <a href="https://rvest.tidyverse.org/"><code>rvest</code></a> package helps us scrape data from web pages.</li>
+</ul></li>
+<li><p>If you choose a package that provides the same functionality as the packages we learned, please show the packages you choose are <em>better</em>.</p>
+<ul>
+<li>For example, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc. For example, <a href="https://rdatatable.gitlab.io/data.table/"><code>data.table</code></a> package provides a high-performance version of base R’s <code>data.frame</code> with syntax and feature enhancements for ease of use, convenience and programming speed.</li>
+</ul></li>
+<li><p>Below are a list of popular R packages that you can start with.</p>
+<ul>
+<li><p><a href="https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages">Quick list of useful R packages</a></p></li>
+<li><p><a href="https://roelverbelen.netlify.app/resources/r/packages/">Favorite R Packages by Roel Verbelen</a></p></li>
+<li><p><a href="https://www.computerworld.com/article/2921176/great-r-packages-for-data-import-wrangling-visualization.html">Great R packages for data import, wrangling, and visualization</a></p></li>
+</ul></li>
+<li><p>Below are a list of popular Python packages that you can start with.</p>
+<ul>
+<li><p><a href="https://www.datacamp.com/blog/top-python-libraries-for-data-science">Top 26 Python Libraries for Data Science in 2025</a></p></li>
+<li><p><a href="https://www.simplilearn.com/top-python-libraries-for-data-science-article">20 Python Libraries for Data Science</a></p></li>
+</ul></li>
+<li><p>You can introduce other data science software or tools, such as <a href="https://www.tableau.com/">Tableau</a>, <a href="https://d3js.org/">D3.js</a>, <a href="https://www.knime.com/">KNIME</a>, etc. Make sure you demo them with an understandable example.</p></li>
+</ul>
+</section>
+<section id="data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
+<p>For your data analysis project,</p>
+<ul>
+<li><p>You need to show that you are good at asking <em>meaningful</em> questions and answering them with results of data analysis.</p></li>
+<li><p>Your presentation should include <em>data visualization</em>. Your graphics should be informative that help you</p>
+<ul>
+<li>explore relationships between variables in your data</li>
+<li>decide which statistical/machine learning model is used, so that your research questions can be properly answered.</li>
+</ul></li>
+<li><p>You should discuss <em>how and why</em> statistical methods/machine learning algorithms are chosen for analyzing your data set.</p>
+<ul>
+<li>The methods we learn in class may not be appropriate for your data and answering your research questions. If this happens, critique your own methods and provide suggestions for improving your analysis. Any issues of your data, and appropriateness of the statistical analysis should be discussed.</li>
+</ul></li>
+<li><p>You can choose a data set that is publicly available or you may collect your own data using a survey or by conducting an experiment. The dataset you choose <strong>cannot</strong> be any datasets used in class, including homework assignments and lab exercises.</p></li>
+</ul>
+</section>
+</section>
+<section id="sec-grading" class="level1 page-columns page-full">
+<h1>Evaluation and Grading</h1>
+<ul>
+<li><p>Your project performance is evaluated by not only <em>Dr.&nbsp;Yu and the TA</em> but <span class="blue"><em>your classmates</em></span>!</p></li>
+<li><p>Your project grade will be</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>Project grade = performance grade - points lost due to violation of policy</p>
+</blockquote>
+<p><span class="green"><em>with adjustement based on your performance of duty</em></span>.</p>
+<section id="group-performance-evaluation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="group-performance-evaluation">Group Performance Evaluation</h2>
+<section id="instructor-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="instructor-evaluation">Instructor Evaluation</h3>
+<ul>
+<li><p>Dr.&nbsp;Yu and the TA evaluate your group performance based on the four criteria</p>
+<ul>
+<li><strong>Project Content and Organization</strong></li>
+<li><strong>Presentation Material (Slides) Quality</strong></li>
+<li><strong>Oral Presentation Skill and Delivery</strong></li>
+<li><strong>Interactions and Q&amp;A</strong></li>
+</ul></li>
+<li><p>How do you get the full points for each category? Check the requirements below. Note that for Content and Organization, data analysis and package projects have different requirements.</p></li>
+<li><p><strong>Content and Organization (Data Analysis)</strong></p>
+<ul>
+<li>Beautiful visualization helps find out relationship of variables and specification of models</li>
+<li>All questions are answered accurately by the models</li>
+<li>Discuss how and why the models are chosen</li>
+<li>Apply sophisticated models and detailed analysis</li>
+<li>All ideas are presented in logical order</li>
+</ul></li>
+<li><p><strong>Content and Organization (Packages)</strong></p>
+<ul>
+<li>Show <em>how and why</em> the package greatly helps us do data science</li>
+<li>Explain how to use the functions in the package by providing concrete real data science applications and examples with data sets</li>
+<li>Teach audience with understandable examples of how to appropriately read the outputs and/or why the visualizations are informative and useful for understanding data and analysis results</li>
+<li>Show the package is <em>better</em> in some sense, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc</li>
+<li>All ideas are presented in logical order</li>
+</ul></li>
+<li><p><strong>Presentation Material Quality</strong></p>
+<ul>
+<li>Presentation material show code and output beautifully</li>
+<li>Presentation material clearly aid the speaker in telling a coherent story</li>
+<li>All tables and graphics are informative and related to the topic and make it easier to understand</li>
+<li>Attractive design, layout, and neatness.</li>
+</ul></li>
+<li><p><strong>Oral Presentation Skill</strong></p>
+<ul>
+<li>Good volume and energy</li>
+<li>Proper pace and diction</li>
+<li>Avoidance of distracting gestures</li>
+</ul></li>
+<li><p><strong>Interactions and Q&amp;A</strong></p>
+<ul>
+<li>Good eye contact with audience</li>
+<li>Excellent listening skills</li>
+<li>Answers audience questions with authority and accuracy</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./images/evaluation.png" class="img-fluid figure-img" width="1376"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="peer-group-evaluation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="peer-group-evaluation">Peer Group Evaluation</h3>
+<div class="cell page-columns page-full">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./images/QRCode_vote.png" class="img-fluid figure-img" width="945"></p>
+</figure>
+</div>
+</div></div></div>
+<ul>
+<li><p><span class="red"><strong>Please go to the <a href="https://forms.office.com/r/dgi7jaXYT2">link</a> or scan the QR code to vote your top 3 projects!</strong></span></p></li>
+<li><p>You choose your top 3 teams (Gold🥇, Silver🥈, Bronze🥉)</p></li>
+<li><p>You <strong>cannot</strong> nominate your team as one of the top 3.</p></li>
+<li><p>Mate Favorite Score (MFS) = <span class="math inline">\(🥇 \times 5 + 🥈 \times 3 + 🥉 \times 1\)</span></p></li>
+<li><p>The team project grade is a combination of instructor evaluation scores and MFS.</p></li>
+</ul>
+<ul>
+<li><strong>If you don’t participate, your team loses 2 points.</strong></li>
+</ul>
+</section>
+</section>
+<section id="peer-individual-performance-evaluation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="peer-individual-performance-evaluation">Peer Individual Performance Evaluation</h2>
+<div class="cell page-columns page-full">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./images/QRCode_contributor.png" class="img-fluid figure-img" width="945"></p>
+</figure>
+</div>
+</div></div></div>
+<ul>
+<li><p><span class="red"><strong>Please go to the <a href="https://forms.office.com/r/VtbH6PEzFp">link</a> or scan the QR code to nominate the best contributor!</strong></span></p></li>
+<li><p>In each team, <strong>two</strong> group members will win the best contribution reward that add extra points to the project grade.</p></li>
+<li><p>Each one of you has <strong>two</strong> votes to nominate one or two of your teammates who you think contribute the most to your group project.</p></li>
+<li><p>You can nominate</p>
+<ul>
+<li>two teammates, each receiving one vote.</li>
+<li>one teammate who receives two votes.</li>
+</ul></li>
+<li><p>You <strong>cannot</strong> nominate yourself.</p></li>
+<li><p>If you <strong>don’t</strong> vote, or you just use <strong>one vote</strong>, you can’t be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward.</p></li>
+<li><p>If there are more than two group members receive top two number of votes, Dr.&nbsp;Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr.&nbsp;Yu and the TA choose either Emma or Amy for the reward.</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/math3570-s26\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./present-work.html" class="pagination-link" aria-label="Topics and Works">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Topics and Works</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./present-work-final.html" class="pagination-link" aria-label="Project Group and Proposal">
+        <span class="nav-page-text">Project Group and Proposal</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Cheng-Han Yu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/present-description-final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

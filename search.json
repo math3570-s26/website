@@ -15,18 +15,7 @@
     "href": "course-syllabus.html#time-and-location",
     "title": "Syllabus",
     "section": "Time and location",
-    "text": "Time and location\n\n\n\n\n\n\n\n\n\nDay and Time\nLocation\n\n\n\n\nLectures\nTu & Th 2:00 - 3:15 PM\nLalumiere Language Hall 232\n\n\nOffice hours\nTu & Th 4:50 - 5:50 PM; Wed 12 - 1 PM\nCudahy Hall 353\n\n\nTA Help Desk\nTo be determined (TBD)\nTBD\n\n\nLab Section\nNone\nNone",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#ta-information",
-    "href": "course-syllabus.html#ta-information",
-    "title": "Syllabus",
-    "section": "TA Information",
-    "text": "TA Information\n\nName: Qishi Zhan\nEmail: qishi.zhan@marquette.edu",
+    "text": "Time and location\n\n\n\n\n\n\n\n\n\nDay and Time\nLocation\n\n\n\n\nLectures\nTu & Th 2:00 - 3:15 PM\nCudahy Hall 120\n\n\nOffice hours\nTu & Th 3:30 - 4:30 PM; Wed 2 - 3 PM\nCudahy Hall 353",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -66,6 +55,28 @@
     ]
   },
   {
+    "objectID": "course-syllabus.html#course-management",
+    "href": "course-syllabus.html#course-management",
+    "title": "Syllabus",
+    "section": "Course Management",
+    "text": "Course Management\n\nAll course materials are posted on our course website https://math3570-s26.github.io/website/.\nCourse grades are saved and managed in D2L &gt; Assessments &gt; Grades.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nThere is no required textbook for this course. Course materials will consist of Dr. Yu’s slides, lab notebooks, and online references.\nBelow are useful references for deeper study.\n\n(r4ds) R for Data Science (2e) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\n(tmr) Tidy Modeling with R by Max Kuhn and Julia Silge.\n(py4da) Python for Data Analysis (3e) by Wes McKinney.\n(IS) Introduction to Statistics by Cheng-Han Yu. (Good resource for brushing up your basic probability, statistics and simple linear regression knowledge.)",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
     "objectID": "course-syllabus.html#e-mail-policy",
     "href": "course-syllabus.html#e-mail-policy",
     "title": "Syllabus",
@@ -77,44 +88,33 @@
     ]
   },
   {
-    "objectID": "course-syllabus.html#textbooks",
-    "href": "course-syllabus.html#textbooks",
-    "title": "Syllabus",
-    "section": "Textbooks",
-    "text": "Textbooks\n\nNo textbook is required for this course. Course materials are mainly Dr. Yu’s slides. Below are some good references.\n\n(r4ds) R for Data Science (2e) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\n(tmwr) Tidy Modeling with R by Max Kuhn and Julia Silge.\n(py4da) Python for Data Analysis by Wes McKinney.\n(IS) Introduction to Statistics by Cheng-Han Yu. (Good resource for brushing up your basic probability, statistics and simple linear regression knowledge.)",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
     "objectID": "course-syllabus.html#grading-policy",
     "href": "course-syllabus.html#grading-policy",
     "title": "Syllabus",
     "section": "Grading Policy",
-    "text": "Grading Policy\n\nYour grade is from the following categories and distribution\n\n30% In-class lab exercises and participation.\n30% Homework\n15% Midterm mini project\n25% Final project competition\nExtra credit opportunities\n\nEvery student has to participate (in-person) in the final presentation to pass the course.\nYou will NOT be allowed any extra credit projects/homework/exam to compensate for a poor grade. Everyone is given the same opportunity to do well in this class. I may use class participation to make grade adjustments at the end of the semester.\nThe final grade is based on the grade-percentage conversion Table 1 on the next page. \\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.1 is in \\([94, 100]\\) and the grade is A and 93.8 is in \\([90, 94)\\) and the grade is A-.\n\n\n\n\nGrade-Percentage Conversion\n\n\nGrade\nPercentage\n\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[73, 77)\n\n\nC-\n[70, 73)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)\n\n\n\n\n\n\nLab exercises\n\nThere are several in-class lab exercises, which are graded as complete/incomplete and used as evidence of attendance and class participation.\nYou are allowed to have one incomplete lab exercise without penalty. Beyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\n\n\n\n\nHomework\n\nThe homework assignments are individual. You should submit your own work.\nYou may not directly share or discuss answers/code with anyone other than the instructor. But you are welcome to discuss the problems in general and ask for advice.\nHomework will be assigned through GitHub. You need to clone/pull the homework repo into Posit Cloud and work on the Quarto file in the repo. A step-by-step guide will be discussed in class before homework is assigned.\nYou will have at least one week to complete your assignment.\nNo make-up homework for any reason unless you have excused absences.\nIf you miss a homework assignment due to excused absence, the homework percentage will be added to your final project. If you miss more than one assignment, only one assignment percentage can be added to the final project percentage. You get 0% for the other assignment.\n\n\n\nMidterm mini project\n\nYou will be team up to do the midterm mini project.\nMore details about the mini project presentation will be released later.\n\n\n\nFinal project competition\n\nYou will be team up to do the final project. Your project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nIntroduce a programming language not learned in class for doing data science, including live demo, Julia, SQL, MATLAB, SAS for example.\nWeb development: Shiny website or dashboard, including live demo\n\nDetails about the project will be provided as the course progresses. You must complete the final project and be in class to present it in order to pass this course.\n\n\n\n\n\nThe final project presentation is on Thursday, May 1, 2 PM and Monday, May 5, 10:30 AM - 12:30 PM.",
+    "text": "Grading Policy\n\nYour grade is from the following categories and distribution\n\n30% In-class lab activities and participation.\n45% Mini projects\n25% Final project competition\nExtra credit opportunities\n\nEvery student has to participate (in-person) in the final presentation to pass the course.\nThere will be no individualized extra credit homework/project/exercise/exam to compensate for a poor grade. All students have the same opportunities to succeed. Class participation may be used for grade adjustments at the end of the semester.\nThe final grade is based on the grade-percentage conversion Table 1 on the next page. \\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.1 is in \\([94, 100]\\) and the grade is A and 93.8 is in \\([90, 94)\\) and the grade is A-.\n\n\n\n\nGrade-Percentage Conversion\n\n\nGrade\nPercentage\n\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[73, 77)\n\n\nC-\n[70, 73)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)\n\n\n\n\n\n\nLab activities\n\nIn-class labs are short activities that you complete during class, often in small groups. They are usually graded as complete or incomplete.\nIn class labs are used as evidence of both attendance and participation.\nYou may have up to two missing or incomplete labs without penalty.\nFor each additional missing or incomplete lab, 2 percentage points will be deducted from your final course percentage.\nMany labs will explicitly involve generative AI. For example,\n\ndebugging AI generated code\nrewriting AI generated explanations for clarity\ncomparing your own solution to an AI solution\n\nYou must follow the generative AI policy described below.\n\n\n\nMidterm mini projects\n\nYou will work in a team on 3 midterm mini projects.\nThis project will focus on a subset of the course content up to that point, for example data wrangling and visualization or a simple predictive model.\nThe mini projects will include\n\nA documented GitHub repository.\nA Quarto report describing your question, data, methods, and findings.\nA short in-class group presentation.\nAn AI usage documents that shows how you used generative AI and how you verified any AI generated content.\n\nMore detailed instructions and rubric will be provided later in the semester.\n\n\n\nFinal project competition\n\nThe final project is a team based competition. Each team will choose one of the following directions or a related idea approved by the instructor.\n\nA data analysis project using statistical models or machine learning algorithms.\nA tutorial style project that introduces an R or Python package not covered in class, including a live demo.\nA project that introduces and demonstrates a (AI) data science tool for visualization, computing, or workflow that was not used in class, including a live demo.\nA project that introduces another programming language for data science, for example Julia, SQL, MATLAB, or SAS, with a live demo.\nA web development project such as a Shiny app or dashboard with a live demo.\n\nYou must complete the final project and be present for the presentation to pass this course.\nEach project must include an AI usage appendix that documents prompts, outputs, and team decisions about what to trust, modify, or reject.\nThe final project presentation is on Thursday, May 1, 2 PM and Monday, May 5, 10:30 AM - 12:30 PM.",
     "crumbs": [
       "Course information",
       "Syllabus"
     ]
   },
   {
-    "objectID": "course-syllabus.html#generative-ai-and-sharingreusing-code-policy",
-    "href": "course-syllabus.html#generative-ai-and-sharingreusing-code-policy",
+    "objectID": "course-syllabus.html#sec-genai",
+    "href": "course-syllabus.html#sec-genai",
     "title": "Syllabus",
-    "section": "Generative AI and Sharing/Reusing Code Policy",
-    "text": "Generative AI and Sharing/Reusing Code Policy\n\nGenerative AI \n\nYou are responsible for the content of all work submitted for this course. You may use generative AI tools such as ChatGPT or DALL-E to generate a first draft of text for your assignments, provided that this use is documented and cited.\n\n\n\nSharing/Reusing Code\n\nUnless explicitly stated otherwise, you may make use of any online resources, but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solutions.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.",
+    "section": "Generative Artificial Intelligence (GenAI) Policy",
+    "text": "Generative Artificial Intelligence (GenAI) Policy\n\nYou are responsible for the content of all work submitted for this course.\nFor your homework, take-home exams, and project, you are allowed to use generative AI tools such as ChatGPT to generate a draft of text of your work.\nTo avoid any academic integrity issue, you must cite your AI usage, or screenshot your entire AI usage history. Check the followings on how to cite it.\n\nHow to cite ChatGPT\nHow to Cite AI-Generated Content\n\nIf you use GenAI, please include the followings in your submitted work:\n\nHow I used AI (prompts or questions)\nGenerated output (screenshot or copy-paste excerpt)\nHow I used the output\n\n\nHere is an example.\n\nHow I used AI (prompts and questions)\n\nI asked ChatGPT to generate a histogram using R.\n\nGenerated output (screenshot or copy-paste excerpt)\n\n\n\n\n\n\n\n\n\n\n\nHow I used the output\n\nI reviewed the suggestions, but I did not use the exact code. Instead, I change the code format and breaks value to 50.",
     "crumbs": [
       "Course information",
       "Syllabus"
     ]
   },
   {
-    "objectID": "course-syllabus.html#university-and-college-policies",
-    "href": "course-syllabus.html#university-and-college-policies",
+    "objectID": "course-syllabus.html#academic-integrity",
+    "href": "course-syllabus.html#academic-integrity",
     "title": "Syllabus",
-    "section": "University and college policies",
-    "text": "University and college policies\nAs a student in this course, you have agreed to comply with Marquette undergraduate policies and regulations.",
+    "section": "Academic Integrity",
+    "text": "Academic Integrity\n\nWatch this video about academic integrity issue of using GenAI.\nThis course expects all students to follow University and College statements on academic integrity.\nHonor Pledge and Honor Code: I recognize the importance of personal integrity in all aspects of life and work. I commit myself to truthfulness, honor, and responsibility, by which I earn the respect of others. I support the development of good character, and commit myself to uphold the highest standards of academic integrity as an important aspect of personal integrity. My commitment obliges me to conduct myself according to the Marquette University Honor Code.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -136,7 +136,7 @@
     "href": "course-syllabus.html#important-dates",
     "title": "Syllabus",
     "section": "Important dates",
-    "text": "Important dates\n\nJan 21: Last day to add/swap/drop\nMar 10-16: Spring break\nMar 11: Midterm grade submission\nApr 11: Withdrawal deadline\nApr 17 - Apr 20: Easter break\nMay 3: Last day of class\nMay 1: Final project presentation I\nMay 5: Final project presentation II\nMay 13: Final grade submission\n\nClick here for the full Marquette academic calendar.",
+    "text": "Important dates\n\nJan 20: Last day to add/swap/drop\nMar 8-14: Spring break\nMar 10: Midterm grade submission\nApr 2-6: Easter break\nApr 10: Withdrawal deadline\nMay 2: Last day of class\nMay 4: Final project presentation\nMay 12: Final grade submission\n\nClick here for the full Marquette academic calendar.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -493,80 +493,666 @@
     "text": "Note\n\n\n\n\n\n\nIn lab.qmd ## Lab 13 section,\n\nImport the data penguins.csv.\nGenerate the following\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n# library(tidyverse)\npenguins &lt;- read_csv(__________________)\n________ |&gt; ggplot(_______________________) +  ## mapping layer  \n    ___________________ +  ## geometry layer\n    _____________________________  ## label layer\n\n  \n\n________ |&gt; ggplot(______________________________) +  ## mapping layer  \n    _______________ +  ## geometry layer\n    _______________ +  ## label layer\n    ______________________________  +   ## facet layer\n    ______________________________      ## theme layer (set legend.position = \"none\")"
   },
   {
-    "objectID": "course-news.html",
-    "href": "course-news.html",
-    "title": "News/Announcements",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2026)",
     "section": "",
-    "text": "Any announcement will be posted in this page. The latest news will also be put on top of the main page.",
+    "text": "This schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nMaterials\nLab Activity\nHomework\nProject\n\n\n\n\n1\nTue, Jan 13\nGreetings; Overview of Data Science\n🖥️syllabus 🖥️overview\n\n\n\n\n\n\nThu, Jan 15\nPosit Cloud; AI in Data Science Workflows\n🖥️posit\n📋 posit 📋01\n\n\n\n\n2\nTue, Jan 20\nGit and GitHub\n\n\n\n\n\n\n\nThu, Jan 22\nQuarto: YAML and Markdown\n🖥️git\n📋github\n\n\n\n\n3\nTue, Jan 27\nQuarto: Code Chunk\n🖥️quarto\n📋02 📋03 📋04\n\n\n\n\n\nThu, Jan 29\nAI Prompts for Coding and Documenting\n\n\n\n\n\n\n4\nTue, Feb 3\nR and Python Syntax\n🖥️syntax\n📋05\n\n\n\n\n\nThu, Feb 5\nR Tidyverse\n\n📋06 📋 07(opt)\n✍️ HW1\n\n\n\n5\nTue, Feb 10\nPython NumPy/Pandas\n🖥️package\n📋08\n\n\n\n\n\nThu, Feb 12\nData Importing\n\n📋09\n\n\n\n\n6\nTue, Feb 17\nData Visualization-ggplot2\n🖥️import\n📋10\n\n\n\n\n\nThu, Feb 19\nData Visualization-categorical and numerical data\n🖥️ggplot\n📋11 📋12\n\n\n\n\n7\nTue, Feb 24\nMini Project 1 Presentation: Exploratory Data Storytelling\n🖥️visualization\n📋13\n\n\n\n\n\nThu, Feb 26\nInteractive Data Visualization\n🖥️interactive-viz\n📋14 (opt)\nHW 1 Due\n✅ Team up Due\n\n\n8\nTue, Mar 3\nData Wrangling - one data frame\n🖥️dplyr-1\n📋15\n\n\n\n\n\nThu, Mar 5\nData Wrangling - two data frames\n🖥️dplyr-2\n📋16\n\n✅ Proposal Due\n\n\n9\nTue, Mar 10\nNO CLASS: Spring break\n\n📋 Lab Solution\n\n\n\n\n\nThu, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n10\nTue, Mar 17\nData Wrangling - tidyr\n🖥️tidyr\n📋17\n✍️ HW2\n✅ Materials Due\n\n\n\nThu, Mar 19\nProbabilistic and Statistical Simulation\n\n\n\n\n\n\n11\nTue, Mar 24\nMini Project 2 Presentation: Data Wrangling and Pipelines\n🖥️probstat\n📋18\n\n\n\n\n\nThu, Mar 26\nLinear Regression\n\n📋19\n\n\n\n\n12\nTue, Mar 31\nMultipl Linear Regression\n🖥️linear-regression\n📋20\n\n\n\n\n\nThu, Apr 2\nNO CLASS: Easter break\n\n\nHW 2 Due\n\n\n\n13\nTue, Apr 7\nLogistic Regression\n🖥️logistic-regression\n📋21\n✍️ HW3\n\n\n\n\nThu, Apr 9\nK-Nearest Neighbors\n\n\n\n\n\n\n14\nTue, Apr 14\nMini Project 3 Presentation: Supervised Learning\n🖥️ K-Nearest Neighbors\n📋22\n\n\n\n\n\nThu, Apr 16\nPrincipal Component Analysis\n\n\n\n\n\n\n15\nTue, Apr 21\nPrincipal Component Analysis\n🖥️Principal Component Analysis\n\n\n\n\n\n\nThu, Apr 23\nK-Means Clustering\n\n📋23\n\nFinal Project Proposal Due\n\n\n16\nTue, Apr 28\nK-Means Clustering\n🖥️K-means Clustering\n📋24\n\n\n\n\n\nThu, Apr 30\nDashboards and Websites\n\n\nExtension: HW 3 Due\n\n\n\n17\nMon, May 4\nFinal Project Presentation\n\n\n\nFinal Project Materials Due\n\n\n\n\nDr. Yu reserves the right to make changes to the schedule.",
     "crumbs": [
       "Course information",
-      "News/Annoucements"
+      "Schedule"
     ]
   },
   {
-    "objectID": "course-news.html#jan-17-2025",
-    "href": "course-news.html#jan-17-2025",
-    "title": "News/Announcements",
-    "section": "Jan 17, 2025",
-    "text": "Jan 17, 2025\n\nTA help desk hours at Cudahy Hall 301\n\nMonday: 1 – 2 PM\nTuesday: 12 – 1 PM,\nThursday: 12 – 2 PM",
-    "crumbs": [
-      "Course information",
-      "News/Annoucements"
-    ]
-  },
-  {
-    "objectID": "course-news.html#jan-14-2025",
-    "href": "course-news.html#jan-14-2025",
-    "title": "News/Announcements",
-    "section": "Jan 14, 2025",
-    "text": "Jan 14, 2025\n\nNo office hours first week.",
-    "crumbs": [
-      "Course information",
-      "News/Annoucements"
-    ]
-  },
-  {
-    "objectID": "course-news.html#jan-7-2025",
-    "href": "course-news.html#jan-7-2025",
-    "title": "News/Announcements",
-    "section": "Jan 7, 2025",
-    "text": "Jan 7, 2025\n\nThe background survey form is at https://forms.office.com/r/3ntBAWupYS.",
-    "crumbs": [
-      "Course information",
-      "News/Annoucements"
-    ]
-  },
-  {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2025)",
+    "objectID": "present-description-final.html",
+    "href": "present-description-final.html",
+    "title": "MATH/COSC 3570 Final Project Presentation",
     "section": "",
-    "text": "This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic R and Python programming, Git and GitHub, and interactive publishing system Quarto. Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R tidyverse and tidymodels packages. For Python, Pandas, NumPy, and Scikit-Learn libraries are introduced.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
+    "text": "This is the latest version of project guideline. It may be revised later.\nThe final project is about new tools or data analysis. Show your fun project! Let’s go!! 😎"
   },
   {
-    "objectID": "activity/act_knn.html",
-    "href": "activity/act_knn.html",
-    "title": "In-class Activity: Dogs or Cats",
+    "objectID": "present-description-final.html#meeting",
+    "href": "present-description-final.html#meeting",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Meeting",
+    "text": "Meeting\n\nYou lose 5 points of your project grade if you don’t meet the requirement or don’t meet with Dr. Yu at least once.\nPlease choose a meeting time in the Excel form.\nYou must let Dr. Yu know in advance if you need to change your meeting time.\nYou can change your meeting time once.\nBriefly talk about your project idea."
+  },
+  {
+    "objectID": "present-description-final.html#proposal",
+    "href": "present-description-final.html#proposal",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Proposal",
+    "text": "Proposal\n\nEach one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.\nYour proposal (in PDF) should include three parts:\n\nProject title\nMembers duty. For example,\n\nJohn and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc.\n\nThe description of the data set you use in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in ?@sec-data.\nThe goal of your project. For example, what are questions you’d like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested?\n\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else."
+  },
+  {
+    "objectID": "present-description-final.html#presentation",
+    "href": "present-description-final.html#presentation",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Presentation",
+    "text": "Presentation\n\nEach one of you loses 5 points of your project grade if you don’t meet the presentation requirement.\nEach group presentation is about 15 and 16 minute long, followed by about 1 to 2 minutes Q&A.\nFour groups present on May 1, and six on May 5. Presentation order is decided by random sampling.\nEvery student has to participate (in-person) in the final presentation in order to pass the course.\nEvery group member has to present some part of the group work. The one who does not present receives no point.\nEveryone is welcome to ask any questions about the projects. It helps everyone evaluate every group’s project and presentation performance. See Section 4 for grading policy.\nEach group is required to ask as least one question.\n\nThe \\(k\\)-th group should ask at least one question to the \\((k+1)\\)-th group in Q&A, \\(k = 1, \\dots, 9\\).\nThe last group to present will ask the first group questions about their project."
+  },
+  {
+    "objectID": "present-description-final.html#materials",
+    "href": "present-description-final.html#materials",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Materials",
+    "text": "Materials\n\nEach one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, etc so that anyone is able to reproduce your outputs and plots shown in the slides.\nThe code must be shared via a Quarto file."
+  },
+  {
+    "objectID": "present-description-final.html#rpython-packages",
+    "href": "present-description-final.html#rpython-packages",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "R/Python Packages",
+    "text": "R/Python Packages\nFor your R/Python package project,\n\nyou need to\n\nshow how and why the package greatly helps us do data science.\nexplain how to use the functions in the packages by providing data science examples with some real data set.\nPlease don’t use the toy examples in the package documentation.\n\nIf the functions of the package return any results or outputs, please explain them, teaching your audience how to appropriately read the outputs.\nIf the functions return graphics, explain why the visualizations are informative and useful for understanding data and analysis results.\nYou can choose a package that helps us do what we cannot do with the packages and tools learned in class.\n\nFor example, we only learn readr and readxl packages to help us import data files into R, and we don’t know how to extract data from a website. The rvest package helps us scrape data from web pages.\n\nIf you choose a package that provides the same functionality as the packages we learned, please show the packages you choose are better.\n\nFor example, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc. For example, data.table package provides a high-performance version of base R’s data.frame with syntax and feature enhancements for ease of use, convenience and programming speed.\n\nBelow are a list of popular R packages that you can start with.\n\nQuick list of useful R packages\nFavorite R Packages by Roel Verbelen\nGreat R packages for data import, wrangling, and visualization\n\nBelow are a list of popular Python packages that you can start with.\n\nTop 26 Python Libraries for Data Science in 2025\n20 Python Libraries for Data Science\n\nYou can introduce other data science software or tools, such as Tableau, D3.js, KNIME, etc. Make sure you demo them with an understandable example."
+  },
+  {
+    "objectID": "present-description-final.html#data-analysis",
+    "href": "present-description-final.html#data-analysis",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Data Analysis",
+    "text": "Data Analysis\nFor your data analysis project,\n\nYou need to show that you are good at asking meaningful questions and answering them with results of data analysis.\nYour presentation should include data visualization. Your graphics should be informative that help you\n\nexplore relationships between variables in your data\ndecide which statistical/machine learning model is used, so that your research questions can be properly answered.\n\nYou should discuss how and why statistical methods/machine learning algorithms are chosen for analyzing your data set.\n\nThe methods we learn in class may not be appropriate for your data and answering your research questions. If this happens, critique your own methods and provide suggestions for improving your analysis. Any issues of your data, and appropriateness of the statistical analysis should be discussed.\n\nYou can choose a data set that is publicly available or you may collect your own data using a survey or by conducting an experiment. The dataset you choose cannot be any datasets used in class, including homework assignments and lab exercises."
+  },
+  {
+    "objectID": "present-description-final.html#group-performance-evaluation",
+    "href": "present-description-final.html#group-performance-evaluation",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Group Performance Evaluation",
+    "text": "Group Performance Evaluation\n\nInstructor Evaluation\n\nDr. Yu and the TA evaluate your group performance based on the four criteria\n\nProject Content and Organization\nPresentation Material (Slides) Quality\nOral Presentation Skill and Delivery\nInteractions and Q&A\n\nHow do you get the full points for each category? Check the requirements below. Note that for Content and Organization, data analysis and package projects have different requirements.\nContent and Organization (Data Analysis)\n\nBeautiful visualization helps find out relationship of variables and specification of models\nAll questions are answered accurately by the models\nDiscuss how and why the models are chosen\nApply sophisticated models and detailed analysis\nAll ideas are presented in logical order\n\nContent and Organization (Packages)\n\nShow how and why the package greatly helps us do data science\nExplain how to use the functions in the package by providing concrete real data science applications and examples with data sets\nTeach audience with understandable examples of how to appropriately read the outputs and/or why the visualizations are informative and useful for understanding data and analysis results\nShow the package is better in some sense, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc\nAll ideas are presented in logical order\n\nPresentation Material Quality\n\nPresentation material show code and output beautifully\nPresentation material clearly aid the speaker in telling a coherent story\nAll tables and graphics are informative and related to the topic and make it easier to understand\nAttractive design, layout, and neatness.\n\nOral Presentation Skill\n\nGood volume and energy\nProper pace and diction\nAvoidance of distracting gestures\n\nInteractions and Q&A\n\nGood eye contact with audience\nExcellent listening skills\nAnswers audience questions with authority and accuracy\n\n\n\n\n\n\n\n\n\n\n\n\n\nPeer Group Evaluation\n\n\n\n\n\n\n\n\n\n\nPlease go to the link or scan the QR code to vote your top 3 projects!\nYou choose your top 3 teams (Gold🥇, Silver🥈, Bronze🥉)\nYou cannot nominate your team as one of the top 3.\nMate Favorite Score (MFS) = \\(🥇 \\times 5 + 🥈 \\times 3 + 🥉 \\times 1\\)\nThe team project grade is a combination of instructor evaluation scores and MFS.\n\n\nIf you don’t participate, your team loses 2 points."
+  },
+  {
+    "objectID": "present-description-final.html#peer-individual-performance-evaluation",
+    "href": "present-description-final.html#peer-individual-performance-evaluation",
+    "title": "MATH/COSC 3570 Final Project Presentation",
+    "section": "Peer Individual Performance Evaluation",
+    "text": "Peer Individual Performance Evaluation\n\n\n\n\n\n\n\n\n\n\nPlease go to the link or scan the QR code to nominate the best contributor!\nIn each team, two group members will win the best contribution reward that add extra points to the project grade.\nEach one of you has two votes to nominate one or two of your teammates who you think contribute the most to your group project.\nYou can nominate\n\ntwo teammates, each receiving one vote.\none teammate who receives two votes.\n\nYou cannot nominate yourself.\nIf you don’t vote, or you just use one vote, you can’t be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward.\nIf there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward."
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html",
+    "href": "activity/act_two-truth-one-lie.html",
+    "title": "In-class Activity: Two truths and a lie",
     "section": "",
-    "text": "The following activity practices K Nearest Neighbors."
+    "text": "The following activity demonstrates probability calibration."
   },
   {
-    "objectID": "activity/act_knn.html#team-activity-dogs-or-cats",
-    "href": "activity/act_knn.html#team-activity-dogs-or-cats",
-    "title": "In-class Activity: Dogs or Cats",
-    "section": "[Team] Activity: Dogs or Cats",
-    "text": "[Team] Activity: Dogs or Cats\n\n\n\n\n\n\n\n\n\nHere we use features Body Size and Food Intake to classify cats and dogs. The training data are shown as cat or dog images, and there are three test data to be labeled: green, red, and blue points.\nConsider K Nearest Neighbors with \\(K = 1, 2, 3, 4\\), and discuss the following questions."
+    "objectID": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
+    "href": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "[Team] Activity: Two truths and a lie 1",
+    "text": "[Team] Activity: Two truths and a lie 1\n\n\n\n\n\n\n\n\n\nWithin your group:\n\nOne person tells three personal statements one of which is a lie.\nOthers discuss and guess which statement is the lie and they jointly construct a numerical statement of their certainty in the guess on a 0–10 scale.\nThe storyteller reveals which was the lie.\nEnter the certainty estimate and the outcome success or failure and submit in the Microsoft form.\nRotate through everyone in your group so that each person plays the storyteller role once."
   },
   {
-    "objectID": "activity/act_knn.html#discussion",
-    "href": "activity/act_knn.html#discussion",
-    "title": "In-class Activity: Dogs or Cats",
+    "objectID": "activity/act_two-truth-one-lie.html#discussion",
+    "href": "activity/act_two-truth-one-lie.html#discussion",
+    "title": "In-class Activity: Two truths and a lie",
     "section": "Discussion",
-    "text": "Discussion\n\n\n\n\n\n\nCautionFor which test data point, the classification result is uncertain or unstable?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWhich data point can be labelled as one particular category with 100% certainty, for all different \\(K\\)s?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionFor the blue point, what happened when \\(K\\) increases? Do we change the prediction? What about uncertainty?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionIf you would like to make a classification rule or set the decision boundary to predict cats or dogs, what would the decision boundary look like? Why?"
+    "text": "Discussion\n\n\n\n\n\n\nCautionWhat do you think the range of centainty scores will look like?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWill there be a positive relation between \\(x\\) and binary \\(y\\): are guesses with higher certainty be more accurate, on average?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionHow strong will the relation be between \\(x\\) and \\(y\\): what will the curve look like?"
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html#footnotes",
+    "href": "activity/act_two-truth-one-lie.html#footnotes",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nActive Statistics, Page 179.↩︎"
+  },
+  {
+    "objectID": "weeks/week-15.html",
+    "href": "weeks/week-15.html",
+    "title": "Week 15",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-15.html#participate",
+    "href": "weeks/week-15.html#participate",
+    "title": "Week 15",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Principal Component Analysis\nr fontawesome::fa(\"table\") USArrests"
+  },
+  {
+    "objectID": "weeks/week-15.html#reading",
+    "href": "weeks/week-15.html#reading",
+    "title": "Week 15",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-15.html#exercise",
+    "href": "weeks/week-15.html#exercise",
+    "title": "Week 15",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-23 Principal Component Analysis\nr fontawesome::fa(\"table\") iris\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-16.html",
+    "href": "weeks/week-16.html",
+    "title": "Week 16",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-16.html#participate",
+    "href": "weeks/week-16.html#participate",
+    "title": "Week 16",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - K-Means Clustering\n Data - clus_data"
+  },
+  {
+    "objectID": "weeks/week-16.html#reading",
+    "href": "weeks/week-16.html#reading",
+    "title": "Week 16",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-16.html#exercise",
+    "href": "weeks/week-16.html#exercise",
+    "title": "Week 16",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-24 K-Means Clustering\n palmerpenguins::penguins\n\nlibrary(palmerpenguins)\npeng &lt;- penguins[complete.cases(penguins), ] |&gt; \n    select(flipper_length_mm, bill_length_mm)\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-5-old.html",
+    "href": "weeks/week-5-old.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-5-old.html#participate",
+    "href": "weeks/week-5-old.html#participate",
+    "title": "Week 6",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Data Importing\nr fontawesome::fa(\"table\") murders.csv\nr fontawesome::fa(\"table\") df-na.csv\nr fontawesome::fa(\"table\") cars.rds\nr fontawesome::fa(\"table\") 2010_bigfive_regents.xls"
+  },
+  {
+    "objectID": "weeks/week-5-old.html#reading-and-resources",
+    "href": "weeks/week-5-old.html#reading-and-resources",
+    "title": "Week 6",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Data Import\n📖 R for Data Science - Data Visualization"
+  },
+  {
+    "objectID": "weeks/week-5-old.html#exercise",
+    "href": "weeks/week-5-old.html#exercise",
+    "title": "Week 6",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-10 Data Importing\nr fontawesome::fa(\"table\") ssa_male_prob.csv\nr fontawesome::fa(\"table\") ssa_female_prob.Rds\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-13.html",
+    "href": "weeks/week-13.html",
+    "title": "Week 13",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-13.html#participate",
+    "href": "weeks/week-13.html#participate",
+    "title": "Week 13",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Logistic Regression\nr fontawesome::fa(\"table\") Data - body"
+  },
+  {
+    "objectID": "weeks/week-13.html#reading",
+    "href": "weeks/week-13.html#reading",
+    "title": "Week 13",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-13.html#exercise",
+    "href": "weeks/week-13.html#exercise",
+    "title": "Week 13",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-21 Logistic Regression\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 10",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-10.html#participate",
+    "href": "weeks/week-10.html#participate",
+    "title": "Week 10",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Tidying Data\n🖥️ Slides - Probability and Statistics"
+  },
+  {
+    "objectID": "weeks/week-10.html#exercise",
+    "href": "weeks/week-10.html#exercise",
+    "title": "Week 10",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-17 tidyr\nr fontawesome::fa(\"table\") trump.csv\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-3.html",
+    "href": "weeks/week-3.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-3.html#participate",
+    "href": "weeks/week-3.html#participate",
+    "title": "Week 3",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Quarto\n🖥️ Slides - R/Python Syntax"
+  },
+  {
+    "objectID": "weeks/week-3.html#exercise",
+    "href": "weeks/week-3.html#exercise",
+    "title": "Week 3",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting"
+  },
+  {
+    "objectID": "weeks/week-3.html#reading-and-resources",
+    "href": "weeks/week-3.html#reading-and-resources",
+    "title": "Week 3",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-4.html",
+    "href": "weeks/week-4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-4.html#participate",
+    "href": "weeks/week-4.html#participate",
+    "title": "Week 4",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - R/Python Syntax"
+  },
+  {
+    "objectID": "weeks/week-4.html#reading-and-resources",
+    "href": "weeks/week-4.html#reading-and-resources",
+    "title": "Week 4",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib"
+  },
+  {
+    "objectID": "weeks/week-4.html#perform",
+    "href": "weeks/week-4.html#perform",
+    "title": "Week 4",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-7.html",
+    "href": "weeks/week-7.html",
+    "title": "Week 7",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-7.html#participate",
+    "href": "weeks/week-7.html#participate",
+    "title": "Week 7",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides -Visualizing Data\n🖥️ Slides - Interactive Visualization\nr fontawesome::fa(\"table\") Data - loans\nr fontawesome::fa(\"table\") Data - Murders"
+  },
+  {
+    "objectID": "weeks/week-7.html#reading-and-resources",
+    "href": "weeks/week-7.html#reading-and-resources",
+    "title": "Week 7",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 More add-on r emo::ji(\"package\"): ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS\n📖 R for Data Science - Data Transformation"
+  },
+  {
+    "objectID": "weeks/week-7.html#exercise",
+    "href": "weeks/week-7.html#exercise",
+    "title": "Week 7",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-12 Faceting\n📋 Lab-13 Visualization\n📋 Lab-14 Interactive Visualization (Present)\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "present-work.html",
+    "href": "present-work.html",
+    "title": "Midterm Visualization Project",
+    "section": "",
+    "text": "The Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nHow do game sales correlate to console popularity by global region\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nNo Project Title\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow do Movies and Tv Shows differ by Country?\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap"
+  },
+  {
+    "objectID": "present-work.html#group-projects-proposal",
+    "href": "present-work.html#group-projects-proposal",
+    "title": "Midterm Visualization Project",
+    "section": "",
+    "text": "The Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nHow do game sales correlate to console popularity by global region\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nNo Project Title\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow do Movies and Tv Shows differ by Country?\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap"
+  },
+  {
+    "objectID": "present-work.html#presentation-order",
+    "href": "present-work.html#presentation-order",
+    "title": "Midterm Visualization Project",
+    "section": "Presentation order",
+    "text": "Presentation order\n\nteam &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(3570)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Intermediate Wizards\"  \"Data Detectives\"       \"Analytics Avengers\"   \n [4] \"The Outliers\"          \"The Whales\"            \"Block Blasters\"       \n [7] \"The Back Right corner\" \"Hala Madrid\"           \"Syntax Squad\"         \n[10] \"Noname\""
+  },
+  {
+    "objectID": "present-work.html#presentation-slides",
+    "href": "present-work.html#presentation-slides",
+    "title": "Midterm Visualization Project",
+    "section": "Presentation Slides",
+    "text": "Presentation Slides\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nThe Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nVideo Game Sales\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow Does Netflix Differ between North America and Asia?\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nGlobal Video Game Sales Assessment\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nNBA Shots Analysis (2001 - Present)"
+  },
+  {
+    "objectID": "present-description.html",
+    "href": "present-description.html",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "",
+    "text": "This is the latest version of project guideline. It may be revised later.\nThe midterm mini project is about data visualization. Show your fun project! Let’s go!! 😎"
+  },
+  {
+    "objectID": "present-description.html#team-up",
+    "href": "present-description.html#team-up",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Team up!",
+    "text": "Team up!\n\nYou lose 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou will be randomly assigned to a group if you do not belong to any group before the deadline."
+  },
+  {
+    "objectID": "present-description.html#proposal",
+    "href": "present-description.html#proposal",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Proposal",
+    "text": "Proposal\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYour proposal (in PDF) should include three parts:\n\nProject title\nMembers duty. For example,\n\nJohn and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc.\n\nThe description of the data set you use in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in Section 3.1.\nThe goal of your project. For example, what are questions you’d like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested?\n\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else."
+  },
+  {
+    "objectID": "present-description.html#materials",
+    "href": "present-description.html#materials",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Materials",
+    "text": "Materials\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, etc so that anyone is able to reproduce your outputs and plots shown in the slides.\nThe code must be shared via a Quarto file."
+  },
+  {
+    "objectID": "present-description.html#presentation",
+    "href": "present-description.html#presentation",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Presentation",
+    "text": "Presentation\n\nEach group presentation is about 5 and 6 minute long, followed by about 1 minute Q&A. If your presentation is too short or too long, every one of you loses 3 points of your project grade."
+  },
+  {
+    "objectID": "present-description.html#sec-data",
+    "href": "present-description.html#sec-data",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Data",
+    "text": "Data\nThe available data sets for this projects can be downloaded from kaggle, a data science competition platform sharing various data and projects. Please choose one data set for your project from the following:\n\nWorld Happiness Report\n\n\n\nSupermarket Sales Data\nNBA Players stats since 1950\nAirline Passenger Satisfaction\n\n\n\nAuto-mpg dataset\nNetflix Movies and TV Shows\nStudents Performance in Exams\nVideo Game Sales\nSpotify Tracks Dataset\nUS Census Demographic Data\n\n[Note:] Those are real data sets that contains many observations and variables. You just need to pick a few variables for plotting and analysis.\n[Note:] You may use some other data, but the data set cannot be the one used in the course (like ggplot2::mpg). The data set needs to be as sophisticated as the listed data sets above. Dr. Yu and TA will evaluate your data quality."
+  },
+  {
+    "objectID": "present-description.html#sec-grading",
+    "href": "present-description.html#sec-grading",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Evaluation and Grading",
+    "text": "Evaluation and Grading\n\nYour project performance is evaluated by Dr. Yu and the TA that is based on the following rubric:\n\n\nRubric\n\n\n\n\n\n\n\n\n\nCriteria\nExcellent\nGood\nFair\nEmerging\n\n\n\n\nData Understanding (15%)\nClearly explains the dataset, its source, and key variables. Provides meaningful insights.\nShows good understanding with clear explanations and some strong insights. A few minor details could be expanded.\nShows a basic grasp of the dataset but needs more clarity or depth in explaining its significance and insights.\nNeeds further understanding of the dataset. More details and insights would strengthen the analysis.\n\n\nVisualization Quality (30%)\nVisualizations are clear, well-chosen, and enhance understanding. Thoughtful design choices make the data engaging and accessible.\nStrong visuals that support the data well. Some minor refinements could improve clarity or impact.\nBasic visuals that convey information but could be more refined or better suited to the dataset.\nNeeds improvement in visualization selection or clarity. More attention to detail will enhance effectiveness.\n\n\nOutput Interpretation and Insights (25%)\nThoughtful and well-supported insights demonstrate strong analytical skills. Patterns and trends are clearly explained with compelling interpretations.\nProvides solid insights with good explanations. Some areas could benefit from deeper analysis.\nInsights are present but may lack depth or clear connections to the data. Some interpretations need more support.\nInsights need further development. Strengthening data interpretation will enhance overall understanding.\n\n\nSlides quality (15%)\nSlides are visually appealing, well-organized, and complement the spoken presentation. Effective use of text, images, and color enhances clarity.\nSlides are clear and well-structured but could be slightly improved in design or organization.\nSlides contain useful content but may be text-heavy, cluttered, or lack visual appeal.\nSlides need better organization and design to support the presentation effectively.\n\n\nPresentation Clarity and Interaction (15%)\nThe presentation is well-organized, engaging, and confident. The team communicates ideas effectively and transitions smoothly.\nA well-structured and clear presentation. Minor adjustments could improve flow or engagement.\nThe presentation is understandable but could be more organized or engaging. Some transitions may be unclear.\nMore practice and organization will help improve clarity and engagement.\n\n\n\n\nYour project grade will be\n\n\nProject grade = performance grade - points lost due to violation of policy\n\nwith adjustement based on your performance of duty."
+  },
+  {
+    "objectID": "present-description.html#peer-individual-performance-evaluation",
+    "href": "present-description.html#peer-individual-performance-evaluation",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "section": "Peer Individual Performance Evaluation",
+    "text": "Peer Individual Performance Evaluation\n\nIn each team, two group members will win the best contribution reward that add extra points to the project grade.\nEach one of you has two votes to nominate one or two of your teammates who you think contribute the most to your group project.\nYou can nominate\n\ntwo teammates, each receiving one vote.\none teammate who receives two votes.\n\nYou cannot nominate yourself.\nIf you don’t vote, or you just use one vote, you can’t be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward.\nIf there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward."
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+  },
+  {
+    "objectID": "present-work-final.html",
+    "href": "present-work-final.html",
+    "title": "Final Project",
+    "section": "",
+    "text": "team &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(2025)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Data Detectives\"       \"The Whales\"            \"The Outliers\"         \n [4] \"The Back Right corner\" \"Syntax Squad\"          \"Analytics Avengers\"   \n [7] \"Intermediate Wizards\"  \"Noname\"                \"Hala Madrid\"          \n[10] \"Block Blasters\"       \n\n\n\nTeams presented on May 1: Data Detectives, The Whales, The Outliers, The Back Right corner\nTeams presented on May 5: Syntax Squad, Analytics Avengers, Intermediate Wizards, Noname, Hala Madrid, Block Blasters"
+  },
+  {
+    "objectID": "present-work-final.html#presentation-order",
+    "href": "present-work-final.html#presentation-order",
+    "title": "Final Project",
+    "section": "",
+    "text": "team &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(2025)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Data Detectives\"       \"The Whales\"            \"The Outliers\"         \n [4] \"The Back Right corner\" \"Syntax Squad\"          \"Analytics Avengers\"   \n [7] \"Intermediate Wizards\"  \"Noname\"                \"Hala Madrid\"          \n[10] \"Block Blasters\"       \n\n\n\nTeams presented on May 1: Data Detectives, The Whales, The Outliers, The Back Right corner\nTeams presented on May 5: Syntax Squad, Analytics Avengers, Intermediate Wizards, Noname, Hala Madrid, Block Blasters"
+  },
+  {
+    "objectID": "present-work-final.html#group-projects-proposal",
+    "href": "present-work-final.html#group-projects-proposal",
+    "title": "Final Project",
+    "section": "Group project’s proposal",
+    "text": "Group project’s proposal\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nPractical Data Cleaning in R: A Look at the janitor Package\n\nThe Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nInteractive data with shiny\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nIntroduction to Scikit-Learn\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nIntroducing Naniar: How to put the “NA” values to use!\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nUnderstanding and Applying the ‘landscapemetrics’ Package\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nMapping Using ggspatial\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nFactors That Attribute to a Song Becoming Popular\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nMatplotlib Library Introduction\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nPlay, Predict, Profit?"
+  },
+  {
+    "objectID": "weeks/week-6.html",
+    "href": "weeks/week-6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-6.html#participate",
+    "href": "weeks/week-6.html#participate",
+    "title": "Week 6",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - ggplot2\nr fontawesome::fa(\"table\") openintro::loans_full_schema"
+  },
+  {
+    "objectID": "weeks/week-6.html#reading-and-resources",
+    "href": "weeks/week-6.html#reading-and-resources",
+    "title": "Week 6",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 More add-on r emo::ji(\"package\"): ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS"
+  },
+  {
+    "objectID": "weeks/week-6.html#exercise",
+    "href": "weeks/week-6.html#exercise",
+    "title": "Week 6",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-11 ggplot2\nr fontawesome::fa(\"table\") penguins.csv\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-5.html",
+    "href": "weeks/week-5.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-5.html#participate",
+    "href": "weeks/week-5.html#participate",
+    "title": "Week 5",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - R/Python for Data Science"
+  },
+  {
+    "objectID": "weeks/week-5.html#reading-and-resources",
+    "href": "weeks/week-5.html#reading-and-resources",
+    "title": "Week 5",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 tibbles\n📖 pipes\n📖 NumPy\n📖 pandas"
+  },
+  {
+    "objectID": "weeks/week-5.html#exercise",
+    "href": "weeks/week-5.html#exercise",
+    "title": "Week 5",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-08 tibbles and pipe\n📋 Lab-09 NumPy and pandas\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-1.html",
+    "href": "weeks/week-1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!"
+  },
+  {
+    "objectID": "weeks/week-1.html#prepare",
+    "href": "weeks/week-1.html#prepare",
+    "title": "Week 1",
+    "section": "",
+    "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!"
+  },
+  {
+    "objectID": "weeks/week-1.html#reading-and-resources",
+    "href": "weeks/week-1.html#reading-and-resources",
+    "title": "Week 1",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Introduction\n📖 R for Data Science - Whole game\n📖 RStudio IDE Cheatsheet\n📖 Posit Cloud Documentation"
+  },
+  {
+    "objectID": "weeks/week-1.html#participate",
+    "href": "weeks/week-1.html#participate",
+    "title": "Week 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Welcome to MATH/COSC 3570\n🖥️ Slides - Overview of Data Science\n🖥️ Slides - Posit Cloud\n🖥️ Slides - Git/GitHub\n\n\n\n\n\nggplot2::mpg"
+  },
+  {
+    "objectID": "weeks/week-1.html#perform",
+    "href": "weeks/week-1.html#perform",
+    "title": "Week 1",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-00 Posit Cloud\n📋 Lab-01 Running R Script\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-2.html",
+    "href": "weeks/week-2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-2.html#participate",
+    "href": "weeks/week-2.html#participate",
+    "title": "Week 2",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Git/GitHub\n🖥️ Slides - Quarto"
+  },
+  {
+    "objectID": "weeks/week-2.html#perform",
+    "href": "weeks/week-2.html#perform",
+    "title": "Week 2",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-00 Git/GitHub\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk"
+  },
+  {
+    "objectID": "weeks/week-2.html#reading-and-resources",
+    "href": "weeks/week-2.html#reading-and-resources",
+    "title": "Week 2",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n\nGit/GitHub\n📖 Create a personal access token (PAT)\n📖 Two-factor authentication\n📖 Git hands-on session within RStudio\n📖 Happy Git and GitHub for the useR\n📖 Happier version control with Git and GitHub\n\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-11.html#participate",
+    "href": "weeks/week-11.html#participate",
+    "title": "Week 11",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Probability and Statistics"
+  },
+  {
+    "objectID": "weeks/week-11.html#exercise",
+    "href": "weeks/week-11.html#exercise",
+    "title": "Week 11",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-18 Probability\n📋 Lab-19 Confidence Interval\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-12.html",
+    "href": "weeks/week-12.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-12.html#participate",
+    "href": "weeks/week-12.html#participate",
+    "title": "Week 12",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Linear Regression\nr fontawesome::fa(\"table\") ggplot2::mpg\nClass Activity: Regression to the mean"
+  },
+  {
+    "objectID": "weeks/week-12.html#reading",
+    "href": "weeks/week-12.html#reading",
+    "title": "Week 12",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-12.html#exercise",
+    "href": "weeks/week-12.html#exercise",
+    "title": "Week 12",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-20 Simple Linear Regression\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-9.html",
+    "href": "weeks/week-9.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "Important\n\n\n\n\n\n\nHappy spring break! Remember to work on your project!\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-8.html",
+    "href": "weeks/week-8.html",
+    "title": "Week 8",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-8.html#participate",
+    "href": "weeks/week-8.html#participate",
+    "title": "Week 8",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Data Wrangling (one data frame)\n🖥️ Slides - Data Wrangling - two data frames\n Data - Pop_x and elec_vote_y\n\nlibrary(tidyverse)\nlibrary(dslabs)\npop_x &lt;- murders |&gt; \n    slice(1:6) |&gt;\n    select(state, population)\n\nelec_vote_y &lt;- results_us_election_2016 |&gt; \n    filter(state %in% c(\"Alabama\", \"Alaska\", \"Arizona\", \n                        \"California\", \"Connecticut\", \"Delaware\")) |&gt; \n    select(state, electoral_votes) |&gt; \n    rename(elec_vote = electoral_votes)\n\n Data - Customers"
+  },
+  {
+    "objectID": "weeks/week-8.html#reading-and-resources",
+    "href": "weeks/week-8.html#reading-and-resources",
+    "title": "Week 8",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Joins\n📖 R for Data Science - Data tidying"
+  },
+  {
+    "objectID": "weeks/week-8.html#exercise",
+    "href": "weeks/week-8.html#exercise",
+    "title": "Week 8",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-15 dplyr\n Data - Murders\n📋 Lab-16 Joining tables\n https://www.jaredlander.com/data/DiamondColors.csv\n ggplot2::diamonds\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-14.html",
+    "href": "weeks/week-14.html",
+    "title": "Week 14",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-14.html#participate",
+    "href": "weeks/week-14.html#participate",
+    "title": "Week 14",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - K Nearest Neighbors\nr fontawesome::fa(\"table\") Data - body"
+  },
+  {
+    "objectID": "weeks/week-14.html#reading",
+    "href": "weeks/week-14.html#reading",
+    "title": "Week 14",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-14.html#exercise",
+    "href": "weeks/week-14.html#exercise",
+    "title": "Week 14",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-22 K Nearest Neighbors\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "activity/act_reg-to-the-mean.html",
@@ -611,1001 +1197,35 @@
     "text": "Footnotes\n\n\nRegression and other stories, Page 85.↩︎\nActive Statistics, Page 101.↩︎"
   },
   {
-    "objectID": "weeks/week-14.html",
-    "href": "weeks/week-14.html",
-    "title": "Week 14",
+    "objectID": "activity/act_knn.html",
+    "href": "activity/act_knn.html",
+    "title": "In-class Activity: Dogs or Cats",
     "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 14"
-    ]
+    "text": "The following activity practices K Nearest Neighbors."
   },
   {
-    "objectID": "weeks/week-14.html#participate",
-    "href": "weeks/week-14.html#participate",
-    "title": "Week 14",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - K Nearest Neighbors\nr fontawesome::fa(\"table\") Data - body",
-    "crumbs": [
-      "Weekly materials",
-      "Week 14"
-    ]
+    "objectID": "activity/act_knn.html#team-activity-dogs-or-cats",
+    "href": "activity/act_knn.html#team-activity-dogs-or-cats",
+    "title": "In-class Activity: Dogs or Cats",
+    "section": "[Team] Activity: Dogs or Cats",
+    "text": "[Team] Activity: Dogs or Cats\n\n\n\n\n\n\n\n\n\nHere we use features Body Size and Food Intake to classify cats and dogs. The training data are shown as cat or dog images, and there are three test data to be labeled: green, red, and blue points.\nConsider K Nearest Neighbors with \\(K = 1, 2, 3, 4\\), and discuss the following questions."
   },
   {
-    "objectID": "weeks/week-14.html#reading",
-    "href": "weeks/week-14.html#reading",
-    "title": "Week 14",
-    "section": "Reading",
-    "text": "Reading\n📖",
-    "crumbs": [
-      "Weekly materials",
-      "Week 14"
-    ]
-  },
-  {
-    "objectID": "weeks/week-14.html#exercise",
-    "href": "weeks/week-14.html#exercise",
-    "title": "Week 14",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-22 K Nearest Neighbors\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 14"
-    ]
-  },
-  {
-    "objectID": "weeks/week-8.html",
-    "href": "weeks/week-8.html",
-    "title": "Week 8",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 8"
-    ]
-  },
-  {
-    "objectID": "weeks/week-8.html#participate",
-    "href": "weeks/week-8.html#participate",
-    "title": "Week 8",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Data Wrangling (one data frame)\n🖥️ Slides - Data Wrangling - two data frames\n Data - Pop_x and elec_vote_y\n\nlibrary(tidyverse)\nlibrary(dslabs)\npop_x &lt;- murders |&gt; \n    slice(1:6) |&gt;\n    select(state, population)\n\nelec_vote_y &lt;- results_us_election_2016 |&gt; \n    filter(state %in% c(\"Alabama\", \"Alaska\", \"Arizona\", \n                        \"California\", \"Connecticut\", \"Delaware\")) |&gt; \n    select(state, electoral_votes) |&gt; \n    rename(elec_vote = electoral_votes)\n\n Data - Customers",
-    "crumbs": [
-      "Weekly materials",
-      "Week 8"
-    ]
-  },
-  {
-    "objectID": "weeks/week-8.html#reading-and-resources",
-    "href": "weeks/week-8.html#reading-and-resources",
-    "title": "Week 8",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 R for Data Science - Joins\n📖 R for Data Science - Data tidying",
-    "crumbs": [
-      "Weekly materials",
-      "Week 8"
-    ]
-  },
-  {
-    "objectID": "weeks/week-8.html#exercise",
-    "href": "weeks/week-8.html#exercise",
-    "title": "Week 8",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-15 dplyr\n Data - Murders\n📋 Lab-16 Joining tables\n https://www.jaredlander.com/data/DiamondColors.csv\n ggplot2::diamonds\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 8"
-    ]
-  },
-  {
-    "objectID": "weeks/week-9.html",
-    "href": "weeks/week-9.html",
-    "title": "Week 9",
-    "section": "",
-    "text": "Important\n\n\n\n\n\n\nHappy spring break! Remember to work on your project!\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 9"
-    ]
-  },
-  {
-    "objectID": "weeks/week-12.html",
-    "href": "weeks/week-12.html",
-    "title": "Week 12",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 12"
-    ]
-  },
-  {
-    "objectID": "weeks/week-12.html#participate",
-    "href": "weeks/week-12.html#participate",
-    "title": "Week 12",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Linear Regression\nr fontawesome::fa(\"table\") ggplot2::mpg\nClass Activity: Regression to the mean",
-    "crumbs": [
-      "Weekly materials",
-      "Week 12"
-    ]
-  },
-  {
-    "objectID": "weeks/week-12.html#reading",
-    "href": "weeks/week-12.html#reading",
-    "title": "Week 12",
-    "section": "Reading",
-    "text": "Reading\n📖",
-    "crumbs": [
-      "Weekly materials",
-      "Week 12"
-    ]
-  },
-  {
-    "objectID": "weeks/week-12.html#exercise",
-    "href": "weeks/week-12.html#exercise",
-    "title": "Week 12",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-20 Simple Linear Regression\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 12"
-    ]
-  },
-  {
-    "objectID": "weeks/week-11.html",
-    "href": "weeks/week-11.html",
-    "title": "Week 11",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 11"
-    ]
-  },
-  {
-    "objectID": "weeks/week-11.html#participate",
-    "href": "weeks/week-11.html#participate",
-    "title": "Week 11",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Probability and Statistics",
-    "crumbs": [
-      "Weekly materials",
-      "Week 11"
-    ]
-  },
-  {
-    "objectID": "weeks/week-11.html#exercise",
-    "href": "weeks/week-11.html#exercise",
-    "title": "Week 11",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-18 Probability\n📋 Lab-19 Confidence Interval\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 11"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html",
-    "href": "weeks/week-2.html",
-    "title": "Week 2",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#participate",
-    "href": "weeks/week-2.html#participate",
-    "title": "Week 2",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Git/GitHub\n🖥️ Slides - Quarto",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#perform",
-    "href": "weeks/week-2.html#perform",
-    "title": "Week 2",
-    "section": "Perform",
-    "text": "Perform\n📋 Lab-00 Git/GitHub\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#reading-and-resources",
-    "href": "weeks/week-2.html#reading-and-resources",
-    "title": "Week 2",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n\nGit/GitHub\n📖 Create a personal access token (PAT)\n📖 Two-factor authentication\n📖 Git hands-on session within RStudio\n📖 Happy Git and GitHub for the useR\n📖 Happier version control with Git and GitHub\n\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html",
-    "href": "weeks/week-1.html",
-    "title": "Week 1",
-    "section": "",
-    "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html#prepare",
-    "href": "weeks/week-1.html#prepare",
-    "title": "Week 1",
-    "section": "",
-    "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html#reading-and-resources",
-    "href": "weeks/week-1.html#reading-and-resources",
-    "title": "Week 1",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 R for Data Science - Introduction\n📖 R for Data Science - Whole game\n📖 RStudio IDE Cheatsheet\n📖 Posit Cloud Documentation",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html#participate",
-    "href": "weeks/week-1.html#participate",
-    "title": "Week 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Welcome to MATH/COSC 3570\n🖥️ Slides - Overview of Data Science\n🖥️ Slides - Posit Cloud\n🖥️ Slides - Git/GitHub\n\n\n\n\n\nggplot2::mpg",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html#perform",
-    "href": "weeks/week-1.html#perform",
-    "title": "Week 1",
-    "section": "Perform",
-    "text": "Perform\n📋 Lab-00 Posit Cloud\n📋 Lab-01 Running R Script\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html",
-    "href": "weeks/week-5.html",
-    "title": "Week 5",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html#participate",
-    "href": "weeks/week-5.html#participate",
-    "title": "Week 5",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - R/Python for Data Science",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html#reading-and-resources",
-    "href": "weeks/week-5.html#reading-and-resources",
-    "title": "Week 5",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 tibbles\n📖 pipes\n📖 NumPy\n📖 pandas",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html#exercise",
-    "href": "weeks/week-5.html#exercise",
-    "title": "Week 5",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-08 tibbles and pipe\n📋 Lab-09 NumPy and pandas\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-6.html",
-    "href": "weeks/week-6.html",
-    "title": "Week 6",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 6"
-    ]
-  },
-  {
-    "objectID": "weeks/week-6.html#participate",
-    "href": "weeks/week-6.html#participate",
-    "title": "Week 6",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - ggplot2\nr fontawesome::fa(\"table\") openintro::loans_full_schema",
-    "crumbs": [
-      "Weekly materials",
-      "Week 6"
-    ]
-  },
-  {
-    "objectID": "weeks/week-6.html#reading-and-resources",
-    "href": "weeks/week-6.html#reading-and-resources",
-    "title": "Week 6",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 More add-on r emo::ji(\"package\"): ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS",
-    "crumbs": [
-      "Weekly materials",
-      "Week 6"
-    ]
-  },
-  {
-    "objectID": "weeks/week-6.html#exercise",
-    "href": "weeks/week-6.html#exercise",
-    "title": "Week 6",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-11 ggplot2\nr fontawesome::fa(\"table\") penguins.csv\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 6"
-    ]
-  },
-  {
-    "objectID": "present-work-final.html",
-    "href": "present-work-final.html",
-    "title": "Final Project",
-    "section": "",
-    "text": "team &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(2025)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Data Detectives\"       \"The Whales\"            \"The Outliers\"         \n [4] \"The Back Right corner\" \"Syntax Squad\"          \"Analytics Avengers\"   \n [7] \"Intermediate Wizards\"  \"Noname\"                \"Hala Madrid\"          \n[10] \"Block Blasters\"       \n\n\n\nTeams presented on May 1: Data Detectives, The Whales, The Outliers, The Back Right corner\nTeams presented on May 5: Syntax Squad, Analytics Avengers, Intermediate Wizards, Noname, Hala Madrid, Block Blasters",
-    "crumbs": [
-      "Final Project",
-      "Project Group and Proposal"
-    ]
-  },
-  {
-    "objectID": "present-work-final.html#presentation-order",
-    "href": "present-work-final.html#presentation-order",
-    "title": "Final Project",
-    "section": "",
-    "text": "team &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(2025)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Data Detectives\"       \"The Whales\"            \"The Outliers\"         \n [4] \"The Back Right corner\" \"Syntax Squad\"          \"Analytics Avengers\"   \n [7] \"Intermediate Wizards\"  \"Noname\"                \"Hala Madrid\"          \n[10] \"Block Blasters\"       \n\n\n\nTeams presented on May 1: Data Detectives, The Whales, The Outliers, The Back Right corner\nTeams presented on May 5: Syntax Squad, Analytics Avengers, Intermediate Wizards, Noname, Hala Madrid, Block Blasters",
-    "crumbs": [
-      "Final Project",
-      "Project Group and Proposal"
-    ]
-  },
-  {
-    "objectID": "present-work-final.html#group-projects-proposal",
-    "href": "present-work-final.html#group-projects-proposal",
-    "title": "Final Project",
-    "section": "Group project’s proposal",
-    "text": "Group project’s proposal\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nPractical Data Cleaning in R: A Look at the janitor Package\n\nThe Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nInteractive data with shiny\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nIntroduction to Scikit-Learn\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nIntroducing Naniar: How to put the “NA” values to use!\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nUnderstanding and Applying the ‘landscapemetrics’ Package\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nMapping Using ggspatial\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nFactors That Attribute to a Song Becoming Popular\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nMatplotlib Library Introduction\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nPlay, Predict, Profit?",
-    "crumbs": [
-      "Final Project",
-      "Project Group and Proposal"
-    ]
-  },
-  {
-    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "title": "Attribution-ShareAlike 4.0 International",
-    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
-    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
-  },
-  {
-    "objectID": "present-description.html",
-    "href": "present-description.html",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "",
-    "text": "This is the latest version of project guideline. It may be revised later.\nThe midterm mini project is about data visualization. Show your fun project! Let’s go!! 😎",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description.html#team-up",
-    "href": "present-description.html#team-up",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "Team up!",
-    "text": "Team up!\n\nYou lose 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou will be randomly assigned to a group if you do not belong to any group before the deadline.",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description.html#proposal",
-    "href": "present-description.html#proposal",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "Proposal",
-    "text": "Proposal\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYour proposal (in PDF) should include three parts:\n\nProject title\nMembers duty. For example,\n\nJohn and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc.\n\nThe description of the data set you use in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in Section 3.1.\nThe goal of your project. For example, what are questions you’d like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested?\n\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else.",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description.html#materials",
-    "href": "present-description.html#materials",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "Materials",
-    "text": "Materials\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, etc so that anyone is able to reproduce your outputs and plots shown in the slides.\nThe code must be shared via a Quarto file.",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description.html#presentation",
-    "href": "present-description.html#presentation",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "Presentation",
-    "text": "Presentation\n\nEach group presentation is about 5 and 6 minute long, followed by about 1 minute Q&A. If your presentation is too short or too long, every one of you loses 3 points of your project grade.",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description.html#sec-data",
-    "href": "present-description.html#sec-data",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "Data",
-    "text": "Data\nThe available data sets for this projects can be downloaded from kaggle, a data science competition platform sharing various data and projects. Please choose one data set for your project from the following:\n\nWorld Happiness Report\n\n\n\nSupermarket Sales Data\nNBA Players stats since 1950\nAirline Passenger Satisfaction\n\n\n\nAuto-mpg dataset\nNetflix Movies and TV Shows\nStudents Performance in Exams\nVideo Game Sales\nSpotify Tracks Dataset\nUS Census Demographic Data\n\n[Note:] Those are real data sets that contains many observations and variables. You just need to pick a few variables for plotting and analysis.\n[Note:] You may use some other data, but the data set cannot be the one used in the course (like ggplot2::mpg). The data set needs to be as sophisticated as the listed data sets above. Dr. Yu and TA will evaluate your data quality.",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description.html#sec-grading",
-    "href": "present-description.html#sec-grading",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "Evaluation and Grading",
-    "text": "Evaluation and Grading\n\nYour project performance is evaluated by Dr. Yu and the TA that is based on the following rubric:\n\n\nRubric\n\n\n\n\n\n\n\n\n\nCriteria\nExcellent\nGood\nFair\nEmerging\n\n\n\n\nData Understanding (15%)\nClearly explains the dataset, its source, and key variables. Provides meaningful insights.\nShows good understanding with clear explanations and some strong insights. A few minor details could be expanded.\nShows a basic grasp of the dataset but needs more clarity or depth in explaining its significance and insights.\nNeeds further understanding of the dataset. More details and insights would strengthen the analysis.\n\n\nVisualization Quality (30%)\nVisualizations are clear, well-chosen, and enhance understanding. Thoughtful design choices make the data engaging and accessible.\nStrong visuals that support the data well. Some minor refinements could improve clarity or impact.\nBasic visuals that convey information but could be more refined or better suited to the dataset.\nNeeds improvement in visualization selection or clarity. More attention to detail will enhance effectiveness.\n\n\nOutput Interpretation and Insights (25%)\nThoughtful and well-supported insights demonstrate strong analytical skills. Patterns and trends are clearly explained with compelling interpretations.\nProvides solid insights with good explanations. Some areas could benefit from deeper analysis.\nInsights are present but may lack depth or clear connections to the data. Some interpretations need more support.\nInsights need further development. Strengthening data interpretation will enhance overall understanding.\n\n\nSlides quality (15%)\nSlides are visually appealing, well-organized, and complement the spoken presentation. Effective use of text, images, and color enhances clarity.\nSlides are clear and well-structured but could be slightly improved in design or organization.\nSlides contain useful content but may be text-heavy, cluttered, or lack visual appeal.\nSlides need better organization and design to support the presentation effectively.\n\n\nPresentation Clarity and Interaction (15%)\nThe presentation is well-organized, engaging, and confident. The team communicates ideas effectively and transitions smoothly.\nA well-structured and clear presentation. Minor adjustments could improve flow or engagement.\nThe presentation is understandable but could be more organized or engaging. Some transitions may be unclear.\nMore practice and organization will help improve clarity and engagement.\n\n\n\n\nYour project grade will be\n\n\nProject grade = performance grade - points lost due to violation of policy\n\nwith adjustement based on your performance of duty.",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description.html#peer-individual-performance-evaluation",
-    "href": "present-description.html#peer-individual-performance-evaluation",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
-    "section": "Peer Individual Performance Evaluation",
-    "text": "Peer Individual Performance Evaluation\n\nIn each team, two group members will win the best contribution reward that add extra points to the project grade.\nEach one of you has two votes to nominate one or two of your teammates who you think contribute the most to your group project.\nYou can nominate\n\ntwo teammates, each receiving one vote.\none teammate who receives two votes.\n\nYou cannot nominate yourself.\nIf you don’t vote, or you just use one vote, you can’t be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward.\nIf there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward.",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-work.html",
-    "href": "present-work.html",
-    "title": "Midterm Visualization Project",
-    "section": "",
-    "text": "The Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nHow do game sales correlate to console popularity by global region\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nNo Project Title\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow do Movies and Tv Shows differ by Country?\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap",
-    "crumbs": [
-      "Mini Project",
-      "Topics and Works"
-    ]
-  },
-  {
-    "objectID": "present-work.html#group-projects-proposal",
-    "href": "present-work.html#group-projects-proposal",
-    "title": "Midterm Visualization Project",
-    "section": "",
-    "text": "The Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nHow do game sales correlate to console popularity by global region\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nNo Project Title\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow do Movies and Tv Shows differ by Country?\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nMarquette University Basketball Heatmap",
-    "crumbs": [
-      "Mini Project",
-      "Topics and Works"
-    ]
-  },
-  {
-    "objectID": "present-work.html#presentation-order",
-    "href": "present-work.html#presentation-order",
-    "title": "Midterm Visualization Project",
-    "section": "Presentation order",
-    "text": "Presentation order\n\nteam &lt;- c(\"The Whales\", \"Analytics Avengers\", \"Syntax Squad\", \n          \"Data Detectives\", \"Hala Madrid\", \"The Back Right corner\",\n          \"The Outliers\", \"Block Blasters\", \"Intermediate Wizards\",\n          \"Noname\")\nset.seed(3570)\n(present_order &lt;- sample(team, size = 10, replace = FALSE))\n\n [1] \"Intermediate Wizards\"  \"Data Detectives\"       \"Analytics Avengers\"   \n [4] \"The Outliers\"          \"The Whales\"            \"Block Blasters\"       \n [7] \"The Back Right corner\" \"Hala Madrid\"           \"Syntax Squad\"         \n[10] \"Noname\"",
-    "crumbs": [
-      "Mini Project",
-      "Topics and Works"
-    ]
-  },
-  {
-    "objectID": "present-work.html#presentation-slides",
-    "href": "present-work.html#presentation-slides",
-    "title": "Midterm Visualization Project",
-    "section": "Presentation Slides",
-    "text": "Presentation Slides\n\nIntermediate Wizards: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl\n\nMost Important Factors to a child’s exam success\n\nData Detectives: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin\n\nHappiness of the World Over Time\n\nAnalytics Avengers (4): Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer\n\nNetflix Analysis\n\nThe Outliers: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj\n\nExploratory Data Analysis in Auto-Mpg Dataset\n\nThe Whales: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski\n\nVideo Game Sales\n\nBlock Blasters: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her\n\nWhat Makes a Song Danceable?\n\nThe Back Right corner: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui\n\nHow Does Netflix Differ between North America and Asia?\n\nHala Madrid: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith\n\nVideo Game Sales Data Analysis Report\n\nSyntax Squad: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru\n\nGlobal Video Game Sales Assessment\n\nTeamName?: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos\n\nNBA Shots Analysis (2001 - Present)",
-    "crumbs": [
-      "Mini Project",
-      "Topics and Works"
-    ]
-  },
-  {
-    "objectID": "weeks/week-7.html",
-    "href": "weeks/week-7.html",
-    "title": "Week 7",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "weeks/week-7.html#participate",
-    "href": "weeks/week-7.html#participate",
-    "title": "Week 7",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides -Visualizing Data\n🖥️ Slides - Interactive Visualization\nr fontawesome::fa(\"table\") Data - loans\nr fontawesome::fa(\"table\") Data - Murders",
-    "crumbs": [
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "weeks/week-7.html#reading-and-resources",
-    "href": "weeks/week-7.html#reading-and-resources",
-    "title": "Week 7",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 More add-on r emo::ji(\"package\"): ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS\n📖 R for Data Science - Data Transformation",
-    "crumbs": [
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "weeks/week-7.html#exercise",
-    "href": "weeks/week-7.html#exercise",
-    "title": "Week 7",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-12 Faceting\n📋 Lab-13 Visualization\n📋 Lab-14 Interactive Visualization (Present)\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "weeks/week-4.html",
-    "href": "weeks/week-4.html",
-    "title": "Week 4",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "weeks/week-4.html#participate",
-    "href": "weeks/week-4.html#participate",
-    "title": "Week 4",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - R/Python Syntax",
-    "crumbs": [
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "weeks/week-4.html#reading-and-resources",
-    "href": "weeks/week-4.html#reading-and-resources",
-    "title": "Week 4",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib",
-    "crumbs": [
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "weeks/week-4.html#perform",
-    "href": "weeks/week-4.html#perform",
-    "title": "Week 4",
-    "section": "Perform",
-    "text": "Perform\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "weeks/week-3.html",
-    "href": "weeks/week-3.html",
-    "title": "Week 3",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 3"
-    ]
-  },
-  {
-    "objectID": "weeks/week-3.html#participate",
-    "href": "weeks/week-3.html#participate",
-    "title": "Week 3",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Quarto\n🖥️ Slides - R/Python Syntax",
-    "crumbs": [
-      "Weekly materials",
-      "Week 3"
-    ]
-  },
-  {
-    "objectID": "weeks/week-3.html#exercise",
-    "href": "weeks/week-3.html#exercise",
-    "title": "Week 3",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting",
-    "crumbs": [
-      "Weekly materials",
-      "Week 3"
-    ]
-  },
-  {
-    "objectID": "weeks/week-3.html#reading-and-resources",
-    "href": "weeks/week-3.html#reading-and-resources",
-    "title": "Week 3",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 3"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html",
-    "href": "weeks/week-10.html",
-    "title": "Week 10",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#participate",
-    "href": "weeks/week-10.html#participate",
-    "title": "Week 10",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Tidying Data\n🖥️ Slides - Probability and Statistics",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#exercise",
-    "href": "weeks/week-10.html#exercise",
-    "title": "Week 10",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-17 tidyr\nr fontawesome::fa(\"table\") trump.csv\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
-  },
-  {
-    "objectID": "weeks/week-13.html",
-    "href": "weeks/week-13.html",
-    "title": "Week 13",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 13"
-    ]
-  },
-  {
-    "objectID": "weeks/week-13.html#participate",
-    "href": "weeks/week-13.html#participate",
-    "title": "Week 13",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Logistic Regression\nr fontawesome::fa(\"table\") Data - body",
-    "crumbs": [
-      "Weekly materials",
-      "Week 13"
-    ]
-  },
-  {
-    "objectID": "weeks/week-13.html#reading",
-    "href": "weeks/week-13.html#reading",
-    "title": "Week 13",
-    "section": "Reading",
-    "text": "Reading\n📖",
-    "crumbs": [
-      "Weekly materials",
-      "Week 13"
-    ]
-  },
-  {
-    "objectID": "weeks/week-13.html#exercise",
-    "href": "weeks/week-13.html#exercise",
-    "title": "Week 13",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-21 Logistic Regression\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 13"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5-old.html",
-    "href": "weeks/week-5-old.html",
-    "title": "Week 6",
-    "section": "",
-    "text": "Important"
-  },
-  {
-    "objectID": "weeks/week-5-old.html#participate",
-    "href": "weeks/week-5-old.html#participate",
-    "title": "Week 6",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Data Importing\nr fontawesome::fa(\"table\") murders.csv\nr fontawesome::fa(\"table\") df-na.csv\nr fontawesome::fa(\"table\") cars.rds\nr fontawesome::fa(\"table\") 2010_bigfive_regents.xls"
-  },
-  {
-    "objectID": "weeks/week-5-old.html#reading-and-resources",
-    "href": "weeks/week-5-old.html#reading-and-resources",
-    "title": "Week 6",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 R for Data Science - Data Import\n📖 R for Data Science - Data Visualization"
-  },
-  {
-    "objectID": "weeks/week-5-old.html#exercise",
-    "href": "weeks/week-5-old.html#exercise",
-    "title": "Week 6",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-10 Data Importing\nr fontawesome::fa(\"table\") ssa_male_prob.csv\nr fontawesome::fa(\"table\") ssa_female_prob.Rds\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "weeks/week-16.html",
-    "href": "weeks/week-16.html",
-    "title": "Week 16",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 16"
-    ]
-  },
-  {
-    "objectID": "weeks/week-16.html#participate",
-    "href": "weeks/week-16.html#participate",
-    "title": "Week 16",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - K-Means Clustering\n Data - clus_data",
-    "crumbs": [
-      "Weekly materials",
-      "Week 16"
-    ]
-  },
-  {
-    "objectID": "weeks/week-16.html#reading",
-    "href": "weeks/week-16.html#reading",
-    "title": "Week 16",
-    "section": "Reading",
-    "text": "Reading\n📖",
-    "crumbs": [
-      "Weekly materials",
-      "Week 16"
-    ]
-  },
-  {
-    "objectID": "weeks/week-16.html#exercise",
-    "href": "weeks/week-16.html#exercise",
-    "title": "Week 16",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-24 K-Means Clustering\n palmerpenguins::penguins\n\nlibrary(palmerpenguins)\npeng &lt;- penguins[complete.cases(penguins), ] |&gt; \n    select(flipper_length_mm, bill_length_mm)\n\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 16"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html",
-    "href": "weeks/week-15.html",
-    "title": "Week 15",
-    "section": "",
-    "text": "Important",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#participate",
-    "href": "weeks/week-15.html#participate",
-    "title": "Week 15",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Principal Component Analysis\nr fontawesome::fa(\"table\") USArrests",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#reading",
-    "href": "weeks/week-15.html#reading",
-    "title": "Week 15",
-    "section": "Reading",
-    "text": "Reading\n📖",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#exercise",
-    "href": "weeks/week-15.html#exercise",
-    "title": "Week 15",
-    "section": "Exercise",
-    "text": "Exercise\n📋 Lab-23 Principal Component Analysis\nr fontawesome::fa(\"table\") iris\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15"
-    ]
-  },
-  {
-    "objectID": "activity/act_two-truth-one-lie.html",
-    "href": "activity/act_two-truth-one-lie.html",
-    "title": "In-class Activity: Two truths and a lie",
-    "section": "",
-    "text": "The following activity demonstrates probability calibration."
-  },
-  {
-    "objectID": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
-    "href": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
-    "title": "In-class Activity: Two truths and a lie",
-    "section": "[Team] Activity: Two truths and a lie 1",
-    "text": "[Team] Activity: Two truths and a lie 1\n\n\n\n\n\n\n\n\n\nWithin your group:\n\nOne person tells three personal statements one of which is a lie.\nOthers discuss and guess which statement is the lie and they jointly construct a numerical statement of their certainty in the guess on a 0–10 scale.\nThe storyteller reveals which was the lie.\nEnter the certainty estimate and the outcome success or failure and submit in the Microsoft form.\nRotate through everyone in your group so that each person plays the storyteller role once."
-  },
-  {
-    "objectID": "activity/act_two-truth-one-lie.html#discussion",
-    "href": "activity/act_two-truth-one-lie.html#discussion",
-    "title": "In-class Activity: Two truths and a lie",
+    "objectID": "activity/act_knn.html#discussion",
+    "href": "activity/act_knn.html#discussion",
+    "title": "In-class Activity: Dogs or Cats",
     "section": "Discussion",
-    "text": "Discussion\n\n\n\n\n\n\nCautionWhat do you think the range of centainty scores will look like?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWill there be a positive relation between \\(x\\) and binary \\(y\\): are guesses with higher certainty be more accurate, on average?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionHow strong will the relation be between \\(x\\) and \\(y\\): what will the curve look like?"
+    "text": "Discussion\n\n\n\n\n\n\nCautionFor which test data point, the classification result is uncertain or unstable?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWhich data point can be labelled as one particular category with 100% certainty, for all different \\(K\\)s?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionFor the blue point, what happened when \\(K\\) increases? Do we change the prediction? What about uncertainty?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionIf you would like to make a classification rule or set the decision boundary to predict cats or dogs, what would the decision boundary look like? Why?"
   },
   {
-    "objectID": "activity/act_two-truth-one-lie.html#footnotes",
-    "href": "activity/act_two-truth-one-lie.html#footnotes",
-    "title": "In-class Activity: Two truths and a lie",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nActive Statistics, Page 179.↩︎"
-  },
-  {
-    "objectID": "present-description-final.html",
-    "href": "present-description-final.html",
-    "title": "MATH/COSC 3570 Final Project Presentation",
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2026)",
     "section": "",
-    "text": "This is the latest version of project guideline. It may be revised later.\nThe final project is about new tools or data analysis. Show your fun project! Let’s go!! 😎",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#meeting",
-    "href": "present-description-final.html#meeting",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "Meeting",
-    "text": "Meeting\n\nYou lose 5 points of your project grade if you don’t meet the requirement or don’t meet with Dr. Yu at least once.\nPlease choose a meeting time in the Excel form.\nYou must let Dr. Yu know in advance if you need to change your meeting time.\nYou can change your meeting time once.\nBriefly talk about your project idea.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#proposal",
-    "href": "present-description-final.html#proposal",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "Proposal",
-    "text": "Proposal\n\nEach one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.\nYour proposal (in PDF) should include three parts:\n\nProject title\nMembers duty. For example,\n\nJohn and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc.\n\nThe description of the data set you use in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in ?@sec-data.\nThe goal of your project. For example, what are questions you’d like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested?\n\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#presentation",
-    "href": "present-description-final.html#presentation",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "Presentation",
-    "text": "Presentation\n\nEach one of you loses 5 points of your project grade if you don’t meet the presentation requirement.\nEach group presentation is about 15 and 16 minute long, followed by about 1 to 2 minutes Q&A.\nFour groups present on May 1, and six on May 5. Presentation order is decided by random sampling.\nEvery student has to participate (in-person) in the final presentation in order to pass the course.\nEvery group member has to present some part of the group work. The one who does not present receives no point.\nEveryone is welcome to ask any questions about the projects. It helps everyone evaluate every group’s project and presentation performance. See Section 4 for grading policy.\nEach group is required to ask as least one question.\n\nThe \\(k\\)-th group should ask at least one question to the \\((k+1)\\)-th group in Q&A, \\(k = 1, \\dots, 9\\).\nThe last group to present will ask the first group questions about their project.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#materials",
-    "href": "present-description-final.html#materials",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "Materials",
-    "text": "Materials\n\nEach one of you loses 5 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, etc so that anyone is able to reproduce your outputs and plots shown in the slides.\nThe code must be shared via a Quarto file.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#rpython-packages",
-    "href": "present-description-final.html#rpython-packages",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "R/Python Packages",
-    "text": "R/Python Packages\nFor your R/Python package project,\n\nyou need to\n\nshow how and why the package greatly helps us do data science.\nexplain how to use the functions in the packages by providing data science examples with some real data set.\nPlease don’t use the toy examples in the package documentation.\n\nIf the functions of the package return any results or outputs, please explain them, teaching your audience how to appropriately read the outputs.\nIf the functions return graphics, explain why the visualizations are informative and useful for understanding data and analysis results.\nYou can choose a package that helps us do what we cannot do with the packages and tools learned in class.\n\nFor example, we only learn readr and readxl packages to help us import data files into R, and we don’t know how to extract data from a website. The rvest package helps us scrape data from web pages.\n\nIf you choose a package that provides the same functionality as the packages we learned, please show the packages you choose are better.\n\nFor example, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc. For example, data.table package provides a high-performance version of base R’s data.frame with syntax and feature enhancements for ease of use, convenience and programming speed.\n\nBelow are a list of popular R packages that you can start with.\n\nQuick list of useful R packages\nFavorite R Packages by Roel Verbelen\nGreat R packages for data import, wrangling, and visualization\n\nBelow are a list of popular Python packages that you can start with.\n\nTop 26 Python Libraries for Data Science in 2025\n20 Python Libraries for Data Science\n\nYou can introduce other data science software or tools, such as Tableau, D3.js, KNIME, etc. Make sure you demo them with an understandable example.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#data-analysis",
-    "href": "present-description-final.html#data-analysis",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "Data Analysis",
-    "text": "Data Analysis\nFor your data analysis project,\n\nYou need to show that you are good at asking meaningful questions and answering them with results of data analysis.\nYour presentation should include data visualization. Your graphics should be informative that help you\n\nexplore relationships between variables in your data\ndecide which statistical/machine learning model is used, so that your research questions can be properly answered.\n\nYou should discuss how and why statistical methods/machine learning algorithms are chosen for analyzing your data set.\n\nThe methods we learn in class may not be appropriate for your data and answering your research questions. If this happens, critique your own methods and provide suggestions for improving your analysis. Any issues of your data, and appropriateness of the statistical analysis should be discussed.\n\nYou can choose a data set that is publicly available or you may collect your own data using a survey or by conducting an experiment. The dataset you choose cannot be any datasets used in class, including homework assignments and lab exercises.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#group-performance-evaluation",
-    "href": "present-description-final.html#group-performance-evaluation",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "Group Performance Evaluation",
-    "text": "Group Performance Evaluation\n\nInstructor Evaluation\n\nDr. Yu and the TA evaluate your group performance based on the four criteria\n\nProject Content and Organization\nPresentation Material (Slides) Quality\nOral Presentation Skill and Delivery\nInteractions and Q&A\n\nHow do you get the full points for each category? Check the requirements below. Note that for Content and Organization, data analysis and package projects have different requirements.\nContent and Organization (Data Analysis)\n\nBeautiful visualization helps find out relationship of variables and specification of models\nAll questions are answered accurately by the models\nDiscuss how and why the models are chosen\nApply sophisticated models and detailed analysis\nAll ideas are presented in logical order\n\nContent and Organization (Packages)\n\nShow how and why the package greatly helps us do data science\nExplain how to use the functions in the package by providing concrete real data science applications and examples with data sets\nTeach audience with understandable examples of how to appropriately read the outputs and/or why the visualizations are informative and useful for understanding data and analysis results\nShow the package is better in some sense, its code is shorter, it is run faster, its output is more clear, its plot is prettier, etc\nAll ideas are presented in logical order\n\nPresentation Material Quality\n\nPresentation material show code and output beautifully\nPresentation material clearly aid the speaker in telling a coherent story\nAll tables and graphics are informative and related to the topic and make it easier to understand\nAttractive design, layout, and neatness.\n\nOral Presentation Skill\n\nGood volume and energy\nProper pace and diction\nAvoidance of distracting gestures\n\nInteractions and Q&A\n\nGood eye contact with audience\nExcellent listening skills\nAnswers audience questions with authority and accuracy\n\n\n\n\n\n\n\n\n\n\n\n\n\nPeer Group Evaluation\n\n\n\n\n\n\n\n\n\n\nPlease go to the link or scan the QR code to vote your top 3 projects!\nYou choose your top 3 teams (Gold🥇, Silver🥈, Bronze🥉)\nYou cannot nominate your team as one of the top 3.\nMate Favorite Score (MFS) = \\(🥇 \\times 5 + 🥈 \\times 3 + 🥉 \\times 1\\)\nThe team project grade is a combination of instructor evaluation scores and MFS.\n\n\nIf you don’t participate, your team loses 2 points.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "present-description-final.html#peer-individual-performance-evaluation",
-    "href": "present-description-final.html#peer-individual-performance-evaluation",
-    "title": "MATH/COSC 3570 Final Project Presentation",
-    "section": "Peer Individual Performance Evaluation",
-    "text": "Peer Individual Performance Evaluation\n\n\n\n\n\n\n\n\n\n\nPlease go to the link or scan the QR code to nominate the best contributor!\nIn each team, two group members will win the best contribution reward that add extra points to the project grade.\nEach one of you has two votes to nominate one or two of your teammates who you think contribute the most to your group project.\nYou can nominate\n\ntwo teammates, each receiving one vote.\none teammate who receives two votes.\n\nYou cannot nominate yourself.\nIf you don’t vote, or you just use one vote, you can’t be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward.\nIf there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2025)",
-    "section": "",
-    "text": "New Homework 3 deadline: 05/02 11:59 PM.\nTA help desk hours at Cudahy Hall 301 Monday: 1 – 2 PM, Tuesday: 12 – 1 PM, Thursday: 12 – 2 PM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nLab Exercise\nHomework\nProject\n\n\n\n\n1\nTue, Jan 14\nGreetings + Overview of Data Science\n📖\n🖥️syllabus 🖥️overview\n\n\n\n\n\n\nThu, Jan 16\nPosit Cloud\n\n🖥️posit\n📋 posit 📋01\n\n\n\n\n2\nTue, Jan 21\nNo CLASS: Cold Weather\n📖\n\n\n\n\n\n\n\nThu, Jan 23\nGit/GitHub Introduction\n\n🖥️git\n📋github\n\n\n\n\n3\nTue, Jan 28\nQuarto: YAML and Markdown\n📖\n🖥️quarto\n📋02 📋03 📋04\n\n\n\n\n\nThu, Jan 30\nQuarto: Code Chunk\n\n\n\n\n\n\n\n4\nTue, Feb 4\nR Syntax\n📖\n🖥️syntax\n📋05\n\n\n\n\n\nThu, Feb 6\nPython Syntax\n\n\n📋06 📋 07(opt)\n✍️ HW1\n\n\n\n5\nTue, Feb 11\nR Tidyverse\n📖\n🖥️package\n📋08\n\n\n\n\n\nThu, Feb 13\nPython NumPy/Pandas\n\n\n📋09\n\n\n\n\n6\nTue, Feb 18\nData Importing\n📖\n🖥️import\n📋10\n\n\n\n\n\nThu, Feb 20\nData Visualization-ggplot2\n\n🖥️ggplot\n📋11 📋12\n\n\n\n\n7\nTue, Feb 25\nData Visualization-categorical and numerical data\n📖\n🖥️visualization\n📋13\n\n\n\n\n\nThu, Feb 27\nInteractive Data Visualization\n\n🖥️interactive-viz\n📋14 (opt)\nHW 1 Due\n✅ Team up Due\n\n\n8\nTue, Mar 4\nData Wrangling - one data frame\n📖\n🖥️dplyr-1\n📋15\n\n\n\n\n\nThu, Mar 6\nData Wrangling - two data frames\n\n🖥️dplyr-2\n📋16\n\n✅ Proposal Due\n\n\n9\nTue, Mar 11\nNO CLASS: Spring break\n📖\n\n📋 Lab Solution\n\n\n\n\n\nThu, Mar 13\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 18\nData Wrangling - tidyr\n📖\n🖥️tidyr\n📋17\n✍️ HW2\n✅ Materials Due\n\n\n\nThu, Mar 20\nMini Project Presentation\n\n\n\n\n\n\n\n11\nTue, Mar 25\nProbabilistic and Statistical Simulation\n📖\n🖥️probstat\n📋18\n\n\n\n\n\nThu, Mar 27\nStatistical Simulation Activity: Monte Carlo simulation\n\n\n📋19\n\n\n\n\n12\nTue, Apr 1\nLinear Regression\n📖\n🖥️linear-regression\n📋20\n\n\n\n\n\nThu, Apr 3\nLinear Regression Activity: Regression to the mean\n\n\n\nHW 2 Due\n\n\n\n13\nTue, Apr 8\nLogistic Regression\n📖\n🖥️logistic-regression\n📋21\n✍️ HW3\n\n\n\n\nThu, Apr 10\nLogistic Regression Activity: Two truths and a lie\n\n\n\n\n\n\n\n14\nTue, Apr 15\nK-Nearest Neighbors Activity: Dogs or Cats\n📖\n🖥️ K-Nearest Neighbors\n📋22\n\n\n\n\n\nThu, Apr 17\nNO CLASS: Easter break\n\n\n\n\n\n\n\n15\nTue, Apr 22\nPrincipal Component Analysis\n📖\n🖥️Principal Component Analysis\n\n\n\n\n\n\nThu, Apr 24\nPrincipal Component Analysis\n\n\n📋23\n\nFinal Project Proposal Due\n\n\n16\nTue, Apr 29\nK-Means Clustering (Self-learning)\n📖\n🖥️K-means Clustering\n📋24\n\n\n\n\n\nThu, May 1\nFinal Project Presentation I\n\n\n\nExtension: HW 3 Due\n\n\n\n17\nMon, May 5\nFinal Project Presentation II\n\n\n\n\nFinal Project Materials Due\n\n\n\n\nThis schedule will be updated as the semester progresses, with all changes documented here. Dr. Yu reserve the right to make changes to the schedule.",
+    "text": "This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic R and Python programming, Git and GitHub, and interactive publishing system Quarto. Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R tidyverse and tidymodels packages. For Python, Pandas, NumPy, and Scikit-Learn libraries are introduced.\nThe course is AI-oriented. Students learn to use generative AI tools such as ChatGPT as assistants for coding, debugging, documenting, and idea generation, while remaining responsible for all analytical decisions, validation, and interpretation.",
     "crumbs": [
       "Course information",
-      "Schedule"
+      "Overview"
     ]
   },
   {

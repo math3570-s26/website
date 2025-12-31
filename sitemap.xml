@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://math3570-s26.github.io/website/course-syllabus.html</loc>
-    <lastmod>2025-11-22T00:20:16.119Z</lastmod>
+    <lastmod>2025-11-22T02:00:52.781Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab15-dplyr.html</loc>
@@ -57,75 +57,39 @@
     <lastmod>2025-11-22T00:20:16.194Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/course-news.html</loc>
-    <lastmod>2025-11-22T00:20:16.119Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/index.html</loc>
+    <lastmod>2025-11-22T02:34:55.784Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/course-overview.html</loc>
-    <lastmod>2025-11-22T00:20:16.119Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/activity/act_knn.html</loc>
-    <lastmod>2025-11-22T00:20:16.118Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/activity/act_reg-to-the-mean.html</loc>
-    <lastmod>2025-11-22T00:20:16.119Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-14.html</loc>
-    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-8.html</loc>
-    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-9.html</loc>
-    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-12.html</loc>
-    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-11.html</loc>
-    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-2.html</loc>
-    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-1.html</loc>
-    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-5.html</loc>
-    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-6.html</loc>
-    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/present-work-final.html</loc>
-    <lastmod>2025-11-22T00:20:16.278Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/LICENSE.html</loc>
-    <lastmod>2025-11-22T00:20:15.956Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/present-description.html</loc>
+    <loc>https://math3570-s26.github.io/website/present-description-final.html</loc>
     <lastmod>2025-11-22T00:20:16.277Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/present-work.html</loc>
-    <lastmod>2025-11-22T00:20:16.278Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/activity/act_two-truth-one-lie.html</loc>
+    <lastmod>2025-11-22T00:20:16.119Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-7.html</loc>
+    <loc>https://math3570-s26.github.io/website/weeks/week-15.html</loc>
+    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-16.html</loc>
+    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-5-old.html</loc>
+    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-13.html</loc>
+    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-10.html</loc>
+    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-3.html</loc>
     <lastmod>2025-11-22T00:20:39.625Z</lastmod>
   </url>
   <url>
@@ -133,40 +97,72 @@
     <lastmod>2025-11-22T00:20:39.625Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-3.html</loc>
+    <loc>https://math3570-s26.github.io/website/weeks/week-7.html</loc>
     <lastmod>2025-11-22T00:20:39.625Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-10.html</loc>
-    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/present-work.html</loc>
+    <lastmod>2025-11-22T00:20:16.278Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-13.html</loc>
-    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-5-old.html</loc>
-    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-16.html</loc>
-    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/weeks/week-15.html</loc>
-    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/activity/act_two-truth-one-lie.html</loc>
-    <lastmod>2025-11-22T00:20:16.119Z</lastmod>
-  </url>
-  <url>
-    <loc>https://math3570-s26.github.io/website/present-description-final.html</loc>
+    <loc>https://math3570-s26.github.io/website/present-description.html</loc>
     <lastmod>2025-11-22T00:20:16.277Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/index.html</loc>
-    <lastmod>2025-11-22T00:44:23.026Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/LICENSE.html</loc>
+    <lastmod>2025-11-22T00:20:15.956Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/present-work-final.html</loc>
+    <lastmod>2025-11-22T00:20:16.278Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-6.html</loc>
+    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-5.html</loc>
+    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-1.html</loc>
+    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-2.html</loc>
+    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-11.html</loc>
+    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-12.html</loc>
+    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-9.html</loc>
+    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-8.html</loc>
+    <lastmod>2025-11-22T00:20:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/weeks/week-14.html</loc>
+    <lastmod>2025-11-22T00:20:39.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/activity/act_reg-to-the-mean.html</loc>
+    <lastmod>2025-11-22T00:20:16.119Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/activity/act_knn.html</loc>
+    <lastmod>2025-11-22T00:20:16.118Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/course-overview.html</loc>
+    <lastmod>2025-11-22T00:59:29.053Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab11-ggplot2.html</loc>

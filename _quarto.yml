@@ -37,7 +37,7 @@ website:
         href: https://d2l.mu.edu/d2l/home/630428
         text: "D2L"
 
-    style: "docked"
+    style: docked
     search: true
     collapse-level: 0
     contents:
@@ -52,19 +52,19 @@ website:
           - href: course-syllabus.qmd
             text: Syllabus
 
-      # - section: "Mini Project"
-      #   contents:
-      #     - href: present-description.qmd
-      #       text: Guideline and Policy
-      #     - href: present-work.qmd
-      #       text: Topics and Works
+      - section: "Mini Project"
+        contents:
+          - href: present-description.qmd
+            text: Guideline and Policy
+          - href: present-work.qmd
+            text: Topics and Works
 
-      # - section: "Final Project"
-      #   contents:
-      #     - href: present-description-final.qmd
-      #       text: Guideline and Policy
-      #     - href: present-work-final.qmd
-      #       text: Project Group and Proposal
+      - section: "Final Project"
+        contents:
+          - href: present-description-final.qmd
+            text: Guideline and Policy
+          - href: present-work-final.qmd
+            text: Project Group and Proposal
 
       # - section: "Weekly materials"
       #   contents:

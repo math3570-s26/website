@@ -1,123 +1,100 @@
 ---
-title: "Midterm Visualization Project"
+title: "Mini Project Topics"
 ---
 
 ## Group project's proposal
 
--   [**The Whales**]{.blue}: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski
+<!-- -   [**The Whales**]{.blue}: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski -->
 
-    -   [How do game sales correlate to console popularity by global region](/documents/proposal_the_whales.pdf)
+<!--     -   [How do game sales correlate to console popularity by global region](/documents/proposal_the_whales.pdf) -->
 
+<!-- -   [**Analytics Avengers (4)**]{.blue}: Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer -->
 
--   [**Analytics Avengers (4)**]{.blue}: Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer
+<!--     -   [Netflix Analysis](/documents/proposal_analytics_avenges.pdf) -->
 
-    -   [Netflix Analysis](/documents/proposal_analytics_avenges.pdf)
+<!-- -   [**Syntax Squad**]{.blue}: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru -->
 
+<!--     -   [No Project Title](/documents/proposal_syntax_squad.pdf) -->
 
--   [**Syntax Squad**]{.blue}: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru
+<!-- -   [**Data Detectives**]{.blue}: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin -->
 
-    -   [No Project Title](/documents/proposal_syntax_squad.pdf)
+<!--     -   [Happiness of the World Over Time](/documents/proposal_data_detectives.pdf) -->
 
+<!-- -   [**Hala Madrid**]{.blue}: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith -->
 
--   [**Data Detectives**]{.blue}: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin
+<!--     -   [Video Game Sales Data Analysis Report](/documents/proposal_hala_madrid.pdf) -->
 
-    -   [Happiness of the World Over Time](/documents/proposal_data_detectives.pdf)
+<!-- -   [**The Back Right corner**]{.blue}: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui -->
 
+<!--     -   [How do Movies and Tv Shows differ by Country?](/documents/proposal_back_right_corner.pdf) -->
 
--   [**Hala Madrid**]{.blue}: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith
+<!-- -   [**The Outliers**]{.blue}: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj -->
 
-    -   [Video Game Sales Data Analysis Report](/documents/proposal_hala_madrid.pdf)
+<!--     -   [Exploratory Data Analysis in Auto-Mpg Dataset](/documents/proposal_the_outliers.pdf) -->
 
+<!-- -   [**Block Blasters**]{.blue}: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her -->
 
--   [**The Back Right corner**]{.blue}: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui
+<!--     -   [What Makes a Song Danceable?](/documents/proposal_block_blasters.pdf) -->
 
-    -   [How do Movies and Tv Shows differ by Country?](/documents/proposal_back_right_corner.pdf)
+<!-- -   [**Intermediate Wizards**]{.blue}: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl -->
 
+<!--     -   [Most Important Factors to a child’s exam success](/documents/proposal_intermediate_wizards.pdf) -->
 
--   [**The Outliers**]{.blue}: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj
+<!-- -   **TeamName?**: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos -->
 
-    -   [Exploratory Data Analysis in Auto-Mpg Dataset](/documents/proposal_the_outliers.pdf)
-
-
--   [**Block Blasters**]{.blue}: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her
-
-    -   [What Makes a Song Danceable?](/documents/proposal_block_blasters.pdf)
-
-
--   [**Intermediate Wizards**]{.blue}: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl
-
-    -   [Most Important Factors to a child’s exam success](/documents/proposal_intermediate_wizards.pdf)
-
-
--   **TeamName?**: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos
-
-    -   [Marquette University Basketball Heatmap](/documents/proposal_noname.pdf)
-
-
+<!--     -   [Marquette University Basketball Heatmap](/documents/proposal_noname.pdf) -->
 
 ## Presentation order
 
-```{r}
-#| eval: true
-#| echo: true
-team <- c("The Whales", "Analytics Avengers", "Syntax Squad", 
-          "Data Detectives", "Hala Madrid", "The Back Right corner",
-          "The Outliers", "Block Blasters", "Intermediate Wizards",
-          "Noname")
-set.seed(3570)
-(present_order <- sample(team, size = 10, replace = FALSE))
-```
-
-
+<!-- ```{r} -->
+<!-- #| eval: true -->
+<!-- #| echo: true -->
+<!-- team <- c("The Whales", "Analytics Avengers", "Syntax Squad",  -->
+<!--           "Data Detectives", "Hala Madrid", "The Back Right corner", -->
+<!--           "The Outliers", "Block Blasters", "Intermediate Wizards", -->
+<!--           "Noname") -->
+<!-- set.seed(3570) -->
+<!-- (present_order <- sample(team, size = 10, replace = FALSE)) -->
+<!-- ``` -->
 
 ## Presentation Slides
 
--   [**Intermediate Wizards**]{.blue}: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl
+<!-- -   [**Intermediate Wizards**]{.blue}: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl -->
 
-    -   [Most Important Factors to a child’s exam success](https://marq-my.sharepoint.com/:p:/g/personal/luke_bondi_marquette_edu/EbIW8G-XG79Bp9AoQB_lOGQBwXeKBt4wckNQ3NLQZv_Osw)
-    
-    
--   [**Data Detectives**]{.blue}: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin
+<!--     -   [Most Important Factors to a child’s exam success](https://marq-my.sharepoint.com/:p:/g/personal/luke_bondi_marquette_edu/EbIW8G-XG79Bp9AoQB_lOGQBwXeKBt4wckNQ3NLQZv_Osw) -->
 
-    -   [Happiness of the World Over Time](https://marq-my.sharepoint.com/:p:/r/personal/cheng-han_yu_marquette_edu/_layouts/15/Doc.aspx?sourcedoc=%7BE6F6B81B-6FDB-4A2D-BF68-914E69B6E790%7D&file=slides_data_detectives.pptx&action=edit&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-FOLDER)
-    
+<!-- -   [**Data Detectives**]{.blue}: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin -->
 
--   [**Analytics Avengers (4)**]{.blue}: Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer
+<!--     -   [Happiness of the World Over Time](https://marq-my.sharepoint.com/:p:/r/personal/cheng-han_yu_marquette_edu/_layouts/15/Doc.aspx?sourcedoc=%7BE6F6B81B-6FDB-4A2D-BF68-914E69B6E790%7D&file=slides_data_detectives.pptx&action=edit&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-FOLDER) -->
 
-    -   [Netflix Analysis](https://www.canva.com/design/DAGiIQG4TAg/vKgFnDLKrFifg5EmeVSzMw/view?utm_content=DAGiIQG4TAg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h88f968ef14)
-    
+<!-- -   [**Analytics Avengers (4)**]{.blue}: Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer -->
 
--   [**The Outliers**]{.blue}: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj
+<!--     -   [Netflix Analysis](https://www.canva.com/design/DAGiIQG4TAg/vKgFnDLKrFifg5EmeVSzMw/view?utm_content=DAGiIQG4TAg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h88f968ef14) -->
 
-    -   [Exploratory Data Analysis in Auto-Mpg Dataset](https://docs.google.com/presentation/d/1PzQjKIEOHCrHtJcJYIrw8Sf2dqkQeoLY9R_wHAIg8_A/edit#slide=id.p)
-    
-    
--   [**The Whales**]{.blue}: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski
+<!-- -   [**The Outliers**]{.blue}: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj -->
 
-    -   [Video Game Sales](https://marq-my.sharepoint.com/:p:/g/personal/filip_kisielewski_marquette_edu/ET9iIffJDIZAlw0GnPgMND4B5WIs3wy3E2asfMfOYQt_Fg)
-    
+<!--     -   [Exploratory Data Analysis in Auto-Mpg Dataset](https://docs.google.com/presentation/d/1PzQjKIEOHCrHtJcJYIrw8Sf2dqkQeoLY9R_wHAIg8_A/edit#slide=id.p) -->
 
--   [**Block Blasters**]{.blue}: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her
+<!-- -   [**The Whales**]{.blue}: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski -->
 
-    -   [What Makes a Song Danceable?](/documents/slides_block_blasters.pdf)
-    
-    
--   [**The Back Right corner**]{.blue}: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui
+<!--     -   [Video Game Sales](https://marq-my.sharepoint.com/:p:/g/personal/filip_kisielewski_marquette_edu/ET9iIffJDIZAlw0GnPgMND4B5WIs3wy3E2asfMfOYQt_Fg) -->
 
-    -   [How Does Netflix Differ between North America and Asia?](https://marq-my.sharepoint.com/:p:/r/personal/cheng-han_yu_marquette_edu/_layouts/15/Doc.aspx?sourcedoc=%7B859D1AEF-0549-4349-8AE7-1F2E465B7501%7D&file=slides_right_corner.pptx&action=edit&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-FOLDER)
+<!-- -   [**Block Blasters**]{.blue}: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her -->
 
+<!--     -   [What Makes a Song Danceable?](/documents/slides_block_blasters.pdf) -->
 
+<!-- -   [**The Back Right corner**]{.blue}: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui -->
 
--   [**Hala Madrid**]{.blue}: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith
+<!--     -   [How Does Netflix Differ between North America and Asia?](https://marq-my.sharepoint.com/:p:/r/personal/cheng-han_yu_marquette_edu/_layouts/15/Doc.aspx?sourcedoc=%7B859D1AEF-0549-4349-8AE7-1F2E465B7501%7D&file=slides_right_corner.pptx&action=edit&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-FOLDER) -->
 
-    -   [Video Game Sales Data Analysis Report](https://marq-my.sharepoint.com/:p:/g/personal/kevin_esquivel_marquette_edu/EQ4ph_a-pa1OiLI8CzUUdXUBsw_mYOzAq52i30tLexCgfQ)
-    
-    
--   [**Syntax Squad**]{.blue}: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru
+<!-- -   [**Hala Madrid**]{.blue}: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith -->
 
-    -   [Global Video Game Sales Assessment](https://marq-my.sharepoint.com/:p:/g/personal/simon_glarner_marquette_edu/EVMCA5y_gIpMnSIVWmb1pyQBvZaFjuv9MdjSq9EHH7uToA)
-    
-    
--   **TeamName?**: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos
+<!--     -   [Video Game Sales Data Analysis Report](https://marq-my.sharepoint.com/:p:/g/personal/kevin_esquivel_marquette_edu/EQ4ph_a-pa1OiLI8CzUUdXUBsw_mYOzAq52i30tLexCgfQ) -->
 
-    -   [NBA Shots Analysis (2001 - Present)](https://docs.google.com/presentation/d/1GJb7TmBFa8sIdKwx6TbcK6gORwsACnNDZAfHC518y2M/edit#slide=id.p)
+<!-- -   [**Syntax Squad**]{.blue}: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru -->
+
+<!--     -   [Global Video Game Sales Assessment](https://marq-my.sharepoint.com/:p:/g/personal/simon_glarner_marquette_edu/EVMCA5y_gIpMnSIVWmb1pyQBvZaFjuv9MdjSq9EHH7uToA) -->
+
+<!-- -   **TeamName?**: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos -->
+
+<!--     -   [NBA Shots Analysis (2001 - Present)](https://docs.google.com/presentation/d/1GJb7TmBFa8sIdKwx6TbcK6gORwsACnNDZAfHC518y2M/edit#slide=id.p) -->

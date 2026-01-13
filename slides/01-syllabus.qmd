@@ -1,0 +1,688 @@
+---
+title: "Welcome Aboard `r emo::ji('raised_hands')`"
+title-slide-attributes:
+  data-background-image: ./images/bg.png
+  # data-background-size: stretch
+  # data-slide-number: none
+format: 
+  live-revealjs: 
+    output-file: 01-syllabus-slides.html
+webr:
+  cell-options:
+    autorun: false
+  # packages:
+  #   - tidyverse
+---
+
+#  {visibility="hidden"}
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/01-syllabus",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+# Taipei, Taiwan {background-image="images/01-syllabus/taiwan.jpeg" background-size="cover" background-position="50% 50%" background-color="#447099"}
+
+::: {.absolute bottom="50" right="10"}
+![](images/01-syllabus/taiwan.svg){width="500" fig-alt="Taiwan location"}
+:::
+
+::: notes
+-   Hello everyone, how are you? I hope you have a great winter break. Welcome to 3570 Introduction to Data Science course. I am your instructor Cheng-Han Yu.
+
+-   First thing first. Get to know each other. Let me first introduce my self. I was born and grew up in Taipei, Taiwan, my home country, which is a island right next to China. Taipei is a big city in terms of population. It is about the same population size as Chicago. This building is called Taipei 101, which is the tallest building in Taiwan.
+:::
+
+## My Journey {background-image="images/01-syllabus/sample_gate.png" background-size="cover" background-position="50% 50%" background-opacity="0.3"}
+
+-   Assistant Professor (2020/08 - )
+
+```{r}
+#| out-width: 20%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/mu.svg")
+```
+
+-   Postdoctoral Fellow
+
+```{r}
+#| out-width: 20%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/rice.png")
+```
+
+-   PhD in Statistics
+
+```{r}
+#| out-width: 20%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/ucsc.png")
+```
+
+-   MA in Economics/PhD program in Statistics
+
+```{r}
+#| out-width: 20%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/iub.png")
+```
+
+::: notes
+After college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics.
+
+-   I got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies.
+-   Then I spent two years doing my postdoctoral research at Rice University in Houston, Texas.
+-   Finally, in fall 2020, I came to Marquette as an assistant professor.
+-   Midwest/Indiana-West/California-South/Texas-Midwest/Wisconsin
+-   Been to any one of these universities/cities?
+-   The most beautiful campus.
+-   Who are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.
+-   Poor listening and speaking skills. I was shy.
+-   OK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything,
+-   I have the class list. I'd like to learn your face and remember your name. You know, you all wear a mask. It's hard to recognize you and connect your name and your face.
+-   When I call your name, you can say something about yourself. No need to be long, couple of seconds are good.
+:::
+
+## How to Reach Me
+
+-   Office hours **TuTh 3:20 - 4:20 PM** and **Wed 2 - 3 PM** in **Cudahy Hall 353**.
+-   `r emo::ji('e-mail')` [cheng-han.yu\@marquette.edu](mailto:cheng-han.yu@marquette.edu){.email}
+    -   Answer your question within 24 hours.
+    -   Expect a reply on **Monday** if shoot me a message **on weekends**.
+    -   Start your subject line with **\[math3570\]** or **\[cosc3570\]** followed by a **clear description of your question**.
+
+```{r}
+#| out-width: 45%
+knitr::include_graphics("./images/01-syllabus/3570_email.png")
+```
+
+-   I will **NOT** reply your e-mail if ... **Check the email policy in the [syllabus](https://math3570-s26.github.io/website/course-syllabus.html)**!
+
+## When You Have Two Dr. Yu in One Semester `r emo::ji('joy')` {visibility="hidden"}
+
+```{r}
+#| out-width: 100%
+knitr::include_graphics("./images/01-syllabus/email_example_student.png")
+```
+
+```{r}
+#| out-width: 100%
+knitr::include_graphics("./images/01-syllabus/email_example.png")
+```
+
+::: notes
+-   This is a real case happened last semester. A student of my class sent her homework of another class linear systems to me because the instructor of that course also has last name Yu, and she messed up. So if you remember to add course number in the subject line, it will greatly reduce the possibility of sending a wrong message. And it will save your time and my time, and so we all can work more efficiently. Right?
+:::
+
+## What is This Course?
+
+-   **Every** *aspect of doing a practical data science project, from importing data to deploying what we learn from data*.
+
+. . .
+
+`r emo::ji("question")` **What are prerequisites?**\
+`r emo::ji("point_right")` COSC 1010 (Intro Programming) and MATH 4720 (Intro Stats) or MATH 2780 (Intro Regression)
+
+<br>
+
+. . .
+
+`r emo::ji("question")` **Is this like another intro stats course?**\
+`r emo::ji("point_right")` No. Statistics and data science are closely related.
+
+. . .
+
+Nowadays\
+`r emo::ji("point_right")` Data science is a *broader* subject than statistics.
+
+. . .
+
+`r emo::ji("point_right")` Statistics focuses more on *analyzing and learning from data*, a part of the entire workflow of data science.
+
+<br>
+
+. . .
+
+`r emo::ji("question")` **Is this like another intro CS or programming course?**\
+`r emo::ji("point_right")` Absolutely not. We learn how to **code for doing data science**, not for understanding computer systems and structures.
+
+::: notes
+-   Of course we will not cover every detail form A to Z of DS in one semester becuase DS is such a huge subject, just like computer science. It's impossible to learn CS in one semester by just taking intro to CS, right? So we'll just learn the basic and essential concepts and tools used is DS.
+:::
+
+## What is NOT Covered in This Course
+
+-   **Advanced data analytics and computing** <!-- + MATH 4720 Statistical Methods --> <!-- + MATH 4740 Biostatistical Methods -->
+    -   MATH 4750 Statistical Computing
+    -   MATH 4760 Time Series Analysis
+    -   MATH 4780 Regression Analysis
+    -   MATH 4790 Bayesian Statistics
+    -   COSC 4600 Fundamentals of Artificial Intelligence
+    -   COSC 4610 Data Mining
+    -   COEN 4860 Introduction to Neural Networks
+
+. . .
+
+-   **Big data**: We start with small, in-memory data sets. You don't know how to tackle big data unless you have experience with small data.
+
+. . .
+
+-   **Database**: Learn SQL in
+    -   COSC 4800 Principles of Database Systems
+    -   INSY 4052 Database Management Systems.
+
+::: notes
+-   We won't talk about topics like cloud computing, parallel computing, distributed computing.
+-   **Big data techniques**: As a beginner, we focus on small, in-memory datasets. You can't tackle big data unless you have experience with small data.
+:::
+
+## What Computing Languages?
+
+::::: columns
+::: {.column width="50%"}
+\~ 60%
+
+```{r}
+#| out-width: 50%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/Rlogo.png")
+```
+:::
+
+::: {.column width="50%"}
+\~ 40%
+
+```{r}
+#| out-width: 45%
+#| fig-align: center
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg")
+```
+:::
+:::::
+
+-   You've learned Python in COSC 1010. Being R-Python bilingual is getting more important!
+
+. . .
+
+`r emo::ji("point_right")` Wouldn't it be great to add both languages to your resume! `r emo::ji('sunglasses')` <!-- - [Why R](https://github.com/matloff/R-vs.-Python-for-Data-Science) -->
+
+. . .
+
+`r emo::ji("x")` Don't want to learn *R and/or Python*? Take another section or in *next* semester\~!
+
+`r emo::ji("x")` Drop deadline: **01/20 (Tue), 11:59 PM**.
+
+<!-- ## {visibility="hidden"} -->
+
+<!-- ```{r} -->
+
+<!-- #| out-width: "75%" -->
+
+<!-- #| fig-align: "center" -->
+
+<!-- knitr::include_graphics("./images/01-syllabus/survey.png") -->
+
+<!-- ``` -->
+
+## Where to Code? [Posit Cloud](https://posit.cloud/)
+
+:::::: columns
+::: {.column width="40%"}
+```{r}
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/posit.png")
+```
+:::
+
+::: {.column width="30%"}
+<br>
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/03-posit/rstudio-logo.png")
+```
+:::
+
+::: {.column width="30%"}
+```{r}
+#| out-width: 50%
+#| fig-align: center
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg")
+```
+:::
+::::::
+
+-   Have nice computing power and interactive collaboration with me and your teammates!
+
+<!-- - **Student** plan: \$5/month (Cheaper than buying a textbook!) -->
+
+## Course Materials
+
+-   Course Website - <https://math3570-s26.github.io/website/>
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+#| fig-link: https://math3570-s26.github.io/website/
+knitr::include_graphics("./images/01-syllabus/website_s26.png")
+```
+
+<!-- ## Course Materials -->
+
+<!-- - Course materials are grabbed from several books and resources. -->
+
+<!-- - Our [course website and slides](https://math3570-s25.github.io/website/) would be helpful. -->
+
+<!-- . . . -->
+
+## Textbook (Really?!)
+
+::: r-stack
+![](./images/01-syllabus/read1.png){.fragment width="1800" height="1000"}
+
+![](./images/01-syllabus/read2.png){.fragment width="1600" height="900"}
+
+![](./images/01-syllabus/read3.png){.fragment width="1400" height="400"}
+
+![](./images/01-syllabus/read4.png){.fragment width="1200" height="800"}
+:::
+
+## 
+
+:::::: columns
+::: {.column width="30%"}
+[*Python for Data Analysis, 3E*](https://wesmckinney.com/book/)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+#| fig-link: https://wesmckinney.com/book/
+knitr::include_graphics("./images/01-syllabus/py4ds_book.jpg")
+```
+:::
+
+::: {.column width="30%"}
+[*R for Data Science 2nd edition*](https://r4ds.hadley.nz/)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+#| fig-link: https://r4ds.hadley.nz/
+knitr::include_graphics("./images/01-syllabus/r4ds_book2.jpeg")
+```
+:::
+
+::: {.column width="30%"}
+[*Tidy Modeling with R*](https://www.tmwr.org/)
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+#| fig-link: https://www.tmwr.org/
+knitr::include_graphics("./images/01-syllabus/tmwr_book.png")
+```
+:::
+::::::
+
+## Learning Management System ([D2L](https://d2l.mu.edu/d2l/home/630428))
+
+```{r}
+#| out-width: 100%
+#| fig-align: center
+#| fig-link: https://d2l.mu.edu/d2l/home/630428
+knitr::include_graphics("./images/01-syllabus/d2l_s26.png")
+```
+
+-   **Assessments \> Grades**
+
+## Grading Policy ✨
+
+-   Your grade is from the following categories and distribution
+
+    -   **25%** In-class lab activities
+
+    -   **10%** In-class AI activities
+
+    -   **45%** Mini projects
+
+    -   **20%** Final project competition
+
+<!-- Depending on the progress of the course,  -->
+
+<!-- - There may be a midterm project proposal presentation, if time permitted.  -->
+
+-   `r emo::ji("x")` You must participate in the final presentation in order to pass the course.
+
+-   `r emo::ji("x")` You will **NOT** be allowed to do any extra credit projects/homework/exam to compensate for a poor grade.
+
+<!-- - I may use class participation to make grade adjustments at the end of the semester. -->
+
+## Grade-Percentage Conversion
+
+-   $[x, y)$ means greater than or equal to $x$ and less than $y$. For example, 94.0 is in \[94, 100\] and the grade is A and 93.8 is in \[90, 94) and the grade is A-.
+
+```{r}
+letter <- c("A", "A-", "B+", "B", "B-", "C+", "C", "C-",
+                       "D+", "D", "F")
+percentage <- c("[94, 100]", "[90, 94)", "[87, 90)", "[84, 87)", "[80, 84)",
+                "[77, 80)", "[74, 77)", "[70, 74)", 
+                "[65, 70)", "[60, 65)", "[0, 60)")
+grade_dist <- data.frame(Grade = letter, Percentage = percentage)
+library(kableExtra)
+knitr::kable(grade_dist, longtable = TRUE, format = "html", align = 'l') %>% kable_styling(position = "center", font_size = 36)
+```
+
+## Lab Exercises (25%)
+
+-   Graded as **Complete/Incomplete** and used as evidence of attendance and participation.
+
+-   Allowed to have **one** incomplete lab exercise without any penalty.
+
+-   Beyond that, **2%** grade percentage will be taken off for each missing/incomplete exercise.
+
+-   You will create a project in [Posit Cloud](https://posit.cloud) saving all of your lab exercises. (We'll go through know-how together)
+
+<!-- - `r emo::ji("x")` **No make-up lab exercises** for any reason. -->
+
+<!-- ## Homework (30%) -->
+
+<!-- - The homework assignments are individual. Submit your own work.  -->
+
+<!-- - `r emo::ji("x")` **You may not share answers/code with your classmates**. -->
+
+<!-- . . . -->
+
+<!-- - Homework will be assigned through [**GitHub**](https://github.com/):  -->
+
+<!--   + clone/pull the homework repo into Posit Cloud -->
+
+<!--   + work on the [Quarto](https://quarto.org/) file in the repo (We'll go through know-how together) -->
+
+<!-- . . . -->
+
+<!-- - You will have **at least one week** to complete your assignment. -->
+
+<!-- - `r emo::ji("x")` **No make-up homework** for any reason unless you have [excused absence](https://bulletin.marquette.edu/policies/attendance/undergraduate/). `r emo::ji("pray")` -->
+
+## AI activities (10%)
+
+-   AI activities are short presentations during class. They are usually graded as **complete or incomplete**.
+
+-   AI activities are used as evidence of both attendance and participation.
+
+-   Groups take turn to present what they learn from GenAI about data science.
+
+## Mini Projects (45%)
+
+-   You will work in a team on **3** mini projects.
+
+-   This project will focus on a subset of the course content up to that point, for example data wrangling and visualization or a simple predictive model.
+
+<!-- - The mini projects will include -->
+
+<!--   + A documented GitHub repository. -->
+
+<!--   + A Quarto report describing your question, data, methods, and findings. -->
+
+<!--   + A short in-class group presentation. -->
+
+<!--   + An AI usage documents that shows how you used generative AI and how you verified any AI generated content. -->
+
+-   More detailed instructions and rubric will be provided later in the semester.
+
+## Final Project Competition (20%)
+
+-   You will be team up to do the final project.
+
+-   Your project can be in either of the following categories:
+
+    1.  **Data analysis** using statistical models or machine learning algorithms
+
+    2.  Introduce a **R or Python package** not learned in class, including **live demo**
+
+    3.  Introduce a **data science tool (visualization, computing, etc)** not learned in class, including **live demo**
+
+    4.  Introduce a **programming language** not learned in class for doing data science, including **live demo**, Julia, SQL, MATLAB, SAS for example.
+
+    5.  **Web development**: Shiny website or dashboard, including **live demo**
+
+-   The final project presentation is on **Monday, 5/4, 10:30 AM - 12:30 PM**.
+
+-   More information will be released later.
+
+<!-- ## AI Project (150 pts) -->
+
+<!-- - There will be one AI project released around Week 13. -->
+
+<!-- - You have to use GenAI to self learn a topic that is not covered in my lectures, and generate a data analysis report. -->
+
+<!-- - The project topic will also be tested in the final exam. -->
+
+<!-- - You **must carefully cite your GenAI tool or reveal your use of AI.** -->
+
+## Document Generative AI Use
+
+::::: columns
+::: {.column width="80%"}
+<!-- ### Generative AI -->
+
+-   You may use generative AI tools such as ChatGPT and Gemini to generate a first draft of text for your work, provided that this use is **documented and cited**.
+
+<!-- [Example] Data science is an interdisciplinary field that ... [^1] -->
+
+<!-- [^1]: ChatGPT, response to *“Tell me what data science is,”* Jan 14, 2025, https://chat.openai.com. -->
+
+-   Unless explicitly stated otherwise, you may make use of any online resources, but you must **explicitly cite/document** where you obtained any code you directly use or use as inspiration in your solutions.
+:::
+
+::: {.column width="20%"}
+```{r}
+#| out-width: 80%
+#| fig-align: center
+knitr::include_graphics("images/01-syllabus/genai.png")
+```
+:::
+:::::
+
+-   If you use GenAI, please include the followings in your submitted work:
+
+    -   **Why/How I used AI (prompts or questions)**
+    -   **Generated output (screenshot or copy-paste excerpt)**
+    -   **How I used the output**
+
+## Document Generative AI Use
+
+:::::: columns
+:::: {.column width="50%"}
+-   **Why/How I used AI (prompts and questions)**
+    -   *I asked ChatGPT to generate a histogram using R.*
+-   **Generated output (screenshot or copy-paste excerpt)**
+
+::: tiny
+```{r}
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("images/01-syllabus/genai_screenshot.png")
+```
+:::
+::::
+
+::: {.column width="50%"}
+-   **How I used the output**
+    -   *I reviewed the suggestions, but I did not use the exact code. Instead, I change the code format and breaks value to 50.*
+:::
+::::::
+
+<!-- ## Academic Integrity -->
+
+<!-- This course expects all students to follow University and College statements on [academic integrity](https://bulletin.marquette.edu/undergrad/academicregulations/). -->
+
+<!-- - **Honor Pledge and Honor Code**: *I recognize the importance of personal integrity in all aspects of life and work. I commit myself to truthfulness, honor, and responsibility, by which I earn the respect of others. I support the development of good character, and commit myself to uphold the highest standards of academic integrity as an important aspect of personal integrity. My commitment obliges me to conduct myself according to the Marquette University Honor Code*. -->
+
+<!-- - `r emo::ji("x")` You know what I am talking about. Yes, **DO NOT CHEAT**.  -->
+
+## GenAI and Academic Integrity
+
+```{=html}
+<!-- Replace host and id with yours -->
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+  <iframe
+    src="https://marquette.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=36be65f1-ba4f-457d-bad3-b1b8013b9448&start=0.5"
+    title="GenAI and Academic Integrity"
+    style="position:absolute; top:0; left:0; width:100%; height:90%; border:0;"
+    allow="encrypted-media; fullscreen; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+```
+
+<!-- ## Q & A -->
+
+<!-- `r emo::ji("question")` **Will this course require any Textbook(s) or other materials to be purchased?**   -->
+
+<!-- `r emo::ji("point_right")` No required textbooks. All resources are free on line! -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- `r emo::ji("question")` **K: I hope to learn more about programming. R: I’m looking forward to learning more about what data science consists of rather than just learning a programming language.**   -->
+
+<!-- `r emo::ji("point_right")` To make sure everyone is on the same page, first couple of weeks is about learning R and Python syntax. After spring break, we focus on modeling and machine learning methods. -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- `r emo::ji("question")` **What do you think will be the most interesting part of the course?**   -->
+
+<!-- `r emo::ji("point_right")` I love data visualization and web development. -->
+
+<!-- <br> -->
+
+. . .
+
+<!-- `r emo::ji("question")` **If this course is a joint label between COSC and MATH, is there a difference between any particular class section or other that we may have registered for?**   -->
+
+<!-- `r emo::ji("point_right")` No difference. MATH 3570 and COSC 3570 are exactly the same course. -->
+
+<!-- `r emo::ji("question")` **D: Do I need good coding skills to be able to succeed?** **G: How much of this class is about coding?** -->
+
+<!-- `r emo::ji("point_right")` We'll learn *basic* syntax for doing data science step by step. -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- `r emo::ji("question")` **What kind of time estimate do you believe most students should spend on reading + assignments for the course?**   -->
+
+<!-- `r emo::ji("point_right")` Everyone is different. The more the better. -->
+
+<!-- ## Q & A -->
+
+<!-- `r emo::ji("question")` **What kind of projects will we be doing for this course?**   -->
+
+<!-- `r emo::ji("point_right")` Any project related to data works. You propose one to me. We discuss it, then decide. -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- `r emo::ji("question")` **Will this class help me better understand how to code proficiently?**   -->
+
+<!-- `r emo::ji("point_right")` As you learn to speak a foreign language, you need to code a lot, frequently and constantly in order to be proficient in any programming language. No shortcut. -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- `r emo::ji("question")` **Do you know of any internships or research positions offered through Marquette University that incorporate the skills learned in this Data Science course?**   -->
+
+<!-- `r emo::ji("point_right")` Quite many. Northwestern Mutual, Direct Supply, for example. I'll share intern info with you if I get any. -->
+
+<!-- . . . -->
+
+<!-- <br> -->
+
+<!-- `r emo::ji("question")` **More questions** -->
+
+<!-- [Bring your laptop next time!]{.r-fit-text .fragment style="color: #EE6331;"} -->
+
+<!-- # `r emo::ji("handshake")` Please read the syllabus!!! Because ... {background-color="#447099"} -->

@@ -4,6 +4,16 @@ title: "MATH/COSC 3570 Introduction to Data Science (Spring 2026)"
 
 This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic [R](https://www.r-project.org/) and [Python](https://www.python.org/) programming, [Git](https://git-scm.com/) and [GitHub](https://github.com/), and interactive publishing system [Quarto](https://quarto.org/). Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R [tidyverse](https://www.tidyverse.org/) and [tidymodels](https://www.tidymodels.org/) packages. For Python, [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), and [Scikit-Learn](https://scikit-learn.org/stable/) libraries are introduced.
 
-*The course is AI-oriented. Students learn to use generative AI tools such as ChatGPT as assistants for coding, debugging, documenting, and idea generation, while remaining responsible for all analytical decisions, validation, and interpretation.*
+### Learning outcomes
+
+By the end of the course, students will be able to:
+
+- **Execute a reproducible data science workflow** using R and Python with Quarto and version control practices (Git and GitHub) to produce, share, and update analyses.
+
+- **Import, clean, reshape, and visualize data** to create effective representations that support exploration and decision making.
+
+- **Apply machine learning and statistical modeling methods** including simulation and core supervised and unsupervised learning tools to detect patterns and evaluate model performance.
+
+- **Design and communicate a practical data science project** by posing meaningful questions, justifying method choices, acknowledging limitations, and presenting results with clear, reproducible materials and appropriate citation of external code and permitted generative AI use.
 
 ![](images/background-bikeshare.png){fig-alt="A series of six, generic data visualizations: a scatterplot, a density plot, a contour plot, a line plot, a box plot, and another scatterplot." width="700"}

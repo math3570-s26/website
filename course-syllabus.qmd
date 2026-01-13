@@ -2,7 +2,7 @@
 title: "Syllabus"
 ---
 
-[**Click here**](/documents/syllabus-3570-s26.pdf "PDF of syllabus") **to download the syllabus.**
+[**Click here**](/documents/syllabus-3570-101-s26.pdf "PDF of syllabus") **to download the syllabus.**
 
 ## Time and location
 
@@ -19,7 +19,7 @@ title: "Syllabus"
 
 ## Office Hours
 
--   My in-person office hours are TuTh 4:50 - 5:50 PM, and Wed 12 - 1 PM in Cudahy Hall room 353.
+-   My in-person office hours are TuTh 3:30 - 4:30 PM, and Wed 2 - 3 PM in Cudahy Hall room 353.
 
 -   You are welcome to schedule an online meeting via Microsoft Teams if you need/prefer.
 
@@ -102,15 +102,15 @@ By the end of the semester, you will be able to...
 
 - Your grade is from the following categories and distribution
 
-  +   **30%** In-class lab activities and participation.
+  +   **25%** In-class lab activities
+  
+  +   **10%** In-class AI activities
   
   +   **45%** Mini projects
   
-  +   **25%** Final project competition
-  
-  +   *Extra credit opportunities*
+  +   **20%** Final project competition
 
--  Every student has to participate (in-person) in the final presentation to pass the course.
+-  You have to participate (in-person) in the final presentation to pass the course.
 
 - There will be **no** individualized extra credit homework/project/exercise/exam to compensate for a poor grade. All students have the same opportunities to succeed. Class participation may be used for grade adjustments at the end of the semester.
 
@@ -138,12 +138,12 @@ knitr::kable(grade_dist, longtable = TRUE,
 
 - You may have up to two missing or incomplete labs without penalty.
 
-- For each additional missing or incomplete lab, **2 percentage** points will be deducted from your final course percentage.
+- For each additional missing or incomplete lab, **2%** points will be deducted from your final course percentage.
 
-- Many labs will explicitly involve generative AI. For example,
-  + debugging AI generated code
-  + rewriting AI generated explanations for clarity
-  + comparing your own solution to an AI solution
+<!-- - Many labs will explicitly involve generative AI. For example, -->
+<!--   + debugging AI generated code -->
+<!--   + rewriting AI generated explanations for clarity -->
+<!--   + comparing your own solution to an AI solution -->
 
 - _**You must follow the generative AI policy** described below._
 

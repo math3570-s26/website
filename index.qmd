@@ -1,6 +1,6 @@
 ---
 title: "MATH/COSC 3570 Introduction to Data Science (Spring 2026)"
-tbl-colwidths: [5,5,15,8,10,8,8]
+tbl-colwidths: [5,8,20,10,10,8,8]
 ---
 
 *This schedule will be updated as the semester progresses, with all changes documented here*.
@@ -12,14 +12,14 @@ tbl-colwidths: [5,5,15,8,10,8,8]
 |  | Thu, Jan 15 | Posit Cloud | 🖥️posit | 📋 posit 📋01 |  |  |
 | 2 | Tue, Jan 20 | Git and GitHub | 🖥️git | 📋github |  |  |
 |  | Thu, Jan 22 | Quarto: YAML and Markdown | 🖥️quarto | 📋02 📋03 |  | ✅ Team up Due |
-| 3 | Tue, Jan 27 | Quarto: Code Chunk |  |  📋04 |  |  |
+| 3 | Tue, Jan 27 | Quarto: Code Chunk |  | 📋04 |  |  |
 |  | Thu, Jan 29 | R and Python Syntax | 🖥️syntax | 📋05 📋06 |  |  |
 | 4 | Tue, Feb 3 | R Tidyverse | 🖥️package | 📋07 📋08 |  |  |
-|  | Thu, Feb 5 | Python NumPy/Pandas |  |  📋09 |  |  |
+|  | Thu, Feb 5 | Python NumPy/Pandas |  | 📋09 |  |  |
 | 5 | Tue, Feb 10 | Data Importing | 🖥️import | 📋10 |  |  |
 |  | Thu, Feb 12 | Data Visualization-ggplot2 | 🖥️ggplot | 📋11 |  |  |
 | 6 | Tue, Feb 17 | Data Visualization-categorical and numerical data | 🖥️visualization | 📋12 📋13 |  |  |
-|  | Thu, Feb 19 | Interactive Data Visualization | 🖥️interactive-viz |  📋14 |  |  |
+|  | Thu, Feb 19 | Interactive Data Visualization | 🖥️interactive-viz | 📋14 |  |  |
 | 7 | Tue, Feb 24 | Data Wrangling - one data frame | 🖥️dplyr-1 | 📋15 |  |  |
 |  | **Thu, Feb 26** | **Mini Project 1 Presentation: Exploratory Data Storytelling** |  |  |  |  |
 | 8 | Tue, Mar 3 | Data Wrangling - two data frames | 🖥️dplyr-2 | 📋16 |  |  |

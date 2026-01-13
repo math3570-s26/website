@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
+<title>Welcome Aboard 🙌 – MATH/COSC 3570 - Spring 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-38b22635d8ba2828809dae622215a440.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script src="../site_libs/kePrint/kePrint.js"></script><link href="../site_libs/lightable/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta property="og:title" content="Welcome Aboard r emo::ji('raised_hands') – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="MATH/COSC 3570 Introduction to Data Science">
+<meta property="og:image" content="https://math3570-s26.github.io/website/slides/images/01-syllabus/taiwan.svg">
+<meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
+<meta property="og:image:alt" content="Taiwan location">
+</head>
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Welcome Aboard 🙌</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://d2l.mu.edu/d2l/home/630428" title="D2L" class="quarto-navigation-tool px-1" aria-label="D2L"><i class="bi bi-person-fill"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mini Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topics and Works</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-description-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-work-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Group and Proposal</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="01-syllabus-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Welcome Aboard 🙌</h1>
+<p class="subtitle lead">MATH/COSC 3570 Introduction to Data Science</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="section" class="level1" data-visibility="hidden"><h1 data-visibility="hidden"></h1>
+
+</section><section id="taipei-taiwan" class="level1" data-background-image="images/01-syllabus/taiwan.jpeg" data-background-size="cover" data-background-position="50% 50%" data-background-color="#447099"><h1 data-background-image="images/01-syllabus/taiwan.jpeg" data-background-size="cover" data-background-position="50% 50%" data-background-color="#447099">Taipei, Taiwan</h1>
+<div class="absolute" data-bottom="50" data-right="10">
+<p><img src="images/01-syllabus/taiwan.svg" class="img-fluid" alt="Taiwan location" width="500"></p>
+</div>
+<div class="notes">
+<ul>
+<li><p>Hello everyone, how are you? I hope you have a great winter break. Welcome to 3570 Introduction to Data Science course. I am your instructor Cheng-Han Yu.</p></li>
+<li><p>First thing first. Get to know each other. Let me first introduce my self. I was born and grew up in Taipei, Taiwan, my home country, which is a island right next to China. Taipei is a big city in terms of population. It is about the same population size as Chicago. This building is called Taipei 101, which is the tallest building in Taiwan.</p></li>
+</ul>
+</div>
+<section id="my-journey" class="level2" data-background-image="images/01-syllabus/sample_gate.png" data-background-size="cover" data-background-position="50% 50%" data-background-opacity="0.3"><h2 data-background-image="images/01-syllabus/sample_gate.png" data-background-size="cover" data-background-position="50% 50%" data-background-opacity="0.3" class="anchored" data-anchor-id="my-journey">My Journey</h2>
+<ul>
+<li>Assistant Professor (2020/08 - )</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/mu.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Postdoctoral Fellow</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/rice.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>PhD in Statistics</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/ucsc.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>MA in Economics/PhD program in Statistics</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/iub.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>After college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics.</p>
+<ul>
+<li>I got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies.</li>
+<li>Then I spent two years doing my postdoctoral research at Rice University in Houston, Texas.</li>
+<li>Finally, in fall 2020, I came to Marquette as an assistant professor.</li>
+<li>Midwest/Indiana-West/California-South/Texas-Midwest/Wisconsin</li>
+<li>Been to any one of these universities/cities?</li>
+<li>The most beautiful campus.</li>
+<li>Who are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.</li>
+<li>Poor listening and speaking skills. I was shy.</li>
+<li>OK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything,</li>
+<li>I have the class list. I’d like to learn your face and remember your name. You know, you all wear a mask. It’s hard to recognize you and connect your name and your face.</li>
+<li>When I call your name, you can say something about yourself. No need to be long, couple of seconds are good.</li>
+</ul>
+</div>
+</section><section id="how-to-reach-me" class="level2"><h2 class="anchored" data-anchor-id="how-to-reach-me">How to Reach Me</h2>
+<ul>
+<li>Office hours <strong>TuTh 3:20 - 4:20 PM</strong> and <strong>Wed 2 - 3 PM</strong> in <strong>Cudahy Hall 353</strong>.</li>
+<li>📧 <a href="mailto:cheng-han.yu@marquette.edu" class="email">cheng-han.yu@marquette.edu</a>
+<ul>
+<li>Answer your question within 24 hours.</li>
+<li>Expect a reply on <strong>Monday</strong> if shoot me a message <strong>on weekends</strong>.</li>
+<li>Start your subject line with <strong>[math3570]</strong> or <strong>[cosc3570]</strong> followed by a <strong>clear description of your question</strong>.</li>
+</ul>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/3570_email.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:45.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>I will <strong>NOT</strong> reply your e-mail if … <strong>Check the email policy in the <a href="https://math3570-s26.github.io/website/course-syllabus.html">syllabus</a></strong>!</li>
+</ul></section><section id="when-you-have-two-dr.-yu-in-one-semester" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="when-you-have-two-dr.-yu-in-one-semester">When You Have Two Dr.&nbsp;Yu in One Semester 😂</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/email_example_student.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/email_example.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>This is a real case happened last semester. A student of my class sent her homework of another class linear systems to me because the instructor of that course also has last name Yu, and she messed up. So if you remember to add course number in the subject line, it will greatly reduce the possibility of sending a wrong message. And it will save your time and my time, and so we all can work more efficiently. Right?</li>
+</ul>
+</div>
+</section><section id="what-is-this-course" class="level2"><h2 class="anchored" data-anchor-id="what-is-this-course">What is This Course?</h2>
+<ul>
+<li>
+<strong>Every</strong> <em>aspect of doing a practical data science project, from importing data to deploying what we learn from data</em>.</li>
+</ul>
+<p>. . .</p>
+<p>❓ <strong>What are prerequisites?</strong><br>
+👉 COSC 1010 (Intro Programming) and MATH 4720 (Intro Stats) or MATH 2780 (Intro Regression)</p>
+<p><br></p>
+<p>. . .</p>
+<p>❓ <strong>Is this like another intro stats course?</strong><br>
+👉 No.&nbsp;Statistics and data science are closely related.</p>
+<p>. . .</p>
+<p>Nowadays<br>
+👉 Data science is a <em>broader</em> subject than statistics.</p>
+<p>. . .</p>
+<p>👉 Statistics focuses more on <em>analyzing and learning from data</em>, a part of the entire workflow of data science.</p>
+<p><br></p>
+<p>. . .</p>
+<p>❓ <strong>Is this like another intro CS or programming course?</strong><br>
+👉 Absolutely not. We learn how to <strong>code for doing data science</strong>, not for understanding computer systems and structures.</p>
+<div class="notes">
+<ul>
+<li>Of course we will not cover every detail form A to Z of DS in one semester becuase DS is such a huge subject, just like computer science. It’s impossible to learn CS in one semester by just taking intro to CS, right? So we’ll just learn the basic and essential concepts and tools used is DS.</li>
+</ul>
+</div>
+</section><section id="what-is-not-covered-in-this-course" class="level2"><h2 class="anchored" data-anchor-id="what-is-not-covered-in-this-course">What is NOT Covered in This Course</h2>
+<ul>
+<li>
+<strong>Advanced data analytics and computing</strong> <!-- + MATH 4720 Statistical Methods --> <!-- + MATH 4740 Biostatistical Methods -->
+<ul>
+<li>MATH 4750 Statistical Computing</li>
+<li>MATH 4760 Time Series Analysis</li>
+<li>MATH 4780 Regression Analysis</li>
+<li>MATH 4790 Bayesian Statistics</li>
+<li>COSC 4600 Fundamentals of Artificial Intelligence</li>
+<li>COSC 4610 Data Mining</li>
+<li>COEN 4860 Introduction to Neural Networks</li>
+</ul>
+</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<strong>Big data</strong>: We start with small, in-memory data sets. You don’t know how to tackle big data unless you have experience with small data.</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<strong>Database</strong>: Learn SQL in
+<ul>
+<li>COSC 4800 Principles of Database Systems</li>
+<li>INSY 4052 Database Management Systems.</li>
+</ul>
+</li>
+</ul>
+<div class="notes">
+<ul>
+<li>We won’t talk about topics like cloud computing, parallel computing, distributed computing.</li>
+<li>
+<strong>Big data techniques</strong>: As a beginner, we focus on small, in-memory datasets. You can’t tackle big data unless you have experience with small data.</li>
+</ul>
+</div>
+</section><section id="what-computing-languages" class="level2"><h2 class="anchored" data-anchor-id="what-computing-languages">What Computing Languages?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>~ 60%</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/01-syllabus/Rlogo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>~ 40%</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:45.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>You’ve learned Python in COSC 1010. Being R-Python bilingual is getting more important!</li>
+</ul>
+<p>. . .</p>
+<p>👉 Wouldn’t it be great to add both languages to your resume! 😎 <!-- - [Why R](https://github.com/matloff/R-vs.-Python-for-Data-Science) --></p>
+<p>. . .</p>
+<p>❌ Don’t want to learn <em>R and/or Python</em>? Take another section or in <em>next</em> semester~!</p>
+<p>❌ Drop deadline: <strong>01/20 (Tue), 11:59 PM</strong>.</p>
+<!-- ## {visibility="hidden"} -->
+<!-- ```{r} -->
+<!-- #| out-width: "75%" -->
+<!-- #| fig-align: "center" -->
+<!-- knitr::include_graphics("./images/01-syllabus/survey.png") -->
+<!-- ``` -->
+</section><section id="where-to-code-posit-cloud" class="level2"><h2 class="anchored" data-anchor-id="where-to-code-posit-cloud">Where to Code? <a href="https://posit.cloud/">Posit Cloud</a>
+</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/03-posit/posit.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/03-posit/rstudio-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Have nice computing power and interactive collaboration with me and your teammates!</li>
+</ul>
+<!-- - **Student** plan: \$5/month (Cheaper than buying a textbook!) --></section><section id="course-materials" class="level2"><h2 class="anchored" data-anchor-id="course-materials">Course Materials</h2>
+<ul>
+<li>Course Website - <a href="https://math3570-s26.github.io/website/" class="uri">https://math3570-s26.github.io/website/</a>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://math3570-s26.github.io/website/"><img src="./images/01-syllabus/website_s26.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- ## Course Materials -->
+<!-- - Course materials are grabbed from several books and resources. -->
+<!-- - Our [course website and slides](https://math3570-s25.github.io/website/) would be helpful. -->
+<!-- . . . -->
+</section><section id="textbook-really" class="level2"><h2 class="anchored" data-anchor-id="textbook-really">Textbook (Really?!)</h2>
+<div class="r-stack">
+<p><img src="./images/01-syllabus/read1.png" class="fragment" width="1800" height="1000"></p>
+<p><img src="./images/01-syllabus/read2.png" class="fragment" width="1600" height="900"></p>
+<p><img src="./images/01-syllabus/read3.png" class="fragment" width="1400" height="400"></p>
+<p><img src="./images/01-syllabus/read4.png" class="fragment" width="1200" height="800"></p>
+</div>
+</section><section id="section-1" class="level2"><h2 class="anchored" data-anchor-id="section-1"></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><a href="https://wesmckinney.com/book/"><em>Python for Data Analysis, 3E</em></a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://wesmckinney.com/book/"><img src="./images/01-syllabus/py4ds_book.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<p><a href="https://r4ds.hadley.nz/"><em>R for Data Science 2nd edition</em></a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://r4ds.hadley.nz/"><img src="./images/01-syllabus/r4ds_book2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<p><a href="https://www.tmwr.org/"><em>Tidy Modeling with R</em></a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://www.tmwr.org/"><img src="./images/01-syllabus/tmwr_book.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="learning-management-system-d2l" class="level2"><h2 class="anchored" data-anchor-id="learning-management-system-d2l">Learning Management System (<a href="https://d2l.mu.edu/d2l/home/630428">D2L</a>)</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://d2l.mu.edu/d2l/home/630428"><img src="./images/01-syllabus/d2l_s26.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Assessments &gt; Grades</strong></li>
+</ul></section><section id="grading-policy" class="level2"><h2 class="anchored" data-anchor-id="grading-policy">Grading Policy ✨</h2>
+<ul>
+<li>
+<p>Your grade is from the following categories and distribution</p>
+<ul>
+<li><p><strong>25%</strong> In-class lab activities</p></li>
+<li><p><strong>10%</strong> In-class AI activities</p></li>
+<li><p><strong>45%</strong> Mini projects</p></li>
+<li><p><strong>20%</strong> Final project competition</p></li>
+</ul>
+</li>
+</ul>
+<!-- Depending on the progress of the course,  --><!-- - There may be a midterm project proposal presentation, if time permitted.  --><ul>
+<li><p>❌ You must participate in the final presentation in order to pass the course.</p></li>
+<li><p>❌ You will <strong>NOT</strong> be allowed to do any extra credit projects/homework/exam to compensate for a poor grade.</p></li>
+</ul>
+<!-- - I may use class participation to make grade adjustments at the end of the semester. --></section><section id="grade-percentage-conversion" class="level2"><h2 class="anchored" data-anchor-id="grade-percentage-conversion">Grade-Percentage Conversion</h2>
+<ul>
+<li>
+<span class="math inline">\([x, y)\)</span> means greater than or equal to <span class="math inline">\(x\)</span> and less than <span class="math inline">\(y\)</span>. For example, 94.0 is in [94, 100] and the grade is A and 93.8 is in [90, 94) and the grade is A-.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Grade</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Percentage</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">[94, 100]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A-</td>
+<td style="text-align: left;">[90, 94)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B+</td>
+<td style="text-align: left;">[87, 90)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">[84, 87)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B-</td>
+<td style="text-align: left;">[80, 84)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C+</td>
+<td style="text-align: left;">[77, 80)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">[74, 77)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C-</td>
+<td style="text-align: left;">[70, 74)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">D+</td>
+<td style="text-align: left;">[65, 70)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">[60, 65)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">[0, 60)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="lab-exercises-25" class="level2"><h2 class="anchored" data-anchor-id="lab-exercises-25">Lab Exercises (25%)</h2>
+<ul>
+<li><p>Graded as <strong>Complete/Incomplete</strong> and used as evidence of attendance and participation.</p></li>
+<li><p>Allowed to have <strong>one</strong> incomplete lab exercise without any penalty.</p></li>
+<li><p>Beyond that, <strong>2%</strong> grade percentage will be taken off for each missing/incomplete exercise.</p></li>
+<li><p>You will create a project in <a href="https://posit.cloud">Posit Cloud</a> saving all of your lab exercises. (We’ll go through know-how together)</p></li>
+</ul>
+<!-- - ❌ **No make-up lab exercises** for any reason. --><!-- ## Homework (30%) --><!-- - The homework assignments are individual. Submit your own work.  --><!-- - ❌ **You may not share answers/code with your classmates**. --><!-- . . . --><!-- - Homework will be assigned through [**GitHub**](https://github.com/):  --><!--   + clone/pull the homework repo into Posit Cloud --><!--   + work on the [Quarto](https://quarto.org/) file in the repo (We'll go through know-how together) --><!-- . . . --><!-- - You will have **at least one week** to complete your assignment. --><!-- - ❌ **No make-up homework** for any reason unless you have [excused absence](https://bulletin.marquette.edu/policies/attendance/undergraduate/). 🙏 --></section><section id="ai-activities-10" class="level2"><h2 class="anchored" data-anchor-id="ai-activities-10">AI activities (10%)</h2>
+<ul>
+<li><p>AI activities are short presentations during class. They are usually graded as <strong>complete or incomplete</strong>.</p></li>
+<li><p>AI activities are used as evidence of both attendance and participation.</p></li>
+<li><p>Groups take turn to present what they learn from GenAI about data science.</p></li>
+</ul></section><section id="mini-projects-45" class="level2"><h2 class="anchored" data-anchor-id="mini-projects-45">Mini Projects (45%)</h2>
+<ul>
+<li><p>You will work in a team on <strong>3</strong> mini projects.</p></li>
+<li><p>This project will focus on a subset of the course content up to that point, for example data wrangling and visualization or a simple predictive model.</p></li>
+</ul>
+<!-- - The mini projects will include --><!--   + A documented GitHub repository. --><!--   + A Quarto report describing your question, data, methods, and findings. --><!--   + A short in-class group presentation. --><!--   + An AI usage documents that shows how you used generative AI and how you verified any AI generated content. --><ul>
+<li>More detailed instructions and rubric will be provided later in the semester.</li>
+</ul></section><section id="final-project-competition-20" class="level2"><h2 class="anchored" data-anchor-id="final-project-competition-20">Final Project Competition (20%)</h2>
+<ul>
+<li><p>You will be team up to do the final project.</p></li>
+<li>
+<p>Your project can be in either of the following categories:</p>
+<ol type="1">
+<li><p><strong>Data analysis</strong> using statistical models or machine learning algorithms</p></li>
+<li><p>Introduce a <strong>R or Python package</strong> not learned in class, including <strong>live demo</strong></p></li>
+<li><p>Introduce a <strong>data science tool (visualization, computing, etc)</strong> not learned in class, including <strong>live demo</strong></p></li>
+<li><p>Introduce a <strong>programming language</strong> not learned in class for doing data science, including <strong>live demo</strong>, Julia, SQL, MATLAB, SAS for example.</p></li>
+<li><p><strong>Web development</strong>: Shiny website or dashboard, including <strong>live demo</strong></p></li>
+</ol>
+</li>
+<li><p>The final project presentation is on <strong>Monday, 5/4, 10:30 AM - 12:30 PM</strong>.</p></li>
+<li><p>More information will be released later.</p></li>
+</ul>
+<!-- ## AI Project (150 pts) --><!-- - There will be one AI project released around Week 13. --><!-- - You have to use GenAI to self learn a topic that is not covered in my lectures, and generate a data analysis report. --><!-- - The project topic will also be tested in the final exam. --><!-- - You **must carefully cite your GenAI tool or reveal your use of AI.** --></section><section id="document-generative-ai-use" class="level2"><h2 class="anchored" data-anchor-id="document-generative-ai-use">Document Generative AI Use</h2>
+<div class="columns">
+<div class="column" style="width:80%;">
+<!-- ### Generative AI -->
+<ul>
+<li>You may use generative AI tools such as ChatGPT and Gemini to generate a first draft of text for your work, provided that this use is <strong>documented and cited</strong>.</li>
+</ul>
+<!-- [Example] Data science is an interdisciplinary field that ... [^1] --><!-- [^1]: ChatGPT, response to *“Tell me what data science is,”* Jan 14, 2025, https://chat.openai.com. --><ul>
+<li>Unless explicitly stated otherwise, you may make use of any online resources, but you must <strong>explicitly cite/document</strong> where you obtained any code you directly use or use as inspiration in your solutions.</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/01-syllabus/genai.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<p>If you use GenAI, please include the followings in your submitted work:</p>
+<ul>
+<li><strong>Why/How I used AI (prompts or questions)</strong></li>
+<li><strong>Generated output (screenshot or copy-paste excerpt)</strong></li>
+<li><strong>How I used the output</strong></li>
+</ul>
+</li>
+</ul></section><section id="document-generative-ai-use-1" class="level2"><h2 class="anchored" data-anchor-id="document-generative-ai-use-1">Document Generative AI Use</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>
+<strong>Why/How I used AI (prompts and questions)</strong>
+<ul>
+<li><em>I asked ChatGPT to generate a histogram using R.</em></li>
+</ul>
+</li>
+<li><strong>Generated output (screenshot or copy-paste excerpt)</strong></li>
+</ul>
+<div class="tiny">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/01-syllabus/genai_screenshot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>
+<strong>How I used the output</strong>
+<ul>
+<li><em>I reviewed the suggestions, but I did not use the exact code. Instead, I change the code format and breaks value to 50.</em></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ## Academic Integrity -->
+<!-- This course expects all students to follow University and College statements on [academic integrity](https://bulletin.marquette.edu/undergrad/academicregulations/). -->
+<!-- - **Honor Pledge and Honor Code**: *I recognize the importance of personal integrity in all aspects of life and work. I commit myself to truthfulness, honor, and responsibility, by which I earn the respect of others. I support the development of good character, and commit myself to uphold the highest standards of academic integrity as an important aspect of personal integrity. My commitment obliges me to conduct myself according to the Marquette University Honor Code*. -->
+<!-- - ❌ You know what I am talking about. Yes, **DO NOT CHEAT**.  -->
+</section><section id="genai-and-academic-integrity" class="level2"><h2 class="anchored" data-anchor-id="genai-and-academic-integrity">GenAI and Academic Integrity</h2>
+<!-- Replace host and id with yours -->
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+  <iframe src="https://marquette.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=36be65f1-ba4f-457d-bad3-b1b8013b9448&amp;start=0.5" title="GenAI and Academic Integrity" style="position:absolute; top:0; left:0; width:100%; height:90%; border:0;" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<!-- ## Q & A -->
+<!-- ❓ **Will this course require any Textbook(s) or other materials to be purchased?**   -->
+<!-- 👉 No required textbooks. All resources are free on line! -->
+<!-- <br> -->
+<!-- . . . -->
+<!-- ❓ **K: I hope to learn more about programming. R: I’m looking forward to learning more about what data science consists of rather than just learning a programming language.**   -->
+<!-- 👉 To make sure everyone is on the same page, first couple of weeks is about learning R and Python syntax. After spring break, we focus on modeling and machine learning methods. -->
+<!-- <br> -->
+<!-- . . . -->
+<!-- ❓ **What do you think will be the most interesting part of the course?**   -->
+<!-- 👉 I love data visualization and web development. -->
+<!-- <br> -->
+<p>. . .</p>
+<!-- ❓ **If this course is a joint label between COSC and MATH, is there a difference between any particular class section or other that we may have registered for?**   -->
+<!-- 👉 No difference. MATH 3570 and COSC 3570 are exactly the same course. -->
+<!-- ❓ **D: Do I need good coding skills to be able to succeed?** **G: How much of this class is about coding?** -->
+<!-- 👉 We'll learn *basic* syntax for doing data science step by step. -->
+<!-- <br> -->
+<!-- . . . -->
+<!-- ❓ **What kind of time estimate do you believe most students should spend on reading + assignments for the course?**   -->
+<!-- 👉 Everyone is different. The more the better. -->
+<!-- ## Q & A -->
+<!-- ❓ **What kind of projects will we be doing for this course?**   -->
+<!-- 👉 Any project related to data works. You propose one to me. We discuss it, then decide. -->
+<!-- <br> -->
+<!-- . . . -->
+<!-- ❓ **Will this class help me better understand how to code proficiently?**   -->
+<!-- 👉 As you learn to speak a foreign language, you need to code a lot, frequently and constantly in order to be proficient in any programming language. No shortcut. -->
+<!-- <br> -->
+<!-- . . . -->
+<!-- ❓ **Do you know of any internships or research positions offered through Marquette University that incorporate the skills learned in this Data Science course?**   -->
+<!-- 👉 Quite many. Northwestern Mutual, Direct Supply, for example. I'll share intern info with you if I get any. -->
+<!-- . . . -->
+<!-- <br> -->
+<!-- ❓ **More questions** -->
+<!-- [Bring your laptop next time!]{.r-fit-text .fragment style="color: #EE6331;"} -->
+<!-- # 🤝 Please read the syllabus!!! Because ... {background-color="#447099"} -->
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script></section></section></main><!-- /main --><script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/math3570-s26\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2026, Cheng-Han Yu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/slides/01-syllabus.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

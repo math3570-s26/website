@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Dr. Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
+<title>Posit Cloud ☁️ – MATH/COSC 3570 - Spring 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+<!-- htmldependencies:E3FAD763 --><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="/index.html" class="sidebar-logo-link">
+      <img src="/images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="/images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://d2l.mu.edu/d2l/home/630428" title="D2L" class="quarto-navigation-tool px-1" aria-label="D2L"><i class="bi bi-person-fill"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mini Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/present-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/present-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topics and Works</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/present-description-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="/present-work-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Group and Proposal</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <div id="quarto-toc-target"></div>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Posit Cloud ☁️</h1>
+<p class="subtitle lead">MATH/COSC 3570 Introduction to Data Science</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="section" class="level1" data-visibility="hidden"><h1 data-visibility="hidden"></h1>
+
+</section><section id="lets-get-equipped-with-data-science-tools" class="level1"><h1><strong>Let’s get equipped with data science tools!</strong></h1>
+<div class="notes">
+<ul>
+<li>All right. Let’s set up our computing environment, so we can start coding, and doing data science.</li>
+<li>The set-up is important. It ensures that you can do what you need to do, including your homework and projects.</li>
+<li>And I would like to make sure everyone is on the same page. OK</li>
+</ul>
+</div>
+<section id="integrated-development-environment" class="level2"><h2>Integrated Development Environment</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/posit.png" class="img-fluid quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/rstudio-logo.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li><p>R and Python are programming languages.</p></li>
+<li>
+<p><a href="https://posit.cloud/">Posit Cloud</a> offers two integrated development environments (IDE):</p>
+<ul>
+<li><a href="https://posit.co/products/open-source/rstudio/">RStudio</a></li>
+<li><a href="https://jupyter.org/">JupyterLab/Jupyter Notebook</a></li>
+</ul>
+</li>
+</ul>
+<p>which are software for efficiently writing computer programs.</p>
+<div class="notes">
+<ul>
+<li>We’ll use Posit Cloud to write R and Python code.</li>
+<li>The first tool we need is Posit Cloud which is a cloud service provided by the company Posit. <!-- - With packages, we can do lots of things without writing our own code, and we can just use the functions provided in packages to do our job. It saves us lots of time. --> <!-- - A language with many great add-on packages can become a very useful language. --> <!-- - packages: which is a collection of functions and data for people to use. -->
+</li>
+<li>R is not a general-purpose programming language like python or java, but it is specifically for data science. And that’s probably why you don’t learn R in an intro programming course.</li>
+<li>So you can view Python as a smart phone. It can do many different things, phone, camera, email, social media. But R is like a high quality camera. You cannot use it to write emails, text messages, but it produces high quality photos.</li>
+<li>RStudio is not a programming language, but a software application.</li>
+<li>Code itself is just a text file. You can use any text editor or software to write your code.</li>
+<li>So RStudio makes programming in R more easily and efficiently. It provides so many useful functions for you that doing data science becomes a piece of cake.</li>
+<li>Today, You are gonna have a chance to play with different panes and functions in RStudio. OK.</li>
+</ul>
+</div>
+</section><section id="posit-cloud---data-science-wo-hardware-hassles" class="level2"><h2>☁️ Posit Cloud - Data Science w/o hardware hassles</h2>
+<ul>
+<li><p>😎 Implement R/Python programs <em>without</em> needing to install R/Python and the IDE in your laptop!</p></li>
+<li><p>😎 <a href="https://rstudio.cloud/"><strong>Posit Cloud</strong></a> lets you do, share and learn data science <strong>entirely online</strong>!</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="get-everything-ready-locally-lots-of-friction" class="level3"><h3>😞 Get everything ready locally: Lots of friction</h3>
+<ul>
+<li>Download and install R/Python</li>
+<li>Download and install IDE</li>
+<li>Install wanted R/Python packages:
+<ul>
+<li>tidymodels</li>
+<li>tidyverse</li>
+<li>NumPy</li>
+<li>…</li>
+</ul>
+</li>
+<li>Download and install tools like Git</li>
+</ul></section>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<section id="posit-cloud-much-less-friction" class="level3"><h3>🤓 Posit Cloud: Much less friction</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/cloud.png" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Go to <a href="https://posit.cloud/" class="uri">https://posit.cloud/</a></p></li>
+<li>
+<p>Log in</p>
+<p><code>&gt; hello world!</code></p>
+</li>
+</ul></section>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Why I choose posit cloud for you to code in R? Well if I want every one of you use R/Python and RStudio locally in your computer, you have to (_____). And we need some magic to make sure everyone gets the coding environment ready.</li>
+<li>Instead, with the Cloud-based solution, you just need to login, then you start writing code right away.</li>
+<li>Posit Cloud provides you with the latest version of R and RStudio. No installation is required.</li>
+<li>Doesn’t mean you should always use Posit Cloud version. It’s not free if you need more resources.</li>
+<li>If later you program a lot, you should absolutely install them locally into your laptop.</li>
+</ul>
+</div>
+</section><section id="install-posit-cloud" class="level2"><h2>Install Posit Cloud</h2>
+<div class="lab">
+<ul>
+<li>
+<em>Step 1</em>: In the Posit website <a href="https://posit.co/" class="uri">https://posit.co/</a>, choose <strong>Products &gt; Posit Cloud</strong> as shown below.</li>
+</ul>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/posit-cloud-s25.png" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="install-posit-cloud-1" class="level2"><h2>Install Posit Cloud</h2>
+<div class="lab">
+<p><em>Step 2</em>: Click <strong>GET STARTED</strong>.</p>
+<p><em>Step 3</em>: <span class="red"><strong>Student</strong></span> <strong>&gt; Sign Up</strong> using your Marquette email address.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/landing-1-posit.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:75%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/posit-plan.png" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/posit-student-plan-s25.png" class="img-fluid quarto-figure quarto-figure-center" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>file:///Users/chenghanyu/Dropbox/academia/books/r/teach-r-online-master/01-cloud/01-cloud.html#37</p>
+</div>
+</section><section id="new-projects" class="level2"><h2>New Projects</h2>
+<div class="columns">
+<div class="column" style="width:85%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/new-project-cloud-posit.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:15%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/new-project-option-24.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>We will talk about Git/GitHub shortly.</li>
+</ul></section><section id="workspaces" class="level2"><h2>Workspaces</h2>
+<ul>
+<li>When you create an account on Posit Cloud you get a <strong>workspace</strong> of your own.</li>
+<li>You can add a new workspace (click <strong>+ New Space</strong> in sidebar) and control its permissions.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/posit-cloud-hide-sidebar.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="welcome-to-3570-data-science" class="level2"><h2>Welcome to 3570 Data Science!</h2>
+<div class="lab">
+<ul>
+<li>I’m sending you a link via email for joining the course workspace <strong>2026-spring-math-3570</strong>. Please join.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/join-space.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>Go to D2l to send Posit Cloud invitation</p>
+<p>Subject Posit Cloud Invitation</p>
+<p>Message https://posit.cloud/spaces/736333/join?access_code=aFYGcnYq1lwDmoGnRD37aAoftM7iNpCX5y81Mra4</p>
+<p>Best, Dr. Yu</p>
+</div>
+</section><section id="section-1" class="level2"><h2></h2>
+<div class="lab">
+<p><br></p>
+<ul>
+<li><p>In the bar, click workspace <strong>2026-spring-math-3570</strong>.</p></li>
+<li><p><span class="red">In the workspace</span>, click <strong>New Project &gt; New RStudio Project</strong> to get into the IDE.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/new-project-option-24.png" class="img-fluid quarto-figure quarto-figure-center" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>In <em>Untitled Project</em>, name your project as <strong>3570-project</strong>.</p></li>
+<li><p>In the Console pane, write R code: a string <strong><code>"Hello WoRld!"</code></strong> or math <strong><code>2 + 4</code></strong>.</p></li>
+<li><p><strong>Tools &gt; Global Options &gt; Appearance</strong> to select your favorite editor theme.</p></li>
+</ul>
+</div>
+</section><section id="section-2" class="level2"><h2></h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/rcloud_project.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="more-tips" class="level2"><h2>More Tips</h2>
+<ul>
+<li>Read the <a href="https://docs.posit.co/cloud/">Posit Cloud Documentation</a>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://docs.posit.co/cloud/"><img src="images/03-posit/posit-cloud-doc.png" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="working-in-posit-cloud" class="level1" data-background-color="#447099"><h1 data-background-color="#447099">Working in Posit Cloud</h1>
+<section id="panes" class="level2"><h2>Panes</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/rstudio_panes.png" class="img-fluid quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>In RStudio, there are 4 main panes, source pane, console pane, pane for environment/history and version control, and the pane for files plots packages and help page.</li>
+<li>Source pane is where you write your code. Your code will not be evaluated or interpreted until you “run” them or source them to the console.</li>
+<li>Try to write your code in R/Python scripts in the Source, so that the code can be saved and reused later.</li>
+<li>You type code into the Console if the code is short or you want to do some quick calculations or analysis. The code you type in the Console will not be saved in a script.</li>
+<li>In the environment/history, you can check any objects you create in the R/Python environment and you can also view your command history in the history tab.</li>
+<li>And you will see how the pane for file/plot/package/help can be used as we learn more about RStudio.</li>
+</ul>
+</div>
+</section><section id="r-script" class="level2"><h2>R Script</h2>
+<ul>
+<li><p>A R script is a <strong>.R</strong> file that contains R code.</p></li>
+<li><p>To create a R script, go to <strong>File &gt; New &gt; R Script</strong>, or click the green-plus icon on the topleft corner, and select R Script.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/script.png" class="img-fluid quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Here you see in this r script, I create two objects x and y, and I also load the data called mtcars into R environment.</li>
+<li>Don’t worry if you don’t know these syntax. I will teach you basic R syntax and programming next week.</li>
+</ul>
+</div>
+</section><section id="run-code" class="level2"><h2>Run Code</h2>
+<ul>
+<li>
+<span style="color:blue"><strong>Run</strong></span>: run the <strong>current line</strong> or <strong>selection of code</strong>.
+<ul>
+<li>
+<code>ctrl + enter</code> (Win) or <code>cmd + enter</code> (Mac)</li>
+</ul>
+</li>
+<li>
+<span style="color:blue"><strong>Icon right to the Run</strong></span>: re-run the <strong>previous</strong> code.
+<ul>
+<li>
+<code>alt + ctrl + p</code> (Win) or <code>option + cmd + p</code> (Mac)</li>
+</ul>
+</li>
+<li>
+<span style="color:blue"><strong>Source</strong></span>: run <strong>all</strong> the code in the R script.
+<ul>
+<li>
+<code>shift + ctrl + s</code> (Win) or <code>shift + cmd + s</code> (Mac)</li>
+</ul>
+</li>
+<li>
+<span style="color:blue"><strong>Source with Echo</strong></span>: run <strong>all</strong> the code in the R script <em>with the code printed in the console</em>.
+<ul>
+<li>
+<code>shift + ctrl + enter</code> (Win) or <code>shift + cmd + enter</code> (Mac)</li>
+</ul>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/script.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>
+<span style="color:blue"><strong>Source</strong></span>: run <strong>all</strong> the code in the R script with <strong>NO</strong> output</li>
+<li>
+<span style="color:blue"><strong>Source with Echo</strong></span>: run <strong>all</strong> the code in the R script <em>and show output</em>
+</li>
+<li>Depending on your purpose, you can run code line by line or run the entire code.</li>
+<li>To run the R code line by line, Click Run icon to run the current line or selection of code. Or use key-binding <code>ctrl + enter</code> (windows) or <code>cmd + enter</code> (mac)</li>
+</ul>
+</div>
+</section><section id="environment-tab" class="level2"><h2>Environment Tab</h2>
+<ul>
+<li><p>The (global) environment is where we are currently working.</p></li>
+<li><p>Anything created or imported into the current R/Python session is stored in the environment and shown in the <strong>Environment</strong> tab.</p></li>
+<li>
+<p>After we run the R script, objects stored in the environment are</p>
+<ul>
+<li>Data set <code>mtcars</code>
+</li>
+<li>Object <code>x</code> storing integer values 1 to 10.</li>
+<li>Object <code>y</code> storing three numeric values 3, 5, 9.</li>
+</ul>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/environment.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Anything created or imported into the current R session is stored in our environment and shown in the <strong>Environment</strong> tab.</li>
+<li>We’ll talk about the R data type in detail later.</li>
+</ul>
+</div>
+</section><section id="python-script" class="level2"><h2>Python Script</h2>
+<ul>
+<li><p>A Python script is a <strong>.py</strong> file that contains Python code.</p></li>
+<li><p>To create a Python script, go to <strong>File &gt; New &gt; Python Script</strong>, or click the green-plus icon on the topleft corner, and select Python Script.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/script-py.png" class="img-fluid quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="run-python-code" class="level2"><h2>Run Python Code</h2>
+<ul>
+<li><p>Running Python code may need to update some packages. Please say <em>YES!</em></p></li>
+<li><p>When you run the Python code in the R console, or type <code><a href="https://rstudio.github.io/reticulate/reference/repl_python.html">reticulate::repl_python()</a></code>, the console will switch from R to Python.</p></li>
+<li><p>In the Python console <code>&gt;&gt;&gt; quit</code> to switch back to the R console.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/run-py-pkg.png" class="quarto-figure quarto-figure-center" style="width:10in;height:4.5in"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>REPL = Read, Evaluate, Print, and Loop</p>
+<p>or type <code><a href="https://rstudio.github.io/reticulate/reference/repl_python.html">reticulate::repl_python()</a></code></p>
+</div>
+</section><section id="environment-tab-1" class="level2"><h2>Environment Tab</h2>
+<ul>
+<li>After we run the Python script, the object stored in the environment is
+<ul>
+<li>Object <code>b</code> storing a string <code>Hello World!</code>
+</li>
+</ul>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/environment-py.png" class="img-fluid quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Anything created or imported into the current R session is stored in our environment and shown in the <strong>Environment</strong> tab.</li>
+<li>We’ll talk about the R data type in detail later.</li>
+</ul>
+</div>
+</section><section id="history-tab" class="level2"><h2>History Tab</h2>
+<ul>
+<li>The <strong>History</strong> tab keeps a record of all previous commands.
+<ul>
+<li>
+<span style="color:blue"><strong>save icon</strong></span>: save all history to a file</li>
+<li>
+<span style="color:blue"><strong>To Console</strong></span>: send the selected commands to the console.</li>
+<li>
+<span style="color:blue"><strong>To Source</strong></span>: inserted the selected commands into the current script.</li>
+</ul>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/history.png" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="history-tab-1" class="level2"><h2>History Tab</h2>
+<ul>
+<li>The <strong>History</strong> tab keeps a record of all previous commands.
+<ul>
+<li>
+<span style="color:blue"><strong>save icon</strong></span>: save all history to a file</li>
+<li>
+<span style="color:blue"><strong>To Console</strong></span>: send the selected commands to the console.</li>
+<li>
+<span style="color:blue"><strong>To Source</strong></span>: inserted the selected commands into the current script.</li>
+</ul>
+</li>
+</ul>
+<div class="tip">
+<p>In the console pane, use ⬆️ to show the previous commands.</p>
+</div>
+</section><section id="r-packages" class="level2"><h2>R Packages 📦</h2>
+<ul>
+<li>When we start a R session, only built-in packages like <strong>base</strong>, <strong>stats</strong>, <strong>graphics</strong>, etc are available.</li>
+<li>Installing packages is an easy way to get access to others data and functions.</li>
+</ul>
+<p>. . .</p>
+<p><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readr.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readxl.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/haven.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/tidyverse.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidyr.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/dplyr.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/sparklyr.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/slowkow/ggrepel/master/man/figures/logo.svg" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/sjmgarnier/viridis/master/hex_logo/viridis.svg" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/tibble.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/gt.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/purrr.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/lubridate.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/stringr.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/rvest.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/rmarkdown.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/knitr.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/quarto.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/shiny.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/devtools.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/flexdashboard.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/reticulate.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/broom.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidymodels.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidyposterior.png" class="img-fluid" width="150"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/tidypredict.png" class="img-fluid" width="150"> and <a href="https://github.com/rstudio/hex-stickers">more</a>!</p>
+<div class="notes">
+<ul>
+<li>A language with many great add-on packages can become a very useful language.</li>
+<li>packages: which is a collection of functions and data for people to use.</li>
+</ul>
+</div>
+</section></section><section id="section-3" class="level1" data-background-color="#447099" data-background-image="images/03-posit/hex_laptop.jpeg" data-background-size="cover"><h1 data-background-color="#447099" data-background-image="images/03-posit/hex_laptop.jpeg" data-background-size="cover"></h1>
+<!-- ::: {style="vertical-align: text-bottom;"} -->
+<!-- **ohi-science.org/news/takeaways-from-rstudioconf** -->
+<!-- ::: -->
+<!-- ::: {.bottom} -->
+<!-- **ohi-science.org/news/takeaways-from-rstudioconf** -->
+<!-- ::: -->
+<section id="installing-r-packages" class="level2"><h2>Installing R Packages 📦</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>To install a package, for example, the <a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a> package, we use the command</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<!-- # ```{r package, echo=5, eval=FALSE} -->
+<!-- # #| label: package -->
+<!-- # #| echo: false -->
+<!-- # # install.packages("car", repos = "http://cran.us.r-project.org") -->
+<!-- # r = getOption("repos") -->
+<!-- # r["CRAN"] = "http://cran.us.r-project.org" -->
+<!-- # options(repos = r) -->
+<!-- # install.packages("ggplot2") -->
+<!-- # # install.packages("car") -->
+<!-- # ``` -->
+<ul>
+<li>In the right-bottom pane, <strong>Packages &gt; Install</strong>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="./images/03-posit/pkg_install.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<!-- <p align="center"> -->
+<!--   <img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" style="width:660px;" /> -->
+<!-- </p> -->
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://ggplot2.tidyverse.org/index.html"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" class="img-fluid quarto-figure quarto-figure-center" style="width:80.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="loading-r-packages" class="level2"><h2>Loading R Packages 📦</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="question">
+<p>What happened when you run</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">mpg</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>To use any function or data in <strong>ggplot2</strong>, we write <code>ggplot2::</code> followed by the name of the function or data.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/mpg.html">mpg</a></span>, </span>
+<span>                <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>                    x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                    y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                    colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span></span>
+<span>                <span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<ul>
+<li>We can load the package into our R session using <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>.</li>
+<li>
+<strong>With library(ggplot2)</strong>, R knows the function and data are from the <strong>ggplot2</strong> package.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="help" class="level2"><h2>Help</h2>
+<ul>
+<li>Don’t know how a function works or what a data set is about ❓</li>
+<li>👉 Simply type <code>?</code> followed by the data name or function name like</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">mean</span></span>
+<span><span class="op">?</span><span class="va">mpg</span></span></code></pre></div>
+</div>
+<p>. . .</p>
+<div class="question">
+<p>What does the function <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> do? What is the size of <code>mpg</code>?</p>
+</div>
+<p>. . .</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img src="images/03-posit/mpg_help.png" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>A document will show up in the Help tab, teaching you how to use the function or explaining the data set.</p>
+</div>
+</section><section id="section-4" class="level2"><h2></h2>
+<div class="lab">
+<p><span style="color:blue"><strong>01-Running R Script</strong></span></p>
+<ul>
+<li>Load R package <strong>ggplot2</strong> into your Posit Cloud.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## install the package if you haven't!</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">________</span>(ggplot2)</span></code></pre></div>
+</div>
+<ul>
+<li><p>Create a R script named <strong>lab01-run-script.R</strong> in your <strong>3570-project</strong>.</p></li>
+<li><p>Copy and paste the code below into the script, and save it.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">bar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">cut</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span>, </span>
+<span>             show.legend <span class="op">=</span> <span class="cn">FALSE</span>, width <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>aspect.ratio <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span><span class="va">bar</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">bar</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_radial.html">coord_polar</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+<ul>
+<li>Source the script. A pretty plot showing up?! <!-- - Change `4` to `12` and `3` to `20`. Hit Run line by line. What happened? --> <!-- - Use `?mpg` to see what `displ` and `hwy` mean, and use `?ggplot` and `?geom_point` to see more on creating a ggplot. -->
+</li>
+</ul>
+</div>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">MATH/COSC 3570 - Spring 2026</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">MATH/COSC 3570 - Spring 2026</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Course information</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9jb3Vyc2Utb3ZlcnZpZXcuaHRtbE92ZXJ2aWV3">Overview</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sU2NoZWR1bGU=">Schedule</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9jb3Vyc2Utc3lsbGFidXMuaHRtbFN5bGxhYnVz">Syllabus</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Mini Project</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVzZW50LWRlc2NyaXB0aW9uLmh0bWxHdWlkZWxpbmUtYW5kLVBvbGljeQ==">Guideline and Policy</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVzZW50LXdvcmsuaHRtbFRvcGljcy1hbmQtV29ya3M=">Topics and Works</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Final Project</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVzZW50LWRlc2NyaXB0aW9uLWZpbmFsLmh0bWxHdWlkZWxpbmUtYW5kLVBvbGljeQ==">Guideline and Policy</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcmVzZW50LXdvcmstZmluYWwuaHRtbFByb2plY3QtR3JvdXAtYW5kLVByb3Bvc2Fs">Project Group and Proposal</span></p>
+<div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLWxlZnQ=">
+<p>© Copyright 2026, Cheng-Han Yu</p>
+</div>
+<div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLXJpZ2h0">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Posit Cloud <code>r emo::ji('cloud')</code> – MATH/COSC 3570 - Spring 2026</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Posit Cloud <code>r emo::ji('cloud')</code> – MATH/COSC 3570 - Spring 2026</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Posit Cloud <code>r emo::ji('cloud')</code> – MATH/COSC 3570 - Spring 2026</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">MATH/COSC 3570 - Spring 2026</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==">MATH/COSC 3570 Introduction to Data Science</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj">MATH/COSC 3570 Introduction to Data Science</span></p>
+</div>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script></section></section></main><!-- /main --><script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/math3570-s26\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+      <div class="footer-contents">© Copyright 2026, Cheng-Han Yu</div>  
+    </div>   
+    <div class="nav-footer-center">
+       
+    </div>
+    <div class="nav-footer-right">
+      <div class="footer-contents">This page is built with ❤️ and [Quarto](https://quarto.org/).</div>  
+    </div>
+  </div>
+</footer>
+</body>
+</html>

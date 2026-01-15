@@ -111,7 +111,7 @@ knitr::knit_hooks$set(output = function(x, options) {
 ```{r}
 #| out-width: 60%
 #| fig-align: center
-knitr::include_graphics("images/03-posit/posit.png")
+knitr::include_graphics("images/03-posit/posit_logo.png")
 ```
 :::
 

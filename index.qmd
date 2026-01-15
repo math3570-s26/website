@@ -9,7 +9,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | Week | Date | Topic | Materials | Lab Activity | Learn from AI | Project |
 |:---------:|-----------|-----------|:---------:|:---------:|:---------:|-----------|
 | 1 | Tue, Jan 13 | Greetings; Overview of Data Science | [🖥️syllabus](slides/01-syllabus-slides.html) [🖥️overview](slides/02-datascience-slides.html) |  |  |  |
-|  | Thu, Jan 15 | Posit Cloud | 🖥️posit | 📋 posit 📋01 |  |  |
+|  | Thu, Jan 15 | Posit Cloud | [🖥️posit](03-posit-slides.html) | [📋 posit](/exercise/lab00-posit.html) [📋01](/exercise/lab01-rscript.html) |  |  |
 | 2 | Tue, Jan 20 | Git and GitHub | 🖥️git | 📋github |  |  |
 |  | Thu, Jan 22 | Quarto: YAML and Markdown | 🖥️quarto | 📋02 📋03 |  | ✅ Team up Due |
 | 3 | Tue, Jan 27 | Quarto: Code Chunk |  | 📋04 |  |  |

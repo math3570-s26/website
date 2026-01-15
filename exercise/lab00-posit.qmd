@@ -75,7 +75,7 @@ knitr::include_graphics("../slides/images/03-posit/new-project-option-24.png")
 
 ## Welcome to 3570 Data Science!
 
-- I'm sending you a link via email for joining the course workspace **2025-spring-math-3570**. Please join.
+- I'm sending you a link via email for joining the course workspace **2026-spring-math-3570**. Please join.
 
 
 ```{r}
@@ -85,7 +85,7 @@ knitr::include_graphics("../slides/images/03-posit/join-space.png")
 ```
 
 
-- In the bar, click workspace **2025-spring-math-3570**.
+- In the bar, click workspace **2026-spring-math-3570**.
 
 - Click **New Project > New RStudio Project** to get into the IDE.
 

@@ -9,7 +9,7 @@ title: "Syllabus"
 |   | Day and Time | Location |
 |-----------------|------------------------------|--------------------------|
 | Lectures | Tu & Th 2:00 - 3:15 PM | Cudahy Hall 120 |
-| Office hours | Tu & Th 3:30 - 4:30 PM; Wed 2 - 3 PM | Cudahy Hall 353 |
+| Office hours | Tu & Th 3:20 - 4:20 PM; Wed 2 - 3 PM | Cudahy Hall 353 |
 
 <!-- ## TA Information -->
 

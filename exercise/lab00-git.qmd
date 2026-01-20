@@ -33,14 +33,14 @@ library(fontawesome)
   - `r fa("envelope") `  **Emails** > [*Uncheck*]{.red} "Keep my email address private" (Link your R/Python work to GitHub)
   - `r fa("user") `  **Public Profile** > Name and nice picture!
 
-- Share your GitHub **username** at <https://forms.office.com/r/RUmTn3gadG>, so I can invite you to join our course organization **math3570-s25**. 
+- Share your GitHub **username** at <https://forms.office.com/r/RUmTn3gadG>, so I can invite you to join our course organization **math3570-s26**. 
 
-- Please accept my invitation to join the GitHub organization **math3570-s25**.
+- Please accept my invitation to join the GitHub organization **math3570-s26**.
 
 ```{r}
 #| out-width: 78%
 #| label: join-org
-knitr::include_graphics("../slides/images/04-git/join-org-2025.png")
+knitr::include_graphics("../slides/images/04-git/join-org-2026.png")
 ```
 
 
@@ -88,7 +88,7 @@ knitr::include_graphics("../slides/images/04-git/github-auth-3-25.png")
 
 - Back to the Authentication of Posit Cloud, check **Private repo access also enabled**.
 
-- Make sure **math3570-s25** shows up under **Organization access**. 
+- Make sure **math3570-s26** shows up under **Organization access**. 
 
 - Click on **Grant**.
 
@@ -98,7 +98,7 @@ knitr::include_graphics("../slides/images/04-git/github-auth-3-25.png")
 
 ```{r}
 #| label: github-auth-4
-knitr::include_graphics("../slides/images/04-git/github-auth-4-25.png")
+knitr::include_graphics("../slides/images/04-git/github-auth-4-26.png")
 ```
 
 When check Private repo access also enabled, will jump to GitHub page as shown.
@@ -109,7 +109,7 @@ When check Private repo access also enabled, will jump to GitHub page as shown.
 
 ```{r}
 #| label: github-auth-5
-knitr::include_graphics("../slides/images/04-git/github-auth-5-23.png")
+knitr::include_graphics("../slides/images/04-git/github-auth-5-26.png")
 ```
 
 <!-- ## Connect Posit Cloud and GitHub: Step 5-1 -->
@@ -150,18 +150,18 @@ knitr::include_graphics("../slides/images/04-git/hw00_repo_2025.png")
 
 - On GitHub, 
   + click on the green **Code** button, select **HTTPS**. 
-  + click on the clipboard icon on the right to copy the repo URL, such as  `https://github.com/math3570-s25/hw00-chenghanyu.git`
+  + click on the clipboard icon on the right to copy the repo URL, such as  `https://github.com/math3570-s26/hw00-chenghanyu.git`
 
 
 ```{r}
 #| label: clone-repo-link
-knitr::include_graphics("../slides/images/04-git/clone-repo-link-2025.png")
+knitr::include_graphics("../slides/images/04-git/clone-repo-link-2026.png")
 ```
 
 
 ## GitHub to Posit Cloud: Step 3
 
-- Go to Posit Cloud and into the course workspace **2025-spring-math-3570**. 
+- Go to Posit Cloud and into the course workspace **2026-spring-math-3570**. 
 - Create a **New Project from Git Repo**.
 
 ```{r}
@@ -181,7 +181,7 @@ You will need to click on the down arrow next to the **New Project** button to s
 ```{r}
 #| fig-width: 5
 #| label: paste-gh-repo-url
-knitr::include_graphics("../slides/images/04-git/paste-gh-repo-url-2025.png")
+knitr::include_graphics("../slides/images/04-git/paste-gh-repo-url-2026.png")
 ```
 
 
@@ -192,7 +192,7 @@ knitr::include_graphics("../slides/images/04-git/paste-gh-repo-url-2025.png")
 
 ```{r}
 #| label: rcloud-project
-knitr::include_graphics("../slides/images/04-git/rcloud_project_hw00_2025.png")
+knitr::include_graphics("../slides/images/04-git/rcloud_project_hw00_2026.png")
 ```
 
 - Done! We learned the entire process of cloning a repo on GitHub to Posit Cloud as a project.

@@ -1,0 +1,15 @@
+{
+  "hash": "32080c46a225bc34bca0c42b940192b1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"MATH/COSC 3570 Team Up\"\ndate-modified: today\n---\n\n- This course includes substantial group work, GenAI activities, mini projects, and a final project competition. It is time to form your team! 😎\n\n- We have 19 members and will create **6 teams**. Most teams will have **three** mates, with **one team of four**. \n\n- Please have one person from your team email me the following information:\n\n  + Your [*team member list*]{.blue}\n  + Your [*team name*]{.blue}\n\n  Examples of past team names include “Syntax Squad,” “Data Detectives,” “The Outliers,” “Analytics Avengers,” and “The Back Right Corner.”\n\n\n\n::: {.cell .column-margin}\n::: {.cell-output-display}\n![](./images/qrcode_team.png){width=945}\n:::\n:::\n\n\n\n- Please scan the QR code or go to <https://forms.office.com/r/qnripwRhnW> to fill out the form by [**Friday, 1/23 at 11:59 PM**]{.red}. \n\n\n- If you do not meet the requirements or miss the deadline, you will lose **1%** of your final grade. \n\n- Students who are not in a team by the deadline will be assigned to a group **at random**.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

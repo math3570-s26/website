@@ -182,7 +182,7 @@
     "href": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-4",
     "title": "Lab Exercise: Git/GitHub",
     "section": "Connect Posit Cloud and GitHub: Step 4",
-    "text": "Connect Posit Cloud and GitHub: Step 4\n\nBack to the Authentication of Posit Cloud, check Private repo access also enabled.\nMake sure math3570-s25 shows up under Organization access.\nClick on Grant.\nClick on the green box “Authorize posit-hosted”.\n\n\n\n\n\n\n\n\n\n\nWhen check Private repo access also enabled, will jump to GitHub page as shown."
+    "text": "Connect Posit Cloud and GitHub: Step 4\n\nBack to the Authentication of Posit Cloud, check Private repo access also enabled.\nMake sure math3570-s26 shows up under Organization access.\nClick on Grant.\nClick on the green box “Authorize posit-hosted”.\n\n\n\n\n\n\n\n\n\n\nWhen check Private repo access also enabled, will jump to GitHub page as shown."
   },
   {
     "objectID": "exercise/lab00-git.html#connect-posit-cloud-and-github-step-5",
@@ -210,14 +210,14 @@
     "href": "exercise/lab00-git.html#github-to-posit-cloud-step-2",
     "title": "Lab Exercise: Git/GitHub",
     "section": "GitHub to Posit Cloud: Step 2",
-    "text": "GitHub to Posit Cloud: Step 2\n\nOn GitHub,\n\nclick on the green Code button, select HTTPS.\nclick on the clipboard icon on the right to copy the repo URL, such as https://github.com/math3570-s25/hw00-chenghanyu.git"
+    "text": "GitHub to Posit Cloud: Step 2\n\nOn GitHub,\n\nclick on the green Code button, select HTTPS.\nclick on the clipboard icon on the right to copy the repo URL, such as https://github.com/math3570-s26/hw00-chenghanyu.git"
   },
   {
     "objectID": "exercise/lab00-git.html#github-to-posit-cloud-step-3",
     "href": "exercise/lab00-git.html#github-to-posit-cloud-step-3",
     "title": "Lab Exercise: Git/GitHub",
     "section": "GitHub to Posit Cloud: Step 3",
-    "text": "GitHub to Posit Cloud: Step 3\n\nGo to Posit Cloud and into the course workspace 2025-spring-math-3570.\nCreate a New Project from Git Repo.\n\n\n\n\n\n\n\n\n\n\nYou will need to click on the down arrow next to the New Project button to see this option."
+    "text": "GitHub to Posit Cloud: Step 3\n\nGo to Posit Cloud and into the course workspace 2026-spring-math-3570.\nCreate a New Project from Git Repo.\n\n\n\n\n\n\n\n\n\n\nYou will need to click on the down arrow next to the New Project button to see this option."
   },
   {
     "objectID": "exercise/lab00-git.html#github-to-posit-cloud-step-4",
@@ -815,186 +815,459 @@
     "text": "01-Running R Script\n\nLoad R package ggplot2 into your Posit Cloud.\n\n\n## install the package if you haven't!\n________(ggplot2)\n\n\nCreate a R script named lab01-run-script.R in your 3570-project.\nCopy and paste the code below into the script, and save it.\n\n\nbar &lt;- ggplot(data = diamonds) + \n    geom_bar(mapping = aes(x = cut, fill = cut), \n             show.legend = FALSE, width = 1) + \n    theme(aspect.ratio = 1) +\n    labs(x = NULL, y = NULL)\nbar + coord_flip()\nbar + coord_polar()\n\n\nSource the script. A pretty plot showing up?!"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#a-little-history-of-data-science",
-    "href": "slides/02-datascience-slides.html#a-little-history-of-data-science",
-    "title": "Data Science Overview 📖",
-    "section": "A Little History of Data Science",
-    "text": "A Little History of Data Science\n\nIn 1985, Dr. Jeff Wu used the term Data Science for the first time as an alternative name for Statistics.  \n\n\n\n\nThe first question is What is DS? Actually this is a really hard question to answer, at least at this moment.\n\nOriginally, DS was proposed to replace statistics. DS is just another name or maybe better name for statistics.\n\n\nBut still at that time, nobody cares. Statisticians are weird guys in math departments who deal with proofs and theorems and sometimes real data, and they are stubborn, not willing to change. But if you wiki the definition of statistics, statistics is a science of data, and you tell me what is the difference of science of data and data science?\n\n\nUsing this definition, DS becomes a broader term than statistics. Anything related to data can be a part of data sicence, while statistics now becomes a narrower subject focusing on inference and data analysis part.\n\nHere shows the google trend of DS. When I was in college or beginning of PHD studies, very few people used DS as a term. And all of sudden, DS become more and more popular, and everybody is talking about it."
+    "objectID": "slides/01-syllabus-slides.html#my-journey",
+    "href": "slides/01-syllabus-slides.html#my-journey",
+    "title": "Welcome Aboard 🙌",
+    "section": "My Journey",
+    "text": "My Journey\n\nAssistant Professor (2020/08 - )\n\n\n\n\n\n\n\n\n\n\nPostdoctoral Fellow\n\n\n\n\n\n\n\n\n\n\nPhD in Statistics\n\n\n\n\n\n\n\n\n\n\nMA in Economics/PhD program in Statistics\n\n\n\n\n\n\n\n\n\nAfter college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics.\n\nI got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies.\nThen I spent two years doing my postdoctoral research at Rice University in Houston, Texas.\nFinally, in fall 2020, I came to Marquette as an assistant professor.\nMidwest/Indiana-West/California-South/Texas-Midwest/Wisconsin\nBeen to any one of these universities/cities?\nThe most beautiful campus.\nWho are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.\nPoor listening and speaking skills. I was shy.\nOK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything,\nI have the class list. I’d like to learn your face and remember your name. You know, you all wear a mask. It’s hard to recognize you and connect your name and your face.\nWhen I call your name, you can say something about yourself. No need to be long, couple of seconds are good."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-1",
-    "href": "slides/02-datascience-slides.html#section-1",
-    "title": "Data Science Overview 📖",
+    "objectID": "slides/01-syllabus-slides.html#how-to-reach-me",
+    "href": "slides/01-syllabus-slides.html#how-to-reach-me",
+    "title": "Welcome Aboard 🙌",
+    "section": "How to Reach Me",
+    "text": "How to Reach Me\n\nOffice hours TuTh 3:20 - 4:20 PM and Wed 2 - 3 PM in Cudahy Hall 353.\n📧 cheng-han.yu@marquette.edu\n\nAnswer your question within 24 hours.\nExpect a reply on Monday if shoot me a message on weekends.\nStart your subject line with [math3570] or [cosc3570] followed by a clear description of your question.\n\n\n\n\n\nI will NOT reply your e-mail if … Check the email policy in the syllabus!"
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#what-is-this-course",
+    "href": "slides/01-syllabus-slides.html#what-is-this-course",
+    "title": "Welcome Aboard 🙌",
+    "section": "What is This Course?",
+    "text": "What is This Course?\n\n\nEvery aspect of doing a practical data science project, from importing data to deploying what we learn from data.\n\n\n❓ What are prerequisites?\n👉 COSC 1010 (Intro Programming) and MATH 4720 (Intro Stats) or MATH 2780 (Intro Regression)\n\n\n\n❓ Is this like another intro stats course?\n👉 No. Statistics and data science are closely related.\n\n\nNowadays\n👉 Data science is a broader subject than statistics.\n\n\n👉 Statistics focuses more on analyzing and learning from data, a part of the entire workflow of data science.\n\n\n\n❓ Is this like another intro CS or programming course?\n👉 Absolutely not. We learn how to code for doing data science, not for understanding computer systems and structures.\n\nOf course we will not cover every detail form A to Z of DS in one semester becuase DS is such a huge subject, just like computer science. It’s impossible to learn CS in one semester by just taking intro to CS, right? So we’ll just learn the basic and essential concepts and tools used is DS."
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#what-is-not-covered-in-this-course",
+    "href": "slides/01-syllabus-slides.html#what-is-not-covered-in-this-course",
+    "title": "Welcome Aboard 🙌",
+    "section": "What is NOT Covered in This Course",
+    "text": "What is NOT Covered in This Course\n\n\nAdvanced data analytics and computing  \n\nMATH 4750 Statistical Computing\nMATH 4760 Time Series Analysis\nMATH 4780 Regression Analysis\nMATH 4790 Bayesian Statistics\nCOSC 4600 Fundamentals of Artificial Intelligence\nCOSC 4610 Data Mining\nCOEN 4860 Introduction to Neural Networks\n\n\n\n\n\n\nBig data: We start with small, in-memory data sets. You don’t know how to tackle big data unless you have experience with small data.\n\n\n\n\n\nDatabase: Learn SQL in\n\nCOSC 4800 Principles of Database Systems\nINSY 4052 Database Management Systems.\n\n\n\n\nWe won’t talk about topics like cloud computing, parallel computing, distributed computing.\n\nBig data techniques: As a beginner, we focus on small, in-memory datasets. You can’t tackle big data unless you have experience with small data."
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#what-computing-languages",
+    "href": "slides/01-syllabus-slides.html#what-computing-languages",
+    "title": "Welcome Aboard 🙌",
+    "section": "What Computing Languages?",
+    "text": "What Computing Languages?\n\n\n~ 60%\n\n\n\n\n\n\n\n\n\n~ 40%\n\n\n\n\n\n\n\n\n\n\nYou’ve learned Python in COSC 1010. Being R-Python bilingual is getting more important!\n\n\n👉 Wouldn’t it be great to add both languages to your resume! 😎 \n\n\n❌ Don’t want to learn R and/or Python? Take another section or in next semester~!\n❌ Drop deadline: 01/20 (Tue), 11:59 PM."
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#where-to-code-posit-cloud",
+    "href": "slides/01-syllabus-slides.html#where-to-code-posit-cloud",
+    "title": "Welcome Aboard 🙌",
+    "section": "Where to Code? Posit Cloud\n",
+    "text": "Where to Code? Posit Cloud\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHave nice computing power and interactive collaboration with me and your teammates!"
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#course-materials",
+    "href": "slides/01-syllabus-slides.html#course-materials",
+    "title": "Welcome Aboard 🙌",
+    "section": "Course Materials",
+    "text": "Course Materials\n\nCourse Website - https://math3570-s26.github.io/website/\n\n\n\n\n\n\n\n\n\n\n\n\nAll course materials and information can be found on this website. Bookmark it!"
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#textbook-really",
+    "href": "slides/01-syllabus-slides.html#textbook-really",
+    "title": "Welcome Aboard 🙌",
+    "section": "Textbook (Really?!)",
+    "text": "Textbook (Really?!)"
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#section-1",
+    "href": "slides/01-syllabus-slides.html#section-1",
+    "title": "Welcome Aboard 🙌",
     "section": "",
-    "text": "Source: https://www.reddit.com/r/meme/comments/floq3q/reality_behind_data_science/\n\n\n\n\n\n\n\n\n\nSource: https://br.ifunny.co/picture/we-will-work-together-statistics-computer-science-please-teach-now-h4hdtthT9?s=cl"
+    "text": "Python for Data Analysis, 3E\n\n\n\n\n\n\n\n\n\nR for Data Science 2nd edition\n\n\n\n\n\n\n\n\n\nTidy Modeling with R"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams",
-    "href": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams",
-    "title": "Data Science Overview 📖",
-    "section": "Battle of the Data Science Venn Diagrams",
-    "text": "Battle of the Data Science Venn Diagrams\n\n\n\n2010 Drew Conway\n\n\n\n\n\n\n\n\n\n\n\n2012 Brendan Tierney\n\n\n\n\n\n\n\n\n\n\n\nStarting 2010, people tried to use venn diagrams to define DS, what should be include, what should be not. It’s a subset of something, or superset of something.\nWe have to do DS on some subject/field.\n(left) ML use CS and STAT but doesn’t care about domain knowledge.\nIf you apply CS to substantive expertise without solid math and stats, you are doing bullshit basically.\n(right) DS is a subset of KDD - Knowledge Discovery in Data"
+    "objectID": "slides/01-syllabus-slides.html#learning-management-system-d2l",
+    "href": "slides/01-syllabus-slides.html#learning-management-system-d2l",
+    "title": "Welcome Aboard 🙌",
+    "section": "Learning Management System (D2L)",
+    "text": "Learning Management System (D2L)\n\n\n\n\n\n\n\n\n\nCheck your grade: Assessments &gt; Grades\nNew announcement: News"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-1",
-    "href": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-1",
-    "title": "Data Science Overview 📖",
-    "section": "Battle of the Data Science Venn Diagrams",
-    "text": "Battle of the Data Science Venn Diagrams\n\n\n\n2013 Ulrich Matter\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2014 Michael Malak"
+    "objectID": "slides/01-syllabus-slides.html#grading-policy",
+    "href": "slides/01-syllabus-slides.html#grading-policy",
+    "title": "Welcome Aboard 🙌",
+    "section": "Grading Policy ✨",
+    "text": "Grading Policy ✨\n\n\nYour grade is from the following categories and distribution\n\n25% In-class lab activities\n10% In-class AI activities\n45% Mini projects\n20% Final project competition\n\n\n\n\n❌ You must participate in the final presentation in order to pass the course.\n❌ You will NOT be allowed to do any extra credit projects/homework/exam to compensate for a poor grade."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-2",
-    "href": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-2",
-    "title": "Data Science Overview 📖",
-    "section": "Battle of the Data Science Venn Diagrams",
-    "text": "Battle of the Data Science Venn Diagrams\n\n\n\n2015 Stephan Kolassa\n\n\n\n\n\n\n\n\n\n\n\n2016 Gregory Piatetsky-Shapiro"
+    "objectID": "slides/01-syllabus-slides.html#grade-percentage-conversion",
+    "href": "slides/01-syllabus-slides.html#grade-percentage-conversion",
+    "title": "Welcome Aboard 🙌",
+    "section": "Grade-Percentage Conversion",
+    "text": "Grade-Percentage Conversion\n\n\n\\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.0 is in [94, 100] and the grade is A and 93.8 is in [90, 94) and the grade is A-.\n\n\n\n\n\nGrade\nPercentage\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[84, 87)\n\n\nB-\n[80, 84)\n\n\nC+\n[77, 80)\n\n\nC\n[74, 77)\n\n\nC-\n[70, 74)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#shall-we-continue",
-    "href": "slides/02-datascience-slides.html#shall-we-continue",
-    "title": "Data Science Overview 📖",
-    "section": "Shall We Continue?",
-    "text": "Shall We Continue?\n\n\n\n2017 Longbing Cao\n\n\n\n\n\n\n\n\n\n\n\ntotally-not-a-Venn-diagram by Calvin Andrus"
+    "objectID": "slides/01-syllabus-slides.html#lab-exercises-25",
+    "href": "slides/01-syllabus-slides.html#lab-exercises-25",
+    "title": "Welcome Aboard 🙌",
+    "section": "Lab Exercises (25%)",
+    "text": "Lab Exercises (25%)\n\nGraded as Complete/Incomplete and used as evidence of attendance and participation.\nAllowed to have one incomplete lab exercise without any penalty.\nBeyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\nYou will create a project in Posit Cloud saving all of your lab exercises. (We’ll go through know-how together)"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-3",
-    "href": "slides/02-datascience-slides.html#section-3",
-    "title": "Data Science Overview 📖",
+    "objectID": "slides/01-syllabus-slides.html#ai-activities-10",
+    "href": "slides/01-syllabus-slides.html#ai-activities-10",
+    "title": "Welcome Aboard 🙌",
+    "section": "AI activities (10%)",
+    "text": "AI activities (10%)\n\nAI activities are short presentations during class. They are usually graded as complete or incomplete.\nAI activities are used as evidence of both attendance and participation.\nGroups take turn to present what they learn from GenAI about data science."
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#mini-projects-45",
+    "href": "slides/01-syllabus-slides.html#mini-projects-45",
+    "title": "Welcome Aboard 🙌",
+    "section": "Mini Projects (45%)",
+    "text": "Mini Projects (45%)\n\nYou will work in a team on 3 mini projects.\nThis project will focus on a subset of the course content up to that point, for example data wrangling and visualization or a simple predictive model.\n\n\nMore detailed instructions and rubric will be provided later in the semester."
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#final-project-competition-20",
+    "href": "slides/01-syllabus-slides.html#final-project-competition-20",
+    "title": "Welcome Aboard 🙌",
+    "section": "Final Project Competition (20%)",
+    "text": "Final Project Competition (20%)\n\nYou will be team up to do the final project.\n\nYour project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nIntroduce a programming language not learned in class for doing data science, including live demo, Julia, SQL, MATLAB, SAS for example.\nWeb development: Shiny website or dashboard, including live demo\n\n\nThe final project presentation is on Monday, 5/4, 10:30 AM - 12:30 PM.\nMore information will be released later."
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#document-generative-ai-use",
+    "href": "slides/01-syllabus-slides.html#document-generative-ai-use",
+    "title": "Welcome Aboard 🙌",
+    "section": "Document Generative AI Use",
+    "text": "Document Generative AI Use\n\n\n\n\nYou may use generative AI tools such as ChatGPT and Gemini to generate a first draft of text for your work, provided that this use is documented and cited.\n\n\nUnless explicitly stated otherwise, you may make use of any online resources, but you must explicitly cite/document where you obtained any code you directly use or use as inspiration in your solutions.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you use GenAI, please include the followings in your submitted work:\n\nWhy/How I used AI (prompts or questions)\nGenerated output (screenshot or copy-paste excerpt)\nHow I used the output"
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#document-generative-ai-use-1",
+    "href": "slides/01-syllabus-slides.html#document-generative-ai-use-1",
+    "title": "Welcome Aboard 🙌",
+    "section": "Document Generative AI Use",
+    "text": "Document Generative AI Use\n\n\n\n\nWhy/How I used AI (prompts and questions)\n\nI asked ChatGPT to generate a histogram using R.\n\n\nGenerated output (screenshot or copy-paste excerpt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow I used the output\n\nI reviewed the suggestions, but I did not use the exact code. Instead, I change the code format and breaks value to 50."
+  },
+  {
+    "objectID": "slides/01-syllabus-slides.html#genai-and-academic-integrity",
+    "href": "slides/01-syllabus-slides.html#genai-and-academic-integrity",
+    "title": "Welcome Aboard 🙌",
+    "section": "GenAI and Academic Integrity",
+    "text": "GenAI and Academic Integrity"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#my-journey",
+    "href": "slides/01-syllabus.html#my-journey",
+    "title": "Welcome Aboard 🙌",
+    "section": "My Journey",
+    "text": "My Journey\n\nAssistant Professor (2020/08 - )\n\n\n\n\n\n\n\n\n\n\nPostdoctoral Fellow\n\n\n\n\n\n\n\n\n\n\nPhD in Statistics\n\n\n\n\n\n\n\n\n\n\nMA in Economics/PhD program in Statistics\n\n\n\n\n\n\n\n\n\n\nAfter college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics.\n\nI got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies.\nThen I spent two years doing my postdoctoral research at Rice University in Houston, Texas.\nFinally, in fall 2020, I came to Marquette as an assistant professor.\nMidwest/Indiana-West/California-South/Texas-Midwest/Wisconsin\nBeen to any one of these universities/cities?\nThe most beautiful campus.\nWho are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.\nPoor listening and speaking skills. I was shy.\nOK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything,\nI have the class list. I’d like to learn your face and remember your name. You know, you all wear a mask. It’s hard to recognize you and connect your name and your face.\nWhen I call your name, you can say something about yourself. No need to be long, couple of seconds are good."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#how-to-reach-me",
+    "href": "slides/01-syllabus.html#how-to-reach-me",
+    "title": "Welcome Aboard 🙌",
+    "section": "How to Reach Me",
+    "text": "How to Reach Me\n\nOffice hours TuTh 3:20 - 4:20 PM and Wed 2 - 3 PM in Cudahy Hall 353.\n📧 cheng-han.yu@marquette.edu\n\nAnswer your question within 24 hours.\nExpect a reply on Monday if shoot me a message on weekends.\nStart your subject line with [math3570] or [cosc3570] followed by a clear description of your question.\n\n\n\n\n\n\n\n\n\n\n\n\nI will NOT reply your e-mail if … Check the email policy in the syllabus!"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#when-you-have-two-dr.-yu-in-one-semester",
+    "href": "slides/01-syllabus.html#when-you-have-two-dr.-yu-in-one-semester",
+    "title": "Welcome Aboard 🙌",
+    "section": "When You Have Two Dr. Yu in One Semester 😂",
+    "text": "When You Have Two Dr. Yu in One Semester 😂\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is a real case happened last semester. A student of my class sent her homework of another class linear systems to me because the instructor of that course also has last name Yu, and she messed up. So if you remember to add course number in the subject line, it will greatly reduce the possibility of sending a wrong message. And it will save your time and my time, and so we all can work more efficiently. Right?"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#what-is-this-course",
+    "href": "slides/01-syllabus.html#what-is-this-course",
+    "title": "Welcome Aboard 🙌",
+    "section": "What is This Course?",
+    "text": "What is This Course?\n\n\nEvery aspect of doing a practical data science project, from importing data to deploying what we learn from data.\n\n. . .\n❓ What are prerequisites?\n👉 COSC 1010 (Intro Programming) and MATH 4720 (Intro Stats) or MATH 2780 (Intro Regression)\n\n. . .\n❓ Is this like another intro stats course?\n👉 No. Statistics and data science are closely related.\n. . .\nNowadays\n👉 Data science is a broader subject than statistics.\n. . .\n👉 Statistics focuses more on analyzing and learning from data, a part of the entire workflow of data science.\n\n. . .\n❓ Is this like another intro CS or programming course?\n👉 Absolutely not. We learn how to code for doing data science, not for understanding computer systems and structures.\n\n\nOf course we will not cover every detail form A to Z of DS in one semester becuase DS is such a huge subject, just like computer science. It’s impossible to learn CS in one semester by just taking intro to CS, right? So we’ll just learn the basic and essential concepts and tools used is DS."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#what-is-not-covered-in-this-course",
+    "href": "slides/01-syllabus.html#what-is-not-covered-in-this-course",
+    "title": "Welcome Aboard 🙌",
+    "section": "What is NOT Covered in This Course",
+    "text": "What is NOT Covered in This Course\n\n\nAdvanced data analytics and computing  \n\nMATH 4750 Statistical Computing\nMATH 4760 Time Series Analysis\nMATH 4780 Regression Analysis\nMATH 4790 Bayesian Statistics\nCOSC 4600 Fundamentals of Artificial Intelligence\nCOSC 4610 Data Mining\nCOEN 4860 Introduction to Neural Networks\n\n\n\n. . .\n\n\nBig data: We start with small, in-memory data sets. You don’t know how to tackle big data unless you have experience with small data.\n\n. . .\n\n\nDatabase: Learn SQL in\n\nCOSC 4800 Principles of Database Systems\nINSY 4052 Database Management Systems.\n\n\n\n\n\nWe won’t talk about topics like cloud computing, parallel computing, distributed computing.\n\nBig data techniques: As a beginner, we focus on small, in-memory datasets. You can’t tackle big data unless you have experience with small data."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#what-computing-languages",
+    "href": "slides/01-syllabus.html#what-computing-languages",
+    "title": "Welcome Aboard 🙌",
+    "section": "What Computing Languages?",
+    "text": "What Computing Languages?\n\n\n~ 60%\n\n\n\n\n\n\n\n\n\n~ 40%\n\n\n\n\n\n\n\n\n\n\n\nYou’ve learned Python in COSC 1010. Being R-Python bilingual is getting more important!\n\n. . .\n👉 Wouldn’t it be great to add both languages to your resume! 😎 \n. . .\n❌ Don’t want to learn R and/or Python? Take another section or in next semester~!\n❌ Drop deadline: 01/20 (Tue), 11:59 PM."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#where-to-code-posit-cloud",
+    "href": "slides/01-syllabus.html#where-to-code-posit-cloud",
+    "title": "Welcome Aboard 🙌",
+    "section": "Where to Code? Posit Cloud\n",
+    "text": "Where to Code? Posit Cloud\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHave nice computing power and interactive collaboration with me and your teammates!"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#course-materials",
+    "href": "slides/01-syllabus.html#course-materials",
+    "title": "Welcome Aboard 🙌",
+    "section": "Course Materials",
+    "text": "Course Materials\n\nCourse Website - https://math3570-s26.github.io/website/\n\n\n\n\n\n\n\n\n\n\n\n\nAll course materials and information can be found on this website. Bookmark it!"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#textbook-really",
+    "href": "slides/01-syllabus.html#textbook-really",
+    "title": "Welcome Aboard 🙌",
+    "section": "Textbook (Really?!)",
+    "text": "Textbook (Really?!)"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#section-1",
+    "href": "slides/01-syllabus.html#section-1",
+    "title": "Welcome Aboard 🙌",
     "section": "",
-    "text": "You probably get the idea. There are so many ways to define data science."
+    "text": "Python for Data Analysis, 3E\n\n\n\n\n\n\n\n\n\nR for Data Science 2nd edition\n\n\n\n\n\n\n\n\n\nTidy Modeling with R"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#what-is-data-scientist",
-    "href": "slides/02-datascience-slides.html#what-is-data-scientist",
-    "title": "Data Science Overview 📖",
-    "section": "What is Data Scientist",
-    "text": "What is Data Scientist\n\n💰 💰 Dr. Grant (Statistics Education Research Journal, 2017): Data science is the field of people who decide to print “Data Scientist” on their business cards to get a salary bump! 💵 💵"
+    "objectID": "slides/01-syllabus.html#learning-management-system-d2l",
+    "href": "slides/01-syllabus.html#learning-management-system-d2l",
+    "title": "Welcome Aboard 🙌",
+    "section": "Learning Management System (D2L)",
+    "text": "Learning Management System (D2L)\n\n\n\n\n\n\n\n\n\nCheck your grade: Assessments &gt; Grades\nNew announcement: News"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#what-is-data-scientist-1",
-    "href": "slides/02-datascience-slides.html#what-is-data-scientist-1",
-    "title": "Data Science Overview 📖",
-    "section": "What is Data Scientist",
-    "text": "What is Data Scientist\n\n\n\n\n\n\n\nSource: https://www.instagram.com/data_science_learn/\n\n\n\n\n\n\n\n\nSource: https://www.instagram.com/data_science_dojo/"
+    "objectID": "slides/01-syllabus.html#grading-policy",
+    "href": "slides/01-syllabus.html#grading-policy",
+    "title": "Welcome Aboard 🙌",
+    "section": "Grading Policy ✨",
+    "text": "Grading Policy ✨\n\n\nYour grade is from the following categories and distribution\n\n25% In-class lab activities\n10% In-class AI activities\n45% Mini projects\n20% Final project competition\n\n\n\n\n❌ You must participate in the final presentation in order to pass the course.\n❌ You will NOT be allowed to do any extra credit projects/homework/exam to compensate for a poor grade."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#what-wiki-defines",
-    "href": "slides/02-datascience-slides.html#what-wiki-defines",
-    "title": "Data Science Overview 📖",
-    "section": "What Wiki Defines",
-    "text": "What Wiki Defines"
+    "objectID": "slides/01-syllabus.html#grade-percentage-conversion",
+    "href": "slides/01-syllabus.html#grade-percentage-conversion",
+    "title": "Welcome Aboard 🙌",
+    "section": "Grade-Percentage Conversion",
+    "text": "Grade-Percentage Conversion\n\n\n\\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.0 is in [94, 100] and the grade is A and 93.8 is in [90, 94) and the grade is A-.\n\n\n\n\n\nGrade\nPercentage\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[84, 87)\n\n\nB-\n[80, 84)\n\n\nC+\n[77, 80)\n\n\nC\n[74, 77)\n\n\nC-\n[70, 74)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#genai-prompting",
-    "href": "slides/02-datascience-slides.html#genai-prompting",
-    "title": "Data Science Overview 📖",
-    "section": "GenAI Prompting",
-    "text": "GenAI Prompting\n\nMake AI your thinking partner and tutor!\nCopy and paste the paragraph into your GenAI chat as the initial prompt.\n\n\n\nI am a college student in an introductory data science course. Be my thinking partner and tutor, not just an answer generator. Explain everything at an introductory level in plain language and avoid advanced jargon unless I ask. Walk through problems step by step and show your reasoning, and ask up to two quick questions if you need missing details. Use a tiny example when it helps. If code is needed, use either R (tidyverse) or Python (pandas, scikit-learn) based on what I say I am using, and keep the code minimal, well commented, and explained line by line. If my approach is wrong, tell me clearly what is wrong and how to fix it. End with one quick check for understanding and a one sentence summary."
+    "objectID": "slides/01-syllabus.html#lab-exercises-25",
+    "href": "slides/01-syllabus.html#lab-exercises-25",
+    "title": "Welcome Aboard 🙌",
+    "section": "Lab Exercises (25%)",
+    "text": "Lab Exercises (25%)\n\nGraded as Complete/Incomplete and used as evidence of attendance and participation.\nAllowed to have one incomplete lab exercise without any penalty.\nBeyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\nYou will create a project in Posit Cloud saving all of your lab exercises. (We’ll go through know-how together)"
   },
   {
-    "objectID": "slides/02-datascience-slides.html#genai-prompting-1",
-    "href": "slides/02-datascience-slides.html#genai-prompting-1",
-    "title": "Data Science Overview 📖",
-    "section": "GenAI Prompting",
-    "text": "GenAI Prompting\n\n\n\nWhy should we care about and learn data science?\n\n\n&gt; How does data science show up in everyday decisions I already care about?\n\n\n&gt; What mistakes happen when decisions are made without data or with bad data?\n\n\n&gt; How is data science used in my major: [environmental science, computer science, etc]?\n\n\n\nShare your AI’s responses and your thoughts!~\n\n\nGoal: Answer the student’s implicit question: Why should I care? These prompts connect data science to lived experience and decision making, not abstract tools. They also reveal that data science is not just for programmers or specialists."
+    "objectID": "slides/01-syllabus.html#ai-activities-10",
+    "href": "slides/01-syllabus.html#ai-activities-10",
+    "title": "Welcome Aboard 🙌",
+    "section": "AI activities (10%)",
+    "text": "AI activities (10%)\n\nAI activities are short presentations during class. They are usually graded as complete or incomplete.\nAI activities are used as evidence of both attendance and participation.\nGroups take turn to present what they learn from GenAI about data science."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#data-science-in-this-course",
-    "href": "slides/02-datascience-slides.html#data-science-in-this-course",
-    "title": "Data Science Overview 📖",
-    "section": "Data Science in This Course",
-    "text": "Data Science in This Course\n\nData science is an discipline that allows us to turn raw data into understanding, insight, and knowledge.\nWe’re going to learn to do this in a tidy way – more on that later!\nThis is a introductory data science course with an emphasis on important tools of R/Python that help us do data science."
+    "objectID": "slides/01-syllabus.html#mini-projects-45",
+    "href": "slides/01-syllabus.html#mini-projects-45",
+    "title": "Welcome Aboard 🙌",
+    "section": "Mini Projects (45%)",
+    "text": "Mini Projects (45%)\n\nYou will work in a team on 3 mini projects.\nThis project will focus on a subset of the course content up to that point, for example data wrangling and visualization or a simple predictive model.\n\n\nMore detailed instructions and rubric will be provided later in the semester."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#data-science-workflow",
-    "href": "slides/02-datascience-slides.html#data-science-workflow",
-    "title": "Data Science Overview 📖",
-    "section": "Data Science Workflow",
-    "text": "Data Science Workflow"
+    "objectID": "slides/01-syllabus.html#final-project-competition-20",
+    "href": "slides/01-syllabus.html#final-project-competition-20",
+    "title": "Welcome Aboard 🙌",
+    "section": "Final Project Competition (20%)",
+    "text": "Final Project Competition (20%)\n\nYou will be team up to do the final project.\n\nYour project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nIntroduce a programming language not learned in class for doing data science, including live demo, Julia, SQL, MATLAB, SAS for example.\nWeb development: Shiny website or dashboard, including live demo\n\n\nThe final project presentation is on Monday, 5/4, 10:30 AM - 12:30 PM.\nMore information will be released later."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-4",
-    "href": "slides/02-datascience-slides.html#section-4",
-    "title": "Data Science Overview 📖",
+    "objectID": "slides/01-syllabus.html#document-generative-ai-use",
+    "href": "slides/01-syllabus.html#document-generative-ai-use",
+    "title": "Welcome Aboard 🙌",
+    "section": "Document Generative AI Use",
+    "text": "Document Generative AI Use\n\n\n\n\nYou may use generative AI tools such as ChatGPT and Gemini to generate a first draft of text for your work, provided that this use is documented and cited.\n\n\nUnless explicitly stated otherwise, you may make use of any online resources, but you must explicitly cite/document where you obtained any code you directly use or use as inspiration in your solutions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you use GenAI, please include the followings in your submitted work:\n\nWhy/How I used AI (prompts or questions)\nGenerated output (screenshot or copy-paste excerpt)\nHow I used the output"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#document-generative-ai-use-1",
+    "href": "slides/01-syllabus.html#document-generative-ai-use-1",
+    "title": "Welcome Aboard 🙌",
+    "section": "Document Generative AI Use",
+    "text": "Document Generative AI Use\n\n\n\n\nWhy/How I used AI (prompts and questions)\n\nI asked ChatGPT to generate a histogram using R.\n\n\nGenerated output (screenshot or copy-paste excerpt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow I used the output\n\nI reviewed the suggestions, but I did not use the exact code. Instead, I change the code format and breaks value to 50."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#genai-and-academic-integrity",
+    "href": "slides/01-syllabus.html#genai-and-academic-integrity",
+    "title": "Welcome Aboard 🙌",
+    "section": "GenAI and Academic Integrity",
+    "text": "GenAI and Academic Integrity\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n. . ."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2026)",
     "section": "",
-    "text": "Import: Take data stored somewhere and load it into your workspace.\n\nTidy: Storing data in a consistent rectangular form, i.e., a data matrix.\n\nTransform: Narrowing in on observations of interest, creating new variables, calculating statistics.\n\n\nTo do DS, we need data, so the first step is to import data (——).\nBut usually the raw data are very messy, so we need tidy the data by storing data in a consistent rectangular form (data frame in R), which is easy for modeling and analysis.\nDepending on our research goal, we may just want to focus on some variables , or observations in the data, or we may want to create some variables for example, the data use feet, but we want to use meter instead. This data transformation further cleans the data, so that we can extract any information we need from data more easily and efficiently. In other words, we improve the quality of data."
+    "text": "This schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nMaterials\nLab Activity\nLearn from AI\nProject\n\n\n\n\n1\nTue, Jan 13\nGreetings; Overview of Data Science\n🖥️syllabus 🖥️overview\n\n\n\n\n\n\nThu, Jan 15\nPosit Cloud\n🖥️posit\n📋 posit 📋01\n\n\n\n\n2\nTue, Jan 20\nGit and GitHub\n🖥️git\n📋github\n\n\n\n\n\nThu, Jan 22\nQuarto: YAML and Markdown\n🖥️quarto\n📋02 📋03\n\n✅ Team up Due\n\n\n3\nTue, Jan 27\nQuarto: Code Chunk\n\n📋04\n\n\n\n\n\nThu, Jan 29\nR and Python Syntax\n🖥️syntax\n📋05 📋06\n\n\n\n\n4\nTue, Feb 3\nR Tidyverse\n🖥️package\n📋07 📋08\n\n\n\n\n\nThu, Feb 5\nPython NumPy/Pandas\n\n📋09\n\n\n\n\n5\nTue, Feb 10\nData Importing\n🖥️import\n📋10\n\n\n\n\n\nThu, Feb 12\nData Visualization-ggplot2\n🖥️ggplot\n📋11\n\n\n\n\n6\nTue, Feb 17\nData Visualization-categorical and numerical data\n🖥️visualization\n📋12 📋13\n\n\n\n\n\nThu, Feb 19\nInteractive Data Visualization\n🖥️interactive-viz\n📋14\n\n\n\n\n7\nTue, Feb 24\nData Wrangling - one data frame\n🖥️dplyr-1\n📋15\n\n\n\n\n\nThu, Feb 26\nMini Project 1 Presentation: Exploratory Data Storytelling\n\n\n\n\n\n\n8\nTue, Mar 3\nData Wrangling - two data frames\n🖥️dplyr-2\n📋16\n\n\n\n\n\nThu, Mar 5\nData Wrangling - tidyr\n🖥️tidyr\n📋17\n\n\n\n\n9\nTue, Mar 10\nNO CLASS: Spring break\n\n\n\n\n\n\n\nThu, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n10\nTue, Mar 17\nProbabilistic and Statistical Simulation\n🖥️probstat\n📋18 📋19\n\n\n\n\n\nThu, Mar 19\nLinear Regression\n🖥️linear-regression\n\n\n\n\n\n11\nTue, Mar 24\nMultiple Linear Regression\n\n📋20\n\n\n\n\n\nThu, Mar 26\nMini Project 2 Presentation: Data Wrangling and Pipelines\n\n\n\n\n\n\n12\nTue, Mar 31\nLogistic Regression\n🖥️logistic-regression\n\n\n\n\n\n\nThu, Apr 2\nNO CLASS: Easter break\n\n\n\n\n\n\n13\nTue, Apr 7\nLogistic Regression\n\n📋21\n\n\n\n\n\nThu, Apr 9\nK-Nearest Neighbors\n🖥️ K-Nearest Neighbors\n\n\n\n\n\n14\nTue, Apr 14\nDecision Trees\n🖥️ Decision Trees\n📋22\n\n\n\n\n\nThu, Apr 16\nMini Project 3 Presentation: Supervised Learning\n\n\n\n\n\n\n15\nTue, Apr 21\nPrincipal Component Analysis\n🖥️Principal Component Analysis\n\n\n\n\n\n\nThu, Apr 23\nPrincipal Component Analysis\n\n📋23\n\n📂 Final Project Proposal Due\n\n\n16\nTue, Apr 28\nK-Means Clustering\n🖥️K-means Clustering\n\n\n\n\n\n\nThu, Apr 30\nK-Means Clustering\n\n📋24\n\n\n\n\n17\nMon, May 4\nFinal Project Presentation (10:30 AM - 12:30 PM)\n\n\n\n📂 Final Project Materials Due\n\n\n\n\nDr. Yu reserves the right to make changes to the schedule.",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
   },
   {
-    "objectID": "slides/02-datascience-slides.html#data-matrix",
-    "href": "slides/02-datascience-slides.html#data-matrix",
-    "title": "Data Science Overview 📖",
-    "section": "Data Matrix",
-    "text": "Data Matrix\n\nEach row corresponds to a unique case or observational unit.\nEach column represents a characteristic or variable.\nThis structure allows new cases to be added as rows or new variables as new columns."
-  },
-  {
-    "objectID": "slides/02-datascience-slides.html#section-5",
-    "href": "slides/02-datascience-slides.html#section-5",
-    "title": "Data Science Overview 📖",
+    "objectID": "present-description-final.html",
+    "href": "present-description-final.html",
+    "title": "MATH/COSC 3570 Final Project Competition",
     "section": "",
-    "text": "The process of importing, tidying and transforming data is called data wrangling or data munging."
+    "text": "This is the latest version of project guideline. It may be revised later.",
+    "crumbs": [
+      "Final Project",
+      "Guideline and Policy"
+    ]
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-6",
-    "href": "slides/02-datascience-slides.html#section-6",
-    "title": "Data Science Overview 📖",
+    "objectID": "activity/act_knn.html",
+    "href": "activity/act_knn.html",
+    "title": "In-class Activity: Dogs or Cats",
     "section": "",
-    "text": "Visualisation: A good visualisation shows you things that you did not expect or raise new questions about the data.\n\n\nOnce the data are ready, it’s time to explore our data.\nMy recommendation is that always plot your data before building any model or algorithm or doing analysis because good visualization let you understand more about your data, and may provide some hints about how to build your statistical model, machine learning algorithms or how to do analysis.\nAnd good visualization shows you things that you did not expect or raise new questions about the data. (outliers, missing data)\nSo after visualizing your data, you may have better idea of how to transforming your data so that you can be better prepared for modeling and answer your research questions. (nonlinear relationship &lt;-&gt; linear relationship)"
+    "text": "The following activity practices K Nearest Neighbors."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-7",
-    "href": "slides/02-datascience-slides.html#section-7",
-    "title": "Data Science Overview 📖",
+    "objectID": "activity/act_knn.html#team-activity-dogs-or-cats",
+    "href": "activity/act_knn.html#team-activity-dogs-or-cats",
+    "title": "In-class Activity: Dogs or Cats",
+    "section": "[Team] Activity: Dogs or Cats",
+    "text": "[Team] Activity: Dogs or Cats\n\n\n\n\n\n\n\n\n\nHere we use features Body Size and Food Intake to classify cats and dogs. The training data are shown as cat or dog images, and there are three test data to be labeled: green, red, and blue points.\nConsider K Nearest Neighbors with \\(K = 1, 2, 3, 4\\), and discuss the following questions."
+  },
+  {
+    "objectID": "activity/act_knn.html#discussion",
+    "href": "activity/act_knn.html#discussion",
+    "title": "In-class Activity: Dogs or Cats",
+    "section": "Discussion",
+    "text": "Discussion\n\n\n\n\n\n\nCautionFor which test data point, the classification result is uncertain or unstable?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWhich data point can be labelled as one particular category with 100% certainty, for all different \\(K\\)s?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionFor the blue point, what happened when \\(K\\) increases? Do we change the prediction? What about uncertainty?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionIf you would like to make a classification rule or set the decision boundary to predict cats or dogs, what would the decision boundary look like? Why?"
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html",
+    "href": "activity/act_reg-to-the-mean.html",
+    "title": "In-class Activity: Regression to the Mean",
     "section": "",
-    "text": "mpg |&gt; ggplot(aes(x = displ, y = hwy)) +\n    geom_point(aes(color = class)) + \n    geom_smooth() + \n    theme_bw()"
+    "text": "“Regression” is defined in the dictionary as “the process or returning to a former or less developed state.” How did this term come to be used for statistical prediction? This connection comes from Francis Galton, one of the original quantitative social scientists, who fit linear models to under stand the heredity of human height. Predicting children’s heights from parent’s heights, he noticed that children of tall parents tended to be taller than average but less tall than their parents. From the other direction, children of shorter parents tended to be shorter than average but less short than their parents. Thus, from one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon. 1\n\nThe following activities demonstrate regression to the mean."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-8",
-    "href": "slides/02-datascience-slides.html#section-8",
-    "title": "Data Science Overview 📖",
+    "objectID": "activity/act_reg-to-the-mean.html#historical-origins-of-regression",
+    "href": "activity/act_reg-to-the-mean.html#historical-origins-of-regression",
+    "title": "In-class Activity: Regression to the Mean",
     "section": "",
-    "text": "Model: Models are complementary tools to visualisation. Once you have made your questions sufficiently precise, you can use a model to answer them.\n\n\nThe next step is to use or build a rigorous statistical or machine learning model to answer our research questions. For example, forecasting stock prices, classifying images.\nAnd transform-visualize-model becomes a loop of understanding or learning from data. We keep transforming, visualizing and modeling our data until our questions are properly answered by our data and model."
+    "text": "“Regression” is defined in the dictionary as “the process or returning to a former or less developed state.” How did this term come to be used for statistical prediction? This connection comes from Francis Galton, one of the original quantitative social scientists, who fit linear models to under stand the heredity of human height. Predicting children’s heights from parent’s heights, he noticed that children of tall parents tended to be taller than average but less tall than their parents. From the other direction, children of shorter parents tended to be shorter than average but less short than their parents. Thus, from one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon. 1\n\nThe following activities demonstrate regression to the mean."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-9",
-    "href": "slides/02-datascience-slides.html#section-9",
-    "title": "Data Science Overview 📖",
+    "objectID": "activity/act_reg-to-the-mean.html#team-activity-before-after-memory-quiz-2",
+    "href": "activity/act_reg-to-the-mean.html#team-activity-before-after-memory-quiz-2",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "[Team] Activity: Before-after Memory Quiz 2",
+    "text": "[Team] Activity: Before-after Memory Quiz 2\n\n\n\n\n\n\n\n\n\n\n[Step 1] I will be displaying 20 randomly chosen verbs on the screen for 20 seconds.\n[Step 2] Each team should try to memorize as many as they can.\n[Step 3] After displaying the words for 20 seconds we do another activity for three minutes.\n[Step 4] Give each team a minute to write down as many words as they remember\n[Step 5] Display the words again and ask them each to count how many they got correct.\n[Step 6] With another set of 20 new verbs, ask them to predict the score they will get.\n[Step 7] Repeat Step 3 to 5 for the new set of words.\nAs one team please jointly enter (1) your score on first quiz; (2) guessed score on second quiz; (3) actual score on second quiz at the MS form or the QR code below."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#individual-activity-compare-your-height-with-your-fathermother",
+    "href": "activity/act_reg-to-the-mean.html#individual-activity-compare-your-height-with-your-fathermother",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "[Individual] Activity: Compare Your Height with Your Father/Mother",
+    "text": "[Individual] Activity: Compare Your Height with Your Father/Mother\n\n\n\n\n\n\n\n\n\n\nIf you are male, record your height and your father’s height. If you are female, record your height and your mother’s height.\nUse feet-to-inch conversion to help you get the heights in inches.\nPlease enter the heights in inches at the MS form or the QR code below."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#discussion",
+    "href": "activity/act_reg-to-the-mean.html#discussion",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "Discussion",
+    "text": "Discussion\n\n\n\n\n\n\nCautionCompare the second quiz prediction to what actually happens. Is your actual score higher or lower than your prediction?\n\n\n\n\n\nYou may expect to do about the same on the second quiz as the first, but I guess who do worst on the first quiz tend to improve, and who do best tend to decline.\n\n\n\n\n\n\n\n\n\nCautionWhy these improvments and declines occurred?\n\n\n\n\n\nAre you trying to give an explanation on why such result is occurred? You may think the teams who did the best relaxed on the 2nd quiz, and the teams who did poorly tried harder, and so forth.\nHowever, you DO NOT know if your team did well or poorly, comparing to other teams, right?!\nIt would be more accurate to say that some do better on this quiz than others, but the very best scores on the first quiz are from people who are both good and lucky. They will still probably do well on the second quiz, but most of them will not be so lucky the second time.\n\n\n\n\n\n\n\n\n\nCautionWhat does the regression coefficient \\(&lt; 1\\) mean in the heights example?\n\n\n\n\n\nIf a parent is taller than the average, the regression predicts that his/her child is also taller than the average, but not as much as their parent.\nIf a parent is shorter than the average, the regression predicts that his/her child is also shorter than the average, but again not as much as their parent.\nTherefore, form one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon."
+  },
+  {
+    "objectID": "activity/act_reg-to-the-mean.html#footnotes",
+    "href": "activity/act_reg-to-the-mean.html#footnotes",
+    "title": "In-class Activity: Regression to the Mean",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRegression and other stories, Page 85.↩︎\nActive Statistics, Page 101.↩︎"
+  },
+  {
+    "objectID": "present-work.html#presentation-order",
+    "href": "present-work.html#presentation-order",
+    "title": "Mini Project Topics",
+    "section": "Presentation order",
+    "text": "Presentation order",
+    "crumbs": [
+      "Mini Project",
+      "Topics and Works"
+    ]
+  },
+  {
+    "objectID": "present-work.html#presentation-slides",
+    "href": "present-work.html#presentation-slides",
+    "title": "Mini Project Topics",
+    "section": "Presentation Slides",
+    "text": "Presentation Slides",
+    "crumbs": [
+      "Mini Project",
+      "Topics and Works"
+    ]
+  },
+  {
+    "objectID": "present-description.html",
+    "href": "present-description.html",
+    "title": "MATH/COSC 3570 Mini Project Presentation",
     "section": "",
-    "text": "library(tidymodels)\nlinear_reg() |&gt;  \n    set_engine(\"lm\") |&gt; \n    fit(hwy ~ displ, data = mpg)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = hwy ~ displ, data = data)\n\nCoefficients:\n(Intercept)        displ  \n      35.70        -3.53"
+    "text": "This is the latest version of project guideline. It may be revised later.\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;\n\n\n\n\n–&gt;",
+    "crumbs": [
+      "Mini Project",
+      "Guideline and Policy"
+    ]
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-10",
-    "href": "slides/02-datascience-slides.html#section-10",
-    "title": "Data Science Overview 📖",
+    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+  },
+  {
+    "objectID": "present-work-final.html#group-projects-proposal",
+    "href": "present-work-final.html#group-projects-proposal",
+    "title": "Final Project Presentation",
+    "section": "Group project’s proposal",
+    "text": "Group project’s proposal",
+    "crumbs": [
+      "Final Project",
+      "Project Group and Proposal"
+    ]
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html",
+    "href": "activity/act_two-truth-one-lie.html",
+    "title": "In-class Activity: Two truths and a lie",
     "section": "",
-    "text": "Communication: It doesn’t matter how well your models and visualization have led you to understand the data unless you can also communicate your results to others.\n\n\nFinally we have to share our analysis results with others.\nAt this stage, visualization plays an important role as well.\nFigures/tables speak louder than words.\nWe can have different types of deployment. In addition to papers or reports, we can create a website, a software package, a mobile app, dashboard and so on."
+    "text": "The following activity demonstrates probability calibration."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#section-11",
-    "href": "slides/02-datascience-slides.html#section-11",
-    "title": "Data Science Overview 📖",
+    "objectID": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
+    "href": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "[Team] Activity: Two truths and a lie 1",
+    "text": "[Team] Activity: Two truths and a lie 1\n\n\n\n\n\n\n\n\n\nWithin your group:\n\nOne person tells three personal statements one of which is a lie.\nOthers discuss and guess which statement is the lie and they jointly construct a numerical statement of their certainty in the guess on a 0–10 scale.\nThe storyteller reveals which was the lie.\nEnter the certainty estimate and the outcome success or failure and submit in the Microsoft form.\nRotate through everyone in your group so that each person plays the storyteller role once."
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html#discussion",
+    "href": "activity/act_two-truth-one-lie.html#discussion",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "Discussion",
+    "text": "Discussion\n\n\n\n\n\n\nCautionWhat do you think the range of centainty scores will look like?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWill there be a positive relation between \\(x\\) and binary \\(y\\): are guesses with higher certainty be more accurate, on average?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionHow strong will the relation be between \\(x\\) and \\(y\\): what will the curve look like?"
+  },
+  {
+    "objectID": "activity/act_two-truth-one-lie.html#footnotes",
+    "href": "activity/act_two-truth-one-lie.html#footnotes",
+    "title": "In-class Activity: Two truths and a lie",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nActive Statistics, Page 179.↩︎"
+  },
+  {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "MATH/COSC 3570 Team Up",
     "section": "",
-    "text": "Programming: Surrounding all these tools is programming.\n\n\nOf course, every aspect of DS is done by programming. DS cannot be done by pieces of paper and pens. It has to be done using computers."
+    "text": "This course includes substantial group work, GenAI activities, mini projects, and a final project competition. It is time to form your team! 😎\nWe have 19 members and will create 6 teams. Most teams will have three mates, with one team of four.\nPlease have one person from your team email me the following information:\n\nYour team member list\nYour team name\n\nExamples of past team names include “Syntax Squad,” “Data Detectives,” “The Outliers,” “Analytics Avengers,” and “The Back Right Corner.”\n\n\n\n\n\n\n\n\n\n\n\nPlease scan the QR code or go to https://forms.office.com/r/qnripwRhnW to fill out the form by Friday, 1/23 at 11:59 PM.\nIf you do not meet the requirements or miss the deadline, you will lose 1% of your final grade.\nStudents who are not in a team by the deadline will be assigned to a group at random."
   },
   {
-    "objectID": "slides/02-datascience-slides.html#r-for-data-science",
-    "href": "slides/02-datascience-slides.html#r-for-data-science",
-    "title": "Data Science Overview 📖",
-    "section": "R for Data Science",
-    "text": "R for Data Science\n\n\n\n\n\nSource: https://teachdatascience.com/tidyverse/\n\n\n\n\n\n\n\nIf you are ready, let’s dive in and learn all these tools. Well not all, but some of these tools.\nBy the way, you see these hex stickers? It kind of becomes a trend that when we create an R package, or software, we also create a hex logo associated with it, so it works as product or brand logo. It may be easier for you to promote your package if you have a cute or beautiful hex logo."
-  },
-  {
-    "objectID": "slides/02-datascience-slides.html#python-for-data-science",
-    "href": "slides/02-datascience-slides.html#python-for-data-science",
-    "title": "Data Science Overview 📖",
-    "section": "Python for Data Science",
-    "text": "Python for Data Science\n\n\n\n\n\nSource: https://www.e2enetworks.com/blog/9-python-libraries-for-data-science-and-artificial-intelligence"
-  },
-  {
-    "objectID": "slides/02-datascience-slides.html#genai-prompting-2",
-    "href": "slides/02-datascience-slides.html#genai-prompting-2",
-    "title": "Data Science Overview 📖",
-    "section": "GenAI Prompting",
-    "text": "GenAI Prompting\n\n\n\nMaking Data Science Concrete Through Examples\n\n\n&gt; Walk through a simple data science problem from question to conclusion.\n\n\n\n\n\nShare your example! Does the workflow generally follow what we discussed?"
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2026)",
+    "section": "",
+    "text": "This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic R and Python programming, Git and GitHub, and interactive publishing system Quarto. Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R tidyverse and tidymodels packages. For Python, Pandas, NumPy, and Scikit-Learn libraries are introduced.\n\nLearning outcomes\nBy the end of the course, students will be able to:\n\nExecute a reproducible data science workflow using R and Python with Quarto and version control practices (Git and GitHub) to produce, share, and update analyses.\nImport, clean, reshape, and visualize data to create effective representations that support exploration and decision making.\nApply machine learning and statistical modeling methods including simulation and core supervised and unsupervised learning tools to detect patterns and evaluate model performance.\nDesign and communicate a practical data science project by posing meaningful questions, justifying method choices, acknowledging limitations, and presenting results with clear, reproducible materials and appropriate citation of external code and permitted generative AI use.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
   },
   {
     "objectID": "slides/02-datascience.html#a-little-history-of-data-science",
@@ -1179,452 +1452,620 @@
     "text": "GenAI Prompting\n\n\n\nMaking Data Science Concrete Through Examples\n\n\n&gt; Walk through a simple data science problem from question to conclusion.\n\n\n\n\n\nShare your example! Does the workflow generally follow what we discussed?"
   },
   {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2026)",
+    "objectID": "slides/02-datascience-slides.html#a-little-history-of-data-science",
+    "href": "slides/02-datascience-slides.html#a-little-history-of-data-science",
+    "title": "Data Science Overview 📖",
+    "section": "A Little History of Data Science",
+    "text": "A Little History of Data Science\n\nIn 1985, Dr. Jeff Wu used the term Data Science for the first time as an alternative name for Statistics.  \n\n\n\n\nThe first question is What is DS? Actually this is a really hard question to answer, at least at this moment.\n\nOriginally, DS was proposed to replace statistics. DS is just another name or maybe better name for statistics.\n\n\nBut still at that time, nobody cares. Statisticians are weird guys in math departments who deal with proofs and theorems and sometimes real data, and they are stubborn, not willing to change. But if you wiki the definition of statistics, statistics is a science of data, and you tell me what is the difference of science of data and data science?\n\n\nUsing this definition, DS becomes a broader term than statistics. Anything related to data can be a part of data sicence, while statistics now becomes a narrower subject focusing on inference and data analysis part.\n\nHere shows the google trend of DS. When I was in college or beginning of PHD studies, very few people used DS as a term. And all of sudden, DS become more and more popular, and everybody is talking about it."
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#section-1",
+    "href": "slides/02-datascience-slides.html#section-1",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic R and Python programming, Git and GitHub, and interactive publishing system Quarto. Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R tidyverse and tidymodels packages. For Python, Pandas, NumPy, and Scikit-Learn libraries are introduced.\n\nLearning outcomes\nBy the end of the course, students will be able to:\n\nExecute a reproducible data science workflow using R and Python with Quarto and version control practices (Git and GitHub) to produce, share, and update analyses.\nImport, clean, reshape, and visualize data to create effective representations that support exploration and decision making.\nApply machine learning and statistical modeling methods including simulation and core supervised and unsupervised learning tools to detect patterns and evaluate model performance.\nDesign and communicate a practical data science project by posing meaningful questions, justifying method choices, acknowledging limitations, and presenting results with clear, reproducible materials and appropriate citation of external code and permitted generative AI use.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
+    "text": "Source: https://www.reddit.com/r/meme/comments/floq3q/reality_behind_data_science/\n\n\n\n\n\n\n\n\n\nSource: https://br.ifunny.co/picture/we-will-work-together-statistics-computer-science-please-teach-now-h4hdtthT9?s=cl"
   },
   {
-    "objectID": "activity/act_knn.html",
-    "href": "activity/act_knn.html",
-    "title": "In-class Activity: Dogs or Cats",
+    "objectID": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams",
+    "href": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams",
+    "title": "Data Science Overview 📖",
+    "section": "Battle of the Data Science Venn Diagrams",
+    "text": "Battle of the Data Science Venn Diagrams\n\n\n\n2010 Drew Conway\n\n\n\n\n\n\n\n\n\n\n\n2012 Brendan Tierney\n\n\n\n\n\n\n\n\n\n\n\nStarting 2010, people tried to use venn diagrams to define DS, what should be include, what should be not. It’s a subset of something, or superset of something.\nWe have to do DS on some subject/field.\n(left) ML use CS and STAT but doesn’t care about domain knowledge.\nIf you apply CS to substantive expertise without solid math and stats, you are doing bullshit basically.\n(right) DS is a subset of KDD - Knowledge Discovery in Data"
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-1",
+    "href": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-1",
+    "title": "Data Science Overview 📖",
+    "section": "Battle of the Data Science Venn Diagrams",
+    "text": "Battle of the Data Science Venn Diagrams\n\n\n\n2013 Ulrich Matter\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2014 Michael Malak"
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-2",
+    "href": "slides/02-datascience-slides.html#battle-of-the-data-science-venn-diagrams-2",
+    "title": "Data Science Overview 📖",
+    "section": "Battle of the Data Science Venn Diagrams",
+    "text": "Battle of the Data Science Venn Diagrams\n\n\n\n2015 Stephan Kolassa\n\n\n\n\n\n\n\n\n\n\n\n2016 Gregory Piatetsky-Shapiro"
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#shall-we-continue",
+    "href": "slides/02-datascience-slides.html#shall-we-continue",
+    "title": "Data Science Overview 📖",
+    "section": "Shall We Continue?",
+    "text": "Shall We Continue?\n\n\n\n2017 Longbing Cao\n\n\n\n\n\n\n\n\n\n\n\ntotally-not-a-Venn-diagram by Calvin Andrus"
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#section-3",
+    "href": "slides/02-datascience-slides.html#section-3",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "The following activity practices K Nearest Neighbors."
+    "text": "You probably get the idea. There are so many ways to define data science."
   },
   {
-    "objectID": "activity/act_knn.html#team-activity-dogs-or-cats",
-    "href": "activity/act_knn.html#team-activity-dogs-or-cats",
-    "title": "In-class Activity: Dogs or Cats",
-    "section": "[Team] Activity: Dogs or Cats",
-    "text": "[Team] Activity: Dogs or Cats\n\n\n\n\n\n\n\n\n\nHere we use features Body Size and Food Intake to classify cats and dogs. The training data are shown as cat or dog images, and there are three test data to be labeled: green, red, and blue points.\nConsider K Nearest Neighbors with \\(K = 1, 2, 3, 4\\), and discuss the following questions."
+    "objectID": "slides/02-datascience-slides.html#what-is-data-scientist",
+    "href": "slides/02-datascience-slides.html#what-is-data-scientist",
+    "title": "Data Science Overview 📖",
+    "section": "What is Data Scientist",
+    "text": "What is Data Scientist\n\n💰 💰 Dr. Grant (Statistics Education Research Journal, 2017): Data science is the field of people who decide to print “Data Scientist” on their business cards to get a salary bump! 💵 💵"
   },
   {
-    "objectID": "activity/act_knn.html#discussion",
-    "href": "activity/act_knn.html#discussion",
-    "title": "In-class Activity: Dogs or Cats",
-    "section": "Discussion",
-    "text": "Discussion\n\n\n\n\n\n\nCautionFor which test data point, the classification result is uncertain or unstable?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWhich data point can be labelled as one particular category with 100% certainty, for all different \\(K\\)s?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionFor the blue point, what happened when \\(K\\) increases? Do we change the prediction? What about uncertainty?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionIf you would like to make a classification rule or set the decision boundary to predict cats or dogs, what would the decision boundary look like? Why?"
+    "objectID": "slides/02-datascience-slides.html#what-is-data-scientist-1",
+    "href": "slides/02-datascience-slides.html#what-is-data-scientist-1",
+    "title": "Data Science Overview 📖",
+    "section": "What is Data Scientist",
+    "text": "What is Data Scientist\n\n\n\n\n\n\n\nSource: https://www.instagram.com/data_science_learn/\n\n\n\n\n\n\n\n\nSource: https://www.instagram.com/data_science_dojo/"
   },
   {
-    "objectID": "activity/act_reg-to-the-mean.html",
-    "href": "activity/act_reg-to-the-mean.html",
-    "title": "In-class Activity: Regression to the Mean",
+    "objectID": "slides/02-datascience-slides.html#what-wiki-defines",
+    "href": "slides/02-datascience-slides.html#what-wiki-defines",
+    "title": "Data Science Overview 📖",
+    "section": "What Wiki Defines",
+    "text": "What Wiki Defines"
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#genai-prompting",
+    "href": "slides/02-datascience-slides.html#genai-prompting",
+    "title": "Data Science Overview 📖",
+    "section": "GenAI Prompting",
+    "text": "GenAI Prompting\n\nMake AI your thinking partner and tutor!\nCopy and paste the paragraph into your GenAI chat as the initial prompt.\n\n\n\nI am a college student in an introductory data science course. Be my thinking partner and tutor, not just an answer generator. Explain everything at an introductory level in plain language and avoid advanced jargon unless I ask. Walk through problems step by step and show your reasoning, and ask up to two quick questions if you need missing details. Use a tiny example when it helps. If code is needed, use either R (tidyverse) or Python (pandas, scikit-learn) based on what I say I am using, and keep the code minimal, well commented, and explained line by line. If my approach is wrong, tell me clearly what is wrong and how to fix it. End with one quick check for understanding and a one sentence summary."
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#genai-prompting-1",
+    "href": "slides/02-datascience-slides.html#genai-prompting-1",
+    "title": "Data Science Overview 📖",
+    "section": "GenAI Prompting",
+    "text": "GenAI Prompting\n\n\n\nWhy should we care about and learn data science?\n\n\n&gt; How does data science show up in everyday decisions I already care about?\n\n\n&gt; What mistakes happen when decisions are made without data or with bad data?\n\n\n&gt; How is data science used in my major: [environmental science, computer science, etc]?\n\n\n\nShare your AI’s responses and your thoughts!~\n\n\nGoal: Answer the student’s implicit question: Why should I care? These prompts connect data science to lived experience and decision making, not abstract tools. They also reveal that data science is not just for programmers or specialists."
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#data-science-in-this-course",
+    "href": "slides/02-datascience-slides.html#data-science-in-this-course",
+    "title": "Data Science Overview 📖",
+    "section": "Data Science in This Course",
+    "text": "Data Science in This Course\n\nData science is an discipline that allows us to turn raw data into understanding, insight, and knowledge.\nWe’re going to learn to do this in a tidy way – more on that later!\nThis is a introductory data science course with an emphasis on important tools of R/Python that help us do data science."
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#data-science-workflow",
+    "href": "slides/02-datascience-slides.html#data-science-workflow",
+    "title": "Data Science Overview 📖",
+    "section": "Data Science Workflow",
+    "text": "Data Science Workflow"
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#section-4",
+    "href": "slides/02-datascience-slides.html#section-4",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "“Regression” is defined in the dictionary as “the process or returning to a former or less developed state.” How did this term come to be used for statistical prediction? This connection comes from Francis Galton, one of the original quantitative social scientists, who fit linear models to under stand the heredity of human height. Predicting children’s heights from parent’s heights, he noticed that children of tall parents tended to be taller than average but less tall than their parents. From the other direction, children of shorter parents tended to be shorter than average but less short than their parents. Thus, from one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon. 1\n\nThe following activities demonstrate regression to the mean."
+    "text": "Import: Take data stored somewhere and load it into your workspace.\n\nTidy: Storing data in a consistent rectangular form, i.e., a data matrix.\n\nTransform: Narrowing in on observations of interest, creating new variables, calculating statistics.\n\n\nTo do DS, we need data, so the first step is to import data (——).\nBut usually the raw data are very messy, so we need tidy the data by storing data in a consistent rectangular form (data frame in R), which is easy for modeling and analysis.\nDepending on our research goal, we may just want to focus on some variables , or observations in the data, or we may want to create some variables for example, the data use feet, but we want to use meter instead. This data transformation further cleans the data, so that we can extract any information we need from data more easily and efficiently. In other words, we improve the quality of data."
   },
   {
-    "objectID": "activity/act_reg-to-the-mean.html#historical-origins-of-regression",
-    "href": "activity/act_reg-to-the-mean.html#historical-origins-of-regression",
-    "title": "In-class Activity: Regression to the Mean",
+    "objectID": "slides/02-datascience-slides.html#data-matrix",
+    "href": "slides/02-datascience-slides.html#data-matrix",
+    "title": "Data Science Overview 📖",
+    "section": "Data Matrix",
+    "text": "Data Matrix\n\nEach row corresponds to a unique case or observational unit.\nEach column represents a characteristic or variable.\nThis structure allows new cases to be added as rows or new variables as new columns."
+  },
+  {
+    "objectID": "slides/02-datascience-slides.html#section-5",
+    "href": "slides/02-datascience-slides.html#section-5",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "“Regression” is defined in the dictionary as “the process or returning to a former or less developed state.” How did this term come to be used for statistical prediction? This connection comes from Francis Galton, one of the original quantitative social scientists, who fit linear models to under stand the heredity of human height. Predicting children’s heights from parent’s heights, he noticed that children of tall parents tended to be taller than average but less tall than their parents. From the other direction, children of shorter parents tended to be shorter than average but less short than their parents. Thus, from one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon. 1\n\nThe following activities demonstrate regression to the mean."
+    "text": "The process of importing, tidying and transforming data is called data wrangling or data munging."
   },
   {
-    "objectID": "activity/act_reg-to-the-mean.html#team-activity-before-after-memory-quiz-2",
-    "href": "activity/act_reg-to-the-mean.html#team-activity-before-after-memory-quiz-2",
-    "title": "In-class Activity: Regression to the Mean",
-    "section": "[Team] Activity: Before-after Memory Quiz 2",
-    "text": "[Team] Activity: Before-after Memory Quiz 2\n\n\n\n\n\n\n\n\n\n\n[Step 1] I will be displaying 20 randomly chosen verbs on the screen for 20 seconds.\n[Step 2] Each team should try to memorize as many as they can.\n[Step 3] After displaying the words for 20 seconds we do another activity for three minutes.\n[Step 4] Give each team a minute to write down as many words as they remember\n[Step 5] Display the words again and ask them each to count how many they got correct.\n[Step 6] With another set of 20 new verbs, ask them to predict the score they will get.\n[Step 7] Repeat Step 3 to 5 for the new set of words.\nAs one team please jointly enter (1) your score on first quiz; (2) guessed score on second quiz; (3) actual score on second quiz at the MS form or the QR code below."
-  },
-  {
-    "objectID": "activity/act_reg-to-the-mean.html#individual-activity-compare-your-height-with-your-fathermother",
-    "href": "activity/act_reg-to-the-mean.html#individual-activity-compare-your-height-with-your-fathermother",
-    "title": "In-class Activity: Regression to the Mean",
-    "section": "[Individual] Activity: Compare Your Height with Your Father/Mother",
-    "text": "[Individual] Activity: Compare Your Height with Your Father/Mother\n\n\n\n\n\n\n\n\n\n\nIf you are male, record your height and your father’s height. If you are female, record your height and your mother’s height.\nUse feet-to-inch conversion to help you get the heights in inches.\nPlease enter the heights in inches at the MS form or the QR code below."
-  },
-  {
-    "objectID": "activity/act_reg-to-the-mean.html#discussion",
-    "href": "activity/act_reg-to-the-mean.html#discussion",
-    "title": "In-class Activity: Regression to the Mean",
-    "section": "Discussion",
-    "text": "Discussion\n\n\n\n\n\n\nCautionCompare the second quiz prediction to what actually happens. Is your actual score higher or lower than your prediction?\n\n\n\n\n\nYou may expect to do about the same on the second quiz as the first, but I guess who do worst on the first quiz tend to improve, and who do best tend to decline.\n\n\n\n\n\n\n\n\n\nCautionWhy these improvments and declines occurred?\n\n\n\n\n\nAre you trying to give an explanation on why such result is occurred? You may think the teams who did the best relaxed on the 2nd quiz, and the teams who did poorly tried harder, and so forth.\nHowever, you DO NOT know if your team did well or poorly, comparing to other teams, right?!\nIt would be more accurate to say that some do better on this quiz than others, but the very best scores on the first quiz are from people who are both good and lucky. They will still probably do well on the second quiz, but most of them will not be so lucky the second time.\n\n\n\n\n\n\n\n\n\nCautionWhat does the regression coefficient \\(&lt; 1\\) mean in the heights example?\n\n\n\n\n\nIf a parent is taller than the average, the regression predicts that his/her child is also taller than the average, but not as much as their parent.\nIf a parent is shorter than the average, the regression predicts that his/her child is also shorter than the average, but again not as much as their parent.\nTherefore, form one generation to the next, people’s heights have “regressed” to the average or mean, in statistics jargon."
-  },
-  {
-    "objectID": "activity/act_reg-to-the-mean.html#footnotes",
-    "href": "activity/act_reg-to-the-mean.html#footnotes",
-    "title": "In-class Activity: Regression to the Mean",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nRegression and other stories, Page 85.↩︎\nActive Statistics, Page 101.↩︎"
-  },
-  {
-    "objectID": "present-work.html#presentation-order",
-    "href": "present-work.html#presentation-order",
-    "title": "Mini Project Topics",
-    "section": "Presentation order",
-    "text": "Presentation order",
-    "crumbs": [
-      "Mini Project",
-      "Topics and Works"
-    ]
-  },
-  {
-    "objectID": "present-work.html#presentation-slides",
-    "href": "present-work.html#presentation-slides",
-    "title": "Mini Project Topics",
-    "section": "Presentation Slides",
-    "text": "Presentation Slides",
-    "crumbs": [
-      "Mini Project",
-      "Topics and Works"
-    ]
-  },
-  {
-    "objectID": "present-description.html",
-    "href": "present-description.html",
-    "title": "MATH/COSC 3570 Mini Project Presentation",
+    "objectID": "slides/02-datascience-slides.html#section-6",
+    "href": "slides/02-datascience-slides.html#section-6",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "This is the latest version of project guideline. It may be revised later.\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;\n\n\n\n\n–&gt;",
-    "crumbs": [
-      "Mini Project",
-      "Guideline and Policy"
-    ]
+    "text": "Visualisation: A good visualisation shows you things that you did not expect or raise new questions about the data.\n\n\nOnce the data are ready, it’s time to explore our data.\nMy recommendation is that always plot your data before building any model or algorithm or doing analysis because good visualization let you understand more about your data, and may provide some hints about how to build your statistical model, machine learning algorithms or how to do analysis.\nAnd good visualization shows you things that you did not expect or raise new questions about the data. (outliers, missing data)\nSo after visualizing your data, you may have better idea of how to transforming your data so that you can be better prepared for modeling and answer your research questions. (nonlinear relationship &lt;-&gt; linear relationship)"
   },
   {
-    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "title": "Attribution-ShareAlike 4.0 International",
-    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
-    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
-  },
-  {
-    "objectID": "present-work-final.html#group-projects-proposal",
-    "href": "present-work-final.html#group-projects-proposal",
-    "title": "Final Project Presentation",
-    "section": "Group project’s proposal",
-    "text": "Group project’s proposal",
-    "crumbs": [
-      "Final Project",
-      "Project Group and Proposal"
-    ]
-  },
-  {
-    "objectID": "activity/act_two-truth-one-lie.html",
-    "href": "activity/act_two-truth-one-lie.html",
-    "title": "In-class Activity: Two truths and a lie",
+    "objectID": "slides/02-datascience-slides.html#section-7",
+    "href": "slides/02-datascience-slides.html#section-7",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "The following activity demonstrates probability calibration."
+    "text": "mpg |&gt; ggplot(aes(x = displ, y = hwy)) +\n    geom_point(aes(color = class)) + \n    geom_smooth() + \n    theme_bw()"
   },
   {
-    "objectID": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
-    "href": "activity/act_two-truth-one-lie.html#team-activity-two-truths-and-a-lie-2",
-    "title": "In-class Activity: Two truths and a lie",
-    "section": "[Team] Activity: Two truths and a lie 1",
-    "text": "[Team] Activity: Two truths and a lie 1\n\n\n\n\n\n\n\n\n\nWithin your group:\n\nOne person tells three personal statements one of which is a lie.\nOthers discuss and guess which statement is the lie and they jointly construct a numerical statement of their certainty in the guess on a 0–10 scale.\nThe storyteller reveals which was the lie.\nEnter the certainty estimate and the outcome success or failure and submit in the Microsoft form.\nRotate through everyone in your group so that each person plays the storyteller role once."
-  },
-  {
-    "objectID": "activity/act_two-truth-one-lie.html#discussion",
-    "href": "activity/act_two-truth-one-lie.html#discussion",
-    "title": "In-class Activity: Two truths and a lie",
-    "section": "Discussion",
-    "text": "Discussion\n\n\n\n\n\n\nCautionWhat do you think the range of centainty scores will look like?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionWill there be a positive relation between \\(x\\) and binary \\(y\\): are guesses with higher certainty be more accurate, on average?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionHow strong will the relation be between \\(x\\) and \\(y\\): what will the curve look like?"
-  },
-  {
-    "objectID": "activity/act_two-truth-one-lie.html#footnotes",
-    "href": "activity/act_two-truth-one-lie.html#footnotes",
-    "title": "In-class Activity: Two truths and a lie",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nActive Statistics, Page 179.↩︎"
-  },
-  {
-    "objectID": "present-description-final.html",
-    "href": "present-description-final.html",
-    "title": "MATH/COSC 3570 Final Project Competition",
+    "objectID": "slides/02-datascience-slides.html#section-8",
+    "href": "slides/02-datascience-slides.html#section-8",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "This is the latest version of project guideline. It may be revised later.",
-    "crumbs": [
-      "Final Project",
-      "Guideline and Policy"
-    ]
+    "text": "Model: Models are complementary tools to visualisation. Once you have made your questions sufficiently precise, you can use a model to answer them.\n\n\nThe next step is to use or build a rigorous statistical or machine learning model to answer our research questions. For example, forecasting stock prices, classifying images.\nAnd transform-visualize-model becomes a loop of understanding or learning from data. We keep transforming, visualizing and modeling our data until our questions are properly answered by our data and model."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MATH/COSC 3570 Introduction to Data Science (Spring 2026)",
+    "objectID": "slides/02-datascience-slides.html#section-9",
+    "href": "slides/02-datascience-slides.html#section-9",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "This schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nMaterials\nLab Activity\nLearn from AI\nProject\n\n\n\n\n1\nTue, Jan 13\nGreetings; Overview of Data Science\n🖥️syllabus 🖥️overview\n\n\n\n\n\n\nThu, Jan 15\nPosit Cloud\n🖥️posit\n📋 posit 📋01\n\n\n\n\n2\nTue, Jan 20\nGit and GitHub\n🖥️git\n📋github\n\n\n\n\n\nThu, Jan 22\nQuarto: YAML and Markdown\n🖥️quarto\n📋02 📋03\n\n✅ Team up Due\n\n\n3\nTue, Jan 27\nQuarto: Code Chunk\n\n📋04\n\n\n\n\n\nThu, Jan 29\nR and Python Syntax\n🖥️syntax\n📋05 📋06\n\n\n\n\n4\nTue, Feb 3\nR Tidyverse\n🖥️package\n📋07 📋08\n\n\n\n\n\nThu, Feb 5\nPython NumPy/Pandas\n\n📋09\n\n\n\n\n5\nTue, Feb 10\nData Importing\n🖥️import\n📋10\n\n\n\n\n\nThu, Feb 12\nData Visualization-ggplot2\n🖥️ggplot\n📋11\n\n\n\n\n6\nTue, Feb 17\nData Visualization-categorical and numerical data\n🖥️visualization\n📋12 📋13\n\n\n\n\n\nThu, Feb 19\nInteractive Data Visualization\n🖥️interactive-viz\n📋14\n\n\n\n\n7\nTue, Feb 24\nData Wrangling - one data frame\n🖥️dplyr-1\n📋15\n\n\n\n\n\nThu, Feb 26\nMini Project 1 Presentation: Exploratory Data Storytelling\n\n\n\n\n\n\n8\nTue, Mar 3\nData Wrangling - two data frames\n🖥️dplyr-2\n📋16\n\n\n\n\n\nThu, Mar 5\nData Wrangling - tidyr\n🖥️tidyr\n📋17\n\n\n\n\n9\nTue, Mar 10\nNO CLASS: Spring break\n\n\n\n\n\n\n\nThu, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n10\nTue, Mar 17\nProbabilistic and Statistical Simulation\n🖥️probstat\n📋18 📋19\n\n\n\n\n\nThu, Mar 19\nLinear Regression\n🖥️linear-regression\n\n\n\n\n\n11\nTue, Mar 24\nMultiple Linear Regression\n\n📋20\n\n\n\n\n\nThu, Mar 26\nMini Project 2 Presentation: Data Wrangling and Pipelines\n\n\n\n\n\n\n12\nTue, Mar 31\nLogistic Regression\n🖥️logistic-regression\n\n\n\n\n\n\nThu, Apr 2\nNO CLASS: Easter break\n\n\n\n\n\n\n13\nTue, Apr 7\nLogistic Regression\n\n📋21\n\n\n\n\n\nThu, Apr 9\nK-Nearest Neighbors\n🖥️ K-Nearest Neighbors\n\n\n\n\n\n14\nTue, Apr 14\nDecision Trees\n🖥️ Decision Trees\n📋22\n\n\n\n\n\nThu, Apr 16\nMini Project 3 Presentation: Supervised Learning\n\n\n\n\n\n\n15\nTue, Apr 21\nPrincipal Component Analysis\n🖥️Principal Component Analysis\n\n\n\n\n\n\nThu, Apr 23\nPrincipal Component Analysis\n\n📋23\n\n📂 Final Project Proposal Due\n\n\n16\nTue, Apr 28\nK-Means Clustering\n🖥️K-means Clustering\n\n\n\n\n\n\nThu, Apr 30\nK-Means Clustering\n\n📋24\n\n\n\n\n17\nMon, May 4\nFinal Project Presentation (10:30 AM - 12:30 PM)\n\n\n\n📂 Final Project Materials Due\n\n\n\n\nDr. Yu reserves the right to make changes to the schedule.",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
+    "text": "library(tidymodels)\nlinear_reg() |&gt;  \n    set_engine(\"lm\") |&gt; \n    fit(hwy ~ displ, data = mpg)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = hwy ~ displ, data = data)\n\nCoefficients:\n(Intercept)        displ  \n      35.70        -3.53"
   },
   {
-    "objectID": "slides/01-syllabus.html#my-journey",
-    "href": "slides/01-syllabus.html#my-journey",
-    "title": "Welcome Aboard 🙌",
-    "section": "My Journey",
-    "text": "My Journey\n\nAssistant Professor (2020/08 - )\n\n\n\n\n\n\n\n\n\n\nPostdoctoral Fellow\n\n\n\n\n\n\n\n\n\n\nPhD in Statistics\n\n\n\n\n\n\n\n\n\n\nMA in Economics/PhD program in Statistics\n\n\n\n\n\n\n\n\n\n\nAfter college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics.\n\nI got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies.\nThen I spent two years doing my postdoctoral research at Rice University in Houston, Texas.\nFinally, in fall 2020, I came to Marquette as an assistant professor.\nMidwest/Indiana-West/California-South/Texas-Midwest/Wisconsin\nBeen to any one of these universities/cities?\nThe most beautiful campus.\nWho are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.\nPoor listening and speaking skills. I was shy.\nOK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything,\nI have the class list. I’d like to learn your face and remember your name. You know, you all wear a mask. It’s hard to recognize you and connect your name and your face.\nWhen I call your name, you can say something about yourself. No need to be long, couple of seconds are good."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#how-to-reach-me",
-    "href": "slides/01-syllabus.html#how-to-reach-me",
-    "title": "Welcome Aboard 🙌",
-    "section": "How to Reach Me",
-    "text": "How to Reach Me\n\nOffice hours TuTh 3:20 - 4:20 PM and Wed 2 - 3 PM in Cudahy Hall 353.\n📧 cheng-han.yu@marquette.edu\n\nAnswer your question within 24 hours.\nExpect a reply on Monday if shoot me a message on weekends.\nStart your subject line with [math3570] or [cosc3570] followed by a clear description of your question.\n\n\n\n\n\n\n\n\n\n\n\n\nI will NOT reply your e-mail if … Check the email policy in the syllabus!"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#when-you-have-two-dr.-yu-in-one-semester",
-    "href": "slides/01-syllabus.html#when-you-have-two-dr.-yu-in-one-semester",
-    "title": "Welcome Aboard 🙌",
-    "section": "When You Have Two Dr. Yu in One Semester 😂",
-    "text": "When You Have Two Dr. Yu in One Semester 😂\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is a real case happened last semester. A student of my class sent her homework of another class linear systems to me because the instructor of that course also has last name Yu, and she messed up. So if you remember to add course number in the subject line, it will greatly reduce the possibility of sending a wrong message. And it will save your time and my time, and so we all can work more efficiently. Right?"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#what-is-this-course",
-    "href": "slides/01-syllabus.html#what-is-this-course",
-    "title": "Welcome Aboard 🙌",
-    "section": "What is This Course?",
-    "text": "What is This Course?\n\n\nEvery aspect of doing a practical data science project, from importing data to deploying what we learn from data.\n\n. . .\n❓ What are prerequisites?\n👉 COSC 1010 (Intro Programming) and MATH 4720 (Intro Stats) or MATH 2780 (Intro Regression)\n\n. . .\n❓ Is this like another intro stats course?\n👉 No. Statistics and data science are closely related.\n. . .\nNowadays\n👉 Data science is a broader subject than statistics.\n. . .\n👉 Statistics focuses more on analyzing and learning from data, a part of the entire workflow of data science.\n\n. . .\n❓ Is this like another intro CS or programming course?\n👉 Absolutely not. We learn how to code for doing data science, not for understanding computer systems and structures.\n\n\nOf course we will not cover every detail form A to Z of DS in one semester becuase DS is such a huge subject, just like computer science. It’s impossible to learn CS in one semester by just taking intro to CS, right? So we’ll just learn the basic and essential concepts and tools used is DS."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#what-is-not-covered-in-this-course",
-    "href": "slides/01-syllabus.html#what-is-not-covered-in-this-course",
-    "title": "Welcome Aboard 🙌",
-    "section": "What is NOT Covered in This Course",
-    "text": "What is NOT Covered in This Course\n\n\nAdvanced data analytics and computing  \n\nMATH 4750 Statistical Computing\nMATH 4760 Time Series Analysis\nMATH 4780 Regression Analysis\nMATH 4790 Bayesian Statistics\nCOSC 4600 Fundamentals of Artificial Intelligence\nCOSC 4610 Data Mining\nCOEN 4860 Introduction to Neural Networks\n\n\n\n. . .\n\n\nBig data: We start with small, in-memory data sets. You don’t know how to tackle big data unless you have experience with small data.\n\n. . .\n\n\nDatabase: Learn SQL in\n\nCOSC 4800 Principles of Database Systems\nINSY 4052 Database Management Systems.\n\n\n\n\n\nWe won’t talk about topics like cloud computing, parallel computing, distributed computing.\n\nBig data techniques: As a beginner, we focus on small, in-memory datasets. You can’t tackle big data unless you have experience with small data."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#what-computing-languages",
-    "href": "slides/01-syllabus.html#what-computing-languages",
-    "title": "Welcome Aboard 🙌",
-    "section": "What Computing Languages?",
-    "text": "What Computing Languages?\n\n\n~ 60%\n\n\n\n\n\n\n\n\n\n~ 40%\n\n\n\n\n\n\n\n\n\n\n\nYou’ve learned Python in COSC 1010. Being R-Python bilingual is getting more important!\n\n. . .\n👉 Wouldn’t it be great to add both languages to your resume! 😎 \n. . .\n❌ Don’t want to learn R and/or Python? Take another section or in next semester~!\n❌ Drop deadline: 01/20 (Tue), 11:59 PM."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#where-to-code-posit-cloud",
-    "href": "slides/01-syllabus.html#where-to-code-posit-cloud",
-    "title": "Welcome Aboard 🙌",
-    "section": "Where to Code? Posit Cloud\n",
-    "text": "Where to Code? Posit Cloud\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHave nice computing power and interactive collaboration with me and your teammates!"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#course-materials",
-    "href": "slides/01-syllabus.html#course-materials",
-    "title": "Welcome Aboard 🙌",
-    "section": "Course Materials",
-    "text": "Course Materials\n\nCourse Website - https://math3570-s26.github.io/website/\n\n\n\n\n\n\n\n\n\n\n\n\nAll course materials and information can be found on this website. Bookmark it!"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#textbook-really",
-    "href": "slides/01-syllabus.html#textbook-really",
-    "title": "Welcome Aboard 🙌",
-    "section": "Textbook (Really?!)",
-    "text": "Textbook (Really?!)"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#section-1",
-    "href": "slides/01-syllabus.html#section-1",
-    "title": "Welcome Aboard 🙌",
+    "objectID": "slides/02-datascience-slides.html#section-10",
+    "href": "slides/02-datascience-slides.html#section-10",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "Python for Data Analysis, 3E\n\n\n\n\n\n\n\n\n\nR for Data Science 2nd edition\n\n\n\n\n\n\n\n\n\nTidy Modeling with R"
+    "text": "Communication: It doesn’t matter how well your models and visualization have led you to understand the data unless you can also communicate your results to others.\n\n\nFinally we have to share our analysis results with others.\nAt this stage, visualization plays an important role as well.\nFigures/tables speak louder than words.\nWe can have different types of deployment. In addition to papers or reports, we can create a website, a software package, a mobile app, dashboard and so on."
   },
   {
-    "objectID": "slides/01-syllabus.html#learning-management-system-d2l",
-    "href": "slides/01-syllabus.html#learning-management-system-d2l",
-    "title": "Welcome Aboard 🙌",
-    "section": "Learning Management System (D2L)",
-    "text": "Learning Management System (D2L)\n\n\n\n\n\n\n\n\n\nCheck your grade: Assessments &gt; Grades\nNew announcement: News"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#grading-policy",
-    "href": "slides/01-syllabus.html#grading-policy",
-    "title": "Welcome Aboard 🙌",
-    "section": "Grading Policy ✨",
-    "text": "Grading Policy ✨\n\n\nYour grade is from the following categories and distribution\n\n25% In-class lab activities\n10% In-class AI activities\n45% Mini projects\n20% Final project competition\n\n\n\n\n❌ You must participate in the final presentation in order to pass the course.\n❌ You will NOT be allowed to do any extra credit projects/homework/exam to compensate for a poor grade."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#grade-percentage-conversion",
-    "href": "slides/01-syllabus.html#grade-percentage-conversion",
-    "title": "Welcome Aboard 🙌",
-    "section": "Grade-Percentage Conversion",
-    "text": "Grade-Percentage Conversion\n\n\n\\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.0 is in [94, 100] and the grade is A and 93.8 is in [90, 94) and the grade is A-.\n\n\n\n\n\nGrade\nPercentage\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[84, 87)\n\n\nB-\n[80, 84)\n\n\nC+\n[77, 80)\n\n\nC\n[74, 77)\n\n\nC-\n[70, 74)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#lab-exercises-25",
-    "href": "slides/01-syllabus.html#lab-exercises-25",
-    "title": "Welcome Aboard 🙌",
-    "section": "Lab Exercises (25%)",
-    "text": "Lab Exercises (25%)\n\nGraded as Complete/Incomplete and used as evidence of attendance and participation.\nAllowed to have one incomplete lab exercise without any penalty.\nBeyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\nYou will create a project in Posit Cloud saving all of your lab exercises. (We’ll go through know-how together)"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#ai-activities-10",
-    "href": "slides/01-syllabus.html#ai-activities-10",
-    "title": "Welcome Aboard 🙌",
-    "section": "AI activities (10%)",
-    "text": "AI activities (10%)\n\nAI activities are short presentations during class. They are usually graded as complete or incomplete.\nAI activities are used as evidence of both attendance and participation.\nGroups take turn to present what they learn from GenAI about data science."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#mini-projects-45",
-    "href": "slides/01-syllabus.html#mini-projects-45",
-    "title": "Welcome Aboard 🙌",
-    "section": "Mini Projects (45%)",
-    "text": "Mini Projects (45%)\n\nYou will work in a team on 3 mini projects.\nThis project will focus on a subset of the course content up to that point, for example data wrangling and visualization or a simple predictive model.\n\n\nMore detailed instructions and rubric will be provided later in the semester."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#final-project-competition-20",
-    "href": "slides/01-syllabus.html#final-project-competition-20",
-    "title": "Welcome Aboard 🙌",
-    "section": "Final Project Competition (20%)",
-    "text": "Final Project Competition (20%)\n\nYou will be team up to do the final project.\n\nYour project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nIntroduce a programming language not learned in class for doing data science, including live demo, Julia, SQL, MATLAB, SAS for example.\nWeb development: Shiny website or dashboard, including live demo\n\n\nThe final project presentation is on Monday, 5/4, 10:30 AM - 12:30 PM.\nMore information will be released later."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#document-generative-ai-use",
-    "href": "slides/01-syllabus.html#document-generative-ai-use",
-    "title": "Welcome Aboard 🙌",
-    "section": "Document Generative AI Use",
-    "text": "Document Generative AI Use\n\n\n\n\nYou may use generative AI tools such as ChatGPT and Gemini to generate a first draft of text for your work, provided that this use is documented and cited.\n\n\nUnless explicitly stated otherwise, you may make use of any online resources, but you must explicitly cite/document where you obtained any code you directly use or use as inspiration in your solutions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you use GenAI, please include the followings in your submitted work:\n\nWhy/How I used AI (prompts or questions)\nGenerated output (screenshot or copy-paste excerpt)\nHow I used the output"
-  },
-  {
-    "objectID": "slides/01-syllabus.html#document-generative-ai-use-1",
-    "href": "slides/01-syllabus.html#document-generative-ai-use-1",
-    "title": "Welcome Aboard 🙌",
-    "section": "Document Generative AI Use",
-    "text": "Document Generative AI Use\n\n\n\n\nWhy/How I used AI (prompts and questions)\n\nI asked ChatGPT to generate a histogram using R.\n\n\nGenerated output (screenshot or copy-paste excerpt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow I used the output\n\nI reviewed the suggestions, but I did not use the exact code. Instead, I change the code format and breaks value to 50."
-  },
-  {
-    "objectID": "slides/01-syllabus.html#genai-and-academic-integrity",
-    "href": "slides/01-syllabus.html#genai-and-academic-integrity",
-    "title": "Welcome Aboard 🙌",
-    "section": "GenAI and Academic Integrity",
-    "text": "GenAI and Academic Integrity\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n. . ."
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#my-journey",
-    "href": "slides/01-syllabus-slides.html#my-journey",
-    "title": "Welcome Aboard 🙌",
-    "section": "My Journey",
-    "text": "My Journey\n\nAssistant Professor (2020/08 - )\n\n\n\n\n\n\n\n\n\n\nPostdoctoral Fellow\n\n\n\n\n\n\n\n\n\n\nPhD in Statistics\n\n\n\n\n\n\n\n\n\n\nMA in Economics/PhD program in Statistics\n\n\n\n\n\n\n\n\n\nAfter college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics.\n\nI got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies.\nThen I spent two years doing my postdoctoral research at Rice University in Houston, Texas.\nFinally, in fall 2020, I came to Marquette as an assistant professor.\nMidwest/Indiana-West/California-South/Texas-Midwest/Wisconsin\nBeen to any one of these universities/cities?\nThe most beautiful campus.\nWho are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.\nPoor listening and speaking skills. I was shy.\nOK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything,\nI have the class list. I’d like to learn your face and remember your name. You know, you all wear a mask. It’s hard to recognize you and connect your name and your face.\nWhen I call your name, you can say something about yourself. No need to be long, couple of seconds are good."
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#how-to-reach-me",
-    "href": "slides/01-syllabus-slides.html#how-to-reach-me",
-    "title": "Welcome Aboard 🙌",
-    "section": "How to Reach Me",
-    "text": "How to Reach Me\n\nOffice hours TuTh 3:20 - 4:20 PM and Wed 2 - 3 PM in Cudahy Hall 353.\n📧 cheng-han.yu@marquette.edu\n\nAnswer your question within 24 hours.\nExpect a reply on Monday if shoot me a message on weekends.\nStart your subject line with [math3570] or [cosc3570] followed by a clear description of your question.\n\n\n\n\n\nI will NOT reply your e-mail if … Check the email policy in the syllabus!"
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#what-is-this-course",
-    "href": "slides/01-syllabus-slides.html#what-is-this-course",
-    "title": "Welcome Aboard 🙌",
-    "section": "What is This Course?",
-    "text": "What is This Course?\n\n\nEvery aspect of doing a practical data science project, from importing data to deploying what we learn from data.\n\n\n❓ What are prerequisites?\n👉 COSC 1010 (Intro Programming) and MATH 4720 (Intro Stats) or MATH 2780 (Intro Regression)\n\n\n\n❓ Is this like another intro stats course?\n👉 No. Statistics and data science are closely related.\n\n\nNowadays\n👉 Data science is a broader subject than statistics.\n\n\n👉 Statistics focuses more on analyzing and learning from data, a part of the entire workflow of data science.\n\n\n\n❓ Is this like another intro CS or programming course?\n👉 Absolutely not. We learn how to code for doing data science, not for understanding computer systems and structures.\n\nOf course we will not cover every detail form A to Z of DS in one semester becuase DS is such a huge subject, just like computer science. It’s impossible to learn CS in one semester by just taking intro to CS, right? So we’ll just learn the basic and essential concepts and tools used is DS."
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#what-is-not-covered-in-this-course",
-    "href": "slides/01-syllabus-slides.html#what-is-not-covered-in-this-course",
-    "title": "Welcome Aboard 🙌",
-    "section": "What is NOT Covered in This Course",
-    "text": "What is NOT Covered in This Course\n\n\nAdvanced data analytics and computing  \n\nMATH 4750 Statistical Computing\nMATH 4760 Time Series Analysis\nMATH 4780 Regression Analysis\nMATH 4790 Bayesian Statistics\nCOSC 4600 Fundamentals of Artificial Intelligence\nCOSC 4610 Data Mining\nCOEN 4860 Introduction to Neural Networks\n\n\n\n\n\n\nBig data: We start with small, in-memory data sets. You don’t know how to tackle big data unless you have experience with small data.\n\n\n\n\n\nDatabase: Learn SQL in\n\nCOSC 4800 Principles of Database Systems\nINSY 4052 Database Management Systems.\n\n\n\n\nWe won’t talk about topics like cloud computing, parallel computing, distributed computing.\n\nBig data techniques: As a beginner, we focus on small, in-memory datasets. You can’t tackle big data unless you have experience with small data."
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#what-computing-languages",
-    "href": "slides/01-syllabus-slides.html#what-computing-languages",
-    "title": "Welcome Aboard 🙌",
-    "section": "What Computing Languages?",
-    "text": "What Computing Languages?\n\n\n~ 60%\n\n\n\n\n\n\n\n\n\n~ 40%\n\n\n\n\n\n\n\n\n\n\nYou’ve learned Python in COSC 1010. Being R-Python bilingual is getting more important!\n\n\n👉 Wouldn’t it be great to add both languages to your resume! 😎 \n\n\n❌ Don’t want to learn R and/or Python? Take another section or in next semester~!\n❌ Drop deadline: 01/20 (Tue), 11:59 PM."
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#where-to-code-posit-cloud",
-    "href": "slides/01-syllabus-slides.html#where-to-code-posit-cloud",
-    "title": "Welcome Aboard 🙌",
-    "section": "Where to Code? Posit Cloud\n",
-    "text": "Where to Code? Posit Cloud\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHave nice computing power and interactive collaboration with me and your teammates!"
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#course-materials",
-    "href": "slides/01-syllabus-slides.html#course-materials",
-    "title": "Welcome Aboard 🙌",
-    "section": "Course Materials",
-    "text": "Course Materials\n\nCourse Website - https://math3570-s26.github.io/website/\n\n\n\n\n\n\n\n\n\n\n\n\nAll course materials and information can be found on this website. Bookmark it!"
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#textbook-really",
-    "href": "slides/01-syllabus-slides.html#textbook-really",
-    "title": "Welcome Aboard 🙌",
-    "section": "Textbook (Really?!)",
-    "text": "Textbook (Really?!)"
-  },
-  {
-    "objectID": "slides/01-syllabus-slides.html#section-1",
-    "href": "slides/01-syllabus-slides.html#section-1",
-    "title": "Welcome Aboard 🙌",
+    "objectID": "slides/02-datascience-slides.html#section-11",
+    "href": "slides/02-datascience-slides.html#section-11",
+    "title": "Data Science Overview 📖",
     "section": "",
-    "text": "Python for Data Analysis, 3E\n\n\n\n\n\n\n\n\n\nR for Data Science 2nd edition\n\n\n\n\n\n\n\n\n\nTidy Modeling with R"
+    "text": "Programming: Surrounding all these tools is programming.\n\n\nOf course, every aspect of DS is done by programming. DS cannot be done by pieces of paper and pens. It has to be done using computers."
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#learning-management-system-d2l",
-    "href": "slides/01-syllabus-slides.html#learning-management-system-d2l",
-    "title": "Welcome Aboard 🙌",
-    "section": "Learning Management System (D2L)",
-    "text": "Learning Management System (D2L)\n\n\n\n\n\n\n\n\n\nCheck your grade: Assessments &gt; Grades\nNew announcement: News"
+    "objectID": "slides/02-datascience-slides.html#r-for-data-science",
+    "href": "slides/02-datascience-slides.html#r-for-data-science",
+    "title": "Data Science Overview 📖",
+    "section": "R for Data Science",
+    "text": "R for Data Science\n\n\n\n\n\nSource: https://teachdatascience.com/tidyverse/\n\n\n\n\n\n\n\nIf you are ready, let’s dive in and learn all these tools. Well not all, but some of these tools.\nBy the way, you see these hex stickers? It kind of becomes a trend that when we create an R package, or software, we also create a hex logo associated with it, so it works as product or brand logo. It may be easier for you to promote your package if you have a cute or beautiful hex logo."
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#grading-policy",
-    "href": "slides/01-syllabus-slides.html#grading-policy",
-    "title": "Welcome Aboard 🙌",
-    "section": "Grading Policy ✨",
-    "text": "Grading Policy ✨\n\n\nYour grade is from the following categories and distribution\n\n25% In-class lab activities\n10% In-class AI activities\n45% Mini projects\n20% Final project competition\n\n\n\n\n❌ You must participate in the final presentation in order to pass the course.\n❌ You will NOT be allowed to do any extra credit projects/homework/exam to compensate for a poor grade."
+    "objectID": "slides/02-datascience-slides.html#python-for-data-science",
+    "href": "slides/02-datascience-slides.html#python-for-data-science",
+    "title": "Data Science Overview 📖",
+    "section": "Python for Data Science",
+    "text": "Python for Data Science\n\n\n\n\n\nSource: https://www.e2enetworks.com/blog/9-python-libraries-for-data-science-and-artificial-intelligence"
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#grade-percentage-conversion",
-    "href": "slides/01-syllabus-slides.html#grade-percentage-conversion",
-    "title": "Welcome Aboard 🙌",
-    "section": "Grade-Percentage Conversion",
-    "text": "Grade-Percentage Conversion\n\n\n\\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.0 is in [94, 100] and the grade is A and 93.8 is in [90, 94) and the grade is A-.\n\n\n\n\n\nGrade\nPercentage\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[84, 87)\n\n\nB-\n[80, 84)\n\n\nC+\n[77, 80)\n\n\nC\n[74, 77)\n\n\nC-\n[70, 74)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)"
+    "objectID": "slides/02-datascience-slides.html#genai-prompting-2",
+    "href": "slides/02-datascience-slides.html#genai-prompting-2",
+    "title": "Data Science Overview 📖",
+    "section": "GenAI Prompting",
+    "text": "GenAI Prompting\n\n\n\nMaking Data Science Concrete Through Examples\n\n\n&gt; Walk through a simple data science problem from question to conclusion.\n\n\n\n\n\nShare your example! Does the workflow generally follow what we discussed?"
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#lab-exercises-25",
-    "href": "slides/01-syllabus-slides.html#lab-exercises-25",
-    "title": "Welcome Aboard 🙌",
-    "section": "Lab Exercises (25%)",
-    "text": "Lab Exercises (25%)\n\nGraded as Complete/Incomplete and used as evidence of attendance and participation.\nAllowed to have one incomplete lab exercise without any penalty.\nBeyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\nYou will create a project in Posit Cloud saving all of your lab exercises. (We’ll go through know-how together)"
+    "objectID": "slides/04-git.html#git-and-github",
+    "href": "slides/04-git.html#git-and-github",
+    "title": "Git and GitHub \n",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\n\n\n\n\n\nGit is a version control system – like Track Changes features from MS Word, on steroids.\nIt’s not the only version control system, but it’s a popular one.\n\n\n\n\n\n\n\n\n\n\n\n\nGitHub is a home for Git-based projects (repository, or repo) on the cloud – like Dropbox but much better.\nWe’ll use GitHub for web hosting coursework.\n\n\n\n\n\nR and RStudio are two different things. Same here. Git and GitHub are two different things.\nGit is a version control system like Track Changes features from Microsoft Word, but it is much more powerful.\nBasically Git helps us keep track of changes or progress of projects, so we can more easily manage our project because we can check what we did on our project on any given day.\nI’ll talk more about version control in a minute.\nGitHub is the home for Git-based projects (repository, or repo) on the internet – like Dropbox but much better.\nOnce we put those projects on the cloud in GitHub, we share our projects with others, usually our collaborators, or the entire team, so every team member can work on this project, make changes, and Git and GitHub will record who, when, and what the changes are made.\nI don’t need to teach you data science this way, but I hope you will appreciate I introduce git/github to you because knowing version control is really important for a developer."
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#ai-activities-10",
-    "href": "slides/01-syllabus-slides.html#ai-activities-10",
-    "title": "Welcome Aboard 🙌",
-    "section": "AI activities (10%)",
-    "text": "AI activities (10%)\n\nAI activities are short presentations during class. They are usually graded as complete or incomplete.\nAI activities are used as evidence of both attendance and participation.\nGroups take turn to present what they learn from GenAI about data science."
+    "objectID": "slides/04-git.html#versioning",
+    "href": "slides/04-git.html#versioning",
+    "title": "Git and GitHub \n",
+    "section": "Versioning",
+    "text": "Versioning\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\n\nSo think about this figure here. Versioning is like this. If you are playing Lego, and you want to build a house using Lego bricks, you would lay them out layer by layer, and you might along the way actually record what’s happening at each step.\nBase floor, walls, pillars, roof."
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#mini-projects-45",
-    "href": "slides/01-syllabus-slides.html#mini-projects-45",
-    "title": "Welcome Aboard 🙌",
-    "section": "Mini Projects (45%)",
-    "text": "Mini Projects (45%)\n\nYou will work in a team on 3 mini projects.\nThis project will focus on a subset of the course content up to that point, for example data wrangling and visualization or a simple predictive model.\n\n\nMore detailed instructions and rubric will be provided later in the semester."
+    "objectID": "slides/04-git.html#versioning-with-human-readable-messages",
+    "href": "slides/04-git.html#versioning-with-human-readable-messages",
+    "title": "Git and GitHub \n",
+    "section": "Versioning with human readable messages",
+    "text": "Versioning with human readable messages\n\nInformative messages: let the next person know what happened with each change.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\n\nVersion control with git feels a lit more like this, where you have the versions, but then you actually have some human readable messages.\nRemember usually there are several people working on the same project, Adding a message on a particular version of your work let other people know what changes you made in this version comparing to the previous version.\nEven the project is an individual project, adding messages remind ourselves of what we did previously at each stage of the work.\nIn Git, The first commit which is a human readable message you make in a repository is always called the first commit or initial commit.\nThen after that you get to choose what you wanna say about it.\nLike here in version 2, we have built back and front of the base, and then in version 3, finished building base, so we are actually letting the next person who come after you that could be you looking back at a project of yours or somebody else you are collaborating with know what happened with each change  \n\nInstallation instruction.\nfurniture assembly guide"
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#final-project-competition-20",
-    "href": "slides/01-syllabus-slides.html#final-project-competition-20",
-    "title": "Welcome Aboard 🙌",
-    "section": "Final Project Competition (20%)",
-    "text": "Final Project Competition (20%)\n\nYou will be team up to do the final project.\n\nYour project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nIntroduce a programming language not learned in class for doing data science, including live demo, Julia, SQL, MATLAB, SAS for example.\nWeb development: Shiny website or dashboard, including live demo\n\n\nThe final project presentation is on Monday, 5/4, 10:30 AM - 12:30 PM.\nMore information will be released later."
+    "objectID": "slides/04-git.html#why-need-version-control",
+    "href": "slides/04-git.html#why-need-version-control",
+    "title": "Git and GitHub \n",
+    "section": "Why Need Version Control",
+    "text": "Why Need Version Control\n\n\n\n\n\n\n\n\n\n\n\nThink if you are not using version control, you very much can end up in a situation like this where you have a document you are working on, and you know we are humans feel like ok i’m almost done, I’m going to call this particular version I have final.doc.\nBut then you actually get some maybe revision comments from your advisor, and then that becomes final_rev2.doc. And you go back and forth lots of times. At the end, it’s everything like final, final3, final10, final_last whatever, it just keeps going.\nThe thing is these file names are not really very informative because final or final revisions don’t really say anything.\nBut if you really had tagged the changes you make between the final and the final 2, that could actually be informative if you actually have to go back to them."
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#document-generative-ai-use",
-    "href": "slides/01-syllabus-slides.html#document-generative-ai-use",
-    "title": "Welcome Aboard 🙌",
-    "section": "Document Generative AI Use",
-    "text": "Document Generative AI Use\n\n\n\n\nYou may use generative AI tools such as ChatGPT and Gemini to generate a first draft of text for your work, provided that this use is documented and cited.\n\n\nUnless explicitly stated otherwise, you may make use of any online resources, but you must explicitly cite/document where you obtained any code you directly use or use as inspiration in your solutions.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you use GenAI, please include the followings in your submitted work:\n\nWhy/How I used AI (prompts or questions)\nGenerated output (screenshot or copy-paste excerpt)\nHow I used the output"
+    "objectID": "slides/04-git.html#how-we-use-git-and-github",
+    "href": "slides/04-git.html#how-we-use-git-and-github",
+    "title": "Git and GitHub \n",
+    "section": "How We Use Git and GitHub",
+    "text": "How We Use Git and GitHub\n\nOn GitHub, I create organization math3570-s26 and repos.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\n\nHow are we going to use Git/GitHub in this class?\nWe have a course organization (2024-spring-math-3570) I created on GitHub.\nWithin the organization, there will be a bunch of repositories I created for you.\nThink each repo as a project you will be working on. It is basically your homework assignment."
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#document-generative-ai-use-1",
-    "href": "slides/01-syllabus-slides.html#document-generative-ai-use-1",
-    "title": "Welcome Aboard 🙌",
-    "section": "Document Generative AI Use",
-    "text": "Document Generative AI Use\n\n\n\n\nWhy/How I used AI (prompts and questions)\n\nI asked ChatGPT to generate a histogram using R.\n\n\nGenerated output (screenshot or copy-paste excerpt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow I used the output\n\nI reviewed the suggestions, but I did not use the exact code. Instead, I change the code format and breaks value to 50."
+    "objectID": "slides/04-git.html#how-we-use-git-and-github-1",
+    "href": "slides/04-git.html#how-we-use-git-and-github-1",
+    "title": "Git and GitHub \n",
+    "section": "How We Use Git and GitHub",
+    "text": "How We Use Git and GitHub\n\nYou clone the repo I create for you to your Posit Cloud as an project.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\n\nAnd what you will do is you are going to go to your GitHub, find the repo that’s named after you, and then clone this as an rstudio project.\nWe talked about creating projects in our rstudio, but just lauching them there within Rstudio.\nThis time we are going to create a project from GitHub, and that’s called cloning"
   },
   {
-    "objectID": "slides/01-syllabus-slides.html#genai-and-academic-integrity",
-    "href": "slides/01-syllabus-slides.html#genai-and-academic-integrity",
-    "title": "Welcome Aboard 🙌",
-    "section": "GenAI and Academic Integrity",
-    "text": "GenAI and Academic Integrity"
+    "objectID": "slides/04-git.html#how-we-use-git-and-github-2",
+    "href": "slides/04-git.html#how-we-use-git-and-github-2",
+    "title": "Git and GitHub \n",
+    "section": "How We Use Git and GitHub",
+    "text": "How We Use Git and GitHub\n\nYou push your updated work in Posit Cloud back to GitHub.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\n\nSo you are going to clone them in Posit Cloud, and then you are going to do your assignment, write R code, and finally version control your files with Git.\nSo along the way, as you make some changes, you are going to tag these changes as commits, then every once a while, you are going to push your changes back to the repo, which means that by the deadline of an assignment, your changes need to appear in your repo, because what I will be looking at for you is not what’s happening in Posit Cloud, but actually what’s happening on GitHub. The process of of uploading your new version of work into GitHub is called Push\n\nYou push your updated work in Rstudio back to GitHub, so that as your collaborator, I can see your updated work."
+  },
+  {
+    "objectID": "slides/04-git.html#git-ready-for-data-science",
+    "href": "slides/04-git.html#git-ready-for-data-science",
+    "title": "Git and GitHub \n",
+    "section": "Git Ready for Data Science",
+    "text": "Git Ready for Data Science\n\n\nGo to https://github.com/ to create a GitHub account if you don’t have one.\n\nUse the same username and email address of your Posit Cloud.\n\n\n\nAccount (topright) &gt; Settings\n\n\nEmails &gt; Uncheck “Keep my email address private” (Link your R/Python work to GitHub)\n\nPublic Profile &gt; Name and nice picture!\n\n\nShare your GitHub username at https://forms.office.com/r/4MgdKhtdBh, so I can invite you to join our course organization math3570-s26.\n\n\n\n\nVerify your GitHub email Adjust your GitHub settings for a more pleasant GitHub experience.\nWe’ll work with R, RStudio, Git, and GitHub together, like a real data scientist!"
+  },
+  {
+    "objectID": "slides/04-git.html#git-ready-for-data-science-1",
+    "href": "slides/04-git.html#git-ready-for-data-science-1",
+    "title": "Git and GitHub \n",
+    "section": "Git Ready for Data Science",
+    "text": "Git Ready for Data Science\n\nPlease accept my invitation to join the GitHub organization math3570-s26.\n\n\n\n\n\n\n\n\n\n\n\nuse ghclass-26.R and add usernames in students vector.\nCheck Who is already in and make sure there are 48 + 3 of them."
+  },
+  {
+    "objectID": "slides/04-git.html#git-and-github-tips",
+    "href": "slides/04-git.html#git-and-github-tips",
+    "title": "Git and GitHub \n",
+    "section": "Git and GitHub Tips",
+    "text": "Git and GitHub Tips\n\nPosit Cloud has installed Git for us! 😄\nThere are millions of git commands, and very few people know them all.\n99% of the time you will use Git to add, commit, push, and pull.\n\n\nok, that’s an exaggeration, but there are a lot of them\n\n. . .\n\n\n\nIf you google for help and this is the solution…\nSkip that and move on to the next resource!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe will be doing Git things and interfacing with GitHub through RStudio. \n\nIf you google for help you might come across methods for doing these things in the command line.\nSkip that and move on to the next resource unless you feel comfortable trying it out."
+  },
+  {
+    "objectID": "slides/04-git.html#connect-posit-cloud-and-github-step-1",
+    "href": "slides/04-git.html#connect-posit-cloud-and-github-step-1",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 1",
+    "text": "Connect Posit Cloud and GitHub: Step 1\n\nPosit Cloud cannot recognize your GitHub account unless you connect them each other.\nIn Posit Cloud, click on your name on the top-right corner to open the right menu.\nClick on Authentication."
+  },
+  {
+    "objectID": "slides/04-git.html#connect-posit-cloud-and-github-step-2",
+    "href": "slides/04-git.html#connect-posit-cloud-and-github-step-2",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 2",
+    "text": "Connect Posit Cloud and GitHub: Step 2\n\nIn the Authentication window, check the box for Enabled.\n\n\n\n\n\n\n\n\n\n\n\nWhen check Enabled, will jump to GitHub page shown in the next."
+  },
+  {
+    "objectID": "slides/04-git.html#connect-posit-cloud-and-github-step-3",
+    "href": "slides/04-git.html#connect-posit-cloud-and-github-step-3",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 3",
+    "text": "Connect Posit Cloud and GitHub: Step 3\n\nFor your GitHub page, click on the green box that says “Authorize posit-hosted”."
+  },
+  {
+    "objectID": "slides/04-git.html#connect-posit-cloud-and-github-step-4",
+    "href": "slides/04-git.html#connect-posit-cloud-and-github-step-4",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 4",
+    "text": "Connect Posit Cloud and GitHub: Step 4\n\n\n\nBack to the Authentication of Posit Cloud, check Private repo access also enabled.\n\n\nMake sure math3570-s26 shows up under Organization access.\nClick on Request. (Waiting for my approval)\nClick on the green box “Authorize posit-hosted”.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhen check Private repo access also enabled, will jump to GitHub page as shown."
+  },
+  {
+    "objectID": "slides/04-git.html#connect-posit-cloud-and-github-step-5",
+    "href": "slides/04-git.html#connect-posit-cloud-and-github-step-5",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 5",
+    "text": "Connect Posit Cloud and GitHub: Step 5\n\nOnce you’re done, both of these boxes should be checked."
+  },
+  {
+    "objectID": "slides/04-git.html#connect-posit-cloud-and-github-step-6",
+    "href": "slides/04-git.html#connect-posit-cloud-and-github-step-6",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 6",
+    "text": "Connect Posit Cloud and GitHub: Step 6\n\nConfirm that you’ve linked up your GitHub and Posit Cloud accounts GitHub settings &gt; Applications. Should see Posit Cloud listed as an authorized app under Authorized OAuth Apps.\n\n\n\n\n\n\n\n\n\n\n\nIf you see RStudio is under the Authorized Apps, congratulations! Your RStudio and GitHub are now linked together!"
+  },
+  {
+    "objectID": "slides/04-git.html#github-to-posit-cloud-step-1",
+    "href": "slides/04-git.html#github-to-posit-cloud-step-1",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 1",
+    "text": "GitHub to Posit Cloud: Step 1\n\nEach of your projects will begin with the following steps.\nGo to the repo named hw00-yourusername I created for you.\n\n\n\n\n\n\n\n\n\n\nhttps://mine-cetinkaya-rundel.github.io/teach-r-online/ - OK. Now let’s see how to clone a repo in GitHub to your RStudio.\n\nUse the code\n\n## Create assignments\norg_create_assignment(\n    org = \"math3570-s26\",\n    repo = paste0(\"hw00-\", students),\n    user = students,\n    source_repo = \"chenghanyustats/hw01\"\n)\n\nThis repo contains a template you can build on to complete your assignment."
+  },
+  {
+    "objectID": "slides/04-git.html#github-to-posit-cloud-step-2",
+    "href": "slides/04-git.html#github-to-posit-cloud-step-2",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 2",
+    "text": "GitHub to Posit Cloud: Step 2\n\n\nClick on the green Code button, select HTTPS.\nClick on the clipboard icon on the right to copy the repo URL, such as https://github.com/math3570-s26/hw00-chenghanyu.git"
+  },
+  {
+    "objectID": "slides/04-git.html#github-to-posit-cloud-step-3",
+    "href": "slides/04-git.html#github-to-posit-cloud-step-3",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 3",
+    "text": "GitHub to Posit Cloud: Step 3\n\nGo to Posit Cloud and into the course workspace 2026-spring-math-3570.\nNew Project &gt; New Project from Git Repo.\n\n\n\n\n\n\n\n\n\n\nYou will need to click on the down arrow next to the New Project button to see this option."
+  },
+  {
+    "objectID": "slides/04-git.html#github-to-posit-cloud-step-4",
+    "href": "slides/04-git.html#github-to-posit-cloud-step-4",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 4",
+    "text": "GitHub to Posit Cloud: Step 4\n\nCopy and paste the URL of your assignment repo into the dialog box.\nHit OK, and you’re good to go!"
+  },
+  {
+    "objectID": "slides/04-git.html#github-to-posit-cloud-step-5",
+    "href": "slides/04-git.html#github-to-posit-cloud-step-5",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 5",
+    "text": "GitHub to Posit Cloud: Step 5\n\nClick hw00-yourusername to do your assignment in Posit Cloud!\n\n\n\n\n\n\n\n\n\n\nDone! We learned the entire process of cloning a repo on GitHub to Posit Cloud as a project.\nNext, we’ll see how to keep your revision record (commit) and send (push) the latest revised version of your work from Posit Cloud to GitHub!"
+  },
+  {
+    "objectID": "slides/04-git.html#personal-access-token-pat-step-1",
+    "href": "slides/04-git.html#personal-access-token-pat-step-1",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 1",
+    "text": "Personal Access Token (PAT): Step 1\n\nGitHub has removed the support for Password Authentication for Git operations.\nBefore we can send our work in Posit Cloud to GitHub, we need Personal Access Token (PAT)\nSettings &gt; Developer settings\n\n\n\n\n\n\n\n\n\n\n\nGitHub has removed the support for Password Authentication for Git operations.\nfor more safety.\nfrom 08/13/2021."
+  },
+  {
+    "objectID": "slides/04-git.html#personal-access-token-pat-step-2",
+    "href": "slides/04-git.html#personal-access-token-pat-step-2",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 2",
+    "text": "Personal Access Token (PAT): Step 2"
+  },
+  {
+    "objectID": "slides/04-git.html#personal-access-token-pat-step-3",
+    "href": "slides/04-git.html#personal-access-token-pat-step-3",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 3",
+    "text": "Personal Access Token (PAT): Step 3"
+  },
+  {
+    "objectID": "slides/04-git.html#personal-access-token-pat-step-4",
+    "href": "slides/04-git.html#personal-access-token-pat-step-4",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 4",
+    "text": "Personal Access Token (PAT): Step 4"
+  },
+  {
+    "objectID": "slides/04-git.html#personal-access-token-pat-step-5",
+    "href": "slides/04-git.html#personal-access-token-pat-step-5",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 5",
+    "text": "Personal Access Token (PAT): Step 5\n\nCopy and paste your PAT to a secrete and safe place!!"
+  },
+  {
+    "objectID": "slides/04-git.html#posit-cloud-to-github-step-1---edit-your-file",
+    "href": "slides/04-git.html#posit-cloud-to-github-step-1---edit-your-file",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 1 - Edit your file",
+    "text": "Posit Cloud to GitHub: Step 1 - Edit your file\n\nOpen the quarto file hw-00-test.qmd, in YAML change the author to your name.\nClick Render to generate your beautiful document. (If asked to install any packages, please do!)"
+  },
+  {
+    "objectID": "slides/04-git.html#posit-cloud-to-github-step-2---commit-changes",
+    "href": "slides/04-git.html#posit-cloud-to-github-step-2---commit-changes",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 2 - Commit changes",
+    "text": "Posit Cloud to GitHub: Step 2 - Commit changes\n\nGo to the Git tab in your RStudio. \n\n\nCommit &gt; Check Staged box to add files to be committed.\n\n\nctrl/cmd + A and enter to select all files.\n\n\nWrite “Update author’s name” in the Commit message box and hit Commit."
+  },
+  {
+    "objectID": "slides/04-git.html#posit-cloud-to-github-step-3---push-changes",
+    "href": "slides/04-git.html#posit-cloud-to-github-step-3---push-changes",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 3 - Push changes",
+    "text": "Posit Cloud to GitHub: Step 3 - Push changes\n\nWe’ve made an update and committed this change locally.\nIt’s time to push the changes to your repo on GitHub, so that others (Dr. Yu) can see your changes.\nClick on Push.\nIn the prompted dialogue box, enter your GitHub user name, and your password (PAT).\n\n\n\n\n\n\n\n\n\n\nhttps://inbo.github.io/git-course/course_rstudio.html"
+  },
+  {
+    "objectID": "slides/04-git.html#posit-cloud-to-github-step-3---updated-repo",
+    "href": "slides/04-git.html#posit-cloud-to-github-step-3---updated-repo",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 3 - Updated Repo",
+    "text": "Posit Cloud to GitHub: Step 3 - Updated Repo\n\nBack to your GitHub repo and refresh it.\nThe online repo is now synced with your local project in Posit Cloud."
+  },
+  {
+    "objectID": "slides/04-git.html#resources",
+    "href": "slides/04-git.html#resources",
+    "title": "Git and GitHub \n",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nCreate a personal access token (PAT)\nTwo-factor authentication\nGit hands-on session within RStudio\nHappy Git and GitHub for the useR\nHappier version control with Git and GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercise: Click on the more button in the git pane and select Shell Type git config –global credential.helper store Type exit to quit the shell"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#git-and-github",
+    "href": "slides/04-git-slides.html#git-and-github",
+    "title": "Git and GitHub \n",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\n\n\n\n\n\nGit is a version control system – like Track Changes features from MS Word, on steroids.\nIt’s not the only version control system, but it’s a popular one.\n\n\n\n\n\n\n\n\n\n\n\n\nGitHub is a home for Git-based projects (repository, or repo) on the cloud – like Dropbox but much better.\nWe’ll use GitHub for web hosting coursework.\n\n\n\nR and RStudio are two different things. Same here. Git and GitHub are two different things.\nGit is a version control system like Track Changes features from Microsoft Word, but it is much more powerful.\nBasically Git helps us keep track of changes or progress of projects, so we can more easily manage our project because we can check what we did on our project on any given day.\nI’ll talk more about version control in a minute.\nGitHub is the home for Git-based projects (repository, or repo) on the internet – like Dropbox but much better.\nOnce we put those projects on the cloud in GitHub, we share our projects with others, usually our collaborators, or the entire team, so every team member can work on this project, make changes, and Git and GitHub will record who, when, and what the changes are made.\nI don’t need to teach you data science this way, but I hope you will appreciate I introduce git/github to you because knowing version control is really important for a developer."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#versioning",
+    "href": "slides/04-git-slides.html#versioning",
+    "title": "Git and GitHub \n",
+    "section": "Versioning",
+    "text": "Versioning\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\nSo think about this figure here. Versioning is like this. If you are playing Lego, and you want to build a house using Lego bricks, you would lay them out layer by layer, and you might along the way actually record what’s happening at each step.\nBase floor, walls, pillars, roof."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#versioning-with-human-readable-messages",
+    "href": "slides/04-git-slides.html#versioning-with-human-readable-messages",
+    "title": "Git and GitHub \n",
+    "section": "Versioning with human readable messages",
+    "text": "Versioning with human readable messages\n\nInformative messages: let the next person know what happened with each change.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\nVersion control with git feels a lit more like this, where you have the versions, but then you actually have some human readable messages.\nRemember usually there are several people working on the same project, Adding a message on a particular version of your work let other people know what changes you made in this version comparing to the previous version.\nEven the project is an individual project, adding messages remind ourselves of what we did previously at each stage of the work.\nIn Git, The first commit which is a human readable message you make in a repository is always called the first commit or initial commit.\nThen after that you get to choose what you wanna say about it.\nLike here in version 2, we have built back and front of the base, and then in version 3, finished building base, so we are actually letting the next person who come after you that could be you looking back at a project of yours or somebody else you are collaborating with know what happened with each change  \n\nInstallation instruction.\nfurniture assembly guide"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#why-need-version-control",
+    "href": "slides/04-git-slides.html#why-need-version-control",
+    "title": "Git and GitHub \n",
+    "section": "Why Need Version Control",
+    "text": "Why Need Version Control\n\n\nThink if you are not using version control, you very much can end up in a situation like this where you have a document you are working on, and you know we are humans feel like ok i’m almost done, I’m going to call this particular version I have final.doc.\nBut then you actually get some maybe revision comments from your advisor, and then that becomes final_rev2.doc. And you go back and forth lots of times. At the end, it’s everything like final, final3, final10, final_last whatever, it just keeps going.\nThe thing is these file names are not really very informative because final or final revisions don’t really say anything.\nBut if you really had tagged the changes you make between the final and the final 2, that could actually be informative if you actually have to go back to them."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#how-we-use-git-and-github",
+    "href": "slides/04-git-slides.html#how-we-use-git-and-github",
+    "title": "Git and GitHub \n",
+    "section": "How We Use Git and GitHub",
+    "text": "How We Use Git and GitHub\n\nOn GitHub, I create organization math3570-s26 and repos.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\nHow are we going to use Git/GitHub in this class?\nWe have a course organization (2024-spring-math-3570) I created on GitHub.\nWithin the organization, there will be a bunch of repositories I created for you.\nThink each repo as a project you will be working on. It is basically your homework assignment."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#how-we-use-git-and-github-1",
+    "href": "slides/04-git-slides.html#how-we-use-git-and-github-1",
+    "title": "Git and GitHub \n",
+    "section": "How We Use Git and GitHub",
+    "text": "How We Use Git and GitHub\n\nYou clone the repo I create for you to your Posit Cloud as an project.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\nAnd what you will do is you are going to go to your GitHub, find the repo that’s named after you, and then clone this as an rstudio project.\nWe talked about creating projects in our rstudio, but just lauching them there within Rstudio.\nThis time we are going to create a project from GitHub, and that’s called cloning"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#how-we-use-git-and-github-2",
+    "href": "slides/04-git-slides.html#how-we-use-git-and-github-2",
+    "title": "Git and GitHub \n",
+    "section": "How We Use Git and GitHub",
+    "text": "How We Use Git and GitHub\n\nYou push your updated work in Posit Cloud back to GitHub.\n\n\n\n\n\n\nSource: Data Science in a Box Unit 1 - Deck 3\n\n\n\n\n\nSo you are going to clone them in Posit Cloud, and then you are going to do your assignment, write R code, and finally version control your files with Git.\nSo along the way, as you make some changes, you are going to tag these changes as commits, then every once a while, you are going to push your changes back to the repo, which means that by the deadline of an assignment, your changes need to appear in your repo, because what I will be looking at for you is not what’s happening in Posit Cloud, but actually what’s happening on GitHub. The process of of uploading your new version of work into GitHub is called Push\n\nYou push your updated work in Rstudio back to GitHub, so that as your collaborator, I can see your updated work."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#git-ready-for-data-science",
+    "href": "slides/04-git-slides.html#git-ready-for-data-science",
+    "title": "Git and GitHub \n",
+    "section": "Git Ready for Data Science",
+    "text": "Git Ready for Data Science\n\n\nGo to https://github.com/ to create a GitHub account if you don’t have one.\n\nUse the same username and email address of your Posit Cloud.\n\n\n\nAccount (topright) &gt; Settings\n\n\nEmails &gt; Uncheck “Keep my email address private” (Link your R/Python work to GitHub)\n\nPublic Profile &gt; Name and nice picture!\n\n\nShare your GitHub username at https://forms.office.com/r/4MgdKhtdBh, so I can invite you to join our course organization math3570-s26.\n\n\n\nVerify your GitHub email Adjust your GitHub settings for a more pleasant GitHub experience.\nWe’ll work with R, RStudio, Git, and GitHub together, like a real data scientist!"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#git-ready-for-data-science-1",
+    "href": "slides/04-git-slides.html#git-ready-for-data-science-1",
+    "title": "Git and GitHub \n",
+    "section": "Git Ready for Data Science",
+    "text": "Git Ready for Data Science\n\nPlease accept my invitation to join the GitHub organization math3570-s26.\n\n\n\nuse ghclass-26.R and add usernames in students vector.\nCheck Who is already in and make sure there are 48 + 3 of them."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#git-and-github-tips",
+    "href": "slides/04-git-slides.html#git-and-github-tips",
+    "title": "Git and GitHub \n",
+    "section": "Git and GitHub Tips",
+    "text": "Git and GitHub Tips\n\nPosit Cloud has installed Git for us! 😄\nThere are millions of git commands, and very few people know them all.\n99% of the time you will use Git to add, commit, push, and pull.\n\nok, that’s an exaggeration, but there are a lot of them\n\n\n\n\nIf you google for help and this is the solution…\nSkip that and move on to the next resource!\n\n\n\n\n\n\n\n\n\n\n\n\nWe will be doing Git things and interfacing with GitHub through RStudio. \n\nIf you google for help you might come across methods for doing these things in the command line.\nSkip that and move on to the next resource unless you feel comfortable trying it out."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-1",
+    "href": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-1",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 1",
+    "text": "Connect Posit Cloud and GitHub: Step 1\n\nPosit Cloud cannot recognize your GitHub account unless you connect them each other.\nIn Posit Cloud, click on your name on the top-right corner to open the right menu.\nClick on Authentication."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-2",
+    "href": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-2",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 2",
+    "text": "Connect Posit Cloud and GitHub: Step 2\n\nIn the Authentication window, check the box for Enabled.\n\n\n\nWhen check Enabled, will jump to GitHub page shown in the next."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-3",
+    "href": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-3",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 3",
+    "text": "Connect Posit Cloud and GitHub: Step 3\n\nFor your GitHub page, click on the green box that says “Authorize posit-hosted”."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-4",
+    "href": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-4",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 4",
+    "text": "Connect Posit Cloud and GitHub: Step 4\n\n\n\nBack to the Authentication of Posit Cloud, check Private repo access also enabled.\n\n\nMake sure math3570-s26 shows up under Organization access.\nClick on Request. (Waiting for my approval)\nClick on the green box “Authorize posit-hosted”.\n\n\n\n\n\n\n\n\n\n\n\n\nWhen check Private repo access also enabled, will jump to GitHub page as shown."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-5",
+    "href": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-5",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 5",
+    "text": "Connect Posit Cloud and GitHub: Step 5\n\nOnce you’re done, both of these boxes should be checked."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-6",
+    "href": "slides/04-git-slides.html#connect-posit-cloud-and-github-step-6",
+    "title": "Git and GitHub \n",
+    "section": "Connect Posit Cloud and GitHub: Step 6",
+    "text": "Connect Posit Cloud and GitHub: Step 6\n\nConfirm that you’ve linked up your GitHub and Posit Cloud accounts GitHub settings &gt; Applications. Should see Posit Cloud listed as an authorized app under Authorized OAuth Apps.\n\n\n\nIf you see RStudio is under the Authorized Apps, congratulations! Your RStudio and GitHub are now linked together!"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#github-to-posit-cloud-step-1",
+    "href": "slides/04-git-slides.html#github-to-posit-cloud-step-1",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 1",
+    "text": "GitHub to Posit Cloud: Step 1\n\nEach of your projects will begin with the following steps.\nGo to the repo named hw00-yourusername I created for you.\n\n\nhttps://mine-cetinkaya-rundel.github.io/teach-r-online/ - OK. Now let’s see how to clone a repo in GitHub to your RStudio.\n\nUse the code\n\n## Create assignments\norg_create_assignment(\n    org = \"math3570-s26\",\n    repo = paste0(\"hw00-\", students),\n    user = students,\n    source_repo = \"chenghanyustats/hw01\"\n)\n\nThis repo contains a template you can build on to complete your assignment."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#github-to-posit-cloud-step-2",
+    "href": "slides/04-git-slides.html#github-to-posit-cloud-step-2",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 2",
+    "text": "GitHub to Posit Cloud: Step 2\n\n\nClick on the green Code button, select HTTPS.\nClick on the clipboard icon on the right to copy the repo URL, such as https://github.com/math3570-s26/hw00-chenghanyu.git"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#github-to-posit-cloud-step-3",
+    "href": "slides/04-git-slides.html#github-to-posit-cloud-step-3",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 3",
+    "text": "GitHub to Posit Cloud: Step 3\n\nGo to Posit Cloud and into the course workspace 2026-spring-math-3570.\nNew Project &gt; New Project from Git Repo.\n\n\nYou will need to click on the down arrow next to the New Project button to see this option."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#github-to-posit-cloud-step-4",
+    "href": "slides/04-git-slides.html#github-to-posit-cloud-step-4",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 4",
+    "text": "GitHub to Posit Cloud: Step 4\n\nCopy and paste the URL of your assignment repo into the dialog box.\nHit OK, and you’re good to go!"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#github-to-posit-cloud-step-5",
+    "href": "slides/04-git-slides.html#github-to-posit-cloud-step-5",
+    "title": "Git and GitHub \n",
+    "section": "GitHub to Posit Cloud: Step 5",
+    "text": "GitHub to Posit Cloud: Step 5\n\nClick hw00-yourusername to do your assignment in Posit Cloud!\n\n\n\nDone! We learned the entire process of cloning a repo on GitHub to Posit Cloud as a project.\nNext, we’ll see how to keep your revision record (commit) and send (push) the latest revised version of your work from Posit Cloud to GitHub!"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#personal-access-token-pat-step-1",
+    "href": "slides/04-git-slides.html#personal-access-token-pat-step-1",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 1",
+    "text": "Personal Access Token (PAT): Step 1\n\nGitHub has removed the support for Password Authentication for Git operations.\nBefore we can send our work in Posit Cloud to GitHub, we need Personal Access Token (PAT)\nSettings &gt; Developer settings\n\n\n\nGitHub has removed the support for Password Authentication for Git operations.\nfor more safety.\nfrom 08/13/2021."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#personal-access-token-pat-step-2",
+    "href": "slides/04-git-slides.html#personal-access-token-pat-step-2",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 2",
+    "text": "Personal Access Token (PAT): Step 2"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#personal-access-token-pat-step-3",
+    "href": "slides/04-git-slides.html#personal-access-token-pat-step-3",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 3",
+    "text": "Personal Access Token (PAT): Step 3"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#personal-access-token-pat-step-4",
+    "href": "slides/04-git-slides.html#personal-access-token-pat-step-4",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 4",
+    "text": "Personal Access Token (PAT): Step 4"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#personal-access-token-pat-step-5",
+    "href": "slides/04-git-slides.html#personal-access-token-pat-step-5",
+    "title": "Git and GitHub \n",
+    "section": "Personal Access Token (PAT): Step 5",
+    "text": "Personal Access Token (PAT): Step 5\n\nCopy and paste your PAT to a secrete and safe place!!"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#posit-cloud-to-github-step-1---edit-your-file",
+    "href": "slides/04-git-slides.html#posit-cloud-to-github-step-1---edit-your-file",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 1 - Edit your file",
+    "text": "Posit Cloud to GitHub: Step 1 - Edit your file\n\nOpen the quarto file hw-00-test.qmd, in YAML change the author to your name.\nClick Render to generate your beautiful document. (If asked to install any packages, please do!)"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#posit-cloud-to-github-step-2---commit-changes",
+    "href": "slides/04-git-slides.html#posit-cloud-to-github-step-2---commit-changes",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 2 - Commit changes",
+    "text": "Posit Cloud to GitHub: Step 2 - Commit changes\n\nGo to the Git tab in your RStudio. \n\n\nCommit &gt; Check Staged box to add files to be committed.\n\n\nctrl/cmd + A and enter to select all files.\n\n\nWrite “Update author’s name” in the Commit message box and hit Commit."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#posit-cloud-to-github-step-3---push-changes",
+    "href": "slides/04-git-slides.html#posit-cloud-to-github-step-3---push-changes",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 3 - Push changes",
+    "text": "Posit Cloud to GitHub: Step 3 - Push changes\n\nWe’ve made an update and committed this change locally.\nIt’s time to push the changes to your repo on GitHub, so that others (Dr. Yu) can see your changes.\nClick on Push.\nIn the prompted dialogue box, enter your GitHub user name, and your password (PAT).\n\n\nhttps://inbo.github.io/git-course/course_rstudio.html"
+  },
+  {
+    "objectID": "slides/04-git-slides.html#posit-cloud-to-github-step-3---updated-repo",
+    "href": "slides/04-git-slides.html#posit-cloud-to-github-step-3---updated-repo",
+    "title": "Git and GitHub \n",
+    "section": "Posit Cloud to GitHub: Step 3 - Updated Repo",
+    "text": "Posit Cloud to GitHub: Step 3 - Updated Repo\n\nBack to your GitHub repo and refresh it.\nThe online repo is now synced with your local project in Posit Cloud."
+  },
+  {
+    "objectID": "slides/04-git-slides.html#resources",
+    "href": "slides/04-git-slides.html#resources",
+    "title": "Git and GitHub \n",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nCreate a personal access token (PAT)\nTwo-factor authentication\nGit hands-on session within RStudio\nHappy Git and GitHub for the useR\nHappier version control with Git and GitHub\n\n\n\n\n\n\n\n\n\n\n\nExercise: Click on the more button in the git pane and select Shell Type git config –global credential.helper store Type exit to quit the shell"
   },
   {
     "objectID": "exercise/lab11-ggplot2.html",

@@ -32,7 +32,7 @@ library(fontawesome)
 
 - Click on ![](../slides/images/05-quarto/render.png) or `Ctrl/Cmd + Shift + K` to produce a HTML document.
 
-- How can we show the current date every time we compile the file? *\[Hint:\]* Check your *hw00*. Compile your document and make sure the date shows up.
+- How can we show the current date every time we compile the file? *\[Hint:\]* Check your *hw01*. Compile your document and make sure the date shows up.
 
 - How do we [hide the code](https://quarto.org/docs/reference/formats/html.html#code) so that the document is shorter? Describe it in `## Lab 2: Quarto`
 

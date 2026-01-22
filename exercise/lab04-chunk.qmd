@@ -30,14 +30,18 @@ library(fontawesome)
   <https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png>
   
   - include a plot `plot(mtcars$disp, mtcars$mpg)`
-  
-  - Show dataset `mtcars` as a table using `knitr::kable()`
-  
-- Do some inline code calculation like <span>&#96;</span>r ncol(mtcars)&#96;, <span>&#96;</span>r log(100, base = 10) + sqrt(4)&#96;.
 
-- Add option `fig-height: 4`, `fig-width: 6` and `fig-align: right` to the chunk for your plot. What are the changes?
+  - add option `fig-height: 4`, `fig-width: 6` and `fig-align: right` to the chunk for your plot. What are the changes?
   
+- Once done, commit with message [_"04-codechunk"_]{style="color:green"} and push your work to GitHub.
+
+(Optional)
+
 - How do we set global chunk options to not show the code in every chunk in the document?
 
-- Once done, commit with message [_"04-codechunk"_]{style="color:green"} and push your work to GitHub.
+- Show dataset `mtcars` as a table using `knitr::kable()`
+
+- Do some inline code calculation like <span>&#96;</span>r ncol(mtcars)&#96;, <span>&#96;</span>r log(100, base = 10) + sqrt(4)&#96;.
+
+
 

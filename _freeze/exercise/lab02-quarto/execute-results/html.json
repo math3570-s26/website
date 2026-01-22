@@ -1,8 +1,8 @@
 {
-  "hash": "c1a5595ce54d645f7b7f892d166c0c50",
+  "hash": "583167430d1431d54ac5ba3a348b31d9",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Lab 02: Quarto File\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\n- Go to your GitHub repo **lab-yourusername**. Clone it to your Posit Cloud as a project in 2025-Spring-Math-3570 workspace.\n\n- Open the file **lab.qmd**.\n\n- Change `author` in YAML.\n\n- Click on ![](../slides/images/05-quarto/render.png) or `Ctrl/Cmd + Shift + K` to produce a HTML document.\n\n- How can we show the current date every time we compile the file? *\\[Hint:\\]* Check your *hw00*. Compile your document and make sure the date shows up.\n\n- How do we [hide the code](https://quarto.org/docs/reference/formats/html.html#code) so that the document is shorter? Describe it in `## Lab 2: Quarto`\n\n- Once done, commit with message [_\"02-quarto\"_]{style=\"color:green\"} and push your version to GitHub.",
+    "markdown": "---\ntitle: \"Lab 02: Quarto File\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: false\n---\n\n\n::: {.cell}\n\n:::\n\n\n::: callout-note\n\n:::\n\n- Go to your GitHub repo **lab-yourusername**. Clone it to your Posit Cloud as a project in 2025-Spring-Math-3570 workspace.\n\n- Open the file **lab.qmd**.\n\n- Change `author` in YAML.\n\n- Click on ![](../slides/images/05-quarto/render.png) or `Ctrl/Cmd + Shift + K` to produce a HTML document.\n\n- How can we show the current date every time we compile the file? *\\[Hint:\\]* Check your *hw01*. Compile your document and make sure the date shows up.\n\n- How do we [hide the code](https://quarto.org/docs/reference/formats/html.html#code) so that the document is shorter? Describe it in `## Lab 2: Quarto`\n\n- Once done, commit with message [_\"02-quarto\"_]{style=\"color:green\"} and push your version to GitHub.",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

@@ -74,6 +74,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Lab 04: Code Chunk – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="Homepage for MATH/COSC 3570 - Introduction to Data Science at Marquette University, Spring 2026.">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
 
@@ -403,12 +404,15 @@ Note
 <ul>
 <li><p>include an image with <code>knitr::include_graphics("URL or file path")</code> <a href="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" class="uri">https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png</a></p></li>
 <li><p>include a plot <code>plot(mtcars$disp, mtcars$mpg)</code></p></li>
-<li><p>Show dataset <code>mtcars</code> as a table using <code>knitr::kable()</code></p></li>
+<li><p>add option <code>fig-height: 4</code>, <code>fig-width: 6</code> and <code>fig-align: right</code> to the chunk for your plot. What are the changes?</p></li>
 </ul></li>
-<li><p>Do some inline code calculation like <span>`</span>r ncol(mtcars)`, <span>`</span>r log(100, base = 10) + sqrt(4)`.</p></li>
-<li><p>Add option <code>fig-height: 4</code>, <code>fig-width: 6</code> and <code>fig-align: right</code> to the chunk for your plot. What are the changes?</p></li>
-<li><p>How do we set global chunk options to not show the code in every chunk in the document?</p></li>
 <li><p>Once done, commit with message <span style="color:green"><em>“04-codechunk”</em></span> and push your work to GitHub.</p></li>
+</ul>
+<p>(Optional)</p>
+<ul>
+<li><p>How do we set global chunk options to not show the code in every chunk in the document?</p></li>
+<li><p>Show dataset <code>mtcars</code> as a table using <code>knitr::kable()</code></p></li>
+<li><p>Do some inline code calculation like <span>`</span>r ncol(mtcars)`, <span>`</span>r log(100, base = 10) + sqrt(4)`.</p></li>
 </ul>
 
 

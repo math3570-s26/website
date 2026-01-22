@@ -1,9 +1,9 @@
 ---
-title: "MATH/COSC 3570 Team Up"
+title: "MATH/COSC 3570 Team Up!"
 date-modified: today
 ---
 
-- This course includes substantial group work, GenAI activities, mini projects, and a final project competition. It is time to form your team! 😎
+- This course includes substantial group work, GenAI activities, mini projects, and a final project competition. It is time to form and build your team! 😎
 
 - We have 19 members and will create **6 teams**. Most teams will have **three** mates, with **one team of four**. 
 
@@ -22,7 +22,7 @@ knitr::include_graphics("./images/qrcode_team.png")
 ```
 
 
-- Please scan the QR code or go to <https://forms.office.com/r/qnripwRhnW> to fill out the form by [**Friday, 1/23 at 11:59 PM**]{.red}. 
+- Please scan the QR code or go to <https://forms.office.com/r/qnripwRhnW> to fill out the form by [**Friday, 1/30 at 11:59 PM**]{.red}. 
 
 
 - If you do not meet the requirements or miss the deadline, you will lose **1%** of your final grade. 

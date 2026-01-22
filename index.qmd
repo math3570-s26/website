@@ -11,9 +11,9 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | 1 | Tue, Jan 13 | Greetings; Overview of Data Science | [🖥️syllabus](slides/01-syllabus-slides.html) [🖥️overview](slides/02-datascience-slides.html) |  |  |  |
 |  | Thu, Jan 15 | Posit Cloud | [🖥️posit](slides/03-posit-slides.html) | [📋 posit](/exercise/lab00-posit.html) [📋01](/exercise/lab01-rscript.html) |  |  |
 | 2 | Tue, Jan 20 | Git and GitHub | [🖥️git](slides/04-git-slides.html) | [📋github](/exercise/lab00-git.html) |  |  |
-|  | Thu, Jan 22 | Quarto: YAML and Markdown | [🖥️quarto](slides/05-quarto-slides.html) | [📋02](/exercise/lab02-quarto.html) [📋03](/exercise/lab03-markdown.html) |  | ✅ Team up Due |
+|  | Thu, Jan 22 | Quarto: YAML and Markdown | [🖥️quarto](slides/05-quarto-slides.html) | [📋02](/exercise/lab02-quarto.html) [📋03](/exercise/lab03-markdown.html) |  | [✅ Team up!](team.html) |
 | 3 | Tue, Jan 27 | Quarto: Code Chunk |  | 📋04 |  |  |
-|  | Thu, Jan 29 | R and Python Syntax | 🖥️syntax | 📋05 📋06 |  |  |
+|  | Thu, Jan 29 | R and Python Syntax | 🖥️syntax | 📋05 📋06 |  | Team up Due! |
 | 4 | Tue, Feb 3 | R Tidyverse | 🖥️package | 📋07 📋08 |  |  |
 |  | Thu, Feb 5 | Python NumPy/Pandas |  | 📋09 |  |  |
 | 5 | Tue, Feb 10 | Data Importing | 🖥️import | 📋10 |  |  |

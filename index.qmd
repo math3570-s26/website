@@ -13,7 +13,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | 2 | Tue, Jan 20 | Git and GitHub | [🖥️git](slides/04-git-slides.html) | [📋github](/exercise/lab00-git.html) |  |  |
 |  | Thu, Jan 22 | Quarto: YAML and Markdown | [🖥️quarto](slides/05-quarto-slides.html) | [📋02](/exercise/lab02-quarto.html) [📋03](/exercise/lab03-markdown.html) |  | [✅ Team up!](team.html) |
 | 3 | Tue, Jan 27 | Quarto: Code Chunk |  | 📋04 |  |  |
-|  | Thu, Jan 29 | R and Python Syntax | 🖥️syntax | 📋05 📋06 |  | Team up Due! |
+|  | Thu, Jan 29 | R and Python Syntax | [🖥️syntax](/slides/06-syntax-slides.html) | 📋05 📋06 |  | Team up Due! |
 | 4 | Tue, Feb 3 | R Tidyverse | 🖥️package | 📋07 📋08 |  |  |
 |  | Thu, Feb 5 | Python NumPy/Pandas |  | 📋09 |  |  |
 | 5 | Tue, Feb 10 | Data Importing | 🖥️import | 📋10 |  |  |

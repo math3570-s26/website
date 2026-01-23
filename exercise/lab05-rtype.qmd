@@ -26,7 +26,7 @@ library(fontawesome)
 
 In **lab.qmd** Lab 5,
 
-- Create R objects vector `v1`, factor `f2`, list `l3`, matrix `m4` and data frame `d5`.
+- Create your own R objects vector `v1`, factor `f2`, list `l3`, matrix `m4` and data frame `d5`.
 
 - Check `typeof()` and `class()` of those objects, and create a list having the output below.
 

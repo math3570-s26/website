@@ -27,7 +27,7 @@ library(fontawesome)
 - In **lab.qmd** `## Lab 4: Code Chunk`, use code chunks to
 
   - include an image with `knitr::include_graphics("URL or file path")`
-  <https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png>
+  <https://shorturl.at/2TwmY>
   
   - include a plot `plot(mtcars$disp, mtcars$mpg)`
 

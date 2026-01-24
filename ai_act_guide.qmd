@@ -1,0 +1,288 @@
+---
+title: "AI Activities Guidelines"
+subtitle: "Using AI to Learn Data Science"
+author: "Dr. Cheng-Han Yu"
+---
+
+This assignment rewards **thinking, judgment, and learning**, NOT perfect answers. Strong work shows curiosity, skepticism, and clear reasoning. If you have questions about appropriate AI use, ask before submitting.
+
+## Purpose
+
+In this activity, you will use an AI as a learning partner to explore a data science concept from this course. The goal is **NOT to report what AI says**. The goal is to learn to:
+
+-   Ask effective questions
+
+-   Evaluate the quality and limitations of AI responses
+
+-   Apply data and modeling reasoning
+
+-   Synthesize understanding in your own words
+
+This activity mirrors how data scientists increasingly use AI in professional practice: as a tool that requires **human judgment**, **verification**, and **interpretation**.
+
+## Learning Objectives
+
+By completing this activity, you will be able to:
+
+1.  Use AI strategically to support learning in data science
+
+2.  Critically evaluate AI-generated explanations and claims
+
+3.  Demonstrate conceptual understanding of a data science topic
+
+4.  Communicate statistical reasoning clearly and accurately
+
+5.  Reflect on what human expertise adds beyond AI output
+
+## Task Overview
+
+Your group will:
+
+1.  Receive a data science question or concept from the course
+
+2.  Use an AI to help you learn about this topic
+
+3.  Critically evaluate the AI’s responses
+
+4.  Produce a corrected, human-authored explanation
+
+5.  Present your findings to the class
+
+## Group Structure
+
+-   Groups of 3 (or 4) students
+
+-   **Each group** completes one shared investigation
+
+-   **Each student** has a *defined role* and submits an *individual reflection*
+
+## Assigned Roles (Rotate Within the Group)
+
+Each group must assign the following roles:
+
+1.  [**Prompt Engineer**]{.red}
+
+*Primary responsibility:* Design purposeful prompts with a clear learning goal and document the AI interaction log.
+
+2.  [**Data Science Auditor**]{.red}
+
+*Primary responsibility:* Checks AI responses for correctness, assumptions, and limitations.
+
+3.  [**Synthesizer**]{.red}
+
+*Primary responsibility:* Convert the group work into a clear human authored explanation and leads the presentation.
+
+## Approved AI Use
+
+You are expected to use AI for this assignment.
+
+You must:
+
+-   Design your own prompts
+
+-   Document AI interactions
+
+-   Critically evaluate AI responses
+
+You may **NOT**:
+
+-   Submit AI text verbatim as your own explanation
+
+-   Rely on AI without critique or verification
+
+-   Hide or omit AI usage
+
+**Transparency is required.**
+
+## Required Deliverables
+
+1.  [**AI Interaction Log (Group Submission)**]{.blue}
+
+Submit a short log documenting your AI use.
+
+Include:
+
+-   3–5 prompts used
+-   Selected AI responses
+-   A brief annotation after each response addressing:
+    -   What was the goal of this prompt?
+    -   What did AI get right?
+    -   What was incomplete, misleading, or incorrect?
+
+This log is evidence of your learning process.
+
+2.  [**Human-Authored Synthesis (Group Submission)**]{.blue}
+
+Write a clear explanation of the concept in your own words.
+
+Your synthesis must:
+
+-   Be conceptually accurate
+
+-   Improve upon or correct AI output
+
+-   Explain assumptions, limitations, or implications
+
+-   Be understandable to a classmate
+
+AI-generated text should not appear verbatim.
+
+3.  [**Group Presentation (5–7 minutes)**]{.blue}
+
+Your presentation must follow this structure:
+
+(a) The question or concept you investigated
+(b) What AI suggested
+(c) Where AI fell short or made errors
+(d) Your corrected understanding
+(e) One key takeaway for future data science work
+
+Slides should be clear, concise, and focused on reasoning rather than volume.
+
+4.  [**Individual Reflection (Individual Submission)**]{.blue}
+
+Each student submits a **150–200** word reflection addressing:
+
+-   What did you personally learn from this activity?
+-   What did AI help you understand?
+-   What did you need to add, correct, or rethink yourself?
+-   How did your role contribute to the group’s work?
+
+This reflection is used to assess individual understanding and contribution.
+
+## Evaluation Criteria
+
+Your group work will be evaluated based on:
+
+-   Quality and intentionality of AI prompts
+-   Critical evaluation of AI responses
+-   Depth and accuracy of data science understanding
+-   Quality of human synthesis beyond AI output
+-   Clarity and organization of communication
+
+Individual reflections will be used to adjust individual scores if contributions differ.
+
+### Grading Rubric
+
+**Total: 100 points**
+
+<!-- Below is a **Canvas-ready analytic rubric** that **exactly matches**: -->
+
+<!-- * the topic-assignment instructions, -->
+
+<!-- * the student-facing handout, and -->
+
+<!-- * your grading intent for AI-supported learning in MATH 3570. -->
+
+<!-- It is designed so that **topic choice is irrelevant**, AI output quality does not affect grades, and **critical reasoning is the dominant signal**. -->
+
+<!-- You may copy this directly into Canvas and create the rubric criterion by criterion. -->
+
+<!-- --- -->
+
+<!-- # Group AI Learning Activity – Grading Rubric -->
+
+This rubric is used for **all groups**, regardless of topic. Grades reflect **how you used AI to learn data science**, not what AI produced.
+
+#### AI Prompt Quality and Intentionality (20 points)
+
+**Evaluates**: Whether AI was used strategically to support learning.
+
+| Level | Description | Points |
+|----------|----------------------------------------------------|----------|
+| **Excellent** | Prompts are clear, targeted, and iterative. Each prompt has a specific learning goal, and follow-up prompts show refinement based on prior AI responses. | 18–20 |
+| **Competent** | Prompts are reasonable and relevant but mostly one-shot or broad. Limited evidence of iteration or strategic refinement. | 14–17 |
+| **Developing** | Prompts are vague, generic, or copied. Little connection between prompts and learning goals. | 8–13 |
+| **Insufficient** | Prompts are missing, inappropriate, or unrelated to the assigned topic. | 0–7 |
+
+#### Documentation of AI Use (AI Interaction Log) (15 points)
+
+**Evaluates**: Transparency and completeness of AI documentation.
+
+| Level | Description | Points |
+|----------|----------------------------------------------------|----------|
+| **Excellent** | AI interaction log is complete, well-organized, and clearly annotated. Goals, strengths, and limitations of AI responses are explicitly documented. | 14–15 |
+| **Competent** | AI interaction log is mostly complete with basic annotations. Some explanations lack depth or clarity. | 11–13 |
+| **Developing** | AI interaction log is incomplete or weakly annotated. Limited explanation of AI strengths or limitations. | 6–10 |
+| **Insufficient** | AI use is poorly documented, unclear, or missing. | 0–5 |
+
+#### Critical Evaluation of AI Output (25 points)
+
+**Evaluates**: Ability to question, critique, and challenge AI responses.
+
+| Level | Description | Points |
+|----------|----------------------------------------------------|----------|
+| **Excellent** | Clearly identifies specific limitations, assumptions, or errors in AI output and explains why they matter using statistical reasoning. | 23–25 |
+| **Competent** | Identifies some limitations or weaknesses in AI output, but explanations are partial or underdeveloped. | 18–22 |
+| **Developing** | Mentions limitations superficially or inconsistently. Limited justification or reasoning. | 10–17 |
+| **Insufficient** | Accepts AI output uncritically or fails to identify meaningful issues. | 0–9 |
+
+#### Data Science Understanding and Human Synthesis (30 points)
+
+**Evaluates**: Depth, accuracy, and originality of the group’s explanation.
+
+| Level | Description | Points |
+|----------|----------------------------------------------------|----------|
+| **Excellent** | Explanation is accurate, conceptually clear, and fully human-authored. Demonstrates strong statistical reasoning and clearly improves upon AI output. | 27–30 |
+| **Competent** | Explanation is mostly accurate and understandable but adds limited insight beyond AI output. Minor gaps or imprecision. | 21–26 |
+| **Developing** | Explanation shows partial understanding, conceptual gaps, or heavy reliance on AI phrasing. | 12–20 |
+| **Insufficient** | Explanation is incorrect, unclear, or largely AI-generated with minimal human synthesis. | 0–11 |
+
+#### Communication and Presentation Quality (10 points)
+
+**Evaluates**: Clarity and structure of the group presentation.
+
+| Level | Description | Points |
+|----------|---------------------------------------------------|----------|
+| **Excellent** | Presentation is well-structured, clear, and focused on reasoning. Effectively explains what AI missed and what the group learned. | 9–10 |
+| **Competent** | Presentation is understandable but uneven or overly descriptive. Some focus on content rather than reasoning. | 7–8 |
+| **Developing** | Presentation lacks clarity or structure. Key points are unclear or poorly explained. | 4–6 |
+| **Insufficient** | Presentation is disorganized, incomplete, or difficult to follow. | 0–3 |
+
+<!-- --- -->
+
+#### Individual Adjustment (Reflection-Based)
+
+Individual reflections may be used to **adjust individual scores up or down** if:
+
+-   A student demonstrates substantially stronger or weaker understanding than the group product suggests
+-   A student did not meaningfully contribute to the group’s work
+
+<!-- --- -->
+
+#### Rubric Summary
+
+| Criterion                              | Points  |
+|----------------------------------------|---------|
+| AI Prompt Quality                      | 20      |
+| AI Documentation                       | 15      |
+| Critical Evaluation of AI              | 25      |
+| Data Science Understanding & Synthesis | 30      |
+| Presentation Quality                   | 10      |
+| **Total**                              | **100** |
+
+<!-- --- -->
+
+<!-- ## Instructor Notes (Not Visible to Students) -->
+
+<!-- * Topic difficulty is intentionally neutralized -->
+
+<!-- * AI correctness does not influence scores -->
+
+<!-- * Human judgment, explanation, and critique dominate grading -->
+
+<!-- * This rubric supports defensible differentiation across groups -->
+
+<!-- --- -->
+
+<!-- If you want next: -->
+
+<!-- * A **Canvas import JSON** version of this rubric -->
+
+<!-- * A **one-page grading checklist** for faster scoring -->
+
+<!-- * A **student-friendly rubric summary** -->
+
+<!-- * Calibration examples (A-level vs C-level work) -->
+
+<!-- Just tell me. -->

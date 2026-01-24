@@ -6,7 +6,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 *This schedule will be updated as the semester progresses, with all changes documented here*.
 
 ::: column-screen-inset-right
-| Week | Date | Topic | Materials | Lab Activity | Learn from AI | Project |
+| Week | Date | Topic | Materials | Lab Activity | AI Activity | Project |
 |:---------:|-----------|-----------|:---------:|:---------:|:---------:|-----------|
 | 1 | Tue, Jan 13 | Greetings; Overview of Data Science | [🖥️syllabus](slides/01-syllabus-slides.html) [🖥️overview](slides/02-datascience-slides.html) |  |  |  |
 |  | Thu, Jan 15 | Posit Cloud | [🖥️posit](slides/03-posit-slides.html) | [📋 posit](/exercise/lab00-posit.html) [📋01](/exercise/lab01-rscript.html) |  |  |
@@ -14,30 +14,30 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 |  | Thu, Jan 22 | Quarto: YAML and Markdown | [🖥️quarto](slides/05-quarto-slides.html) | [📋02](/exercise/lab02-quarto.html) [📋03](/exercise/lab03-markdown.html) |  | [✅ Team up!](team.html) |
 | 3 | Tue, Jan 27 | Quarto: Code Chunk |  | [📋04](/exercise/lab04-chunk.html) |  |  |
 |  | Thu, Jan 29 | R and Python Syntax | [🖥️syntax](/slides/06-syntax-slides.html) | [📋05](/exercise/lab05-rtype.html) [📋06](/exercise/lab06-py.html) |  | Team up Due! |
-| 4 | Tue, Feb 3 | R Tidyverse | 🖥️package | 📋07 📋08 |  |  |
+| 4 | Tue, Feb 3 | R Tidyverse | 🖥️package | 📋07 📋08 | 🤖 AI Project Guideline |  |
 |  | Thu, Feb 5 | Python NumPy/Pandas |  | 📋09 |  |  |
 | 5 | Tue, Feb 10 | Data Importing | 🖥️import | 📋10 |  |  |
-|  | Thu, Feb 12 | Data Visualization-ggplot2 | 🖥️ggplot | 📋11 |  |  |
+|  | Thu, Feb 12 | Data Visualization-ggplot2 | 🖥️ggplot | 📋11 | Activity 1 |  |
 | 6 | Tue, Feb 17 | Data Visualization-categorical and numerical data | 🖥️visualization | 📋12 📋13 |  |  |
-|  | Thu, Feb 19 | Interactive Data Visualization | 🖥️interactive-viz | 📋14 |  |  |
+|  | Thu, Feb 19 | Interactive Data Visualization | 🖥️interactive-viz | 📋14 | Activity 2 |  |
 | 7 | Tue, Feb 24 | Data Wrangling - one data frame | 🖥️dplyr-1 | 📋15 |  |  |
 |  | **Thu, Feb 26** | **Mini Project 1 Presentation: Exploratory Data Storytelling** |  |  |  |  |
 | 8 | Tue, Mar 3 | Data Wrangling - two data frames | 🖥️dplyr-2 | 📋16 |  |  |
-|  | Thu, Mar 5 | Data Wrangling - tidyr | 🖥️tidyr | 📋17 |  |  |
+|  | Thu, Mar 5 | Data Wrangling - tidyr | 🖥️tidyr | 📋17 | Activity 3 |  |
 | 9 | Tue, Mar 10 | ***NO CLASS: Spring break*** |  |  |  |  |
 |  | Thu, Mar 12 | ***NO CLASS: Spring break*** |  |  |  |  |
 | 10 | Tue, Mar 17 | Probabilistic and Statistical Simulation | 🖥️probstat | 📋18 📋19 |  |  |
-|  | Thu, Mar 19 | Linear Regression | 🖥️linear-regression |  |  |  |
+|  | Thu, Mar 19 | Linear Regression | 🖥️linear-regression |  | Activity 4 |  |
 | 11 | Tue, Mar 24 | Multiple Linear Regression |  | 📋20 |  |  |
 |  | **Thu, Mar 26** | **Mini Project 2 Presentation: Data Wrangling and Pipelines** |  |  |  |  |
 | 12 | Tue, Mar 31 | Logistic Regression | 🖥️logistic-regression |  |  |  |
 |  | Thu, Apr 2 | ***NO CLASS: Easter break*** |  |  |  |  |
 | 13 | Tue, Apr 7 | Logistic Regression |  | 📋21 |  |  |
-|  | Thu, Apr 9 | K-Nearest Neighbors | 🖥️ K-Nearest Neighbors |  |  |  |
+|  | Thu, Apr 9 | K-Nearest Neighbors | 🖥️ K-Nearest Neighbors |  | Activity 5 |  |
 | 14 | Tue, Apr 14 | Decision Trees | 🖥️ Decision Trees | 📋22 |  |  |
 |  | **Thu, Apr 16** | **Mini Project 3 Presentation: Supervised Learning** |  |  |  |  |
 | 15 | Tue, Apr 21 | Principal Component Analysis | 🖥️Principal Component Analysis |  |  |  |
-|  | Thu, Apr 23 | Principal Component Analysis |  | 📋23 |  | 📂 Final Project Proposal Due |
+|  | Thu, Apr 23 | Principal Component Analysis |  | 📋23 | Activity 6 | 📂 Final Project Proposal Due |
 | 16 | Tue, Apr 28 | K-Means Clustering | 🖥️K-means Clustering |  |  |  |
 |  | Thu, Apr 30 | K-Means Clustering |  | 📋24 |  |  |
 | 17 | **Mon, May 4** | **Final Project Presentation (10:30 AM - 12:30 PM)** |  |  |  | 📂 Final Project Materials Due |

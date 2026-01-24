@@ -1,0 +1,18 @@
+---
+title: "AI Activities"
+listing:
+  contents: ai
+  sort: title
+  sort-ui: false
+  filter-ui: false
+  type: table
+  fields: [title, subtitle, description]
+  field-display-names:
+    title: "No."
+    subtitle: "Title"
+    # description: "Due date"
+---
+
+More activities to be added as the semester progresses.
+
+Teams are randomly assigned to a project.

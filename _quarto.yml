@@ -52,6 +52,15 @@ website:
           - href: course-syllabus.qmd
             text: Syllabus
 
+      - section: "AI Activities"
+        contents:
+          - href: ai_act_guide.qmd
+            text: Guideline and Policy
+          - href: ai_example.qmd
+            text: AI Project Example
+          - href: ai.qmd
+            text: AI Project Topics
+
       - section: "Mini Project"
         contents:
           - href: present-description.qmd
@@ -65,6 +74,7 @@ website:
             text: Guideline and Policy
           - href: present-work-final.qmd
             text: Project Group and Proposal
+
 
       # - section: "Weekly materials"
       #   contents:

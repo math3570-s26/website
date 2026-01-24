@@ -104,7 +104,7 @@ By the end of the semester, you will be able to...
 
   +   **25%** In-class lab activities
   
-  +   **10%** In-class AI activities
+  +   **10%** AI activities
   
   +   **45%** Mini projects
   

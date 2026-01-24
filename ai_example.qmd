@@ -23,7 +23,7 @@ Responsibilities
 
 -   Write annotations for each prompt and response pair
 
-### Statistical Auditor
+### Data Science Auditor
 
 Responsibilities
 
@@ -45,7 +45,7 @@ Responsibilities
 
 ## Dataset
 
-insideairbnb_chicago_detailed_listings_messy_600_2025_09_22.csv
+[insideairbnb_chicago_listings_sample_600_2025_09_22.csv](/documents/insideairbnb_chicago_listings_sample_600_2025_09_22.csv)
 
 ## What you will submit
 
@@ -119,7 +119,7 @@ Important rule
 
 ### Step 4 Import the dataset and run required validation checks
 
-Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed.
+Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. **A short summary without numbers or outputs does not count as evidence**.
 
 #### Required post import validation checklist (submit evidence for every item)
 
@@ -227,14 +227,14 @@ Your reflection must match your assigned role.
 
 ## Submission Examples
 
-[Excellent AI Interaction Log](/documents/ai_prompts.docx)
+[Excellent AI Interaction Log](/documents/ai_prompts.pdf)
 
-[Excellent Human-Authored Synthesis](/documents/ai_audit.docx)
+[Excellent Human-Authored Synthesis](/documents/ai_audit.pdf)
 
-[Excellent Individual Reflections](/documents/ai_reflection.docx)
+[Excellent Individual Reflections](/documents/ai_reflection.pdf)
 
-[Insufficient AI Interaction Log](/documents/ai_prompts_bad.docx)
+[Insufficient AI Interaction Log](/documents/ai_prompts_bad.pdf)
 
-[Insufficient Human-Authored Synthesis](/documents/ai_audit_bad.docx)
+[Insufficient Human-Authored Synthesis](/documents/ai_audit_bad.pdf)
 
-[Insufficient Individual Reflections](/documents/ai_reflection_bad.docx)
+[Insufficient Individual Reflections](/documents/ai_reflection_bad.pdf)

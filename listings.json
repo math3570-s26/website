@@ -1,37 +1,5 @@
 [
   {
-    "listing": "/lab.html",
-    "items": [
-      "/exercise/lab-sol-s25-midterm.html",
-      "/exercise/lab02-quarto.html",
-      "/exercise/lab03-markdown.html",
-      "/exercise/lab04-chunk.html",
-      "/exercise/lab05-rtype.html",
-      "/exercise/lab06-py.html",
-      "/exercise/lab07-plot.html",
-      "/exercise/lab08-tibble.html",
-      "/exercise/lab09-numpy.html",
-      "/exercise/lab10-import.html",
-      "/exercise/lab11-ggplot2.html",
-      "/exercise/lab12-facet.html",
-      "/exercise/lab13-visualization.html",
-      "/exercise/lab14-interactive.html",
-      "/exercise/lab15-dplyr.html",
-      "/exercise/lab16-join.html",
-      "/exercise/lab17-tidyr.html",
-      "/exercise/lab18-prob.html",
-      "/exercise/lab19-ci.html",
-      "/exercise/lab20-slr.html",
-      "/exercise/lab21-logistic.html",
-      "/exercise/lab22-knn.html",
-      "/exercise/lab23-pca.html",
-      "/exercise/lab24-kmeans.html",
-      "/exercise/lab00-git.html",
-      "/exercise/lab00-posit.html",
-      "/exercise/lab01-rscript.html"
-    ]
-  },
-  {
     "listing": "/ai.html",
     "items": []
   }

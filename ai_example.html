@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Dr.&nbsp;Cheng-Han Yu">
 
-<title>MATH/COSC 3570 Mini Project Presentation – MATH/COSC 3570 - Spring 2026</title>
+<title>AI Activitity Example – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./present-work.html" rel="next">
-<link href="./ai.html" rel="prev">
+<link href="./ai.html" rel="next">
+<link href="./ai_act_guide.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="MATH/COSC 3570 Mini Project Presentation – MATH/COSC 3570 - Spring 2026">
+<meta property="og:title" content="AI Activitity Example – MATH/COSC 3570 - Spring 2026">
 <meta property="og:description" content="Homepage for MATH/COSC 3570 - Introduction to Data Science at Marquette University, Spring 2026.">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
@@ -251,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description.html">Mini Project</a></li><li class="breadcrumb-item"><a href="./present-description.html">Guideline and Policy</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai_example.html">AI Project Example</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -328,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai_example.html" class="sidebar-item-text sidebar-link">
+  <a href="./ai_example.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">AI Project Example</span></a>
   </div>
 </li>
@@ -351,7 +352,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-description.html" class="sidebar-item-text sidebar-link active">
+  <a href="./present-description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
@@ -391,30 +392,55 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#topic-data-importing-and-hidden-assumptions" id="toc-topic-data-importing-and-hidden-assumptions" class="nav-link active" data-scroll-target="#topic-data-importing-and-hidden-assumptions">Topic: Data Importing and Hidden Assumptions</a></li>
+  <li><a href="#assigned-roles-3-students" id="toc-assigned-roles-3-students" class="nav-link" data-scroll-target="#assigned-roles-3-students">Assigned Roles (3 students)</a>
+  <ul class="collapse">
+  <li><a href="#prompt-engineer" id="toc-prompt-engineer" class="nav-link" data-scroll-target="#prompt-engineer">Prompt Engineer</a></li>
+  <li><a href="#statistical-auditor" id="toc-statistical-auditor" class="nav-link" data-scroll-target="#statistical-auditor">Statistical Auditor</a></li>
+  <li><a href="#synthesizer" id="toc-synthesizer" class="nav-link" data-scroll-target="#synthesizer">Synthesizer</a></li>
+  </ul></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
+  <li><a href="#step-by-step-tasks" id="toc-step-by-step-tasks" class="nav-link" data-scroll-target="#step-by-step-tasks">Step by step tasks</a>
+  <ul class="collapse">
+  <li><a href="#step-1-define-your-investigation-question-before-using-ai" id="toc-step-1-define-your-investigation-question-before-using-ai" class="nav-link" data-scroll-target="#step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</a></li>
+  <li><a href="#step-2-use-ai-strategically-3-to-5-prompts" id="toc-step-2-use-ai-strategically-3-to-5-prompts" class="nav-link" data-scroll-target="#step-2-use-ai-strategically-3-to-5-prompts">Step 2 Use AI strategically (3 to 5 prompts)</a></li>
+  <li><a href="#step-3-create-the-ai-interaction-log" id="toc-step-3-create-the-ai-interaction-log" class="nav-link" data-scroll-target="#step-3-create-the-ai-interaction-log">Step 3 Create the AI Interaction Log</a></li>
+  <li><a href="#step-4-import-the-dataset-and-run-required-validation-checks" id="toc-step-4-import-the-dataset-and-run-required-validation-checks" class="nav-link" data-scroll-target="#step-4-import-the-dataset-and-run-required-validation-checks">Step 4 Import the dataset and run required validation checks</a></li>
+  <li><a href="#step-5-write-the-human-authored-synthesis-group" id="toc-step-5-write-the-human-authored-synthesis-group" class="nav-link" data-scroll-target="#step-5-write-the-human-authored-synthesis-group">Step 5 Write the Human Authored Synthesis (group)</a></li>
+  <li><a href="#step-6-presentation-slides-group" id="toc-step-6-presentation-slides-group" class="nav-link" data-scroll-target="#step-6-presentation-slides-group">Step 6 Presentation slides (group)</a></li>
+  </ul></li>
+  <li><a href="#individual-reflection-each-student" id="toc-individual-reflection-each-student" class="nav-link" data-scroll-target="#individual-reflection-each-student">Individual Reflection (each student)</a></li>
+  <li><a href="#submission-examples" id="toc-submission-examples" class="nav-link" data-scroll-target="#submission-examples">Submission Examples</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai_example.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description.html">Mini Project</a></li><li class="breadcrumb-item"><a href="./present-description.html">Guideline and Policy</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai_example.html">AI Project Example</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">MATH/COSC 3570 Mini Project Presentation</h1>
+<h1 class="title">AI Activitity Example</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Cheng-Han Yu </p>
+          </div>
+  </div>
     
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 24, 2026</p>
-    </div>
-  </div>
     
   </div>
   
@@ -423,91 +449,210 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><span class="red"><strong>This is the latest version of project guideline. It may be revised later.</strong></span></p>
-<!-- The midterm mini project is about [**data visualization**]{.blue}. **Show your fun project! Let's go!!** 😎 -->
-<!-- # Timeline and Things to Do -->
-<!-- -   ~~**Team up!** You will be working as **a group of 5** (one team with 4). One of you, please email me~~ -->
-<!--     (1) ~~your team [*member list*]{.blue}~~ -->
-<!--     (2) ~~your [*team name*]{.blue} (Last year we have team names "*Data Dawgs*", "*ggplot3*", "*GitClub*", "*Red Pandas*", "*Big Meta Watchers*")~~ -->
-<!--     ~~by [**Friday, 2/28 11:59 PM**]{.red}.~~ -->
-<!-- -   ~~**Proposal**. Please send me a [**one-page PDF**]{.blue} describing what you are going to do for your project (no word limit) with your **project title** by [**Friday, 3/7 11:59 PM**]{.red}.~~ -->
-<!-- -   **Materials**. Please share your [**entire work**]{.blue} (slides, code, data, etc) by [**Wednesday, 3/19 11:59 PM**]{.red}. -->
-<!-- -   **Presentation**. You will be presenting your project in class on [**Thursday, 3/20, 2 - 3:15 PM**]{.red}. -->
-<!-- **\[Note\]:** **03/10 - 03/16** is spring break. Be aware of time, and plan early! -->
-<!-- # Policy -->
-<!-- <!-- - Date and Time: **Monday, 5/8/2023 10:30 AM - 12:30 PM** -->
-<p>–&gt;</p>
-<!-- ## **Team up!** -->
-<!-- -   *You lose 3 points of your project grade if you don't meet the requirement or miss the deadline.* -->
-<!-- -   You will be *randomly* assigned to a group if you do not belong to any group before the deadline. -->
-<!-- ## **Proposal** -->
-<!-- -   *Each one of you loses 3 points of your project grade if you don't meet the requirement or miss the deadline.* -->
-<!-- -   Your proposal (in PDF) should include three parts: -->
-<!--     -   Project **title** -->
-<!--     -   Members **duty**. For example, -->
-<!--         -   John and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc. -->
-<!--     -   The **description of the data set you use** in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in @sec-data. -->
-<!--     -   The **goal of your project**. For example, what are questions you'd like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested? -->
-<!-- -   Although it is risky, you can change your project topic after you submit your proposal if you decide to do something else. -->
-<!-- ## **Materials** -->
-<!-- -   *Each one of you loses 3 points of your project grade if you don't meet the requirement or miss the deadline.* -->
-<!-- -   You need to share your entire work, including slides, code, etc so that anyone is able to **reproduce your outputs and plots shown in the slides**. -->
-<!-- -   The code must be shared via a **Quarto file**. -->
-<!-- ## **Presentation** -->
-<!-- -   Each group presentation is about **5 and 6 minute** long, followed by about **1 minute** Q&A. If your presentation is too short or too long, *every one of you loses 3 points* of your project grade. -->
-<!-- # Project Content, Evaluation and Grading -->
-<!-- The goal of the project is data visualization. Through this project, you use [charts to provide insights and explore patterns, trends, or other relationships between variables that may benefit decision making.]{.red} For example, you find that NBA players with higher 3pt percentage tend to earn more, but free throw percentage seems has no effect on player's salary. -->
-<!-- You presentation should include the following aspects. -->
-<!-- -   **Data and variable explanation**. Which data you use? What variables you are choosing for visualization? Why choose those variables? -->
-<!-- -   **Visualization**. Include at least two different charts to show your data. Make them beautiful and informative. -->
-<!-- -   **Interpretation and Insights**. What do you learn from your charts? Explain your plots, and provide useful insights. -->
-<!-- Your slides quality and oral presentation and clarity will also be evaluated. Please see @sec-grading for more grading details. -->
-<!-- ## Data {#sec-data} -->
-<!-- The available data sets for this projects can be downloaded from [**kaggle**](https://www.kaggle.com/), a data science competition platform sharing various data and projects. Please choose one data set for your project from the following: -->
-<!-- -   [World Happiness Report](https://www.kaggle.com/datasets/unsdsn/world-happiness?resource=download) -->
-<!-- <!-- -   [Climate Change: Earth Surface Temperature Data](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data/data) -->
-<p>–&gt;</p>
-<!-- -   [Supermarket Sales Data](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales) -->
-<!-- -   [NBA Players stats since 1950](https://www.kaggle.com/datasets/drgilermo/nba-players-stats/data) -->
-<!-- -   [Airline Passenger Satisfaction](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction) -->
-<!-- <!-- -   [U.S. Pollution Data](https://www.kaggle.com/datasets/sogun3/uspollution/data)  -->
-<p>–&gt;</p>
-<!-- -   [Auto-mpg dataset](https://www.kaggle.com/datasets/uciml/autompg-dataset) -->
-<!-- -   [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows/data) -->
-<!-- -   [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/data) -->
-<!-- -   [Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales/data) -->
-<!-- -   [Spotify Tracks Dataset](https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset/code) -->
-<!-- -   [US Census Demographic Data](https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data) -->
-<!-- **\[Note:\] Those are real data sets that contains many observations and variables. You just need to pick a few variables for plotting and analysis.** -->
-<!-- **\[Note:\] You may use some other data, but the data set cannot be the one used in the course (like ggplot2::mpg). The data set needs to be as sophisticated as the listed data sets above. Dr. Yu and TA will evaluate your data quality.** -->
-<!-- ## Evaluation and Grading {#sec-grading} -->
-<!-- -   Your project performance is evaluated by *Dr. Yu and the TA* that is based on the following rubric: -->
-<!-- | Criteria | Excellent | Good | Fair | Emerging | -->
-<!-- |---------------|---------------|---------------|---------------|---------------| -->
-<!-- | **Data Understanding (15%)** | Clearly explains the dataset, its source, and key variables. Provides meaningful insights. | Shows good understanding with clear explanations and some strong insights. A few minor details could be expanded. | Shows a basic grasp of the dataset but needs more clarity or depth in explaining its significance and insights. | Needs further understanding of the dataset. More details and insights would strengthen the analysis. | -->
-<!-- | **Visualization Quality (30%)** | Visualizations are clear, well-chosen, and enhance understanding. Thoughtful design choices make the data engaging and accessible. | Strong visuals that support the data well. Some minor refinements could improve clarity or impact. | Basic visuals that convey information but could be more refined or better suited to the dataset. | Needs improvement in visualization selection or clarity. More attention to detail will enhance effectiveness. | -->
-<!-- | **Output Interpretation and Insights (25%)** | Thoughtful and well-supported insights demonstrate strong analytical skills. Patterns and trends are clearly explained with compelling interpretations. | Provides solid insights with good explanations. Some areas could benefit from deeper analysis. | Insights are present but may lack depth or clear connections to the data. Some interpretations need more support. | Insights need further development. Strengthening data interpretation will enhance overall understanding. | -->
-<!-- | **Slides quality (15%)** | Slides are visually appealing, well-organized, and complement the spoken presentation. Effective use of text, images, and color enhances clarity. | Slides are clear and well-structured but could be slightly improved in design or organization. | Slides contain useful content but may be text-heavy, cluttered, or lack visual appeal. | Slides need better organization and design to support the presentation effectively. | -->
-<!-- | **Presentation Clarity and Interaction (15%)** | The presentation is well-organized, engaging, and confident. The team communicates ideas effectively and transitions smoothly. | A well-structured and clear presentation. Minor adjustments could improve flow or engagement. | The presentation is understandable but could be more organized or engaging. Some transitions may be unclear. | More practice and organization will help improve clarity and engagement. | -->
-<!-- : Rubric -->
-<!-- -   Your project grade will be -->
-<!-- > Project grade = performance grade - points lost due to violation of policy -->
-<!-- [*with adjustement based on your performance of duty*]{.green}. -->
-<!-- ## Peer Individual Performance Evaluation -->
-<!-- -   In each team, **two** group members will win the best contribution reward that add extra points to the project grade. -->
-<!-- -   Each one of you has **two** votes to nominate one or two of your teammates who you think contribute the most to your group project. -->
-<!-- -   You can nominate -->
-<!--     -   two teammates, each receiving one vote. -->
-<!--     -   one teammate who receives two votes. -->
-<!-- -   You **cannot** nominate yourself. -->
-<!-- -   If you **don't** vote, or you just use **one vote**, you can't be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward. -->
-<!-- -   If there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward. -->
-<!-- ```{r} -->
-<!-- #| echo: false -->
-<!-- knitr::include_graphics("./images/vote.png") -->
-<!-- ``` -->
+<section id="topic-data-importing-and-hidden-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="topic-data-importing-and-hidden-assumptions">Topic: Data Importing and Hidden Assumptions</h2>
+<p>You will use an AI tool as a learning partner to investigate a core data science reality:</p>
+<blockquote class="blockquote">
+<p>Importing data is not a neutral step. Import tools make assumptions about missing values, data types, dates, text encoding, and formatting. When assumptions are wrong, the dataset can be changed silently before analysis begins.</p>
+</blockquote>
+<p>You are graded on how you <strong>think, critique, and explain</strong>, not on whether AI gives perfect answers.</p>
+</section>
+<section id="assigned-roles-3-students" class="level2">
+<h2 class="anchored" data-anchor-id="assigned-roles-3-students">Assigned Roles (3 students)</h2>
+<section id="prompt-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-engineer">Prompt Engineer</h3>
+<p>Responsibilities</p>
+<ul>
+<li><p>Create 3 to 5 purposeful AI prompts</p></li>
+<li><p>Save AI responses and build the AI Interaction Log</p></li>
+<li><p>Write annotations for each prompt and response pair</p></li>
+</ul>
+</section>
+<section id="statistical-auditor" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-auditor">Statistical Auditor</h3>
+<p>Responsibilities</p>
+<ul>
+<li><p>Identify hidden assumptions in AI guidance</p></li>
+<li><p>Design and run post import validation checks</p></li>
+<li><p>Provide evidence for at least two hidden assumptions</p></li>
+</ul>
+</section>
+<section id="synthesizer" class="level3">
+<h3 class="anchored" data-anchor-id="synthesizer">Synthesizer</h3>
+<p>Responsibilities</p>
+<ul>
+<li><p>Write the Human Authored Synthesis in clear course language</p></li>
+<li><p>Build slides using the required structure</p></li>
+<li><p>Ensure the final work is consistent and concise</p></li>
+</ul>
+</section>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>insideairbnb_chicago_detailed_listings_messy_600_2025_09_22.csv</p>
+</section>
+<section id="what-you-will-submit" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h2>
+<ul>
+<li><p>Group submissions</p>
+<ul>
+<li><p>AI Interaction Log</p></li>
+<li><p>Human Authored Synthesis</p></li>
+<li><p>Slides for a 5 to 7 minute presentation</p></li>
+</ul></li>
+<li><p>Individual submission</p>
+<ul>
+<li>Individual Reflection (150 to 200 words)</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-by-step-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-tasks">Step by step tasks</h2>
+<section id="step-1-define-your-investigation-question-before-using-ai" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</h3>
+<p>Write 2 to 3 sentences answering:</p>
+<ul>
+<li><p>What import problem are we investigating</p></li>
+<li><p>Why this problem matters in real data science</p></li>
+</ul>
+<p>You must focus on hidden assumptions, for example assumptions about missing values, types, dates, or text encoding.</p>
+</section>
+<section id="step-2-use-ai-strategically-3-to-5-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-use-ai-strategically-3-to-5-prompts">Step 2 Use AI strategically (3 to 5 prompts)</h3>
+<p>Your prompts must be purposeful and iterative.</p>
+<p>Prompt requirements</p>
+<ul>
+<li><p>At least 1 prompt about missing values and missing value tokens</p></li>
+<li><p>At least 1 prompt about type guessing and type coercion risks</p></li>
+<li><p>At least 1 prompt about date parsing and mixed date formats</p></li>
+<li><p>At least 1 prompt about validation steps after import</p></li>
+</ul>
+<section id="suggested-prompt-starters-you-may-adapt" class="level4">
+<h4 class="anchored" data-anchor-id="suggested-prompt-starters-you-may-adapt">Suggested prompt starters (you may adapt)</h4>
+<ul>
+<li><p><em>“I am importing a CSV where missing values appear as blank, NA, N A, N slash A, and a period. What should I do in R or Python to import correctly and verify it”</em></p></li>
+<li><p><em>“What are the most common silent errors from automatic type guessing during CSV import”</em></p></li>
+<li><p><em>“If a date column mixes formats like YYYY MM DD and MM slash DD slash YYYY, what should I check after import”</em></p></li>
+<li><p><em>“Give me a post import validation checklist for columns that look numeric but are stored as text, such as currency and percentages”</em></p></li>
+</ul>
+</section>
+</section>
+<section id="step-3-create-the-ai-interaction-log" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-create-the-ai-interaction-log">Step 3 Create the AI Interaction Log</h3>
+<p>For each prompt, include:</p>
+<ul>
+<li><p>Prompt goal</p></li>
+<li><p>The AI response excerpt you used</p></li>
+<li><p>Your annotation:</p>
+<ul>
+<li><p>What AI got right</p></li>
+<li><p>What AI assumed</p></li>
+<li><p>What was missing, misleading, or incorrect</p></li>
+</ul></li>
+</ul>
+<p>Important rule</p>
+<ul>
+<li>You may not paste AI text into your final synthesis verbatim.</li>
+</ul>
+</section>
+<section id="step-4-import-the-dataset-and-run-required-validation-checks" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-import-the-dataset-and-run-required-validation-checks">Step 4 Import the dataset and run required validation checks</h3>
+<p>Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed.</p>
+<section id="required-post-import-validation-checklist-submit-evidence-for-every-item" class="level4">
+<h4 class="anchored" data-anchor-id="required-post-import-validation-checklist-submit-evidence-for-every-item">Required post import validation checklist (submit evidence for every item)</h4>
+<p><strong>1. Rows and columns</strong></p>
+<ul>
+<li>Confirm the dataset has 600 rows and 79 columns after import.</li>
+</ul>
+<p><strong>2. Missing value tokens</strong></p>
+<ul>
+<li><p>Identify at least three different missing value representations present in the file (examples include NA, N slash A, blank, period).</p></li>
+<li><p>Report how many appear in at least two columns of your choice.</p></li>
+</ul>
+<p><strong>3. Date columns</strong></p>
+<ul>
+<li><p>Identify at least two date columns (examples include last_scraped, host_since).</p></li>
+<li><p>Show evidence that more than one date format exists in the data.</p></li>
+<li><p>State whether your import tool parsed them as dates or left them as text.</p></li>
+</ul>
+<p><strong>4. Percent columns stored as text</strong></p>
+<ul>
+<li><p>Check host_response_rate and host_acceptance_rate.</p></li>
+<li><p>Show the raw format you observe (for example values that include a percent sign).</p></li>
+<li><p>State what type your import tool assigned and what conversion would be required.</p></li>
+</ul>
+<p><strong>5. Currency stored as text</strong></p>
+<ul>
+<li><p>Check the price column.</p></li>
+<li><p>Show the raw format you observe (for example dollar sign and commas).</p></li>
+<li><p>State what type your import tool assigned and what conversion would be required.</p></li>
+</ul>
+<p><strong>6. Logical values coded as text</strong></p>
+<ul>
+<li><p>Check host_is_superhost.</p></li>
+<li><p>List the unique values you observe (for example t and f).</p></li>
+<li><p>State what type your import tool assigned and what conversion would be required.</p></li>
+</ul>
+<p><strong>7. Text encoding and non ASCII characters</strong></p>
+<ul>
+<li><p>Find at least one host_name that contains non ASCII characters (examples include accented letters).</p></li>
+<li><p>Show evidence that the character displays correctly after import.</p></li>
+<li><p>State what could go wrong if encoding is not handled properly.</p></li>
+</ul>
+<p><strong>8. Silent type coercion risk</strong></p>
+<ul>
+<li><p>Identify one column where automatic guessing could lead to a silent mistake.</p></li>
+<li><p>Explain the mistake, why it could be hard to notice, and how you would detect it.</p></li>
+</ul>
+</section>
+</section>
+<section id="step-5-write-the-human-authored-synthesis-group" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-write-the-human-authored-synthesis-group">Step 5 Write the Human Authored Synthesis (group)</h3>
+<p>Length target: 400 to 600 words.</p>
+<p>Your synthesis must include:</p>
+<ul>
+<li><p>Your investigation question</p></li>
+<li><p>At least two hidden assumptions with evidence from your validation checks</p></li>
+<li><p>A clear explanation of why the assumptions matter for later analysis</p></li>
+<li><p>A short recommended import and validation routine for this dataset type</p></li>
+</ul>
+<p>Your synthesis must be written in your own words.</p>
+</section>
+<section id="step-6-presentation-slides-group" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-presentation-slides-group">Step 6 Presentation slides (group)</h3>
+<p>Use this exact slide structure:</p>
+<ul>
+<li><p>Our question</p></li>
+<li><p>What AI suggested</p></li>
+<li><p>Where AI fell short</p></li>
+<li><p>Our corrected understanding, with evidence</p></li>
+<li><p>One takeaway for future data science work</p></li>
+</ul>
+<p>Time: 5 to 7 minutes.</p>
+</section>
+</section>
+<section id="individual-reflection-each-student" class="level2">
+<h2 class="anchored" data-anchor-id="individual-reflection-each-student">Individual Reflection (each student)</h2>
+<p>Write 150 to 200 words answering:</p>
+<ul>
+<li><p>What did AI help you learn</p></li>
+<li><p>What did AI miss or oversimplify</p></li>
+<li><p>What did you contribute as a human thinker</p></li>
+<li><p>How will you change your AI use in future data work</p></li>
+</ul>
+<p>Your reflection must match your assigned role.</p>
+</section>
+<section id="submission-examples" class="level2">
+<h2 class="anchored" data-anchor-id="submission-examples">Submission Examples</h2>
+<p><a href="./documents/ai_prompts.docx">Excellent AI Interaction Log</a></p>
+<p><a href="./documents/ai_audit.docx">Excellent Human-Authored Synthesis</a></p>
+<p><a href="./documents/ai_reflection.docx">Excellent Individual Reflections</a></p>
+<p><a href="./documents/ai_prompts_bad.docx">Insufficient AI Interaction Log</a></p>
+<p><a href="./documents/ai_audit_bad.docx">Insufficient Human-Authored Synthesis</a></p>
+<p><a href="./documents/ai_reflection_bad.docx">Insufficient Individual Reflections</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -924,13 +1069,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ai.html" class="pagination-link" aria-label="AI Project Topics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">AI Project Topics</span>
+      <a href="./ai_act_guide.html" class="pagination-link" aria-label="Guideline and Policy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Guideline and Policy</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./present-work.html" class="pagination-link" aria-label="Topics and Works">
-        <span class="nav-page-text">Topics and Works</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ai.html" class="pagination-link" aria-label="AI Project Topics">
+        <span class="nav-page-text">AI Project Topics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -942,7 +1087,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/present-description.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai_example.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

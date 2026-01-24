@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Dr.&nbsp;Cheng-Han Yu">
 
-<title>MATH/COSC 3570 Mini Project Presentation – MATH/COSC 3570 - Spring 2026</title>
+<title>AI Activities Guidelines – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./present-work.html" rel="next">
-<link href="./ai.html" rel="prev">
+<link href="./ai_example.html" rel="next">
+<link href="./course-syllabus.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -75,8 +76,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="MATH/COSC 3570 Mini Project Presentation – MATH/COSC 3570 - Spring 2026">
-<meta property="og:description" content="Homepage for MATH/COSC 3570 - Introduction to Data Science at Marquette University, Spring 2026.">
+<meta property="og:title" content="AI Activities Guidelines – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="Using AI to Learn Data Science">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
 
@@ -251,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description.html">Mini Project</a></li><li class="breadcrumb-item"><a href="./present-description.html">Guideline and Policy</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai_act_guide.html">Guideline and Policy</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -322,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai_act_guide.html" class="sidebar-item-text sidebar-link">
+  <a href="./ai_act_guide.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
@@ -351,7 +352,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-description.html" class="sidebar-item-text sidebar-link active">
+  <a href="./present-description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
@@ -391,30 +392,47 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#task-overview" id="toc-task-overview" class="nav-link" data-scroll-target="#task-overview">Task Overview</a></li>
+  <li><a href="#group-structure" id="toc-group-structure" class="nav-link" data-scroll-target="#group-structure">Group Structure</a></li>
+  <li><a href="#assigned-roles-rotate-within-the-group" id="toc-assigned-roles-rotate-within-the-group" class="nav-link" data-scroll-target="#assigned-roles-rotate-within-the-group">Assigned Roles (Rotate Within the Group)</a></li>
+  <li><a href="#approved-ai-use" id="toc-approved-ai-use" class="nav-link" data-scroll-target="#approved-ai-use">Approved AI Use</a></li>
+  <li><a href="#required-deliverables" id="toc-required-deliverables" class="nav-link" data-scroll-target="#required-deliverables">Required Deliverables</a></li>
+  <li><a href="#evaluation-criteria" id="toc-evaluation-criteria" class="nav-link" data-scroll-target="#evaluation-criteria">Evaluation Criteria</a>
+  <ul class="collapse">
+  <li><a href="#grading-rubric" id="toc-grading-rubric" class="nav-link" data-scroll-target="#grading-rubric">Grading Rubric</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai_act_guide.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description.html">Mini Project</a></li><li class="breadcrumb-item"><a href="./present-description.html">Guideline and Policy</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai_act_guide.html">Guideline and Policy</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">MATH/COSC 3570 Mini Project Presentation</h1>
+<h1 class="title">AI Activities Guidelines</h1>
+<p class="subtitle lead">Using AI to Learn Data Science</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Cheng-Han Yu </p>
+          </div>
+  </div>
     
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 24, 2026</p>
-    </div>
-  </div>
     
   </div>
   
@@ -423,91 +441,422 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><span class="red"><strong>This is the latest version of project guideline. It may be revised later.</strong></span></p>
-<!-- The midterm mini project is about [**data visualization**]{.blue}. **Show your fun project! Let's go!!** 😎 -->
-<!-- # Timeline and Things to Do -->
-<!-- -   ~~**Team up!** You will be working as **a group of 5** (one team with 4). One of you, please email me~~ -->
-<!--     (1) ~~your team [*member list*]{.blue}~~ -->
-<!--     (2) ~~your [*team name*]{.blue} (Last year we have team names "*Data Dawgs*", "*ggplot3*", "*GitClub*", "*Red Pandas*", "*Big Meta Watchers*")~~ -->
-<!--     ~~by [**Friday, 2/28 11:59 PM**]{.red}.~~ -->
-<!-- -   ~~**Proposal**. Please send me a [**one-page PDF**]{.blue} describing what you are going to do for your project (no word limit) with your **project title** by [**Friday, 3/7 11:59 PM**]{.red}.~~ -->
-<!-- -   **Materials**. Please share your [**entire work**]{.blue} (slides, code, data, etc) by [**Wednesday, 3/19 11:59 PM**]{.red}. -->
-<!-- -   **Presentation**. You will be presenting your project in class on [**Thursday, 3/20, 2 - 3:15 PM**]{.red}. -->
-<!-- **\[Note\]:** **03/10 - 03/16** is spring break. Be aware of time, and plan early! -->
-<!-- # Policy -->
-<!-- <!-- - Date and Time: **Monday, 5/8/2023 10:30 AM - 12:30 PM** -->
-<p>–&gt;</p>
-<!-- ## **Team up!** -->
-<!-- -   *You lose 3 points of your project grade if you don't meet the requirement or miss the deadline.* -->
-<!-- -   You will be *randomly* assigned to a group if you do not belong to any group before the deadline. -->
-<!-- ## **Proposal** -->
-<!-- -   *Each one of you loses 3 points of your project grade if you don't meet the requirement or miss the deadline.* -->
-<!-- -   Your proposal (in PDF) should include three parts: -->
-<!--     -   Project **title** -->
-<!--     -   Members **duty**. For example, -->
-<!--         -   John and Ben: clean data; Mike and Emma: prepare slides; Sophia, Mike, and Ben: plotting, etc. -->
-<!--     -   The **description of the data set you use** in your project. For example, what is the data set about, how large is the data, the variables you use for your project, etc. The data set should be one of the data listed in @sec-data. -->
-<!--     -   The **goal of your project**. For example, what are questions you'd like to answer via data visualization? What would you like to learn about and from the data? What variables are you interested? -->
-<!-- -   Although it is risky, you can change your project topic after you submit your proposal if you decide to do something else. -->
-<!-- ## **Materials** -->
-<!-- -   *Each one of you loses 3 points of your project grade if you don't meet the requirement or miss the deadline.* -->
-<!-- -   You need to share your entire work, including slides, code, etc so that anyone is able to **reproduce your outputs and plots shown in the slides**. -->
-<!-- -   The code must be shared via a **Quarto file**. -->
-<!-- ## **Presentation** -->
-<!-- -   Each group presentation is about **5 and 6 minute** long, followed by about **1 minute** Q&A. If your presentation is too short or too long, *every one of you loses 3 points* of your project grade. -->
-<!-- # Project Content, Evaluation and Grading -->
-<!-- The goal of the project is data visualization. Through this project, you use [charts to provide insights and explore patterns, trends, or other relationships between variables that may benefit decision making.]{.red} For example, you find that NBA players with higher 3pt percentage tend to earn more, but free throw percentage seems has no effect on player's salary. -->
-<!-- You presentation should include the following aspects. -->
-<!-- -   **Data and variable explanation**. Which data you use? What variables you are choosing for visualization? Why choose those variables? -->
-<!-- -   **Visualization**. Include at least two different charts to show your data. Make them beautiful and informative. -->
-<!-- -   **Interpretation and Insights**. What do you learn from your charts? Explain your plots, and provide useful insights. -->
-<!-- Your slides quality and oral presentation and clarity will also be evaluated. Please see @sec-grading for more grading details. -->
-<!-- ## Data {#sec-data} -->
-<!-- The available data sets for this projects can be downloaded from [**kaggle**](https://www.kaggle.com/), a data science competition platform sharing various data and projects. Please choose one data set for your project from the following: -->
-<!-- -   [World Happiness Report](https://www.kaggle.com/datasets/unsdsn/world-happiness?resource=download) -->
-<!-- <!-- -   [Climate Change: Earth Surface Temperature Data](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data/data) -->
-<p>–&gt;</p>
-<!-- -   [Supermarket Sales Data](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales) -->
-<!-- -   [NBA Players stats since 1950](https://www.kaggle.com/datasets/drgilermo/nba-players-stats/data) -->
-<!-- -   [Airline Passenger Satisfaction](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction) -->
-<!-- <!-- -   [U.S. Pollution Data](https://www.kaggle.com/datasets/sogun3/uspollution/data)  -->
-<p>–&gt;</p>
-<!-- -   [Auto-mpg dataset](https://www.kaggle.com/datasets/uciml/autompg-dataset) -->
-<!-- -   [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows/data) -->
-<!-- -   [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/data) -->
-<!-- -   [Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales/data) -->
-<!-- -   [Spotify Tracks Dataset](https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset/code) -->
-<!-- -   [US Census Demographic Data](https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data) -->
-<!-- **\[Note:\] Those are real data sets that contains many observations and variables. You just need to pick a few variables for plotting and analysis.** -->
-<!-- **\[Note:\] You may use some other data, but the data set cannot be the one used in the course (like ggplot2::mpg). The data set needs to be as sophisticated as the listed data sets above. Dr. Yu and TA will evaluate your data quality.** -->
-<!-- ## Evaluation and Grading {#sec-grading} -->
-<!-- -   Your project performance is evaluated by *Dr. Yu and the TA* that is based on the following rubric: -->
-<!-- | Criteria | Excellent | Good | Fair | Emerging | -->
-<!-- |---------------|---------------|---------------|---------------|---------------| -->
-<!-- | **Data Understanding (15%)** | Clearly explains the dataset, its source, and key variables. Provides meaningful insights. | Shows good understanding with clear explanations and some strong insights. A few minor details could be expanded. | Shows a basic grasp of the dataset but needs more clarity or depth in explaining its significance and insights. | Needs further understanding of the dataset. More details and insights would strengthen the analysis. | -->
-<!-- | **Visualization Quality (30%)** | Visualizations are clear, well-chosen, and enhance understanding. Thoughtful design choices make the data engaging and accessible. | Strong visuals that support the data well. Some minor refinements could improve clarity or impact. | Basic visuals that convey information but could be more refined or better suited to the dataset. | Needs improvement in visualization selection or clarity. More attention to detail will enhance effectiveness. | -->
-<!-- | **Output Interpretation and Insights (25%)** | Thoughtful and well-supported insights demonstrate strong analytical skills. Patterns and trends are clearly explained with compelling interpretations. | Provides solid insights with good explanations. Some areas could benefit from deeper analysis. | Insights are present but may lack depth or clear connections to the data. Some interpretations need more support. | Insights need further development. Strengthening data interpretation will enhance overall understanding. | -->
-<!-- | **Slides quality (15%)** | Slides are visually appealing, well-organized, and complement the spoken presentation. Effective use of text, images, and color enhances clarity. | Slides are clear and well-structured but could be slightly improved in design or organization. | Slides contain useful content but may be text-heavy, cluttered, or lack visual appeal. | Slides need better organization and design to support the presentation effectively. | -->
-<!-- | **Presentation Clarity and Interaction (15%)** | The presentation is well-organized, engaging, and confident. The team communicates ideas effectively and transitions smoothly. | A well-structured and clear presentation. Minor adjustments could improve flow or engagement. | The presentation is understandable but could be more organized or engaging. Some transitions may be unclear. | More practice and organization will help improve clarity and engagement. | -->
-<!-- : Rubric -->
-<!-- -   Your project grade will be -->
-<!-- > Project grade = performance grade - points lost due to violation of policy -->
-<!-- [*with adjustement based on your performance of duty*]{.green}. -->
-<!-- ## Peer Individual Performance Evaluation -->
-<!-- -   In each team, **two** group members will win the best contribution reward that add extra points to the project grade. -->
-<!-- -   Each one of you has **two** votes to nominate one or two of your teammates who you think contribute the most to your group project. -->
-<!-- -   You can nominate -->
-<!--     -   two teammates, each receiving one vote. -->
-<!--     -   one teammate who receives two votes. -->
-<!-- -   You **cannot** nominate yourself. -->
-<!-- -   If you **don't** vote, or you just use **one vote**, you can't be the best contributor even if you receive the most or 2nd highest votes. The member with the 2nd or 3rd highest votes wins the best contribution reward. -->
-<!-- -   If there are more than two group members receive top two number of votes, Dr. Yu and the TA will decide the final top two nominees. For example, if John receives the most votes, and Emma and Amy both receive the 2nd highest votes, Dr. Yu and the TA choose either Emma or Amy for the reward. -->
-<!-- ```{r} -->
-<!-- #| echo: false -->
-<!-- knitr::include_graphics("./images/vote.png") -->
-<!-- ``` -->
+<p>This assignment rewards <strong>thinking, judgment, and learning</strong>, NOT perfect answers. Strong work shows curiosity, skepticism, and clear reasoning. If you have questions about appropriate AI use, ask before submitting.</p>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>In this activity, you will use an AI as a learning partner to explore a data science concept from this course. The goal is <strong>NOT to report what AI says</strong>. The goal is to learn to:</p>
+<ul>
+<li><p>Ask effective questions</p></li>
+<li><p>Evaluate the quality and limitations of AI responses</p></li>
+<li><p>Apply data and modeling reasoning</p></li>
+<li><p>Synthesize understanding in your own words</p></li>
+</ul>
+<p>This activity mirrors how data scientists increasingly use AI in professional practice: as a tool that requires <strong>human judgment</strong>, <strong>verification</strong>, and <strong>interpretation</strong>.</p>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By completing this activity, you will be able to:</p>
+<ol type="1">
+<li><p>Use AI strategically to support learning in data science</p></li>
+<li><p>Critically evaluate AI-generated explanations and claims</p></li>
+<li><p>Demonstrate conceptual understanding of a data science topic</p></li>
+<li><p>Communicate statistical reasoning clearly and accurately</p></li>
+<li><p>Reflect on what human expertise adds beyond AI output</p></li>
+</ol>
+</section>
+<section id="task-overview" class="level2">
+<h2 class="anchored" data-anchor-id="task-overview">Task Overview</h2>
+<p>Your group will:</p>
+<ol type="1">
+<li><p>Receive a data science question or concept from the course</p></li>
+<li><p>Use an AI to help you learn about this topic</p></li>
+<li><p>Critically evaluate the AI’s responses</p></li>
+<li><p>Produce a corrected, human-authored explanation</p></li>
+<li><p>Present your findings to the class</p></li>
+</ol>
+</section>
+<section id="group-structure" class="level2">
+<h2 class="anchored" data-anchor-id="group-structure">Group Structure</h2>
+<ul>
+<li><p>Groups of 3 (or 4) students</p></li>
+<li><p><strong>Each group</strong> completes one shared investigation</p></li>
+<li><p><strong>Each student</strong> has a <em>defined role</em> and submits an <em>individual reflection</em></p></li>
+</ul>
+</section>
+<section id="assigned-roles-rotate-within-the-group" class="level2">
+<h2 class="anchored" data-anchor-id="assigned-roles-rotate-within-the-group">Assigned Roles (Rotate Within the Group)</h2>
+<p>Each group must assign the following roles:</p>
+<ol type="1">
+<li><span class="red"><strong>Prompt Engineer</strong></span></li>
+</ol>
+<p><em>Primary responsibility:</em> Design purposeful prompts with a clear learning goal and document the AI interaction log.</p>
+<ol start="2" type="1">
+<li><span class="red"><strong>Data Science Auditor</strong></span></li>
+</ol>
+<p><em>Primary responsibility:</em> Checks AI responses for correctness, assumptions, and limitations.</p>
+<ol start="3" type="1">
+<li><span class="red"><strong>Synthesizer</strong></span></li>
+</ol>
+<p><em>Primary responsibility:</em> Convert the group work into a clear human authored explanation and leads the presentation.</p>
+</section>
+<section id="approved-ai-use" class="level2">
+<h2 class="anchored" data-anchor-id="approved-ai-use">Approved AI Use</h2>
+<p>You are expected to use AI for this assignment.</p>
+<p>You must:</p>
+<ul>
+<li><p>Design your own prompts</p></li>
+<li><p>Document AI interactions</p></li>
+<li><p>Critically evaluate AI responses</p></li>
+</ul>
+<p>You may <strong>NOT</strong>:</p>
+<ul>
+<li><p>Submit AI text verbatim as your own explanation</p></li>
+<li><p>Rely on AI without critique or verification</p></li>
+<li><p>Hide or omit AI usage</p></li>
+</ul>
+<p><strong>Transparency is required.</strong></p>
+</section>
+<section id="required-deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="required-deliverables">Required Deliverables</h2>
+<ol type="1">
+<li><span class="blue"><strong>AI Interaction Log (Group Submission)</strong></span></li>
+</ol>
+<p>Submit a short log documenting your AI use.</p>
+<p>Include:</p>
+<ul>
+<li>3–5 prompts used</li>
+<li>Selected AI responses</li>
+<li>A brief annotation after each response addressing:
+<ul>
+<li>What was the goal of this prompt?</li>
+<li>What did AI get right?</li>
+<li>What was incomplete, misleading, or incorrect?</li>
+</ul></li>
+</ul>
+<p>This log is evidence of your learning process.</p>
+<ol start="2" type="1">
+<li><span class="blue"><strong>Human-Authored Synthesis (Group Submission)</strong></span></li>
+</ol>
+<p>Write a clear explanation of the concept in your own words.</p>
+<p>Your synthesis must:</p>
+<ul>
+<li><p>Be conceptually accurate</p></li>
+<li><p>Improve upon or correct AI output</p></li>
+<li><p>Explain assumptions, limitations, or implications</p></li>
+<li><p>Be understandable to a classmate</p></li>
+</ul>
+<p>AI-generated text should not appear verbatim.</p>
+<ol start="3" type="1">
+<li><span class="blue"><strong>Group Presentation (5–7 minutes)</strong></span></li>
+</ol>
+<p>Your presentation must follow this structure:</p>
+<ol type="a">
+<li>The question or concept you investigated</li>
+<li>What AI suggested</li>
+<li>Where AI fell short or made errors</li>
+<li>Your corrected understanding</li>
+<li>One key takeaway for future data science work</li>
+</ol>
+<p>Slides should be clear, concise, and focused on reasoning rather than volume.</p>
+<ol start="4" type="1">
+<li><span class="blue"><strong>Individual Reflection (Individual Submission)</strong></span></li>
+</ol>
+<p>Each student submits a <strong>150–200</strong> word reflection addressing:</p>
+<ul>
+<li>What did you personally learn from this activity?</li>
+<li>What did AI help you understand?</li>
+<li>What did you need to add, correct, or rethink yourself?</li>
+<li>How did your role contribute to the group’s work?</li>
+</ul>
+<p>This reflection is used to assess individual understanding and contribution.</p>
+</section>
+<section id="evaluation-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-criteria">Evaluation Criteria</h2>
+<p>Your group work will be evaluated based on:</p>
+<ul>
+<li>Quality and intentionality of AI prompts</li>
+<li>Critical evaluation of AI responses</li>
+<li>Depth and accuracy of data science understanding</li>
+<li>Quality of human synthesis beyond AI output</li>
+<li>Clarity and organization of communication</li>
+</ul>
+<p>Individual reflections will be used to adjust individual scores if contributions differ.</p>
+<section id="grading-rubric" class="level3">
+<h3 class="anchored" data-anchor-id="grading-rubric">Grading Rubric</h3>
+<p><strong>Total: 100 points</strong></p>
+<!-- Below is a **Canvas-ready analytic rubric** that **exactly matches**: -->
+<!-- * the topic-assignment instructions, -->
+<!-- * the student-facing handout, and -->
+<!-- * your grading intent for AI-supported learning in MATH 3570. -->
+<!-- It is designed so that **topic choice is irrelevant**, AI output quality does not affect grades, and **critical reasoning is the dominant signal**. -->
+<!-- You may copy this directly into Canvas and create the rubric criterion by criterion. -->
+<!-- --- -->
+<!-- # Group AI Learning Activity – Grading Rubric -->
+<p>This rubric is used for <strong>all groups</strong>, regardless of topic. Grades reflect <strong>how you used AI to learn data science</strong>, not what AI produced.</p>
+<section id="ai-prompt-quality-and-intentionality-20-points" class="level4">
+<h4 class="anchored" data-anchor-id="ai-prompt-quality-and-intentionality-20-points">AI Prompt Quality and Intentionality (20 points)</h4>
+<p><strong>Evaluates</strong>: Whether AI was used strategically to support learning.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 72%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Excellent</strong></td>
+<td>Prompts are clear, targeted, and iterative. Each prompt has a specific learning goal, and follow-up prompts show refinement based on prior AI responses.</td>
+<td>18–20</td>
+</tr>
+<tr class="even">
+<td><strong>Competent</strong></td>
+<td>Prompts are reasonable and relevant but mostly one-shot or broad. Limited evidence of iteration or strategic refinement.</td>
+<td>14–17</td>
+</tr>
+<tr class="odd">
+<td><strong>Developing</strong></td>
+<td>Prompts are vague, generic, or copied. Little connection between prompts and learning goals.</td>
+<td>8–13</td>
+</tr>
+<tr class="even">
+<td><strong>Insufficient</strong></td>
+<td>Prompts are missing, inappropriate, or unrelated to the assigned topic.</td>
+<td>0–7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="documentation-of-ai-use-ai-interaction-log-15-points" class="level4">
+<h4 class="anchored" data-anchor-id="documentation-of-ai-use-ai-interaction-log-15-points">Documentation of AI Use (AI Interaction Log) (15 points)</h4>
+<p><strong>Evaluates</strong>: Transparency and completeness of AI documentation.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 72%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Excellent</strong></td>
+<td>AI interaction log is complete, well-organized, and clearly annotated. Goals, strengths, and limitations of AI responses are explicitly documented.</td>
+<td>14–15</td>
+</tr>
+<tr class="even">
+<td><strong>Competent</strong></td>
+<td>AI interaction log is mostly complete with basic annotations. Some explanations lack depth or clarity.</td>
+<td>11–13</td>
+</tr>
+<tr class="odd">
+<td><strong>Developing</strong></td>
+<td>AI interaction log is incomplete or weakly annotated. Limited explanation of AI strengths or limitations.</td>
+<td>6–10</td>
+</tr>
+<tr class="even">
+<td><strong>Insufficient</strong></td>
+<td>AI use is poorly documented, unclear, or missing.</td>
+<td>0–5</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="critical-evaluation-of-ai-output-25-points" class="level4">
+<h4 class="anchored" data-anchor-id="critical-evaluation-of-ai-output-25-points">Critical Evaluation of AI Output (25 points)</h4>
+<p><strong>Evaluates</strong>: Ability to question, critique, and challenge AI responses.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 72%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Excellent</strong></td>
+<td>Clearly identifies specific limitations, assumptions, or errors in AI output and explains why they matter using statistical reasoning.</td>
+<td>23–25</td>
+</tr>
+<tr class="even">
+<td><strong>Competent</strong></td>
+<td>Identifies some limitations or weaknesses in AI output, but explanations are partial or underdeveloped.</td>
+<td>18–22</td>
+</tr>
+<tr class="odd">
+<td><strong>Developing</strong></td>
+<td>Mentions limitations superficially or inconsistently. Limited justification or reasoning.</td>
+<td>10–17</td>
+</tr>
+<tr class="even">
+<td><strong>Insufficient</strong></td>
+<td>Accepts AI output uncritically or fails to identify meaningful issues.</td>
+<td>0–9</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-science-understanding-and-human-synthesis-30-points" class="level4">
+<h4 class="anchored" data-anchor-id="data-science-understanding-and-human-synthesis-30-points">Data Science Understanding and Human Synthesis (30 points)</h4>
+<p><strong>Evaluates</strong>: Depth, accuracy, and originality of the group’s explanation.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 72%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Excellent</strong></td>
+<td>Explanation is accurate, conceptually clear, and fully human-authored. Demonstrates strong statistical reasoning and clearly improves upon AI output.</td>
+<td>27–30</td>
+</tr>
+<tr class="even">
+<td><strong>Competent</strong></td>
+<td>Explanation is mostly accurate and understandable but adds limited insight beyond AI output. Minor gaps or imprecision.</td>
+<td>21–26</td>
+</tr>
+<tr class="odd">
+<td><strong>Developing</strong></td>
+<td>Explanation shows partial understanding, conceptual gaps, or heavy reliance on AI phrasing.</td>
+<td>12–20</td>
+</tr>
+<tr class="even">
+<td><strong>Insufficient</strong></td>
+<td>Explanation is incorrect, unclear, or largely AI-generated with minimal human synthesis.</td>
+<td>0–11</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="communication-and-presentation-quality-10-points" class="level4">
+<h4 class="anchored" data-anchor-id="communication-and-presentation-quality-10-points">Communication and Presentation Quality (10 points)</h4>
+<p><strong>Evaluates</strong>: Clarity and structure of the group presentation.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 71%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Excellent</strong></td>
+<td>Presentation is well-structured, clear, and focused on reasoning. Effectively explains what AI missed and what the group learned.</td>
+<td>9–10</td>
+</tr>
+<tr class="even">
+<td><strong>Competent</strong></td>
+<td>Presentation is understandable but uneven or overly descriptive. Some focus on content rather than reasoning.</td>
+<td>7–8</td>
+</tr>
+<tr class="odd">
+<td><strong>Developing</strong></td>
+<td>Presentation lacks clarity or structure. Key points are unclear or poorly explained.</td>
+<td>4–6</td>
+</tr>
+<tr class="even">
+<td><strong>Insufficient</strong></td>
+<td>Presentation is disorganized, incomplete, or difficult to follow.</td>
+<td>0–3</td>
+</tr>
+</tbody>
+</table>
+<!-- --- -->
+</section>
+<section id="individual-adjustment-reflection-based" class="level4">
+<h4 class="anchored" data-anchor-id="individual-adjustment-reflection-based">Individual Adjustment (Reflection-Based)</h4>
+<p>Individual reflections may be used to <strong>adjust individual scores up or down</strong> if:</p>
+<ul>
+<li>A student demonstrates substantially stronger or weaker understanding than the group product suggests</li>
+<li>A student did not meaningfully contribute to the group’s work</li>
+</ul>
+<!-- --- -->
+</section>
+<section id="rubric-summary" class="level4">
+<h4 class="anchored" data-anchor-id="rubric-summary">Rubric Summary</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AI Prompt Quality</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>AI Documentation</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>Critical Evaluation of AI</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td>Data Science Understanding &amp; Synthesis</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td>Presentation Quality</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<!-- --- -->
+<!-- ## Instructor Notes (Not Visible to Students) -->
+<!-- * Topic difficulty is intentionally neutralized -->
+<!-- * AI correctness does not influence scores -->
+<!-- * Human judgment, explanation, and critique dominate grading -->
+<!-- * This rubric supports defensible differentiation across groups -->
+<!-- --- -->
+<!-- If you want next: -->
+<!-- * A **Canvas import JSON** version of this rubric -->
+<!-- * A **one-page grading checklist** for faster scoring -->
+<!-- * A **student-friendly rubric summary** -->
+<!-- * Calibration examples (A-level vs C-level work) -->
+<!-- Just tell me. -->
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -924,13 +1273,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ai.html" class="pagination-link" aria-label="AI Project Topics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">AI Project Topics</span>
+      <a href="./course-syllabus.html" class="pagination-link" aria-label="Syllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Syllabus</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./present-work.html" class="pagination-link" aria-label="Topics and Works">
-        <span class="nav-page-text">Topics and Works</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ai_example.html" class="pagination-link" aria-label="AI Project Example">
+        <span class="nav-page-text">AI Project Example</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -942,7 +1291,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/present-description.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai_act_guide.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

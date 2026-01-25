@@ -1,0 +1,236 @@
+---
+title: "AI Activity 1: Data Importing and Hidden Assumptions"
+subtitle: "NYC Airbnb Open Data 2019 listings dataset"
+categories: "AI activity"
+# author: "Dr. Cheng-Han Yu"
+date-modified: today
+editor: source
+---
+
+> Importing data is not a neutral step. Import tools make assumptions about missing values, data types, dates, text encoding, and formatting. When assumptions are wrong, the dataset can be changed silently before analysis begins.
+
+You will use an AI tool as a learning partner to investigate a core data science reality:
+
+
+You are graded on how you **think, critique, and explain**, not on whether AI gives perfect answers.
+
+
+:::: callout-note
+## To Do
+
+::: {style="font-size: 1.1em;"}
+1.  Download the dataset from the [Dataset section](#sec-data) below.
+2.  Write your investigation question (2 to 3 sentences). [Step 1](#sec-step1) in Tasks.
+3.  Run 3 to 5 AI prompts that cover missing values, types, dates, and validation. [Step 2](#sec-step2) in Tasks.
+4.  Import the data and complete checklist items 1 to 4 first. [Step 4](#sec-step4)
+5.  Draft your synthesis, then build slides using the required 5 slide structure. [Step 5](#sec-step5) and [Step 6](#sec-step6)
+:::
+::::
+
+
+## Assigned Roles (3 students)
+
+**[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high-quality, cohesive work.**
+
+### Prompt Engineer
+
+Responsibilities
+
+* Create 3 to 5 purposeful AI prompts
+* Save AI responses and build the AI Interaction Log
+* Write annotations for each prompt and response pair
+
+### Data Science Auditor
+
+Responsibilities
+
+* Identify hidden assumptions in AI guidance
+* Design and run post import validation checks
+* Provide evidence for at least two hidden assumptions
+
+### Synthesizer
+
+Responsibilities
+
+* Write the Human Authored Synthesis in clear course language
+* Build slides using the required structure
+* Ensure the final work is consistent and concise
+
+
+## Dataset {#sec-data}
+
+Required file
+
+* [topic1-data.csv](../documents/topic1-data.csv)
+
+Dataset notes
+
+* [README_NYC_Airbnb2019_Topic1.txt](../documents/README_NYC_Airbnb2019_Topic1.txt)
+
+
+## What you will submit
+
+* Group submissions
+  * AI Interaction Log
+  * Human Authored Synthesis
+  * Slides for a 10 to 12 minute presentation
+  
+* Individual submission
+  * Individual Reflection (150 to 200 words)
+
+## Step by step tasks
+
+### Step 1 Define your investigation question (before using AI) {#sec-step1}
+
+Write 2 to 3 sentences answering:
+
+* What import problem are we investigating
+* Why this problem matters in real data science
+
+You must focus on hidden assumptions, for example assumptions about missing values, types, dates, or text encoding.
+
+### Step 2 Use AI strategically (3 to 5 prompts) {#sec-step2}
+
+**[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.**
+
+Your prompts must be purposeful and iterative.
+
+Prompt requirements
+
+* At least 1 prompt about missing values and missing value representations
+* At least 1 prompt about type guessing and type coercion risks
+* At least 1 prompt about date parsing and mixed date formats
+* At least 1 prompt about validation steps after import
+
+#### Suggested prompt starters (you may adapt)
+
+- *“I am importing a CSV where missing values appear as blank cells, a period, the word unknown, and an em dash. What should I do in R or Python to import correctly and verify it”*
+
+- *“The column `last_review` mixes formats like `2019-06-23`, `06/24/2019`, and `06/20/19`. What is a safe parsing strategy and how do I report failures”*
+
+- *“`price` contains values like `$70`, `70`, and `60 dollars`. What is a safe way to convert to numeric and validate the conversion”*
+
+- *“`minimum_nights` includes values like `2 nights` and `availability_365` includes values like `0/365` or `96 days`. How should I clean these and what checks should I run”*
+
+- *“`room_type` and `neighbourhood_group` have inconsistent capitalization and whitespace. What cleaning steps are reasonable and how do I validate categories after cleaning”*
+
+
+### Step 3 Create the AI Interaction Log {#sec-step3}
+
+For each prompt, include:
+
+* Prompt goal
+* The AI response excerpt you used
+* Your annotation:
+  * What AI got right
+  * What AI assumed
+  * What was missing, misleading, or incorrect
+
+Important rule
+
+* You may not paste AI text into your final synthesis verbatim.
+
+### Step 4 Import the dataset and run required validation checks {#sec-step4}
+
+Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. *A short summary without numbers or outputs does not count as evidence.*
+
+::: {.callout-note collapse="true"}
+## Required post import validation checklist (expand to view)
+
+<!-- #### Required post import validation checklist (submit evidence for every item) -->
+
+**1. Rows and columns**
+
+   * Confirm the dataset has 600 rows and 16 columns after import.
+
+**2. Missing value representations**
+
+   * Identify at least three different missing value representations present in the file (examples include blank cells, a period, unknown, an em dash).
+   * Choose two columns (recommended: `last_review` and `reviews_per_month`).
+   * Report how many missing values you see in each column, and explain how you defined missingness.
+
+**3. Date column with mixed formats**
+
+   * Check `last_review`.
+   * Show evidence that more than one date format exists in the raw data.
+   * State whether your import tool parsed it as a date or left it as text.
+   * If you parsed it, report how many non missing entries became missing after parsing.
+
+**4. Numeric values stored as text**
+
+   * Choose two columns from this list: `price`, `minimum_nights`, `availability_365`, `reviews_per_month`.
+   * Show the raw formats you observe (for example `$70`, `60 dollars`, `2 nights`, `0/365`, `0.03 per mo`).
+   * State what type your import tool assigned and what conversion would be required.
+
+**5. Currency stored as text**
+
+   * Check `price`.
+   * Show at least three raw examples that are not purely numeric.
+   * State what conversion you would use and one validation check you would run after conversion.
+
+**6. Categorical values with inconsistent formatting**
+
+   * Choose `neighbourhood_group` or `room_type`.
+   * List the unique values you observe before cleaning (include at least 8 examples).
+   * Propose a cleaning rule (for example trim whitespace, standardize case, replace underscores).
+   * Show evidence of how categories change after cleaning (for example fewer unique levels or merged categories).
+
+**7. Text encoding and non ASCII or invisible characters**
+
+   * Find at least one `host_name` that contains a non ASCII character or an invisible character.
+   * Show evidence that the character displays correctly after import.
+   * State what could go wrong if encoding or invisible characters are not handled properly.
+
+**8. Silent coercion risk**
+
+   * Identify one column where a reasonable but incorrect conversion could silently create wrong values or missing values.
+   * Explain the mistake, why it could be hard to notice, and how you would detect it using evidence.
+
+:::
+
+
+### Step 5 Write the Human Authored Synthesis (group) {#sec-step5}
+
+Length target: 400 to 600 words.
+
+Your synthesis must include:
+
+* Your investigation question
+* At least two hidden assumptions with evidence from your validation checks
+* A clear explanation of why the assumptions matter for later analysis
+* A short recommended import and validation routine for this dataset type
+
+Your synthesis must be written in your own words.
+
+### Step 6 Presentation slides (group)
+
+Use this exact slide structure:
+
+* Our question
+* What AI suggested
+* Where AI fell short
+* Our corrected understanding, with evidence
+* One takeaway for future data science work
+
+Time: 10 to 12 minutes.
+
+## Individual Reflection (each student)
+
+Write 150 to 200 words answering:
+
+* What did AI help you learn
+* What did AI miss or oversimplify
+* What did you contribute as a human thinker
+* How will you change your AI use in future data work
+
+Your reflection must match your assigned role.
+
+<!-- ## Submission Examples -->
+
+<!-- * [Excellent AI Interaction Log](documents/ai_prompts.pdf) -->
+<!-- * [Excellent Human Authored Synthesis](documents/ai_audit.pdf) -->
+<!-- * [Excellent Individual Reflections](documents/ai_reflection.pdf) -->
+
+<!-- * [Insufficient AI Interaction Log](documents/ai_prompts_bad.pdf) -->
+<!-- * [Insufficient Human Authored Synthesis](documents/ai_audit_bad.pdf) -->
+<!-- * [Insufficient Individual Reflections](documents/ai_reflection_bad.pdf) -->

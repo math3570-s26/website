@@ -1,6 +1,7 @@
 ---
-title: "AI Activitity Example"
+title: "AI Activity Example"
 author: "Dr. Cheng-Han Yu"
+date-modified: today
 ---
 
 ## Topic: Data Importing and Hidden Assumptions
@@ -11,6 +12,18 @@ You will use an AI tool as a learning partner to investigate a core data science
 
 You are graded on how you **think, critique, and explain**, not on whether AI gives perfect answers.
 
+:::: callout-note
+## To Do
+
+::: {style="font-size: 1.1em;"}
+1.  Download the dataset from the [Dataset section](#sec-data) below.
+2.  Write your investigation question (2 to 3 sentences). [Step 1](#sec-step1) in Tasks.
+3.  Run 3 to 5 AI prompts that cover missing values, types, dates, and validation. [Step 2](#sec-step2) in Tasks.
+4.  Import the data and complete checklist items 1 to 4 first. [Step 4](#sec-step4)
+5.  Draft your synthesis, then build slides using the required 5 slide structure. [Step 5](#sec-step5) and [Step 6](#sec-step6)
+:::
+::::
+
 ## Assigned Roles (3 students)
 
 ### Prompt Engineer
@@ -18,9 +31,7 @@ You are graded on how you **think, critique, and explain**, not on whether AI gi
 Responsibilities
 
 -   Create 3 to 5 purposeful AI prompts
-
 -   Save AI responses and build the AI Interaction Log
-
 -   Write annotations for each prompt and response pair
 
 ### Data Science Auditor
@@ -28,9 +39,7 @@ Responsibilities
 Responsibilities
 
 -   Identify hidden assumptions in AI guidance
-
 -   Design and run post import validation checks
-
 -   Provide evidence for at least two hidden assumptions
 
 ### Synthesizer
@@ -38,12 +47,10 @@ Responsibilities
 Responsibilities
 
 -   Write the Human Authored Synthesis in clear course language
-
 -   Build slides using the required structure
-
 -   Ensure the final work is consistent and concise
 
-## Dataset
+## Dataset {#sec-data}
 
 [insideairbnb_chicago_listings_sample_600_2025_09_22.csv](/documents/insideairbnb_chicago_listings_sample_600_2025_09_22.csv)
 
@@ -52,76 +59,67 @@ Responsibilities
 -   Group submissions
 
     -   AI Interaction Log
-
     -   Human Authored Synthesis
-
     -   Slides for a 5 to 7 minute presentation
 
 -   Individual submission
 
     -   Individual Reflection (150 to 200 words)
 
-## Step by step tasks
+## Step-by-step tasks
 
-### Step 1 Define your investigation question (before using AI)
+### Step 1 Define your investigation question (before using AI) {#sec-step1}
 
 Write 2 to 3 sentences answering:
 
 -   What import problem are we investigating
-
 -   Why this problem matters in real data science
 
 You must focus on hidden assumptions, for example assumptions about missing values, types, dates, or text encoding.
 
-### Step 2 Use AI strategically (3 to 5 prompts)
+### Step 2 Use AI strategically (3 to 5 prompts) {#sec-step2}
 
 Your prompts must be purposeful and iterative.
+
+**[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.**
 
 Prompt requirements
 
 -   At least 1 prompt about missing values and missing value tokens
-
 -   At least 1 prompt about type guessing and type coercion risks
-
 -   At least 1 prompt about date parsing and mixed date formats
-
 -   At least 1 prompt about validation steps after import
 
 #### Suggested prompt starters (you may adapt)
 
 -   *“I am importing a CSV where missing values appear as blank, NA, N A, N slash A, and a period. What should I do in R or Python to import correctly and verify it”*
-
 -   *“What are the most common silent errors from automatic type guessing during CSV import”*
-
 -   *“If a date column mixes formats like YYYY MM DD and MM slash DD slash YYYY, what should I check after import”*
-
 -   *“Give me a post import validation checklist for columns that look numeric but are stored as text, such as currency and percentages”*
 
-### Step 3 Create the AI Interaction Log
+### Step 3 Create the AI Interaction Log {#sec-step3}
 
 For each prompt, include:
 
 -   Prompt goal
-
 -   The AI response excerpt you used
-
 -   Your annotation:
-
     -   What AI got right
-
     -   What AI assumed
-
     -   What was missing, misleading, or incorrect
 
 Important rule
 
 -   You may not paste AI text into your final synthesis verbatim.
 
-### Step 4 Import the dataset and run required validation checks
+### Step 4 Import the dataset and run required validation checks {#sec-step4}
 
 Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. **A short summary without numbers or outputs does not count as evidence**.
 
-#### Required post import validation checklist (submit evidence for every item)
+::: {.callout-note collapse="true"}
+## Required post import validation checklist (expand to view)
+
+Submit evidence for every item.
 
 **1. Rows and columns**
 
@@ -130,83 +128,68 @@ Import the required file, then complete the validation checklist below. Your evi
 **2. Missing value tokens**
 
 -   Identify at least three different missing value representations present in the file (examples include NA, N slash A, blank, period).
-
 -   Report how many appear in at least two columns of your choice.
 
 **3. Date columns**
 
 -   Identify at least two date columns (examples include last_scraped, host_since).
-
 -   Show evidence that more than one date format exists in the data.
-
 -   State whether your import tool parsed them as dates or left them as text.
 
 **4. Percent columns stored as text**
 
 -   Check host_response_rate and host_acceptance_rate.
-
 -   Show the raw format you observe (for example values that include a percent sign).
-
 -   State what type your import tool assigned and what conversion would be required.
 
 **5. Currency stored as text**
 
 -   Check the price column.
-
 -   Show the raw format you observe (for example dollar sign and commas).
-
 -   State what type your import tool assigned and what conversion would be required.
 
 **6. Logical values coded as text**
 
 -   Check host_is_superhost.
-
 -   List the unique values you observe (for example t and f).
-
 -   State what type your import tool assigned and what conversion would be required.
 
 **7. Text encoding and non ASCII characters**
 
 -   Find at least one host_name that contains non ASCII characters (examples include accented letters).
-
 -   Show evidence that the character displays correctly after import.
-
 -   State what could go wrong if encoding is not handled properly.
 
 **8. Silent type coercion risk**
 
 -   Identify one column where automatic guessing could lead to a silent mistake.
-
 -   Explain the mistake, why it could be hard to notice, and how you would detect it.
 
-### Step 5 Write the Human Authored Synthesis (group)
+:::
+
+<!-- #### Required post import validation checklist (submit evidence for every item) -->
+
+### Step 5 Write the Human-Authored Synthesis (group) {#sec-step5}
 
 Length target: 400 to 600 words.
 
 Your synthesis must include:
 
 -   Your investigation question
-
 -   At least two hidden assumptions with evidence from your validation checks
-
 -   A clear explanation of why the assumptions matter for later analysis
-
 -   A short recommended import and validation routine for this dataset type
 
 Your synthesis must be written in your own words.
 
-### Step 6 Presentation slides (group)
+### Step 6 Presentation slides (group) {#sec-step6}
 
 Use this exact slide structure:
 
 -   Our question
-
 -   What AI suggested
-
 -   Where AI fell short
-
 -   Our corrected understanding, with evidence
-
 -   One takeaway for future data science work
 
 Time: 5 to 7 minutes.
@@ -216,25 +199,17 @@ Time: 5 to 7 minutes.
 Write 150 to 200 words answering:
 
 -   What did AI help you learn
-
 -   What did AI miss or oversimplify
-
 -   What did you contribute as a human thinker
-
 -   How will you change your AI use in future data work
 
 Your reflection must match your assigned role.
 
 ## Submission Examples
 
-[Excellent AI Interaction Log](/documents/ai_prompts.pdf)
-
-[Excellent Human-Authored Synthesis](/documents/ai_audit.pdf)
-
-[Excellent Individual Reflections](/documents/ai_reflection.pdf)
-
-[Insufficient AI Interaction Log](/documents/ai_prompts_bad.pdf)
-
-[Insufficient Human-Authored Synthesis](/documents/ai_audit_bad.pdf)
-
-[Insufficient Individual Reflections](/documents/ai_reflection_bad.pdf)
+- [Excellent AI Interaction Log](/documents/ai_prompts.pdf)
+- [Excellent Human-Authored Synthesis](/documents/ai_audit.pdf)
+- [Excellent Individual Reflections](/documents/ai_reflection.pdf)
+- [Insufficient AI Interaction Log](/documents/ai_prompts_bad.pdf)
+- [Insufficient Human-Authored Synthesis](/documents/ai_audit_bad.pdf)
+- [Insufficient Individual Reflections](/documents/ai_reflection_bad.pdf)

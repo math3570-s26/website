@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -484,15 +484,39 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table caption-top">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">No.</th>
-<th data-quarto-table-cell-role="th">Title</th>
-<th data-quarto-table-cell-role="th">Description</th>
+<tr>
+
+<th>
+No.
+</th>
+
+<th>
+Title
+</th>
+
+<th>
+Content
+</th>
+
 </tr>
 </thead>
 <tbody class="list">
+
+<tr data-index="0" data-categories="QUklMjBhY3Rpdml0eQ==" data-listing-file-modified-sort="1769360941993" data-listing-reading-time-sort="7" data-listing-word-count-sort="1237" data-listing-title-sort="AI Activity 1: Data Importing and Hidden Assumptions" data-listing-filename-sort="ai_1.qmd">
+<td>
+<a href="./ai/ai_1.html" class="title listing-title">AI Activity 1: Data Importing and Hidden Assumptions</a>
+</td>
+<td>
+<span class="listing-subtitle">NYC Airbnb Open Data 2019 listings dataset</span>
+</td>
+<td>
+<span class="listing-description">Importing data is not a neutral step. Import tools make assumptions about missing values, data types, dates, text encoding, and formatting. When assumptions are wrong, the…</span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>

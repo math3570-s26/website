@@ -1,0 +1,1581 @@
+---
+title: 'R/Python Data Frames for Data Science `r fontawesome::fa("table")`'
+title-slide-attributes:
+  data-background-image: ../images/bg.png
+  # data-background-size: stretch
+  # data-slide-number: none
+format: 
+  live-revealjs: 
+    output-file: 07-package-slides.html
+    df-print: default
+webr:
+  cell-options:
+    autorun: false
+  packages:
+    - tidyverse
+---
+
+#  {visibility="hidden"}
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+# library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fontawesome)
+library(rmarkdown)
+library(reticulate)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/07-package/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+#  {background-color="#A7D5E8" background-image="images/07-package/tidyverse.svg" background-size="30%"}
+
+<a href="https://tidyverse.tidyverse.org" style="position: absolute; inset: 0; display: block;" aria-label="Tidyverse website"></a>
+
+<h1>R Tidyverse</h1>
+
+## tidyverse `r emo::ji("package")`
+
+:::::: columns
+::: {.column width="40%"}
+-   The [**tidyverse**](https://tidyverse.tidyverse.org) is a `r emo::ji("package")` for data science.
+-   All packages share common design philosophy, grammar, and data structures.
+-   The *core* tidyverse packages include
+    -   [**ggplot2**](https://ggplot2.tidyverse.org/) - data visualization
+    -   [**dplyr**](https://dplyr.tidyverse.org/) - data manipulation
+    -   [**tidyr**](https://tidyr.tidyverse.org/) - data tidying
+    -   [**readr**](https://readr.tidyverse.org/) - data importing
+    -   [**purrr**](https://purrr.tidyverse.org/) - functional programming
+    -   [**tibble**](https://tibble.tidyverse.org/) - modern data frame
+    -   [**stringr**](https://stringr.tidyverse.org/) - working with strings
+    -   [**forcats**](https://forcats.tidyverse.org/) - working with factors
+    -   [**lubridate**](https://lubridate.tidyverse.org/) - working with date/times
+:::
+
+:::: {.column width="60%"}
+::: tiny
+```{r}
+#| echo: false
+#| fig-cap: "Source: https://github.com/spcanelon/tour-of-the-tidyverse"
+knitr::include_graphics("https://raw.githubusercontent.com/spcanelon/tour-of-the-tidyverse/master/images/pptx/tidyverse.png")
+```
+:::
+::::
+::::::
+
+## Workflow of Data Science with R packages
+
+::: tiny
+```{r}
+#| echo: false
+#| out-width: 65%
+#| fig-cap: "Source: https://oliviergimenez.github.io/intro_tidyverse/#7"
+knitr::include_graphics("images/07-package/01_tidyverse_data_science.png")
+```
+:::
+
+![](images/02-datascience/tidymodels.png){.absolute top="470" right="510" width="150"}
+
+## Install and Load tidyverse `r emo::ji("package")`
+
+-   tidyverse is loading *all* the core packages for us!
+
+```{r}
+#| echo: true
+#| eval: false
+library(tidyverse)
+── Attaching core tidyverse packages ─────────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.6.0
+✔ ggplot2   4.0.1     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.2.0     
+── Conflicts ───────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package to force all conflicts to become errors
+```
+
+::: notes
+-   Packages in the tidyverse change frequently. To check if updates are available:
+
+```{r}
+#| echo: true
+#| eval: false
+tidyverse_update()
+The following packages are out of date:
+● dbplyr  (2.0.0 -> 2.1.0)
+● forcats (0.5.0 -> 0.5.1)
+● pillar  (1.4.7 -> 1.5.0)
+Start a clean R session then run:
+install.packages(c("dbplyr", "forcats", "pillar"))
+```
+:::
+
+## [Tidymodels](https://www.tidymodels.org/) {visibility="hidden"}
+
+-   The **tidymodels** framework is a collection of packages for modeling and machine learning using tidyverse principles.
+
+-   All packages share an underlying philosophy and a common grammar
+
+```{r}
+#| echo: false
+#| fig-cap: "Source: https://rpubs.com/chenx/tidymodels_tutorial"
+knitr::include_graphics("./images/07-package/tidymodels.jpeg")
+```
+
+## Install and Load tidymodels `r emo::ji("package")` {visibility="hidden"}
+
+```{r}
+#| echo: true
+#| eval: false
+install.packages("tidymodels"); library(tidymodels)
+── Attaching packages ─────────────────────── tidymodels 0.2.0 ──
+✔ broom        1.0.2     ✔ rsample      1.0.0
+✔ dials        1.0.0     ✔ tune         0.2.0
+✔ infer        1.0.2     ✔ workflows    0.2.6
+✔ modeldata    1.0.0     ✔ workflowsets 0.2.1
+✔ parsnip      1.0.0     ✔ yardstick    1.0.0
+✔ recipes      1.0.0     
+── Conflicts ────────────────────────── tidymodels_conflicts() ──
+✖ scales::discard() masks purrr::discard()
+✖ dplyr::filter()   masks stats::filter()
+✖ recipes::fixed()  masks stringr::fixed()
+✖ dplyr::lag()      masks stats::lag()
+✖ yardstick::spec() masks readr::spec()
+✖ recipes::step()   masks stats::step()
+• Use tidymodels_prefer() to resolve common conflicts.
+```
+
+We'll use tidymodels in the second half of the course.
+
+::: notes
+```{r}
+#| echo: true
+#| eval: false
+tidymodels_update()
+The following packages are out of date:
+• cli          (3.4.1 -> 3.6.0)
+• dials        (1.0.0 -> 1.1.0)
+• infer        (1.0.2 -> 1.0.4)
+• modeldata    (1.0.0 -> 1.0.1)
+• parsnip      (1.0.0 -> 1.0.3)
+Start a clean R session then run:
+install.packages(c("cli", "dials", "infer", "modeldata", "parsnip"))
+```
+:::
+
+## Tidy Data (Data Matrix)
+
+> **"Happy families are all alike; every unhappy family is unhappy in its own way."** -- Leo Tolstoy
+
+```{r}
+#| echo: false
+knitr::include_graphics("images/07-package/tidydata.png")
+```
+
+-   Each **variable** must have its own **column**.
+-   Each **observation** must have its own **row**.
+-   Each **value** must have its own **cell**. (match the corresponding row observation and column variable)
+
+## Tidy Data (Data Matrix)
+
+> **"Tidy datasets are all alike, but every messy dataset is messy in its own way."** -- Hadley Wickham
+
+```{r}
+#| echo: false
+knitr::include_graphics("images/07-package/tidydata.png")
+```
+
+-   Each **variable** must have its own **column**.
+-   Each **observation** must have its own **row**.
+-   Each **value** must have its own **cell**. (match the corresponding row observation and column variable)
+
+::: notes
+-   Remember in this course we are working on the so-called tidy data.
+-   One of the goals of tidyverse is to make our data tidy.
+-   So before we actually get into tidyverse, Let's define tidy data first.
+-   **"Tidy datasets are all alike, but every messy dataset is messy in its own way."**
+-   Tidy data require that
+    -   Each **variable** must have its own **column**. (name-value match)
+    -   Each **observation** must have its own **row**. **The observation** could be human being or any object observed in the data set. A row corresponds to an observation.
+    -   Each **value** must have its own **cell**.
+:::
+
+## Why Tidy Data?
+
+1.  Each variable must have its own column.
+2.  Each observation must have its own row.
+3.  Each value must have its own cell.
+
+. . .
+
+-   Advantages of tidy data:
+    -   If you store all data in a tidy way, you only need to learn the tools that work with them.
+    -   Placing variables in columns allows R/Python's *vectorised* nature to shine. That makes transforming tidy data feel natural.
+
+. . .
+
+-   Practical instructions:
+
+    > **Put each dataset in a data frame.**
+
+    > **Put each variable in a column.**
+
+::: notes
+-   These three rules are interrelated; it's impossible to only satisfy two of the three.
+-   Remember, **"Tidy datasets are all alike, but every messy dataset is messy in its own way."**
+-   Remember, R prefer vectorized programming style. If each variable corresponds to a column vector, it is easy to transform variables using vectorised functions.
+-   We will learn how to make our data tidy using **tidyr**, **dplyr** and other packages in **Data Wrangling** weeks.
+:::
+
+##  {visibility="hidden"}
+
+::: question
+What makes this data not tidy?
+:::
+
+```{r}
+#| echo: false
+#| label: hyperwar-airplanes-on-hand
+#| fig-cap: "Source: [Army Air Forces Statistical Digest, WW II](https://www.ibiblio.org/hyperwar/AAF/StatDigest/aafsd-3.html)"
+#| out-width: "90%"
+
+knitr::include_graphics("images/07-package/hyperwar-airplanes-on-hand.png")
+```
+
+<!-- .footnote[ -->
+
+<!-- Source: [Army Air Forces Statistical Digest, WW II](https://www.ibiblio.org/hyperwar/AAF/StatDigest/aafsd-3.html) -->
+
+<!-- ] -->
+
+::: notes
+-   Here shows an example of non-tidy data set.
+-   This is a data set is about aircraft during WWII 1939 to 1945.
+-   You can see that we have some merge cell showing year, for example 1939 and 1940, saying that the rows come after those belong to that year.
+-   But if we were to make this data tidy, we would actually have another column called year, and that column would indicate the values like 1939.
+-   And that would be repeated for each row.
+-   So we don;t want these merge cells in what we call in a tidy data set.
+-   Some non-tidy data can be visually appealing for purposes of communicating.
+-   But when we are working with data and analyzing data, we want this sort of information to be stored in its own column.
+-   And you can see we also have some merge cells for historical events, like Germany invaded Poland.
+-   That might be important when we are visualizing data.
+-   And we should think about if these history events are parts of our analysis. If yes, we need to create one or more columns for those events. If they are just for annotation, and not important in our analysis or modeling, we might actually ignore them.
+:::
+
+##  {visibility="hidden"}
+
+::: question
+What makes this data not tidy?
+:::
+
+<br>
+
+```{r}
+#| echo: false
+#| fig-cap: "Source: [Gapminder, Estimated HIV prevalence among 15-49 year olds](https://www.gapminder.org/data)"
+#| label: hiv-est-prevalence-15-49
+#| out-width: 95%
+knitr::include_graphics("images/07-package/hiv-est-prevalence-15-49.png")
+```
+
+<!-- .footnote[ -->
+
+<!-- ] -->
+
+::: notes
+-   This data set is from gapminder, which is a website that maintains lots of country level data.
+-   The data set estimate HIV prevalence between age 15 to 49.
+-   What makes this data not tidy is that the orange cell A1 is basically a title for our data set. But A1 should be a variable name or column name, which is Country if you can tell.
+:::
+
+## Data Frames Store Tidy Data
+
+-   Collecting information about the distributions of colors and defects in a bag of M&Ms.
+
+:::::::: columns
+:::: {.column width="50%"}
+::: center
+**Non-tidy Data**
+:::
+
+-   If you import data in this format into R/Python, you will be in a mess.
+
+```{r}
+#| echo: false
+#| out-width: 80%
+knitr::include_graphics("images/07-package/bad_format.png")
+```
+::::
+
+::::: {.column width="50%"}
+:::: fragment
+::: center
+**Tidy Data**
+:::
+
+-   Each row is for one M&M. Each variable is in each column. One value is in a cell.
+
+-   Don't code **"Red"** in one place and **"RED"** in another. *Be consistent!*
+
+```{r}
+#| echo: false
+#| out-width: 60%
+knitr::include_graphics("images/07-package/case_format.png")
+```
+::::
+:::::
+::::::::
+
+::: notes
+-   You are gonna find it difficult to deal with this data when you do later visualization and data analysis.
+-   Don't code **"Red"** with capital R in one place and **"RED"** with all capital letters in another. R treats those as two values.
+-   consistent in labeling values for categorical variables.
+:::
+
+#  {background-color="#A7D5E8" background-image="images/07-package/tibble.png" background-size="30%"}
+
+<a href="https://tibble.tidyverse.org/" style="position: absolute; inset: 0; display: block;" aria-label="Tibble website"></a>
+
+::: left
+<h1>Modern</h1>
+
+<h1>Data Frames</h1>
+:::
+
+## Tibbles
+
+-   Tibbles are modern version of R **data frames**.
+-   Create a new tibble using `tibble()`.
+-   It is like `base::data.frame()`, but with a couple differences.
+
+:::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+df <- data.frame(x = 1:5, 
+                 y = letters[1:5], 
+                 z = 5:1)
+df
+```
+
+```{r}
+#| echo: true
+class(df)
+```
+:::
+
+:::: {.column width="50%"}
+::: fragment
+```{r}
+#| echo: true
+tib <- tibble(x = 1:5, 
+              y = letters[1:5], 
+              z = 5:1)
+tib
+```
+
+```{r}
+#| echo: true
+class(tib)
+```
+:::
+::::
+::::::
+
+::: notes
+-   Now we are going discuss the differences between tibble and data frame.
+:::
+
+## Printing of **data.frame** Class
+
+<!-- - This is the `iris` dataset, which is a class of **data.frame**. -->
+
+::: question
+How the printing method of data.frame can be improved? (Check `iris` in your R console)
+:::
+
+```{r}
+#| echo: true
+class(iris)
+```
+
+```{r}
+#| echo: true
+#| class-output: "my_class600"
+iris
+```
+
+::: notes
+-   print entire data set out.
+-   does not show much information.
+:::
+
+## Tibbles Display Better
+
+-   `as_tibble()` turns a data frame or matrix into a tibble.
+
+```{r, highlight.output=c(1, 3)}
+#| echo: true
+#| highlight-output: c(1, 3)
+(iris_tbl <- as_tibble(iris))  ## check iris_tbl in your R console
+```
+
+-   Only shows the first couple of rows.
+
+-   Prints data *size* and *column type*.
+
+<!-- - Control the default appearance, like `options(tibble.print_max = n, tibble.print_min = m)`: if there are more than $n$ rows, print only the first $m$ rows. -->
+
+::: notes
+-   Only shows the first *10 rows* and *all the columns that fit on one screen*. This makes it easier to work with large data.
+-   Prints data size and column type.
+-   Control the default appearance, like `options(tibble.print_max = n, tibble.print_min = m)`: if there are more than $n$ rows, print only the first $m$ rows.
+
+https://stackoverflow.com/questions/36848785/how-do-i-reset-all-options-arguments-to-their-default-values
+:::
+
+## Subsets of base::data.frame May Not be Data Frames
+
+-   Sometimes `[]` returns a data frame and sometimes it just returns a vector.
+
+::::::: columns
+::: {.column width="50%"}
+```{r, highlight=FALSE}
+#| echo: true
+df <- data.frame(x = 1:3, 
+                 y = 3:1, 
+                 z = LETTERS[1:3])
+df[, 1:2]
+class(df[, 1:2])
+```
+
+```{r, highlight=TRUE}
+#| echo: true
+df[, 1]
+class(df[, 1])
+```
+:::
+
+::::: {.column width="50%"}
+::: question
+<!-- - Treat the df as a matrix. What additional argument we need to preserve its data frame type? -->
+
+Treat the df as a list. How do we grab the 1st column and preserve its data frame type?
+:::
+
+::: fragment
+```{r}
+#| echo: true
+df[1]
+```
+
+```{r}
+#| echo: false
+#| eval: false
+df[[1]]
+```
+:::
+:::::
+:::::::
+
+::: notes
+-   Remember we can use `[]` to subset a data frame. Right?
+-   df\[, 1, drop=FALSE\]
+:::
+
+## Subsets of Tibbles Are Tibbles
+
+:::::: columns
+::: {.column width="50%"}
+-   [`[]` always returns another tibble.]{.green}
+
+```{r}
+#| echo: true
+df_tbl <- tibble(x = 1:2, y = 2:1)
+df_tbl[, 1]
+df_tbl[1]
+```
+
+```{r, highlight.output=TRUE}
+#| echo: true
+class(df_tbl[, 1])
+class(df_tbl[1])
+```
+:::
+
+:::: {.column width="50%"}
+::: fragment
+-   [`$` and `[[]]` return a vector.]{.green}
+
+```{r highlight.output=TRUE}
+#| echo: true
+df_tbl$x
+class(df_tbl$x) 
+```
+
+<br>
+
+```{r}
+#| echo: true
+df_tbl[[1]]
+class(df_tbl[[1]])  
+```
+:::
+::::
+::::::
+
+::: notes
+-   Tibbles are quite strict about subsetting
+:::
+
+## Tibbles Never Do Partial Matching {visibility="hidden"}
+
+:::::: columns
+::: {.column width="50%"}
+-   [Data frames do **partial matching**]{.green}
+
+-   *Treat name "a" as "abc"!*
+
+```{r}
+#| echo: true
+(df <- data.frame(abc = 1))
+df$a
+```
+:::
+
+:::: {.column width="50%"}
+::: gragment
+-   [Tibbles **never do** partial matching]{.green}
+
+-   *Name "a" cannot be recognized!*
+
+```{r}
+#| echo: true
+#| message: true
+#| warning: true
+(tib <- tibble(abc = 1))
+tib$a
+```
+:::
+::::
+::::::
+
+## Tibbles Can Have Complex Entries {visibility="hidden"}
+
+::::: columns
+::: {.column width="50%"}
+-   [**Data frame**: Columns can't be defined using other created variables.]{.green}
+
+```{r}
+#| echo: true
+#| eval: false
+data.frame(x = 1:5, 
+           y = 1:5, 
+           z = x + 3)
+# object 'x' not found
+```
+:::
+
+::: {.column width="50%"}
+-   [**Tibble**: Allow to refer to created variables.]{.green}
+
+```{r}
+#| echo: true
+tibble(x = 1:5, 
+       y = 1:5, 
+       z = x + 3)
+```
+:::
+:::::
+
+::: notes
+-   Columns need to be atomic vectors of numbers, strings, or logical values
+-   Can have more complex objects, such as lists or functions.
+:::
+
+<!-- ## Tibbles Can Have Complex Entries -->
+
+<!-- :::: {.columns} -->
+
+<!-- ::: {.column width="50%"} -->
+
+<!-- - [**Data frame**: Columns can't be defined using other created variables.]{.green} -->
+
+<!-- ```{r, eval=FALSE} -->
+
+<!-- #| echo: true -->
+
+<!-- data.frame(x = 1:5,  -->
+
+<!--            y = 1:5,  -->
+
+<!--            z = x + 3) -->
+
+<!-- # object 'x' not found -->
+
+<!-- ``` -->
+
+<!-- - [**Tibble**: Allow to refer to created variables.]{.green} -->
+
+<!-- ```{r} -->
+
+<!-- #| echo: true -->
+
+<!-- tibble(x = 1:5,  -->
+
+<!--        y = 1:5,  -->
+
+<!--        z = x + 3) -->
+
+<!-- ``` -->
+
+<!-- ::: -->
+
+<!-- ::: {.column width="50%"} -->
+
+<!-- ::: {.fragment} -->
+
+<!-- - [**Data frame**: Columns need to be atomic vectors.]{.green} -->
+
+<!-- ```{r, eval=FALSE} -->
+
+<!-- #| echo: true -->
+
+<!-- data.frame(id = c(1, 2, 3),  -->
+
+<!--            func = c(mean, median, sd)) -->
+
+<!-- # function can't be in a data.frame -->
+
+<!-- ``` -->
+
+<!-- - [**Tibble**: Elements can be lists or functions.]{.green} -->
+
+<!-- ```{r} -->
+
+<!-- #| echo: true -->
+
+<!-- tibble(id = c(1, 2, 3),  -->
+
+<!--        func = c(mean, median, sd)) -->
+
+<!-- ``` -->
+
+<!-- ::: -->
+
+<!-- ::: -->
+
+<!-- :::: -->
+
+<!-- ::: notes -->
+
+<!-- - Columns need to be atomic vectors of numbers, strings, or logical values -->
+
+<!-- - Can have more complex objects, such as lists or functions. -->
+
+<!-- ::: -->
+
+## 
+
+::: genai
+[ **08-Tibbles and Pipes** ]{style="color:green"}
+
+> `>` My professor taught me the difference between a R tibble and a R base data frame in their printing, display of data tables, and subsetting. Please teach me their other differences with a simple example. Thank you.
+
+<br>
+
+-   Share what you learned from AI!\~
+:::
+
+#  {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/pipe.png" background-size="30%"}
+
+<a href="https://magrittr.tidyverse.org/" style="position: absolute; inset: 0; display: block;" aria-label="magrittr website"></a>
+
+::: left
+<h1>Pipe</h1>
+
+<h1>Operator</h1>
+:::
+
+## Pipes
+
+-   The pipe `%>%` comes from the **magrittr** package of **tidyverse**.
+
+. . .
+
+-   R (4.1+) has *native base pipe operator* `|>`. Tools \> Global Options \> Code
+
+```{r}
+#| out-width: 56%
+#| echo: false
+
+knitr::include_graphics("images/07-package/native-pipe.png")
+```
+
+:::: callout-note
+::: {style="font-size: 1.1em;"}
+For simple cases `|>` and `%>%` behave identically. The base pipe is recommended because we can use `|>` anywhere anytime in R, even we don't use tidyverse.
+:::
+::::
+
+::: notes
+https://r4ds.hadley.nz/data-transform.html#sec-the-pipe
+:::
+
+## What and How to Use Pipe
+
+-   To add the pipe, use keyboard shortcut `Ctrl/Cmd + Shift + M`
+
+-   The pipe *sends* *the result of the left side* of the pipe to be the **first argument** of the function *on the right side* of the pipe.
+
+::: small
+```{r}
+#| out-width: 50%
+knitr::include_graphics("images/07-package/pipe.png")
+```
+:::
+
+<!-- # ```{r} -->
+
+<!-- # #| echo: true -->
+
+<!-- # 16 |> sqrt() |> log2() -->
+
+<!-- # log2(sqrt(16)) -->
+
+<!-- # ## We can define other arguments as if the first argument is already defined -->
+
+<!-- # 16 |> sqrt() |> log(base = 2) -->
+
+<!-- # ``` -->
+
+```{r}
+#| echo: true
+4 |> log(base = 2)
+```
+
+## Why Pipe Operator?
+
+-   Nested vs. Sequential-piped
+-   More natural and easier-to-read structure
+
+::: tiny
+```{r}
+#| echo: false
+#| fig-cap: "Source: https://www.andrewheiss.com/"
+knitr::include_graphics("images/07-package/pipe_example.png")
+```
+:::
+
+::: notes
+-   Nested vs. Sequential-piped
+-   Writing it out using pipes give it a more natural and easier-to-read structure.
+-   You can think about the following sequence of actions - wake up, get out of bed, get dressed, and leave house.
+-   Expressed as a set of nested functions in R would look like
+-   Writing it out using pipes give it a more natural and easier to read structure (if you think so)
+-   Like if-else statements, people don't like too many nested layers. We can easily get lost about what is actually doing.
+-   Using pipe operator, we have a clear sequential order, and all the actions or functions will be shown at the beginning of each line, making the code easier to read.
+:::
+
+## 
+
+:::::: lab
+[ **08-Tibbles and Pipes** ]{style="color:blue"}
+
+In **lab.qmd** `## Lab 8` section,
+
+-   Compare and contrast the following operations on a `data.frame` and equivalent `tibble`. What are the differences? Please comment.
+
+::::: columns
+::: {.column width="50%"}
+```{r, eval=FALSE}
+#| echo: true
+#| class-source: my_class500
+df <- data.frame(abc = 1:2, 
+                 xyz = c("a", "b"))
+# list method
+df$x
+df[[2]]
+df["xyz"]
+df[c("abc", "xyz")]
+# matrix method
+df[, 2]
+df[, "xyz"]
+df[, c("abc", "xyz")]
+```
+:::
+
+::: {.column width="50%"}
+```{r, eval=FALSE}
+#| echo: true
+#| class-source: my_class500
+tib <- tibble(abc = 1:2, 
+              xyz = c("a", "b"))
+# list method
+tib$x
+tib[[2]]
+tib["xyz"]
+tib[c("abc", "xyz")]
+# matrix method
+tib[, 2]
+tib[, "xyz"]
+tib[, c("abc", "xyz")]
+```
+:::
+:::::
+
+-   Use `|>` to first select last 12 rows of `iris` data set using `tail()`, then provides summary statistics on its columns using `summary()`.
+::::::
+
+::: notes
+```{r}
+#| echo: false
+#| class-source: my_class500
+df <- data.frame(abc = 1:2, 
+                 xyz = c("a", "b"))
+# list method
+df[[2]]
+df["xyz"]
+df[c("abc", "xyz")]
+# matrix method
+df[, 2]
+df[, "xyz"]
+df[, c("abc", "xyz")]
+```
+
+```{r}
+#| echo: false
+#| class-source: my_class500
+tib <- tibble(abc = 1:2, 
+              xyz = c("a", "b"))
+# list method
+tib[[2]]
+tib["xyz"]
+tib[c("abc", "xyz")]
+# matrix method
+tib[, 2]
+tib[, "xyz"]
+tib[, c("abc", "xyz")]
+```
+:::
+
+#  {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" background-size="50%"}
+
+<a href="https://pandas.pydata.org/" style="position: absolute; inset: 0; display: block;" aria-label="Pandas website"></a>
+
+::: left
+<h1>Pandas</h1>
+:::
+
+## Pandas
+
+-   Like **tidyverse** in R, **pandas** is a Python library that provides data structures, manipulation and analysis tools for data science.
+
+```{python}
+#| echo: true
+#| eval: false
+import numpy as np
+import pandas as pd
+```
+
+<!-- - A Pandas Series is like a *column vector* in a data frame. -->
+
+<!-- - It is a one-dimensional array holding data *of any type*. -->
+
+## Pandas Series from a List {visibility="hidden"}
+
+```{python}
+#| echo: true
+# import pandas as pd
+a = [1, 7, 2]
+s = pd.Series(a)
+print(s)
+```
+
+```{python}
+#| echo: true
+print(s[0])
+```
+
+```{python}
+#| echo: true
+
+## index used as naming 
+s = pd.Series(a, index = ["x", "y", "z"])
+print(s)
+```
+
+```{python}
+#| echo: true
+print(s["y"])
+```
+
+## Pandas Series from a Dictionary {visibility="hidden"}
+
+```{python}
+#| echo: true
+grade = {"math": 99, "stats": 97, "cs": 66}
+s = pd.Series(grade)
+print(s)
+```
+
+```{python}
+#| echo: true
+grade = {"math": 99, "stats": 97, "cs": 66}
+
+## index used as subsetting 
+s = pd.Series(grade, index = ["stats", "cs"])
+print(s)
+```
+
+::: question
+How do we create a named vector in R?
+:::
+
+```{r}
+#| echo: true
+#| eval: false
+grade <- c("math" = 99, "stats" = 97, "cs" = 66)
+```
+
+## [Pandas Data Frame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)
+
+-   Create a data frame from a dictionary
+
+```{python}
+#| echo: true
+data = {"math": [99, 65, 87], "stats": [92, 48, 88], "cs": [50, 88, 94]}
+
+df = pd.DataFrame(data)
+print(df) 
+```
+
+. . .
+
+-   Row and column names
+
+```{python}
+#| echo: true
+df.index = ["s1", "s2", "s3"]
+df.columns = ["Math", "Stat", "CS"]
+print(df) 
+```
+
+## Subsetting Columns
+
+:::: callout-warning
+::: {style="font-size: 1.1em;"}
+-   In Python, `[]` returns *Series*, `[[]]` returns *DataFrame*!
+-   In R, `[]` returns *tibble*, `[[]]` returns *vector*!
+:::
+::::
+
+::::: columns
+::: {.column width="50%"}
+<!-- **By Names** -->
+
+```{python}
+#| echo: true
+
+## Series
+df["Math"]
+type(df["Math"])
+```
+:::
+
+::: {.column width="50%"}
+<!-- **By Index** -->
+
+```{python}
+#| echo: true
+
+## DataFrame
+print(df[["Math"]])
+type(df[["Math"]])
+```
+
+```{python}
+#| echo: true
+print(df[["Math", "CS"]])
+```
+:::
+:::::
+
+::: notes
+isinstance(df\[\["Math"\]\], pd.DataFrame)
+:::
+
+## [Subsetting Rows `DataFrame.iloc`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html)
+
+-   **integer-location** based indexing for selection by position
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: true
+print(df)
+```
+
+```{python}
+#| echo: true
+
+## first row Series
+df.iloc[0] 
+```
+
+```{python}
+#| echo: true
+
+## first row DataFrame
+print(df.iloc[[0]])
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+## first 2 rows
+print(df.iloc[[0, 1]])
+```
+
+```{python}
+#| echo: true
+
+## 1st and 3rd row
+print(df.iloc[[True, False, True]])
+```
+:::
+:::::
+
+## Subsetting Rows and Columns `DataFrame.iloc`
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: true
+print(df)
+```
+
+```{python}
+#| echo: true
+
+## (1, 3) row and (1, 3) col
+print(df.iloc[[0, 2], [0, 2]])
+```
+
+```{python}
+#| echo: true
+
+## all rows and 1st col
+print(df.iloc[:, [True, False, False]])
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+print(df.iloc[0:2, 1:3])
+```
+:::
+:::::
+
+## [Subsetting Rows and Columns `DataFrame.loc`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html)
+
+Access a group of rows and columns by **label(s)**
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+print(df)
+```
+
+```{python}
+#| echo: true
+
+df.loc['s1', "CS"]
+```
+
+```{python}
+#| echo: true
+
+## all rows and 1st col
+print(df.loc['s1':'s3', [True, False, False]])
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+df.loc['s2', ['Math', 'Stat']]
+```
+:::
+:::::
+
+## Obtain a Single Cell Value `DataFrame.iat`/ `DataFrame.at` {visibility="hidden"}
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+print(df)
+```
+
+```{python}
+#| echo: true
+
+df.iat[1, 2]
+```
+
+```{python}
+#| echo: true
+
+df.iloc[0].iat[1]
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+df.at['s2', 'Stat']
+```
+
+```{python}
+#| echo: true
+
+df.loc['s1'].at['Stat']
+```
+:::
+:::::
+
+## [New Columns `DataFrame.insert`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.insert.html) and [New Rows `pd.concat`](https://pandas.pydata.org/docs/reference/api/pandas.concat.html)
+
+:::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+print(df)
+```
+
+```{python}
+#| echo: true
+
+df.insert(loc = 2, 
+          column = "Chem", 
+          value = [77, 89, 76])
+print(df)
+```
+:::
+
+:::: {.column width="50%"}
+::: fragment
+```{python}
+#| echo: true
+df1 = pd.DataFrame({
+    "Math": 88, 
+    "Stat": 99, 
+    "Chem": 0, 
+    "CS": 100
+    }, index = ['s4'])
+```
+
+```{python}
+#| echo: true
+print(pd.concat(objs = [df, df1]))
+```
+:::
+::::
+::::::
+
+. . .
+
+:::: callout-note
+::: {style="font-size: 1.2em;"}
+We can also use `pd.concat()` to concatenate pandas data frames by column. How? Ask AI!
+:::
+::::
+
+::: notes
+```{python}
+#| echo: true
+#| eval: false
+pd.concat(objs = [df, df1], 
+          ignore_index = True)
+```
+:::
+
+#  {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" background-size="50%"}
+
+<a href="https://numpy.org/" style="position: absolute; inset: 0; display: block;" aria-label="NumPy website"></a>
+
+::: left
+<h1>NumPy</h1>
+:::
+
+## NumPy for arrays/matrices
+
+```{python}
+#| echo: true
+range(0, 5, 1) # a seq of number from 0 to 4 with increment of 1
+list(range(0, 5, 1))
+```
+
+. . .
+
+-   The array object in NumPy is of class `ndarray`.
+
+-   Use `np.array()` to create a NumPy array.
+
+```{python}
+#| echo: true
+import numpy as np
+arr = np.array(range(0, 5, 1)) ## One-dim array 
+arr
+type(arr)
+```
+
+::: notes
+-   **NumPy** is used to work with arrays/matrices
+:::
+
+## 1D Array (Vector) and 2D Array (Matrix)
+
+-   `np.arange`: Efficient way to create a one-dim array of sequence of numbers
+
+```{python}
+#| echo: true
+np.arange(2, 5)
+np.arange(6, 0, -1)
+```
+
+. . .
+
+-   2D array
+
+```{python}
+#| echo: true
+np.array([[1, 2, 3], [4, 5, 6]])
+```
+
+::: notes
+```{python}
+#| echo: true
+np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])
+```
+:::
+
+## `np.reshape()`
+
+```{python}
+#| echo: true
+arr2 = np.arange(8).reshape(2, 4)
+arr2
+arr2.shape  
+```
+
+```{python}
+#| echo: true
+arr2.ndim
+```
+
+```{python}
+#| echo: true
+arr2.size
+```
+
+. . .
+
+::: question
+How do we combine 2 numpy arrays?
+:::
+
+## Stacking Arrays {visibility="hidden"}
+
+```{python}
+#| echo: true
+a = np.array([1, 2, 3, 4]).reshape(2, 2)
+b = np.array([5, 6, 7, 8]).reshape(2, 2)
+
+np.vstack((a, b))
+```
+
+```{python}
+#| echo: true
+
+np.hstack((a, b))
+```
+
+## 
+
+::: lab
+[ **09-NumPy and pandas** ]{style="color:blue"}
+
+In **lab.qmd** `## Lab 9` section, create a Python pandas.DataFrame equivalent to the R tibble
+
+```{r}
+#| echo: true
+library(tibble)
+tibble(x = 1:5, y = 5:1, z = LETTERS[1:5])
+```
+
+```{python}
+#| echo: true
+#| eval: false
+import numpy as np
+import pandas as pd
+dic = {'__': np.arange(__, __), 
+       '__': np.arange(__, __, __),
+       '__': [, , , , ]}
+pd._____________(dic)
+```
+:::
+
+## 
+
+::: genai
+[ **09-NumPy and pandas** ]{style="color:green"}
+
+> `>` My professor said we can use `pd.concat()` to concatenate pandas data frames by column. Please teach me how with a simple example.
+
+> `>` I have two numpy arrays, `a = np.array([1, 2, 3, 4]).reshape(2, 2)` and `b = np.array([5, 6, 7, 8]).reshape(2, 2)`. Please teach me how I can combine them vertically or horizontally?
+
+<br>
+
+-   Share what you learned from AI!\~
+:::
+
+##  {visibility="hidden"}
+
+```{python}
+#| echo: false
+#| eval: true
+import numpy as np
+import pandas as pd
+import string as st
+# list(st.ascii_uppercase)
+dic = {'x': np.arange(1, 6), 
+       'y': np.arange(5, 0, -1),
+       'z': list(st.ascii_uppercase)[0:5]}
+pd.DataFrame(dic)
+```
+
+```{python}
+#| echo: false
+dic = {'x': np.arange(1, 6), 
+       'y': np.arange(5, 0, -1),
+       'z': ["A", "B", "C", "D", "E"]}
+pd.DataFrame(dic)
+```
+
+::: notes
+# dic = {'x':np.arange(1, 6), 'y': list(reversed(range(1, 6))), 'z':list(string.ascii_uppercase)\[0:5\]}
+
+# pd.DataFrame(dic)
+:::
+
+#  {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/d/d8/Polars_software_logo.svg" background-size="50%"}
+
+<a href="https://pola.rs" style="position: absolute; inset: 0; display: block;" aria-label="Polars website"></a>
+
+<!-- ::: {style="position: relative; background-color: #ffde57; background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Polars_software_logo.svg'); background-repeat: no-repeat; background-position: center; background-size: 60%; height: 140px;"} -->
+
+<!-- ::: -->
+
+::: left
+<h1>Polars\*</h1>
+:::
+
+## 
+
+::: small
+```{r}
+#| out-width: 100%
+#| fig-link: https://www.linkedin.com/pulse/polars-vs-pandas-benchmarking-performances-beyond-l6svf
+knitr::include_graphics("./images/07-package/polars_pandas.png")
+```
+:::
+
+## When to Use Which\*
+
+::::: columns
+::: {.column width="50%"}
+Use [**Pandas**]{.purple} when
+
+-   **Small to Medium** Datasets: RAM \< 2GB.
+
+-   **Heavy Exploratory Data Analysis**
+
+-   **Spreadsheet-style Manipulation**: Rely heavily on row indices.
+
+-   **Legacy Code**: Working on an existing project.
+:::
+
+::: {.column width="50%"}
+Use [**Polars**]{.blue} when
+
+-   **Large** Datasets: Data: RAM \> 5GB.
+
+-   **Performance is Critical**: Polars is often 10x to 100x faster than Pandas.
+
+-   **Clean, Scalable Code**
+
+-   **Working with Cloud Data**
+:::
+:::::
+
+<!-- | Dimension | Use [**Pandas**]{.purple}  | Use [**Polars**]{.blue}  | -->
+
+<!-- | ---------------- | ------------ | ---------------- | -->
+
+<!-- | Data Size | Small to Medium (RAM < 2GB) | Large to Massive (RAM > 5GB) | -->
+
+<!-- | Speed     | Usually | Work| -->
+
+<!-- | Followin | Most li | You may   | -->
+
+<!-- | Using libraries that expect Data  | Mo   | Sometimes y   | -->
+
+<!-- | Your code needs t| Most    | Might look diffe  | -->
+
+<!-- | Your| Might star | Often faster and uses memory bet | -->
+
+<!-- | You are reading  | Can work, but may b  | Often a better  | -->
+
+<!-- | You want a simp| Default choice for nearl | Use when you hit p | -->
+
+::: notes
+Most plotting libraries (Matplotlib, Seaborn) and machine learning tools (Scikit-learn) were built specifically to work with Pandas. Polars is often 10x to 100x faster than Pandas because it uses all your CPU cores. Polars' "Expression API" is more structured. It discourages the "spaghetti code" that can sometimes happen with Pandas' .iloc, .loc, and nested brackets. Polars has excellent support for reading Parquet, IPC, and CSV files directly from cloud storage or scanning them lazily to save time. Polars demonstrates clear performance gains over Pandas for medium and large datasets, especially for group-by and column selection. For smaller datasets (10,000 rows), Pandas can occasionally be faster in simpler operations like filtering, but Polars still shows advantages in more complex tasks like joins and large-scale aggregations.
+:::
+
+## Lab Bonus! {visibility="hidden"}
+
+
+-   Happy **R**alentine's Day! ❤️
+
+```{r}
+#| eval: false
+#| echo: true
+x <- seq(0, 2*pi, by = 0.01)
+xhrt <- 16 * sin(x) ^ 3
+yhrt <- 13 * cos(x) - 5 * cos(2*x) - 2 * cos(3*x) - cos(4*x)
+par(mar = c(0, 0, 0, 0))
+plot(xhrt, yhrt, type = "l", axes = FALSE, xlab = "", ylab = "")
+polygon(xhrt, yhrt, col = "red", border = NA)
+points(c(10,-10, -15, 15), c(-10, -10, 10, 10), pch = 169, font = 5)
+text(0, 0, "Happy Valentine's Day!", font = 2, cex = 2, col = "pink")
+```
+
+## Lab Bonus! {visibility="hidden"}
+
+
+-   Happy **Py**lentine's Day! ❤️
+
+```{python}
+#| eval: false
+#| echo: true
+lines = []
+msg = "~Happy Valentine's Day!~"
+for y in range(15, -15, -1):
+    line = ""
+    for x in range(-30, 30):
+        f = ((x * 0.05) ** 2 + (y * 0.1) ** 2 - 1) ** 3 - (x * 0.05) ** 2 * (y * 0.1) ** 3
+        line += msg[(x - y) % len(msg)] if f <= 0 else " "
+    lines.append(line)
+
+print("\n".join(lines))
+```
+
+## Resources
+
+-   [tibble](https://tibble.tidyverse.org/)
+-   [pipes](https://r4ds.hadley.nz/workflow-style.html#sec-pipes)
+-   [NumPy](https://numpy.org/doc/stable/user/index.html)
+-   [pandas](https://pandas.pydata.org/docs/user_guide/index.html)
+-   [polars](https://pola.rs/)

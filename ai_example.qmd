@@ -192,7 +192,7 @@ Use this exact slide structure:
 -   Our corrected understanding, with evidence
 -   One takeaway for future data science work
 
-Time: 5 to 7 minutes.
+Time: 12 to 15 minutes.
 
 ## Individual Reflection (each student)
 

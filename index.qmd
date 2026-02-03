@@ -14,13 +14,13 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 |  | Thu, Jan 22 | Quarto: YAML and Markdown | [🖥️quarto](slides/05-quarto-slides.html) | [📋02](/exercise/lab02-quarto.html) [📋03](/exercise/lab03-markdown.html) |  | [✅ Team up!](team.html) |
 | 3 | Tue, Jan 27 | Quarto: Code Chunk |  | [📋04](/exercise/lab04-chunk.html) |  |  |
 |  | Thu, Jan 29 | R and Python Syntax | [🖥️syntax](/slides/06-syntax-slides.html) | [📋05](/exercise/lab05-rtype.html) [📋06](/exercise/lab06-py.html) |  | Team up Due! |
-| 4 | Tue, Feb 3 | R Tidyverse | 🖥️package | 📋07 📋08 | 🤖 AI Project Guideline |  |
-|  | Thu, Feb 5 | Python NumPy/Pandas |  | 📋09 |  |  |
+| 4 | Tue, Feb 3 | R Tidyverse | [🖥️package](/slides/07-package-slides.html) | [📋07](/exercise/lab07-plot.html) [📋08](/exercise/lab08-tibble.html) | [🤖 AI Project Guideline](/ai_act_guide.html) |  |
+|  | Thu, Feb 5 | Python NumPy/Pandas |  | [📋09](/exercise/lab09-numpy.html) |  |  |
 | 5 | Tue, Feb 10 | Data Importing | 🖥️import | 📋10 |  |  |
-|  | Thu, Feb 12 | Data Visualization-ggplot2 | 🖥️ggplot | 📋11 | Activity 1 |  |
-| 6 | Tue, Feb 17 | Data Visualization-categorical and numerical data | 🖥️visualization | 📋12 📋13 |  |  |
-|  | Thu, Feb 19 | Interactive Data Visualization | 🖥️interactive-viz | 📋14 | Activity 2 |  |
-| 7 | Tue, Feb 24 | Data Wrangling - one data frame | 🖥️dplyr-1 | 📋15 |  |  |
+|  | Thu, Feb 12 | Data Visualization-ggplot2 | 🖥️ggplot | 📋11 |  |  |
+| 6 | Tue, Feb 17 | Data Visualization-categorical and numerical data | 🖥️visualization | 📋12 📋13 | Activity 1 |  |
+|  | Thu, Feb 19 | Interactive Data Visualization | 🖥️interactive-viz | 📋14 |  |  |
+| 7 | Tue, Feb 24 | Data Wrangling - one data frame | 🖥️dplyr-1 | 📋15 | Activity 2 |  |
 |  | **Thu, Feb 26** | **Mini Project 1 Presentation: Exploratory Data Storytelling** |  |  |  |  |
 | 8 | Tue, Mar 3 | Data Wrangling - two data frames | 🖥️dplyr-2 | 📋16 |  |  |
 |  | Thu, Mar 5 | Data Wrangling - tidyr | 🖥️tidyr | 📋17 | Activity 3 |  |

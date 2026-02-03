@@ -31,12 +31,25 @@ In **lab.qmd** `## Lab 9` section, create a Python pandas.DataFrame equivalent t
 
 ```{r}
 #| echo: true
+library(tibble)
 tibble(x = 1:5, y = 5:1, z = LETTERS[1:5])
 ```
 
 
 ```{python}
 #| echo: true
+#| eval: false
+import numpy as np
+import pandas as pd
+dic = {'__': np.arange(__, __), 
+       '__': np.arange(__, __, __),
+       '__': [, , , , ]}
+pd._____________(dic)
+```
+
+
+```{python}
+#| echo: false
 #| eval: false
 import numpy as np
 import pandas as pd

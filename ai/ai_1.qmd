@@ -73,7 +73,7 @@ Dataset notes
 * Group submissions
   * AI Interaction Log
   * Human Authored Synthesis
-  * Slides for a 10 to 12 minute presentation
+  * Slides for a 12 to 15 minute presentation
   
 * Individual submission
   * Individual Reflection (150 to 200 words)

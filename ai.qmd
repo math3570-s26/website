@@ -13,6 +13,14 @@ listing:
     description: "Content"
 ---
 
-More activities to be added as the semester progresses.
+- Activity 1 is presented by team [**Superb Statisticians**]{.blue}: Aaron, Connor, and Danielle.
 
-Teams are randomly assigned to a project.
+- Activity 2 is presented by team .
+
+- Activity 3 is presented by team .
+
+- Activity 4 is presented by team .
+
+- Activity 5 is presented by team .
+
+- Activity 6 is presented by team .

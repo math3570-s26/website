@@ -1,0 +1,263 @@
+---
+title: "AI Activity 2: Tidy vs Untidy Data: When Rules Are Not Enough"
+subtitle: "NYC Airbnb 2019 neighborhood summary dataset"
+categories: "AI activity"
+# author: "Dr. Cheng-Han Yu"
+date-modified: today
+editor: source
+---
+
+> Tidy data rules are helpful, but real data work often requires choices. There can be more than one reasonable tidy format, depending on the question you want to answer.
+
+You will use an AI tool as a learning partner to investigate a core data science reality: Tidy rules tell you what tidy looks like, but they do not tell you which tidy format is best for a specific analysis goal.
+
+You are graded on how you **think, critique, and explain**, not on whether AI gives perfect answers.
+
+
+::: {.callout-note}
+## Goal of this activity
+::: {style="font-size: 1.1em;"}
+
+By the end of this activity, your group will do four things:
+
+1. Explain why the provided dataset is not tidy by pointing to specific evidence in the file.
+2. Create two different tidy versions of the same data:
+   * Tidy version A that is best for modeling or tabular summaries.
+   * Tidy version B that is best for visualization across multiple metrics.
+3. Show evidence that reshaping did not change the meaning of the data by completing at least two sanity checks.
+4. Choose which tidy version is better for your investigation question and justify your choice.
+
+Your grade depends on your reasoning, evidence, and explanation, not on whether AI output sounds correct.
+:::
+:::
+
+
+:::: callout-note
+## To Do
+
+::: {style="font-size: 1.1em;"}
+1.  Download the dataset from the [Dataset section](#sec-data) below.
+2.  Write your investigation question (2 to 3 sentences). [Step 1](#sec-step1) in Tasks.
+3.  Run 3 to 5 AI prompts that cover tidy criteria, reshaping, and verification. [Step 2](#sec-step2) in Tasks.
+4.  Reshape the data and complete checklist items 1 to 4 first. [Step 4](#sec-step4)
+5.  Draft your synthesis, then build slides using the required 5 slide structure. [Step 5](#sec-step5) and [Step 6](#sec-step6)
+:::
+::::
+
+
+## Assigned Roles (3 students)
+
+**[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high-quality, cohesive work.**
+
+### Prompt Engineer
+
+Responsibilities
+
+* Create 3 to 5 purposeful AI prompts
+* Save AI responses and build the AI Interaction Log
+* Write annotations for each prompt and response pair
+
+### Data Science Auditor
+
+Responsibilities
+
+* Identify hidden assumptions in AI guidance
+* Evaluate whether AI produced a tidy result that matches the investigation question
+* Design and run verification checks after reshaping
+* Provide evidence for at least two meaningful choices or limitations
+
+### Synthesizer
+
+Responsibilities
+
+* Write the Human Authored Synthesis in clear course language
+* Build slides using the required structure
+* Ensure the final work is consistent and concise
+
+
+## Dataset {#sec-data}
+
+Required file
+
+* [topic2-data.csv](../documents/topic2-data.csv)
+
+Dataset notes
+
+* [README_NYC_Airbnb2019_Topic2.txt](../documents/README_NYC_Airbnb2019_Topic2.txt)
+
+
+## What you will submit
+
+* Group submissions
+  * AI Interaction Log
+  * Human Authored Synthesis
+  * Slides for a 12 to 15 minute presentation
+
+* Individual submission
+  * Individual Reflection (150 to 200 words)
+
+
+## Step by step tasks
+
+### Step 1 Define your investigation question (before using AI) {#sec-step1}
+
+Write 2 to 3 sentences that answer these four questions:
+
+1. What is the analysis task you want to do
+   (choose one: a summary table, a visualization, or a model input)
+2. What is the main outcome you care about
+   (examples: mean_price, median_minimum_nights, mean_availability_365, mean_reviews_per_month, n_listings)
+3. What comparison do you want to make
+   (examples: compare room types within a neighborhood, compare neighborhoods within a borough, compare multiple metrics for one room type)
+4. Why your task requires a specific tidy format
+
+Your question must be specific enough that you can argue for two different tidy representations and then choose one.
+
+Example investigation questions you may use or adapt:
+
+* _"I want to make a plot that compares mean_price across room_type within each neighbourhood_group. I think tidy version A is better because it gives one row per neighbourhood_group, neighbourhood, and room_type with a mean_price column ready to plot."_
+
+* _"I want to compare multiple metrics for each room_type in one visualization. I think tidy version B is better because it has a metric column and a value column, which makes it easy to facet or color by metric."_
+
+* _"I want to prepare the data for a simple model where mean_price is predicted by room_type and neighbourhood_group. I think tidy version A is better because each row is one observation unit with clear predictor columns."_
+
+
+### Step 2 Use AI strategically (3 to 5 prompts) {#sec-step2}
+
+**[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.**
+
+Your prompts must be purposeful and iterative.
+
+Prompt requirements
+
+* At least 1 prompt asking AI to explain why the provided dataset is untidy, using tidy data rules
+* At least 1 prompt asking AI to propose a tidy target for a specific analysis goal you choose
+* At least 1 prompt asking AI to reshape the data using a concrete plan, for example pivot_longer then pivot_wider
+* At least 1 prompt asking AI for verification checks after reshaping
+
+#### Suggested prompt starters (you may adapt)
+
+* *“Here is a dataset where the column names look like mean_price__Private_room and mean_availability_365__Shared_room. Explain why this is untidy, using tidy data rules.”*
+
+* *“Give two different tidy formats for this dataset, one that is best for modeling, and one that is best for visualization. Explain why.”*
+
+* *“Write a step by step plan in R to reshape this dataset so that each row is one neighbourhood_group, neighbourhood, and room_type, with separate columns for mean_price, median_minimum_nights, mean_availability_365, mean_reviews_per_month, and n_listings.”*
+
+* *“After reshaping, what sanity checks can prove that I did not accidentally change the meaning of the data”*
+
+* *“If some room types are missing in some neighborhoods, how should that appear in a tidy data set, and how should I report it”*
+
+
+### Step 3 Create the AI Interaction Log {#sec-step3}
+
+For each prompt, include:
+
+* Prompt goal
+* The AI response excerpt you used
+* Your annotation:
+  * What AI got right
+  * What AI assumed
+  * What was missing, misleading, or incorrect
+  * How you revised your prompt or your plan
+
+Important rule
+
+* You may not paste AI text into your final synthesis verbatim.
+
+### Step 4 Reshape the dataset and run required validation checks {#sec-step4}
+
+Reshape the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. *A short summary without numbers or outputs does not count as evidence.*
+
+::: {.callout-note collapse="true"}
+## Required reshaping and validation checklist (expand to view)
+
+**1. Rows and columns in the original data**
+
+* Confirm the dataset has 15 rows and 17 columns after import.
+
+**2. Identify at least three untidy features**
+
+Use tidy data rules and point to concrete evidence from this file. Examples of valid untidy features include:
+
+* Two variables are encoded in the column names
+* Some variables are spread across many columns instead of stored in one column
+* Missing values appear because some room types are absent in some neighborhoods, which can be hard to see in wide format
+
+**3. Create tidy version A, best for modeling and tabular summaries**
+
+Target structure
+
+* One row per neighbourhood_group, neighbourhood, and room_type
+* Separate columns for: mean_price, median_minimum_nights, mean_availability_365, mean_reviews_per_month, n_listings
+
+Evidence to submit
+
+* The row and column count of tidy version A
+* The list of column names of tidy version A
+
+**4. Create tidy version B, best for visualization across metrics**
+
+Target structure
+
+* One row per neighbourhood_group, neighbourhood, room_type, and metric
+* A single value column
+
+Evidence to submit
+
+* The row and column count of tidy version B
+* The list of unique values in the metric column
+
+**5. Sanity checks that meaning did not change**
+
+Provide evidence for at least two checks, for example:
+
+* For one neighborhood, show that a value like mean_price for Private_room is the same before and after reshaping
+* Show that the total number of non missing cells in the wide table equals the number of rows in tidy version A for each metric room_type combination
+* Show that the number of missing combinations you report is consistent between formats
+
+**6. Choice and justification**
+
+Write 3 to 5 sentences answering:
+
+* Which tidy version is better for your investigation question
+* Why the other tidy version is less convenient for that goal
+* What would make the other tidy version the better choice in a different situation
+
+:::
+
+
+### Step 5 Write the Human Authored Synthesis (group) {#sec-step5}
+
+Length target: 400 to 600 words.
+
+Your synthesis must include:
+
+* Your investigation question
+* At least two meaningful choices, assumptions, or limitations, supported by evidence from your checklist
+* A clear explanation of why tidy rules alone were not enough for this case
+* A short recommended decision process for choosing a tidy format
+
+Your synthesis must be written in your own words.
+
+### Step 6 Presentation slides (group) {#sec-step6}
+
+Use this exact slide structure:
+
+* Our question
+* What AI suggested
+* Where AI fell short
+* Our corrected understanding, with evidence
+* One takeaway for future data science work
+
+Time: 12 to 15 minutes.
+
+## Individual Reflection (each student)
+
+Write 150 to 200 words answering:
+
+* What did AI help you learn
+* What did AI miss or oversimplify
+* What did you contribute as a human thinker
+* How will you change your AI use in future data work
+
+Your reflection must match your assigned role.

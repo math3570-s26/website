@@ -63,9 +63,7 @@ website:
 
       - section: "Mini Project"
         contents:
-          - href: present-description.qmd
-            text: Guideline and Policy
-          - href: present-work.qmd
+          - href: project.qmd
             text: Topics and Works
 
       - section: "Final Project"

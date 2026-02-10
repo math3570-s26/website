@@ -1,0 +1,389 @@
+---
+title: "Mini Project 1"
+subtitle: "Exploratory Data Storytelling via Data Visualization"
+format: html
+editor: source
+categories: "Mini Project"
+date-modified: today
+execute:
+  echo: true
+  eval: false
+  warning: false
+  message: false
+  
+---
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+```
+
+
+## Overview
+
+In this mini project, your team will **explore one data set and tell a short data story with visuals**.
+
+Focus on practice: Complete the Quarto file by 
+
+1. Asking a clear question for a real audience 
+2. Exploring with a few plots 
+3. Choosing the best evidence 
+4. Writing a short, readable story
+
+This is an exploratory project. Use descriptive analysis only. Do NOT run hypothesis tests and do NOT fit complex models.
+
+### What you will submit
+
+Show, in your Posit Cloud,
+
+1.  The **rendered HTML report**
+2.  The **complete version of this source qmd file**
+3.  **Any data file you used**, only if it is not a built in package data set
+
+
+### What you will present
+
+A **10 minute** team presentation that summarizes your story and highlights your 3 final visuals.
+
+## Team Info
+
+- **Team Name**: [Your Team Name]{.blue}
+
+- Team members and roles for this project:
+
+  1.  **Project lead** (keeps time, coordinates tasks): [Your Member Name]{.blue}
+  2.  **Data wrangler** (loads data, checks quality, makes a clean table): [Your Member Name]{.blue}
+  3.  **Visualization designer** (builds plots, improves readability): [Your Member Name]{.blue}
+  4.  **Storyteller** (writes narrative, connects visuals to claims): [Your Member Name]{.blue}
+
+[Role note]: Each student plays a specific role for accountability, but teammates are welcome to work together, help, and learn from each other to produce a high quality and cohesive work.
+
+## Step 1: Choose a data set
+
+Choose one option below. Two teams may use the same data set.
+
+:::: callout-warning
+::: {style="font-size: 1.1em;"}
+
+If another team uses the same data set, it would be much better if your story is meaningfully different. Your team may differ on
+
+1. Audience
+2. Focus variables or outcome
+3. Comparison frame (group comparison, relationship, ranking, time trend, and so on)
+
+:::
+::::
+
+### Data sets
+
+
+- `penguins` data set from R package [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/)
+
+- `flights` data set from R package [`nycflights13`](https://nycflights13.tidyverse.org/index.html)
+
+- `gapminder` data set from R package [`gapminder`](https://jennybc.github.io/gapminder/)
+
+- `diamonds` data set from R package [`ggplot2`](https://ggplot2.tidyverse.org/reference/diamonds.html)
+
+- *Your own data set!*
+
+Using the code chunk `import-data` below to import your data, and call the data set `data_raw`.
+
+```{r}
+#| label: import-data
+## Import your data
+data_raw <- 
+```
+
+
+### Quick description of your data set
+
+Answer the following questions.
+
+1.  What does one row represent
+
+[**Answer:**]{.blue} 
+
+2.  What are columns you think might matter for your story
+
+[**Answer:**]{.blue} 
+
+3.  Who might care about this data
+
+[**Answer:**]{.blue} 
+
+## Step 2: Mini proposal
+
+Write short answers. Keep it specific.
+
+1.  Audience: Who is your audience
+
+[**Answer:**]{.blue} 
+
+2.  Investigation question: One sentence
+
+[**Answer:**]{.blue} 
+
+3.  Your current guess: One sentence
+
+[**Answer:**]{.blue} 
+
+4.  Focus variables: List some variables you plan to use
+
+[**Answer:**]{.blue}  
+
+5.  Comparison frame: Choose one or two (group comparison, relationship, ranking, time trend, etc.)
+
+[**Answer:**]{.blue} 
+
+## Step 3: Quick data check and light cleaning
+
+Your goal is to understand what you have. Keep cleaning minimal.
+
+### 3.1 First look
+
+```{r}
+#| label: datacheck
+
+## Check your data (you can use your own way to check the data)
+glimpse(data_raw)
+summary(data_raw)
+```
+
+### 3.2 Missing values
+
+```{r}
+#| label: missingvalue
+missing_counts = data_raw |>
+  summarise(across(everything(), ~ sum(is.na(.x)))) |>
+  pivot_longer(cols = everything(), names_to = "variable", values_to = "n_missing") |>
+  arrange(desc(n_missing))
+
+missing_counts
+```
+
+In 2 to 4 sentences, describe what missing values you noticed and how you plan to handle them.
+
+[**Answer:**]{.blue} 
+
+### 3.3 Create a working clean table
+
+Create a new object `data` with: 
+
+1. **Clean column names if needed**
+2. **Only the columns you might use**
+3. **Any simple recodes you need**
+
+Use the code chunk `clean` below to clean your `data_raw`, and save the new cleaned data called `data` that is ready for analysis.
+
+```{r}
+#| label: clean
+## Clean your data
+```
+
+Describe what you changed and why, in plain language:
+
+[**Answer:**]{.blue} 
+
+1.  
+
+2.  
+
+3.  
+
+## Step 4: Exploration
+
+Create 4 quick exploratory plots. These are NOT final. They help you decide what story to tell.
+
+Suggestions: 
+
+1. One **distribution plot** 
+2. One **bar plot or count plot**
+3. One **relationship plot (two numeric variables)**
+4. One plot that **compares groups**
+
+### Exploratory plot 1
+
+```{r}
+#| label: plot1
+# ggplot(data, aes(x = ...)) + geom_...
+```
+
+What you learned (1 to 2 sentences):
+
+[**Answer:**]{.blue} 
+
+### Exploratory plot 2
+
+```{r}
+#| label: plot2
+```
+
+What you learned (1 to 2 sentences):
+
+[**Answer:**]{.blue} 
+
+### Exploratory plot 3
+
+```{r}
+#| label: plot3
+```
+
+What you learned (1 to 2 sentences):
+
+[**Answer:**]{.blue} 
+
+### Exploratory plot 4
+
+```{r}
+#| label: plot4
+```
+
+What you learned (2 to 3 sentences):
+
+[**Answer:**]{.blue} 
+
+### Decision
+
+1.  What is the most interesting pattern you found
+
+[**Answer:**]{.blue} 
+
+2.  Revised investigation question (one sentence)
+
+[**Answer:**]{.blue} 
+
+3.  Which 3 visuals will become your final visuals, and why
+
+[**Answer:**]{.blue} 
+
+
+## Step 5: Build your mini data story
+
+Your final report must include:
+
+1. A short opening paragraph that **sets context and states the question** (4 to 6 sentences) 
+2. Exactly 3 final visuals, each with a short interpretation paragraph (3 to 5 sentences) 
+<!-- 3. One small summary table (5 to 15 rows, or a simple grouped summary)  -->
+4. A short closing paragraph with takeaways, limitations, and next steps (4 to 5 sentences)
+
+Keep the whole report short. Aim for about 1 to 2 pages when rendered.
+
+### 5.1 Story opening
+
+[Write your opening paragraph in this section.]{.blue} Include
+
+1.  **Context:** What is the setting in plain language
+2.  **Audience:** Who should care about this story
+3.  **Investigation question:** What are you trying to learn
+4.  **Why it matters:** What decision or understanding this could support
+5.  **Data description:** Name the data set and explain what one row represents
+6.  **Preview:** Briefly state what your three visuals will show
+
+
+### 5.2 Final visual 1
+
+```{r}
+#| label: final-1
+# Build a clean, readable plot
+```
+
+[Interpretation (3 to 4 sentences)]{.blue}. Include:
+
+1.  **What is shown:** What is on the x axis and y axis, and what groups or colors mean
+2.  **Key pattern:** Describe the main visible pattern using directional language and comparisons
+3.  **Evidence:** Mention at least one concrete detail (an approximate value, a ranking, or a noticeable gap)
+4.  **Connection:** Explain how this plot helps answer your investigation question
+5.  **Caveat:** State one caution, such as missing values, outliers, or "this is association, not causation"
+
+**[Tip:]** **Avoid describing every point**. Focus on what you want your audience to notice.
+
+
+### 5.4 Final visual 2
+
+```{r}
+#| label: final-2
+# Build a clean, readable plot
+```
+
+[Interpretation (3 to 4 sentences)]{.blue}: Include the same suggested points as visual 1.
+
+### 5.5 Final visual 3
+
+```{r}
+#| label: final-3
+# Build a clean, readable plot
+```
+
+[Interpretation (3 to 4 sentences)]{.blue}: Include the same suggested points as visual 1.
+
+### 5.6 Closing
+
+[Write your closing paragraph.]{.blue} Include: 
+
+1.  **Your answer:** State your best answer to the investigation question (one sentence)
+2.  **Support:** Point to your strongest visual evidence (one to two sentences)
+3.  **Limitation:** Name one limitation of the data or your approach (one sentence)
+4.  **Next step:** State one concrete next step you would take with more time (one sentence)
+5.  **So what:** Explain what this means for your audience (one sentence)
+
+**[Tip:]** Keep claims **descriptive and reasonable**. Do not overstate certainty.
+
+
+## Step 6: Visual quality checklist
+
+For each final plot, confirm: 
+
+1. Title and axis labels are descriptive 
+2. Units are clear when relevant 
+3. Text is readable at presentation size 
+4. Legend is readable, or direct labels are used 
+5. If you filtered rows, you said so in the text
+
+Improve your plots accordingly.
+
+## Step 7: Team reflection
+
+Each team member writes 2 to 4 sentences:
+
+1. What you contributed 
+2. One thing you learned 
+3. One thing you would improve next time
+
+#### Member 1: your name
+
+[**Answer:**]{.blue} 
+
+#### Member 2: your name
+
+[**Answer:**]{.blue} 
+
+#### Member 3: your name
+
+[**Answer:**]{.blue} 
+
+#### Member 4: your name (if applicable)
+
+[**Answer:**]{.blue} 
+
+
+
+## Step 7: Presentation plan 
+
+Plan a 10 minute talk with the suggested structure: 
+
+1. About 1 minute: context, audience, question 
+2. About 2 minutes: data set, key variables, and any cleaning choices 
+3. About 5 minutes: your 3 visuals and the story they tell 
+4. About 2 minutes: takeaway, limitation, next step
+
+
+## Grading guide
+
+Total 15 points:
+
+1.  **Clear** question and audience (3 pts)
+2.  **Evidence-based** story with 3 **high-quality** visuals (6 pts)
+3.  **Reproducible** workflow and **readable** report (3 pts)
+4.  Presentation **clarity** and **timing** (3 pts)

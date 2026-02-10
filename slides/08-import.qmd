@@ -1,0 +1,831 @@
+---
+title: 'Data Importing `r fontawesome::fa("database")`'
+title-slide-attributes:
+  data-background-image: ../images/bg.png
+  # data-background-size: stretch
+  # data-slide-number: none
+format: 
+  live-revealjs: 
+    output-file: 08-import-slides.html
+    df-print: default
+webr:
+  cell-options:
+    autorun: false
+  packages:
+    - tidyverse
+execute: 
+  echo: true
+---
+
+#  {visibility="hidden"}
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(emo)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fontawesome)
+library(rmarkdown)
+library(reticulate)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/08-import/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 8, 
+  dplyr.print_max = 9,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/import.png" background-size="contain"}
+
+<!-- <h1>Importing</h1> -->
+
+
+# {background-color="#A7D5E8"}
+
+![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readr.png){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readxl.png){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/haven.png){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rvest.png){width="180"}![](./images/08-import/arrow.png){width="180"}![](./images/08-import/vroom_logo.png){width="180"}![](./images/08-import/datatable_logo.png){width="180"}![](https://raw.githubusercontent.com/gesistsa/rio/main/man/figures/logo.svg){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/googlesheets4.png){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/sparklyr.png){width="180"}
+<h3>DBI, jsonline, xml2, httr</h3> 
+
+<h1>R Data Importing</h1>
+
+::: notes
+- There are tons of packages and tools out there, and there are lots of data file formats too. 
+- Due to time limit, we will just cover commonly used tools and data file formats. And I think that should be enough for you to do your own project.
+- If you really need to import a data set that is stored in a very weird format, let me know. And we'll see how to solve this problem, maybe transform the format into another format. OK.
+- Here are the packages related to reading and writing files. We'll talk about some of them today.
+:::
+
+
+# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readr.png" background-size="30%" background-position="75% 50%"}
+
+<a href="https://readr.tidyverse.org/" style="position: absolute; inset: 0; display: block;" aria-label="Readr website"></a>
+
+
+::: {.left}
+<h1>Rectangular Data</h1>
+:::
+
+
+## [readr `r emo::ji('package')`](https://readr.tidyverse.org/) Functions
+
+| Function  | Format                                           | Typical suffix |
+|-----------|--------------------------------------------------|:----------------:| 
+| `read_table()`| white space separated values | txt |
+| `read_csv()` | comma separated values |  csv |
+| `read_csv2()` | semicolon separated values | csv |
+| `read_tsv()` | tab delimited separated values | tsv |
+| `read_fwf()` | fixed width files | txt |
+| `read_delim()` | general text file format, must define delimiter | txt |
+
+. . .
+
+:::{.alert}
+**Be careful**: The suffix usually tells us what type of file it is, but no guarantee that these always match. 
+:::
+
+```{r, highlight.output = TRUE}
+#| echo: true
+#| label: read_lines
+#| code-line-numbers: false
+readr::read_lines("./data/murders.csv", n_max = 3)  ## there is a header
+```
+
+::: notes
+- readr provides the following functions to read your data into R.
+- **Be careful**: The suffix usually tells us what type of file it is, but no guarantee that these always match. 
+- If you don't want to open your data file, you can read several lines of your data in R using the function read_lines().
+- For example, I check the first three lines of the murders.csv file. And yes, it is a comma-separated-value or csv file. 
+- Fixed width text files are special cases of text files where the format is specified by column widths, pad character and left/right alignment.  Column widths are measured in units of characters. For example, if you have data in a text file where the first column always has exactly 10 characters, and the second column has exactly 5, the third has exactly 12 (and so on), this would be categorized as a fixed width text file.
+:::
+
+
+## Reading Data
+
+`read_csv()` prints out a column specification giving us **delimiter**, **name** and **type** of each column.
+
+
+```{r}
+#| label: read_csv
+#| code-line-numbers: false
+murders_csv <- read_csv(file = "./data/murders.csv")
+# Rows: 51 Columns: 5
+# ── Column specification ─────────────
+# Delimiter: ","
+# chr (3): state, abb, region
+# dbl (2): population, total
+head(murders_csv)
+```
+
+```{r}
+#| label: view
+#| eval: false
+#| purl: false
+#| code-line-numbers: false
+## View data in RStudio
+view(murders_csv)
+```
+
+::: notes
+- OK. Let's try to read the murders.csv file into R. We use read_csv(), and in the first argument, we tell R its file path. Your path is generally not the same as my path, so you get to change it to your path.
+- When we run `read_csv()`, it prints out a column specification that gives the **name** and **type** of each column.
+<!-- - You can see the data set is actually the one in the dslabs package, and we use it in a previous lab exercise, right? -->
+:::
+
+
+
+## Missing Values
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.question}
+Which type is the column vector `x`? Why?
+:::
+
+```{r}
+#| echo: false
+#| out-width: 100%
+#| purl: false
+#| code-line-numbers: false
+knitr::include_graphics("./images/08-import/df-na.png")
+```
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment}
+
+- **Type coercion**^[A column with elements having different types, they'll be coerced to *the most flexible* type. Types from least to most flexible: *logical -- integer -- double -- character*.] happens and all column elements are transformed to character type. 
+
+```{r}
+#| purl: false
+#| message: false
+#| class-output: my_class500
+read_csv("./data/df-na.csv")
+```
+:::
+:::
+
+::::
+
+::: notes
+- I have a csv file with 3 columns x, y, and z. 
+- It looks like it should be some sort of numeric data. Right I have bunch of numbers here.
+- Character string NA, but that's just an NA. We have a period here, which is usually used as an NA as well.
+- But when we read this into R, we can see that it's being read as a character.
+- The reason is that the period which is a character shows up, and type coercion happens and all column elements are transformed to character type. 
+- How to solve this kind of problem. We want x to be double and the period is actually a missing value. 
+- Imaging that if you have thousands of lines, you could very easily miss that period. 
+:::
+
+
+
+
+## Solution 1: Explicit NAs
+
+- By default, `read_csv()` only recognizes **"  "** and **NA** as a missing value.
+- Specify the values that are used to represent missing values by argument `na`.
+
+```{r}
+#| label: read_csv_na
+#| eval: false
+#| purl: false
+#| code-line-numbers: false
+read_csv("./data/df-na.csv", 
+         na = c("", "NA", ".", "9999", "Not applicable"))
+```
+::::: {.columns}
+
+:::: {.column width="50%"}
+```{r}
+#| out-width: 90%
+#| purl: false
+#| echo: false
+knitr::include_graphics("./images/08-import/df-na.png")
+```
+::::
+
+
+:::: {.column width="50%"}
+```{r}
+#| message: false
+#| echo: false
+#| class-output: my_class500
+read_csv("./data/df-na.csv", 
+         na = c("", "NA", ".", "9999", "Not applicable"))
+```
+::::
+:::::
+
+
+::: notes
+- The function recognize string NA as missing value, but not period or any other character or strings.
+- One solution is to specify explicitly the value (or values) that are used to represent missing values.
+- If you know what sort of character are used to denote missing values in your data file, you can give those as part of na argument in the read_csv() function.
+- For example here, I treat "", "NA", ".", "9999", "Not applicable" all as missing values.
+- And now the class of x is double, and all those character strings are denoted as NA in the loaded data set.
+:::
+
+
+## Solution 2: Specify Column Types
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| class-output: my_class500
+#| code-line-numbers: false
+read_csv("./data/df-na.csv", 
+         col_types = cols(col_double(), 
+                     col_character(), 
+                     col_character()))
+```
+:::
+
+
+
+::: {.column width="50%"}
+```{r}
+#| purl: false
+#| code-line-numbers: false
+problems()
+# A tibble: 1 × 5
+#     row   col expected actual file 
+#   <int> <int> <chr>    <chr>  <chr>
+# 1     7     1 a double .      "" 
+```
+:::
+::::
+
+
+::: notes
+- Another solution is to specify column types when you import your data.
+- This might be handy when you know what your column types should be.
+- For example, here I can specify the column types using the col_types argument. 
+- All column types are wrapped up in the cols() command, that x is double, y is character and z is character as well.
+- Ans now you can see x becomes double. 
+- And here we actually get a warning. In row 6 and col x, we expect a double but it is actually a dot or period, which is a character, and so R treats it as NA, which is exactly what I want to do. 
+- But R send a message telling us about this, and make sure this is what we want to do.
+- This option might be preferable if you cannot scan your data file, or don;t know what convention is being used for missing values in your data file, but you happen to know your column types.
+- The downside of this is that, here, Not applicable and 9999, they are all treated as valid character values, and they are not missing values. So be careful about this. You may need to manually clean your data. 
+:::
+
+
+
+## Column Types
+
+**type function**  | **data type**
+------------------ | -------------
+`col_character()`  | character
+`col_date()`       | date
+`col_datetime()`   | POSIXct (date-time)
+`col_double()`     | double (numeric)
+`col_factor()`     | factor
+`col_guess()`      | *let readr guess (default)*
+`col_integer()`    | integer
+`col_logical()`    | logical
+`col_number()`     | numbers mixed with non-number characters
+`col_numeric()`    | double or integer
+`col_skip()`       | do not read
+`col_time()`       | time
+
+
+
+
+::: notes
+- Here shows all possible column types you can use when importing your data into R. No need to memorize it. But just aware of them, and use them when you need to.
+:::
+
+## Writing Data {visibility="hidden"}
+
+```{r}
+#| label: tribble
+#| code-line-numbers: false
+## Create tibbles using a row-by-row layout
+(df <- tribble(
+  ~x, ~y,
+  1,  "a",
+  2,  "b",
+  3,  "c"
+))
+
+## same as tibble(x = 1:3, y = c(a, b, c))
+```
+
+```{r}
+#| label: write_csv
+#| code-line-numbers: false
+## save data to "./data/df.csv"
+df |> write_csv(file = "./data/df.csv")
+```
+
+
+::: notes
+- We can also write our data to a csv file as well. 
+- Here I create a tibble called df, and then I use write_csv() function to write the data set df to the file df.csv.
+:::
+
+
+
+## Writing Data
+
+```{r}
+#| code-line-numbers: false
+head(iris, n = 3)
+```
+ 
+```{r}
+#| label: write_csv_iris
+#| code-line-numbers: false
+## save iris data to "./data/iris.csv"
+iris |> write_csv(file = "./data/iris.csv")
+df_iris <- read_csv(file = "./data/iris.csv")
+df_iris
+```
+
+
+
+
+
+## Check Files using **fs** Package [![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/fs.png){width=60}](https://github.com/r-lib/fs) {visibility="hidden"}
+
+```{r, highlight.output=7}
+#| class-output: my_class600
+# install.packages("fs")
+# library(fs)
+fs::dir_ls(path = "./data") |> head(15)
+```
+
+
+::: notes
+- You can fs package to do file system operations directly in R, so you don't need to do operations in your bash or zsh in terminal.
+- Here I list all files stored in the data folder, and make sure that df.csv is there. 
+:::
+
+
+## `read_rds()` and `write_rds()` {visibility="hidden"}
+- We save an R object (usually a data set) in `.Rds` in the R binary file format. ^[Check R built-in data sets using command `data()`.]
+
+```{r, highlight.output=1}
+#| label: write_rds
+#| code-line-numbers: false
+readr::write_rds(cars, 
+                 file = "./data/cars.rds") 
+# fs::dir_ls(path = "./data") |> head(10)
+```
+
+<br>
+
+. . .
+
+```{r}
+#| label: read_rds
+#| code-line-numbers: false
+my_car <- readr::read_rds(file = "./data/cars.rds") 
+head(my_car, 3)
+```
+
+
+::: notes
+- We save an R object (usually a data set) in `.Rds`m the R binary file format.
+- Remember we talked about RData format last time, right?
+- R provides two file formats of its own for storing data, .RDS and .RData. RDS files can store a single R object, and RData files can store multiple R objects.
+- Usually, if we save a data set, we use .Rds, and if we save several objects, and the objects are some variables or functions, we use .RData.
+- Read the data back into R.
+:::
+
+
+##
+
+:::{.lab}
+<span style="color:blue"> **10-Import Data** </span>
+
+<!-- - Create a R script named **lab08-importdata.R** -->
+
+- If you haven't, install and load the `tidyverse` package.
+
+In **lab.qmd** `## Lab 10` section,
+<!-- - If you haven't, upload data.zip posted in D2L Week 5 module to your lab project workspace. -->
+<!-- - Run the following code to see the data sets saved in the `dslabs` package: -->
+<!-- ```{r, eval=FALSE} -->
+<!-- path <- system.file("extdata", package = "dslabs") -->
+<!-- files <- list.files(path) -->
+<!-- files -->
+<!-- ``` -->
+<!-- - Use `file.path()` to create the file path for the file **"ssa-death-probability.csv"**.  -->
+
+
+- Import **ssa_male_prob.csv** in the data folder using `read_csv()` and call it `ssa_male`.
+
+```{r}
+#| eval: false
+#| code-line-numbers: false
+#| purl: false
+ssa_male <- readr::read____(____________)
+```
+
+- Plot `Age` (x-axis) vs. `LifeExp` (y-axis). The type is "line", and the line color is blue. Add x-label, y-label and title to your plot.
+
+```{r}
+#| eval: false
+#| purl: false
+#| code-line-numbers: false
+plot(x = _____, y = _____, type = ______, col = ______,
+     xlab = ______, ylab = _______, main = ____________)
+```
+
+<!-- - Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue. -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- #| code-line-numbers: false -->
+<!-- lines(x = _____, y = _____, col = ______) -->
+<!-- ``` -->
+
+- Save the data `penguins_raw` in the R [`palmerpenguins` package](https://allisonhorst.github.io/palmerpenguins/) to "./data/penguins_df.csv". Print `penguins_df.csv` out.
+
+```{r}
+#| eval: false
+#| purl: false
+#| code-line-numbers: false
+_________(palmerpenguins)
+write______()
+penguins_df
+```
+
+
+:::
+
+
+::: notes
+
+```{r}
+#| eval: false
+library(tidyverse)
+ssa <- read_csv(file = "./data/ssa-death-probability.csv")
+ssa_male <- ssa[ssa$Sex == "Male", ]
+ssa_female <- ssa[ssa$Sex == "Female", ]
+plot(x = ssa_female$Age, y = ssa_female$LifeExp, 
+     type = "l", col = 2, lwd = 3,
+     xlab = "Age", ylab = "Life Exp",
+     main = "Age vs. Life Exp by Gender")
+lines(ssa_male$Age, ssa_male$LifeExp, col = 4, lwd = 3)
+```
+:::
+
+
+
+# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/readxl.png" background-size="30%" background-position="70% 50%"}
+
+<a href="https://readxl.tidyverse.org/" style="position: absolute; inset: 0; display: block;" aria-label="arrow website"></a>
+
+::: {.left}
+<h1>Read Excel Data</h1>
+:::
+
+::: notes
+- Last time, we use the readr package to import our data into R, right?
+- What if you have a data set stored in microsoft excel, well we can use read excel package to read your data.
+:::
+
+
+## [readxl `r emo::ji('package')`](https://readxl.tidyverse.org/) Functions
+
+| Function  | Format                                           | Typical suffix |
+|-----------|--------------------------------------------------|:----------------:| 
+| `read_excel()` | auto detect the format | xls, xlsx|
+| `read_xls()` | original format |  xls |
+| `read_xlsx()` | new format | xlsx |
+
+- The Microsoft Excel can have more than one sheet in one file. 
+- The functions above read the **first** sheet by default.
+- The `excel_sheets()` gives us the names of all the sheets in an Excel file.
+
+```{r}
+#| label: excel_sheets
+#| code-line-numbers: false
+library(readxl)
+excel_sheets("./data/2010_bigfive_regents.xls")
+```
+
+::: notes
+- Here shows the main read excel functions. They are pretty similar to readr functions, but this time, your data file is not a text file, but a microsoft excel file.
+- The Microsoft Excel can have more than one sheet in one file. 
+- The functions listed above read the **first **sheet by default.
+- If you don't want open your excel file and check its sheet names, the `excel_sheets()` function gives us the names of all the sheets in an Excel file.
+:::
+
+
+## Sheet Names
+
+- The sheet names can be passed to the `sheet` argument to read sheets other than the first.
+
+```{r}
+#| label: read_xlsx
+#| code-line-numbers: false
+excel_sheets("./data/2010_bigfive_regents.xls")
+(data_xls <- read_xls(path = "./data/2010_bigfive_regents.xls", 
+                      sheet = "Sheet3", 
+                      skip = 1))
+```
+
+::: notes
+- The sheet names can be passed to the `sheet` argument in the functions to read sheets other than the first.
+- For example, here we ask R to read the Sheet1 in the favourite-food excel file.
+- We can also specify an integer that indicates the position of the sheet.
+- We don't have a lab exercise on this. You have data and code is right here. You can practice and see if you can read the excel file.
+range = cell_rows(102:151)
+:::
+
+
+
+
+# {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" background-size="40%" background-position="70% 50%"}
+
+
+<a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html" style="position: absolute; inset: 0; display: block;" aria-label="arrow website"></a>
+
+
+::: {.left}
+<h2>`pd.read_csv`</h2>
+<!-- <h2>`pd.read_excel`</h2> -->
+<h2>`pd.DataFrame.to_csv`</h2>
+:::
+
+## `pd.read_csv`
+
+```{python}
+#| code-line-numbers: false
+import numpy as np
+import pandas as pd
+
+py_df = pd.read_csv('./data/murders.csv')
+print(py_df.head())
+```
+
+
+## `pd.DataFrame.to_csv`
+
+```{python}
+#| code-line-numbers: false
+w = {"x":[1, 2, 3], 
+     "y":['a', 'b','c']}
+wdf = pd.DataFrame(w)
+
+wdf.to_csv("./data/wdf.csv")
+mydf = pd.read_csv('./data/wdf.csv')
+print(mydf.head())
+```
+
+
+```{python}
+#| code-line-numbers: false
+## index = False means don't write row names
+wdf.to_csv("./data/wdf.csv", index = False)
+mydf = pd.read_csv('./data/wdf.csv')
+print(mydf.head())
+```
+
+
+<!-- ## `pd.read_excel` {visibility="hidden"} -->
+
+<!-- :::{.callout-warning} -->
+
+<!-- :::{style="font-size: 1.2em;"} -->
+<!-- [`pd.read_excel()`](https://pandas.pydata.org/docs/reference/api/pandas.read_excel.html) needs other libraries installed. -->
+
+<!-- -  `openpyxl` for `.xlsx` format -->
+<!-- -  `xlrd` for `xls` format -->
+<!-- - `py_install("xlrd")` in R or `pip install pandas` or `conda install pandas` in the terminal. -->
+<!-- ::: -->
+
+<!-- ::: -->
+
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- py_install("xlrd") -->
+<!-- ``` -->
+
+<!-- ```{python} -->
+<!-- df_x = pd.read_excel('./data/2010_bigfive_regents.xls', engine='xlrd', -->
+<!-- sheet_name="Sheet3", skiprows=1) -->
+<!-- df_x.head() -->
+<!-- ``` -->
+
+
+<!-- ::: notes -->
+<!-- ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl. -->
+<!-- https://stackoverflow.com/questions/65250207/pandas-cannot-open-an-excel-xlsx-file -->
+<!-- ::: -->
+
+
+<!-- # Other Importing Methods* -->
+
+
+
+##
+
+::: genai
+
+<span style="color:green"> **10-Import Data** </span>
+
+> `>` I have a R object that cannot be saved as a csv or excel file, for example, a list. How can I save that object, and reuse it later? Please teach me with a simple example.
+
+
+<br>
+
+- Share what you learned from AI!~
+
+
+:::
+
+::: notes
+When NOT to use CSV/Excel
+Objects with nested structures (lists, models, tibbles with list-columns).
+Data requiring preservation of attributes (factor levels, classes like Date, POSIXct, sf, etc.).
+:::
+
+
+# {background-color="" background-image="./images/08-import/arrow.png" background-size="30%" background-position="70% 50%"}
+
+<a href="https://arrow.apache.org/" style="position: absolute; inset: 0; display: block;" aria-label="arrow website"></a>
+
+::: {.left}
+<!-- <h2>Fast Reading and Writing</h2> -->
+<!-- <h2>Data Format in R and Python*</h2> -->
+
+<h1>Big Data*</h1> 
+:::
+
+## [Apache Arrow](https://arrow.apache.org/) for [R](https://arrow.apache.org/docs/r/) and [Python](https://arrow.apache.org/docs/python/)
+
+- Apache Arrow develops big data systems to process and move data fast.
+
+
+
+
+```{r}
+#| code-line-numbers: false
+#| eval: true
+#| echo: false
+knitr::include_graphics("./images/08-import/speed.png")
+```
+
+<!-- - Arrow -->
+
+<!--   + allows users to read and write data in a variety formats -->
+<!--   + provides data analysis tools for both in-memory and larger-than-memory data sets -->
+<!--   + provides access to remote filesystems and servers -->
+<!--   + zero-copy data sharing between R and Python -->
+
+<!-- - [R package](https://arrow.apache.org/docs/r/) -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- install.packages("arrow") -->
+<!-- library(arrow) -->
+<!-- ``` -->
+
+<!-- - [Python package](https://arrow.apache.org/docs/python/) -->
+
+<!-- ```bash -->
+<!-- pip install pyarrow -->
+<!-- ``` -->
+
+<!-- ```{python} -->
+<!-- #| eval: false -->
+<!-- import pyarrow as pa -->
+<!-- ``` -->
+
+
+
+
+
+<!-- ## feather `r emo::ji("package")` {visibility="hidden"} -->
+
+<!-- - [**feather**](https://github.com/wesm/feather) is a binary file format for storing data frames. -->
+<!--   + **Lightweight**: file size is smaller than CSV files (but larger than R native binary .Rds/.RData files) -->
+<!--   + **Language agnostic**: feather files are the same in R and Python -->
+<!--   + **High read and write performance**: faster than `read_csv()` and `read_rds()`. -->
+
+
+<!-- ```{r} -->
+<!-- #| label: feather -->
+<!-- #| purl: false -->
+
+<!-- library(feather) -->
+<!-- challenge <- read_csv(file = readr_example("challenge.csv"), -->
+<!--                       col_types = readr::cols(x = readr::col_double(),  -->
+<!--                                               y = readr::col_date())) -->
+<!-- # It is a `.feather` file -->
+<!-- feather::write_feather(x = challenge,  -->
+<!--                        path = "./data/challenge.feather") -->
+<!-- ``` -->
+
+
+<!-- ## Read `.feather` Data in Python {visibility="hidden"} -->
+
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- reticulate::py_install("pyarrow") -->
+<!-- ``` -->
+
+<!-- ```{python} -->
+<!-- ## Need to install PyArrow package `r py_install("pyarrow")` -->
+<!-- import pyarrow.feather as feather -->
+
+<!-- py_feather_df = feather.read_feather("./data/challenge.feather") -->
+<!-- py_feather_df.head() -->
+<!-- ``` -->
+
+
+<!-- ## How Fast is feather ?! {visibility="hidden"} -->
+
+<!-- ```{r, purl=FALSE} -->
+<!-- ## Unit: seconds -->
+<!-- ##                  expr   min    lq       mean median    uq   max neval -->
+<!-- ## readr::read_csv()      27.0  28.0  29.770890   29.0  32.0  33.0    10 -->
+<!-- ## base::readRDS()         4.6   4.7   5.053674    5.1   5.3   5.6    10 -->
+<!-- ## feather::read_feather   1.5   1.8   2.988021    3.4   3.6   4.1    10 -->
+<!-- ``` -->
+
+
+<!-- # {background-color="#A7D5E8"} {visibility="hidden"} -->
+
+<!-- ![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/haven.png){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rvest.png){width="180"}![](./images/08-import/vroom_logo.png){width="180"}![](./images/08-import/datatable_logo.png){width="180"}![](./images/08-import/rio_logo.png){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/googlesheets4.png){width="180"}![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/sparklyr.png){width="180"} -->

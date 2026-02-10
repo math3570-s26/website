@@ -758,7 +758,7 @@ tibble(x = 1:5,
 ## 
 
 ::: genai
-[ **08-Tibbles and Pipes** ]{style="color:green"}
+[**08-Tibbles and Pipes**]{style="color:green"}
 
 > `>` My professor taught me the difference between a R tibble and a R base data frame in their printing, display of data tables, and subsetting. Please teach me their other differences with a simple example. Thank you.
 
@@ -860,7 +860,7 @@ knitr::include_graphics("images/07-package/pipe_example.png")
 ## 
 
 :::::: lab
-[ **08-Tibbles and Pipes** ]{style="color:blue"}
+[**08-Tibbles and Pipes**]{style="color:blue"}
 
 In **lab.qmd** `## Lab 8` section,
 
@@ -1395,7 +1395,7 @@ np.hstack((a, b))
 ## 
 
 ::: lab
-[ **09-NumPy and pandas** ]{style="color:blue"}
+[**09-NumPy and pandas**]{style="color:blue"}
 
 In **lab.qmd** `## Lab 9` section, create a Python pandas.DataFrame equivalent to the R tibble
 
@@ -1420,7 +1420,7 @@ pd._____________(dic)
 ## 
 
 ::: genai
-[ **09-NumPy and pandas** ]{style="color:green"}
+[**09-NumPy and pandas**]{style="color:green"}
 
 > `>` My professor said we can use `pd.concat()` to concatenate pandas data frames by column. Please teach me how with a simple example.
 
@@ -1536,7 +1536,6 @@ Most plotting libraries (Matplotlib, Seaborn) and machine learning tools (Scikit
 
 ## Lab Bonus! {visibility="hidden"}
 
-
 -   Happy **R**alentine's Day! ❤️
 
 ```{r}
@@ -1553,7 +1552,6 @@ text(0, 0, "Happy Valentine's Day!", font = 2, cex = 2, col = "pink")
 ```
 
 ## Lab Bonus! {visibility="hidden"}
-
 
 -   Happy **Py**lentine's Day! ❤️
 

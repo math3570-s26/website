@@ -39,28 +39,69 @@ In **lab.qmd** `## Lab 10` section,
 <!-- - Use `file.path()` to create the file path for the file **"ssa-death-probability.csv"**.  -->
 
 
-- Import **ssa_male_prob.csv** and **ssa_female_prob.Rds** in the data folder using `read_csv()` and call them `ssa_male` and `ssa_female`, respectively.
+<!-- - Import **ssa_male_prob.csv** and **ssa_female_prob.Rds** in the data folder using `read_csv()` and call them `ssa_male` and `ssa_female`, respectively. -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- ssa_male <- readr::read____(____________) -->
+<!-- ssa_female <- readr::read____(____________) -->
+<!-- ``` -->
+
+<!-- - Plot `Age` (x-axis) vs. `LifeExp` (y-axis) for `Female`. The type should be "line", and the line color is red. Add x-label, y-label and title to your plot. -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- plot(x = _____, y = _____, type = ______, col = ______, -->
+<!--      xlab = ______, ylab = _______, main = ____________) -->
+<!-- ``` -->
+
+<!-- - Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue. -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- lines(x = _____, y = _____, col = ______) -->
+<!-- ``` -->
+
+
+
+- Import **ssa_male_prob.csv** in the data folder using `read_csv()` and call it `ssa_male`.
 
 ```{r}
 #| eval: false
+#| code-line-numbers: false
 #| purl: false
 ssa_male <- readr::read____(____________)
-ssa_female <- readr::read____(____________)
 ```
 
-- Plot `Age` (x-axis) vs. `LifeExp` (y-axis) for `Female`. The type should be "line", and the line color is red. Add x-label, y-label and title to your plot.
+- Plot `Age` (x-axis) vs. `LifeExp` (y-axis). The type is "line", and the line color is blue. Add x-label, y-label and title to your plot.
 
 ```{r}
 #| eval: false
 #| purl: false
+#| code-line-numbers: false
 plot(x = _____, y = _____, type = ______, col = ______,
      xlab = ______, ylab = _______, main = ____________)
 ```
 
-- Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue.
+<!-- - Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue. -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- #| code-line-numbers: false -->
+<!-- lines(x = _____, y = _____, col = ______) -->
+<!-- ``` -->
+
+- Save the data `penguins_raw` in the R [`palmerpenguins` package](https://allisonhorst.github.io/palmerpenguins/) to "./data/penguins_df.csv". Print `penguins_df.csv` out.
 
 ```{r}
 #| eval: false
 #| purl: false
-lines(x = _____, y = _____, col = ______)
+#| code-line-numbers: false
+_________(palmerpenguins)
+write______()
+penguins_df
 ```

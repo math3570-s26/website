@@ -81,7 +81,7 @@ You must focus on hidden assumptions, for example assumptions about missing valu
 
 Your prompts must be purposeful and iterative.
 
-**[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.**
+**\[Note:\] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.**
 
 Prompt requirements
 
@@ -164,7 +164,6 @@ Submit evidence for every item.
 
 -   Identify one column where automatic guessing could lead to a silent mistake.
 -   Explain the mistake, why it could be hard to notice, and how you would detect it.
-
 :::
 
 <!-- #### Required post import validation checklist (submit evidence for every item) -->
@@ -207,9 +206,9 @@ Your reflection must match your assigned role.
 
 ## Submission Examples
 
-- [Excellent AI Interaction Log](/documents/ai_prompts.pdf)
-- [Excellent Human-Authored Synthesis](/documents/ai_audit.pdf)
-- [Excellent Individual Reflections](/documents/ai_reflection.pdf)
-- [Insufficient AI Interaction Log](/documents/ai_prompts_bad.pdf)
-- [Insufficient Human-Authored Synthesis](/documents/ai_audit_bad.pdf)
-- [Insufficient Individual Reflections](/documents/ai_reflection_bad.pdf)
+-   [Excellent AI Interaction Log](/documents/ai_prompts.pdf)
+-   [Excellent Human-Authored Synthesis](/documents/ai_audit.pdf)
+-   [Excellent Individual Reflections](/documents/ai_reflection.pdf)
+-   [Insufficient AI Interaction Log](/documents/ai_prompts_bad.pdf)
+-   [Insufficient Human-Authored Synthesis](/documents/ai_audit_bad.pdf)
+-   [Insufficient Individual Reflections](/documents/ai_reflection_bad.pdf)

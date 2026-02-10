@@ -5,8 +5,12 @@
     <lastmod>2026-01-24T20:30:18.425Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/ai_act_guide.html</loc>
-    <lastmod>2026-02-03T02:05:48.988Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/ai.html</loc>
+    <lastmod>2026-02-08T16:25:29.197Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/ai/ai_1.html</loc>
+    <lastmod>2026-02-08T16:04:06.383Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab07-plot.html</loc>
@@ -18,7 +22,7 @@
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab10-import.html</loc>
-    <lastmod>2025-11-22T00:20:16.194Z</lastmod>
+    <lastmod>2026-02-10T14:52:05.750Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab17-tidyr.html</loc>
@@ -65,36 +69,40 @@
     <lastmod>2025-11-22T00:20:16.194Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/06-syntax-slides.html</loc>
-    <lastmod>2026-01-23T17:31:14.379Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/project/mini_project_1.html</loc>
+    <lastmod>2026-02-08T20:45:14.602Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/06-syntax.html</loc>
-    <lastmod>2026-01-23T17:31:14.379Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/03-posit-slides.html</loc>
+    <lastmod>2026-01-15T16:12:19.966Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/05-quarto-slides.html</loc>
-    <lastmod>2026-01-24T21:43:35.958Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/03-posit.html</loc>
+    <lastmod>2026-01-15T16:12:19.966Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/05-quarto.html</loc>
-    <lastmod>2026-01-24T21:43:35.958Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/04-git-slides.html</loc>
+    <lastmod>2026-01-20T19:02:30.145Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/07-package-slides.html</loc>
-    <lastmod>2026-02-03T01:50:25.501Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/04-git.html</loc>
+    <lastmod>2026-01-20T19:02:30.145Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/07-package.html</loc>
-    <lastmod>2026-02-03T01:50:25.501Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/01-syllabus-slides.html</loc>
+    <lastmod>2026-01-13T19:00:41.000Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/02-datascience-slides.html</loc>
-    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/01-syllabus.html</loc>
+    <lastmod>2026-01-13T19:00:41.000Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/02-datascience.html</loc>
-    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/08-import-slides.html</loc>
+    <lastmod>2026-02-10T15:08:41.399Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/slides/08-import.html</loc>
+    <lastmod>2026-02-10T15:08:41.399Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/course-overview.html</loc>
@@ -102,7 +110,7 @@
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/team.html</loc>
-    <lastmod>2026-01-22T15:45:35.530Z</lastmod>
+    <lastmod>2026-02-05T19:28:18.000Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/activity/act_two-truth-one-lie.html</loc>
@@ -138,35 +146,43 @@
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/index.html</loc>
-    <lastmod>2026-02-03T14:50:28.189Z</lastmod>
+    <lastmod>2026-02-10T15:04:21.504Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/01-syllabus.html</loc>
-    <lastmod>2026-01-13T19:00:41.000Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/02-datascience.html</loc>
+    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/01-syllabus-slides.html</loc>
-    <lastmod>2026-01-13T19:00:41.000Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/02-datascience-slides.html</loc>
+    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/04-git.html</loc>
-    <lastmod>2026-01-20T19:02:30.145Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/07-package.html</loc>
+    <lastmod>2026-02-10T15:00:35.915Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/04-git-slides.html</loc>
-    <lastmod>2026-01-20T19:02:30.145Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/07-package-slides.html</loc>
+    <lastmod>2026-02-10T15:00:35.915Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/03-posit.html</loc>
-    <lastmod>2026-01-15T16:12:19.966Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/05-quarto.html</loc>
+    <lastmod>2026-01-24T21:43:35.958Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/03-posit-slides.html</loc>
-    <lastmod>2026-01-15T16:12:19.966Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/05-quarto-slides.html</loc>
+    <lastmod>2026-01-24T21:43:35.958Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/slides/06-syntax.html</loc>
+    <lastmod>2026-01-23T17:31:14.379Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/slides/06-syntax-slides.html</loc>
+    <lastmod>2026-01-23T17:31:14.379Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/ai_example.html</loc>
-    <lastmod>2026-02-03T02:06:37.916Z</lastmod>
+    <lastmod>2026-02-05T19:23:02.000Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab13-visualization.html</loc>
@@ -221,11 +237,15 @@
     <lastmod>2025-11-22T00:20:16.194Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/ai/ai_1.html</loc>
-    <lastmod>2026-02-03T02:06:48.428Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/ai/ai_2.html</loc>
+    <lastmod>2026-02-08T16:13:52.012Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/ai.html</loc>
-    <lastmod>2026-01-25T17:08:44.359Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/ai_act_guide.html</loc>
+    <lastmod>2026-02-03T02:05:48.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/project.html</loc>
+    <lastmod>2026-02-08T20:36:54.935Z</lastmod>
   </url>
 </urlset>

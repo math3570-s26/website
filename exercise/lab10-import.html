@@ -384,13 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../present-description.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Guideline and Policy</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../present-work.html" class="sidebar-item-text sidebar-link">
+  <a href="../project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Topics and Works</span></a>
   </div>
 </li>
@@ -467,25 +461,53 @@ Note
 <li>If you haven’t, install and load the <code>tidyverse</code> package.</li>
 </ul>
 <p>In <strong>lab.qmd</strong> <code>## Lab 10</code> section, <!-- - If you haven't, upload data.zip posted in D2L Week 5 module to your lab project workspace. --> <!-- - Run the following code to see the data sets saved in the `dslabs` package: --> <!-- ```{r, eval=FALSE} --> <!-- path <- system.file("extdata", package = "dslabs") --> <!-- files <- list.files(path) --> <!-- files --> <!-- ``` --> <!-- - Use `file.path()` to create the file path for the file **"ssa-death-probability.csv"**.  --></p>
+<!-- - Import **ssa_male_prob.csv** and **ssa_female_prob.Rds** in the data folder using `read_csv()` and call them `ssa_male` and `ssa_female`, respectively. -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- ssa_male <- readr::read____(____________) -->
+<!-- ssa_female <- readr::read____(____________) -->
+<!-- ``` -->
+<!-- - Plot `Age` (x-axis) vs. `LifeExp` (y-axis) for `Female`. The type should be "line", and the line color is red. Add x-label, y-label and title to your plot. -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- plot(x = _____, y = _____, type = ______, col = ______, -->
+<!--      xlab = ______, ylab = _______, main = ____________) -->
+<!-- ``` -->
+<!-- - Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue. -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- lines(x = _____, y = _____, col = ______) -->
+<!-- ``` -->
 <ul>
-<li>Import <strong>ssa_male_prob.csv</strong> and <strong>ssa_female_prob.Rds</strong> in the data folder using <code>read_csv()</code> and call them <code>ssa_male</code> and <code>ssa_female</code>, respectively.</li>
+<li>Import <strong>ssa_male_prob.csv</strong> in the data folder using <code>read_csv()</code> and call it <code>ssa_male</code>.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ssa_male <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read____</span>(____________)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>ssa_female <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read____</span>(____________)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ssa_male <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read____</span>(____________)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
-<li>Plot <code>Age</code> (x-axis) vs.&nbsp;<code>LifeExp</code> (y-axis) for <code>Female</code>. The type should be “line”, and the line color is red. Add x-label, y-label and title to your plot.</li>
+<li>Plot <code>Age</code> (x-axis) vs.&nbsp;<code>LifeExp</code> (y-axis). The type is “line”, and the line color is blue. Add x-label, y-label and title to your plot.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> _____, <span class="at">y =</span> _____, <span class="at">type =</span> ______, <span class="at">col =</span> ______,</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> ______, <span class="at">ylab =</span> _______, <span class="at">main =</span> ____________)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<!-- - Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue. -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- #| purl: false -->
+<!-- #| code-line-numbers: false -->
+<!-- lines(x = _____, y = _____, col = ______) -->
+<!-- ``` -->
 <ul>
-<li>Use <code>lines()</code> to add a line of <code>Age</code> (x-axis) vs.&nbsp;<code>LifeExp</code> (y-axis) for <code>Male</code> to the plot. The color is blue.</li>
+<li>Save the data <code>penguins_raw</code> in the R <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code> package</a> to “./data/penguins_df.csv”. Print <code>penguins_df.csv</code> out.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x =</span> _____, <span class="at">y =</span> _____, <span class="at">col =</span> ______)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">_________</span>(palmerpenguins)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write______</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>penguins_df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Final Project Presentation – MATH/COSC 3570 - Spring 2026</title>
+<title>Mini Project 1: Exploratory Data Storytelling via Data Visualization – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +20,65 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./present-description-final.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-238b7dab1bde4684d4de8122b9beee70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-238b7dab1bde4684d4de8122b9beee70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +108,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Final Project Presentation – MATH/COSC 3570 - Spring 2026">
+<meta property="og:title" content="Mini Project 1: Exploratory Data Storytelling via Data Visualization – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="Homepage for MATH/COSC 3570 - Introduction to Data Science at Marquette University, Spring 2026.">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
 
@@ -249,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description-final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./present-work-final.html">Project Group and Proposal</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Mini Project 1: Exploratory Data Storytelling via Data Visualization</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -263,9 +298,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
@@ -291,19 +326,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -320,19 +355,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai_act_guide.html" class="sidebar-item-text sidebar-link">
+  <a href="../ai_act_guide.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai_example.html" class="sidebar-item-text sidebar-link">
+  <a href="../ai_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AI Project Example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AI Project Topics</span></a>
   </div>
 </li>
@@ -349,7 +384,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project.html" class="sidebar-item-text sidebar-link">
+  <a href="../present-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-work.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Topics and Works</span></a>
   </div>
 </li>
@@ -366,13 +407,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-description-final.html" class="sidebar-item-text sidebar-link">
+  <a href="../present-description-final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-work-final.html" class="sidebar-item-text sidebar-link active">
+  <a href="../present-work-final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Group and Proposal</span></a>
   </div>
 </li>
@@ -388,18 +429,54 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#presentation-order" id="toc-presentation-order" class="nav-link active" data-scroll-target="#presentation-order">Presentation Order</a></li>
-  <li><a href="#group-projects-proposal" id="toc-group-projects-proposal" class="nav-link" data-scroll-target="#group-projects-proposal">Group project’s proposal</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
+  <li><a href="#what-you-will-present" id="toc-what-you-will-present" class="nav-link" data-scroll-target="#what-you-will-present">What you will present</a></li>
+  </ul></li>
+  <li><a href="#team-info" id="toc-team-info" class="nav-link" data-scroll-target="#team-info">Team Info</a></li>
+  <li><a href="#step-1-choose-a-data-set" id="toc-step-1-choose-a-data-set" class="nav-link" data-scroll-target="#step-1-choose-a-data-set">Step 1: Choose a data set</a>
+  <ul class="collapse">
+  <li><a href="#data-sets" id="toc-data-sets" class="nav-link" data-scroll-target="#data-sets">Data sets</a></li>
+  <li><a href="#quick-description-of-your-data-set" id="toc-quick-description-of-your-data-set" class="nav-link" data-scroll-target="#quick-description-of-your-data-set">Quick description of your data set</a></li>
+  </ul></li>
+  <li><a href="#step-2-mini-proposal" id="toc-step-2-mini-proposal" class="nav-link" data-scroll-target="#step-2-mini-proposal">Step 2: Mini proposal</a></li>
+  <li><a href="#step-3-quick-data-check-and-light-cleaning" id="toc-step-3-quick-data-check-and-light-cleaning" class="nav-link" data-scroll-target="#step-3-quick-data-check-and-light-cleaning">Step 3: Quick data check and light cleaning</a>
+  <ul class="collapse">
+  <li><a href="#first-look" id="toc-first-look" class="nav-link" data-scroll-target="#first-look">3.1 First look</a></li>
+  <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values">3.2 Missing values</a></li>
+  <li><a href="#create-a-working-clean-table" id="toc-create-a-working-clean-table" class="nav-link" data-scroll-target="#create-a-working-clean-table">3.3 Create a working clean table</a></li>
+  </ul></li>
+  <li><a href="#step-4-exploration" id="toc-step-4-exploration" class="nav-link" data-scroll-target="#step-4-exploration">Step 4: Exploration</a>
+  <ul class="collapse">
+  <li><a href="#exploratory-plot-1" id="toc-exploratory-plot-1" class="nav-link" data-scroll-target="#exploratory-plot-1">Exploratory plot 1</a></li>
+  <li><a href="#exploratory-plot-2" id="toc-exploratory-plot-2" class="nav-link" data-scroll-target="#exploratory-plot-2">Exploratory plot 2</a></li>
+  <li><a href="#exploratory-plot-3" id="toc-exploratory-plot-3" class="nav-link" data-scroll-target="#exploratory-plot-3">Exploratory plot 3</a></li>
+  <li><a href="#exploratory-plot-4" id="toc-exploratory-plot-4" class="nav-link" data-scroll-target="#exploratory-plot-4">Exploratory plot 4</a></li>
+  <li><a href="#decision" id="toc-decision" class="nav-link" data-scroll-target="#decision">Decision</a></li>
+  </ul></li>
+  <li><a href="#step-5-build-your-mini-data-story" id="toc-step-5-build-your-mini-data-story" class="nav-link" data-scroll-target="#step-5-build-your-mini-data-story">Step 5: Build your mini data story</a>
+  <ul class="collapse">
+  <li><a href="#story-opening" id="toc-story-opening" class="nav-link" data-scroll-target="#story-opening">5.1 Story opening</a></li>
+  <li><a href="#final-visual-1" id="toc-final-visual-1" class="nav-link" data-scroll-target="#final-visual-1">5.2 Final visual 1</a></li>
+  <li><a href="#final-visual-2" id="toc-final-visual-2" class="nav-link" data-scroll-target="#final-visual-2">5.4 Final visual 2</a></li>
+  <li><a href="#final-visual-3" id="toc-final-visual-3" class="nav-link" data-scroll-target="#final-visual-3">5.5 Final visual 3</a></li>
+  <li><a href="#closing" id="toc-closing" class="nav-link" data-scroll-target="#closing">5.6 Closing</a></li>
+  </ul></li>
+  <li><a href="#step-6-visual-quality-checklist" id="toc-step-6-visual-quality-checklist" class="nav-link" data-scroll-target="#step-6-visual-quality-checklist">Step 6: Visual quality checklist</a></li>
+  <li><a href="#step-7-team-reflection" id="toc-step-7-team-reflection" class="nav-link" data-scroll-target="#step-7-team-reflection">Step 7: Team reflection</a></li>
+  <li><a href="#step-7-presentation-plan" id="toc-step-7-presentation-plan" class="nav-link" data-scroll-target="#step-7-presentation-plan">Step 7: Presentation plan</a></li>
+  <li><a href="#grading-guide" id="toc-grading-guide" class="nav-link" data-scroll-target="#grading-guide">Grading guide</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/present-work-final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_1 (1).qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./present-description-final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./present-work-final.html">Project Group and Proposal</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Final Project Presentation</h1>
+<h1 class="title">Mini Project 1: Exploratory Data Storytelling via Data Visualization</h1>
 </div>
 
 
@@ -416,66 +493,336 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentation-order" class="level2">
-<h2 class="anchored" data-anchor-id="presentation-order">Presentation Order</h2>
-<!-- # ```{r} -->
-<!-- # #| eval: true -->
-<!-- # #| echo: true -->
-<!-- # team <- c("The Whales", "Analytics Avengers", "Syntax Squad",  -->
-<!-- #           "Data Detectives", "Hala Madrid", "The Back Right corner", -->
-<!-- #           "The Outliers", "Block Blasters", "Intermediate Wizards", -->
-<!-- #           "Noname") -->
-<!-- # set.seed(2025) -->
-<!-- # (present_order <- sample(team, size = 10, replace = FALSE)) -->
-<!-- # ``` -->
-<!-- #  -->
-<!-- # -   Teams presented on **May 1**: Data Detectives, The Whales, The Outliers, The Back Right corner -->
-<!-- #  -->
-<!-- # -   Teams presented on **May 5**: Syntax Squad, Analytics Avengers, Intermediate Wizards, Noname, Hala Madrid, Block Blasters -->
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>In this mini project, your team will <strong>explore one data set and tell a short data story with visuals</strong>.</p>
+<p>Focus on practice: Complete the Quarto file by</p>
+<ol type="1">
+<li>Asking a clear question for a real audience</li>
+<li>Exploring with a few plots</li>
+<li>Choosing the best evidence</li>
+<li>Writing a short, readable story</li>
+</ol>
+<p>This is an exploratory project. Use descriptive analysis only. Do NOT run hypothesis tests and do NOT fit complex models.</p>
+<section id="what-you-will-submit" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h3>
+<p>Show, in your Posit Cloud,</p>
+<ol type="1">
+<li>The <strong>rendered HTML report</strong></li>
+<li>The <strong>complete version of this source qmd file</strong></li>
+<li><strong>Any data file you used</strong>, only if it is not a built in package data set</li>
+</ol>
 </section>
-<section id="group-projects-proposal" class="level2">
-<h2 class="anchored" data-anchor-id="group-projects-proposal">Group project’s proposal</h2>
-<!-- -   [**Data Detectives**]{.blue}: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin -->
-<!--     -   [Practical Data Cleaning in R: A Look at the janitor Package](/documents/final_project/proposal_data_detectives.pdf) -->
-<!-- -   [**The Whales**]{.blue}: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski -->
-<!--     -   [Interactive data with shiny](/documents/final_project/proposal_whales.pdf) -->
-<!-- -   [**The Outliers**]{.blue}: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj -->
-<!--     -   [Introduction to Scikit-Learn](/documents/final_project/proposal_outliers.pdf) -->
-<!-- -   [**The Back Right corner**]{.blue}: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui -->
-<!--     -   [Introducing Naniar: How to put the “NA” values to use!](/documents/final_project/proposal_right_corners.pdf) -->
-<!-- -   [**Syntax Squad**]{.blue}: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru -->
-<!--     -   [Understanding and Applying the ‘landscapemetrics’ Package](/documents/final_project/syntax_squad.pdf) -->
-<!-- -   [**Analytics Avengers (4)**]{.blue}: Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer -->
-<!--     -   [Mapping Using ggspatial](/documents/final_project/proposal_avengers.pdf) -->
-<!-- -   [**Intermediate Wizards**]{.blue}: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl -->
-<!--     -   [Factors That Attribute to a Song Becoming Popular](/documents/final_project/proposal_wizards.pdf) -->
-<!-- -   **TeamName?**: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos -->
-<!--     -   [Marquette University Basketball Heatmap](/documents/final_project/proposal_NoNames.pdf) -->
-<!-- -   [**Hala Madrid**]{.blue}: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith -->
-<!--     -   [Matplotlib Library Introduction](/documents/final_project/proposal_madrid.pdf) -->
-<!-- -   [**Block Blasters**]{.blue}: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her -->
-<!--     -   [Play, Predict, Profit?](/documents/final_project/proposal_block_blasters.pdf) -->
-<!-- ## Presentation Slides -->
-<!-- -   [**Intermediate Wizards**]{.blue}: Kyle Forsberg, Luke Bondi, Justin Hoffman, Sam Wolf, Ava Unertl -->
-<!--     -   [Most Important Factors to a child’s exam success](https://marq-my.sharepoint.com/:p:/g/personal/luke_bondi_marquette_edu/EbIW8G-XG79Bp9AoQB_lOGQBwXeKBt4wckNQ3NLQZv_Osw) -->
-<!-- -   [**Data Detectives**]{.blue}: Jordan Dubeck, Justice Milhoan, Grace Placko, Jane Harvey, Madison Zursin -->
-<!--     -   [Happiness of the World Over Time](https://marq-my.sharepoint.com/:p:/r/personal/cheng-han_yu_marquette_edu/_layouts/15/Doc.aspx?sourcedoc=%7BE6F6B81B-6FDB-4A2D-BF68-914E69B6E790%7D&file=slides_data_detectives.pptx&action=edit&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-FOLDER) -->
-<!-- -   [**Analytics Avengers (4)**]{.blue}: Sophia Bryant, Kumassi Browne, Charles Kendrick Jr, Isabel Bauer -->
-<!--     -   [Netflix Analysis](https://www.canva.com/design/DAGiIQG4TAg/vKgFnDLKrFifg5EmeVSzMw/view?utm_content=DAGiIQG4TAg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h88f968ef14) -->
-<!-- -   [**The Outliers**]{.blue}: Spencer Christensen, Peter Kaull, Dean Lang, Joshua Hunter, Marcin Tutaj -->
-<!--     -   [Exploratory Data Analysis in Auto-Mpg Dataset](https://docs.google.com/presentation/d/1PzQjKIEOHCrHtJcJYIrw8Sf2dqkQeoLY9R_wHAIg8_A/edit#slide=id.p) -->
-<!-- -   [**The Whales**]{.blue}: Brady Nelson, Brody Roessler, Christian Filardo, Dorien Vazquez, Filip Kisielewski -->
-<!--     -   [Video Game Sales](https://marq-my.sharepoint.com/:p:/g/personal/filip_kisielewski_marquette_edu/ET9iIffJDIZAlw0GnPgMND4B5WIs3wy3E2asfMfOYQt_Fg) -->
-<!-- -   [**Block Blasters**]{.blue}: Lucy McGovern, Emma Kimball, Riley Abrahamson, Brianna Velez, Napoleon Her -->
-<!--     -   [What Makes a Song Danceable?](/documents/slides_block_blasters.pdf) -->
-<!-- -   [**The Back Right corner**]{.blue}: Luke Syverud, Isaac Kujak, Elizabeth Ruiz, Maxwell Creager-Roberts, Kaia Lui -->
-<!--     -   [How Does Netflix Differ between North America and Asia?](https://marq-my.sharepoint.com/:p:/r/personal/cheng-han_yu_marquette_edu/_layouts/15/Doc.aspx?sourcedoc=%7B859D1AEF-0549-4349-8AE7-1F2E465B7501%7D&file=slides_right_corner.pptx&action=edit&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-FOLDER) -->
-<!-- -   [**Hala Madrid**]{.blue}: Abdullah Al-Refai, Labeeb Awan, Kevin Esquivel, Derian Esquivel, Tyler Smith -->
-<!--     -   [Video Game Sales Data Analysis Report](https://marq-my.sharepoint.com/:p:/g/personal/kevin_esquivel_marquette_edu/EQ4ph_a-pa1OiLI8CzUUdXUBsw_mYOzAq52i30tLexCgfQ) -->
-<!-- -   [**Syntax Squad**]{.blue}: Nick Panoske, Kate Gibson, Annika Lautenbach, Simon Glarner, Sophia Ferru -->
-<!--     -   [Global Video Game Sales Assessment](https://marq-my.sharepoint.com/:p:/g/personal/simon_glarner_marquette_edu/EVMCA5y_gIpMnSIVWmb1pyQBvZaFjuv9MdjSq9EHH7uToA) -->
-<!-- -   **TeamName?**: Jack Anderson, Nathan Rusch, Nirmay Kathuria, Wilson von Bohlen, Juan De Los Santos -->
-<!--     -   [NBA Shots Analysis (2001 - Present)](https://docs.google.com/presentation/d/1GJb7TmBFa8sIdKwx6TbcK6gORwsACnNDZAfHC518y2M/edit#slide=id.p) -->
+<section id="what-you-will-present" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-will-present">What you will present</h3>
+<p>A <strong>10 minute</strong> team presentation that summarizes your story and highlights your 3 final visuals.</p>
+</section>
+</section>
+<section id="team-info" class="level2">
+<h2 class="anchored" data-anchor-id="team-info">Team Info</h2>
+<ul>
+<li><p><strong>Team Name</strong>: <span class="blue">Your Team Name</span></p></li>
+<li><p>Team members and roles for this project:</p>
+<ol type="1">
+<li><strong>Project lead</strong> (keeps time, coordinates tasks): <span class="blue">Your Member Name</span></li>
+<li><strong>Data wrangler</strong> (loads data, checks quality, makes a clean table): <span class="blue">Your Member Name</span></li>
+<li><strong>Visualization designer</strong> (builds plots, improves readability): <span class="blue">Your Member Name</span></li>
+<li><strong>Storyteller</strong> (writes narrative, connects visuals to claims): <span class="blue">Your Member Name</span></li>
+</ol></li>
+</ul>
+</section>
+<section id="step-1-choose-a-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-choose-a-data-set">Step 1: Choose a data set</h2>
+<p>Choose one option below. Two teams may use the same data set.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>If another team uses the same data set, it would be much better if your story is meaningfully different. Your team may differ on</p>
+<ol type="1">
+<li>Audience</li>
+<li>Focus variables or outcome</li>
+<li>Comparison frame (group comparison, relationship, ranking, time trend, and so on)</li>
+</ol>
+</div>
+</div>
+</div>
+<section id="data-sets" class="level3">
+<h3 class="anchored" data-anchor-id="data-sets">Data sets</h3>
+<ul>
+<li><p><code>penguins</code> data set from R package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a></p></li>
+<li><p><code>flights</code> data set from R package <a href="https://nycflights13.tidyverse.org/index.html"><code>nycflights13</code></a></p></li>
+<li><p><code>gapminder</code> data set from R package <a href="https://jennybc.github.io/gapminder/"><code>gapminder</code></a></p></li>
+<li><p><code>diamonds</code> data set from R package <a href="https://ggplot2.tidyverse.org/reference/diamonds.html"><code>ggplot2</code></a></p></li>
+<li><p><em>Your own data set!</em></p></li>
+</ul>
+<p>Using the code chunk <code>import-data</code> below to import your data, and call the data set <code>data_raw</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Import your data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data_raw <span class="ot">&lt;-</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="quick-description-of-your-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="quick-description-of-your-data-set">Quick description of your data set</h3>
+<p>Answer the following questions.</p>
+<ol type="1">
+<li>What does one row represent</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="2" type="1">
+<li>What are columns you think might matter for your story</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="3" type="1">
+<li>Who might care about this data</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-2-mini-proposal" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-mini-proposal">Step 2: Mini proposal</h2>
+<p>Write short answers. Keep it specific.</p>
+<ol type="1">
+<li>Audience: Who is your audience</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="2" type="1">
+<li>Investigation question: One sentence</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="3" type="1">
+<li>Your current guess: One sentence</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="4" type="1">
+<li>Focus variables: List some variables you plan to use</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="5" type="1">
+<li>Comparison frame: Choose one or two (group comparison, relationship, ranking, time trend, etc.)</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="step-3-quick-data-check-and-light-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-quick-data-check-and-light-cleaning">Step 3: Quick data check and light cleaning</h2>
+<p>Your goal is to understand what you have. Keep cleaning minimal.</p>
+<section id="first-look" class="level3">
+<h3 class="anchored" data-anchor-id="first-look">3.1 First look</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Check your data (you can use your own way to check the data)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_raw)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data_raw)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="missing-values" class="level3">
+<h3 class="anchored" data-anchor-id="missing-values">3.2 Missing values</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>missing_counts <span class="ot">=</span> data_raw <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(.x)))) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">"variable"</span>, <span class="at">values_to =</span> <span class="st">"n_missing"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n_missing))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>missing_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>In 2 to 4 sentences, describe what missing values you noticed and how you plan to handle them.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="create-a-working-clean-table" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-working-clean-table">3.3 Create a working clean table</h3>
+<p>Create a new object <code>data</code> with:</p>
+<ol type="1">
+<li><strong>Clean column names if needed</strong></li>
+<li><strong>Only the columns you might use</strong></li>
+<li><strong>Any simple recodes you need</strong></li>
+</ol>
+<p>Use the code chunk <code>clean</code> below to clean your <code>data_raw</code>, and save the new cleaned data called <code>data</code> that is ready for analysis.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Clean your data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Describe what you changed and why, in plain language:</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+</section>
+<section id="step-4-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-exploration">Step 4: Exploration</h2>
+<p>Create 4 quick exploratory plots. These are NOT final. They help you decide what story to tell.</p>
+<p>Suggestions:</p>
+<ol type="1">
+<li>One <strong>distribution plot</strong></li>
+<li>One <strong>bar plot or count plot</strong></li>
+<li>One <strong>relationship plot (two numeric variables)</strong></li>
+<li>One plot that <strong>compares groups</strong></li>
+</ol>
+<section id="exploratory-plot-1" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-plot-1">Exploratory plot 1</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(data, aes(x = ...)) + geom_...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>What you learned (1 to 2 sentences):</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="exploratory-plot-2" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-plot-2">Exploratory plot 2</h3>
+<p>What you learned (1 to 2 sentences):</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="exploratory-plot-3" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-plot-3">Exploratory plot 3</h3>
+<p>What you learned (1 to 2 sentences):</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="exploratory-plot-4" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-plot-4">Exploratory plot 4</h3>
+<p>What you learned (2 to 3 sentences):</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="decision" class="level3">
+<h3 class="anchored" data-anchor-id="decision">Decision</h3>
+<ol type="1">
+<li>What is the most interesting pattern you found</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="2" type="1">
+<li>Revised investigation question (one sentence)</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="3" type="1">
+<li>Which 3 visuals will become your final visuals, and why</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-5-build-your-mini-data-story" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-build-your-mini-data-story">Step 5: Build your mini data story</h2>
+<p>Your final report must include:</p>
+<ol type="1">
+<li>A short opening paragraph that <strong>sets context and states the question</strong> (4 to 6 sentences)</li>
+<li>Exactly 3 final visuals, each with a short interpretation paragraph (3 to 5 sentences) <!-- 3. One small summary table (5 to 15 rows, or a simple grouped summary)  --></li>
+<li>A short closing paragraph with takeaways, limitations, and next steps (4 to 5 sentences)</li>
+</ol>
+<p>Keep the whole report short. Aim for about 1 to 2 pages when rendered.</p>
+<section id="story-opening" class="level3">
+<h3 class="anchored" data-anchor-id="story-opening">5.1 Story opening</h3>
+<p>[Write your opening paragraph in this section.]{blue} Include</p>
+<ol type="1">
+<li><strong>Context:</strong> What is the setting in plain language</li>
+<li><strong>Audience:</strong> Who should care about this story</li>
+<li><strong>Investigation question:</strong> What are you trying to learn</li>
+<li><strong>Why it matters:</strong> What decision or understanding this could support</li>
+<li><strong>Data description:</strong> Name the data set and explain what one row represents</li>
+<li><strong>Preview:</strong> Briefly state what your three visuals will show</li>
+</ol>
+</section>
+<section id="final-visual-1" class="level3">
+<h3 class="anchored" data-anchor-id="final-visual-1">5.2 Final visual 1</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><span class="blue">Interpretation (3 to 4 sentences)</span>. Include:</p>
+<ol type="1">
+<li><strong>What is shown:</strong> What is on the x axis and y axis, and what groups or colors mean</li>
+<li><strong>Key pattern:</strong> Describe the main visible pattern using directional language and comparisons</li>
+<li><strong>Evidence:</strong> Mention at least one concrete detail (an approximate value, a ranking, or a noticeable gap)</li>
+<li><strong>Connection:</strong> Explain how this plot helps answer your investigation question</li>
+<li><strong>Caveat:</strong> State one caution, such as missing values, outliers, or “this is association, not causation”</li>
+</ol>
+<p><strong>[Tip:]</strong> <strong>Avoid describing every point</strong>. Focus on what you want your audience to notice.</p>
+</section>
+<section id="final-visual-2" class="level3">
+<h3 class="anchored" data-anchor-id="final-visual-2">5.4 Final visual 2</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><span class="blue">Interpretation (3 to 4 sentences)</span>: Include the same suggested points as visual 1.</p>
+</section>
+<section id="final-visual-3" class="level3">
+<h3 class="anchored" data-anchor-id="final-visual-3">5.5 Final visual 3</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><span class="blue">Interpretation (3 to 4 sentences)</span>: Include the same suggested points as visual 1.</p>
+</section>
+<section id="closing" class="level3">
+<h3 class="anchored" data-anchor-id="closing">5.6 Closing</h3>
+<p><span class="blue">Write your closing paragraph.</span> Include:</p>
+<ol type="1">
+<li><strong>Your answer:</strong> State your best answer to the investigation question (one sentence)</li>
+<li><strong>Support:</strong> Point to your strongest visual evidence (one to two sentences)</li>
+<li><strong>Limitation:</strong> Name one limitation of the data or your approach (one sentence)</li>
+<li><strong>Next step:</strong> State one concrete next step you would take with more time (one sentence)</li>
+<li><strong>So what:</strong> Explain what this means for your audience (one sentence)</li>
+</ol>
+<p><strong>[Tip:]</strong> Keep claims <strong>descriptive and reasonable</strong>. Do not overstate certainty.</p>
+</section>
+</section>
+<section id="step-6-visual-quality-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-visual-quality-checklist">Step 6: Visual quality checklist</h2>
+<p>For each final plot, confirm:</p>
+<ol type="1">
+<li>Title and axis labels are descriptive</li>
+<li>Units are clear when relevant</li>
+<li>Text is readable at presentation size</li>
+<li>Legend is readable, or direct labels are used</li>
+<li>If you filtered rows, you said so in the text</li>
+</ol>
+<p>Improve your plots accordingly.</p>
+</section>
+<section id="step-7-team-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-team-reflection">Step 7: Team reflection</h2>
+<p>Each team member writes 2 to 4 sentences:</p>
+<ol type="1">
+<li>What you contributed</li>
+<li>One thing you learned</li>
+<li>One thing you would improve next time</li>
+</ol>
+<section id="member-1-your-name" class="level4">
+<h4 class="anchored" data-anchor-id="member-1-your-name">Member 1: your name</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="member-2-your-name" class="level4">
+<h4 class="anchored" data-anchor-id="member-2-your-name">Member 2: your name</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="member-3-your-name" class="level4">
+<h4 class="anchored" data-anchor-id="member-3-your-name">Member 3: your name</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="member-4-your-name-if-applicable" class="level4">
+<h4 class="anchored" data-anchor-id="member-4-your-name-if-applicable">Member 4: your name (if applicable)</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-7-presentation-plan" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-presentation-plan">Step 7: Presentation plan</h2>
+<p>Plan a 10 minute talk with the suggested structure:</p>
+<ol type="1">
+<li>About 1 minute: context, audience, question</li>
+<li>About 2 minutes: data set, key variables, and any cleaning choices</li>
+<li>About 5 minutes: your 3 visuals and the story they tell</li>
+<li>About 2 minutes: takeaway, limitation, next step</li>
+</ol>
+</section>
+<section id="grading-guide" class="level2">
+<h2 class="anchored" data-anchor-id="grading-guide">Grading guide</h2>
+<p>Total 15 points:</p>
+<ol type="1">
+<li><strong>Clear</strong> question and audience (3 pts)</li>
+<li><strong>Evidence-based</strong> story with 3 <strong>high-quality</strong> visuals (6 pts)</li>
+<li><strong>Reproducible</strong> workflow and <strong>readable</strong> report (3 pts)</li>
+<li>Presentation <strong>clarity</strong> and <strong>timing</strong> (3 pts)</li>
+</ol>
 
 
 </section>
@@ -893,15 +1240,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./present-description-final.html" class="pagination-link" aria-label="Guideline and Policy">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Guideline and Policy</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -910,7 +1248,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/present-work-final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_1 (1).qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

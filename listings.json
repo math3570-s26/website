@@ -2,7 +2,14 @@
   {
     "listing": "/ai.html",
     "items": [
-      "/ai/ai_1.html"
+      "/ai/ai_1.html",
+      "/ai/ai_2.html"
+    ]
+  },
+  {
+    "listing": "/project.html",
+    "items": [
+      "/project/mini_project_1.html"
     ]
   }
 ]

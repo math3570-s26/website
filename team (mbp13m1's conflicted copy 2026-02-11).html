@@ -2,13 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.19">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dr.&nbsp;Cheng-Han Yu">
 
-<title>AI Activity Example – MATH/COSC 3570 - Spring 2026</title>
+<title>MATH/COSC 3570 Team Up! – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,23 +64,20 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ai.html" rel="next">
-<link href="./ai_act_guide.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-238b7dab1bde4684d4de8122b9beee70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b967be120325b5effef9540693e1eb4c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-69b08db278f499bc7d235ce342f73d67.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b967be120325b5effef9540693e1eb4c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -76,12 +107,14 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="AI Activity Example – MATH/COSC 3570 - Spring 2026">
-<meta property="og:description" content="Homepage for MATH/COSC 3570 - Introduction to Data Science at Marquette University, Spring 2026.">
+<meta property="og:title" content="MATH/COSC 3570 Team Up! – MATH/COSC 3570 - Spring 2026">
+<meta property="og:image" content="https://math3570-s26.github.io/website/images/qrcode_team.png">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
+<meta property="og:image:height" content="1890">
+<meta property="og:image:width" content="1890">
 </head>
 
-<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -252,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai_example.html">AI Project Example</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">MATH/COSC 3570 Team Up!</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -267,8 +300,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
@@ -329,7 +361,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai_example.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ai_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AI Project Example</span></a>
   </div>
 </li>
@@ -352,7 +384,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project.html" class="sidebar-item-text sidebar-link">
+  <a href="./project.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Topics and Works</span></a>
   </div>
 </li>
@@ -391,54 +423,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topic-data-importing-and-hidden-assumptions" id="toc-topic-data-importing-and-hidden-assumptions" class="nav-link active" data-scroll-target="#topic-data-importing-and-hidden-assumptions">Topic: Data Importing and Hidden Assumptions</a></li>
-  <li><a href="#assigned-roles-3-students" id="toc-assigned-roles-3-students" class="nav-link" data-scroll-target="#assigned-roles-3-students">Assigned Roles (3 students)</a>
-  <ul class="collapse">
-  <li><a href="#prompt-engineer" id="toc-prompt-engineer" class="nav-link" data-scroll-target="#prompt-engineer">Prompt Engineer</a></li>
-  <li><a href="#data-science-auditor" id="toc-data-science-auditor" class="nav-link" data-scroll-target="#data-science-auditor">Data Science Auditor</a></li>
-  <li><a href="#synthesizer" id="toc-synthesizer" class="nav-link" data-scroll-target="#synthesizer">Synthesizer</a></li>
-  </ul></li>
-  <li><a href="#sec-data" id="toc-sec-data" class="nav-link" data-scroll-target="#sec-data">Dataset</a></li>
-  <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
-  <li><a href="#step-by-step-tasks" id="toc-step-by-step-tasks" class="nav-link" data-scroll-target="#step-by-step-tasks">Step-by-step tasks</a>
-  <ul class="collapse">
-  <li><a href="#sec-step1" id="toc-sec-step1" class="nav-link" data-scroll-target="#sec-step1">Step 1 Define your investigation question (before using AI)</a></li>
-  <li><a href="#sec-step2" id="toc-sec-step2" class="nav-link" data-scroll-target="#sec-step2">Step 2 Use AI strategically (3 to 5 prompts)</a></li>
-  <li><a href="#sec-step3" id="toc-sec-step3" class="nav-link" data-scroll-target="#sec-step3">Step 3 Create the AI Interaction Log</a></li>
-  <li><a href="#sec-step4" id="toc-sec-step4" class="nav-link" data-scroll-target="#sec-step4">Step 4 Import the dataset and run required validation checks</a></li>
-  <li><a href="#sec-step5" id="toc-sec-step5" class="nav-link" data-scroll-target="#sec-step5">Step 5 Write the Human-Authored Synthesis (group)</a></li>
-  <li><a href="#sec-step6" id="toc-sec-step6" class="nav-link" data-scroll-target="#sec-step6">Step 6 Presentation slides (group)</a></li>
-  </ul></li>
-  <li><a href="#individual-reflection-each-student" id="toc-individual-reflection-each-student" class="nav-link" data-scroll-target="#individual-reflection-each-student">Individual Reflection (each student)</a></li>
-  <li><a href="#submission-examples" id="toc-submission-examples" class="nav-link" data-scroll-target="#submission-examples">Submission Examples</a></li>
+  <li><a href="#teams" id="toc-teams" class="nav-link active" data-scroll-target="#teams">Teams</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai_example.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/team.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai_example.html">AI Project Example</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI Activity Example</h1>
+<h1 class="title">MATH/COSC 3570 Team Up!</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Dr.&nbsp;Cheng-Han Yu </p>
-          </div>
-  </div>
     
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 12, 2026</p>
+      <p class="date-modified">February 11, 2026</p>
     </div>
   </div>
     
@@ -449,245 +456,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="topic-data-importing-and-hidden-assumptions" class="level2">
-<h2 class="anchored" data-anchor-id="topic-data-importing-and-hidden-assumptions">Topic: Data Importing and Hidden Assumptions</h2>
-<p>You will use an AI tool as a learning partner to investigate a core data science reality:</p>
-<blockquote class="blockquote">
-<p>Importing data is not a neutral step. Import tools make assumptions about missing values, data types, dates, text encoding, and formatting. When assumptions are wrong, the dataset can be changed silently before analysis begins.</p>
-</blockquote>
-<p>You are graded on how you <strong>think, critique, and explain</strong>, not on whether AI gives perfect answers.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<ul>
+<li><p>This course includes substantial group work, GenAI activities, mini projects, and a final project competition. It is time to form and build your team! 😎</p></li>
+<li><p>We have 19 members and will create <strong>6 teams</strong>. Most teams will have <strong>three</strong> mates, with <strong>one team of four</strong>.</p></li>
+<li><p>Please have one person from your team email me the following information:</p>
+<ul>
+<li>Your <span class="blue"><em>team member list</em></span></li>
+<li>Your <span class="blue"><em>team name</em></span></li>
+</ul>
+<p>Examples of past team names include “Syntax Squad,” “Data Detectives,” “The Outliers,” “Analytics Avengers,” and “The Back Right Corner.”</p></li>
+</ul>
+<div class="cell page-columns page-full">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="./images/qrcode_team.png" class="img-fluid figure-img" width="945"></p>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>To Do
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div style="font-size: 1.1em;">
-<ol type="1">
-<li>Download the dataset from the <a href="#sec-data">Dataset section</a> below.</li>
-<li>Write your investigation question (2 to 3 sentences). <a href="#sec-step1">Step 1</a> in Tasks.</li>
-<li>Run 3 to 5 AI prompts that cover missing values, types, dates, and validation. <a href="#sec-step2">Step 2</a> in Tasks.</li>
-<li>Import the data and complete checklist items 1 to 4 first. <a href="#sec-step4">Step 4</a></li>
-<li>Draft your synthesis, then build slides using the required 5 slide structure. <a href="#sec-step5">Step 5</a> and <a href="#sec-step6">Step 6</a></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="assigned-roles-3-students" class="level2">
-<h2 class="anchored" data-anchor-id="assigned-roles-3-students">Assigned Roles (3 students)</h2>
-<section id="prompt-engineer" class="level3">
-<h3 class="anchored" data-anchor-id="prompt-engineer">Prompt Engineer</h3>
-<p>Responsibilities</p>
+</div></div></div>
 <ul>
-<li>Create 3 to 5 purposeful AI prompts</li>
-<li>Save AI responses and build the AI Interaction Log</li>
-<li>Write annotations for each prompt and response pair</li>
+<li><p>Please scan the QR code or go to <a href="https://forms.office.com/r/qnripwRhnW" class="uri">https://forms.office.com/r/qnripwRhnW</a> to fill out the form by <span class="red"><strong>Friday, 1/30 at 11:59 PM</strong></span>.</p></li>
+<li><p>If you do not meet the requirements or miss the deadline, you will lose <strong>1%</strong> of your final grade.</p></li>
+<li><p>Students who are not in a team by the deadline will be assigned to a group <strong>at random</strong>.</p></li>
 </ul>
-</section>
-<section id="data-science-auditor" class="level3">
-<h3 class="anchored" data-anchor-id="data-science-auditor">Data Science Auditor</h3>
-<p>Responsibilities</p>
+<section id="teams" class="level2">
+<h2 class="anchored" data-anchor-id="teams">Teams</h2>
 <ul>
-<li>Identify hidden assumptions in AI guidance</li>
-<li>Design and run post import validation checks</li>
-<li>Provide evidence for at least two hidden assumptions</li>
+<li><p><span class="blue"><strong>Team 1</strong></span>: Sophia Abel, Maya Forcier, Kaitlyn Rohan</p></li>
+<li><p><span class="blue"><strong>Superb Statisticians</strong></span>: Aaron Walker, Connor Kluge, Danielle Idzi</p></li>
+<li><p><span class="blue"><strong>The Data Scientists</strong></span>: Eliza Campana, Miranda Dobbs, Lauren Pintar</p></li>
+<li><p><span class="blue"><strong>Stat Padders</strong></span>: Jared Barnedo, DJ Lacsamana, Raj Dihora</p></li>
+<li><p><span class="blue"><strong>Data Divers</strong></span>: Karlo Jakovcevic, Beth Lasquite, Jack O’Dea</p></li>
+<li><p><span class="blue"><strong>_______</strong></span> (4): Dominic Campione, Wyatt Swanson, Drishtant Dash, Tyler Rowe</p></li>
 </ul>
-</section>
-<section id="synthesizer" class="level3">
-<h3 class="anchored" data-anchor-id="synthesizer">Synthesizer</h3>
-<p>Responsibilities</p>
-<ul>
-<li>Write the Human Authored Synthesis in clear course language</li>
-<li>Build slides using the required structure</li>
-<li>Ensure the final work is consistent and concise</li>
-</ul>
-</section>
-</section>
-<section id="sec-data" class="level2">
-<h2 class="anchored" data-anchor-id="sec-data">Dataset</h2>
-<p><a href="./documents/insideairbnb_chicago_listings_sample_600_2025_09_22.csv">insideairbnb_chicago_listings_sample_600_2025_09_22.csv</a></p>
-</section>
-<section id="what-you-will-submit" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h2>
-<ul>
-<li><p>Group submissions</p>
-<ul>
-<li>AI Interaction Log</li>
-<li>Human Authored Synthesis</li>
-<li>Slides for a 5 to 7 minute presentation</li>
-</ul></li>
-<li><p>Individual submission</p>
-<ul>
-<li>Individual Reflection (150 to 200 words)</li>
-</ul></li>
-</ul>
-</section>
-<section id="step-by-step-tasks" class="level2">
-<h2 class="anchored" data-anchor-id="step-by-step-tasks">Step-by-step tasks</h2>
-<section id="sec-step1" class="level3">
-<h3 class="anchored" data-anchor-id="sec-step1">Step 1 Define your investigation question (before using AI)</h3>
-<p>Write 2 to 3 sentences answering:</p>
-<ul>
-<li>What import problem are we investigating</li>
-<li>Why this problem matters in real data science</li>
-</ul>
-<p>You must focus on hidden assumptions, for example assumptions about missing values, types, dates, or text encoding.</p>
-</section>
-<section id="sec-step2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-step2">Step 2 Use AI strategically (3 to 5 prompts)</h3>
-<p>Your prompts must be purposeful and iterative.</p>
-<p><strong>[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.</strong></p>
-<p>Prompt requirements</p>
-<ul>
-<li>At least 1 prompt about missing values and missing value tokens</li>
-<li>At least 1 prompt about type guessing and type coercion risks</li>
-<li>At least 1 prompt about date parsing and mixed date formats</li>
-<li>At least 1 prompt about validation steps after import</li>
-</ul>
-<section id="suggested-prompt-starters-you-may-adapt" class="level4">
-<h4 class="anchored" data-anchor-id="suggested-prompt-starters-you-may-adapt">Suggested prompt starters (you may adapt)</h4>
-<ul>
-<li><em>“I am importing a CSV where missing values appear as blank, NA, N A, N slash A, and a period. What should I do in R or Python to import correctly and verify it”</em></li>
-<li><em>“What are the most common silent errors from automatic type guessing during CSV import”</em></li>
-<li><em>“If a date column mixes formats like YYYY MM DD and MM slash DD slash YYYY, what should I check after import”</em></li>
-<li><em>“Give me a post import validation checklist for columns that look numeric but are stored as text, such as currency and percentages”</em></li>
-</ul>
-</section>
-</section>
-<section id="sec-step3" class="level3">
-<h3 class="anchored" data-anchor-id="sec-step3">Step 3 Create the AI Interaction Log</h3>
-<p>For each prompt, include:</p>
-<ul>
-<li>Prompt goal</li>
-<li>The AI response excerpt you used</li>
-<li>Your annotation:
-<ul>
-<li>What AI got right</li>
-<li>What AI assumed</li>
-<li>What was missing, misleading, or incorrect</li>
-</ul></li>
-</ul>
-<p>Important rule</p>
-<ul>
-<li>You may not paste AI text into your final synthesis verbatim.</li>
-</ul>
-</section>
-<section id="sec-step4" class="level3">
-<h3 class="anchored" data-anchor-id="sec-step4">Step 4 Import the dataset and run required validation checks</h3>
-<p>Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. <strong>A short summary without numbers or outputs does not count as evidence</strong>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Required post import validation checklist (expand to view)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Submit evidence for every item.</p>
-<p><strong>1. Rows and columns</strong></p>
-<ul>
-<li>Confirm the dataset has 600 rows and 79 columns after import.</li>
-</ul>
-<p><strong>2. Missing value tokens</strong></p>
-<ul>
-<li>Identify at least three different missing value representations present in the file (examples include NA, N slash A, blank, period).</li>
-<li>Report how many appear in at least two columns of your choice.</li>
-</ul>
-<p><strong>3. Date columns</strong></p>
-<ul>
-<li>Identify at least two date columns (examples include last_scraped, host_since).</li>
-<li>Show evidence that more than one date format exists in the data.</li>
-<li>State whether your import tool parsed them as dates or left them as text.</li>
-</ul>
-<p><strong>4. Percent columns stored as text</strong></p>
-<ul>
-<li>Check host_response_rate and host_acceptance_rate.</li>
-<li>Show the raw format you observe (for example values that include a percent sign).</li>
-<li>State what type your import tool assigned and what conversion would be required.</li>
-</ul>
-<p><strong>5. Currency stored as text</strong></p>
-<ul>
-<li>Check the price column.</li>
-<li>Show the raw format you observe (for example dollar sign and commas).</li>
-<li>State what type your import tool assigned and what conversion would be required.</li>
-</ul>
-<p><strong>6. Logical values coded as text</strong></p>
-<ul>
-<li>Check host_is_superhost.</li>
-<li>List the unique values you observe (for example t and f).</li>
-<li>State what type your import tool assigned and what conversion would be required.</li>
-</ul>
-<p><strong>7. Text encoding and non ASCII characters</strong></p>
-<ul>
-<li>Find at least one host_name that contains non ASCII characters (examples include accented letters).</li>
-<li>Show evidence that the character displays correctly after import.</li>
-<li>State what could go wrong if encoding is not handled properly.</li>
-</ul>
-<p><strong>8. Silent type coercion risk</strong></p>
-<ul>
-<li>Identify one column where automatic guessing could lead to a silent mistake.</li>
-<li>Explain the mistake, why it could be hard to notice, and how you would detect it.</li>
-</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>students <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Dominic"</span>, <span class="st">"Drishtant"</span>, <span class="st">"Tyler"</span>, <span class="st">"Wyatt"</span>, <span class="st">"Karlo"</span>, <span class="st">"Beth"</span>, <span class="st">"Jack"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3570</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(students, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Dominic"   "Wyatt"     "Drishtant" "Tyler"    </code></pre>
 </div>
 </div>
-</div>
-<!-- #### Required post import validation checklist (submit evidence for every item) -->
-</section>
-<section id="sec-step5" class="level3">
-<h3 class="anchored" data-anchor-id="sec-step5">Step 5 Write the Human-Authored Synthesis (group)</h3>
-<p>Length target: 400 to 600 words.</p>
-<p>Your synthesis must include:</p>
-<ul>
-<li>Your investigation question</li>
-<li>At least two hidden assumptions with evidence from your validation checks</li>
-<li>A clear explanation of why the assumptions matter for later analysis</li>
-<li>A short recommended import and validation routine for this dataset type</li>
-</ul>
-<p>Your synthesis must be written in your own words.</p>
-</section>
-<section id="sec-step6" class="level3">
-<h3 class="anchored" data-anchor-id="sec-step6">Step 6 Presentation slides (group)</h3>
-<p>Use this exact slide structure:</p>
-<ul>
-<li>Our question</li>
-<li>What AI suggested</li>
-<li>Where AI fell short</li>
-<li>Our corrected understanding, with evidence</li>
-<li>One takeaway for future data science work</li>
-</ul>
-<p>Time: 12 to 15 minutes.</p>
-</section>
-</section>
-<section id="individual-reflection-each-student" class="level2">
-<h2 class="anchored" data-anchor-id="individual-reflection-each-student">Individual Reflection (each student)</h2>
-<p>Write 150 to 200 words answering:</p>
-<ul>
-<li>What did AI help you learn</li>
-<li>What did AI miss or oversimplify</li>
-<li>What did you contribute as a human thinker</li>
-<li>How will you change your AI use in future data work</li>
-</ul>
-<p>Your reflection must match your assigned role.</p>
-</section>
-<section id="submission-examples" class="level2">
-<h2 class="anchored" data-anchor-id="submission-examples">Submission Examples</h2>
-<ul>
-<li><a href="./documents/ai_prompts.pdf">Excellent AI Interaction Log</a></li>
-<li><a href="./documents/ai_audit.pdf">Excellent Human-Authored Synthesis</a></li>
-<li><a href="./documents/ai_reflection.pdf">Excellent Individual Reflections</a></li>
-<li><a href="./documents/ai_prompts_bad.pdf">Insufficient AI Interaction Log</a></li>
-<li><a href="./documents/ai_audit_bad.pdf">Insufficient Human-Authored Synthesis</a></li>
-<li><a href="./documents/ai_reflection_bad.pdf">Insufficient Individual Reflections</a></li>
-</ul>
 
 
 </section>
@@ -1105,18 +915,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./ai_act_guide.html" class="pagination-link" aria-label="Guideline and Policy">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Guideline and Policy</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./ai.html" class="pagination-link" aria-label="AI Project Topics">
-        <span class="nav-page-text">AI Project Topics</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1125,7 +923,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai_example.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/team.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

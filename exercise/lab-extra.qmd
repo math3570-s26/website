@@ -1,0 +1,36 @@
+---
+title: "Lab Extra Credit Opportunity"
+editor: source
+reference-location: margin
+execute:
+  freeze: true
+  echo: true
+---
+
+```{r}
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "../slides/images/09-ggplot2/",
+    message = FALSE,
+    global.par = TRUE
+)
+library(fontawesome)
+library(tidyverse)
+```
+
+
+
+::: callout-important
+[Due **Friday, Feb 13, 11:59 PM**]{.red}
+:::
+
+- Please include this work right below your Lab 11 ggplot2 work.
+
+# Extra Credit Questions
+
+(@) Run the code in [heart.R](../code/heart.R) and [heart.py](../code/heart.py) in your `lab.qmd`, and generate your hearts! One you are done, commit and push your work. Feel free to share it with your loved ones.

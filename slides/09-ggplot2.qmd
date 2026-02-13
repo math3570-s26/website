@@ -17,7 +17,6 @@ execute:
   echo: true
 ---
 
-
 #  {visibility="hidden"}
 
 \def\bx{\mathbf{x}}
@@ -38,8 +37,6 @@ execute:
 \def\bmu{\boldsymbol \mu}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \def\Trace{\text{Trace}}
-
-
 
 ```{r}
 #| label: setup
@@ -105,76 +102,36 @@ knitr::knit_hooks$set(output = function(x, options) {
 })
 ```
 
-
 ```{python}
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
-<!-- # {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/visualize.png" background-size="contain"} -->
 
-
-<!-- ## [Exploratory Data Analysis (EDA)](https://r4ds.hadley.nz/eda) {visibility="hidden"} -->
-
-<!-- - EDA is an approach to analyzing data sets to *summarize their main characteristics*. -->
-<!-- <!-- - Many widely used data analysis tools were initiated by discoveries made via EDA.  --> -->
-<!-- - EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked. -->
-
-<!-- <!-- - Often, the strongest tool of EDA is **data visualization**.  --> -->
-
-<!-- > "The simple graph has brought more information to the data analyst’s mind than any other device." — John Tukey -->
-
-<!-- - We also calculate summary statistics and perform data wrangling/manipulation/transformation at (or before) this stage of doing data science.  -->
-
-<!-- ```{r} -->
-<!-- #| echo: false -->
-<!-- knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/visualize.png") -->
-<!-- ``` -->
-
-<!-- ::: notes -->
-<!-- - After importing or reading data into R, the first thing we need to do is to understand our data.  -->
-<!--     - What are variables in the data set?  -->
-<!--     - Are the variables related in some way?  -->
-<!--     - Are there any missing values, outliers, or other weird values? -->
-<!--     - Do we need to transform some variables to make it easier to answer our research questions or to do our analysis. -->
-<!-- - So before doing data analysis, we should understand our data well, and be able to answer all those questions. This understanding helps us choose the correct model and algorithm and helps us do the correct analysis.  -->
-<!-- - The process of understanding our data is called Exploratory Data Analysis or EDA. -->
-<!-- - So I said here, EDA is an approach to analyzing data sets to summarize their main characteristics. -->
-<!-- - Many widely used data analysis tools were initiated by discoveries made via EDA.  -->
-<!-- - EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked. Again, without understanding our data, we may end up choosing a bad model for analysis because we may neglect some important information stored in the data set. -->
-<!-- - Often, the strongest tool of EDA is data visualization, and let's why we spend two weeks talking about it.  -->
-<!-- - We might also calculate summary statistics and perform data wrangling/manipulation/transformation at (or before) this stage of doing data science, which will be discussed after data visualization. -->
-<!-- ::: -->
-
-
-
-# {background-color="#A7D5E8"}
+#  {background-color="#A7D5E8"}
 
 ![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png){width="380"}![](https://raw.githubusercontent.com/slowkow/ggrepel/master/man/figures/logo.svg){width="180"}![](https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png){width="180"}![](https://raw.githubusercontent.com/sjmgarnier/viridis/master/hex_logo/viridis.svg){width="180"}![](./images/09-ggplot2/patchwork_logo.png){width="180"}![](./images/09-ggplot2/ggiraph_logo.png){width="180"}![](https://raw.githubusercontent.com/ropensci/plotly/master/man/figures/plotly.png){width="380"}
-<h3>gthemes, ggridges, ggbeeswarm, ggdendro, ggpubr, ggmap, ggradar, ggcorrplot, GGally, and more!</h3> 
 
+<h3>ggthemes, ggridges, ggbeeswarm, ggdendro, ggpubr, ggmap, ggradar, ggcorrplot, GGally, and more!</h3>
 
 <h1>Visualizing Data</h1>
 
-
 ::: notes
-- After importing or reading data into R, the first thing we need to do is to understand our data. 
-    - What are variables in the data set? 
-    - Are the variables related in some way? 
-    - Are there any missing values, outliers, or other weird values?
-    - Do we need to transform some variables to make it easier to answer our research questions or to do our analysis.
-- So before doing data analysis, we should understand our data well, and be able to answer all those questions. This understanding helps us choose the correct model and algorithm and helps us do the correct analysis. 
-- this week and and next week, we will be talking about data visualization. 
-- So it is great to master this package because with the package you can produce lots of beautiful and amazing plots. All right. Let's dive in and see how to create a ggplot!
+-   After importing or reading data into R, the first thing we need to do is to understand our data.
+    -   What are variables in the data set?
+    -   Are the variables related in some way?
+    -   Are there any missing values, outliers, or other weird values?
+    -   Do we need to transform some variables to make it easier to answer our research questions or to do our analysis.
+-   So before doing data analysis, we should understand our data well, and be able to answer all those questions. This understanding helps us choose the correct model and algorithm and helps us do the correct analysis.
+-   this week and and next week, we will be talking about data visualization.
+-   So it is great to master this package because with the package you can produce lots of beautiful and amazing plots. All right. Let's dive in and see how to create a ggplot!
 :::
 
 ## [Plotting Systems](https://bookdown.org/rdpeng/exdata/plotting-systems.html): **base**, **lattice** and **ggplot2**
 
-:::: {.columns}
-
+:::::: columns
 ::: {.column width="33%"}
-
 ```{r}
 #| echo: false
 # par(mfrow = c(1, 3))
@@ -202,63 +159,53 @@ ggplot(data = mpg,
     labs(title = "ggplot2")
 ```
 :::
-::::
+::::::
 
 **ggplot2**
 
-- has the most powerful functionality.
+-   has the most powerful functionality.
 
-- is more beautiful?
+-   is more beautiful?
 
-- has larger file size that occupies more memory space and has longer render time.
-
+-   has larger file size that occupies more memory space and has longer render time.
 
 ::: notes
-- We already learned a little bit about R plotting, right? In fact R has three main plotting systems, the base package, lattice package, and the ggplot2 package.
-- There are lots of tools and packages that greatly extend the ggplot2 functionality, as I listed here. 
-- Basically, ggplot2 has the most powerful functionality than the other two. It can create lots of graphs that the other two cannot, and ggplot2 is more beautiful than the other two, I think. But one disadvantage of ggplot2 is that it's size is larger than the other two, occupying more memory spaces than the other two, and the rendering time is longer.
+-   We already learned a little bit about R plotting, right? In fact R has three main plotting systems, the base package, lattice package, and the ggplot2 package.
+-   There are lots of tools and packages that greatly extend the ggplot2 functionality, as I listed here.
+-   Basically, ggplot2 has the most powerful functionality than the other two. It can create lots of graphs that the other two cannot, and ggplot2 is more beautiful than the other two, I think. But one disadvantage of ggplot2 is that it's size is larger than the other two, occupying more memory spaces than the other two, and the rendering time is longer.
 :::
 
+#  {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" background-size="30%" background-position="70% 50%"}
 
-# {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" background-size="30%" background-position="70% 50%"}
-
-
-::: {.left}
+::: left
 <h2>Elegant Data Visualisation</h2>
+
 <h2>Using the [Grammar of Graphics](http://vita.had.co.nz/papers/layered-grammar.pdf)</h2>
 :::
 
-
 ## [The ggplot2 Grammar](https://r4ds.hadley.nz/data-visualize.html)
-- Three main components:
 
+-   Three main components:
 
- <!-- Grammar element          | What it is -->
- <!-- :----------------------- | :----------------------------- -->
- <!-- **Data**                 | The **data frame** being plotted -->
- <!-- **Geometry**             | The geometric **shape** that will represent the data -->
- <!--                          | (e.g., point, boxplot, histogram) -->
- <!-- **Aesthetic mapping**    | The aesthetics of the geometric object -->
- <!--                          | (e.g., color, size, shape) -->
+<!-- Grammar element          | What it is --> <!-- :----------------------- | :----------------------------- --> <!-- **Data**                 | The **data frame** being plotted --> <!-- **Geometry**             | The geometric **shape** that will represent the data --> <!--                          | (e.g., point, boxplot, histogram) --> <!-- **Aesthetic mapping**    | The aesthetics of the geometric object --> <!--                          | (e.g., color, size, shape) -->
 
++-----------------------+------------------------------------------------------+
+| Grammar element       | What it is                                           |
++=======================+======================================================+
+| **Data**              | The **data frame** used for plotting                 |
++-----------------------+------------------------------------------------------+
+| **Geometry**          | -   The geometric **shape** that represents the data |
+|                       | -   e.g., *point*, *boxplot*, *histogram*            |
++-----------------------+------------------------------------------------------+
+| **Aesthetic mapping** | -   The aesthetics of the geometric object           |
+|                       | -   e.g., *color*, *size*, *shape*                   |
++-----------------------+------------------------------------------------------+
 
-+-----------------------+--------------------------------------------------------+
-|  Grammar element      | What it is                                             |
-+=======================+========================================================+
-|  **Data**             | The **data frame** used for plotting                   |
-+-----------------------+--------------------------------------------------------+
-| **Geometry**          | - The geometric **shape** that represents the data     |
-|                       | - e.g., *point*, *boxplot*, *histogram*                |
-+-----------------------+--------------------------------------------------------+
-| **Aesthetic mapping** | - The aesthetics of the geometric object               |
-|                       | - e.g., *color*, _size_, _shape_                       |
-+-----------------------+--------------------------------------------------------+
-
-- How we define the mapping depends on what geometry we are using.
+-   How we define the mapping depends on what geometry we are using.
 
 . . .
 
-::: {.large}
+::: large
 ```{r}
 #| eval: false
 ggplot(data = ___________, mapping = aes(____________)) + 
@@ -267,12 +214,12 @@ ggplot(data = ___________, mapping = aes(____________)) +
 ```
 :::
 
-
 ::: notes
-- Data: the data input of ggplot2 is always a data frame, not a vector, or matrix.
-- Geometry: defines what kind of plot we are going to make.
-- Aesthetic mapping: basically tell ggplot2 how we decorate the plot and make it more visible or more informative. For example, use different point colors or sizes for different categories, such male and female
-- Structure of the code for ggplots can be summarized as the following code.
+-   Data: the data input of ggplot2 is always a data frame, not a vector, or matrix.
+-   Geometry: defines what kind of plot we are going to make.
+-   Aesthetic mapping: basically tell ggplot2 how we decorate the plot and make it more visible or more informative. For example, use different point colors or sizes for different categories, such male and female
+-   Structure of the code for ggplots can be summarized as the following code.
+
 ```{r}
 #| eval: false
 ggplot(data = <DATASET>, mapping = aes(<MAPPINGS>)) + 
@@ -281,8 +228,7 @@ ggplot(data = <DATASET>, mapping = aes(<MAPPINGS>)) +
 ```
 :::
 
-
-## mpg Data 
+## mpg Data
 
 ```{r}
 #| class-output: my_class600
@@ -290,17 +236,14 @@ ggplot2::mpg
 ```
 
 ::: notes
-- Here shows the mpg data set saved in ggplot2. 
-- It is a tibble with 11 variables, including ......
-- We are gonna use it as an example to learn to create a ggplot. 
+-   Here shows the mpg data set saved in ggplot2.
+-   It is a tibble with 11 variables, including ......
+-   We are gonna use it as an example to learn to create a ggplot.
 :::
 
-
-
-##
+## 
 
 ::: panel-tabset
-
 ## Plot
 
 ```{r ref.label = "mpg"}
@@ -330,21 +273,18 @@ ggplot(data = mpg,
 :::
 
 ::: notes
-- Here shows a ggplot, showing the relationship between mpg and engine displacement. We have titles, labels, and footnote.
-- And we also use different colors to show different types of car. Right.
-- The code is right here. We are gonna create this plot step by step by step OK.
+-   Here shows a ggplot, showing the relationship between mpg and engine displacement. We have titles, labels, and footnote.
+-   And we also use different colors to show different types of car. Right.
+-   The code is right here. We are gonna create this plot step by step by step OK.
 :::
-
-
 
 # Coding out loud `r emo::ji('smiley')`
 
-##
+## 
 
 > **Start with the `mpg` data frame**
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-0
@@ -363,20 +303,18 @@ ggplot(data = mpg) #<<
 #| out-width: 100%
 ```
 :::
-::::
+:::::
 
 ::: notes
-- Remember the data input is always a data frame.  
-- When you call the function ggplot(), but without any geometry, R just renders a plot background colored in gray.
+-   Remember the data input is always a data frame.\
+-   When you call the function ggplot(), but without any geometry, R just renders a plot background colored in gray.
 :::
 
-##
+## 
 
-> Start with the `mpg` data frame,
-> **map engine displacement to the x-axis**
+> Start with the `mpg` data frame, **map engine displacement to the x-axis**
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-1
@@ -388,10 +326,8 @@ ggplot(data = mpg,
        mapping = aes(x = displ)) #<<
 ```
 
-- `displ` is the variable name in `mpg`.
-
+-   `displ` is the variable name in `mpg`.
 :::
-
 
 ::: {.column width="60%"}
 ```{r ref.label = "mpg-1"}
@@ -399,29 +335,24 @@ ggplot(data = mpg,
 #| warning: false
 #| out-width: 100%
 ```
-- R will create tick marks and label of x-axis for you.
-:::
-::::
 
+-   R will create tick marks and label of x-axis for you.
+:::
+:::::
 
 ::: notes
-- Then after specifying the data set, we can start decorating our plot.
-- Remember we are going to create a scatter plot of displacement and miles pewr gallon.
-- So we can first map engine displacement to the x-axis using mapping = aes(x = displ)
-- displ is the variable name in the mpg data set. 
-- R will create some default tick marks and label of x-axis for you.
+-   Then after specifying the data set, we can start decorating our plot.
+-   Remember we are going to create a scatter plot of displacement and miles pewr gallon.
+-   So we can first map engine displacement to the x-axis using mapping = aes(x = displ)
+-   displ is the variable name in the mpg data set.
+-   R will create some default tick marks and label of x-axis for you.
 :::
 
+## 
 
+> Start with the `mpg` data frame, map engine displacement to the x-axis **and map highway miles per gallon to the y-axis.**
 
-##
-
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> **and map highway miles per gallon to the y-axis.**
-
-:::: {.columns}
-
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-2
@@ -433,9 +364,9 @@ ggplot(data = mpg,
        mapping = aes(x = displ,
                      y = hwy)) #<<
 ```
-- Specify `y = hwy` in the same `aes()` of the `mapping` argument as `x = displ`, separated by comma.
-:::
 
+-   Specify `y = hwy` in the same `aes()` of the `mapping` argument as `x = displ`, separated by comma.
+:::
 
 ::: {.column width="60%"}
 ```{r ref.label = "mpg-2"}
@@ -444,26 +375,21 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
-
+:::::
 
 ::: notes
-- Then we map highway miles per gallon to the y-axis by specifying `y = hwy` in aesthetics 
-- `hwy` is the variable name in the mpg data set. 
-- R will create some default tick marks and label of y-axis for you.
-- Now we have variables in both x and y axis. It's time to define the geometry of the plot. That is, tell ggplot, what kind of plot you want!
+-   Then we map highway miles per gallon to the y-axis by specifying `y = hwy` in aesthetics
+-   `hwy` is the variable name in the mpg data set.
+-   R will create some default tick marks and label of y-axis for you.
+-   Now we have variables in both x and y axis. It's time to define the geometry of the plot. That is, tell ggplot, what kind of plot you want!
 :::
 
+## 
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> **Represent each observation with a point**
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. **Represent each observation with a point**
 
-:::: {.columns}
-
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ```{r}
 #| label: mpg-3
 #| fig-show: hide
@@ -476,16 +402,16 @@ ggplot(data = mpg,
   geom_point() #<<
 ```
 
-- To define a geometry, add a **geom** layer. 
+-   To define a geometry, add a **geom** layer.
 
-::: {.center}
-**Don't miss <span style="font-size: 3em;"> `+` </span> sign!**
+::: center
+**Don't miss [`+`]{style="font-size: 3em;"} sign!**
 :::
 
-- For scatterplots we add **points**, and use `geom_point()`
+-   For scatterplots we add **points**, and use `geom_point()`
 
-- [Lots of geoms](https://ggplot2.tidyverse.org/reference/)
-:::
+-   [Lots of geoms](https://ggplot2.tidyverse.org/reference/)
+::::
 
 ::: {.column width="60%"}
 ```{r ref.label = "mpg-3"}
@@ -494,27 +420,17 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
+::::::
 
 ::: notes
-**geom** (geometric object)
-- What's the next? Remember we use different colors of points to represent different car types, right?
-- Which part of code you think we can use to color the points?
-- aesthetics in the mapping! 
-- By default, ggplot generates black solid points, each representing an observation's `hwy` and `displ` value.
-
+**geom** (geometric object) - What's the next? Remember we use different colors of points to represent different car types, right? - Which part of code you think we can use to color the points? - aesthetics in the mapping! - By default, ggplot generates black solid points, each representing an observation's `hwy` and `displ` value.
 :::
 
+## 
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> Represent each observation with a point
-> **and map type of car (`class`) to the color of each point.**
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point **and map type of car (`class`) to the color of each point.**
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-4
@@ -530,9 +446,9 @@ ggplot(data = mpg,
   geom_point()
 ```
 
-- Add `color = class` in `aes()` of the `mapping` argument, where `class` is the variable name for type of car.
+-   Add `color = class` in `aes()` of the `mapping` argument, where `class` is the variable name for type of car.
 
-- ggplot automatically generates a legend on the right.
+-   ggplot automatically generates a legend on the right.
 
 ```{r}
 #| echo: false
@@ -548,28 +464,21 @@ unique(mpg$class)
 #| out-width: 100%
 ```
 :::
-::::
-
-
+:::::
 
 ::: notes
-- To map type of car (class) to the color of each point, add `color = class` in `aes()` of the `mapping` argument
-- And now you can see that each color represent a type of car.
-- ggplot automatically generates a default legend on the right, where the title of the legend is the variable name, and the names of legend are the variable values.
-- OK. We are almost done. The rest are just adding titles x, y labels. Let's see how.
+-   To map type of car (class) to the color of each point, add `color = class` in `aes()` of the `mapping` argument
+-   And now you can see that each color represent a type of car.
+-   ggplot automatically generates a default legend on the right, where the title of the legend is the variable name, and the names of legend are the variable values.
+-   OK. We are almost done. The rest are just adding titles x, y labels. Let's see how.
 :::
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> Represent each observation with a point
-> and map type of car (`class`) to the color of each point.
-> **Title the plot "Engine Size v.s. Fuel Efficiency"**
+## 
 
-::::: {.midi}
-:::: {.columns}
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (`class`) to the color of each point. **Title the plot "Engine Size v.s. Fuel Efficiency"**
 
+:::::: midi
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-5
@@ -587,8 +496,8 @@ ggplot(data = mpg,
     title="Engine Size vs. Fuel Efficiency" #<<
     )
 ```
-- Add any labels in `labs()` layer.
 
+-   Add any labels in `labs()` layer.
 :::
 
 ::: {.column width="60%"}
@@ -598,26 +507,20 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
 :::::
+::::::
 
 ::: notes
-- We can add any labels in `labs()` layer.
-- Here we set title = "Engine Size v.s. Fuel Efficiency"
+-   We can add any labels in `labs()` layer.
+-   Here we set title = "Engine Size v.s. Fuel Efficiency"
 :::
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> Represent each observation with a point
-> and map type of car (`class`) to the color of each point.
-> Title the plot "Engine Size vs. Fuel Efficiency",
-> **add the subtitle "Dimensions for class"**
+## 
 
-::::: {.midi}
-:::: {.columns}
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (`class`) to the color of each point. Title the plot "Engine Size vs. Fuel Efficiency", **add the subtitle "Dimensions for class"**
 
+:::::: midi
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-6
@@ -636,9 +539,9 @@ ggplot(data = mpg,
     subtitle = "Dimensions for class" #<<
     ) 
 ```
-- Add a subtitle in `labs()`
-:::
 
+-   Add a subtitle in `labs()`
+:::
 
 ::: {.column width="60%"}
 ```{r ref.label = "mpg-6"}
@@ -647,35 +550,25 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
 :::::
-
+::::::
 
 ::: notes
-- We can also add a subtitle title "Dimensions for class".
-- BTW, we can change the font size, color and position of the title. Here is just the default setting.
-- In theme(plot.title = element_text(size = 20, color = "#1b98e0")
-- https://statisticsglobe.com/ggplot2-title-subtitle-with-different-size-and-color-in-r
-- https://en.wikipedia.org/wiki/Point_(typography)
-- https://stackoverflow.com/questions/17311917/ggplot2-the-unit-of-size
-- We will talk about that if time permitted. Or I can ask you in homework and you can learn by yourself.
+-   We can also add a subtitle title "Dimensions for class".
+-   BTW, we can change the font size, color and position of the title. Here is just the default setting.
+-   In theme(plot.title = element_text(size = 20, color = "#1b98e0")
+-   https://statisticsglobe.com/ggplot2-title-subtitle-with-different-size-and-color-in-r
+-   https://en.wikipedia.org/wiki/Point\_(typography)
+-   https://stackoverflow.com/questions/17311917/ggplot2-the-unit-of-size
+-   We will talk about that if time permitted. Or I can ask you in homework and you can learn by yourself.
 :::
 
+## 
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> Represent each observation with a point
-> and map type of car (`class`) to the color of each point.
-> Title the plot "Engine Size vs. Fuel Efficiency",
-> add the subtitle "Dimensions for class",
-> **label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively**
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (`class`) to the color of each point. Title the plot "Engine Size vs. Fuel Efficiency", add the subtitle "Dimensions for class", **label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively**
 
-
-::::: {.midi}
-:::: {.columns}
-
+:::::: midi
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-7
@@ -698,7 +591,6 @@ ggplot(data = mpg,
 ```
 :::
 
-
 ::: {.column width="60%"}
 ```{r ref.label = "mpg-7"}
 #| echo: false
@@ -706,29 +598,19 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
 :::::
+::::::
 
 ::: notes
-- We then label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively. 
+-   We then label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively.
 :::
 
+## 
 
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (`class`) to the color of each point. Title the plot "Engine Size vs. Fuel Efficiency", add the subtitle "Dimensions for class", label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively, **label the legend "Type of car"**
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> Represent each observation with a point
-> and map type of car (`class`) to the color of each point.
-> Title the plot "Engine Size vs. Fuel Efficiency",
-> add the subtitle "Dimensions for class",
-> label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively,
-> **label the legend "Type of car"**
-
-::::: {.midi}
-:::: {.columns}
-
+:::::: midi
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-8
@@ -750,7 +632,8 @@ ggplot(data = mpg,
     color = "Type of car" #<<
     ) 
 ```
-- The legend is generated when we map type of car (`class`) to **color**. 
+
+-   The legend is generated when we map type of car (`class`) to **color**.
 :::
 
 ::: {.column width="60%"}
@@ -760,32 +643,21 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
 :::::
-
+::::::
 
 ::: notes
-- We label the legend "Type of car" using color = "Type of car". Why?
-- Because the legend is generated when we map type of car to color.
-- The color title is the legend title.
+-   We label the legend "Type of car" using color = "Type of car". Why?
+-   Because the legend is generated when we map type of car to color.
+-   The color title is the legend title.
 :::
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> Represent each observation with a point
-> and map type of car (`class`) to the color of each point.
-> Title the plot "Engine Size vs. Fuel Efficiency",
-> add the subtitle "Dimensions for class",
-> label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively,
-> label the legend "Type of car",
-> **and add a caption for the data source.**
+## 
 
-::::: {.midi}
-:::: {.columns}
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (`class`) to the color of each point. Title the plot "Engine Size vs. Fuel Efficiency", add the subtitle "Dimensions for class", label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively, label the legend "Type of car", **and add a caption for the data source.**
 
-
+:::::: midi
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-9
@@ -817,32 +689,20 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
 :::::
-
+::::::
 
 ::: notes
-- Finally, we can add a caption for the data source using caption argument
-- Then we are done! We have this beautiful scatter plot!
+-   Finally, we can add a caption for the data source using caption argument
+-   Then we are done! We have this beautiful scatter plot!
 :::
 
-##
-> Start with the `mpg` data frame,
-> map engine displacement to the x-axis
-> and map highway miles per gallon to the y-axis.
-> Represent each observation with a point
-> and map type of car (`class`) to the color of each point.
-> Title the plot "Engine Size vs. Fuel Efficiency",
-> add the subtitle "Dimensions for class",
-> label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively,
-> label the legend "Type of car",
-> and add a caption for the data source.
-> **Finally, use a discrete color scale that is designed to be perceived by viewers with common forms of color blindness.**
+## 
 
-::::: {.midi}
-:::: {.columns}
+> Start with the `mpg` data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (`class`) to the color of each point. Title the plot "Engine Size vs. Fuel Efficiency", add the subtitle "Dimensions for class", label the x and y axes as "Engine displacement (litres)" and "Highway (mpg)", respectively, label the legend "Type of car", and add a caption for the data source. **Finally, use a discrete color scale that is designed to be perceived by viewers with common forms of color blindness.**
 
-
+:::::: midi
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| label: mpg-10
@@ -868,7 +728,6 @@ ggplot(data = mpg,
 ```
 :::
 
-
 ::: {.column width="60%"}
 ```{r ref.label = "mpg-10"}
 #| echo: false
@@ -876,31 +735,27 @@ ggplot(data = mpg,
 #| out-width: 100%
 ```
 :::
-::::
 :::::
-
+::::::
 
 ::: notes
-- And if we are considerate enough, we can use a discrete color scale that is designed to be perceived by viewers with common forms of color blindness.
-- =======================================
-- Let's continue our discussion of ggplot2. We learned there are three main components of ggplot2, the data, which is a data frame, the geometry object, and aesthetics mapping. 
-- And we are free to add more layers with the plus sign to manipulate or put more features on the plot. 
-- In fact, we can actually save a ggplot as an object, and we can recreate the plot by just printing the object out. Let's see how.
+-   And if we are considerate enough, we can use a discrete color scale that is designed to be perceived by viewers with common forms of color blindness.
+-   =======================================
+-   Let's continue our discussion of ggplot2. We learned there are three main components of ggplot2, the data, which is a data frame, the geometry object, and aesthetics mapping.
+-   And we are free to add more layers with the plus sign to manipulate or put more features on the plot.
+-   In fact, we can actually save a ggplot as an object, and we can recreate the plot by just printing the object out. Let's see how.
 :::
 
+## 
 
-
-##
-
-:::{.lab}
-<span style="color:blue"> **11-ggplot2** </span>
-<!-- - Create a R script named **lab09-ggplot2.R** and load the **tidyverse** package. -->
+::: lab
+[ **11-ggplot2** ]{style="color:blue"} <!-- - Create a R script named **lab09-ggplot2.R** and load the **tidyverse** package. -->
 
 In **lab.qmd** `## Lab 11` section,
 
-- Use `readr::read_csv()` to import the data **penguins.csv** into your R workspace.
+-   Use `readr::read_csv()` to import the data **penguins.csv** into your R workspace.
 
-- Generate the following ggplot:
+-   Generate the following ggplot:
 
 ```{r}
 #| out-width: 55%
@@ -922,9 +777,7 @@ ggplot(data = penguins,
 ```
 :::
 
-
-
-##
+## 
 
 ```{r}
 #| eval: false
@@ -941,15 +794,9 @@ ________ |>
        _______ = "Source: Palmer Station LTER / palmerpenguins package")
 ```
 
-
-
-
-
 ## Assign a Plot to an Object
 
-
-:::: {.columns}
-
+:::::: columns
 ::: {.column width="50%"}
 ```{r}
 #| label: assign
@@ -966,10 +813,8 @@ p
 ```
 :::
 
-::: {.column width="50%"}
-
-::: {.fragment}
-
+:::: {.column width="50%"}
+::: fragment
 ```{r}
 #| cache: true
 #| out-width: 100%
@@ -984,30 +829,25 @@ p + labs(
     )
 
 ```
-
 :::
-
-:::
-
 ::::
-
+::::::
 
 ::: notes
-- So one advantage of ggplot is that you can Assign a ggplot to an Object that has its own class ggplot.
-- base R plotting system is not able to assign an object to a plot for rendering.
-- here, I assign the plot to the object called "p". When I print it out, it shows the ggplot. 
-- This object "p" stores the scatter plot structure, and can be saved for later use. 
-- For example, we can add labels on the existent ggplot object. And if we want to use the same scatter plot but with a different labels or any other features, just add the new labels or features to the object "p".
-- So this way we don't need to type the basic ggplot structure all over again.
-- It's quite useful if you wanna generate the same plot but with different decorations. Maybe here you want red labels, and at another place you want blue labels, for example.
+-   So one advantage of ggplot is that you can Assign a ggplot to an Object that has its own class ggplot.
+-   base R plotting system is not able to assign an object to a plot for rendering.
+-   here, I assign the plot to the object called "p". When I print it out, it shows the ggplot.
+-   This object "p" stores the scatter plot structure, and can be saved for later use.
+-   For example, we can add labels on the existent ggplot object. And if we want to use the same scatter plot but with a different labels or any other features, just add the new labels or features to the object "p".
+-   So this way we don't need to type the basic ggplot structure all over again.
+-   It's quite useful if you wanna generate the same plot but with different decorations. Maybe here you want red labels, and at another place you want blue labels, for example.
 :::
-
 
 ## [Theme Options](https://ggplot2.tidyverse.org/reference/ggtheme.html)
 
-Options include 
+Options include
 
-`theme_grey()` (default),  `theme_bw()`,  `theme_dark()`,  `theme_classic()`, etc.
+`theme_grey()` (default), `theme_bw()`, `theme_dark()`, `theme_classic()`, etc.
 
 ```{r}
 #| cache: true
@@ -1020,9 +860,7 @@ p <- p + labs(title = "Engine Size vs. Fuel Efficiency",
               caption = "Source: http://fueleconomy.gov")
 ```
 
-:::: {.columns}
-
-
+::::: columns
 ::: {.column width="50%"}
 ```{r}
 #| cache: true
@@ -1032,7 +870,6 @@ p + theme_bw()
 ```
 :::
 
-
 ::: {.column width="50%"}
 ```{r}
 #| cache: true
@@ -1041,24 +878,22 @@ p + theme_bw()
 p + theme_dark()
 ```
 :::
-::::
+:::::
 
 ::: notes
-- OK theme. You can add a theme layer theme() to your plot to tweak the display of the theme the plot is currently using, including title, axis labels, etc. Check theme() in the help page. You will learn which components of a plot can be changed.
-- Some theme options you can use include `theme_grey()` (default),  `theme_bw()`,  `theme_dark()`,  `theme_classic()`, etc
-- To use another theme, we just add its corresponding theme function to the plot.
-- Here shows how the black/white theme and dark theme look like.
+-   OK theme. You can add a theme layer theme() to your plot to tweak the display of the theme the plot is currently using, including title, axis labels, etc. Check theme() in the help page. You will learn which components of a plot can be changed.
+-   Some theme options you can use include `theme_grey()` (default), `theme_bw()`, `theme_dark()`, `theme_classic()`, etc
+-   To use another theme, we just add its corresponding theme function to the plot.
+-   Here shows how the black/white theme and dark theme look like.
 :::
 
-
 ## Add-on `r emo::ji("package")`: **ggthemes**
-- Many other themes are added by the package **ggthemes**.
 
-- Check [package website](https://github.com/jrnold/ggthemes), [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/ggthemes.html), and [ALL YOUR FIGURE ARE BELONG TO US](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/) for more themes.
+-   Many other themes are added by the package **ggthemes**.
 
+-   Check [package website](https://github.com/jrnold/ggthemes), [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/ggthemes.html), and [ALL YOUR FIGURE ARE BELONG TO US](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/) for more themes.
 
-
-:::: {.columns}
+::::: columns
 ::: {.column width="50%"}
 ```{r, echo=2}
 #| cache: true
@@ -1077,32 +912,36 @@ p + ggthemes::theme_economist()
 p + ggthemes::theme_wsj()
 ```
 :::
-::::
+:::::
 
 ::: notes
-- As I mentioned before, many people are really into ggplot2, and lots of add-on packages have been created for ggplot2, that greatly extend its functionalities. 
-- For example, there is a package called ggthemes that provide more theme options for us.
-- Here I showed you the same scatter plot but in economist and fivethirtyeight theme.
+-   As I mentioned before, many people are really into ggplot2, and lots of add-on packages have been created for ggplot2, that greatly extend its functionalities.
+-   For example, there is a package called ggthemes that provide more theme options for us.
+-   Here I showed you the same scatter plot but in economist and fivethirtyeight theme.
 :::
 
-## Customize Theme  {visibility="hidden"}
+## Customize Theme {visibility="hidden"}
 
-- Use `theme()` to tweak the display of the current theme, including title, axis labels, etc. Check `?theme`.
-
+-   Use `theme()` to tweak the display of the current theme, including title, axis labels, etc. Check `?theme`.
 
 <!-- # ```{r, echo=FALSE, cache=TRUE} -->
+
 <!-- # p <- p + labs(title = "Engine Size v.s. Fuel Efficiency", -->
+
 <!-- #               subtitle = "Dimensions for class", -->
+
 <!-- #               x = "Engine displacement (litres)",  -->
+
 <!-- #               y = "Highway (mpg)", -->
+
 <!-- #               color = "Type of car", -->
+
 <!-- #               caption = "Source: http://fueleconomy.gov") -->
+
 <!-- # ``` -->
 
-:::: {.columns}
-
-
-::: {.column width="38%"}
+:::::: columns
+:::: {.column width="38%"}
 ::: midi
 ```{r}
 #| label: theme
@@ -1124,7 +963,7 @@ p + theme(
     )
 ```
 :::
-:::
+::::
 
 ::: {.column width="62%"}
 ```{r ref.label="theme"}
@@ -1132,10 +971,10 @@ p + theme(
 #| echo: false
 ```
 :::
-::::
+::::::
 
 ::: notes
-In conjunction with the theme system, the element_ functions specify the display of how non-data components of the plot are drawn.
+In conjunction with the theme system, the element\_ functions specify the display of how non-data components of the plot are drawn.
 
 element_blank(): draws nothing, and assigns no space.
 
@@ -1145,13 +984,11 @@ element_line(): lines.
 
 element_text(): text.
 
-panel.background: background of plotting area
-plot.background: background of the entire plot
-
+panel.background: background of plotting area plot.background: background of the entire plot
 :::
 
-
 <!-- theme_gppr <- function(){  -->
+
 <!--     font <- "Georgia"   #assign font family up front -->
 
 <!--     theme_minimal() %+replace%    #replace elements we want to change -->
@@ -1159,72 +996,92 @@ plot.background: background of the entire plot
 <!--     theme( -->
 
 <!--       #grid elements -->
+
 <!--       panel.grid.major = element_blank(),    #strip major gridlines -->
+
 <!--       panel.grid.minor = element_blank(),    #strip minor gridlines -->
+
 <!--       axis.ticks = element_blank(),          #strip axis ticks -->
 
 <!--       #since theme_minimal() already strips axis lines,  -->
+
 <!--       #we don't need to do that again -->
 
 <!--       #text elements -->
+
 <!--       plot.title = element_text(             #title -->
+
 <!--                    family = font,            #set font family -->
+
 <!--                    size = 20,                #set font size -->
+
 <!--                    face = 'bold',            #bold typeface -->
+
 <!--                    hjust = 0,                #left align -->
+
 <!--                    vjust = 2),               #raise slightly -->
 
 <!--       plot.subtitle = element_text(          #subtitle -->
+
 <!--                    family = font,            #font family -->
+
 <!--                    size = 14),               #font size -->
 
 <!--       plot.caption = element_text(           #caption -->
+
 <!--                    family = font,            #font family -->
+
 <!--                    size = 9,                 #font size -->
+
 <!--                    hjust = 1),               #right align -->
 
 <!--       axis.title = element_text(             #axis titles -->
+
 <!--                    family = font,            #font family -->
+
 <!--                    size = 10),               #font size -->
 
 <!--       axis.text = element_text(              #axis text -->
+
 <!--                    family = font,            #axis famuly -->
+
 <!--                    size = 9),                #font size -->
 
 <!--       axis.text.x = element_text(            #margin for axis text -->
+
 <!--                     margin=margin(5, b = 10)) -->
 
 <!--       #since the legend often requires manual tweaking  -->
+
 <!--       #based on plot content, don't define it here -->
+
 <!--     ) -->
+
 <!-- } -->
 
 # Aesthetics
 
 ::: notes
-- OK. Let's talk a little more about aesthetics, so that your plot can be more informative.
+-   OK. Let's talk a little more about aesthetics, so that your plot can be more informative.
 :::
-
 
 ## Aesthetics options
 
 Commonly used characteristics of plotting characters that can be **mapped to a specific variable** in the data are
 
-- `colour`
-- `shape`
-- `size`
-- `alpha` (transparency)
-
+-   `colour`
+-   `shape`
+-   `size`
+-   `alpha` (transparency)
 
 ::: notes
-- Remember that we map color to type of car in the scatter plot of hwy mpg and displacement.
-- other options can be **mapped to a specific variable** in the data as well, such as shape, size and alpha that controls the transparency of your geometric objects.
+-   Remember that we map color to type of car in the scatter plot of hwy mpg and displacement.
+-   other options can be **mapped to a specific variable** in the data as well, such as shape, size and alpha that controls the transparency of your geometric objects.
 :::
-
 
 ## Colour
 
-:::: {.columns}
+::::: columns
 ::: {.column width="30%"}
 ```{r}
 #| cache: true
@@ -1249,19 +1106,17 @@ ggplot(
 #| out-width: 100%
 ```
 :::
-::::
+:::::
 
 ::: notes
 Yes, we have seen this.
 :::
 
-
 ## Shape
-
 
 Mapped to a different variable than `colour`
 
-:::: {.columns}
+::::: columns
 ::: {.column width="30%"}
 ```{r}
 #| cache: true
@@ -1278,6 +1133,7 @@ ggplot(
   geom_point()
 ```
 :::
+
 ::: {.column width="70%"}
 ```{r ref.label = "shape-trans"}
 #| cache: true
@@ -1286,18 +1142,18 @@ ggplot(
 #| out-width: 100%
 ```
 :::
-::::
+:::::
 
 ::: notes
-- We can map color to type of car, the class variable, and map point shape to another variable, here the drive type. 
-- This way, we have more information in one figure. For a single point or an observation, we can learn its displacement and highway mpg values, and we can also learn its class, the car type by color and drive train type by point shape.
+-   We can map color to type of car, the class variable, and map point shape to another variable, here the drive type.
+-   This way, we have more information in one figure. For a single point or an observation, we can learn its displacement and highway mpg values, and we can also learn its class, the car type by color and drive train type by point shape.
 :::
 
-
 ## Shape
+
 Mapped to same variable as `colour`
 
-:::: {.columns}
+::::: columns
 ::: {.column width="30%"}
 ```{r}
 #| cache: true
@@ -1314,6 +1170,7 @@ ggplot(
   geom_point()
 ```
 :::
+
 ::: {.column width="70%"}
 ```{r ref.label = "shape-class"}
 #| cache: true
@@ -1322,19 +1179,17 @@ ggplot(
 #| out-width: 100%
 ```
 :::
-::::
-
+:::::
 
 ::: notes
-- We can of course map color and shape to the same variable. 
-- Here, we use both color and point shape to classify or categorize the type of car.
-- But you guys need to think if it is meaningful and helpful, or it is just redundant, and make it hard to read the plot.
+-   We can of course map color and shape to the same variable.
+-   Here, we use both color and point shape to classify or categorize the type of car.
+-   But you guys need to think if it is meaningful and helpful, or it is just redundant, and make it hard to read the plot.
 :::
-
 
 ## Size
 
-:::: {.columns}
+::::: columns
 ::: {.column width="30%"}
 ```{r}
 #| cache: true
@@ -1361,20 +1216,17 @@ ggplot(
 #| out-width: 100%
 ```
 :::
-::::
+:::::
 
 ::: notes
-- OK, Size. Here, we use color and shape to indicate car type, and we use point size to represent city mpg. The higher city mpg, the bigger the point is.
-- You can see that the plot is not very clear and visible. So it is not always good to include much information in one single plot. 
-- Yes, the plot contains lots of information, but we may not be able to read those information.
+-   OK, Size. Here, we use color and shape to indicate car type, and we use point size to represent city mpg. The higher city mpg, the bigger the point is.
+-   You can see that the plot is not very clear and visible. So it is not always good to include much information in one single plot.
+-   Yes, the plot contains lots of information, but we may not be able to read those information.
 :::
-
-
 
 ## Alpha
 
-
-:::: {.columns}
+::::: columns
 ::: {.column width="30%"}
 ```{r}
 #| cache: true
@@ -1392,8 +1244,8 @@ ggplot(
     alpha = year)) + #<<
   geom_point()
 ```
-
 :::
+
 ::: {.column width="70%"}
 ```{r ref.label = "alpha"}
 #| cache: true
@@ -1402,30 +1254,26 @@ ggplot(
 #| out-width: 100%
 ```
 :::
-::::
+:::::
 
 ::: notes
-- Here we further map the transparency of points, alpha to the variable year. So the older the car is, the more transparent the point is.
-- We use lots of aesthetics options at the same time in one figure. Again, in practice this may not be a good idea, and the plot may not visualize the data well. 
-- If you are interested in data visualization, there are lots of studies out there talking about what makes a good plot. My suggestion is, don't put too much information in one single plot. This will make it hard to read.
+-   Here we further map the transparency of points, alpha to the variable year. So the older the car is, the more transparent the point is.
+-   We use lots of aesthetics options at the same time in one figure. Again, in practice this may not be a good idea, and the plot may not visualize the data well.
+-   If you are interested in data visualization, there are lots of studies out there talking about what makes a good plot. My suggestion is, don't put too much information in one single plot. This will make it hard to read.
 :::
 
-
 ## Mapping vs. Setting
-:::: {.columns}
-::: {.column width="35%"}
 
+::::: columns
+::: {.column width="35%"}
 **Mapping**
 
-- Determine the size, alpha, etc.
+-   Determine the size, alpha, etc.
 
 **based on the values of a variable** in the data.
 
-- Goes into `aes()`.
-
+-   Goes into `aes()`.
 :::
-
-
 
 ::: {.column width="65%"}
 ```{r}
@@ -1438,34 +1286,29 @@ ggplot(data = mpg,
     geom_point()
 ```
 :::
-::::
-
+:::::
 
 ::: notes
-- OK. Now I want to talk about the difference between mapping and setting.
-- First, the aesthetic options such as color, size, shape, alpha can be used in both mapping and setting. 
-- When we use these options in mapping arguments, wrapped by aes() function, we actually map these options to some variables. In other words, we use those options to represents the values of the variables. Like here, the point size is used to represent the city mpg, the different point transparency are for different car years. 
-- So there is a mapping between aesthetics options and variables.
-- Alright setting. When we use the aesthetics options as a geometry setting, the aesthetics are pure decoration of your plot, the aesthetics are not used to represent any other variable values.
-- Look at the example here. If we want to set point size at 5 and point transparency at 0.5, we put  size = 5, alpha = 0.5 in the geometry function geom_point(), not in the mapping argument.
-- And the result is that, all the points in the scatter plot will have size 5 and alpha 0.5. And it is true for all observations and variables. It is not related to any other variables as mapping does. OK.
+-   OK. Now I want to talk about the difference between mapping and setting.
+-   First, the aesthetic options such as color, size, shape, alpha can be used in both mapping and setting.
+-   When we use these options in mapping arguments, wrapped by aes() function, we actually map these options to some variables. In other words, we use those options to represents the values of the variables. Like here, the point size is used to represent the city mpg, the different point transparency are for different car years.
+-   So there is a mapping between aesthetics options and variables.
+-   Alright setting. When we use the aesthetics options as a geometry setting, the aesthetics are pure decoration of your plot, the aesthetics are not used to represent any other variable values.
+-   Look at the example here. If we want to set point size at 5 and point transparency at 0.5, we put size = 5, alpha = 0.5 in the geometry function geom_point(), not in the mapping argument.
+-   And the result is that, all the points in the scatter plot will have size 5 and alpha 0.5. And it is true for all observations and variables. It is not related to any other variables as mapping does. OK.
 :::
-
-
 
 ## Mapping vs. Setting
 
-:::: {.columns}
+::::: columns
 ::: {.column width="35%"}
-
 **Setting**
 
-- Determine the size, alpha, etc.
+-   Determine the size, alpha, etc.
 
-_**not** based on the values of a variable in the data_.
+***not** based on the values of a variable in the data*.
 
-- goes into `geom_*()`.
-
+-   goes into `geom_*()`.
 :::
 
 ::: {.column width="65%"}
@@ -1478,42 +1321,36 @@ ggplot(data = mpg,
     geom_point(size = 5, alpha = 0.5) #<<
 ```
 :::
-::::
+:::::
 
 ::: notes
-- So here is the summary.
-- (`geom_point()` in the example, but we'll learn other geoms soon!)
+-   So here is the summary.
+-   (`geom_point()` in the example, but we'll learn other geoms soon!)
 :::
-
-
 
 # Faceting
 
-
 ::: notes
-- OK. The last thing I wanna talk about is facet.
+-   OK. The last thing I wanna talk about is facet.
 :::
-
 
 ## Faceting
-- One way to add additional variables' information is with aesthetics. But we see that putting all information in one plot may not be a good idea.
 
-- Another way, particularly useful for categorical variables, is to 
+-   One way to add additional variables' information is with aesthetics. But we see that putting all information in one plot may not be a good idea.
 
-_split your plot into **facets**_, smaller plots that each display one subset of the data.
+-   Another way, particularly useful for categorical variables, is to
 
-- Useful for exploring conditional relationships and large data.
+*split your plot into **facets***, smaller plots that each display one subset of the data.
 
+-   Useful for exploring conditional relationships and large data.
 
 ::: notes
-- You see that one way to add additional variables' information is with aesthetics mapping. But we see that putting all information in one plot may not be a good idea.
-- We can actually present our data using another way, particularly useful for categorical variables, which is split your plot into the so-called facets, so each smaller plot display one subset of the data conditional on some categorical variable. 
-- The idea is, we can map color to gender in a one single plot, or we can create two small plots, one for male, and the other for female. OK.
+-   You see that one way to add additional variables' information is with aesthetics mapping. But we see that putting all information in one plot may not be a good idea.
+-   We can actually present our data using another way, particularly useful for categorical variables, which is split your plot into the so-called facets, so each smaller plot display one subset of the data conditional on some categorical variable.
+-   The idea is, we can map color to gender in a one single plot, or we can create two small plots, one for male, and the other for female. OK.
 :::
 
-
-
-## {visibility="hidden"}
+##  {visibility="hidden"}
 
 ```{r}
 #| cache: true
@@ -1524,15 +1361,14 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
     facet_wrap(~ cyl)  #<<
 ```
 
-
 ::: notes
-- How about we want to create a scatter plot conditional on just one variable, say cylinder?
-- Instead of facet_grid(), we can use facet_wrap() function. 
-- Inside the parenthesis, we use ~ followed by the variable name cyl.
-- And the ggplot will automatically create a display, so that each smaller plot is normally rectangular.
+-   How about we want to create a scatter plot conditional on just one variable, say cylinder?
+-   Instead of facet_grid(), we can use facet_wrap() function.
+-   Inside the parenthesis, we use \~ followed by the variable name cyl.
+-   And the ggplot will automatically create a display, so that each smaller plot is normally rectangular.
 :::
 
-## {visibility="hidden"}
+##  {visibility="hidden"}
 
 ```{r}
 #| cache: true
@@ -1544,10 +1380,10 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ```
 
 ::: notes
-- If you don't like vars(), you can use "". It gives you the same plot as well. OK
+-   If you don't like vars(), you can use "". It gives you the same plot as well. OK
 :::
 
-##
+## 
 
 ```{r}
 #| cache: true
@@ -1559,15 +1395,15 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ```
 
 ::: notes
-- How about we want to create a scatter plot conditional on just one variable, say cylinder?
-- Instead of facet_grid(), we can use facet_wrap() function. 
-- Inside the parenthesis, we use ~ followed by the variable name cyl.
-- And the ggplot will automatically create a display, so that each smaller plot is normally rectangular.
-- If you don't like the default display, you can specify any number of rows or columns you like.
-- For example, here the number of column is 3.
+-   How about we want to create a scatter plot conditional on just one variable, say cylinder?
+-   Instead of facet_grid(), we can use facet_wrap() function.
+-   Inside the parenthesis, we use \~ followed by the variable name cyl.
+-   And the ggplot will automatically create a display, so that each smaller plot is normally rectangular.
+-   If you don't like the default display, you can specify any number of rows or columns you like.
+-   For example, here the number of column is 3.
 :::
 
-##
+## 
 
 ```{r}
 #| cache: true
@@ -1579,35 +1415,30 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ```
 
 ::: notes
-- Suppose again we would like to see the relationship between hwy and displacement.
-- But now we want to see their relationship given at a different number of cylinders and type of drive trains.
-- And we can create several scatterplots, each at a particular number of cylinders and type of drive trains.
-- How do we create facets?
-- We can use facet_grid() command to create a matrix-like plot defined by row and column faceting variables, which are usually categorical variables. Inside the parenthesis, we put the row variable ~ column variable.
-- So here, drive values, 4, f, r defines the rows, and cylinder values 4, 5, 6, 8 defines the columns.
-- And each smaller plot is a scatter plot with some value of drive and some value of cylinder.
-- For example, the top right one is the scatter plot of hwy mpg and displacement when drive is 4 and cylinder is 8.
+-   Suppose again we would like to see the relationship between hwy and displacement.
+-   But now we want to see their relationship given at a different number of cylinders and type of drive trains.
+-   And we can create several scatterplots, each at a particular number of cylinders and type of drive trains.
+-   How do we create facets?
+-   We can use facet_grid() command to create a matrix-like plot defined by row and column faceting variables, which are usually categorical variables. Inside the parenthesis, we put the row variable \~ column variable.
+-   So here, drive values, 4, f, r defines the rows, and cylinder values 4, 5, 6, 8 defines the columns.
+-   And each smaller plot is a scatter plot with some value of drive and some value of cylinder.
+-   For example, the top right one is the scatter plot of hwy mpg and displacement when drive is 4 and cylinder is 8.
 :::
 
-## Faceting Summary  {visibility="hidden"}
+## Faceting Summary {visibility="hidden"}
 
-- `facet_grid()`:
-    - 2d grid
-    - `rows ~ cols`
-- `facet_wrap()`: 1d ribbon wrapped according to number of rows and columns specified or available plotting area
-
-
+-   `facet_grid()`:
+    -   2d grid
+    -   `rows ~ cols`
+-   `facet_wrap()`: 1d ribbon wrapped according to number of rows and columns specified or available plotting area
 
 ::: notes
-- `facet_grid()`:
-    - 2d grid
-    - `rows ~ cols`
-    - use `.` for no split (no rows or no cols)
-- `facet_wrap()`: 1d ribbon wrapped according to number of rows and columns specified or available plotting area
+-   `facet_grid()`:
+    -   2d grid
+    -   `rows ~ cols`
+    -   use `.` for no split (no rows or no cols)
+-   `facet_wrap()`: 1d ribbon wrapped according to number of rows and columns specified or available plotting area
 :::
-
-
-
 
 ## Facet and Color {visibility="hidden"}
 
@@ -1621,11 +1452,10 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
 ```
 
 ::: notes
-- We can add color to faceting variables for sure. 
-- For example here, we map color to variable drive, which is the row variable in faceting.
-- And now each row has its own color.
+-   We can add color to faceting variables for sure.
+-   For example here, we map color to variable drive, which is the row variable in faceting.
+-   And now each row has its own color.
 :::
-
 
 ## Facet and Color with no Legend {visibility="hidden"}
 
@@ -1639,20 +1469,14 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
     guides(color = "none") #<<
 ```
 
-
 ::: notes
-theme(legend.position = "none")
-- Since each row is for one value of drive, it's pretty clear to see which color is for which value of drive.
-- If you don't want the legend, use guides() and set color = FALSE.
-- Basically guides() can set or remove the legend for a specific aesthetic option. If you have two aesthetics color and size, guides(color = FALSE) will only remove the legend for color and the legend for size will be still there. OK.
+theme(legend.position = "none") - Since each row is for one value of drive, it's pretty clear to see which color is for which value of drive. - If you don't want the legend, use guides() and set color = FALSE. - Basically guides() can set or remove the legend for a specific aesthetic option. If you have two aesthetics color and size, guides(color = FALSE) will only remove the legend for color and the legend for size will be still there. OK.
 :::
 
+## 
 
-##
-
-::: {.lab}
-
-<span style="color:blue"> **12-Faceting** </span>
+::: lab
+[ **12-Faceting** ]{style="color:blue"}
 
 In **lab.qmd** `## Lab 12` section,
 
@@ -1668,7 +1492,6 @@ ggplot(data = _______, mapping = aes(x = ______, y = ______)) +
     facet_grid(______ ~ _______)
 ```
 
-
 ```{r}
 #| cache: true
 #| out-width: 55%
@@ -1679,26 +1502,16 @@ ggplot(data = mpg,
     geom_point(alpha = 0.4) + 
     facet_grid(drv ~ fl)
 ```
-
 :::
-
 
 ::: notes
-
-ggplot(data = mpg, 
-       mapping = aes(x = displ, y = cty, color = drv, shape = fl)) +
-    geom_point(size = 3, alpha = 0.8) + 
-    facet_grid(drv ~ fl) +
-    guides(color = "none")
-    
+ggplot(data = mpg, mapping = aes(x = displ, y = cty, color = drv, shape = fl)) + geom_point(size = 3, alpha = 0.8) + facet_grid(drv \~ fl) + guides(color = "none")
 :::
 
-
-##
+## 
 
 ::: genai
-
-<span style="color:green"> **12-Faceting** </span>
+[ **12-Faceting** ]{style="color:green"}
 
 > `>` How do I generate the attached plot using `ggplot2` and the data set `mpg`? Explain the code.
 
@@ -1714,24 +1527,19 @@ ggplot(data = mpg, aes(x = displ, y = cty, color = drv, shape = fl)) +
 
 <br>
 
-- Share what you learned from AI!~
-
+-   Share what you learned from AI!\~
 :::
-
-
 
 ## ggplot for Python
 
-- [plotnine](https://plotnine.org/) package
+-   [plotnine](https://plotnine.org/) package
 
-- Syntax are the same as ggplot in R.
-
+-   Syntax are the same as ggplot in R.
 
 ```{python}
 #| eval: false
 from plotnine import ggplot, geom_point, aes, stat_smooth, facet_wrap
 ```
-
 
 ```{r}
 #| echo: false

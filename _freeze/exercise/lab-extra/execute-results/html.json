@@ -1,0 +1,15 @@
+{
+  "hash": "54f40f2b0a68bb2ce90f1fd0278f209b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lab Extra Credit Opportunity\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n\n::: {.cell}\n\n:::\n\n\n\n\n::: callout-important\n[Due **Friday, Feb 13, 11:59 PM**]{.red}\n:::\n\n- Please include this work right below your Lab 11 ggplot2 work.\n\n# Extra Credit Questions\n\n(@) Run the code in [heart.R](../code/heart.R) and [heart.py](../code/heart.py) in your `lab.qmd`, and generate your hearts! One you are done, commit and push your work. Feel free to share it with your loved ones.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

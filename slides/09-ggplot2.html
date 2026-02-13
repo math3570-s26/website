@@ -272,36 +272,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<!-- # {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/visualize.png" background-size="contain"} -->
-<!-- ## [Exploratory Data Analysis (EDA)](https://r4ds.hadley.nz/eda) {visibility="hidden"} -->
-<!-- - EDA is an approach to analyzing data sets to *summarize their main characteristics*. -->
-<!-- <!-- - Many widely used data analysis tools were initiated by discoveries made via EDA.  -->
-<p>–&gt; <!-- - EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked. --></p>
-<!-- <!-- - Often, the strongest tool of EDA is **data visualization**.  -->
-<p>–&gt;</p>
-<!-- > "The simple graph has brought more information to the data analyst’s mind than any other device." — John Tukey -->
-<!-- - We also calculate summary statistics and perform data wrangling/manipulation/transformation at (or before) this stage of doing data science.  -->
-<!-- ```{r} -->
-<!-- #| echo: false -->
-<!-- knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/visualize.png") -->
-<!-- ``` -->
-<!-- ::: notes -->
-<!-- - After importing or reading data into R, the first thing we need to do is to understand our data.  -->
-<!--     - What are variables in the data set?  -->
-<!--     - Are the variables related in some way?  -->
-<!--     - Are there any missing values, outliers, or other weird values? -->
-<!--     - Do we need to transform some variables to make it easier to answer our research questions or to do our analysis. -->
-<!-- - So before doing data analysis, we should understand our data well, and be able to answer all those questions. This understanding helps us choose the correct model and algorithm and helps us do the correct analysis.  -->
-<!-- - The process of understanding our data is called Exploratory Data Analysis or EDA. -->
-<!-- - So I said here, EDA is an approach to analyzing data sets to summarize their main characteristics. -->
-<!-- - Many widely used data analysis tools were initiated by discoveries made via EDA.  -->
-<!-- - EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked. Again, without understanding our data, we may end up choosing a bad model for analysis because we may neglect some important information stored in the data set. -->
-<!-- - Often, the strongest tool of EDA is data visualization, and let's why we spend two weeks talking about it.  -->
-<!-- - We might also calculate summary statistics and perform data wrangling/manipulation/transformation at (or before) this stage of doing data science, which will be discussed after data visualization. -->
-<!-- ::: -->
 </section><section id="section-1" class="level1" data-background-color="#A7D5E8"><h1 data-background-color="#A7D5E8"></h1>
-<img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" class="img-fluid" width="380"><img src="https://raw.githubusercontent.com/slowkow/ggrepel/master/man/figures/logo.svg" class="img-fluid" width="180"><img src="https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png" class="img-fluid" width="180"><img src="https://raw.githubusercontent.com/sjmgarnier/viridis/master/hex_logo/viridis.svg" class="img-fluid" width="180"><img src="./images/09-ggplot2/patchwork_logo.png" class="img-fluid" width="180"><img src="./images/09-ggplot2/ggiraph_logo.png" class="img-fluid" width="180"><img src="https://raw.githubusercontent.com/ropensci/plotly/master/man/figures/plotly.png" class="img-fluid" width="380"><h3 class="anchored">
-gthemes, ggridges, ggbeeswarm, ggdendro, ggpubr, ggmap, ggradar, ggcorrplot, GGally, and more!
+<p><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" class="img-fluid" width="380"><img src="https://raw.githubusercontent.com/slowkow/ggrepel/master/man/figures/logo.svg" class="img-fluid" width="180"><img src="https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png" class="img-fluid" width="180"><img src="https://raw.githubusercontent.com/sjmgarnier/viridis/master/hex_logo/viridis.svg" class="img-fluid" width="180"><img src="./images/09-ggplot2/patchwork_logo.png" class="img-fluid" width="180"><img src="./images/09-ggplot2/ggiraph_logo.png" class="img-fluid" width="180"><img src="https://raw.githubusercontent.com/ropensci/plotly/master/man/figures/plotly.png" class="img-fluid" width="380"></p>
+<h3 class="anchored">
+ggthemes, ggridges, ggbeeswarm, ggdendro, ggpubr, ggmap, ggradar, ggcorrplot, GGally, and more!
 </h3>
 <h1>
 Visualizing Data
@@ -380,11 +354,10 @@ Using the <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Grammar of 
 <ul>
 <li>Three main components:</li>
 </ul>
-<p><!-- Grammar element          | What it is --> <!-- :----------------------- | :----------------------------- --> <!-- **Data**                 | The **data frame** being plotted --> <!-- **Geometry**             | The geometric **shape** that will represent the data --> <!--                          | (e.g., point, boxplot, histogram) --> <!-- **Aesthetic mapping**    | The aesthetics of the geometric object --> <!--                          | (e.g., color, size, shape) --></p>
-<table class="caption-top table">
+<!-- Grammar element          | What it is --><!-- :----------------------- | :----------------------------- --><!-- **Data**                 | The **data frame** being plotted --><!-- **Geometry**             | The geometric **shape** that will represent the data --><!--                          | (e.g., point, boxplot, histogram) --><!-- **Aesthetic mapping**    | The aesthetics of the geometric object --><!--                          | (e.g., color, size, shape) --><table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 70%">
+<col style="width: 30%">
+<col style="width: 69%">
 </colgroup>
 <thead><tr class="header">
 <th>Grammar element</th>
@@ -618,7 +591,7 @@ Using the <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Grammar of 
 <li>To define a geometry, add a <strong>geom</strong> layer.</li>
 </ul>
 <div class="center">
-<p><strong>Don’t miss <span style="font-size: 3em;"> <code>+</code> </span> sign!</strong></p>
+<p><strong>Don’t miss <span style="font-size: 3em;"><code>+</code></span> sign!</strong></p>
 </div>
 <ul>
 <li><p>For scatterplots we add <strong>points</strong>, and use <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code></p></li>
@@ -924,7 +897,7 @@ Using the <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Grammar of 
 </div>
 </section><section id="section-15" class="level2"><h2 class="anchored" data-anchor-id="section-15"></h2>
 <div class="lab">
-<p><span style="color:blue"> <strong>11-ggplot2</strong> </span> <!-- - Create a R script named **lab09-ggplot2.R** and load the **tidyverse** package. --></p>
+<p><span style="color:blue"><strong>11-ggplot2</strong></span> <!-- - Create a R script named **lab09-ggplot2.R** and load the **tidyverse** package. --></p>
 <p>In <strong>lab.qmd</strong> <code>## Lab 11</code> section,</p>
 <ul>
 <li><p>Use <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv()</a></code> to import the data <strong>penguins.csv</strong> into your R workspace.</p></li>
@@ -1562,7 +1535,7 @@ Using the <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Grammar of 
 </div>
 </section><section id="section-21" class="level2"><h2 class="anchored" data-anchor-id="section-21"></h2>
 <div class="lab">
-<p><span style="color:blue"> <strong>12-Faceting</strong> </span></p>
+<p><span style="color:blue"><strong>12-Faceting</strong></span></p>
 <p>In <strong>lab.qmd</strong> <code>## Lab 12</code> section,</p>
 <!-- - Create a R script named **lab10-facet.R** and load the **ggplot2** package. Generate -->
 <div class="cell" data-layout-align="center">
@@ -1584,7 +1557,7 @@ Using the <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Grammar of 
 </div>
 </section><section id="section-22" class="level2"><h2 class="anchored" data-anchor-id="section-22"></h2>
 <div class="genai">
-<p><span style="color:green"> <strong>12-Faceting</strong> </span></p>
+<p><span style="color:green"><strong>12-Faceting</strong></span></p>
 <blockquote class="blockquote">
 <p><code>&gt;</code> How do I generate the attached plot using <code>ggplot2</code> and the data set <code>mpg</code>? Explain the code.</p>
 </blockquote>

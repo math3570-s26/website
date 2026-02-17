@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/ai/ai_1.html</loc>
-    <lastmod>2026-02-08T16:04:06.383Z</lastmod>
+    <lastmod>2026-02-17T14:52:09.025Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab07-plot.html</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab12-facet.html</loc>
-    <lastmod>2025-11-22T00:20:16.194Z</lastmod>
+    <lastmod>2026-02-15T16:46:43.186Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab13-visualization.html</loc>
@@ -97,12 +97,20 @@
     <lastmod>2026-02-10T15:00:35.915Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/02-datascience-slides.html</loc>
-    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/11-interactive-viz-slides.html</loc>
+    <lastmod>2026-02-16T00:09:52.997Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/02-datascience.html</loc>
-    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/11-interactive-viz.html</loc>
+    <lastmod>2026-02-16T00:09:52.997Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/slides/09-ggplot2-slides.html</loc>
+    <lastmod>2026-02-12T19:47:13.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/slides/09-ggplot2.html</loc>
+    <lastmod>2026-02-12T19:47:13.000Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/slides/08-import-slides.html</loc>
@@ -154,15 +162,23 @@
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/index.html</loc>
-    <lastmod>2026-02-13T01:50:05.535Z</lastmod>
+    <lastmod>2026-02-17T14:26:51.196Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/09-ggplot2.html</loc>
-    <lastmod>2026-02-12T19:47:13.000Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/10-viz.html</loc>
+    <lastmod>2026-02-15T16:34:11.443Z</lastmod>
   </url>
   <url>
-    <loc>https://math3570-s26.github.io/website/slides/09-ggplot2-slides.html</loc>
-    <lastmod>2026-02-12T19:47:13.000Z</lastmod>
+    <loc>https://math3570-s26.github.io/website/slides/10-viz-slides.html</loc>
+    <lastmod>2026-02-15T16:34:11.443Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/slides/02-datascience.html</loc>
+    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/slides/02-datascience-slides.html</loc>
+    <lastmod>2026-01-13T15:09:54.560Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/slides/01-syllabus.html</loc>

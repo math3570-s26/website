@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+<meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
+<title>MATH/COSC 3570 - Spring 2026 – Visualizing Data 📈</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+<style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-eec6eec107f2af84d44e541b84d083fe.css">
+<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<meta property="og:title" content="Visualizing Data r emo::ji('chart_with_upwards_trend') – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="MATH/COSC 3570 Introduction to Data Science">
+<meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="../images/bg.png" class="quarto-title-block center"><h1 class="title">Visualizing Data 📈</h1>
+  <p class="subtitle">MATH/COSC 3570 Introduction to Data Science</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University 
+</div>
+</div>
+</div>
+
+</section><section><section id="categorical-vs.-numerical-variables" class="slide level2"><h2>Categorical vs.&nbsp;Numerical Variables</h2>
+<ul>
+<li>A <strong>categorical (qualitative)</strong> variable provides <em>non-numerical</em> information which can be placed in <strong>one (and only one)</strong> category from two or more categories.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><span style="color:blue">Gender (Male 👨, Female 👩, Other 🏳️‍🌈) </span></li>
+<li><span style="color:blue">Class (Freshman, Sophomore, Junior, Senior, Graduate) </span></li>
+<li><span style="color:blue">Country (USA 🇺🇸, Canada 🇨🇦, UK 🇬🇧, Germany 🇩🇪, Japan 🇯🇵, Korea 🇰🇷) </span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>A <strong>numerical (quantitative)</strong> variable is recorded in a <em>numerical</em> value representing counts or measurements.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><span style="color:blue"> GPA </span></li>
+<li><span style="color:blue"> The number of relationships you’ve had </span></li>
+<li><span style="color:blue"> Height </span></li>
+</ul>
+</div>
+</div>
+</section><section id="data-lending-club" class="slide level2"><h2>Data: Lending Club</h2>
+<ul>
+<li><p><a href="https://www.lendingclub.com/">Lending Club</a> is a platform that allows individuals to lend to other individuals.</p></li>
+<li><p><em>Not all loans are created equal</em> – ease of getting a loan depends on ability to pay back the loan.</p></li>
+<li><p>Data includes <strong>loans made</strong>, these are not loan applications.</p></li>
+</ul>
+
+<img data-src="./images/10-viz/lending-club.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><aside class="notes"><ul>
+<li>OK. The data set we will be working with comes from the lending club.</li>
+<li>Thousands of loans made through the Lending Club, which is a platform that allows individuals to lend to other individuals.</li>
+<li>If you are finance or econ major, or you know about loans, you know that Not all loans are created equal – ease of getting a loan depends on (apparent) ability to pay back the loan.</li>
+<li>Data include loans <em>made</em>, these are not loan applications.</li>
+<li>It’s important to keep this in mind when we are looking at the relationships between the variables that we are going to see, since the pattern may be different for those relationships for loans that never got approved.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="take-a-peek-at-data" class="slide level2"><h2>Take a Peek at Data</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(openintro) <span class="do">## for loading the data set</span></span>
+<span id="cb2-2"><a></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(loans_full_schema)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre class="my_class800"><code>Rows: 10,000
+Columns: 55
+$ emp_title                        &lt;chr&gt; "global config engineer ", "warehouse…
+$ emp_length                       &lt;dbl&gt; 3, 10, 3, 1, 10, NA, 10, 10, 10, 3, 1…
+$ state                            &lt;fct&gt; NJ, HI, WI, PA, CA, KY, MI, AZ, NV, I…
+$ homeownership                    &lt;fct&gt; MORTGAGE, RENT, RENT, RENT, RENT, OWN…
+$ annual_income                    &lt;dbl&gt; 90000, 40000, 40000, 30000, 35000, 34…
+$ verified_income                  &lt;fct&gt; Verified, Not Verified, Source Verifi…
+$ debt_to_income                   &lt;dbl&gt; 18.01, 5.04, 21.15, 10.16, 57.96, 6.4…
+$ annual_income_joint              &lt;dbl&gt; NA, NA, NA, NA, 57000, NA, 155000, NA…
+$ verification_income_joint        &lt;fct&gt; , , , , Verified, , Not Verified, , ,…
+$ debt_to_income_joint             &lt;dbl&gt; NA, NA, NA, NA, 37.7, NA, 13.1, NA, N…
+$ delinq_2y                        &lt;int&gt; 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0…
+$ months_since_last_delinq         &lt;int&gt; 38, NA, 28, NA, NA, 3, NA, 19, 18, NA…
+$ earliest_credit_line             &lt;dbl&gt; 2001, 1996, 2006, 2007, 2008, 1990, 2…
+$ inquiries_last_12m               &lt;int&gt; 6, 1, 4, 0, 7, 6, 1, 1, 3, 0, 4, 4, 8…
+$ total_credit_lines               &lt;int&gt; 28, 30, 31, 4, 22, 32, 12, 30, 35, 9,…
+$ open_credit_lines                &lt;int&gt; 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…
+$ total_credit_limit               &lt;int&gt; 70795, 28800, 24193, 25400, 69839, 42…
+$ total_credit_utilized            &lt;int&gt; 38767, 4321, 16000, 4997, 52722, 3898…
+$ num_collections_last_12m         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ num_historical_failed_to_pay     &lt;int&gt; 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0…
+$ months_since_90d_late            &lt;int&gt; 38, NA, 28, NA, NA, 60, NA, 71, 18, N…
+$ current_accounts_delinq          &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ total_collection_amount_ever     &lt;int&gt; 1250, 0, 432, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ current_installment_accounts     &lt;int&gt; 2, 0, 1, 1, 1, 0, 2, 2, 6, 1, 2, 1, 2…
+$ accounts_opened_24m              &lt;int&gt; 5, 11, 13, 1, 6, 2, 1, 4, 10, 5, 6, 7…
+$ months_since_last_credit_inquiry &lt;int&gt; 5, 8, 7, 15, 4, 5, 9, 7, 4, 17, 3, 4,…
+$ num_satisfactory_accounts        &lt;int&gt; 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…
+$ num_accounts_120d_past_due       &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, NA, 0, 0, 0, 0, …
+$ num_accounts_30d_past_due        &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ num_active_debit_accounts        &lt;int&gt; 2, 3, 3, 2, 10, 1, 3, 5, 11, 3, 2, 2,…
+$ total_debit_limit                &lt;int&gt; 11100, 16500, 4300, 19400, 32700, 272…
+$ num_total_cc_accounts            &lt;int&gt; 14, 24, 14, 3, 20, 27, 8, 16, 19, 7, …
+$ num_open_cc_accounts             &lt;int&gt; 8, 14, 8, 3, 15, 12, 7, 12, 14, 5, 8,…
+$ num_cc_carrying_balance          &lt;int&gt; 6, 4, 6, 2, 13, 5, 6, 10, 14, 3, 5, 3…
+$ num_mort_accounts                &lt;int&gt; 1, 0, 0, 0, 0, 3, 2, 7, 2, 0, 2, 3, 3…
+$ account_never_delinq_percent     &lt;dbl&gt; 92.9, 100.0, 93.5, 100.0, 100.0, 78.1…
+$ tax_liens                        &lt;int&gt; 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ public_record_bankrupt           &lt;int&gt; 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0…
+$ loan_purpose                     &lt;fct&gt; moving, debt_consolidation, other, de…
+$ application_type                 &lt;fct&gt; individual, individual, individual, i…
+$ loan_amount                      &lt;int&gt; 28000, 5000, 2000, 21600, 23000, 5000…
+$ term                             &lt;dbl&gt; 60, 36, 36, 36, 36, 36, 60, 60, 36, 3…
+$ interest_rate                    &lt;dbl&gt; 14.07, 12.61, 17.09, 6.72, 14.07, 6.7…
+$ installment                      &lt;dbl&gt; 652.5, 167.5, 71.4, 664.2, 786.9, 153…
+$ grade                            &lt;ord&gt; C, C, D, A, C, A, C, B, C, A, C, B, C…
+$ sub_grade                        &lt;fct&gt; C3, C1, D1, A3, C3, A3, C2, B5, C2, A…
+$ issue_month                      &lt;fct&gt; Mar-2018, Feb-2018, Feb-2018, Jan-201…
+$ loan_status                      &lt;fct&gt; Current, Current, Current, Current, C…
+$ initial_listing_status           &lt;fct&gt; whole, whole, fractional, whole, whol…
+$ disbursement_method              &lt;fct&gt; Cash, Cash, Cash, Cash, Cash, Cash, C…
+$ balance                          &lt;dbl&gt; 27016, 4651, 1825, 18853, 21430, 4257…
+$ paid_total                       &lt;dbl&gt; 1999, 499, 282, 3313, 2325, 873, 2731…
+$ paid_principal                   &lt;dbl&gt; 984, 349, 175, 2747, 1570, 743, 1440,…
+$ paid_interest                    &lt;dbl&gt; 1015.2, 150.5, 106.4, 566.1, 754.8, 1…
+$ paid_late_fees                   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</code></pre>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>The data set is stored in the openintro package.</li>
+<li>In addition to head, structure function, we can also use glimpse() function to see the general picture of the data.</li>
+<li>We can see that we have 10000 rows, so there are 10000 observations, or loans made in the data set.</li>
+<li>And there are 55 columns.</li>
+<li>And the name of the data set is loans_full_schema.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="selected-variables" class="slide level2"><h2>Selected Variables</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">&lt;-</span> <span class="va">loans_full_schema</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">loan_amount</span>, </span>
+<span>                  <span class="va">interest_rate</span>, </span>
+<span>                  <span class="va">grade</span>, </span>
+<span>                  <span class="va">homeownership</span>, </span>
+<span>                  <span class="va">debt_to_income</span><span class="op">)</span></span>
+<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">loans</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,000
+Columns: 5
+$ loan_amount    &lt;int&gt; 28000, 5000, 2000, 21600, 23000, 5000, 24000, 20000, 20…
+$ interest_rate  &lt;dbl&gt; 14.07, 12.61, 17.09, 6.72, 14.07, 6.72, 13.59, 11.99, 1…
+$ grade          &lt;ord&gt; C, C, D, A, C, A, C, B, C, A, C, B, C, B, D, D, D, F, E…
+$ homeownership  &lt;fct&gt; MORTGAGE, RENT, RENT, RENT, RENT, OWN, MORTGAGE, MORTGA…
+$ debt_to_income &lt;dbl&gt; 18.01, 5.04, 21.15, 10.16, 57.96, 6.46, 23.66, 16.19, 3…</code></pre>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>There are 55 variables in the data, but our visualization purpose, we are only going to focus on 8 of these columns.</li>
+<li>loan_amount, …, debt_to_income ratio</li>
+<li>I piped the data into the select function, which allows me to select variables I want by name, and called the selected data loans.</li>
+<li>So the data has all 10000 observations and 8 selected variables.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="variable-description" class="slide level2"><h2>Variable Description</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 55%">
+<col style="width: 44%">
+</colgroup>
+<thead><tr class="header">
+<th>variable</th>
+<th>description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>loan_amount</code></td>
+<td>Amount of the loan received, in US dollars</td>
+</tr>
+<tr class="even">
+<td><code>interest_rate</code></td>
+<td>Interest rate on the loan, in an annual percentage</td>
+</tr>
+<tr class="odd">
+<td><code>grade</code></td>
+<td>Loan grade, which takes a values A through G and represents the quality of the loan</td>
+</tr>
+<tr class="even">
+<td><code>homeownership</code></td>
+<td>Indicates whether the person owns, owns but has a mortgage, or rents</td>
+</tr>
+<tr class="odd">
+<td><code>debt_to_income</code></td>
+<td>Debt-to-income ratio</td>
+</tr>
+</tbody>
+</table></section><section id="variable-types" class="slide level2"><h2>Variable Types</h2>
+<p><br></p>
+<table class="caption-top">
+<thead><tr class="header">
+<th>variable</th>
+<th>type</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>loan_amount</code></td>
+<td>numerical, continuous</td>
+</tr>
+<tr class="even">
+<td><code>interest_rate</code></td>
+<td>numerical, continuous</td>
+</tr>
+<tr class="odd">
+<td><code>grade</code></td>
+<td>categorical, ordinal</td>
+</tr>
+<tr class="even">
+<td><code>homeownership</code></td>
+<td>categorical, nominal</td>
+</tr>
+<tr class="odd">
+<td><code>debt_to_income</code></td>
+<td>numerical, continuous</td>
+</tr>
+</tbody>
+</table></section></section><section><section id="visualizing-categorical-data" class="title-slide slide level1 center" data-background-color="#A7D5E8"><h1>Visualizing Categorical Data</h1>
+
+</section><section id="bar-chart" class="slide level2"><h2><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">Bar Chart</a></h2>
+<ul>
+<li>A bar chart shows the <strong>frequency table</strong> of a <strong>categorical</strong> variable.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## geom_bar(stat = "count")</span></span>
+<span><span class="va">loans</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_bar</span><span class="op">(</span><span class="op">)</span>  <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/geom_bar-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:62.0%"><aside class="notes"><ul>
+<li>One way representing categorical data is using bar plot.</li>
+<li>Here we don’t use geom_point anymore. Instead, we use the geom_bar function.</li>
+<li>Here we would like to see the frequency distribution of variable homeownership, so I map x to the homeownership variable.</li>
+<li>When the geom_bar() is called. ggplot2 actually counts the number of each category for us. In other words, ggplots automatically creates the frequency table of homeownership for us, telling us how many observations belong to mortgage, how many belong to own and how many belong to rent.</li>
+<li>So the question is, Where does count come from? How does ggplot2 do the calculation?</li>
+<li>Note that on the y-axis, it displays <strong>count</strong>, but count is NOT a variable in <code>loans</code>!</li>
+<li>Where does count come from?</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="stacked-bar-chart-and-pie-chart" class="slide level2"><h2>Stacked Bar Chart and <a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">Pie Chart</a>
+</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">stacked_bar</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, </span>
+<span>           <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, </span>
+<span>               fill <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_bar</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">stacked_bar</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/stacked_bar-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- # ```{r} -->
+<!-- # class(freq_tbl) -->
+<!-- # ``` -->
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pie</span> <span class="op">&lt;-</span> <span class="va">stacked_bar</span> <span class="op">+</span> </span>
+<span>    <span class="fu">coord_polar</span><span class="op">(</span>theta <span class="op">=</span> <span class="st">"y"</span><span class="op">)</span></span>
+<span><span class="va">pie</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/stacked_bar_polar-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="question">
+<p>How do we remove the axes and background?</p>
+</div>
+</div>
+</div></div>
+</section><section id="segmented-bar-plot-stacked" class="slide level2"><h2>Segmented Bar Plot: Stacked</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">homeownership</span>, </span>
+<span>                    fill <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="co">#&lt;&lt;</span></span>
+<span>    <span class="fu">geom_bar</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/bar_stacked-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"><aside class="notes"><ul>
+<li>We can use Segmented Bar Plot, which is helpful when you want to represent two variables.</li>
+<li>So here we fill these bars based on the grade of the loan, which we know ranges from A to G.</li>
+<li>So each one of theses segments tells us how many of that grade of loan was observed within a particular homeownership.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="segmented-bar-plot-compare-proportions" class="slide level2"><h2>Segmented Bar Plot: Compare Proportions</h2>
+<ul>
+<li>
+<code>position = "fill"</code> makes each set of stacked bars the <em>same height</em>.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">homeownership</span>, fill <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/bar_pos_fill-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:68.0%"><aside class="notes"><ul>
+<li>We may want to add another argument in the geom_bar layer, which is position = “fill”.</li>
+<li>
+<code>position = "fill"</code> works like stacking, but makes each set of stacked bars the same height.</li>
+<li>And now the y-axis is not count anymore. Now the y limit is from 0 to 1, and each grade segment represents the relative frequency of a particular homeownership.</li>
+<li>Which bar plot is a more useful representation for visualizing the relationship between homeownership and grade?</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="segmented-bar-plot-compare-individual-values" class="slide level2"><h2>Segmented Bar Plot: Compare Individual Values</h2>
+<ul>
+<li>
+<code>position = "dodge"</code> places overlapping objects directly <em>beside</em> one another.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">homeownership</span>, fill <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/bar_pos_dodge-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><aside class="notes"><ul>
+<li>If you wanna compare Individual Values, here the individual category of the grade of loan in each ownership type, <code>position = "dodge"</code> may be a goo option.</li>
+<li>The option places the grade of loans directly <em>beside</em> one another.</li>
+<li>This way, it’s easier to see the counts of grade of loan within each ownership.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="visualizing-numerical-data" class="title-slide slide level1 center" data-background-color="#A7D5E8"><h1>Visualizing Numerical Data</h1>
+
+</section><section id="histogram" class="slide level2"><h2>Histogram</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+
+</div>
+<img data-src="images/10-viz/hist-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><aside class="notes"><ul>
+<li>One of the most commonly used ways of visualizing numerical data is with histograms.</li>
+<li>In ggplot2, we use geom_histogram to create a histogram.</li>
+<li>When you use this function, ggplot2 send you a message saying that it uses 30 bins, or the number of classes created from the data, each representing one coloumn in the histogram.</li>
+<li>And you can pick better value with <code>binwidth</code>, or the class width.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-2" class="slide level2"><h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">binwidth = 1000</a></li>
+<li><a href="#tabset-1-2">binwidth = 5000</a></li>
+<li><a href="#tabset-1-3">binwidth = 20000</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_histogram</span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/hist-1000-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_histogram</span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">5000</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/hist-5000-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_histogram</span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">20000</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/hist-20000-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>In this plot I use a binwidth of a thousand dollars, so each one of the bars represents a range of thousand dollars, and the heights of these bars tell me how many loans fall into that range.</li>
+<li>In the second plot, the binwidth is 500 thousand dollars. So here we can have better sense of the shape of the distribution, comparing to the previous one.</li>
+<li>The last plot use the binwidth 20000 dollars. And now we lose anything interesting about the shape of the distribution.</li>
+<li>So picking a binwidth or the number of bins is an art and science. But try 10 to 20 bins may be a good start.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="fill-with-a-categorical-variable-stack" class="slide level2"><h2>Fill with a Categorical Variable: Stack</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span>,</span>
+<span>        fill <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span></span>
+<span>    binwidth <span class="op">=</span> <span class="fl">5000</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Loan amount ($)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Frequency"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_linedraw</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><ul>
+<li>We can also fill a histogram with a categorical variable, so it allows us to explore the relationship between the numerical and categorical variables.</li>
+<li>This is done by adding aesthetic fill. Here basically filling the bars based on home ownership.</li>
+<li>So we can actually see what’s happening behind each level</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="fill-with-a-categorical-variable-identity-bad" class="slide level2"><h2>Fill with a Categorical Variable: Identity (BAD)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span>,</span>
+<span>        fill <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span></span>
+<span>    binwidth <span class="op">=</span> <span class="fl">5000</span>,</span>
+<span>    position <span class="op">=</span> <span class="st">"identity"</span> <span class="co">#&lt;&lt;</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Loan amount ($)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Frequency"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Lending Club loans"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="fragment">
+<div class="question">
+<p>Why such plot is bad?</p>
+</div>
+<aside class="notes"><ul>
+<li>So here, if we don’t specify alpha, there is no transparency at all.</li>
+<li>And we can see that the histogram of loan amount for house owners is totally masked by the histogram for renters, because there are much more renters than house owners, and the frequency of each bin in the histogram for the renters is higher than the frequency for the owners.</li>
+<li>So use visualization carefully. Sometimes the plot does not provide more information, and sometimes it is misleading.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section><section id="fill-with-a-categorical-variable-identity" class="slide level2"><h2>Fill with a Categorical Variable: Identity</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span>,</span>
+<span>        fill <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span></span>
+<span>    binwidth <span class="op">=</span> <span class="fl">5000</span>,</span>
+<span>    alpha <span class="op">=</span> <span class="fl">0.5</span>,  <span class="co">#&lt;&lt;</span></span>
+<span>    position <span class="op">=</span> <span class="st">"identity"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Loan amount ($)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Frequency"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Lending Club loans"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><ul>
+<li>We can also compare the histograms of loan amount of different homeownership by simply superimposing on one to another.</li>
+<li>We use position = “identity” to do that.</li>
+<li>In this case, we basically put three histograms together in one plot, sharing the same x-axis and y-axis</li>
+<li>If you wanna use this type of plot, remember to make it transparent, so that each histogram can be seen even they are superimposed.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="facet-with-a-categorical-variable" class="slide level2"><h2>Facet with a Categorical Variable</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span>,</span>
+<span>        fill <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span></span>
+<span>    binwidth <span class="op">=</span> <span class="fl">5000</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Loan amount ($)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Frequency"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Lending Club loans"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span></span>
+<span>    <span class="op">~</span> <span class="va">homeownership</span>, <span class="co">#&lt;&lt;</span></span>
+<span>    nrow <span class="op">=</span> <span class="fl">3</span>  <span class="co">#&lt;&lt;</span></span>
+<span>  <span class="op">)</span>       </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><ul>
+<li>If you don’t want to put all three histograms in one single plot, remember you can use faceting trick.</li>
+<li>first again I fill in with colors based on homeownership</li>
+<li>Then instead of changing alpha level, and put them on top of each other, I can facet the plot.</li>
+<li>Since I am using a single categorical variable to facet, I am going to use facet_wrap() function by homeownership variable and I want the data to be represented in 3 rows, so that the three histograms share the same x-axis and are compared easily. - Basically, there are not many house owners in the data set. And basically all three distributions are right-skewed.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-3" class="slide level2"><h2></h2>
+<div class="lab">
+<p><span style="color:blue"> <strong>13-Visualization</strong> </span></p>
+<!-- - Create a R script named **lab11-bar-hist.R**. -->
+<p>In <strong>lab.qmd</strong> <code>## Lab 13</code> section,</p>
+<ul>
+<li><p>Import the data <strong>penguins.csv</strong>.</p></li>
+<li><p>Generate the following</p></li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="section-4" class="slide level2"><h2></h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># library(tidyverse)</span></span>
+<span id="cb33-2"><a aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(__________________)</span>
+<span id="cb33-3"><a aria-hidden="true" tabindex="-1"></a>________ <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(_______________________) <span class="sc">+</span>  <span class="do">## mapping layer  </span></span>
+<span id="cb33-4"><a aria-hidden="true" tabindex="-1"></a>    ___________________ <span class="sc">+</span>  <span class="do">## geometry layer</span></span>
+<span id="cb33-5"><a aria-hidden="true" tabindex="-1"></a>    _____________________________  <span class="do">## label layer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><br><br><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a aria-hidden="true" tabindex="-1"></a>________ <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(______________________________) <span class="sc">+</span>  <span class="do">## mapping layer  </span></span>
+<span id="cb34-2"><a aria-hidden="true" tabindex="-1"></a>    _______________ <span class="sc">+</span>  <span class="do">## geometry layer</span></span>
+<span id="cb34-3"><a aria-hidden="true" tabindex="-1"></a>    _______________ <span class="sc">+</span>  <span class="do">## label layer</span></span>
+<span id="cb34-4"><a aria-hidden="true" tabindex="-1"></a>    ______________________________  <span class="sc">+</span>   <span class="do">## facet layer</span></span>
+<span id="cb34-5"><a aria-hidden="true" tabindex="-1"></a>    ______________________________      <span class="do">## theme layer (set legend.position = "none")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="density-plot" class="slide level2"><h2>Density Plot</h2>
+<!-- kernel = c("gaussian", "epanechnikov", "rectangular", -->
+<!--                    "triangular", "biweight", -->
+<!--                    "cosine", "optcosine") -->
+<ul>
+<li>
+<code><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density()</a></code> uses <strong>kernel density estimation</strong> to smooth the histogram or our data. (MATH 4750 Statistical Computing)</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_density</span><span class="op">(</span><span class="op">)</span>  <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/den-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"><aside class="notes"><ul>
+<li>Let’s continue. Another way we can visualize numerical data is using a density plot.</li>
+<li>A density plot is basically a smoothed version of a histogram.</li>
+<li>Remember that a continuous random variable has a continuous probability distribution that is a density curve as a plot. Right?</li>
+<li>So a normal r.v. has a normal density curve that this.</li>
+<li>But given a data set of continuous variable, we can only draw a histogram that is sort of an approximation to its density curve. The histogram will only be very much like its true density plot when the data size is huge or approaching to infinity.</li>
+<li>A density plot here smooths the histogram, telling us that given the data set we have, what the true density curve might look like.</li>
+<li>In ggplot, we have geometry geom_density() to create a density plot.</li>
+<li>And ggplot uses the so-called <strong>kernel density estimation</strong> to smooth the histogram. The kernel is not a the linux kernel in computer science. The kernel here is a probability distribution.</li>
+<li>If you are interested, it will be taught in 4750 Computational Statistics which is a new course starting this fall.</li>
+<li>You can see in the graph that the density curve smooths the histogram, but it;s still not very smooth, right. It’s a little bit jagged.</li>
+<li>The ggplot choose a level of smoothness for us. And we can adjust the smoothness by ourselves.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="density-plots-and-adjusting-bandwidth" class="slide level2"><h2>Density Plots and Adjusting Bandwidth</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">adjust = 0.5</a></li>
+<li><a href="#tabset-2-2">adjust = 1</a></li>
+<li><a href="#tabset-2-3">adjust = 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_density</span><span class="op">(</span>adjust <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/den05-1.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_density</span><span class="op">(</span>adjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># default bandwidth</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/den1-1.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_density</span><span class="op">(</span>adjust <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/den2-1.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>We can adjust the smoothness of a density plot by the argument adjust in geom_density() function.</li>
+<li>basically, the larger the value is, the smoother the curve will be.</li>
+<li>and the default is adjust = 1.</li>
+<li>Keep in mind that if you use a very smooth density plot, some local peaks or features may be washed out or smoothed away. If these local things contain some information, you may lose the information by just looking at the smooth density plot.</li>
+<li>So a better idea is to try different level of smoothness, and check different plots, such as histogram, bar plots, and scatter plots as well.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="adding-a-categorical-variable-to-density-plots" class="slide level2"><h2>Adding a Categorical Variable to Density Plots</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span>,</span>
+<span>        fill <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_density</span><span class="op">(</span></span>
+<span>    adjust <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>    alpha <span class="op">=</span> <span class="fl">0.4</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Loan amount ($)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Density"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Amounts of loans"</span>,</span>
+<span>    fill <span class="op">=</span> <span class="st">"Homeownership"</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><ul>
+<li>We can also add a categorical variable to a density plot. This is similar to what we did with the histograms, where you can see them overlaid on top of each other.</li>
+<li>So once again, we can fill in the density curves based on the value of homeownership.</li>
+<li>and I am changing alpha, so that we can actually see what’s happening behind the curve. If I didn’t change alpha, we are not able to see the peaks of mortagage and own because they are masked by the density curve of home renters. OK.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="box-plot-1" class="slide level2"><h2>Box Plot</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">interest_rate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"interest rate (%)"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/box-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:73.0%"><aside class="notes"><ul>
+<li>Remember in base R, we can use boxplot function to create a boxplot.</li>
+<li>In ggplot, we add the geometry layer, geom_boxplot().</li>
+<li>One of things that boxplots are good at is uncovering our potential outliers, and here, the distribution of interest rates is right-skewed, and has several outliers.</li>
+<li>Most of the interest rates are between 10 to 15%, but some can be as high as 30% or more.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="adding-a-categorical-variable-to-box-plots" class="slide level2"><h2>Adding a Categorical Variable to Box Plots</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">interest_rate</span>,</span>
+<span>        y <span class="op">=</span> <span class="va">grade</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Interest rate (%)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Grade"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Interest Rates of Loans"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"by grade of loan"</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><ul>
+<li>We can also add categorical variable to a boxplot, so these are called side-by-side boxplots. They are very commonly used.</li>
+<li>This is the interest rate distribution by the grade of loan, where A is of the highest quality and G is the lowest quality.</li>
+<li>And it looks like the higher the quality of the loan, the lower the interest rate it has.</li>
+<li>We can also see that there is an outlier in grade D data, where the interest rate is super low, even lower than most of the interest rate of the grade A loans. You as a reasearcher or data analyst have to figure out if it is typo, or it is the true interest rate. If it is a correct number, why such low interest rate happened?</li>
+<li>And to create such side-by-side boxplot, we just add y mapping, setting it to grade.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="adding-two-categorical-variables-to-box-plots" class="slide level2"><h2>Adding Two Categorical Variables to Box Plots</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">interest_rate</span>,</span>
+<span>        y <span class="op">=</span> <span class="va">grade</span>,</span>
+<span>        fill <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Interest rate (%)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Grade"</span>,</span>
+<span>    fill <span class="op">=</span> <span class="st">"Homeowership"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Interest Rates of Loans"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"by grade and ownership"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme</span><span class="op">(</span></span>
+<span>    legend.position <span class="op">=</span> <span class="st">"bottom"</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><ul>
+<li>If we want to add two categorical variables to box plots, that’s easy.</li>
+<li>We can fill the boxplots with colors based on another variable, here the homeownership.</li>
+<li>ANd now each grade of loans is furthered divided into three categories of the homeownership variable.</li>
+<li>And we can see that basically, the type of homeownership does not affect interest rate much given the same grade of loans.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="relationships-between-numerical-variables" class="title-slide slide level1 center" data-background-color="#A7D5E8"><h1>Relationships between numerical variables</h1>
+
+</section><section id="scatterplot" class="slide level2"><h2>Scatterplot</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">debt_to_income</span>, y <span class="op">=</span> <span class="va">interest_rate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_point</span><span class="op">(</span>shape <span class="op">=</span> <span class="fl">23</span>, fill <span class="op">=</span> <span class="st">"blue"</span>, size <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span>  <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/scatter-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:72.0%"><aside class="notes"><ul>
+<li>We already talked about scatter plot using geom_point().</li>
+<li>Here we have a scatter plot of interest rate and the debt to income ratio.</li>
+<li>One potential problem here is that like adding points to boxplot, we have so many data points overlapped together, and their relationship cannot be truly revealed. and so it’s really difficult to make sense of this scatter plot built with geom_point.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="hex-plot-zoom-in" class="slide level2"><h2>Hex Plot Zoom-in</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">debt_to_income</span> <span class="op">&lt;</span> <span class="fl">100</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">debt_to_income</span>, y <span class="op">=</span> <span class="va">interest_rate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_hex</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">viridis</span><span class="fu">::</span><span class="fu"><a href="https://sjmgarnier.github.io/viridis/reference/scale_viridis.html">scale_fill_viridis</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/hex-zoom-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:62.0%"><aside class="notes"><ul>
+<li>Here just show you that we can further zoom in the plot, focusing on the the data that has debt_to_income ratio less that 100%.</li>
+<li>And now we can more clearly see what’s going on.</li>
+<li>Basically, more data points happen around debt_to_income ratio 12 to 15% and interest rate 10%.</li>
+<li>And the two variables are a little bit positively correlated that higher debt_to_income ratio corresponds to higher interest rate. But again the correlation is very weak here.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="other-plots" class="title-slide slide level1 center" data-background-color="#A7D5E8"><h1>Other Plots</h1>
+
+</section><section id="line-chart-for-time-series-ggplot2geom_line" class="slide level2"><h2>Line Chart for Time Series <code>ggplot2::geom_line()</code>
+</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">economics_long</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">value01</span>, </span>
+<span>                             colour <span class="op">=</span> <span class="va">variable</span>, linetype <span class="op">=</span> <span class="va">variable</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_line</span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/line-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><aside class="notes"><ul>
+<li>If you have time series data, line plot is your good friend, which shows the trend of some variable.</li>
+<li>For example here, the unemployment number.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="qq-plots" class="slide level2"><h2>QQ-plots</h2>
+<ul>
+<li>Quantile-Quantile plots are used to check if data are normally distributed (or follow any distribution).</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">mpg</span>, <span class="fu">aes</span><span class="op">(</span>sample <span class="op">=</span> <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu">geom_qq</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">geom_qq_line</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/qq-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><aside class="notes"><ul>
+<li>To create a qqplot, we add the geometry geom_qq(), and geom_qq_line() if you want to add a straight line that helps you determine whether the data are normally distributed.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="violin-plots" class="slide level2"><h2>Violin Plots</h2>
+<ul>
+<li>Violin plots are similar to box plots, but show the smooth density of the data.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span>, y <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">f</span> <span class="op">+</span> <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">f</span> <span class="op">+</span> <span class="fu">geom_violin</span><span class="op">(</span><span class="op">)</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/violin-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><!-- + geom_boxplot(width = 0.2) --><ul>
+<li>In ggplot, we can use geom_violin() to create one. <!-- - Basically Violin Plots contain more information because we also have the density or distribution of the data. -->
+</li>
+<li>See if we just check the boxplot, we will miss the information that the loan amount of the grade G actually has a bimodal distribution, right?</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="add-on-ggridges-for-ridge-plots" class="slide level2"><h2>Add-on 📦: <a href="https://wilkelab.org/ggridges/"><code>ggridges</code></a> for Ridge Plots</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/">ggridges</a></span><span class="op">)</span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">loans</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span>, y <span class="op">=</span> <span class="va">grade</span>, fill <span class="op">=</span> <span class="va">grade</span>, color <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="images/10-viz/ridges-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes"><ul>
+<li>To show better smooth density plots, we can create the so-called ridge plots provided by the add-on package called ggridges.</li>
+<li>everything is basically the same. You just need to install and load the package, and add the geometry called geom_density_ridges().</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="add-on-ggrepel" class="slide level2"><h2>Add-on 📦: <a href="https://ggrepel.slowkow.com/"><code>ggrepel</code></a> <img data-src="https://raw.githubusercontent.com/slowkow/ggrepel/master/man/figures/logo.svg" width="50">
+</h2>
+<ul>
+<li>
+<strong>ggrepel</strong> provides geoms for ggplot2 to repel overlapping text labels.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggrepel.slowkow.com/">ggrepel</a></span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">wt</span> <span class="op">&gt;</span> <span class="fl">2.75</span> <span class="op">&amp;</span> <span class="va">wt</span> <span class="op">&lt;</span> <span class="fl">3.45</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">rownames_to_column</span><span class="op">(</span><span class="st">"car"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">wt</span>, <span class="va">mpg</span>, label <span class="op">=</span> <span class="va">car</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"geom_text()"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/ggrepel1-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html">geom_text_repel</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"geom_text_repel()"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/ggrepel2-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes"><ul>
+<li>Another useful ggplot2 extension is ggrepel that provides geoms for ggplot2 to repel overlapping text labels.</li>
+<li>This makes your labels much more clear.</li>
+<li>For example, here I want to label each data point by its observation’s name, I can add geom_text(). But the ggplot2 setting basically put the text right on the top of the point, which sometimes the labels are mixed together and makes it hard to read.</li>
+<li>And we can use the function geom_text_repel(), and then it will automatically find a good spot for those texts that are close to their data point, but not overlap each other.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="wordcloud-from-ggwordcloud-package" class="slide level2"><h2>Wordcloud from <a href="https://lepennec.github.io/ggwordcloud/"><code>ggwordcloud</code></a> Package <img data-src="https://raw.githubusercontent.com/lepennec/ggwordcloud/master/man/figures/logo.png" width="50">
+</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-3-1">Plot</a></li>
+<li><a href="#tabset-3-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-25-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lepennec/ggwordcloud">ggwordcloud</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/yixuan/showtext">showtext</a></span><span class="op">)</span></span>
+<span><span class="va">where</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sysfonts/man/font_files.html">font_files</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="fu">str_detect</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/sysfonts/man/font_files.html">font_files</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">family</span>, <span class="st">"Arial Unicode MS"</span><span class="op">)</span><span class="op">)</span>, <span class="op">]</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">thankyou_words_small</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">word</span>, size <span class="op">=</span> <span class="va">speakers</span>, color <span class="op">=</span> <span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://lepennec.github.io/ggwordcloud/reference/geom_text_wordcloud.html">geom_text_wordcloud</a></span><span class="op">(</span>area_corr <span class="op">=</span> <span class="cn">TRUE</span>, rm_outside <span class="op">=</span> <span class="cn">TRUE</span>, </span>
+<span>                        family <span class="op">=</span> <span class="va">where</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span><span class="op">$</span><span class="va">family</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_size.html">scale_size_area</a></span><span class="op">(</span>max_size <span class="op">=</span> <span class="fl">40</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span>t <span class="op">=</span> <span class="op">-</span><span class="fl">200</span>,  <span class="co"># Top margin</span></span>
+<span>                               r <span class="op">=</span> <span class="fl">0</span>,  <span class="co"># Right margin</span></span>
+<span>                               b <span class="op">=</span> <span class="fl">0</span>,  <span class="co"># Bottom margin</span></span>
+<span>                               l <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="co"># Left margin</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><p>https://towardsdatascience.com/create-a-word-cloud-with-r-bde3e7422e8a http://www.sthda.com/english/wiki/text-mining-and-word-cloud-fundamentals-in-r-5-simple-steps-you-should-know http://www.sthda.com/english/wiki/word-cloud-generator-in-r-one-killer-function-to-do-everything-you-need https://semba-blog.netlify.app/10/29/2019/creating-wordcloud-in-r/ <!-- install.packages("tm")  # for text mining --> <!-- install.packages("SnowballC") # for text stemming --> <!-- install.packages("wordcloud") # word-cloud generator  --> <!-- install.packages("RColorBrewer") # color palettes --> https://stackoverflow.com/questions/74415534/why-do-characters-from-foreign-alphabets-not-show-in-my-wordcloud-on-r</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="radar-chart-from-fmsb-and-ggradar-package" class="slide level2"><h2>Radar Chart from <a href="https://r-charts.com/ranking/radar-chart/"><code>fmsb</code></a> and <a href="https://github.com/ricardo-bion/ggradar"><code>ggradar</code></a> Package</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-4-1">Plot</a></li>
+<li><a href="#tabset-4-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-27-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<div id="tabset-4-2">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="midi">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">radar_data</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
+<span>    file <span class="op">=</span> <span class="st">"./data/radar_data.csv"</span><span class="op">)</span></span>
+<span><span class="co"># Color vector</span></span>
+<span><span class="va">colors_border</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0.2</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>,<span class="fl">0.9</span><span class="op">)</span>, </span>
+<span>                   <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0.8</span>,<span class="fl">0.2</span>,<span class="fl">0.5</span>,<span class="fl">0.9</span><span class="op">)</span>, </span>
+<span>                   <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0.7</span>,<span class="fl">0.5</span>,<span class="fl">0.1</span>,<span class="fl">0.9</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">colors_in</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0.2</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>,<span class="fl">0.4</span><span class="op">)</span>, </span>
+<span>               <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0.8</span>,<span class="fl">0.2</span>,<span class="fl">0.5</span>,<span class="fl">0.4</span><span class="op">)</span>, </span>
+<span>               <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">0.7</span>,<span class="fl">0.5</span>,<span class="fl">0.1</span>,<span class="fl">0.4</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">radarchart</span><span class="op">(</span><span class="va">radar_data</span>, axistype <span class="op">=</span> <span class="fl">1</span>, </span>
+<span>           <span class="co">#custom polygon</span></span>
+<span>           pcol <span class="op">=</span> <span class="va">colors_border</span>, </span>
+<span>           pfcol <span class="op">=</span> <span class="va">colors_in</span>, </span>
+<span>           plwd <span class="op">=</span> <span class="fl">4</span>, plty <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>           <span class="co">#custom the grid</span></span>
+<span>           cglcol <span class="op">=</span> <span class="st">"grey"</span>, cglty <span class="op">=</span> <span class="fl">1</span>, </span>
+<span>           axislabcol <span class="op">=</span> <span class="st">"grey"</span>, </span>
+<span>           caxislabels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">20</span>, <span class="fl">5</span><span class="op">)</span>, </span>
+<span>           cglwd <span class="op">=</span> <span class="fl">0.8</span>,</span>
+<span>           <span class="co">#custom labels</span></span>
+<span>           vlcex <span class="op">=</span> <span class="fl">1.2</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># legend("topright", legend = rownames(radar_data[-c(1, 2), ]), bty = "n", pch = 20 , </span></span>
+<span><span class="co">#        col = colors_in, text.col = "grey", cex = 1.2, pt.cex = 3)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="midi">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggradar</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ggradar_data</span> <span class="op">&lt;-</span> <span class="va">radar_data</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">as_tibble</span><span class="op">(</span>rownames <span class="op">=</span> <span class="st">"group"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">mutate_at</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="op">-</span><span class="va">group</span><span class="op">)</span>, <span class="va">rescale</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/ggradar/man/ggradar-package.html">ggradar</a></span><span class="op">(</span><span class="va">ggradar_data</span>,</span>
+<span>        base.size <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>        grid.label.size <span class="op">=</span> <span class="fl">6</span>,</span>
+<span>        axis.label.size <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>        group.point.size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>        fill.alpha <span class="op">=</span> <span class="fl">0.2</span>,</span>
+<span>        grid.line.width <span class="op">=</span> <span class="fl">0.4</span>,</span>
+<span>        plot.legend <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>        fill <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+<aside class="notes"><p>lazy-load database ‘/Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/callr/R/callr.rdb’ is corrupt Restart R</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="network-from-igraph-package" class="slide level2"><h2>Network from <a href="https://igraph.org/r/"><code>igraph</code></a> Package</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-5-1">Plot</a></li>
+<li><a href="#tabset-5-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/10-viz/unnamed-chunk-28-1.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r.igraph.org/">igraph</a></span><span class="op">)</span></span>
+<span><span class="va">network_data</span> <span class="op">&lt;-</span> <span class="fu">read_rds</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"./data/network_data.rds"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># build the graph object</span></span>
+<span><span class="va">network</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r.igraph.org/reference/graph_from_adjacency_matrix.html">graph_from_adjacency_matrix</a></span><span class="op">(</span><span class="va">network_data</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># plot it</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">network</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="more-r-graphics-resources" class="slide level2"><h2>More R Graphics Resources</h2>
+<ul>
+<li>More add-on 📦: <a href="https://exts.ggplot2.tidyverse.org/gallery/">ggplot2 extensions</a>
+</li>
+<li><a href="https://www.r-graph-gallery.com/index.html">The R Graph Gallery</a></li>
+<li><a href="https://r-graphics.org/">R Graphics Cookbook</a></li>
+<li><a href="https://r-charts.com/">R CHARTS</a></li>
+</ul>
+
+<img data-src="./images/10-viz/ggextension.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes"><ul>
+<li>As I mentioned before, there are tons of ggplot2 extensions.</li>
+<li>If you are interested, check those links, and learn more about them. OK.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script></section></section>
+</div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://math3570-s26.github.io/website/">🔗 math3570-s26.github.io/website</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1800,
+
+        height: 1000,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 5.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script><script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W119
+    </script><script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../slides";
+    window._ojs.paths.runtimeToRoot = "../..";
+    window._ojs.paths.docToRoot = "..";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/math3570-s26\.github\.io\/website\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+
+
+</body></html>

@@ -35,19 +35,34 @@ In **lab.qmd** `## Lab 12` section,
 #| warning: false
 #| echo: true
 #| eval: false
-ggplot(data = _______, 
-       mapping = aes(x = ______, y = ______, ______ = drv, shape = _____)) +
-    geom______(______ = 3, ______ = 0.8) + 
-    facet_grid(______ ~ _______) +
-    guides(______ = "none")
+ggplot(data = _______, mapping = aes(x = ______, y = ______)) +
+    geom______(______ = 0.4) + 
+    facet_grid(______ ~ _______)
 ```
 
 ```{r}
 #| warning: false
 #| echo: false
+# ggplot(data = mpg, 
+#        mapping = aes(x = displ, y = cty)) +
+#     geom_point(size = 3, alpha = 0.8) + 
+#     facet_grid(drv ~ fl) +
+#     guides(color = "none")
 ggplot(data = mpg, 
-       mapping = aes(x = displ, y = cty, color = drv, shape = fl)) +
-    geom_point(size = 3, alpha = 0.8) + 
+       mapping = aes(x = displ, y = cty)) +
+    geom_point(alpha = 0.4) + 
+    facet_grid(drv ~ fl)
+```
+
+
+How about this?
+
+```{r}
+#| warning: false
+#| echo: false
+ggplot(data = mpg,
+       mapping = aes(x = displ, y = cty, color = drv, shape = fl)) + 
+    geom_point(size = 3, alpha = 0.8) +
     facet_grid(drv ~ fl) +
     guides(color = "none")
 ```

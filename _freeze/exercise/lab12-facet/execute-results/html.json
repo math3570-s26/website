@@ -1,8 +1,8 @@
 {
-  "hash": "710c9b675f29ba95f482a3460f542642",
+  "hash": "42acb31964a7224463ab9d3fe644e734",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Lab 12: Faceting\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n::: callout-note\n\n:::\n\n\n\nIn **lab.qmd** `## Lab 12` section,\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nggplot(data = _______, \n       mapping = aes(x = ______, y = ______, ______ = drv, shape = _____)) +\n    geom______(______ = 3, ______ = 0.8) + \n    facet_grid(______ ~ _______) +\n    guides(______ = \"none\")\n```\n:::\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/09-ggplot2/unnamed-chunk-3-1.png){fig-align='center' width=100%}\n:::\n:::",
+    "markdown": "---\ntitle: \"Lab 12: Faceting\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n\n::: {.cell}\n\n:::\n\n\n::: callout-note\n\n:::\n\n\n\nIn **lab.qmd** `## Lab 12` section,\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nggplot(data = _______, mapping = aes(x = ______, y = ______)) +\n    geom______(______ = 0.4) + \n    facet_grid(______ ~ _______)\n```\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/09-ggplot2/unnamed-chunk-3-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\n\nHow about this?\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../slides/images/09-ggplot2/unnamed-chunk-4-1.png){fig-align='center' width=100%}\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

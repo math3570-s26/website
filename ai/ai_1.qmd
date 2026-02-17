@@ -214,6 +214,13 @@ Use this exact slide structure:
 
 Time: 12 to 15 minutes.
 
+```{r}
+#| echo: false
+#| column: margin
+knitr::include_graphics("../images/QRCode_ai1.png")
+```
+
+
 ## Individual Reflection (each student)
 
 Write 150 to 200 words answering:
@@ -234,3 +241,11 @@ Your reflection must match your assigned role.
 <!-- * [Insufficient AI Interaction Log](documents/ai_prompts_bad.pdf) -->
 <!-- * [Insufficient Human Authored Synthesis](documents/ai_audit_bad.pdf) -->
 <!-- * [Insufficient Individual Reflections](documents/ai_reflection_bad.pdf) -->
+
+
+
+## Participation (non-presenting students)
+
+Please scan the QR code, or go to <https://forms.office.com/r/eAKU9th9X5> to share what you learned from this activity.
+
+

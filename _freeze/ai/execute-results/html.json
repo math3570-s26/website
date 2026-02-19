@@ -1,0 +1,15 @@
+{
+  "hash": "175e9291e1a1dd7f923d7d573370672f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"AI Activities\"\nlisting:\n  contents: ai\n  sort: title\n  sort-ui: false\n  filter-ui: false\n  type: table\n  fields: [title, subtitle, description]\n  field-display-names:\n    title: \"No.\"\n    subtitle: \"Title\"\n    description: \"Content\"\n---\n\n-   Activity 1 is presented by [**Superb Statisticians**]{.blue}: Aaron, Connor, and Danielle.\n\n-   Activity 2 is presented by [**Team 1**]{.blue}: Sophia, Maya, Kaitlyn.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nteams <- c(\"Team 1\", \"The Data Scientists\", \"Stat Padders\", \"Data Divers\", \"\")\nset.seed(3570)\nsample(teams, 1)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Team 1\"\n```\n\n\n:::\n:::\n\n\n\n-   Activity 3 is presented by team .\n\n-   Activity 4 is presented by team .\n\n-   Activity 5 is presented by team .\n\n-   Activity 6 is presented by team .\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -13,14 +13,21 @@ listing:
     description: "Content"
 ---
 
-- Activity 1 is presented by team [**Superb Statisticians**]{.blue}: Aaron, Connor, and Danielle.
+-   Activity 1 is presented by [**Superb Statisticians**]{.blue}: Aaron, Connor, and Danielle.
 
-- Activity 2 is presented by team .
+-   Activity 2 is presented by [**Team 1**]{.blue}: Sophia, Maya, Kaitlyn.
 
-- Activity 3 is presented by team .
+```{r}
+teams <- c("Team 1", "The Data Scientists", "Stat Padders", "Data Divers", "")
+set.seed(3570)
+sample(teams, 1)
+```
 
-- Activity 4 is presented by team .
 
-- Activity 5 is presented by team .
+-   Activity 3 is presented by team .
 
-- Activity 6 is presented by team .
+-   Activity 4 is presented by team .
+
+-   Activity 5 is presented by team .
+
+-   Activity 6 is presented by team .

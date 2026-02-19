@@ -379,6 +379,16 @@ Plan a 10 minute talk with the suggested structure:
 4. About 2 minutes: takeaway, limitation, next step
 
 
+### Presentation order
+
+```{r}
+#| eval: true
+teams <- c("Team 1", "Superb Statisticians", "The Data Scientists", "Stat Padders", "Data Divers", "")
+set.seed(3570)
+sample(teams, 6, replace = FALSE)
+```
+
+
 ## Grading guide
 
 Total 15 points:

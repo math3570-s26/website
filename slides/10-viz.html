@@ -278,9 +278,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="fragment">
 <ul>
-<li><span style="color:blue">Gender (Male 👨, Female 👩, Other 🏳️‍🌈) </span></li>
-<li><span style="color:blue">Class (Freshman, Sophomore, Junior, Senior, Graduate) </span></li>
-<li><span style="color:blue">Country (USA 🇺🇸, Canada 🇨🇦, UK 🇬🇧, Germany 🇩🇪, Japan 🇯🇵, Korea 🇰🇷) </span></li>
+<li><span style="color:blue">Gender (Male 👨, Female 👩, Other 🏳️‍🌈)</span></li>
+<li><span style="color:blue">Class (Freshman, Sophomore, Junior, Senior, Graduate)</span></li>
+<li><span style="color:blue">Country (USA 🇺🇸, Canada 🇨🇦, UK 🇬🇧, Germany 🇩🇪, Japan 🇯🇵, Korea 🇰🇷)</span></li>
 </ul>
 </div>
 <p>. . .</p>
@@ -289,9 +289,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="fragment">
 <ul>
-<li><span style="color:blue"> GPA </span></li>
-<li><span style="color:blue"> The number of relationships you’ve had </span></li>
-<li><span style="color:blue"> Height </span></li>
+<li><span style="color:blue">GPA</span></li>
+<li><span style="color:blue">The number of relationships you’ve had</span></li>
+<li><span style="color:blue">Height</span></li>
 </ul>
 </div>
 </section><section id="data-lending-club" class="level2"><h2 class="anchored" data-anchor-id="data-lending-club">Data: Lending Club</h2>
@@ -421,8 +421,8 @@ $ debt_to_income &lt;dbl&gt; 18.01, 5.04, 21.15, 10.16, 57.96, 6.46, 23.66, 16.1
 <p><br></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 55%">
-<col style="width: 44%">
+<col style="width: 54%">
+<col style="width: 45%">
 </colgroup>
 <thead><tr class="header">
 <th>variable</th>
@@ -1092,7 +1092,7 @@ $ debt_to_income &lt;dbl&gt; 18.01, 5.04, 21.15, 10.16, 57.96, 6.46, 23.66, 16.1
 </div>
 </section><section id="section-3" class="level2"><h2 class="anchored" data-anchor-id="section-3"></h2>
 <div class="lab">
-<p><span style="color:blue"> <strong>13-Visualization</strong> </span></p>
+<p><span style="color:blue"><strong>13-Visualization</strong></span></p>
 <!-- - Create a R script named **lab11-bar-hist.R**. -->
 <p>In <strong>lab.qmd</strong> <code>## Lab 13</code> section,</p>
 <ul>
@@ -1938,41 +1938,6 @@ window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "..";
 window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
-</script><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
 </script><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

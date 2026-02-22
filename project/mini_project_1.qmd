@@ -24,14 +24,14 @@ library(tidyverse)
 
 In this mini project, your team will **explore one data set and tell a short data story with visuals**.
 
-Focus on practice: Complete the Quarto file by 
+[Focus on practice]: Complete the Quarto file by 
 
 1. Asking a clear question for a real audience 
 2. Exploring with a few plots 
 3. Choosing the best evidence 
 4. Writing a short, readable story
 
-This is an exploratory project. Use descriptive analysis only. Do NOT run hypothesis tests and do NOT fit complex models.
+This is an exploratory project. Use **descriptive analysis only**. Do NOT run hypothesis tests and do NOT fit complex models.
 
 ### What you will submit
 
@@ -52,10 +52,10 @@ A **10 minute** team presentation that summarizes your story and highlights your
 
 - Team members and roles for this project:
 
-  1.  **Project lead** (keeps time, coordinates tasks): [Your Member Name]{.blue}
-  2.  **Data wrangler** (loads data, checks quality, makes a clean table): [Your Member Name]{.blue}
-  3.  **Visualization designer** (builds plots, improves readability): [Your Member Name]{.blue}
-  4.  **Storyteller** (writes narrative, connects visuals to claims): [Your Member Name]{.blue}
+  1.  **Project lead** (keeps time, coordinates tasks): [Your Member Name(s)]{.blue}
+  2.  **Data wrangler** (loads data, checks quality, makes a clean table): [Your Member Name(s)]{.blue}
+  3.  **Visualization designer** (builds plots, improves readability): [Your Member Name(s)]{.blue}
+  4.  **Storyteller** (writes narrative, connects visuals to claims): [Your Member Name(s)]{.blue}
 
 [Role note]: Each student plays a specific role for accountability, but teammates are welcome to work together, help, and learn from each other to produce a high quality and cohesive work.
 

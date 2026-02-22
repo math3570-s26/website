@@ -31,8 +31,8 @@ In **lab.qmd** `## Lab 16` section
 
 - Import the data at <https://www.jaredlander.com/data/DiamondColors.csv>. Call it `diamond_color`.
 
-```{r, eval=FALSE}
-#| purl=FALSE
+```{r}
+#| eval: false
 diamond_color <- readr::read_csv("the url")
 ```
 

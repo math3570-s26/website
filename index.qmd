@@ -21,9 +21,9 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | 6 | Tue, Feb 17 | Data Visualization-categorical and numerical data | [🖥️visualization](/slides/10-viz-slides.html) | [📋12](/exercise/lab12-facet.html) [📋13](/exercise/lab13-visualization.html) | [Activity 1](ai/ai_1.html) |  |
 |  | Thu, Feb 19 | ~~Interactive Data Visualization~~ | [🖥️interactive-viz](/slides/11-interactive-viz-slides.html) | [📋14](/exercise/lab14-interactive.html) (optional) |  |  |
 | 7 | Tue, Feb 24 | Data Wrangling - one data frame | [🖥️dplyr-1](/slides/12-dplyr-1-slides.html) | [📋15](/exercise/lab15-dplyr.html) |  |  |
-|  | Thu, Feb 26 | Data Wrangling - two data frames | 🖥️dplyr-2 |  |  |  |
-| 8 | **Tue, Mar 3** | [**Mini Project 1 Presentation: Exploratory Data Storytelling**](/project/mini_project_1.html) |  | 📋16 |  |  |
-|  | Thu, Mar 5 | Data Wrangling - tidyr | 🖥️tidyr | 📋17 | [Activity 2](ai/ai_2.html) |  |
+|  | Thu, Feb 26 | Data Wrangling - two data frames | [🖥️dplyr-2](/slides/13-dplyr-2-slides.html) | [📋16](/exercise/lab16-join.html) |  |  |
+| 8 | **Tue, Mar 3** | [**Mini Project 1 Presentation: Exploratory Data Storytelling**](/project/mini_project_1.html) |  |  |  |  |
+|  | Thu, Mar 5 | Data Wrangling - tidyr | [🖥️ tidyr](/slides/14-tidyr-slides.html) | [📋17](/exercise/lab17-tidyr.html) | [Activity 2](ai/ai_2.html) |  |
 | 9 | Tue, Mar 10 | ***NO CLASS: Spring break*** |  |  |  |  |
 |  | Thu, Mar 12 | ***NO CLASS: Spring break*** |  |  |  |  |
 | 10 | Tue, Mar 17 | Probabilistic and Statistical Simulation | 🖥️probstat | 📋18 📋19 |  |  |

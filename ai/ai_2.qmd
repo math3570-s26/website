@@ -251,6 +251,14 @@ Use this exact slide structure:
 
 Time: 12 to 15 minutes.
 
+
+```{r}
+#| echo: false
+#| column: margin
+knitr::include_graphics("../images/QRCode_ai2.png")
+```
+
+
 ## Individual Reflection (each student)
 
 Write 150 to 200 words answering:
@@ -261,3 +269,8 @@ Write 150 to 200 words answering:
 * How will you change your AI use in future data work
 
 Your reflection must match your assigned role.
+
+
+## Participation (non-presenting students)
+
+Please scan the QR code, or go to <https://forms.office.com/r/EFnti60KRk> to share what you learned from this activity.

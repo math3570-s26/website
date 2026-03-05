@@ -7,7 +7,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 
 ::: column-screen-inset-right
 | Week | Date | Topic | Materials | Lab Activity | AI Activity | Project |
-|:---------:|-----------|-----------|:---------:|:---------:|:---------:|----------|
+|:--:|----|----|:--:|:--:|:--:|----|
 | 1 | Tue, Jan 13 | Greetings; Overview of Data Science | [🖥️syllabus](slides/01-syllabus-slides.html) [🖥️overview](slides/02-datascience-slides.html) |  |  |  |
 |  | Thu, Jan 15 | Posit Cloud | [🖥️posit](slides/03-posit-slides.html) | [📋 posit](/exercise/lab00-posit.html) [📋01](/exercise/lab01-rscript.html) |  |  |
 | 2 | Tue, Jan 20 | Git and GitHub | [🖥️git](slides/04-git-slides.html) | [📋github](/exercise/lab00-git.html) |  |  |
@@ -21,7 +21,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | 6 | Tue, Feb 17 | Data Visualization-categorical and numerical data | [🖥️visualization](/slides/10-viz-slides.html) | [📋12](/exercise/lab12-facet.html) [📋13](/exercise/lab13-visualization.html) | [Activity 1](ai/ai_1.html) |  |
 |  | Thu, Feb 19 | ~~Interactive Data Visualization~~ | [🖥️interactive-viz](/slides/11-interactive-viz-slides.html) | [📋14](/exercise/lab14-interactive.html) (optional) |  |  |
 | 7 | Tue, Feb 24 | Data Wrangling - one data frame | [🖥️dplyr-1](/slides/12-dplyr-1-slides.html) | [📋15](/exercise/lab15-dplyr.html) |  |  |
-|  | Thu, Feb 26 | Data Wrangling - two data frames | [🖥️dplyr-2](/slides/13-dplyr-2-slides.html) | [📋16](/exercise/lab16-join.html) |  |  |
+|  | Thu, Feb 26 | Data Wrangling - two data frames | [🖥️dplyr-2](/slides/13-dplyr-2-slides.html) | [📋16](/exercise/lab16-join.html) | [elec_vote_y](/slides/data/results_us_election_2016.csv) |  |
 | 8 | **Tue, Mar 3** | [**Mini Project 1 Presentation: Exploratory Data Storytelling**](/project/mini_project_1.html) |  |  |  |  |
 |  | Thu, Mar 5 | Data Wrangling - tidyr | [🖥️ tidyr](/slides/14-tidyr-slides.html) | [📋17](/exercise/lab17-tidyr.html) | [Activity 2](ai/ai_2.html) |  |
 | 9 | Tue, Mar 10 | ***NO CLASS: Spring break*** |  |  |  |  |
@@ -50,5 +50,5 @@ knitr::knit_exit()
 ```
 
 |   |   |   | Prepare | Slides | AE | Labs | HW | Present | Project |
-|--------|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|----|----|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Week | Date | Topic | 📖 | 🖥️ | 📋 | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️ | ✅ | 📂 |

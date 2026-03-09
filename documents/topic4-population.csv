@@ -1,0 +1,301 @@
+order_id,warehouse,region,carrier,rush_order,fragile,promised_days,actual_days,late_delivery,order_value_usd,delay_days,high_value
+ORD00001,Mountain,Northeast,ParcelPro,Yes,No,5,5,No,85.71,0,No
+ORD00002,North Hub,Northeast,SwiftShip,No,Yes,4,4,No,31.99,0,No
+ORD00003,Mountain,Midwest,ShipFast,No,No,4,5,Yes,72.32,1,No
+ORD00004,North Hub,Northeast,ShipFast,No,No,2,2,No,60.42,0,No
+ORD00005,South Hub,South,SwiftShip,No,No,4,3,No,34.6,-1,No
+ORD00006,North Hub,Midwest,SwiftShip,No,No,5,5,No,65.86,0,No
+ORD00007,North Hub,Northeast,ShipFast,No,No,3,4,Yes,59.3,1,No
+ORD00008,North Hub,West,ParcelPro,No,No,3,8,Yes,89.34,5,No
+ORD00009,South Hub,Northeast,ShipFast,Yes,Yes,2,2,No,55.85,0,No
+ORD00010,Lakeside,South,ParcelPro,No,No,4,7,Yes,31.85,3,No
+ORD00011,South Hub,Midwest,SwiftShip,No,No,4,4,No,99.55,0,No
+ORD00012,South Hub,South,ShipFast,No,No,3,3,No,122.94,0,Yes
+ORD00013,Lakeside,South,ShipFast,No,No,5,5,No,110.55,0,No
+ORD00014,North Hub,Midwest,SwiftShip,No,No,3,4,Yes,80.96,1,No
+ORD00015,South Hub,Northeast,ShipFast,No,No,3,4,Yes,47.95,1,No
+ORD00016,South Hub,South,SwiftShip,No,No,3,3,No,39.33,0,No
+ORD00017,South Hub,Northeast,ShipFast,No,No,4,4,No,68.12,0,No
+ORD00018,South Hub,South,SwiftShip,No,No,4,4,No,41.02,0,No
+ORD00019,South Hub,Northeast,ParcelPro,No,No,3,3,No,49.48,0,No
+ORD00020,Mountain,Midwest,SwiftShip,No,No,3,3,No,64.11,0,No
+ORD00021,South Hub,South,ShipFast,No,No,3,3,No,175.28,0,Yes
+ORD00022,South Hub,Midwest,SwiftShip,No,No,2,2,No,206.71,0,Yes
+ORD00023,North Hub,Midwest,ShipFast,No,No,2,2,No,49.4,0,No
+ORD00024,North Hub,Northeast,ParcelPro,No,No,3,2,No,45.64,-1,No
+ORD00025,Lakeside,West,ShipFast,No,No,4,4,No,114.12,0,No
+ORD00026,Mountain,Midwest,ParcelPro,No,No,2,3,Yes,86.84,1,No
+ORD00027,Lakeside,Midwest,ShipFast,No,No,2,2,No,32.59,0,No
+ORD00028,Lakeside,Midwest,ParcelPro,Yes,No,4,6,Yes,39.89,2,No
+ORD00029,Lakeside,West,SwiftShip,No,No,4,4,No,81.54,0,No
+ORD00030,Lakeside,West,ParcelPro,No,Yes,3,3,No,32.39,0,No
+ORD00031,Mountain,Northeast,ParcelPro,No,No,4,4,No,121.49,0,Yes
+ORD00032,Mountain,Northeast,ParcelPro,No,No,3,2,No,49.13,-1,No
+ORD00033,North Hub,South,SwiftShip,No,Yes,3,3,No,47.32,0,No
+ORD00034,Lakeside,West,ParcelPro,No,No,4,4,No,94.02,0,No
+ORD00035,South Hub,West,ParcelPro,No,No,4,4,No,22.13,0,No
+ORD00036,Lakeside,Midwest,ParcelPro,No,No,3,3,No,40.56,0,No
+ORD00037,South Hub,West,SwiftShip,No,No,3,6,Yes,93.34,3,No
+ORD00038,South Hub,Northeast,ShipFast,Yes,No,3,3,No,64.6,0,No
+ORD00039,South Hub,Northeast,ShipFast,No,No,5,6,Yes,163.8,1,Yes
+ORD00040,North Hub,Midwest,ShipFast,No,No,4,4,No,99.53,0,No
+ORD00041,Mountain,West,ParcelPro,No,No,2,2,No,40.86,0,No
+ORD00042,North Hub,South,SwiftShip,No,No,4,4,No,115.55,0,No
+ORD00043,North Hub,Northeast,SwiftShip,No,Yes,4,4,No,79.77,0,No
+ORD00044,South Hub,South,ParcelPro,No,Yes,4,10,Yes,203.89,6,Yes
+ORD00045,North Hub,South,SwiftShip,Yes,No,2,5,Yes,59.26,3,No
+ORD00046,Lakeside,Northeast,ParcelPro,No,No,5,5,No,26.43,0,No
+ORD00047,Mountain,West,ParcelPro,No,No,2,2,No,67.88,0,No
+ORD00048,South Hub,Midwest,SwiftShip,No,No,3,3,No,67.98,0,No
+ORD00049,North Hub,Northeast,ParcelPro,No,No,4,4,No,61.13,0,No
+ORD00050,Lakeside,Northeast,ShipFast,No,Yes,3,2,No,55.25,-1,No
+ORD00051,South Hub,West,SwiftShip,No,No,3,6,Yes,93.03,3,No
+ORD00052,Mountain,West,SwiftShip,Yes,No,2,2,No,90.6,0,No
+ORD00053,South Hub,West,SwiftShip,Yes,No,2,2,No,62.18,0,No
+ORD00054,Mountain,West,ShipFast,No,No,3,3,No,40.97,0,No
+ORD00055,South Hub,West,ParcelPro,No,No,3,5,Yes,47.93,2,No
+ORD00056,South Hub,South,ParcelPro,No,No,2,2,No,202.81,0,Yes
+ORD00057,Mountain,West,SwiftShip,Yes,No,2,2,No,31.15,0,No
+ORD00058,Mountain,Midwest,ParcelPro,No,No,5,5,No,140.86,0,Yes
+ORD00059,South Hub,Northeast,ShipFast,No,No,4,4,No,325.53,0,Yes
+ORD00060,South Hub,South,SwiftShip,No,No,4,4,No,104.16,0,No
+ORD00061,Mountain,Midwest,ParcelPro,Yes,No,4,8,Yes,233.36,4,Yes
+ORD00062,South Hub,Northeast,ParcelPro,No,No,4,4,No,53.07,0,No
+ORD00063,Lakeside,Midwest,SwiftShip,No,No,4,4,No,43.95,0,No
+ORD00064,Mountain,Northeast,SwiftShip,No,No,2,7,Yes,64.62,5,No
+ORD00065,South Hub,South,ParcelPro,No,No,3,3,No,24.31,0,No
+ORD00066,North Hub,Northeast,ParcelPro,No,No,3,5,Yes,163.19,2,Yes
+ORD00067,South Hub,Northeast,ShipFast,No,No,3,3,No,21.76,0,No
+ORD00068,Lakeside,South,ShipFast,No,No,3,3,No,63.24,0,No
+ORD00069,Mountain,Midwest,SwiftShip,No,No,3,8,Yes,77.79,5,No
+ORD00070,Mountain,South,SwiftShip,No,No,2,1,No,48.31,-1,No
+ORD00071,North Hub,Midwest,SwiftShip,No,No,3,3,No,36.28,0,No
+ORD00072,Lakeside,South,SwiftShip,No,No,2,2,No,126.88,0,Yes
+ORD00073,South Hub,West,ParcelPro,No,No,3,3,No,38.98,0,No
+ORD00074,Lakeside,Midwest,ShipFast,No,No,2,2,No,57.42,0,No
+ORD00075,North Hub,West,ParcelPro,Yes,No,3,3,No,173.6,0,Yes
+ORD00076,Mountain,Northeast,ParcelPro,No,No,4,4,No,164.07,0,Yes
+ORD00077,North Hub,West,SwiftShip,Yes,No,5,8,Yes,92.1,3,No
+ORD00078,South Hub,Midwest,ShipFast,Yes,No,3,4,Yes,57.85,1,No
+ORD00079,North Hub,South,SwiftShip,No,No,4,4,No,15.14,0,No
+ORD00080,South Hub,South,ParcelPro,Yes,No,4,4,No,89.1,0,No
+ORD00081,Lakeside,Northeast,ParcelPro,No,No,5,5,No,75.47,0,No
+ORD00082,North Hub,West,SwiftShip,No,No,4,4,No,73.06,0,No
+ORD00083,South Hub,Northeast,ParcelPro,Yes,No,3,4,Yes,31.6,1,No
+ORD00084,North Hub,Midwest,SwiftShip,Yes,No,5,4,No,31.63,-1,No
+ORD00085,Mountain,Midwest,ParcelPro,No,No,2,5,Yes,41.07,3,No
+ORD00086,Lakeside,Northeast,SwiftShip,No,No,4,4,No,146.63,0,Yes
+ORD00087,South Hub,South,SwiftShip,No,No,3,3,No,81.5,0,No
+ORD00088,North Hub,West,SwiftShip,Yes,No,2,3,Yes,62.45,1,No
+ORD00089,South Hub,Midwest,ParcelPro,No,No,5,5,No,92.39,0,No
+ORD00090,Mountain,Midwest,ParcelPro,No,No,3,3,No,41.74,0,No
+ORD00091,North Hub,Northeast,ShipFast,Yes,No,2,5,Yes,43.73,3,No
+ORD00092,Lakeside,Northeast,SwiftShip,No,No,4,4,No,49.57,0,No
+ORD00093,South Hub,West,SwiftShip,No,No,3,5,Yes,124.42,2,Yes
+ORD00094,South Hub,Northeast,ParcelPro,No,No,4,10,Yes,30.97,6,No
+ORD00095,South Hub,Northeast,SwiftShip,No,Yes,3,3,No,111.86,0,No
+ORD00096,South Hub,West,ShipFast,No,No,2,2,No,101.75,0,No
+ORD00097,Mountain,Midwest,SwiftShip,No,No,4,4,No,88.17,0,No
+ORD00098,North Hub,West,ParcelPro,No,No,3,3,No,73.01,0,No
+ORD00099,Mountain,Northeast,ParcelPro,Yes,No,4,8,Yes,106.33,4,No
+ORD00100,South Hub,South,SwiftShip,No,No,2,2,No,86.37,0,No
+ORD00101,North Hub,South,ShipFast,No,No,3,4,Yes,166.88,1,Yes
+ORD00102,South Hub,West,SwiftShip,Yes,No,4,4,No,46.2,0,No
+ORD00103,South Hub,South,ParcelPro,No,No,4,6,Yes,59.37,2,No
+ORD00104,Lakeside,Midwest,ParcelPro,No,No,2,6,Yes,88.67,4,No
+ORD00105,North Hub,Midwest,ParcelPro,No,Yes,2,3,Yes,22.5,1,No
+ORD00106,South Hub,West,SwiftShip,No,No,5,5,No,88.43,0,No
+ORD00107,Mountain,Midwest,ParcelPro,No,No,4,4,No,68.38,0,No
+ORD00108,North Hub,Midwest,SwiftShip,No,No,4,6,Yes,96.92,2,No
+ORD00109,North Hub,Midwest,SwiftShip,No,No,4,4,No,60.27,0,No
+ORD00110,North Hub,Midwest,SwiftShip,No,No,5,5,No,144.26,0,Yes
+ORD00111,North Hub,Midwest,SwiftShip,No,No,5,5,No,80.94,0,No
+ORD00112,Mountain,Northeast,ShipFast,No,No,5,5,No,58.46,0,No
+ORD00113,Lakeside,Midwest,ShipFast,No,No,4,4,No,166.73,0,Yes
+ORD00114,South Hub,Northeast,ShipFast,No,No,2,2,No,106.12,0,No
+ORD00115,Mountain,South,SwiftShip,No,No,2,2,No,75.68,0,No
+ORD00116,South Hub,West,SwiftShip,No,No,5,9,Yes,79.03,4,No
+ORD00117,Lakeside,Midwest,ShipFast,No,No,5,5,No,58.51,0,No
+ORD00118,Lakeside,Midwest,SwiftShip,No,No,2,6,Yes,49.53,4,No
+ORD00119,Lakeside,West,ShipFast,No,No,2,2,No,40.96,0,No
+ORD00120,Lakeside,Midwest,ShipFast,No,No,3,3,No,50.88,0,No
+ORD00121,North Hub,Northeast,SwiftShip,No,No,3,3,No,45.91,0,No
+ORD00122,Lakeside,West,ParcelPro,No,No,3,3,No,102.49,0,No
+ORD00123,North Hub,Northeast,ShipFast,Yes,No,3,3,No,58.75,0,No
+ORD00124,Mountain,West,ParcelPro,No,No,3,3,No,35.19,0,No
+ORD00125,South Hub,South,SwiftShip,No,No,4,4,No,46.17,0,No
+ORD00126,North Hub,Midwest,SwiftShip,No,No,2,6,Yes,101.71,4,No
+ORD00127,North Hub,South,SwiftShip,No,No,3,3,No,35.66,0,No
+ORD00128,North Hub,Midwest,ParcelPro,No,No,2,2,No,91.85,0,No
+ORD00129,North Hub,South,SwiftShip,No,No,5,10,Yes,153.34,5,Yes
+ORD00130,South Hub,South,SwiftShip,No,Yes,3,4,Yes,143.23,1,Yes
+ORD00131,South Hub,Northeast,ParcelPro,Yes,Yes,3,5,Yes,63.97,2,No
+ORD00132,South Hub,Northeast,ParcelPro,No,No,3,3,No,173.25,0,Yes
+ORD00133,North Hub,Midwest,ParcelPro,No,No,4,7,Yes,242.59,3,Yes
+ORD00134,Mountain,South,ShipFast,No,No,2,2,No,47.72,0,No
+ORD00135,Mountain,Northeast,ShipFast,No,No,4,4,No,99.11,0,No
+ORD00136,North Hub,West,SwiftShip,Yes,No,4,4,No,92.12,0,No
+ORD00137,South Hub,West,SwiftShip,No,No,2,2,No,160.81,0,Yes
+ORD00138,North Hub,South,ShipFast,No,No,3,3,No,72.92,0,No
+ORD00139,Mountain,Midwest,ShipFast,No,Yes,3,7,Yes,80.58,4,No
+ORD00140,North Hub,West,ParcelPro,No,No,3,5,Yes,89.15,2,No
+ORD00141,North Hub,South,ParcelPro,Yes,No,5,5,No,88.35,0,No
+ORD00142,South Hub,Midwest,ParcelPro,No,No,5,5,No,103.66,0,No
+ORD00143,South Hub,Midwest,ShipFast,No,No,3,3,No,63.22,0,No
+ORD00144,Mountain,South,ShipFast,No,No,2,4,Yes,55.23,2,No
+ORD00145,North Hub,Northeast,SwiftShip,No,No,2,2,No,49.21,0,No
+ORD00146,Lakeside,South,SwiftShip,No,No,5,5,No,36.5,0,No
+ORD00147,South Hub,West,ShipFast,No,No,2,2,No,38.58,0,No
+ORD00148,Lakeside,South,SwiftShip,No,No,3,3,No,71.1,0,No
+ORD00149,South Hub,West,SwiftShip,No,No,4,3,No,91.13,-1,No
+ORD00150,North Hub,Midwest,ShipFast,No,No,2,2,No,46.34,0,No
+ORD00151,South Hub,West,ParcelPro,No,Yes,3,4,Yes,94.26,1,No
+ORD00152,North Hub,Midwest,SwiftShip,No,No,4,4,No,36.2,0,No
+ORD00153,Mountain,Midwest,ShipFast,Yes,No,5,6,Yes,106.33,1,No
+ORD00154,North Hub,South,ParcelPro,No,No,3,3,No,23.13,0,No
+ORD00155,Lakeside,Midwest,ParcelPro,No,No,5,5,No,32.51,0,No
+ORD00156,South Hub,Midwest,ShipFast,No,No,3,3,No,43.61,0,No
+ORD00157,Mountain,Midwest,SwiftShip,No,No,4,4,No,148.92,0,Yes
+ORD00158,North Hub,Northeast,ShipFast,Yes,No,2,5,Yes,82.33,3,No
+ORD00159,Mountain,Northeast,SwiftShip,No,No,4,6,Yes,73.65,2,No
+ORD00160,Mountain,Northeast,ShipFast,No,No,2,5,Yes,81.48,3,No
+ORD00161,North Hub,Midwest,ParcelPro,No,No,2,1,No,22.31,-1,No
+ORD00162,North Hub,Northeast,SwiftShip,No,Yes,2,2,No,66.91,0,No
+ORD00163,South Hub,Northeast,SwiftShip,No,Yes,4,4,No,29.06,0,No
+ORD00164,South Hub,Northeast,ShipFast,No,No,4,5,Yes,47.27,1,No
+ORD00165,South Hub,Midwest,SwiftShip,No,No,4,9,Yes,59.0,5,No
+ORD00166,Mountain,South,ParcelPro,No,No,3,3,No,172.1,0,Yes
+ORD00167,Mountain,Northeast,ParcelPro,Yes,Yes,4,6,Yes,97.12,2,No
+ORD00168,South Hub,Midwest,SwiftShip,No,Yes,3,3,No,68.71,0,No
+ORD00169,Mountain,Northeast,ParcelPro,Yes,No,2,3,Yes,64.8,1,No
+ORD00170,South Hub,West,ShipFast,No,No,5,5,No,61.97,0,No
+ORD00171,North Hub,Midwest,ParcelPro,No,No,3,9,Yes,113.28,6,No
+ORD00172,South Hub,South,ShipFast,No,No,4,4,No,53.31,0,No
+ORD00173,Mountain,South,ParcelPro,No,No,2,2,No,47.4,0,No
+ORD00174,North Hub,Northeast,ParcelPro,No,No,3,3,No,88.35,0,No
+ORD00175,Mountain,South,ShipFast,No,No,3,3,No,70.64,0,No
+ORD00176,Lakeside,West,SwiftShip,No,No,3,3,No,15.45,0,No
+ORD00177,South Hub,South,SwiftShip,No,No,4,4,No,75.92,0,No
+ORD00178,North Hub,West,SwiftShip,No,No,5,5,No,67.56,0,No
+ORD00179,Mountain,South,ParcelPro,No,No,4,4,No,89.3,0,No
+ORD00180,Lakeside,Midwest,SwiftShip,No,Yes,5,7,Yes,131.8,2,Yes
+ORD00181,South Hub,Northeast,ShipFast,No,No,4,4,No,55.26,0,No
+ORD00182,South Hub,South,ShipFast,No,No,2,2,No,59.14,0,No
+ORD00183,Mountain,Midwest,SwiftShip,No,No,5,5,No,57.05,0,No
+ORD00184,Lakeside,West,ParcelPro,No,No,2,2,No,182.69,0,Yes
+ORD00185,Mountain,South,ShipFast,Yes,No,3,3,No,41.95,0,No
+ORD00186,South Hub,West,SwiftShip,No,No,3,3,No,52.54,0,No
+ORD00187,South Hub,South,SwiftShip,Yes,No,4,4,No,80.99,0,No
+ORD00188,North Hub,West,ParcelPro,No,No,3,7,Yes,225.32,4,Yes
+ORD00189,Lakeside,Northeast,ShipFast,No,No,3,3,No,79.7,0,No
+ORD00190,Lakeside,Midwest,SwiftShip,No,No,2,2,No,76.88,0,No
+ORD00191,Mountain,West,ParcelPro,Yes,Yes,2,2,No,143.85,0,Yes
+ORD00192,North Hub,South,SwiftShip,No,No,3,3,No,44.9,0,No
+ORD00193,South Hub,Northeast,SwiftShip,No,No,3,3,No,43.21,0,No
+ORD00194,Mountain,Midwest,SwiftShip,No,No,5,5,No,21.24,0,No
+ORD00195,Mountain,South,SwiftShip,No,No,2,2,No,55.37,0,No
+ORD00196,Lakeside,Northeast,SwiftShip,No,No,2,2,No,58.28,0,No
+ORD00197,Mountain,Northeast,ParcelPro,No,No,3,3,No,61.88,0,No
+ORD00198,North Hub,West,SwiftShip,No,No,5,6,Yes,106.18,1,No
+ORD00199,Mountain,Midwest,ShipFast,No,No,4,8,Yes,198.02,4,Yes
+ORD00200,Mountain,West,SwiftShip,No,No,3,2,No,30.97,-1,No
+ORD00201,North Hub,Midwest,ParcelPro,Yes,No,3,3,No,26.87,0,No
+ORD00202,Mountain,West,ParcelPro,No,No,3,5,Yes,28.35,2,No
+ORD00203,Lakeside,West,ParcelPro,Yes,Yes,4,4,No,150.49,0,Yes
+ORD00204,Lakeside,West,ParcelPro,No,No,3,3,No,68.52,0,No
+ORD00205,Lakeside,Northeast,ShipFast,No,No,4,3,No,66.68,-1,No
+ORD00206,Lakeside,South,ShipFast,No,No,4,6,Yes,82.13,2,No
+ORD00207,South Hub,South,ParcelPro,No,No,3,3,No,53.02,0,No
+ORD00208,North Hub,South,ShipFast,No,No,5,5,No,165.54,0,Yes
+ORD00209,Lakeside,Midwest,SwiftShip,No,No,4,4,No,83.63,0,No
+ORD00210,South Hub,South,ShipFast,No,No,2,2,No,109.51,0,No
+ORD00211,North Hub,Midwest,ShipFast,No,No,4,4,No,220.07,0,Yes
+ORD00212,North Hub,West,ParcelPro,Yes,No,3,3,No,68.44,0,No
+ORD00213,North Hub,Midwest,ParcelPro,No,No,4,4,No,66.24,0,No
+ORD00214,South Hub,Northeast,ParcelPro,No,No,5,4,No,71.05,-1,No
+ORD00215,North Hub,Northeast,SwiftShip,Yes,No,5,5,No,50.25,0,No
+ORD00216,Lakeside,Midwest,ParcelPro,No,No,5,5,No,56.21,0,No
+ORD00217,Lakeside,South,ShipFast,No,No,4,4,No,40.16,0,No
+ORD00218,South Hub,Midwest,ShipFast,No,No,5,5,No,27.48,0,No
+ORD00219,North Hub,South,ShipFast,No,No,4,4,No,66.54,0,No
+ORD00220,North Hub,South,ParcelPro,No,No,3,3,No,250.44,0,Yes
+ORD00221,South Hub,South,ShipFast,Yes,No,3,3,No,155.0,0,Yes
+ORD00222,Lakeside,Northeast,ShipFast,Yes,No,3,3,No,23.5,0,No
+ORD00223,South Hub,Northeast,ParcelPro,No,No,3,3,No,176.88,0,Yes
+ORD00224,Lakeside,South,SwiftShip,No,No,3,3,No,74.92,0,No
+ORD00225,North Hub,Northeast,SwiftShip,No,No,4,4,No,39.09,0,No
+ORD00226,Mountain,Midwest,SwiftShip,No,No,4,4,No,54.86,0,No
+ORD00227,Lakeside,South,SwiftShip,Yes,No,2,2,No,41.89,0,No
+ORD00228,North Hub,South,ParcelPro,No,Yes,2,2,No,78.83,0,No
+ORD00229,Lakeside,Midwest,SwiftShip,Yes,No,4,3,No,83.25,-1,No
+ORD00230,Mountain,Midwest,ShipFast,No,No,2,2,No,127.2,0,Yes
+ORD00231,South Hub,West,SwiftShip,Yes,No,4,10,Yes,70.78,6,No
+ORD00232,Lakeside,Northeast,ShipFast,No,No,3,2,No,82.31,-1,No
+ORD00233,North Hub,Midwest,SwiftShip,No,No,3,3,No,40.97,0,No
+ORD00234,Mountain,Northeast,SwiftShip,No,No,4,4,No,63.88,0,No
+ORD00235,Mountain,Northeast,ShipFast,Yes,No,3,3,No,66.02,0,No
+ORD00236,South Hub,Midwest,ShipFast,No,No,3,3,No,34.49,0,No
+ORD00237,North Hub,Midwest,ParcelPro,No,No,2,2,No,72.01,0,No
+ORD00238,Lakeside,West,ShipFast,No,No,3,2,No,43.95,-1,No
+ORD00239,North Hub,West,ShipFast,No,No,4,7,Yes,79.98,3,No
+ORD00240,Mountain,South,ShipFast,Yes,No,3,5,Yes,63.83,2,No
+ORD00241,Lakeside,Northeast,ShipFast,No,No,5,5,No,251.41,0,Yes
+ORD00242,North Hub,West,ParcelPro,No,No,2,2,No,39.03,0,No
+ORD00243,North Hub,Northeast,ParcelPro,Yes,Yes,2,4,Yes,89.38,2,No
+ORD00244,Mountain,Northeast,ParcelPro,No,No,2,1,No,70.06,-1,No
+ORD00245,South Hub,West,ShipFast,No,Yes,4,4,No,90.55,0,No
+ORD00246,South Hub,Midwest,ShipFast,No,No,4,4,No,78.67,0,No
+ORD00247,North Hub,Northeast,SwiftShip,Yes,No,4,7,Yes,148.17,3,Yes
+ORD00248,Lakeside,West,SwiftShip,No,No,4,4,No,57.03,0,No
+ORD00249,South Hub,Midwest,ShipFast,No,No,3,3,No,38.77,0,No
+ORD00250,Lakeside,South,ParcelPro,No,No,3,3,No,58.72,0,No
+ORD00251,South Hub,Northeast,SwiftShip,Yes,Yes,3,8,Yes,86.6,5,No
+ORD00252,Lakeside,Northeast,SwiftShip,No,No,3,2,No,88.06,-1,No
+ORD00253,North Hub,South,SwiftShip,No,Yes,4,4,No,43.65,0,No
+ORD00254,South Hub,West,ParcelPro,Yes,No,3,3,No,76.87,0,No
+ORD00255,North Hub,South,ShipFast,No,No,3,3,No,122.51,0,Yes
+ORD00256,Mountain,Midwest,ParcelPro,No,No,3,6,Yes,222.68,3,Yes
+ORD00257,Lakeside,South,SwiftShip,Yes,No,2,2,No,124.15,0,Yes
+ORD00258,North Hub,Midwest,ShipFast,No,No,4,4,No,46.08,0,No
+ORD00259,Mountain,West,ShipFast,Yes,No,4,7,Yes,95.33,3,No
+ORD00260,South Hub,Northeast,ParcelPro,No,No,4,4,No,25.08,0,No
+ORD00261,North Hub,South,SwiftShip,No,No,4,4,No,62.51,0,No
+ORD00262,North Hub,Northeast,ShipFast,No,No,3,3,No,88.49,0,No
+ORD00263,North Hub,South,SwiftShip,No,No,4,3,No,60.6,-1,No
+ORD00264,Lakeside,South,ParcelPro,No,No,3,2,No,47.99,-1,No
+ORD00265,South Hub,South,SwiftShip,Yes,No,3,4,Yes,77.71,1,No
+ORD00266,Mountain,Midwest,SwiftShip,No,No,4,4,No,60.32,0,No
+ORD00267,South Hub,Northeast,ParcelPro,No,No,5,4,No,51.43,-1,No
+ORD00268,South Hub,West,SwiftShip,No,No,2,2,No,63.89,0,No
+ORD00269,South Hub,Northeast,SwiftShip,No,No,3,2,No,141.04,-1,Yes
+ORD00270,Mountain,Northeast,ShipFast,No,No,2,6,Yes,68.94,4,No
+ORD00271,North Hub,West,ShipFast,No,No,2,6,Yes,134.71,4,Yes
+ORD00272,Mountain,Northeast,ShipFast,Yes,No,3,3,No,43.98,0,No
+ORD00273,South Hub,West,ShipFast,No,No,4,4,No,81.38,0,No
+ORD00274,South Hub,Midwest,ParcelPro,No,No,2,5,Yes,38.99,3,No
+ORD00275,Mountain,Northeast,ParcelPro,Yes,No,3,5,Yes,67.8,2,No
+ORD00276,South Hub,Midwest,ParcelPro,No,No,2,3,Yes,242.66,1,Yes
+ORD00277,North Hub,South,SwiftShip,No,No,3,3,No,37.86,0,No
+ORD00278,Mountain,Midwest,ParcelPro,No,Yes,2,5,Yes,40.09,3,No
+ORD00279,South Hub,West,SwiftShip,No,No,2,3,Yes,30.19,1,No
+ORD00280,North Hub,Northeast,ParcelPro,No,No,4,4,No,33.89,0,No
+ORD00281,South Hub,South,ShipFast,Yes,No,4,6,Yes,90.69,2,No
+ORD00282,Lakeside,West,ShipFast,No,No,4,4,No,75.95,0,No
+ORD00283,Mountain,Northeast,ShipFast,No,No,2,3,Yes,26.12,1,No
+ORD00284,South Hub,West,ShipFast,No,No,4,4,No,114.08,0,No
+ORD00285,Lakeside,West,ParcelPro,No,Yes,5,4,No,121.88,-1,Yes
+ORD00286,South Hub,West,SwiftShip,No,No,3,5,Yes,34.31,2,No
+ORD00287,Mountain,Northeast,SwiftShip,No,No,3,3,No,74.57,0,No
+ORD00288,Lakeside,Midwest,SwiftShip,No,Yes,5,5,No,101.49,0,No
+ORD00289,Mountain,West,ParcelPro,No,No,3,6,Yes,83.39,3,No
+ORD00290,South Hub,Midwest,SwiftShip,No,No,2,2,No,43.86,0,No
+ORD00291,Mountain,Midwest,SwiftShip,No,Yes,2,4,Yes,107.25,2,No
+ORD00292,North Hub,South,ShipFast,No,No,5,5,No,55.69,0,No
+ORD00293,North Hub,South,SwiftShip,Yes,No,2,2,No,30.24,0,No
+ORD00294,South Hub,Northeast,SwiftShip,No,No,5,4,No,94.47,-1,No
+ORD00295,South Hub,Midwest,ShipFast,No,No,3,3,No,116.05,0,No
+ORD00296,North Hub,West,SwiftShip,No,No,4,4,No,44.76,0,No
+ORD00297,North Hub,West,ParcelPro,Yes,No,2,2,No,133.5,0,Yes
+ORD00298,Mountain,Midwest,SwiftShip,No,No,3,3,No,71.59,0,No
+ORD00299,South Hub,South,SwiftShip,No,No,3,4,Yes,52.71,1,No
+ORD00300,Mountain,Midwest,SwiftShip,No,No,3,3,No,83.48,0,No

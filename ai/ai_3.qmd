@@ -79,11 +79,11 @@ Responsibilities
 
 Required file
 
-- `topic3-data.csv`
+- [`topic3-data.csv`](../documents/topic3-data.csv)
 
 Dataset notes
 
-- `README_MessyRetailOrders_Topic3.txt`
+- [`README_MessyRetailOrders_Topic3.txt`](../documents/README_MessyRetailOrders_Topic3.txt)
 
 
 ::: {.callout-warning title="Important note"}

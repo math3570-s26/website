@@ -23,8 +23,13 @@ set.seed(3570)
 sample(teams, 1)
 ```
 
+-   Activity 3 is presented by team [**The Data Scientists**]{.blue}: Eliza, Miranda, Lauren.
 
--   Activity 3 is presented by team .
+```{r}
+teams <- c("The Data Scientists", "Stat Padders", "Data Divers", "Plot Squad")
+set.seed(3570)
+sample(teams, 1)
+```
 
 -   Activity 4 is presented by team .
 

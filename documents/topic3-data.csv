@@ -1,0 +1,481 @@
+order_id,order_date,ship_date,region,city,category,subcategory,sales_channel,customer_type,quantity,unit_price,discount,revenue,returned,notes
+ORD-1001,2025-04-04,2025/04/11,Midwest,Chicago,Furniture,Chair,In-Store ,Consumer,3,125.71,,377.12 USD,Y,.
+ORD-1002,04-11-2025,2025-04-14,West,San Diego,Office Supplies,Paper,Online,Home Office,1,$14.04,15 percent,11.93,FALSE,priority
+ORD-1002,4/11/25,Apr 14 2025,West,San Diego,Technology,Laptop,Online,Home Office,1,902.88,0.05,857.74 USD,No,
+ORD-1002,4/11/25,2025/04/14,West,SanDiego,Office-Supplies,Paper,Online,Home Office,1 units,11.36,0,11,no,gift
+ORD-1003,2/25/25,3/1/25,South,Dallas,Office Supplies,Binder,Online,Home Office,.,6.92,0.10,12.46 USD,Yes,
+ORD-1004,Mar 02 2025,2025-03-08,South,Dallas,Office Supplies,Binder,In-Store,Consumer,3,7.60,0,22.81 USD,FALSE,late addr fix
+ORD-1004,2025-03-02,Mar 08 2025,South,Dallas,Tech,Headphones,In-Store,Consumer,1,81.07,0,$81.07,FALSE,rush
+ORD-1004,2025-03-02,2025-03-08,South,Dallas,Office Supplies,Paper,In store,Consumer,3,11.43,0.05,unknown,no,priority
+ORD-1005,02-14-2025,2025-02-16,West,Phoenix,Office Supplies,Pen,Phone,Corporate,2,3.47,10%,$6.24,no,priority
+ORD-1005,2/14/25,2/16/25,West,phoenix,Office Supplies,Binder,Phone,Corporate,2,9.34,15 percent,$15.87,No,
+ORD-1005,2025-02-14,2/16/25,West ,Phoenix,office_supplies,Binder,Phone,Corporate,2 units,$9.35,10%,unknown,No,
+ORD-1006,3/31/25,2025/04/07,South ,Nashville,Technology,Laptop,Online,Consumer,.,$931.30,none,"USD 1,862.59",FALSE,priority
+ORD-1007,5/4/25,2025-05-09,Midwest,Chicago,Office Supplies ,Pen,In-Store,Consumer, 4 ,$3.19,0.15,$10.86,No,.
+ORD-1007,May 04 2025,May 09 2025,Mid West,Chicago,Office Supplies,Pen,instore,Consumer,one,2.92,0.10,2.63,No,
+ORD-1008,Feb 05 2025,Feb 06 2025,SOUTH,Houston,Furniture,Chair,Web,Consumer,2, 140.48 ,15%,$238.82,No,late addr fix
+ORD-1009,Jan 28 2025,2025/01/29,South,Houston,Office Supplies,Pen,online,Consumer,3,USD 2.66,0.05,$7.58,No,
+ORD-1010,04-07-2025,4/11/25,Mid West,milwaukee,Office Supplies,Paper,In-Store,Corporate,4,11, 5% ,42.51 USD,N,
+ORD-1010,04-07-2025,2025-04-11,Mid West,Milwaukee,Technology,Laptop,In-Store,corporate,1 units,898.34,, 898.34 ,N,priority
+ORD-1011,5/15/25,2025/05/19,Northeast,Philadelphia,Office Supplies,Paper,Online,Corporate,.,10.94, 15% ,$27.89,FALSE,
+ORD-1011,2025-05-15,2025-05-19,Northeast,Philadelphia,Office Supplies,Binder,Online,corporate,4,$7.64,0,31,no,priority
+ORD-1012,2025-01-04,Jan 11 2025,West,Phoenix,Office Supplies,Binder,Online,Corporate ,1,8,0.05,$7.80,no,
+ORD-1012,01-04-2025,Jan 11 2025,West,Phoenix,office_supplies,Paper,Online,Corporate,1,10.87,none,10.87,No,priority
+ORD-1013,2025-07-06,2025/07/10,West,Portland,Furnitures,Desk,In-Store,Consumer,1 units,302,.10,$272.10,—,
+ORD-1014,Jan 03 2025,2025/01/05,South,Atlanta,Office Supplies,Pen,In-Store,Corporate,2,2.58,0,$5.17,FALSE,late addr fix
+ORD-1015,Jun 10 2025,Jun 16 2025,Northeast,Boston,office_supplies,Binder,Online,consumer,1,8.57,10%, 7.72 ,0,
+ORD-1015,06-10-2025,TBD,NE,Boston,Technology,Headphones,Online,Consumer,2,USD 84.69,10 percent,152.45,TRUE,.
+ORD-1016,5/5/25,2025/05/08,Northeast,New York ,Technology,Headphones,E-Commerce,Corporate ,1,69.08,10%,-$37.30,TRUE,.
+ORD-1016,May 05 2025,2025-05-08,Northeast,New York,Office-Supplies,Binder,Online,Corporate, 1 ,8.50,0,$8.50,N,—
+ORD-1017,2025-05-10,5/13/25,Midwest,Milwaukee,Office-Supplies,Pen,In-Store,Consumer, 1 ,2.66,0.15, 2.26 ,N,
+ORD-1017,2025-05-10,2025-05-13,Midwest,Milwaukee,Office Supplies,Binder,In-Store,Consumer,3 units,8.96, 5% ,25.53,0,
+ORD-1017,2025-02-30,2025/05/13,Midwest,Milwaukee,Office Supplies,Pen,In-Store,Consumer,1,USD 3.44,0.15,2.92,FALSE,
+ORD-1018,Feb 18 2025,Feb 21 2025,Northeast,Philadelphia,technology,Monitor,Online,Consumer,4,$216.37,0.15,735.65 USD,No,rush
+ORD-1019,Apr 15 2025,2025/04/19,South,Dallas,unknown,Binder,In-Store,Consumer ,2,7.78,0.20,12.45 USD,N,priority
+ORD-1019,Apr 15 2025,Apr 19 2025,South,Dallas,Furniture ,Desk,In-Store ,Consumer,.,$282.87,0.05,$268.73,0,
+ORD-1020,May 23 2025,2025/05/28,Midwest,Madison,Furniture,Chair,In-Store,Consumer,1,116.51,0.10,$104.86,no,priority
+ORD-1021,Jul 07 2025,2025-07-10,Northeast,Pittsburgh,Office Supplies,Binder,Phone,Consumer,3,7.46,0.05,21.26,0,rush
+ORD-1021,Jul 07 2025,2025/07/10,North East,Pittsburgh,Furniture,Desk,Phone,Consumer,4,278,,"$1,112.55",N,rush
+ORD-1022,03-03-2025,2025/03/06,West,Phoenix,Office Supplies,Binder,Online,Corporate,2,8.83,none,17.66 USD,no,
+ORD-1022,03-03-2025,2025/03/06,West,Phoenix,Technology,Laptop,Online,Corp,2,1084.48,20%,"$1,735.16",0,—
+ORD-1022,2025-03-03,2025/03/06,W.,Phoenix,Office Supplies,Binder,Online,Corporate,2,9.39,0%,$18.78,FALSE,—
+ORD-1023,03-09-2025,2025-03-11,Northeast ,New York,Technology,Monitor,E-Commerce,Consumer,3,254.96,5 percent,726.65,FALSE,late addr fix
+ORD-1024,7/14/25,2025/07/21,west,Phoenix,office_supplies,Pen,In-Store,Home Office,2,$3.42,10 percent,6.15,0,
+ORD-1024,Jul 14 2025,Jul 21 2025,West,Phoenix,Office Supplies,Binder,In Store,Home Office,2,USD 7.58,10%,13.64 USD,0,.
+ORD-1024,7/14/25,2025/07/21,West,Phoenix,Technology,Headphones,In store,Home Office ,4,81.50,5 percent,unknown,No,—
+ORD-1025,05-25-2025,May 31 2025,West,SanDiego,Furniture,Desk,In-Store,Consumer,4,269.23,No discount,"1,076.92 USD",No,—
+ORD-1025,2025-05-25,2025-05-31,West,San Diego,Furniture,Desk,In store,Consumer,1 units,281.02,5%, 266.97 ,no,priority
+ORD-1026,2025-06-30,2025/07/02,Northeast,Boston,office_supplies,Pen,E-Commerce,Corporate,4,2.91,No discount, 11.63 ,No,priority
+ORD-1027,01-06-2025,Jan 13 2025,Northeast,Philadelphia ,Office Supplies,Pen,In-Store,home office,1,$2.60,.05,2.47,N,
+ORD-1028,2025-01-14,Jan 16 2025,Midwest,Madison,Office Supplies ,Paper,In-Store,Consumer,2,11.48,10 percent,21,FALSE,gift
+ORD-1028,2025-01-14,1/16/25,Midwest,Madison,Technology,Monitor,In-Store,Consumer,1,188.84,20%,$151.07,No,—
+ORD-1029,2/28/25,2025/03/02,W.,san diego,Technology,Laptop,In-Store,Corporate,1,885.95,5%,unknown,No,
+ORD-1030,01-17-2025,1/22/25,South,Nashville,Technology,Headphones,Online,Consumer,3,82.63,0.10,$223.11,FALSE,
+ORD-1031,2025-03-28,3/29/25,West,San Diego,Tech,Monitor,Web,Consumer ,1,193.66,,$193.66,N,
+ORD-1032,2025-06-26,7/1/25,west,Portland,Tech,Laptop,Phone,Consumer,2,861.80,.05,1637.42,No,—
+ORD-1033,02-04-2025,2025-02-08,South ,Atlanta,Office Supplies,Binder,In-Store,Home Office,two,8.45,5%,$16.06,no,late addr fix
+ORD-1033,Feb 04 2025,2025/02/08,South,Atlanta,Technology,Monitor,In-Store,Home Office,1,192,0.10,(103.75),1,gift
+ORD-1034,Jun 02 2025,Jun 06 2025,Northeast,Pittsburgh,Office Supplies,Pen,E-Commerce,Consumer ,2,3.19,5%,6,unknown,
+ORD-1034,06-02-2025,2025-06-06,Northeast,Pittsburgh,Office Supplies,Pen,E-Commerce,Consumer,2,$3.50,15%,$5.95,Y,.
+ORD-1034,2025-06-02,Jun 06 2025,NE,Pittsburgh,Tech,Headphones,online,Consumer,1,68.48,none,$68.48,yes,priority
+ORD-1035,2025-06-04,2025-06-06,Northeast ,Pittsburgh,office_supplies,Binder,In-Store,Consumer,1,USD 8.95,0,$8.95,FALSE,—
+ORD-1036,Jun 07 2025,6/11/25,West,Seattle,Furniture,Chair,Online,Home Office ,2,140.32,0.05,266.60,FALSE,
+ORD-1036,2025-06-07,2025/06/11,West,Seattle,Office Supplies,Pen,Online,Home Office,2,3.27,0,6.55 USD,no,—
+ORD-1037,2025-02-07,2025/02/11,West,Seattle,office supplies,Binder,Online,Consumer,2,USD 8.78,10%,16,N,priority
+ORD-1037,2/7/25,2/11/25,West,Seattle,Furniture,Desk,Online,Consumer,2 units,USD 314.36,0%,629,no,gift
+ORD-1037,Feb 07 2025,2/11/25,West,Seattle,Technology,Headphones,Online,Consumer,1,91.90,0,$91.90,unknown,
+ORD-1038,03-25-2025,3/27/25,Midwest,Indianapolis,Technology,Laptop,In-Store,Corporate,.,948.09,none,"$2,844.26",0,—
+ORD-1038,3/25/25,Mar 27 2025,Midwest,Indianapolis,Office Supplies,Pen,In-Store,Corporate,3,3.33,10%,9.00,FALSE,rush
+ORD-1038,3/25/25,Mar 27 2025,midwest,Indianapolis,Technology,Headphones,In-Store,Corporate,1,82.51,.05,78.38 USD,no,
+ORD-1039,03-18-2025,3/19/25,North East,Philadelphia,Technology,Monitor,Online,Consumer,3,$231.88,,695.65,yes,.
+ORD-1040,05-03-2025,2025-05-05,South,Nashville,office_supplies,Paper,Online,Corporate,1,10.54, 20% ,8.43 USD,N,gift
+ORD-1040,05-03-2025,2025/05/05,South,Nashville,Office Supplies,Pen,online,Corporate,4,3.49,0.20, 11.16 ,no,
+ORD-1041,7/9/25,2025/07/13,midwest,Madison,Office Supplies,Pen ,Web,Consumer,2,2.97,15%,$5.05,No,gift
+ORD-1042,05-07-2025,2025/05/09,South,nashville,Office Supplies,Paper,Online,Home Office,3,13.24,15%,$33.76,0,—
+ORD-1043,7/11/25,7/15/25,Midwest,Chicago,Office Supplies,Pen,In-Store,Consumer,1, 3.41 ,0%,3.41 USD,yes,late addr fix
+ORD-1044,Mar 03 2025,2025-03-10,Midwest,Indianapolis,Office Supplies,Binder,Phone,Consumer,4,8.19,.20,$26.22,0,—
+ORD-1044,2025-03-03,2025/03/10,midwest,Indianapolis,Office Supplies,Paper,Phone,Consumer,5 units,12.27,10%,55.22,FALSE,gift
+ORD-1044,Mar 03 2025,Mar 10 2025,Mid West,Indianapolis,Technology,Laptop,Phone,Consumer,2,$990.68,15%,"1,684.16 USD",FALSE,
+ORD-1045,Jul 20 2025,2025-07-26,NE,New York,Furniture,Desk,Online,Home Office,2,295,0%,unknown,FALSE,
+ORD-1045,07-20-2025,Jul 26 2025,Northeast,New York,Furniture,Bookcase,Online,Home Office,2,218.95,none,$437.89,—,
+ORD-1045,07-20-2025,Jul 26 2025,Northeast,New York,Office Supplies,Pen,Online,Home Office,3,3.08,none,9.24,0,late addr fix
+ORD-1046,Feb 16 2025,2025/02/19,midwest,Madison,Furniture,Bookcase,In-Store,Corp,4,$244.32,0.10,$879.56,FALSE,
+ORD-1047,4/20/25,2025/04/25,SOUTH,Houston,Furniture,Chair,In-Store,consumer,.,$116.91,0.10,105.22 USD,no,
+ORD-1047,2025-04-20,2025/04/25,South,Houston,furniture,Desk,In-Store ,Consumer,2,273.19,20%,$437.11,FALSE,priority
+ORD-1047,Apr 20 2025,2025-04-25,SOUTH,Houston,Office Supplies ,Pen,In-Store,Consumer,2,2.96,none,6,FALSE,
+ORD-1048,4/6/25,2025/04/11,Midwest,Chicago,Office Supplies,Pen,Online,Corporate,5,USD 3.10,0.10,13.95,No,
+ORD-1048,04-06-2025,4/11/25,Midwest,Chicago,Office Supplies,Binder,Online,Corporate,1,USD 7.99,0%,$7.99,N,—
+ORD-1049,04-24-2025,4/26/25,Midwest,Madison,Furniture,Desk,Web,Consumer,two,248.49,10%,$447.29,0,priority
+ORD-1050,01-13-2025,Jan 14 2025,South,Houston,Office Supplies,Pen,Online,Consumer,2,3.11,0.15,$5.28,no,rush
+ORD-1050,01-13-2025,Jan 14 2025,South,Houston,Furniture,Bookcase,Online ,Consumer,1, 230.83 ,.10,$207.75,no,.
+ORD-1051,02-08-2025,2/10/25,Midwest,Chicago,Technology,Headphones,Web,Corporate,2,78.36,5 percent,148.87,no,rush
+ORD-1052,Mar 21 2025,2025-03-25,Northeast,New York,Technology,Headphones,Online,Corporate,2,81.82,0.10,147.28,0,
+ORD-1052,2025-03-21,2025-03-25,northeast,New York,technology,Laptop,Online,Corporate,three,USD 828.26,10%,"$2,236.32",N,late addr fix
+ORD-1053,Jul 23 2025,Jul 26 2025,West,Phoenix,Furniture,Bookcase,In store,Consumer,2,210.39, 5% ,unknown,FALSE,priority
+ORD-1053,Jul 23 2025,2025/07/26,West,Phoenix ,Office Supplies ,Binder,In-Store,Consumer,1 units, 8.64 ,.05,$8.21,FALSE,
+ORD-1054,Mar 03 2025,Mar 05 2025,west,Phoenix,Furniture,Bookcase,In-Store,Corporate ,1,235.45,none,$235.45,yes,
+ORD-1054,03-03-2025,3/5/25,West,Phoenix,Office Supplies,Binder,In-Store ,Corporate,two,8.21,,$16.42,No,.
+ORD-1054,Mar 03 2025,2025-03-05,West,Phoenix ,Technology,Laptop,In-Store,Corporate,1 units,908.32,0,$908.32,N,—
+ORD-1055,4/18/25,4/25/25,West,Portland,Office Supplies,Pen,Online,Consumer,2,—,0.15,4,No,rush
+ORD-1055,Apr 18 2025,Apr 25 2025,West,Portland,Office-Supplies,Binder,Online,Consumer,5,$8.22, 15% , 34.92 ,FALSE,
+ORD-1056,05-11-2025,May 16 2025,West,San Diego,Furniture,Chair,In-Store,Consumer,1,$107.85,none,107.85,no,gift
+ORD-1056,2025-05-11,2025-05-16,West,SanDiego,Furniture ,Bookcase,In-Store,Consumer,3,180.61,15 percent,$460.56,No,—
+ORD-1057,2025-04-30,2025/05/05,,Dallas,Office Supplies,Binder,In-Store,Consumer,one,8.29, 15% ,$7.05,0,
+ORD-1058,01-14-2025,2025-01-18,South,Dallas,Office Supplies,Binder,Online,Home Office ,2,$7.74,10%,$13.93,No,rush
+ORD-1059,4/22/25,Apr 23 2025,Northeast,Pittsburgh,Office Supplies,Binder,In-Store,Corporate,2,7.80,0%,$15.60,No,priority
+ORD-1059,04-22-2025,4/23/25,Northeast,Pittsburgh,Technology,Monitor,In-Store,Corp,1,USD 223.17,,$223.17,Y,late addr fix
+ORD-1060,3/12/25,2025/03/19,South,Dallas,Technology,Headphones,Online,Consumer,2,90.46,10%,$162.83,no,—
+ORD-1061,02-01-2025,2025/02/06,South,Nashville,technology,Laptop,E-Commerce,Corporate,5,$842.62,5%,"$4,002.46",no,
+ORD-1062,04-24-2025,4/30/25,Midwest,Milwaukee,Office Supplies,Paper,In-Store,Corporate,1,—,0.15,$10.92,no,priority
+ORD-1062,Apr 24 2025,Apr 30 2025,Midwest,Milwaukee,Office Supplies,Paper,In-Store,Corporate,1,—,0%, 13.25 ,N,gift
+ORD-1063,Apr 24 2025,2025/04/28,West,Phoenix,technology,Laptop,Online,Home Office,1,USD 998.93, 5% ,948.98,0,—
+ORD-1063,4/24/25,4/28/25,West,Phoenix,Furniture,Desk,Online,Home Office,2 units,242.79,,$485.58,Yes,.
+ORD-1064,Jan 14 2025,2025-01-16,South,Nashville,Furniture,Desk,Online,Consumer ,1,250.83,none,250.83,FALSE,
+ORD-1064,01-14-2025,1/16/25,South,Nashville,Office Supplies ,Pen,Online,Consumer,2,3.34,0%,6.67,N,rush
+ORD-1064,2025-01-14,2025-01-16,South,Nashville,Office Supplies,Paper,Online,consumer,2,13.89, 20% ,unknown,no,
+ORD-1065,2025-03-06,2025-03-12,South,Nashville,Office Supplies,Binder,phone,corporate,1,USD 8.86,.15,$7.53,No,rush
+ORD-1065,03-06-2025,Mar 12 2025,South,Nashville,Furniture,Chair,phone,Corporate ,4,109.38,none,437.53,no,.
+ORD-1065,2025-03-06,Mar 12 2025,South,Nashville,Technology ,Monitor,Phone,Corporate,1,$229.71,.10,unknown,No,rush
+ORD-1066,May 06 2025,2025-05-12,SOUTH,Dallas,Technology,Monitor,In store,Corporate,2,218.85,5%,$415.82,No,gift
+ORD-1066,May 06 2025,2025/05/12,South,Dallas,Technology,Laptop,In-Store,Corporate,2,828.39,0,"$1,656.77",0,
+ORD-1066,May 06 2025,2025/05/12,South,Dallas,Furniture,Desk,In-Store,Corporate,1,305.50,10%,275,FALSE,.
+ORD-1067,6/5/25,Jun 09 2025,West,Phoenix ,—,Headphones ,Online,Corporate, 5 ,USD 87.86,10%,$395.39,0,gift
+ORD-1067,6/5/25,6/9/25,West,Phoenix,Furniture,Bookcase,Online,Corporate,1,$227.98,.05,216.59 USD,1,—
+ORD-1068,2025-02-17,2025/02/21,South,Houston,Technology,Monitor,Online,Corporate,2,USD 230.85,5%, 438.61 ,no,
+ORD-1068,Feb 17 2025,2/21/25,South,Houston,Furniture,Chair,Online,Corporate, 2 ,132.57,0,$265.13,no,late addr fix
+ORD-1069,2025-02-30,Feb 02 2025,South,Dallas,Office Supplies,Pen,Online,consumer,4,USD 3.50,0%,$14.00,No,—
+ORD-1069,Jan 28 2025,2025-02-02,South,Dallas,,Monitor,Online,Consumer ,1,231.65,15%,196.90,1,priority
+ORD-1070,4/15/25,2025/04/19,Northeast,Boston,Office Supplies,Pen,Online,Corporate,2,2.65,15 percent,$4.51,TRUE,priority
+ORD-1071,Apr 03 2025,2025/04/10,Northeast,New York,Office Supplies,Pen,Online,Home Office,2,2.97,0.10,$5.35,N,gift
+ORD-1071,2025-04-03,4/10/25,Northeast,New York,Furniture,Desk,Online,Home Office,2,248.46,20 percent,398,N,late addr fix
+ORD-1072,2025-03-05,Mar 11 2025,South,Dallas,Technology ,Headphones,Online,Consumer,2,$83.61,0%,$167.22,no,
+ORD-1072,Mar 05 2025,2025-03-11,SOUTH,Dallas,Technology,Laptop,Online,Consumer,1,912.05,.05,866.45 USD,FALSE,late addr fix
+ORD-1072,03-05-2025,3/11/25,South,Dallas,Technology,Laptop,Online,Consumer,1,USD 1038.71,0%,unknown,N,priority
+ORD-1073,2025-07-19,Jul 23 2025,West,Phoenix,Furniture ,Chair,Web,Consumer,2,138.23,No discount,276.46 USD,No,rush
+ORD-1074,02-19-2025,2025/02/26,SOUTH,Nashville,Technology,Headphones,Online,Corporate,5,USD 80.12,0.05, 380.56 ,0,—
+ORD-1075,Mar 13 2025,2025-03-14,unknown,Seattle,Furniture,Desk,Phone,Corporate,1,274.71,5%, 260.98 ,FALSE,
+ORD-1076,02-19-2025,2025/02/24,MW,Chicago,Furniture,Chair,In-Store,Corp,2,135.13,5%,256.74,N,
+ORD-1076,2/19/25,2025/02/24,Midwest,Chicago,office_supplies,Binder,In-Store,Corporate,2,8.21,5%,$15.60,0,
+ORD-1077,Jan 09 2025,Jan 14 2025,Northeast,New York,Technology,Laptop,online,Consumer ,1,"$1,043.64",0%,"1,043.64 USD",N,.
+ORD-1078,02-25-2025,Mar 01 2025,Northeast,Boston,Tech,Headphones,Web,Consumer,4,USD 90.89,0.05, 345.38 ,FALSE,priority
+ORD-1078,2/25/25,2025/03/01,Northeast,Boston,Office Supplies,Pen ,Online,Consumer ,1,3.05, 5% ,unknown,FALSE,
+ORD-1079,2025-04-03,2025-04-10,North East,Pittsburgh,Technology ,Laptop,Online,Corporate,4,"$1,059.97",10%,3815.88,.,rush
+ORD-1079,4/3/25,4/10/25,Northeast,Pittsburgh,Furniture,Chair,Online,Corporate ,5,108,5%,$511.04,1,
+ORD-1079,2025-04-03,Apr 10 2025,Northeast,Pittsburgh,Office Supplies,Pen,Online,Corp,3,USD 3.28,.15,$8.36,N,rush
+ORD-1080,2025-03-24,2025/03/26,Midwest,Chicago,Office Supplies,Binder,Online,Consumer,4,$8.45,none,$33.80,no,
+ORD-1080,3/24/25,2025-03-26,Midwest,Chicago,Furniture,Chair,Online,Consumer,1,134.89,0%,134.89 USD,FALSE,
+ORD-1081,2025-04-10,2025/04/14,West ,Seattle,Furniture,Bookcase,In store,home office,5,USD 232.54,none,"$1,162.69",unknown,—
+ORD-1081,4/10/25,4/14/25,West ,Seattle,Technology,Laptop,In-Store,HomeOffice,2,$864.59,5 percent,"1,642.72 USD",No,priority
+ORD-1081,04-10-2025,2025/04/14,West,Seattle ,office supplies,Paper,In-Store,Home Office,3,—,0, $35.38 ,N,.
+ORD-1082,Jan 30 2025,2025/02/04,Midwest,Chicago,Office-Supplies,Binder,Online,Home Office,3,8.60,0.15,$21.94,no,gift
+ORD-1083,Feb 04 2025,2025-02-05,SOUTH,Dallas,Furniture,Chair ,Online,Consumer,2,—,10%,$219.06,0,late addr fix
+ORD-1083,2025-02-04,2025/02/05,south,Dallas,technology,Laptop,Online,Consumer,1,$891.05,0.10,$801.94,No,
+ORD-1084,2025-05-19,2025-05-24,Midwest,Milwaukee,Furniture,Desk,Phone,Consumer,4,275.36,10%,991,FALSE,rush
+ORD-1084,2025-05-19,5/24/25,Midwest,Milwaukee,Office Supplies,Paper,Phone Order,Consumer,5,USD 10.93,0,unknown,yes,
+ORD-1085,Jan 12 2025,2025/01/16,Northeast,Philadelphia,Office-Supplies,Pen,In-Store,Corporate,3 units,—, 5% , $8.11 ,N,rush
+ORD-1085,2025-01-12,1/16/25,Northeast,philadelphia,Office Supplies ,Pen,In-Store,Corporate,5,$3.28,0%,-$9.83,Y,priority
+ORD-1086,3/23/25,2025-03-29,Northeast,Philadelphia,Furniture,Bookcase,online,Consumer,5 units,189.22,10%,851.48,N,
+ORD-1086,2025-03-23,Mar 29 2025,Northeast,Philadelphia,Technology,Monitor,unknown,Consumer,3,216.97,0.05,618.36,TRUE,
+ORD-1087,Apr 19 2025,4/23/25,West,Portland ,Office Supplies,Pen,In-Store,Corp,five, 2.56 ,0,12.78,0,
+ORD-1088,Jan 18 2025,2025/01/20,west,Seattle,Furniture ,Chair,Online,Home Office ,3, 122.64 ,,367.93,0,gift
+ORD-1088,01-18-2025,1/20/25,West,Seattle,Office Supplies,Paper,Online,home office,three,13.21,10%,36,,gift
+ORD-1088,01-18-2025,2025-01-20,West,Seattle,Office Supplies,Pen,Online ,home office,4,$3.19, 10% ,11.48,FALSE,rush
+ORD-1089,2025-01-17,Jan 24 2025,South,Atlanta,Technology,Laptop,Online,Corp,.,981.75,5%,"4,663.29 USD",0,—
+ORD-1090,Apr 26 2025,4/28/25,West,Seattle,Office Supplies,Binder,In-Store,Consumer ,2,8.90,10%,16.02,no,priority
+ORD-1090,04-26-2025,2025/04/28,West,Seattle,office_supplies,Binder,In-Store,Consumer,two,USD 8.50,0.10,15.30,No,—
+ORD-1091,2025-05-12,2025/05/17,south,Nashville,Furniture,Desk,Phone,Corporate,2 units,278.75,5 percent, $529.63 ,no,late addr fix
+ORD-1091,05-12-2025,5/17/25,South,nashville,Technology,Laptop,Phone,Corporate,2,"$1,014.93",0.10,1826.87,N,rush
+ORD-1092,Jul 14 2025,7/21/25,northeast,boston,Office Supplies,Binder,In-Store,Corporate,2 units,$9.41,No discount,$18.83,FALSE,—
+ORD-1092,Jul 14 2025,2025/07/21,Northeast,Boston,Technology,Monitor,In-Store,Corporate,5,192.08,0,960.42 USD,Yes,rush
+ORD-1092,7/14/25,2025-07-21,North East,Boston,Technology ,Monitor,In-Store,Corp,1 units,221.83,0.05,$210.74,No,priority
+ORD-1093,Apr 14 2025,Apr 18 2025,W.,Phoenix,Technology,Headphones,In-Store,Consumer ,3 units,74.30,0,$222.91,N,rush
+ORD-1094,7/10/25,7/15/25,Northeast,New York,Office-Supplies,Binder,Phone,Home Office,one,7,0.20,$5.48,FALSE,late addr fix
+ORD-1095,May 21 2025,May 24 2025,Northeast,New York,Technology,Monitor,Online,Home Office,5, 244.09 ,0.05,"$1,159.42",.,
+ORD-1095,05-21-2025,May 24 2025,Northeast,New York,Technology,Headphones ,Online,Home Office,2,$84.19, 20% ,134.71 USD,unknown,priority
+ORD-1096,4/28/25,May 01 2025,North East,Philadelphia,Technology,Headphones,In-Store,Corporate,two,$74.09,0,$148.18,FALSE,.
+ORD-1096,Apr 28 2025,May 01 2025,Northeast,Philadelphia,Technology,Monitor,In-Store,Corporate,3,212,0%, 637.26 ,0,late addr fix
+ORD-1097,May 03 2025,2025/05/04,West,phoenix,furniture,Chair,Online,Home Office,1,$117.69,10%,$105.92,N,
+ORD-1097,5/3/25,2025/05/04,West,Phoenix,Office Supplies,Paper,online,Home Office, 4 ,11,none,44.36,No,
+ORD-1097,5/3/25,May 04 2025,West,Phoenix,Office Supplies,Paper,Online,Home Office,2,$10.56,0.15,$17.96,N,gift
+ORD-1098,2025-06-03,6/5/25,North East,Philadelphia,technology,Monitor,In-Store,Consumer,4,$245.77,.10,884.78,yes,
+ORD-1098,2025-06-03,2025-06-05,Northeast,Philadelphia,Office Supplies,Pen,In-Store,Consumer ,2,2.92,0%,$5.84,no,rush
+ORD-1098,6/3/25,2025/06/05,Northeast,Philadelphia,Office Supplies,Pen,In-Store,Consumer,1,USD 2.77,10 percent,unknown,FALSE,.
+ORD-1099,Mar 04 2025,3/9/25,West,Portland,Furniture,Desk,Online,Consumer,4,290.79, 10% ,"$1,046.84",No,
+ORD-1099,Mar 04 2025,Mar 09 2025,West,Portland,Technology,Laptop,Online,Consumer,4,970.92,0%,"$3,883.66",no,rush
+ORD-1100,Feb 15 2025,2025/02/16,Midwest,Madison,Office Supplies,Binder,In Store,Consumer,5, 7.08 ,10%,$31.86,no,—
+ORD-1101,2/1/25,2025/02/08,Northeast,Boston,Office Supplies,Pen,instore,corporate,.,$3.36,0,3.36,yes,
+ORD-1101,2/1/25,2025/02/08,Northeast,Boston,Office Supplies,Pen,In-Store,Corporate,2,$3.30,0, 6.60 ,1,
+ORD-1101,Feb 01 2025,2/8/25,Northeast,Boston,Furniture,Desk,In-Store,Corporate,1,289.73,0%,$289.73,1,—
+ORD-1102,03-12-2025,2025-03-15,West,Seattle,Furniture ,Desk,Phone,Corporate,3,288.01,20 percent,691.23 USD,0,gift
+ORD-1102,03-12-2025,Mar 15 2025,West,Seattle,Office Supplies,Pen,Phone,Corporate, 5 ,2.65,0.15,11.27 USD,Yes,
+ORD-1103,1/18/25,1/22/25,northeast,Boston,Office Supplies,Binder,In-Store,Corporate,1,$8.34,none,$8.34,1,—
+ORD-1104,07-12-2025,7/19/25,South,Dallas,Office Supplies,Binder,Online,Corporate,5,9,0%,43.90,Y,rush
+ORD-1104,Jul 12 2025,2025/07/19,South,Dallas,Office Supplies,Binder,Online,Corporate,1,7.65,.05,7.27,N,priority
+ORD-1104,Jul 12 2025,Jul 19 2025,South,Dallas,Furniture,bookcase,Online,Corporate,2,197.46,20%,315.94,no,.
+ORD-1105,2025-04-30,2025-05-05,west,phoenix,Furniture,Chair,In-Store ,consumer,3,111,none, 332.23 ,no,.
+ORD-1106,Mar 23 2025,2025-03-29,SOUTH,Houston,Office Supplies,Binder,In-Store,Consumer ,1,$7.94,.20,6.35,no,priority
+ORD-1107,2025-07-05,2025/07/10,SOUTH,Houston,Furniture ,Chair,Online,Home Office,5, 118.21 ,0.15,502.39 USD,no,rush
+ORD-1108,2025-01-26,1/30/25,Northeast,Philadelphia,office supplies,Paper,Online,Corporate,2, 12.07 ,0.05,22.93,no,
+ORD-1109,1/9/25,2025-01-16,Midwest,Madison,Office Supplies,Pen ,Online ,HomeOffice,2,3.08,0%,$6.15,N,gift
+ORD-1110,2025-05-03,5/6/25,Midwest,Chicago,Office Supplies,Paper,Web,Home Office,one,USD 12.03,0%,12.03 USD,No,
+ORD-1110,May 03 2025,2025-05-06,Midwest,Chicago,Furniture,Bookcase,Online ,Home Office,1,217.20,0,$217.20,No,late addr fix
+ORD-1110,2025-05-03,2025-05-06,Midwest,Chicago,Furniture,Bookcase,Online,Home Office,1,USD 219.41,0.05,$208.44,No,—
+ORD-1111,Mar 06 2025,3/8/25,South,Nashville,Technology,headphones,Online,Consumer,2,83.84,0.10,150.91,No,rush
+ORD-1111,Mar 06 2025,3/8/25,South,Nashville,Furniture,Bookcase,Online ,Consumer,1,$211.80,0,211.80 USD,—,late addr fix
+ORD-1112,03-22-2025,Mar 28 2025,Midwest,Madison,Furniture ,Bookcase,In-Store,Consumer,2,$227.18,5%,-$258.99,yes,gift
+ORD-1113,02-03-2025,Feb 04 2025,West,Phoenix,Technology,Headphones,Online,Consumer,2,$68.88,0,137.75,FALSE,
+ORD-1113,Feb 03 2025,2025-02-04,West,Phoenix,Technology ,Laptop,Online,Consumer,2,—,0.10,"1,842.57 USD",FALSE,.
+ORD-1114,2025-07-23,7/28/25,South,Houston,Furniture,Desk,Online,Consumer,3, 240.92 ,0.15,unknown,0,gift
+ORD-1115,2025-01-09,1/11/25,Midwest,Milwaukee,Office Supplies,Paper,In-Store,Consumer ,2,$13.30,0.10,23.94 USD,FALSE,late addr fix
+ORD-1115,not recorded,Jan 11 2025,Midwest,Milwaukee ,Office Supplies,Binder,In-Store,Consumer,2 units,8.38,0.10,15.08,yes,
+ORD-1116,1/15/25,1/18/25,Northeast,Boston,office supplies,Paper,Online,Consumer ,3,12.55,10%, 33.88 ,No,priority
+ORD-1117,4/11/25,2025-04-16,midwest,Milwaukee,Office Supplies,Paper,instore,Consumer,1,$13.33,0.10,11.99,N,.
+ORD-1118,May 31 2025,2025/06/05,South,Nashville,Furniture,Bookcase,In-Store ,Consumer,5,246.05,10%,"$1,107.24",0,
+ORD-1118,2025-05-31,2025-06-05,South,Nashville,Technology,Headphones,In-Store,Consumer,1,68.81,0%,$68.81,no,.
+ORD-1119,2025-07-09,2025/07/13,South ,Dallas,Office Supplies,Pen,unknown,Consumer,2,3.28,.10,$5.90,no,
+ORD-1119,7/9/25,Jul 13 2025,South,Dallas,Office Supplies,Binder,In-Store ,Consumer,2,8.35,none,16.70 USD,0,late addr fix
+ORD-1120,Jun 14 2025,2025/06/20,Northeast,Boston,Office Supplies,Binder,Online,Corporate,3,9.42,0%,$28.26,no,
+ORD-1120,2025-06-14,2025-06-20,Northeast,Boston,Furniture,Bookcase,Online ,Corporate,2, 236.43 ,0%,472.87,FALSE,
+ORD-1121,Feb 12 2025,2/16/25,south,Dallas,Office Supplies,Pen,Online,Consumer,2,3.06,5%,5.81,0,priority
+ORD-1121,2025-02-12,2025-02-16,South,Dallas,Office Supplies,Pen,Online,Consumer,1, 2.95 ,0.05,$2.80,No,rush
+ORD-1122,2025-05-26,May 29 2025,South,Dallas,Office Supplies,Binder,In-Store,Corporate,1 units,USD 7.85, 15% ,-$4.01,1,
+ORD-1123,6/14/25,Jun 19 2025,Northeast,New York,Technology,Laptop,Online ,Consumer ,1,881.07,0.15,$748.91,FALSE,gift
+ORD-1123,Jun 14 2025,6/19/25,Northeast,New York,Furniture,Bookcase,online,Consumer,2,224.89,0,449.78,N,
+ORD-1124,2025-02-27,TBD,Midwest,Chicago,Office Supplies,Pen,In-Store,Corporate,1,USD 2.59,0.10,$2.33,no,
+ORD-1124,02-27-2025,2025-03-05,Midwest,Chicago,Furniture,Desk,In-Store,Corporate,4,$312.44,5%,"$1,187.29",no,
+ORD-1124,Feb 27 2025,3/5/25,Midwest,Chicago,Office Supplies,Pen,In-Store,Corporate,1,$2.82,0%, 2.82 ,FALSE,—
+ORD-1125,Apr 30 2025,5/3/25,South,Nashville,technology,Headphones,Phone Order,Corporate,.,93,0%,185.31 USD,1,rush
+ORD-1126,07-01-2025,2025-07-03,West,Seattle,Furniture,Desk,Online,Corporate,5,238.46,20 percent,unknown,N,late addr fix
+ORD-1127,06-21-2025,2025-06-23,South,Houston,Office Supplies,Pen,Online ,Corporate,1,3.08,No discount,$3.08,FALSE,priority
+ORD-1127,Jun 21 2025,Jun 23 2025,South,Houston,.,Pen,Online,Corporate,5,3.28,0, 16.38 ,N,priority
+ORD-1128,2025-04-13,2025-04-18,West,Seattle,Furniture,Desk,Online,consumer,5,261.59,10%,1177.16,N,late addr fix
+ORD-1129,07-30-2025,Jul 31 2025,South,Atlanta,Technology,Monitor,Online,Consumer,4,250,0.10,899.17,no,rush
+ORD-1130,01-02-2025,Jan 05 2025,West,Phoenix,Office Supplies,Binder,In-Store,Corporate,5, 8.98 , 10% ,40.42,No,.
+ORD-1130,1/2/25,2025-01-05,West,Phoenix,Technology,Headphones,In store,Corporate,1,83.97,none,83.97,unknown,rush
+ORD-1130,Jan 02 2025,2025/01/05,West,Phoenix,office_supplies,Pen,In-Store ,Corporate,3,2.64,No discount,$7.92,No,rush
+ORD-1131,2025-05-13,2025/05/19,West ,Portland,Office Supplies,Paper ,In-Store,Corporate,2 units, 13.77 ,15%,23.41 USD,No,late addr fix
+ORD-1131,May 13 2025,2025/05/19,West,Portland,Office Supplies,Paper,In-Store,Corporate,2,11.38,0.10,20.48 USD,no,priority
+ORD-1132,2025-05-24,2025-05-29,NE,Pittsburgh,Office Supplies,Pen,In-Store,consumer,2,3.09,5%,$5.88,N,
+ORD-1132,05-24-2025,5/29/25,Northeast,Pittsburgh,Technology,Headphones,In-Store,Consumer,1 units,83.50,0%,$83.50,no,
+ORD-1133,03-27-2025,3/29/25,South ,Dallas,Technology,Monitor,Online,Home Office,6,248.50,10%,"$1,341.92",0,rush
+ORD-1133,3/27/25,2025-03-29,South,Dallas,Technology,Headphones,Online,Home Office,2,USD 74.50,5 percent,141.54,FALSE,priority
+ORD-1134,06-21-2025,6/26/25,West,Seattle,Office Supplies,Pen,In-Store,Consumer,4,2.98,15%,$10.12,,.
+ORD-1134,Jun 21 2025,2025-06-26,West,Seattle,office supplies,Pen,In-Store,Consumer,3,$2.93,0%,8.78 USD,0,gift
+ORD-1135,7/16/25,2025-07-21,midwest,Madison,technology,Laptop,In-Store,Corporate,1,USD 903.84,.10,813.45,0,.
+ORD-1136,5/27/25,2025/05/29,Midwest,Milwaukee ,Office Supplies,Pen,In-Store,Consumer,1,2.96,0%,$2.96,no,rush
+ORD-1136,05-27-2025,2025/05/29,Midwest,Milwaukee,Office-Supplies,Binder,In-Store,consumer,1,USD 8.19,0.10,$7.37,no,late addr fix
+ORD-1137,2/6/25,2/10/25,SOUTH,Atlanta,Furniture,Desk,Online,Consumer,2 units,312.47,5 percent,593.70,no,
+ORD-1138,Apr 30 2025,May 06 2025,West,Seattle,Furniture,Chair,In-Store,Corporate,4 units, 137.01 ,none,548.06,No,rush
+ORD-1138,4/30/25,May 06 2025,West,Seattle,office_supplies,Binder,In-Store,Corporate ,2,9.02,15%,$15.33,no,
+ORD-1138,2025-04-30,2025/05/06,West,Seattle,office supplies,Binder,In store,Corporate,3,$7.53,.15,$19.19,No,rush
+ORD-1139,06-14-2025,Jun 16 2025,Northeast,Philadelphia,Furniture,Desk,In-Store,Corporate,2,—,0%,$584.41,No,priority
+ORD-1140,2025-07-29,8/4/25,South,Houston ,Furniture,Bookcase,Online,Corporate,1,222.99,0.10,200.69 USD,no,—
+ORD-1141,7/5/25,2025-07-11,South,Atlanta,Office Supplies,Binder,Online,Home Office ,1,$7.52,5 percent,$7.15,No,
+ORD-1142,Jun 19 2025,2025/06/20,West,Phoenix,Technology ,Laptop,Online,Consumer ,1,914.43,.10,$822.99,FALSE,gift
+ORD-1143,Apr 20 2025,2025/04/26,West,Portland,Office Supplies ,paper,Phone Order,Home Office,1,12.76, 5% ,12.12,N,.
+ORD-1143,04-20-2025,Apr 26 2025,West,Portland,Office Supplies,Paper,Phone ,Home Office,1,12.64,0.05, 12.01 ,N,.
+ORD-1143,4/20/25,Apr 26 2025,West,Portland,Technology,Laptop,phone,Home Office,1,1008.19,0%,"1,008",FALSE,
+ORD-1144,Feb 28 2025,3/3/25,South,Atlanta,Technology,Headphones,Online,Consumer,1,$69.38,0%, 69.38 ,—,—
+ORD-1145,Apr 27 2025,2025/05/03,south,Nashville,Technology ,Laptop,Online,Consumer,2,1107.72,0.10,"$1,993.89",0,gift
+ORD-1146,5/2/25,2025/05/09,Northeast,New York,Technology,Laptop,In-Store,unknown,3,916.46,10 percent,2474.45,0,rush
+ORD-1147,2025-04-03,4/6/25,Midwest,milwaukee,Furniture,Bookcase,In store,Corporate,1,247.28,0.15,$210.19,N,
+ORD-1148,07-18-2025,7/24/25,Midwest,Chicago,Furniture,Bookcase,In-Store,Corporate,1,231,0, 230.84 USD ,0,rush
+ORD-1148,Jul 18 2025,7/24/25,midwest,Chicago ,office_supplies,Binder,In-Store,Corporate ,3,$6.90,0%,$20.69,No,
+ORD-1149,7/21/25,7/22/25,SOUTH,Houston,Technology,Laptop,In-Store,Corporate,one,931.95,0.05,$885.36,FALSE,late addr fix
+ORD-1150,Jun 21 2025,Jun 28 2025,South,Dallas,Furniture,Desk,In store,Consumer ,5 units,316.67,0%,"$1,583.36",Y,
+ORD-1150,2025-06-21,2025/06/28,South,Dallas,Furniture,Bookcase,In-Store,Consumer,4,$204.88,0.15,697,no,—
+ORD-1150,06-21-2025,2025/06/28,South,Dallas ,Office Supplies,Pen,In-Store,Consumer,3,$2.85,0%,$8.55,FALSE,late addr fix
+ORD-1151,Jul 30 2025,Aug 05 2025,South,Atlanta,Office-Supplies,Paper,In-Store,Corporate,5,12.74,15%,$54.14,0,—
+ORD-1151,7/30/25,2025/08/05,South ,Atlanta ,Technology,Headphones,In-Store,Corp,4,$80.86,0.10,$291.09,no,gift
+ORD-1152,6/19/25,2025/06/25,West,Seattle,Furniture,Desk,Phone,consumer,1,272,0%,(163.18),TRUE,priority
+ORD-1152,2025-06-19,Jun 25 2025,West,Seattle,Office Supplies,Paper,Phone Order,Consumer,5,12.38,0.20, 49.50 ,FALSE,gift
+ORD-1153,5/27/25,2025-06-01,South,Atlanta,Office Supplies,Paper,In-Store,Home Office,1,12.74,0%,$12.74,no,rush
+ORD-1153,5/27/25,Jun 01 2025,SOUTH,Atlanta,Furnitures,Desk,In Store,Home Office,1,$243.67,0.10,$219.30,TRUE,late addr fix
+ORD-1154,6/9/25,2025-06-16,West,san diego,office_supplies,Paper,E-Commerce,Corporate ,5,$11.15,,55.74,0,gift
+ORD-1154,2025-02-30,2025/06/16,West,San Diego,Office Supplies,Paper,Online ,Corporate,1,12.94,0,$12.94,unknown,gift
+ORD-1154,Jun 09 2025,Jun 16 2025,West,San Diego,Office Supplies,Pen,Online,Corp,4,3.16,0,12.64 USD,No,gift
+ORD-1155,3/5/25,3/10/25,Midwest,Madison,Office Supplies,Pen,In-Store,Consumer,4,USD 3.00,0%,$11.98,No,—
+ORD-1156,03-28-2025,2025-04-02,Midwest,Indianapolis,Office Supplies,Binder,Online,Consumer,1,7.90,5%,-$4.50,Yes,
+ORD-1156,Mar 28 2025,2025/04/02,Midwest,Indianapolis,Office-Supplies,Binder,Online,Consumer,three, 7.16 ,.05,20,Yes,
+ORD-1157,2025-07-01,Jul 03 2025,NE,Boston,Technology ,Laptop,Phone,Consumer,1,820.87,0,$820.87,no,.
+ORD-1158,2025-07-03,2025-07-08,West,Phoenix,Office Supplies,Paper,Online,home office,2,10.79,0%,21.59 USD,no,.
+ORD-1158,07-03-2025,2025/07/08,West,Phoenix,Office Supplies,Binder,Online,Home Office,2,7.84, 5% ,14.90,No,
+ORD-1159,Jan 18 2025,2025/01/19,Northeast,Philadelphia,Office Supplies,Paper,Online,Consumer,5,$13.40,0%,67.02,no,
+ORD-1159,2025-01-18,2025/01/19,Northeast,Philadelphia ,Technology,Headphones ,Online,Consumer,1,88.62,.15,$75.33,0,
+ORD-1159,Jan 18 2025,2025-01-19,Northeast,Philadelphia,Office Supplies,Pen,online,Consumer,2,2.77,.15,4.72,no,
+ORD-1160,6/22/25,2025-06-23,Northeast,Philadelphia,technology,Monitor,In-Store,Consumer,2,$190.47,none,$380.95,no,gift
+ORD-1161,06-02-2025,Jun 03 2025,Midwest,madison,Furniture,Desk,In-Store,consumer,5, 306.15 ,0%,1530.73,no,
+ORD-1161,Jun 02 2025,2025/06/03,Midwest,Madison,Furniture ,Bookcase,In-Store ,Consumer,3 units,USD 224.33,none,673.00,Y,late addr fix
+ORD-1162,2025-04-07,2025/04/09,West,Portland,Furniture,Chair,Online,Consumer,1,$105.25,20 percent,$84.20,no,
+ORD-1162,2025-04-07,4/9/25,West,Portland,Technology,Laptop,Online,Consumer,2,927.24,No discount,1854.48,FALSE,.
+ORD-1163,05-03-2025,May 10 2025,West,San Diego,Technology,Monitor,online,Consumer,2,257.31,0,514.62 USD,N,
+ORD-1163,May 03 2025,2025-05-10,West,San Diego,Technology ,Headphones,Online,Consumer,3,87.75,10%,$236.92,FALSE,.
+ORD-1164,7/3/25,2025-07-04,Midwest,Indianapolis,Technology,Laptop,In-Store,Consumer,2,942.96,5%,unknown,,gift
+ORD-1164,2025-07-03,2025/07/04,Midwest,Indianapolis,Office Supplies ,Binder,In-Store,Consumer ,1,7.12,none,7.12,0,priority
+ORD-1164,2025-07-03,7/4/25,Midwest,Indianapolis,Furniture,Chair,In-Store,Consumer,1,—,15%,$114.16,No,.
+ORD-1165,5/22/25,5/28/25,Midwest,Milwaukee,Office Supplies,Pen,In-Store,corporate,2,$3.38,10 percent,6.09 USD,No,—
+ORD-1166,3/28/25,2025-04-03,South,Atlanta,Office Supplies,Pen,In-Store,Consumer ,5,3.48,,17.39 USD,No,
+ORD-1167,Jan 28 2025,1/30/25,West,seattle,Office Supplies,Pen,Online,consumer,1,3.05, 15% ,2.59 USD,no,rush
+ORD-1167,1/28/25,1/30/25,W.,Seattle,Office Supplies,Binder,Online,Consumer,2,$8.14,0,16.28 USD,FALSE,gift
+ORD-1168,Apr 22 2025,4/23/25,Northeast,New York,Technology,Laptop,In-Store,Consumer, 3 ,857.68,5%,"-$1,466.64",Yes,
+ORD-1168,4/22/25,2025/04/23,Northeast ,New York,Office Supplies,Binder,In-Store,Consumer,3,USD 9.42,0%,$28.26,N,—
+ORD-1168,04-22-2025,4/23/25,Northeast,new york,Office Supplies,Binder,In-Store,Consumer,1,8.27,0.10,7.44,0,
+ORD-1169,Jan 14 2025,Jan 15 2025,south,Dallas,Office Supplies,Paper,E-Commerce,Consumer,2,10.22,10 percent,-$11.04,yes,
+ORD-1170,06-12-2025,2025/06/17,South ,Atlanta,Tech,Laptop,Web,Consumer,two,910,0%,"$1,819.99",0,late addr fix
+ORD-1171,05-13-2025,2025/05/20,Midwest ,Indianapolis,Technology,Laptop,instore,Consumer,2,1033.87,0.15,"$1,757.58",0,
+ORD-1171,5/13/25,2025/05/20,Mid West,Indianapolis,Technology,Monitor,In-Store,Consumer,2,237.50,0,475.00 USD,no,late addr fix
+ORD-1171,2025-05-13,May 20 2025,Midwest,Indianapolis,Office Supplies,Paper,In-Store,consumer,3,10.57,5%,30.12,No,late addr fix
+ORD-1172,3/22/25,3/24/25,South,Nashville ,Furniture,Desk,Phone,Consumer,2 units,289.80,0.10,521.65 USD,FALSE,—
+ORD-1173,3/2/25,Mar 05 2025,West,Seattle,Furniture,Desk,Online,Home Office,2,$245.12,0,unknown,no,
+ORD-1174,2025-06-09,2025-06-13,Northeast,Philadelphia,Furniture,Chair,Online,Corporate,2,119.43,0%,238.86,no,—
+ORD-1174,6/9/25,Jun 13 2025,NE,Philadelphia,Office Supplies,Pen,Online,Corp,1,2.77, 5% ,2.63 USD,unknown,
+ORD-1175,2/15/25,2025/02/16,south,Nashville,Technology,Headphones,Online,consumer,2,84.80,10%,153,0,—
+ORD-1175,Feb 15 2025,2/16/25,SOUTH,Nashville,Tech,Monitor,Online,Consumer,4, 214.87 ,5%,$816.49,0,
+ORD-1175,2025-02-15,Feb 16 2025,south,Nashville,Furniture,Bookcase,Web,consumer,2,201.68,,-$242.02,Yes,late addr fix
+ORD-1176,Mar 23 2025,2025/03/26,northeast,Boston,Office Supplies,Paper,In-Store,Corporate,one,13.93,none,$13.93,0,—
+ORD-1177,6/15/25,2025-06-19,W.,Portland,Office Supplies,binder,In-Store,Home Office,3,8.01,0.05,$22.83,Y,late addr fix
+ORD-1177,6/15/25,6/19/25,West ,Portland,Office Supplies,Pen,In-Store,Home Office,3,USD 3.04,5%,8.67 USD,N,rush
+ORD-1178,03-02-2025,3/6/25,W.,Phoenix,Office Supplies,Paper,Online,Corporate,1,13.18,0.10,unknown,Yes,gift
+ORD-1179,6/8/25,Jun 14 2025,Mid West,Madison,Office Supplies,pen,Web,Consumer,1,2.79,0.15,2.38 USD,no,
+ORD-1180,Apr 17 2025,2025-04-18,West,San Diego,office supplies,Pen,In-Store,Corporate,3,3,5%,($4.47),Y,priority
+ORD-1180,2025-04-17,2025/04/18,West,San Diego,Technology,Headphones ,In-Store,Corporate,4,71.68, 5% ,272.37,FALSE,
+ORD-1181,7/30/25,8/2/25,West,Seattle,Furniture,Bookcase,In-Store,Consumer,5 units,USD 217.32,15%,$923.61,no,
+ORD-1181,2025-07-30,2025-08-02,West,Seattle,Office Supplies,binder,In-Store,Consumer ,1,8.73,20 percent,7,no,gift
+ORD-1181,7/30/25,2025-08-02,West,Seattle,Office Supplies,pen,In-Store,Consumer,.,3.11,5%,2.95,0,gift
+ORD-1182,06-19-2025,6/20/25,South,Dallas,Technology,Monitor,In-Store,Consumer,1,203.36,0,203.36 USD,No,gift
+ORD-1183,03-03-2025,3/8/25,Northeast,New York,Technology,Headphones,E-Commerce,Consumer,4,87.08,0.10,313.50,1,—
+ORD-1183,2025-03-03,2025-03-08,northeast,New York,Office Supplies,Pen,Online,consumer,.,3.03,0%,unknown,No,priority
+ORD-1184,04-09-2025,Apr 12 2025,Northeast,Pittsburgh,Office Supplies,Binder,E-Commerce,Corp,3,8.24,No discount,$24.72,No,
+ORD-1184,4/9/25,2025/04/12,Northeast,Pittsburgh,Office Supplies ,Paper,Web,Corporate,2 units,10.41,0.10,18.73,FALSE,late addr fix
+ORD-1185,05-08-2025,2025/05/12,West,Seattle,Office Supplies,Paper,Phone,Consumer,3,$12.26,0%,$36.77,0,—
+ORD-1186,6/5/25,2025-06-10,Midwest,Indianapolis,Office Supplies,Binder,In-Store,Corporate,2,9.40,10%,(10.15),TRUE,
+ORD-1186,Jun 05 2025,2025/06/10,Mid West,indianapolis,Technology,Headphones,In-Store,Corporate,two,92.00,5%,$174.81,Yes,late addr fix
+ORD-1186,06-05-2025,2025/06/10,MW,Indianapolis,Office Supplies,Binder,In-Store,Corporate,3 units,8.97,0.05,$25.57,unknown,
+ORD-1187,3/16/25,Mar 20 2025,W.,san diego,Office Supplies,Paper,Phone,consumer,3,$12.49,0.10,$33.72,FALSE,
+ORD-1188,Apr 15 2025,2025/04/17,West,San Diego,Furniture,Desk,Online,consumer,1, 302.30 ,.10,272.07,no,.
+ORD-1188,2025-04-15,4/17/25,West,San Diego,Tech,Headphones,Online,Consumer,five,$75.31,,$376.55,FALSE,
+ORD-1188,4/15/25,2025/04/17,west,San Diego,Office-Supplies,Pen,Online,Consumer,4,3.20,0,$12.79,FALSE,rush
+ORD-1189,Feb 02 2025,Feb 03 2025,South,Atlanta ,Furniture,Chair,Phone,Consumer,3 units,122.01,0.20,292.81,,late addr fix
+ORD-1190,Jan 14 2025,2025/01/16,West,Phoenix,Furniture,Desk,PHONE,Consumer,1,319.49,0.05,303.52,TRUE,
+ORD-1190,01-14-2025,1/16/25,West,Phoenix,Office Supplies,Binder,Phone,Consumer,2, 8.19 ,0.10, 14.75 ,Yes,priority
+ORD-1191,2025-07-09,7/13/25,West,Phoenix,Office Supplies,Pen,Online,Home Office,4,USD 3.36,5%,$12.77,N,—
+ORD-1191,07-09-2025,2025-07-13,West,Phoenix,Office Supplies,Pen,Online,Home Office,2,3,5 percent,6.39 USD,FALSE,late addr fix
+ORD-1192,01-31-2025,2025-02-02,Midwest,Madison,office_supplies,Binder,E-Commerce,Corp,1,7.10,0,7.10,N,.
+ORD-1192,01-31-2025,2025/02/02,Midwest,Madison,Tech,Monitor,E-Commerce,Corporate,4,240.70,,962.80,No,
+ORD-1193,2025-01-18,2025/01/23,South,Atlanta,Tech,Laptop,Phone,Consumer ,3,"1,072",0%,"-$1,929.62",Yes,priority
+ORD-1193,Jan 18 2025,Jan 23 2025,South,Atlanta,Technology,Laptop,phone,Consumer,1,906.23,none,$906.23,FALSE,priority
+ORD-1194,01-02-2025,1/9/25,Northeast,boston,Office Supplies,Paper,Online,Corporate,1,12.75,10%,$11.47,FALSE,
+ORD-1194,01-02-2025,Jan 09 2025,Northeast,Boston,Furniture,Bookcase,Web,Corporate,1,180.80,0,180.80 USD,0,
+ORD-1195,Feb 09 2025,2025/02/10,West,Seattle,Office Supplies,Binder,Online ,Home Office,3,USD 8.56,0%,26,no,—
+ORD-1195,2025-02-09,TBD,West ,Seattle,Furniture,Chair,Online,Home Office,2,106.40,.05,202.15,0,
+ORD-1195,2025-02-09,Feb 10 2025,W.,Seattle,Tech,Laptop,Online,Home Office,2,$926.76,0.20,"$1,482.81",0,
+ORD-1196,2025-03-30,Apr 05 2025,West,Seattle,Furniture,Desk,Online,Home Office,4,263.88,15%,897.18,0,gift
+ORD-1197,2025-07-21,2025/07/25,SOUTH,Nashville,Office Supplies,Paper,PHONE,Corporate ,1,USD 14.01,0.10,$12.61,0,.
+ORD-1197,7/21/25,Jul 25 2025,South,Nashville,Technology,Monitor,Phone,Corporate,1,250.36,none,250.36 USD,no,
+ORD-1198,1/31/25,2/1/25,Northeast,Pittsburgh,Technology,Headphones,Online,consumer,1,—,none,$80.38,N,late addr fix
+ORD-1199,2025-02-11,2025/02/15,Northeast,Philadelphia,Technology,Headphones,In-Store,Corporate,1 units,91.16,.15,77.49,N,.
+ORD-1200,07-03-2025,2025/07/08,Midwest,Chicago,Office Supplies,Pen,online,Corp,four,2.83,0.05,$10.76,No,
+ORD-1200,07-03-2025,2025/07/08,Midwest,Chicago ,Furniture ,Desk,Online,Corporate,2 units,298.88,0,$597.75,No,priority
+ORD-1200,07-03-2025,7/8/25,Midwest,Chicago,Technology,Laptop,Online ,Corporate,3,972.16,0,"2,916",1,—
+ORD-1201,01-09-2025,2025-01-14,Northeast,New York,Furniture,Bookcase,Phone,Corporate,3,USD 184.20, 15% ,$469.70,0,—
+ORD-1201,01-09-2025,1/14/25,Northeast,New York,Office Supplies,Pen,Phone Order,Corporate,1,$2.71,none,$2.71,0,
+ORD-1201,1/9/25,2025/01/14,Northeast,New York,Furniture ,Bookcase,Phone,Corp,3,222.82,0.10,602,FALSE,—
+ORD-1202,3/9/25,3/15/25,South ,Nashville,Office Supplies,Paper ,Web,Corporate,1,11.28,0.05,$10.71,no,
+ORD-1202,03-09-2025,2025-03-15,South,Nashville,Tech,Monitor ,Online,Corporate,2,252,, 503.44 ,no,
+ORD-1203,2025-04-17,2025-04-18,Midwest,Indianapolis,technology,Laptop,instore,Home Office,2 units,955.78,10 percent,"$1,720.40",FALSE,gift
+ORD-1204,6/27/25,2025/07/02,South,Atlanta,Office-Supplies,Paper,In-Store,Consumer,2,USD 13.58,0%,27.16 USD,N,.
+ORD-1204,06-27-2025,Jul 02 2025,South,Atlanta,Office Supplies,Binder,In-Store,consumer,1,—,5%,$7.62,No,
+ORD-1205,Jan 10 2025,Jan 15 2025,Mid West,madison,Technology,Monitor,Web,Home Office,1,246.40,5%,234.08 USD,0,priority
+ORD-1206,7/12/25,Jul 15 2025,W.,Seattle,Technology,Headphones,Web,Consumer,1,USD 79.90,.15,unknown,No,
+ORD-1207,2025-03-14,2025/03/19,West,San Diego,Furniture,Bookcase,In-Store,Consumer,three,$220.63,0%,661.88,unknown,rush
+ORD-1207,3/14/25,2025/03/19,West,San Diego,Office Supplies,Pen,In-Store,Consumer,4,$2.55,10 percent,$9.19,No,.
+ORD-1208,06-25-2025,Jun 29 2025,South,Dallas,Office Supplies,Binder,Online,Consumer,3,7.10,0.05,20.24,0,
+ORD-1209,Jun 06 2025,2025-06-10,Midwest,Milwaukee,Furniture ,Bookcase,instore,Consumer,4,206.51,0,$826.06,no,.
+ORD-1210,2025-07-22,2025-07-24,Midwest,Madison,Technology ,Monitor,Phone,Consumer,4 units,230.47,.05,875.77,Y,late addr fix
+ORD-1210,07-22-2025,7/24/25,Midwest,Madison,Office Supplies,Binder,Phone,consumer,1,7.25,0.10,$6.53,FALSE,
+ORD-1211,2025-04-05,2025-04-07,South,Atlanta ,Technology,Headphones,In-Store,Corporate, 1 ,79.14,0,79.14 USD,no,—
+ORD-1211,Apr 05 2025,2025/04/07,South,Atlanta,Furniture,Bookcase,In-Store,Corporate,1,187.02,5%,$177.67,N,rush
+ORD-1212,1/29/25,2025-02-03,South,Nashville,Office Supplies,Binder,online,Consumer,3,7.94,10 percent,$21.42,N,priority
+ORD-1212,1/29/25,2025/02/03,South,Nashville,Technology,Headphones,Online,Consumer,3,79.79,0.10,215,No,rush
+ORD-1213,03-05-2025,2025/03/12,Midwest ,Milwaukee,Furniture,Bookcase,In-Store,Corporate,1,218.85,No discount,218.85,No,—
+ORD-1213,Mar 05 2025,3/12/25,MW,Milwaukee,Technology ,Headphones,In-Store ,Corporate,3,77.89,0,$233.66,No,
+ORD-1213,03-05-2025,3/12/25,Midwest,Milwaukee,Technology,Monitor,In-Store,Corporate,4,$212.11,0,($509.07),yes,gift
+ORD-1214,6/21/25,2025/06/28,Midwest,Milwaukee,Office Supplies,Paper,In-Store,Consumer,one,USD 11.82,0%,$11.82,0,gift
+ORD-1214,2025-06-21,2025-06-28,Midwest,milwaukee,Office Supplies,Pen,In-Store,Consumer,2,USD 2.77,0.20,4.43 USD,N,priority
+ORD-1215,3/11/25,2025-03-17,northeast,Philadelphia,Technology ,Headphones,Web,Consumer,2,81.34,0.05,-$92.73,Y,rush
+ORD-1216,Feb 21 2025,2025/02/23,South ,Houston,Technology,Headphones,Online,Corporate,.,71.88,0.05,68.29,FALSE,late addr fix
+ORD-1217,2025-05-05,2025/05/10,Midwest,Milwaukee,office_supplies,binder,Online ,Home Office,2,7.97,0.20,12.76 USD,yes,gift
+ORD-1218,May 07 2025,5/11/25,West,Portland,Office Supplies,Paper,Online,Consumer,1,14.04,10%,$12.64,No,
+ORD-1218,2025-05-07,May 11 2025,West,Portland,Furniture,Desk,E-Commerce,Consumer,2,253.55,,507.11 USD,no,
+ORD-1219,Apr 20 2025,2025-04-23,Northeast,Pittsburgh,Office Supplies,Paper,In-Store,Consumer,1 units,12,10%,10.99,FALSE,.
+ORD-1219,04-20-2025,4/23/25,Northeast,Pittsburgh,office_supplies,Pen,In-Store,Consumer,2,2.71,5%,5.16,no,gift
+ORD-1220,2025-06-29,7/4/25,West,San Diego,Office Supplies,Paper,PHONE,Consumer,5,13.69,10%,61.59,0,gift
+ORD-1220,Jun 29 2025,Jul 04 2025,West,San Diego,Technology,Headphones,PHONE,Consumer,1,$78.43,0%,$78.43,0,gift
+ORD-1221,2025-03-06,Mar 09 2025,Northeast,Boston,Furniture,Chair,Online,Corporate,.,130.60,5%,$496.27,FALSE,
+ORD-1222,2025-01-06,1/7/25,West,Portland,technology,Laptop,Online ,Consumer, 3 ,—,No discount, 2861.51 ,,
+ORD-1222,1/6/25,1/7/25,West,Portland,Furnitures,chair,Online,Consumer,2,106,10%,$190.28,N,
+ORD-1223,2025-03-17,2025/03/18,West,Portland,Technology ,Laptop,Phone,Home Office,2,945.82,10%,"$1,702.48",0,—
+ORD-1223,03-17-2025,2025-03-18,—,Portland,office supplies,Pen,Phone,Home Office,three,3.44,0.05,$9.79,No,rush
+ORD-1224,05-16-2025,2025/05/21,Northeast,Philadelphia,Office Supplies,Binder,Online,Consumer,2,9.43,No discount,($11.32),yes,late addr fix
+ORD-1224,not recorded,5/21/25,Northeast,Philadelphia,Office Supplies,Paper,Online,Consumer,1,USD 11.15,,$11.15,yes,
+ORD-1225,07-09-2025,2025-07-16,West,Seattle,Office Supplies,Binder,In-Store,Consumer ,3,8.81,0.15,-$13.48,1,—
+ORD-1225,Jul 09 2025,7/16/25,West,Seattle ,Office Supplies,Paper,In-Store,Consumer,2, 12.70 ,10%,22.87 USD,FALSE,gift
+ORD-1225,07-09-2025,Jul 16 2025,West,Seattle,Office Supplies,binder,In-Store,Consumer,3,USD 8.20,10 percent,22.13,0,.
+ORD-1226,03-13-2025,Mar 19 2025,South,Dallas,Office Supplies ,Binder,Online,Consumer,1,8.75,15%,7.44,0,
+ORD-1226,3/13/25,Mar 19 2025,South,Dallas,Office Supplies,Paper,Online,Consumer,3,13,10%, 35.76 ,FALSE,.
+ORD-1226,03-13-2025,3/19/25,South,Dallas,Technology,Headphones,online,Consumer,2 units,$70.34,0,$140.68,no,—
+ORD-1227,Apr 10 2025,Apr 13 2025,Northeast,Pittsburgh,Office Supplies,Binder,In-Store ,Corporate,3,8,10%,-$13.48,1,
+ORD-1228,3/8/25,2025/03/09,South,Nashville,,Paper,Online ,Corporate,2,13.35,10%,$24.02,1,.
+ORD-1228,3/8/25,2025/03/09,SOUTH,Nashville,Office Supplies,Binder,Online,Corporate,2,7.58,0,15,N,—
+ORD-1228,3/8/25,2025-03-09,South,Nashville,Technology ,Laptop,Online,Corp,5,934.50,0,"$4,672.50",no,priority
+ORD-1229,2025-07-01,2025/07/06,Northeast,New York,Office Supplies,Pen,In-Store,corporate,2,2.90,10%,$5.23,No,gift
+ORD-1229,2025-07-01,7/6/25,Northeast,New York,Technology,Headphones,In-Store,Corporate,2 units,79.86,0.05,151.74,yes,.
+ORD-1230,01-15-2025,Jan 17 2025,North East,New York,Office-Supplies,Paper,Online,Consumer,3,USD 13.46,0.10,unknown,no,
+ORD-1230,Jan 15 2025,2025/01/17,Northeast,New York ,Office-Supplies,Paper,Online,Consumer,1,$13.27,0%,13.27,N,late addr fix
+ORD-1231,04-09-2025,4/16/25,Midwest,Milwaukee,Furniture,Chair,online,Corporate,1,$131.65,No discount,($78.99),TRUE,
+ORD-1232,Apr 07 2025,2025-04-13,W.,San Diego,Office Supplies,Binder,In-Store,corporate,3,6.97,15%,($10.66),Yes,
+ORD-1233,6/7/25,2025-06-11,Northeast ,New York,Technology,Laptop,Phone Order,Consumer,1,920.43,0,$920.43,FALSE,—
+ORD-1233,Jun 07 2025,2025/06/11,NE,New York,Technology ,Laptop,Phone,Consumer,3, 1087.10 ,0.05,"3,098.24 USD",0,
+ORD-1234,06-15-2025,Jun 16 2025,West,Portland,office supplies,Binder,In Store,Consumer ,3,8.10,0.05,$23.10,0,gift
+ORD-1234,2025-06-15,2025/06/16,West,Portland,office_supplies,Binder,In-Store,Consumer,1,7.24,10%,$6.52,—,priority
+ORD-1234,Jun 15 2025,2025-06-16,West,Portland,office_supplies,paper,In-Store ,Consumer,3,13.97,10%,$37.71,1,.
+ORD-1235,not recorded,2025/05/26,Midwest,Milwaukee,Office Supplies,pen,Phone ,Consumer,1,2.91,.20,2,0,rush
+ORD-1235,05-21-2025,2025-05-26,MW,Milwaukee,Furniture,Chair,phone,Consumer,2,110.27,No discount,220.54,Y,
+ORD-1236,07-30-2025,2025-08-04,South,Atlanta,Furnitures,Desk,In-Store,Corporate,4,$316.57,0,"$1,266.29",No,
+ORD-1236,2025-07-30,2025/08/04,South,Atlanta ,Furniture,Bookcase,In-Store,Corporate,four,—,.10,696,0,.
+ORD-1237,01-08-2025,1/12/25,Midwest,Madison,furniture,Bookcase,Phone,Corporate,3,200.37,10%,unknown,FALSE,
+ORD-1238,04-11-2025,2025/04/16,West,Seattle,Office Supplies,Paper ,Phone,Corporate,one,USD 11.66,0,$11.66,N,late addr fix
+ORD-1239,02-23-2025,2/25/25,Midwest,Milwaukee,technology,Headphones,In-Store,Consumer,1,—,0,-46.80,TRUE,.
+ORD-1240,2025-06-03,6/6/25,West,Portland,Technology,Headphones,In-Store,Corporate,2,82.02,.05,-$93.50,1,late addr fix
+ORD-1241,Jul 08 2025,7/10/25,Northeast,Boston,Furniture,Chair,Online,Consumer,3,114.35,0.10, 308.74 ,0,gift
+ORD-1241,7/8/25,7/10/25,Northeast,Boston,Technology,Headphones,Online,Consumer,5,71.31,none,$356.57,No,gift
+ORD-1241,2025-07-08,Jul 10 2025,Northeast,Boston,Office Supplies,Pen,Online,Consumer,1,—,0,unknown,N,priority
+ORD-1242,2/27/25,2025-03-05,Midwest,Milwaukee,Office Supplies,Pen ,Phone,Corporate,2,$3.11,10%, 5.60 ,0,
+ORD-1242,2025-02-27,Mar 05 2025,Midwest,Milwaukee,Furnitures,Bookcase,PHONE,Corporate,3,$216.40,15%, 551.83 ,No,
+ORD-1243,03-01-2025,3/5/25,Northeast,Pittsburgh,Furniture,Desk,In-Store,Consumer ,4,303.62,15%,1032.30,no,
+ORD-1244,06-22-2025,Jun 24 2025,Northeast,New York,Office Supplies,Binder,In-Store,Home Office ,2,USD 9.41,none,$18.83,0,.
+ORD-1245,2/2/25,2025/02/06,West,Portland,Technology,Headphones,Online,Consumer,3,$73.41,.10,198.21 USD,No,priority
+ORD-1245,2/2/25,2/6/25,West ,Portland,technology,Laptop,Online,consumer,4 units,906.30,No discount,3625.19,FALSE,late addr fix
+ORD-1246,Apr 06 2025,2025/04/10,South ,Dallas,Office Supplies,Paper ,Phone,Corporate,3,$13.41,20%,$32.18,N,rush
+ORD-1246,4/6/25,4/10/25,South,Dallas,Technology,Laptop,Phone,Corporate,2,826.51,0.10,"1,488",0,
+ORD-1246,Apr 06 2025,4/10/25,South,Dallas,Office Supplies,Paper,PHONE,Corporate,2 units,11.11,No discount,$22.22,FALSE,
+ORD-1247,Mar 03 2025,3/5/25,Midwest,Indianapolis,office_supplies,binder,Online,Corporate,3,$7.00,0,unknown,0,
+ORD-1247,Mar 03 2025,Mar 05 2025,Midwest,Indianapolis ,Office Supplies ,Pen,Online,Corporate,2,2.98,none,5.96 USD,N,
+ORD-1248,4/19/25,2025/04/20,Northeast,Philadelphia,Technology,Headphones,Online,Corporate,1, 94.27 ,5 percent,89.55 USD,TRUE,
+ORD-1249,2/18/25,2025-02-21,West,Phoenix,office_supplies,Paper,In store,Corporate,five,12.46,0%,62.28,no,
+ORD-1249,2/18/25,2025-02-21,West,Phoenix,Office Supplies,Pen,In-Store,Corporate,1 units,3,0.20,2.53,no,—
+ORD-1250,2025-04-09,2025/04/10,South,Nashville,Furniture,Desk,Online,Consumer,5 units,286,20%,1144.73,FALSE,priority
+ORD-1250,04-09-2025,4/10/25,South,Nashville,Furniture,Bookcase,Online,Consumer,2,228.28,none,$456.56,FALSE,
+ORD-1250,4/9/25,2025/04/10,South,Nashville,Furniture,Bookcase,Online,Consumer,one,217.66,.10,$195.89,1,.
+ORD-1251,2025-04-12,2025/04/16,West,San Diego,office_supplies,Binder,Online,Home Office,4,7.40,10%,$26.65,FALSE,
+ORD-1252,07-20-2025,2025/07/23,South,Nashville,Technology,Laptop,Phone,Home Office,1, 884.56 ,5 percent,$840.33,Yes,
+ORD-1252,7/20/25,Jul 23 2025,South,Nashville,Tech,Laptop,Phone,Home Office ,4,855.72,.20,"$2,738.30",N,late addr fix
+ORD-1253,3/13/25,2025/03/14,South,Nashville,Office Supplies,Pen,Online,Consumer,3,2.64,0,$7.92,N,
+ORD-1253,3/13/25,2025-03-14,South,Nashville,Office Supplies,Pen,Online,consumer,1,3.17,0.20,$2.53,FALSE,gift
+ORD-1254,2025-07-13,2025-07-15,W.,San Diego,Technology,Laptop,In Store,Consumer,4,1082.55,20%,"-$2,078.50",yes,
+ORD-1255,May 14 2025,5/16/25,West,San Diego,Technology,Headphones,In-Store ,Consumer , 5 ,72,.10,$323.60,0,
+ORD-1255,May 14 2025,May 16 2025,West,SanDiego,furniture,Bookcase,In-Store,Consumer,three,218,5 percent,unknown,FALSE,—
+ORD-1256,2025-07-19,7/26/25,Midwest,Indianapolis,Technology,headphones,Online,Consumer,4,90.33,0.05, 343.26 ,No,
+ORD-1257,4/27/25,2025-05-02,North East,Pittsburgh,Office Supplies ,Paper,In-Store,Consumer,2,10.94,none,21.87,N,priority
+ORD-1257,Apr 27 2025,TBD,unknown,pittsburgh,Furniture,Chair,In Store,Consumer,1,104.73,0.20,$83.79,No,late addr fix
+ORD-1257,04-27-2025,May 02 2025,Northeast,Pittsburgh,Office Supplies,Paper,instore,Consumer,4,—,none,54.04 USD,No,.
+ORD-1258,03-09-2025,3/11/25,West,Portland,Office Supplies,Pen,In-Store,Consumer,4,USD 3.08,0,12.33,Y,rush
+ORD-1258,3/9/25,2025/03/11,West,Portland,Furnitures,Chair,In-Store,Consumer,1,132.32,none,132.32 USD,no,
+ORD-1259,2025-05-19,5/26/25,Northeast,Pittsburgh,Technology,Headphones,Online,Corporate,1,USD 68.27,15 percent,$58.03,N,—
+ORD-1260,Jun 14 2025,2025-06-21,Northeast,Boston,Office Supplies ,Pen,Online,Consumer,2,3.30,10%,5.94,N,.
+ORD-1028,2025-01-14,1/16/25,Midwest,Madison,Technology,Monitor,In-Store,Consumer,1,188.84,20%,$151.07,No,—
+ORD-1048,04-06-2025,4/11/25,Midwest,Chicago,Office Supplies,Binder,Online,Corporate,1,USD 7.99,0%,$7.99,N,—
+ORD-1020,May 23 2025,2025/05/28,Midwest,Madison,Furniture,Chair,In-Store,Consumer,1,116.51,0.10,$104.86,no,priority
+ORD-1131,May 13 2025,2025/05/19,West,Portland,Office Supplies,Paper,In-Store,Corporate,2,11.38,0.10,20.48 USD,no,priority
+ORD-1132,05-24-2025,5/29/25,Northeast,Pittsburgh,Technology,Headphones,In-Store,Consumer,1 units,83.50,0%,$83.50,no,
+ORD-1237,01-08-2025,1/12/25,Midwest,Madison,furniture,Bookcase,Phone,Corporate,3,200.37,10%,unknown,FALSE,
+ORD-1062,04-24-2025,4/30/25,Midwest,Milwaukee,Office Supplies,Paper,In-Store,Corporate,1,—,0.15,$10.92,no,priority
+ORD-1053,Jul 23 2025,2025/07/26,West,Phoenix ,Office Supplies ,Binder,In-Store,Consumer,1 units, 8.64 ,.05,$8.21,FALSE,
+ORD-1146,5/2/25,2025/05/09,Northeast,New York,Technology,Laptop,In-Store,unknown,3,916.46,10 percent,2474.45,0,rush
+ORD-1006,3/31/25,2025/04/07,South ,Nashville,Technology,Laptop,Online,Consumer,.,$931.30,none,"USD 1,862.59",FALSE,priority
+ORD-1150,Jun 21 2025,Jun 28 2025,South,Dallas,Furniture,Desk,In store,Consumer ,5 units,316.67,0%,"$1,583.36",Y,
+ORD-1134,06-21-2025,6/26/25,West,Seattle,Office Supplies,Pen,In-Store,Consumer,4,2.98,15%,$10.12,,.
+ORD-1228,3/8/25,2025/03/09,SOUTH,Nashville,Office Supplies,Binder,Online,Corporate,2,7.58,0,15,N,—
+ORD-1044,2025-03-03,2025/03/10,midwest,Indianapolis,Office Supplies,Paper,Phone,Consumer,5 units,12.27,10%,55.22,FALSE,gift
+ORD-1217,2025-05-05,2025/05/10,Midwest,Milwaukee,office_supplies,binder,Online ,Home Office,2,7.97,0.20,12.76 USD,yes,gift
+ORD-1233,6/7/25,2025-06-11,Northeast ,New York,Technology,Laptop,Phone Order,Consumer,1,920.43,0,$920.43,FALSE,—

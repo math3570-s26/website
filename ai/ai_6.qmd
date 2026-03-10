@@ -60,7 +60,7 @@ AI is often **not** good at:
 
 ## Assigned Roles (3 students)
 
-[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high quality, cohesive work.
+**[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high quality, cohesive work.**
 
 ### Prompt Engineer
 

@@ -122,11 +122,12 @@ Responsibilities
 
 Required file
 
-- `topic4-population.csv`
+- [`topic4-population.csv`](../documents/topic4-population.csv)
 
 Dataset notes
 
-- `README_OnlineOrdersSimulation_Topic4.txt`
+- [`README_OnlineOrdersSimulation_Topic4.txt`](../documents/README_OnlineOrdersSimulation_Topic4.txt)
+
 
 ## What you will submit
 
@@ -184,13 +185,19 @@ Prompt requirements
 
 #### Suggested prompt starters (you may adapt)
 
-- “I have a full finite population of online orders. I want to estimate the probability that a sample of 20 orders contains at least 9 late deliveries. What exactly should one simulation trial do?”
-- “My population is stored in a CSV file. Should I simulate with replacement or without replacement if the question says simple random sample from the population? Why?”
-- “What is the difference between the true population proportion of late deliveries and the Monte Carlo estimate from a simulation?”
-- “How many repetitions should I use for a probability simulation, and how can I tell whether my estimate is stable?”
-- “I want to simulate the sampling distribution of $\hat{p}$ for $n = 20$ and $n = 60$. What summaries and plots should I use, and what mistakes should I avoid when interpreting them?”
-- “Teach me one new probability or simulation idea that might be relevant here, but explain it in plain language first.”
-- “What validation checks would help me trust a simulation answer, even if the code runs and looks correct?”
+- *“I have a full finite population of online orders. I want to estimate the probability that a sample of 20 orders contains at least 9 late deliveries. What exactly should one simulation trial do?”*
+
+- *“My population is stored in a CSV file. Should I simulate with replacement or without replacement if the question says simple random sample from the population? Why?”*
+
+- *“What is the difference between the true population proportion of late deliveries and the Monte Carlo estimate from a simulation?”*
+
+- *“How many repetitions should I use for a probability simulation, and how can I tell whether my estimate is stable?”*
+
+- *“I want to simulate the sampling distribution of $\hat{p}$ for $n = 20$ and $n = 60$. What summaries and plots should I use, and what mistakes should I avoid when interpreting them?”*
+
+- *“Teach me one new probability or simulation idea that might be relevant here, but explain it in plain language first.”*
+
+- *“What validation checks would help me trust a simulation answer, even if the code runs and looks correct?”*
 
 ### Step 3 Create the AI Interaction Log
 

@@ -104,11 +104,11 @@ Responsibilities
 
 Required file
 
-- `topic5-data.csv`
+- [`topic5-data.csv`](../documents/topic5-data.csv)
 
 Dataset notes
 
-- `README_StudentHabitsObservational_Topic5.txt`
+- [`README_StudentHabitsObservational_Topic5.txt`](../documents/README_StudentHabitsObservational_Topic5.txt)
 
 For this activity, your main required variables are:
 

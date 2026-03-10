@@ -194,13 +194,13 @@ Individual reflections will be used to adjust individual scores if contributions
 | Participation\*                        | 5       |
 | **Total**                              | **100** |
 
-### Participation
+### In-Class Participation
 
 -   The presenting group must prepare one or more questions for the other five groups.
 
 -   Each non-presenting group must ask the presenting group at least one question.
 
--   Each student must submit a brief note describing what they learned from the presentation and the activity.
+-   Each student must submit a brief note describing what they learned from the presentation.
 
 ::: {.callout-note collapse="true"}
 ## Full rubric (expand to view)

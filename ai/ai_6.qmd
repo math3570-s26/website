@@ -1,0 +1,308 @@
+---
+title: "AI Activity 6: Classification, Trust, and Human Judgment"
+subtitle: "Subscription churn classification dataset"
+categories: "AI activity"
+# author: "Dr. Cheng-Han Yu"
+date-modified: today
+editor: source
+---
+
+> A classification model can look impressive and still be untrustworthy. AI can help write code quickly, but AI is not good at deciding which variables should be used, which metric matters most, or whether a workflow would be responsible in a real project. Humans still have to define the question, check the workflow, and justify the final model.
+
+You will use an AI tool as a learning partner to investigate a core data science reality: building a classifier is not enough. A trustworthy classification workflow requires human judgment about leakage, evaluation, reproducibility, and interpretation.
+
+You are graded on how you think, validate, explain, and justify, not on whether AI gives perfect answers.
+
+::: {.callout-note title="Goal of this activity"}
+::: {style="font-size: 1.1em;"}
+By the end of this activity, your group will do five things:
+
+1. Define a clear binary classification question.
+2. Use AI to propose a classification workflow.
+3. Audit whether the AI workflow is aligned, trustworthy, and reproducible.
+4. Build and evaluate a classifier using appropriate validation steps.
+5. Explain why human judgment is still essential in a data science project, even when AI generated code is correct.
+
+Your grade depends on your reasoning, evidence, and explanation, not on whether AI makes obvious mistakes.
+:::
+:::
+
+::: {.callout-note title="A key learning target"}
+::: {style="font-size: 1.1em;"}
+Part of this activity is to learn what AI is **not** good at doing on its own.
+
+AI is often helpful for:
+
+- generating starter code
+- explaining common metrics
+- suggesting modeling workflows
+
+AI is often **not** good at:
+
+- understanding what information would really be available at prediction time
+- deciding which metric matters most for the real decision
+- recognizing target leakage unless you ask very carefully
+- knowing whether a workflow is trustworthy enough for real use
+- replacing human responsibility for documentation, justification, and communication
+:::
+:::
+
+
+::: {.callout-note title="To Do"}
+::: {style="font-size: 1.1em;"}
+1. Download the dataset from the [Dataset](#dataset) section below.
+2. Write your prediction question and trust criteria before using AI. [Step 1](#step-1-define-your-prediction-question-and-trust-criteria-before-using-ai) in Tasks.
+3. Run 3 to 5 AI prompts that cover workflow design, leakage, evaluation, and interpretation. [Step 2](#step-2-use-ai-strategically-3-to-5-prompts) in Tasks.
+4. Audit the workflow and complete checklist items 1 to 6 first. [Step 4](#step-4-audit-build-and-evaluate-the-classification-workflow)
+5. Draft your synthesis, then build slides using the required 5 slide structure. [Step 5](#step-5-write-the-human-authored-synthesis-group) and [Step 6](#step-6-presentation-slides-group)
+:::
+:::
+
+## Assigned Roles (3 students)
+
+[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high quality, cohesive work.
+
+### Prompt Engineer
+
+Responsibilities
+
+- Create 3 to 5 purposeful AI prompts
+- Save AI responses and build the AI Interaction Log
+- Write annotations for each prompt and response pair
+
+### Data Science Auditor
+
+Responsibilities
+
+- Evaluate whether the AI workflow matches the prediction question
+- Identify assumptions, limitations, and places that require validation
+- Check for leakage, weak metric choices, and missing reproducibility steps
+- Explain what the group accepted, revised, rejected, or extended, and why
+
+### Synthesizer
+
+Responsibilities
+
+- Write the Human Authored Synthesis in clear course language
+- Build slides using the required structure
+- Ensure the final work is consistent, concise, and evidence based
+
+## Dataset
+
+Required file
+
+- [`topic6-data.csv`](../documents/topic6-data.csv)
+
+Dataset notes
+
+- [`README_SubscriptionChurnClassification_Topic6.txt`](../documents/README_SubscriptionChurnClassification_Topic6.txt)
+
+Main outcome variable
+
+- `churn_next_30d`
+
+Important note
+
+**Not every variable in the file should automatically be used as a predictor. Part of the activity is deciding which variables are appropriate for a trustworthy predictive model.**
+
+## What you will submit
+
+- Group submissions
+  - AI Interaction Log
+  - Human Authored Synthesis
+  - Slides for a 12 to 15 minute presentation
+- Individual submission
+  - Individual Reflection (150 to 200 words)
+
+## Step by step tasks
+
+### Step 1 Define your prediction question and trust criteria (before using AI)
+
+Write 2 to 4 sentences that answer these questions:
+
+1. What is the outcome you want to predict
+2. At what point in time are you imagining the prediction is made
+3. What kind of mistake would be more costly: missing likely churners or wrongly flagging non-churners
+4. What would make you trust or not trust a model in this setting
+
+Example starting point:
+
+> “We want to predict whether a customer will churn in the next 30 days. The prediction should be made before the churn decision is already obvious, so we should think carefully about whether every variable would really be available at that time. Missing likely churners may be costly if the company wants to intervene early, so we may care about recall in addition to accuracy.”
+
+### Step 2 Use AI strategically
+
+**[Note:] You may run several prompts, but keep the 5 most useful and meaningful prompts for reporting.**
+
+Your prompts must be purposeful and iterative.
+
+Prompt requirements
+
+- At least 1 prompt asking AI to propose a reproducible binary classification workflow
+- At least 1 prompt asking AI how to detect or think about target leakage or suspicious predictors
+- At least 1 prompt asking AI which metrics matter when the outcome is not perfectly balanced
+- At least 1 prompt asking AI how to validate whether the workflow is trustworthy
+- At least 1 prompt asking AI to explain one classification idea in plain language that is new to you
+
+#### Suggested prompt starters (you may adapt)
+
+- *“I have a customer churn dataset and want a reproducible binary classification workflow in R. What steps should I follow from train/test split to model evaluation?”*
+
+- *“Some variables may only be known after a customer has basically decided to churn. How can I identify suspicious predictors or target leakage?”*
+
+- *“Why can accuracy be misleading in a classification problem, and what other metrics should I report?”*
+
+- *“How should I compare a classification model to a simple baseline?”*
+
+- *“How can I explain precision, recall, and confusion matrix in plain language to non-technical stakeholders?”*
+
+- *“I want a simple, interpretable classifier for a binary outcome in R. Would logistic regression or a decision tree be more appropriate here, and why?”*
+
+- *“Teach me one new classification concept in plain language that would help me evaluate AI generated model output more carefully.”*
+
+### Step 3 Create the AI Interaction Log
+
+For each prompt, include:
+
+- Prompt goal
+- The AI response excerpt you used
+- Your annotation:
+  - What AI got right
+  - What assumptions AI made
+  - What needed verification, clarification, or revision
+  - What your group accepted, revised, rejected, or extended
+
+Important rule
+
+- You may not paste AI text into your final synthesis verbatim.
+
+### Step 4 Audit, build, and evaluate the classification workflow
+
+Use AI as a collaborator, but your group must decide what is trustworthy and justify those decisions. Complete the validation checklist below. Your evidence can be screenshots, printed outputs, code excerpts, or short summaries of what you observed. A short summary without evidence does not count.
+
+::: {.callout-note title="Required classification, trust, and reproducibility checklist" collapse="true"}
+
+**1. Rows and columns in the original data**
+
+- Confirm that the dataset has 650 rows and 18 columns after import.
+- Report those dimensions clearly.
+
+**2. Outcome balance and baseline thinking**
+
+- Report the counts of `Yes` and `No` for `churn_next_30d`.
+- Compute the accuracy of a naive baseline classifier that always predicts the majority class.
+- Explain why this baseline matters before celebrating your model.
+
+**3. Identify suspicious predictors or leakage risks**
+
+- Review all variables and identify at least one predictor that you believe should **not** be used in a trustworthy model.
+- Justify your decision using timing, logic, or domain reasoning.
+- State whether AI helped you notice this issue or whether your group noticed it first.
+
+**4. Train/test split and reproducibility**
+
+- Split the data into training and test sets.
+- Set and report a random seed.
+- Report the split proportion and the sizes of the training and test sets.
+- Explain why evaluating on the same data used for training would weaken trust in the result.
+
+**5. Fit one interpretable classifier**
+
+Choose **one** of the following:
+
+- logistic regression
+- decision tree
+
+Requirements:
+
+- Use `churn_next_30d` as the response.
+- Exclude at least one suspicious predictor if you judged it to be leakage or otherwise inappropriate.
+- Clearly list the predictors you used.
+- Explain in 2 to 4 sentences why your chosen classifier is interpretable enough for this activity.
+
+**6. Evaluate performance on the test set**
+
+Provide all of the following on the test set:
+
+- confusion matrix
+- accuracy
+- precision
+- recall (or sensitivity)
+
+Then answer:
+
+- Why is accuracy alone not enough here
+- Which metric matters more in your stated decision context, and why
+
+**7. Compare against the baseline**
+
+- Compare your classifier’s test performance to the majority class baseline.
+- State whether the classifier meaningfully improves on the baseline.
+- Explain whether the improvement is large enough to justify trust or only shows limited value.
+
+**8. Threshold choice is a human decision**
+
+If your model provides predicted probabilities, compare at least two classification thresholds, such as 0.50 and 0.30.
+
+- Show how the confusion matrix or metrics change.
+- Explain which threshold seems more appropriate in your context.
+- State why AI should not choose the threshold automatically without human input.
+
+If you use a decision tree that does not naturally emphasize thresholding, explain what comparable human tuning or decision choice still matters.
+
+**9. One grouped performance check**
+
+Choose one grouping variable such as `region`, `senior`, or `contract_type`.
+
+- Report one metric by group, or compare confusion matrix patterns across groups.
+- Explain whether overall performance hides meaningful subgroup differences.
+- State why a human should check this instead of trusting one overall metric.
+
+**10. Trust judgment**
+
+Write 4 to 6 sentences answering:
+
+- What part of the AI suggested workflow was genuinely useful
+- What part still required human judgment
+- Whether your final classifier is trustworthy enough to use, and in what limited sense
+- What additional information or validation would be needed before using this model in a real decision setting
+:::
+
+### Step 5 Write the Human Authored Synthesis (group)
+
+Length target: 400 to 600 words.
+
+Your synthesis must include:
+
+- Your prediction question and why it required human judgment
+- At least two trust related decisions your group made, supported by evidence from your checklist
+- A clear explanation of what AI was helpful for and what AI was not good at doing by itself
+- A short recommended workflow for building a classification model that is more trustworthy and reproducible
+
+Your synthesis must be written in your own words.
+
+### Step 6 Presentation slides (group)
+
+Use this exact slide structure:
+
+- Our prediction question
+- What AI suggested
+- What we audited, validated, and revised
+- Our final workflow and evidence
+- One lesson about why humans still matter in data science
+
+Time: 12 to 15 minutes.
+
+## Individual Reflection (each student)
+
+Write 150 to 200 words answering:
+
+- What did AI help you do
+- What did AI fail to decide well on its own
+- What did you contribute as a human thinker
+- How will this activity change the way you use AI in future data science work
+
+Your reflection must match your assigned role.
+
+## Participation (non-presenting students)
+
+Please scan the QR code, or go to `[your form link here]` to share what you learned from this activity.

@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://math3570-s26.github.io/website/course-syllabus.html</loc>
-    <lastmod>2026-01-24T20:30:18.425Z</lastmod>
+    <lastmod>2026-03-10T02:18:10.276Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/ai.html</loc>
-    <lastmod>2026-03-09T01:49:37.812Z</lastmod>
+    <lastmod>2026-03-10T00:45:44.719Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/ai/ai_1.html</loc>
@@ -15,6 +15,10 @@
   <url>
     <loc>https://math3570-s26.github.io/website/ai/ai_3.html</loc>
     <lastmod>2026-03-09T02:41:59.759Z</lastmod>
+  </url>
+  <url>
+    <loc>https://math3570-s26.github.io/website/ai/ai_5.html</loc>
+    <lastmod>2026-03-10T01:20:50.239Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/exercise/lab15-dplyr.html</loc>
@@ -293,12 +297,16 @@
     <lastmod>2025-11-22T00:20:16.194Z</lastmod>
   </url>
   <url>
+    <loc>https://math3570-s26.github.io/website/ai/ai_4.html</loc>
+    <lastmod>2026-03-10T02:27:21.814Z</lastmod>
+  </url>
+  <url>
     <loc>https://math3570-s26.github.io/website/ai/ai_2.html</loc>
     <lastmod>2026-03-05T15:29:15.299Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/ai_act_guide.html</loc>
-    <lastmod>2026-02-03T02:05:48.988Z</lastmod>
+    <lastmod>2026-03-10T02:19:02.328Z</lastmod>
   </url>
   <url>
     <loc>https://math3570-s26.github.io/website/project.html</loc>

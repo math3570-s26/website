@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mini Project 1 – MATH/COSC 3570 - Spring 2026</title>
+<title>AI Activity 5: Correlation, Regression, and Overinterpretation: When Association Is Not Explanation – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -107,9 +72,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Mini Project 1 – MATH/COSC 3570 - Spring 2026">
-<meta property="og:description" content="Exploratory Data Storytelling via Data Visualization">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="AI Activity 5: Correlation, Regression, and Overinterpretation: When Association Is Not Explanation – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="Student habits and exam outcomes">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
 
@@ -284,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Mini Project 1</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AI Activity 5: Correlation, Regression, and Overinterpretation: When Association Is Not Explanation</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -423,49 +417,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <li><a href="#assigned-roles" id="toc-assigned-roles" class="nav-link active" data-scroll-target="#assigned-roles">Assigned Roles</a>
   <ul class="collapse">
+  <li><a href="#prompt-engineer" id="toc-prompt-engineer" class="nav-link" data-scroll-target="#prompt-engineer">Prompt Engineer</a></li>
+  <li><a href="#data-science-auditor" id="toc-data-science-auditor" class="nav-link" data-scroll-target="#data-science-auditor">Data Science Auditor</a></li>
+  <li><a href="#synthesizer" id="toc-synthesizer" class="nav-link" data-scroll-target="#synthesizer">Synthesizer</a></li>
+  </ul></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
   <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
-  <li><a href="#what-you-will-present" id="toc-what-you-will-present" class="nav-link" data-scroll-target="#what-you-will-present">What you will present</a></li>
-  </ul></li>
-  <li><a href="#team-info" id="toc-team-info" class="nav-link" data-scroll-target="#team-info">Team Info</a></li>
-  <li><a href="#step-1-choose-a-data-set" id="toc-step-1-choose-a-data-set" class="nav-link" data-scroll-target="#step-1-choose-a-data-set">Step 1: Choose a data set</a>
+  <li><a href="#step-by-step-tasks" id="toc-step-by-step-tasks" class="nav-link" data-scroll-target="#step-by-step-tasks">Step by step tasks</a>
   <ul class="collapse">
-  <li><a href="#data-sets" id="toc-data-sets" class="nav-link" data-scroll-target="#data-sets">Data sets</a></li>
-  <li><a href="#quick-description-of-your-data-set" id="toc-quick-description-of-your-data-set" class="nav-link" data-scroll-target="#quick-description-of-your-data-set">Quick description of your data set</a></li>
+  <li><a href="#step-1-define-your-investigation-question-before-using-ai" id="toc-step-1-define-your-investigation-question-before-using-ai" class="nav-link" data-scroll-target="#step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</a></li>
+  <li><a href="#step-2-use-ai-strategically" id="toc-step-2-use-ai-strategically" class="nav-link" data-scroll-target="#step-2-use-ai-strategically">Step 2 Use AI strategically</a></li>
+  <li><a href="#step-3-create-the-ai-interaction-log" id="toc-step-3-create-the-ai-interaction-log" class="nav-link" data-scroll-target="#step-3-create-the-ai-interaction-log">Step 3 Create the AI Interaction Log</a></li>
+  <li><a href="#step-4-analyze-the-data-and-complete-the-required-validation-checks" id="toc-step-4-analyze-the-data-and-complete-the-required-validation-checks" class="nav-link" data-scroll-target="#step-4-analyze-the-data-and-complete-the-required-validation-checks">Step 4 Analyze the data and complete the required validation checks</a></li>
+  <li><a href="#step-5-write-the-human-authored-synthesis-group" id="toc-step-5-write-the-human-authored-synthesis-group" class="nav-link" data-scroll-target="#step-5-write-the-human-authored-synthesis-group">Step 5 Write the Human Authored Synthesis (group)</a></li>
+  <li><a href="#step-6-presentation-slides-group" id="toc-step-6-presentation-slides-group" class="nav-link" data-scroll-target="#step-6-presentation-slides-group">Step 6 Presentation slides (group)</a></li>
   </ul></li>
-  <li><a href="#step-2-mini-proposal" id="toc-step-2-mini-proposal" class="nav-link" data-scroll-target="#step-2-mini-proposal">Step 2: Mini proposal</a></li>
-  <li><a href="#step-3-quick-data-check-and-light-cleaning" id="toc-step-3-quick-data-check-and-light-cleaning" class="nav-link" data-scroll-target="#step-3-quick-data-check-and-light-cleaning">Step 3: Quick data check and light cleaning</a>
-  <ul class="collapse">
-  <li><a href="#first-look" id="toc-first-look" class="nav-link" data-scroll-target="#first-look">3.1 First look</a></li>
-  <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values">3.2 Missing values</a></li>
-  <li><a href="#create-a-working-clean-table" id="toc-create-a-working-clean-table" class="nav-link" data-scroll-target="#create-a-working-clean-table">3.3 Create a working clean table</a></li>
-  </ul></li>
-  <li><a href="#step-4-exploration" id="toc-step-4-exploration" class="nav-link" data-scroll-target="#step-4-exploration">Step 4: Exploration</a>
-  <ul class="collapse">
-  <li><a href="#exploratory-plot-1" id="toc-exploratory-plot-1" class="nav-link" data-scroll-target="#exploratory-plot-1">Exploratory plot 1</a></li>
-  <li><a href="#exploratory-plot-2" id="toc-exploratory-plot-2" class="nav-link" data-scroll-target="#exploratory-plot-2">Exploratory plot 2</a></li>
-  <li><a href="#exploratory-plot-3" id="toc-exploratory-plot-3" class="nav-link" data-scroll-target="#exploratory-plot-3">Exploratory plot 3</a></li>
-  <li><a href="#exploratory-plot-4" id="toc-exploratory-plot-4" class="nav-link" data-scroll-target="#exploratory-plot-4">Exploratory plot 4</a></li>
-  <li><a href="#decision" id="toc-decision" class="nav-link" data-scroll-target="#decision">Decision</a></li>
-  </ul></li>
-  <li><a href="#step-5-build-your-mini-data-story" id="toc-step-5-build-your-mini-data-story" class="nav-link" data-scroll-target="#step-5-build-your-mini-data-story">Step 5: Build your mini data story</a>
-  <ul class="collapse">
-  <li><a href="#story-opening" id="toc-story-opening" class="nav-link" data-scroll-target="#story-opening">5.1 Story opening</a></li>
-  <li><a href="#final-visual-1" id="toc-final-visual-1" class="nav-link" data-scroll-target="#final-visual-1">5.2 Final visual 1</a></li>
-  <li><a href="#final-visual-2" id="toc-final-visual-2" class="nav-link" data-scroll-target="#final-visual-2">5.4 Final visual 2</a></li>
-  <li><a href="#final-visual-3" id="toc-final-visual-3" class="nav-link" data-scroll-target="#final-visual-3">5.5 Final visual 3</a></li>
-  <li><a href="#closing" id="toc-closing" class="nav-link" data-scroll-target="#closing">5.6 Closing</a></li>
-  </ul></li>
-  <li><a href="#step-6-visual-quality-checklist" id="toc-step-6-visual-quality-checklist" class="nav-link" data-scroll-target="#step-6-visual-quality-checklist">Step 6: Visual quality checklist</a></li>
-  <li><a href="#step-7-team-reflection" id="toc-step-7-team-reflection" class="nav-link" data-scroll-target="#step-7-team-reflection">Step 7: Team reflection</a></li>
-  <li><a href="#step-7-presentation-plan" id="toc-step-7-presentation-plan" class="nav-link" data-scroll-target="#step-7-presentation-plan">Step 7: Presentation plan</a>
-  <ul class="collapse">
-  <li><a href="#presentation-order" id="toc-presentation-order" class="nav-link" data-scroll-target="#presentation-order">Presentation order</a></li>
-  </ul></li>
-  <li><a href="#grading-guide" id="toc-grading-guide" class="nav-link" data-scroll-target="#grading-guide">Grading guide</a></li>
+  <li><a href="#individual-reflection-each-student" id="toc-individual-reflection-each-student" class="nav-link" data-scroll-target="#individual-reflection-each-student">Individual Reflection (each student)</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_5.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -473,10 +444,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mini Project 1</h1>
-<p class="subtitle lead">Exploratory Data Storytelling via Data Visualization</p>
+<h1 class="title">AI Activity 5: Correlation, Regression, and Overinterpretation: When Association Is Not Explanation</h1>
+<p class="subtitle lead">Student habits and exam outcomes</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Mini Project</div>
+    <div class="quarto-category">AI activity</div>
   </div>
   </div>
 
@@ -500,347 +471,374 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>In this mini project, your team will <strong>explore one data set and tell a short data story with visuals</strong>.</p>
-<ol type="1">
-<li>Asking a clear question for a real audience</li>
-<li>Exploring with a few plots</li>
-<li>Choosing the best evidence</li>
-<li>Writing a short, readable story</li>
-</ol>
-<p>This is an exploratory project. Use <strong>descriptive analysis only</strong>. Do NOT run hypothesis tests and do NOT fit complex models.</p>
-<section id="what-you-will-submit" class="level3">
-<h3 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h3>
-<p>Show, in your Posit Cloud,</p>
-<ol type="1">
-<li>The <strong>rendered HTML report</strong></li>
-<li>The <strong>complete version of this source qmd file</strong></li>
-<li><strong>Any data file you used</strong>, only if it is not a built in package data set</li>
-</ol>
-</section>
-<section id="what-you-will-present" class="level3">
-<h3 class="anchored" data-anchor-id="what-you-will-present">What you will present</h3>
-<p>A <strong>10 minute</strong> team presentation that summarizes your story and highlights your 3 final visuals.</p>
-</section>
-</section>
-<section id="team-info" class="level2">
-<h2 class="anchored" data-anchor-id="team-info">Team Info</h2>
-<ul>
-<li><p><strong>Team Name</strong>: <span class="blue">Your Team Name</span></p></li>
-<li><p>Team members and roles for this project:</p>
-<ol type="1">
-<li><strong>Project lead</strong> (keeps time, coordinates tasks): <span class="blue">Your Member Name(s)</span></li>
-<li><strong>Data wrangler</strong> (loads data, checks quality, makes a clean table): <span class="blue">Your Member Name(s)</span></li>
-<li><strong>Visualization designer</strong> (builds plots, improves readability): <span class="blue">Your Member Name(s)</span></li>
-<li><strong>Storyteller</strong> (writes narrative, connects visuals to claims): <span class="blue">Your Member Name(s)</span></li>
-</ol></li>
-</ul>
-</section>
-<section id="step-1-choose-a-data-set" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-choose-a-data-set">Step 1: Choose a data set</h2>
-<p>Choose one option below. Two teams may use the same data set.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<blockquote class="blockquote">
+<p>Correlation and regression can summarize patterns, but those summaries are easy to overinterpret. AI may generate polished interpretations that sound persuasive while quietly implying causation, ignoring subgroup structure, overlooking influential points, or treating a fitted line as the full story.</p>
+</blockquote>
+<p>You will use an AI tool as a learning partner to investigate a core data science reality: statistical associations require careful wording, visual checking, and human judgment. Even when AI gives technically correct output, people still need to decide whether the language is justified, whether the model matches the data pattern, and what conclusions are actually supported by the evidence.</p>
+<p>You are graded on how you <strong>think, evaluate, validate, interpret, and explain</strong>, not on whether AI makes mistakes.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Learning something new is allowed">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+<span class="screen-reader-only">Note</span>Learning something new is allowed
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <div style="font-size: 1.1em;">
-<p>If another team uses the same data set, it would be much better if your story is meaningfully different. Your team may differ on</p>
-<ol type="1">
-<li>Audience</li>
-<li>Focus variables or outcome</li>
-<li>Comparison frame (group comparison, relationship, ranking, time trend, and so on)</li>
-</ol>
-</div>
-</div>
-</div>
-<section id="data-sets" class="level3">
-<h3 class="anchored" data-anchor-id="data-sets">Data sets</h3>
+<p>You are <strong>not</strong> expected to already know every concept that might come up in this activity. AI may introduce an idea such as:</p>
 <ul>
-<li><p><code>penguins</code> data set from R package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a></p></li>
-<li><p><code>flights</code> data set from R package <a href="https://nycflights13.tidyverse.org/index.html"><code>nycflights13</code></a></p></li>
-<li><p><code>gapminder</code> data set from R package <a href="https://jennybc.github.io/gapminder/"><code>gapminder</code></a></p></li>
-<li><p><code>diamonds</code> data set from R package <a href="https://ggplot2.tidyverse.org/reference/diamonds.html"><code>ggplot2</code></a></p></li>
-<li><p><em>Your own data set!</em></p></li>
+<li>lurking variable</li>
+<li>confounding</li>
+<li>Simpson’s paradox</li>
+<li>influential observation</li>
+<li>leverage</li>
+<li>omitted variable</li>
+<li>nonlinear relationship</li>
 </ul>
-<p>Using the code chunk <code>import-data</code> below to import your data, and call the data set <code>data_raw</code>.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Import your data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data_raw <span class="ot">&lt;-</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="quick-description-of-your-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="quick-description-of-your-data-set">Quick description of your data set</h3>
-<p>Answer the following questions.</p>
-<ol type="1">
-<li>What does one row represent</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="2" type="1">
-<li>What are columns you think might matter for your story</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="3" type="1">
-<li>Who might care about this data</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-</section>
-<section id="step-2-mini-proposal" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-mini-proposal">Step 2: Mini proposal</h2>
-<p>Write short answers. Keep it specific.</p>
-<ol type="1">
-<li>Audience: Who is your audience</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="2" type="1">
-<li>Investigation question: One sentence</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="3" type="1">
-<li>Your current guess: One sentence</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="4" type="1">
-<li>Focus variables: List some variables you plan to use</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="5" type="1">
-<li>Comparison frame: Choose one or two (group comparison, relationship, ranking, time trend, etc.)</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="step-3-quick-data-check-and-light-cleaning" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-quick-data-check-and-light-cleaning">Step 3: Quick data check and light cleaning</h2>
-<p>Your goal is to understand what you have. Keep cleaning minimal.</p>
-<section id="first-look" class="level3">
-<h3 class="anchored" data-anchor-id="first-look">3.1 First look</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Check your data (you can use your own way to check the data)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_raw)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data_raw)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="missing-values" class="level3">
-<h3 class="anchored" data-anchor-id="missing-values">3.2 Missing values</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>missing_counts <span class="ot">=</span> data_raw <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(.x)))) <span class="sc">|&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">"variable"</span>, <span class="at">values_to =</span> <span class="st">"n_missing"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n_missing))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>missing_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>In 2 to 4 sentences, describe what missing values you noticed and how you plan to handle them.</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="create-a-working-clean-table" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-working-clean-table">3.3 Create a working clean table</h3>
-<p>Create a new object <code>data</code> with:</p>
-<ol type="1">
-<li><strong>Clean column names if needed</strong></li>
-<li><strong>Only the columns you might use</strong></li>
-<li><strong>Any simple recodes you need</strong></li>
-</ol>
-<p>Use the code chunk <code>clean</code> below to clean your <code>data_raw</code>, and save the new cleaned data called <code>data</code> that is ready for analysis.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Clean your data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Describe what you changed and why, in plain language:</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol type="1">
-<li></li>
-<li></li>
-<li></li>
-</ol>
-</section>
-</section>
-<section id="step-4-exploration" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-exploration">Step 4: Exploration</h2>
-<p>Create 4 quick exploratory plots. These are NOT final. They help you decide what story to tell.</p>
-<p>Suggestions:</p>
-<ol type="1">
-<li>One <strong>distribution plot</strong></li>
-<li>One <strong>bar plot or count plot</strong></li>
-<li>One <strong>relationship plot (two numeric variables)</strong></li>
-<li>One plot that <strong>compares groups</strong></li>
-</ol>
-<section id="exploratory-plot-1" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-1">Exploratory plot 1</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(data, aes(x = ...)) + geom_...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>What you learned (1 to 2 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="exploratory-plot-2" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-2">Exploratory plot 2</h3>
-<p>What you learned (1 to 2 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="exploratory-plot-3" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-3">Exploratory plot 3</h3>
-<p>What you learned (1 to 2 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="exploratory-plot-4" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-4">Exploratory plot 4</h3>
-<p>What you learned (2 to 3 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="decision" class="level3">
-<h3 class="anchored" data-anchor-id="decision">Decision</h3>
-<ol type="1">
-<li>What is the most interesting pattern you found</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="2" type="1">
-<li>Revised investigation question (one sentence)</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="3" type="1">
-<li>Which 3 visuals will become your final visuals, and why</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-</section>
-<section id="step-5-build-your-mini-data-story" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-build-your-mini-data-story">Step 5: Build your mini data story</h2>
-<p>Your final report must include:</p>
-<ol type="1">
-<li>A short opening paragraph that <strong>sets context and states the question</strong> (4 to 6 sentences)</li>
-<li>Exactly 3 final visuals, each with a short interpretation paragraph (3 to 5 sentences) <!-- 3. One small summary table (5 to 15 rows, or a simple grouped summary)  --></li>
-<li>A short closing paragraph with takeaways, limitations, and next steps (4 to 5 sentences)</li>
-</ol>
-<p>Keep the whole report short. Aim for about 1 to 2 pages when rendered.</p>
-<section id="story-opening" class="level3">
-<h3 class="anchored" data-anchor-id="story-opening">5.1 Story opening</h3>
-<p><span class="blue">Write your opening paragraph in this section.</span> Include</p>
-<ol type="1">
-<li><strong>Context:</strong> What is the setting in plain language</li>
-<li><strong>Audience:</strong> Who should care about this story</li>
-<li><strong>Investigation question:</strong> What are you trying to learn</li>
-<li><strong>Why it matters:</strong> What decision or understanding this could support</li>
-<li><strong>Data description:</strong> Name the data set and explain what one row represents</li>
-<li><strong>Preview:</strong> Briefly state what your three visuals will show</li>
-</ol>
-</section>
-<section id="final-visual-1" class="level3">
-<h3 class="anchored" data-anchor-id="final-visual-1">5.2 Final visual 1</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p><span class="blue">Interpretation (3 to 4 sentences)</span>. Include:</p>
-<ol type="1">
-<li><strong>What is shown:</strong> What is on the x axis and y axis, and what groups or colors mean</li>
-<li><strong>Key pattern:</strong> Describe the main visible pattern using directional language and comparisons</li>
-<li><strong>Evidence:</strong> Mention at least one concrete detail (an approximate value, a ranking, or a noticeable gap)</li>
-<li><strong>Connection:</strong> Explain how this plot helps answer your investigation question</li>
-<li><strong>Caveat:</strong> State one caution, such as missing values, outliers, or “this is association, not causation”</li>
-</ol>
-<p><strong>[Tip:]</strong> <strong>Avoid describing every point</strong>. Focus on what you want your audience to notice.</p>
-</section>
-<section id="final-visual-2" class="level3">
-<h3 class="anchored" data-anchor-id="final-visual-2">5.4 Final visual 2</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p><span class="blue">Interpretation (3 to 4 sentences)</span>: Include the same suggested points as visual 1.</p>
-</section>
-<section id="final-visual-3" class="level3">
-<h3 class="anchored" data-anchor-id="final-visual-3">5.5 Final visual 3</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p><span class="blue">Interpretation (3 to 4 sentences)</span>: Include the same suggested points as visual 1.</p>
-</section>
-<section id="closing" class="level3">
-<h3 class="anchored" data-anchor-id="closing">5.6 Closing</h3>
-<p><span class="blue">Write your closing paragraph.</span> Include:</p>
-<ol type="1">
-<li><strong>Your answer:</strong> State your best answer to the investigation question (one sentence)</li>
-<li><strong>Support:</strong> Point to your strongest visual evidence (one to two sentences)</li>
-<li><strong>Limitation:</strong> Name one limitation of the data or your approach (one sentence)</li>
-<li><strong>Next step:</strong> State one concrete next step you would take with more time (one sentence)</li>
-<li><strong>So what:</strong> Explain what this means for your audience (one sentence)</li>
-</ol>
-<p><strong>[Tip:]</strong> Keep claims <strong>descriptive and reasonable</strong>. Do not overstate certainty.</p>
-</section>
-</section>
-<section id="step-6-visual-quality-checklist" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-visual-quality-checklist">Step 6: Visual quality checklist</h2>
-<p>For each final plot, confirm:</p>
-<ol type="1">
-<li>Title and axis labels are descriptive</li>
-<li>Units are clear when relevant</li>
-<li>Text is readable at presentation size</li>
-<li>Legend is readable, or direct labels are used</li>
-<li>If you filtered rows, you said so in the text</li>
-</ol>
-<p>Improve your plots accordingly.</p>
-</section>
-<section id="step-7-team-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-team-reflection">Step 7: Team reflection</h2>
-<p>Each team member writes 2 to 4 sentences:</p>
-<ol type="1">
-<li>What you contributed</li>
-<li>One thing you learned</li>
-<li>One thing you would improve next time</li>
-</ol>
-<section id="member-1-your-name" class="level4">
-<h4 class="anchored" data-anchor-id="member-1-your-name">Member 1: your name</h4>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="member-2-your-name" class="level4">
-<h4 class="anchored" data-anchor-id="member-2-your-name">Member 2: your name</h4>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="member-3-your-name" class="level4">
-<h4 class="anchored" data-anchor-id="member-3-your-name">Member 3: your name</h4>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="member-4-your-name-if-applicable" class="level4">
-<h4 class="anchored" data-anchor-id="member-4-your-name-if-applicable">Member 4: your name (if applicable)</h4>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-</section>
-<section id="step-7-presentation-plan" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-presentation-plan">Step 7: Presentation plan</h2>
-<p>Plan a 10 minute talk with the suggested structure:</p>
-<ol type="1">
-<li>About 1 minute: context, audience, question</li>
-<li>About 2 minutes: data set, key variables, and any cleaning choices</li>
-<li>About 5 minutes: your 3 visuals and the story they tell</li>
-<li>About 2 minutes: takeaway, limitation, next step</li>
-</ol>
-<section id="presentation-order" class="level3">
-<h3 class="anchored" data-anchor-id="presentation-order">Presentation order</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Team 1"</span>, <span class="st">"Superb Statisticians"</span>, <span class="st">"The Data Scientists"</span>, <span class="st">"Stat Padders"</span>, <span class="st">"Data Divers"</span>, <span class="st">""</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3570</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(teams, <span class="dv">6</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Team 1"               "Stat Padders"         "Superb Statisticians"
-[4] "The Data Scientists"  ""                     "Data Divers"         </code></pre>
+<p>If AI introduces a new idea, you may use it as a learning tool, but you must still explain your reasoning in plain language and connect it back to evidence from the dataset.</p>
 </div>
 </div>
-</section>
-</section>
-<section id="grading-guide" class="level2">
-<h2 class="anchored" data-anchor-id="grading-guide">Grading guide</h2>
-<p>Total 15 points:</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Auditing means evaluation, not error hunting">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Auditing means evaluation, not error hunting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>In this activity, <strong>auditing</strong> does not mean trying to prove that AI is wrong.</p>
+<p>It means evaluating AI output as a statistical work product:</p>
+<ul>
+<li>Does it answer the actual question?</li>
+<li>Is the wording statistically appropriate?</li>
+<li>Does the interpretation go beyond the evidence?</li>
+<li>What assumptions, limitations, or missing checks matter here?</li>
+<li>What should be accepted, revised, or extended before the result is trustworthy?</li>
+</ul>
+<p>Sometimes AI will overstate. Sometimes AI will be mostly careful. In either case, your job is to evaluate the output and explain why your final interpretation is more trustworthy.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Goal of this activity">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Goal of this activity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>By the end of this activity, your group will do five things:</p>
 <ol type="1">
-<li><strong>Clear</strong> question and audience (3 pts)</li>
-<li><strong>Evidence-based</strong> story with 3 <strong>high-quality</strong> visuals (6 pts)</li>
-<li><strong>Reproducible</strong> workflow and <strong>readable</strong> report (3 pts)</li>
-<li>Presentation <strong>clarity</strong> and <strong>timing</strong> (3 pts)</li>
+<li>Measure and visualize an overall association between two quantitative variables.</li>
+<li>Use AI to generate an interpretation of correlation and regression output.</li>
+<li>Audit the interpretation for wording, assumptions, subgroup structure, and influential observations.</li>
+<li>Rewrite the interpretation using precise, statistically appropriate language.</li>
+<li>Explain what can and cannot be concluded from observational data.</li>
 </ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="To Do">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>To Do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<ol type="1">
+<li>Download the dataset from the <a href="#dataset">Dataset</a> section below.</li>
+<li>Write your investigation question (2 to 3 sentences). <a href="#step-1-define-your-investigation-question-before-using-ai">Step 1</a> in Tasks.</li>
+<li>Run 3 to 5 AI prompts that cover interpretation, caution, subgroup structure, and one new idea if needed. <a href="#step-2-use-ai-strategically-3-to-5-prompts">Step 2</a> in Tasks.</li>
+<li>Complete checklist items 1 to 6 first. <a href="#step-4-analyze-the-data-and-complete-the-required-validation-checks">Step 4</a></li>
+<li>Finish the language audit, revised interpretation, and final judgment in checklist items 7 to 10. <a href="#step-4-analyze-the-data-and-complete-the-required-validation-checks">Step 4</a></li>
+<li>Draft your synthesis, then build slides using the required 5 slide structure. <a href="#step-5-write-the-human-authored-synthesis-group">Step 5</a> and <a href="#step-6-presentation-slides-group">Step 6</a></li>
+</ol>
+</div>
+</div>
+</div>
+<section id="assigned-roles" class="level2">
+<h2 class="anchored" data-anchor-id="assigned-roles">Assigned Roles</h2>
+<p><strong>[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high quality, cohesive work.</strong></p>
+<section id="prompt-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-engineer">Prompt Engineer</h3>
+<p>Responsibilities</p>
+<ul>
+<li>Create 3 to 5 purposeful AI prompts</li>
+<li>Save AI responses and build the AI Interaction Log</li>
+<li>Write annotations for each prompt and response pair</li>
+</ul>
+</section>
+<section id="data-science-auditor" class="level3">
+<h3 class="anchored" data-anchor-id="data-science-auditor">Data Science Auditor</h3>
+<p>Responsibilities</p>
+<ul>
+<li>Evaluate whether the AI output matches the statistical question</li>
+<li>Check whether AI interpretation is too strong, too causal, or missing needed cautions</li>
+<li>Design and run visual and statistical checks for subgroup structure, influential observations, and model fit</li>
+<li>Explain what the group accepted, revised, or extended, and why</li>
+</ul>
+</section>
+<section id="synthesizer" class="level3">
+<h3 class="anchored" data-anchor-id="synthesizer">Synthesizer</h3>
+<p>Responsibilities</p>
+<ul>
+<li>Write the Human Authored Synthesis in clear course language</li>
+<li>Build slides using the required structure</li>
+<li>Ensure the final work is consistent and concise</li>
+</ul>
+</section>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>Required file</p>
+<ul>
+<li><code>topic5-data.csv</code></li>
+</ul>
+<p>Dataset notes</p>
+<ul>
+<li><code>README_StudentHabitsObservational_Topic5.txt</code></li>
+</ul>
+<p>For this activity, your main required variables are:</p>
+<ul>
+<li>Response variable: <code>final_exam_score</code></li>
+<li>Predictor variable: <code>study_hours_week</code></li>
+<li>Context variable for grouped checking: <code>section</code></li>
+</ul>
+<p>You may also use either <code>sleep_hours</code> or <code>caffeine_mg_day</code> for one secondary check.</p>
+</section>
+<section id="what-you-will-submit" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h2>
+<ul>
+<li>Group submissions
+<ul>
+<li>AI Interaction Log</li>
+<li>Human Authored Synthesis</li>
+<li>Slides for a 12 to 15 minute presentation</li>
+</ul></li>
+<li>Individual submission
+<ul>
+<li>Individual Reflection (150 to 200 words)</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-by-step-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-tasks">Step by step tasks</h2>
+<section id="step-1-define-your-investigation-question-before-using-ai" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</h3>
+<p>Write 2 to 3 sentences answering:</p>
+<ul>
+<li>What overall relationship are we studying</li>
+<li>What does the slope or correlation try to summarize</li>
+<li>Why might an observational relationship be easy to overinterpret</li>
+<li>What human checks are needed before trusting the interpretation</li>
+</ul>
+<p>For this activity, your main analysis must focus on:</p>
+<ul>
+<li><code>final_exam_score</code> as the response</li>
+<li><code>study_hours_week</code> as the predictor</li>
+</ul>
+<p>Your group must also use <code>section</code> to check whether one overall trend hides meaningful subgroup structure.</p>
+<p>Example investigation question you may use or adapt:</p>
+<blockquote class="blockquote">
+<p>“We want to study the relationship between weekly study hours and final exam score, and we want to see how easily AI might overinterpret that relationship. We will compute a correlation and fit a simple regression line, but we will also check whether the data are observational, whether section differences matter, and whether unusual points or nonlinearity change the story.”</p>
+</blockquote>
+</section>
+<section id="step-2-use-ai-strategically" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-use-ai-strategically">Step 2 Use AI strategically</h3>
+<p><strong>[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.</strong></p>
+<p>Your prompts must be purposeful and iterative.</p>
+<p>Prompt requirements</p>
+<ul>
+<li>At least 1 prompt asking AI to interpret a correlation and regression line in context</li>
+<li>At least 1 prompt asking AI whether the result supports a causal claim</li>
+<li>At least 1 prompt asking AI what visual or model checks are needed before trusting the interpretation</li>
+<li>At least 1 prompt asking AI how subgroup structure or a lurking variable could change the story</li>
+<li>At least 1 prompt asking AI how influential observations or nonlinearity can affect correlation or regression</li>
+<li>At least 1 prompt asking AI to explain one relevant idea in plain language if your group meets a concept that is new</li>
+</ul>
+<section id="suggested-prompt-starters-you-may-adapt" class="level4">
+<h4 class="anchored" data-anchor-id="suggested-prompt-starters-you-may-adapt">Suggested prompt starters (you may adapt)</h4>
+<ul>
+<li><p><em>“I fit a simple linear regression of <code>final_exam_score</code> on <code>study_hours_week</code>. How should I interpret the slope, intercept, and <span class="math inline">\(R^2\)</span> in plain language?”</em></p></li>
+<li><p><em>“Can I say that studying more causes a higher final exam score from this dataset? Why or why not?”</em></p></li>
+<li><p><em>“What kinds of language would overstate the evidence when describing a correlation between study hours and exam score?”</em></p></li>
+<li><p><em>“How could section differences or a lurking variable change the interpretation of one overall regression line?”</em></p></li>
+<li><p><em>“How can an influential observation change a correlation or regression interpretation, and what checks should I run?”</em></p></li>
+<li><p><em>“If the scatterplot is not perfectly linear, how should I describe the relationship without overstating what a simple line means?”</em></p></li>
+<li><p><em>“Teach me one relevant idea, such as confounding, Simpson’s paradox, or influential point, but explain it in plain language first.”</em></p></li>
+</ul>
+</section>
+</section>
+<section id="step-3-create-the-ai-interaction-log" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-create-the-ai-interaction-log">Step 3 Create the AI Interaction Log</h3>
+<p>For each prompt, include:</p>
+<ul>
+<li>Prompt goal</li>
+<li>The AI response excerpt you used</li>
+<li>Your annotation:
+<ul>
+<li>What AI got right</li>
+<li>What language or claims needed caution</li>
+<li>What needed evidence or validation</li>
+<li>What your group accepted, revised, or extended</li>
+</ul></li>
+</ul>
+<p>At least one entry in your AI Interaction Log must show how your group evaluated AI generated wording and made it more statistically appropriate.</p>
+<p>Important rule</p>
+<ul>
+<li>You may not paste AI text into your final synthesis verbatim.</li>
+</ul>
+</section>
+<section id="step-4-analyze-the-data-and-complete-the-required-validation-checks" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-analyze-the-data-and-complete-the-required-validation-checks">Step 4 Analyze the data and complete the required validation checks</h3>
+<p>Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. A short summary without numbers or outputs does not count as evidence.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Required correlation and regression checklist">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Required correlation and regression checklist
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. Rows and columns</strong></p>
+<ul>
+<li>Confirm the dataset has 210 rows and 10 columns after import.</li>
+</ul>
+<p><strong>2. Observational context</strong></p>
+<ul>
+<li>State clearly why this dataset is observational rather than experimental.</li>
+<li>Explain why that matters when interpreting a correlation or regression line.</li>
+</ul>
+<p><strong>3. Overall association</strong></p>
+<p>Using <code>study_hours_week</code> and <code>final_exam_score</code>:</p>
+<ul>
+<li>create a scatterplot</li>
+<li>compute the correlation</li>
+<li>fit a simple linear regression model</li>
+<li>report the regression equation</li>
+<li>report the slope and (R^2)</li>
+</ul>
+<p>Then answer:</p>
+<ul>
+<li>What does the slope mean in context?</li>
+<li>Is the intercept meaningful in context?</li>
+<li>What does the correlation summarize, and what does it not tell you?</li>
+</ul>
+<p><strong>4. Visual check of the line</strong></p>
+<ul>
+<li>Add the fitted line to your scatterplot.</li>
+<li>Describe whether the straight line seems like a reasonable first summary.</li>
+<li>State one thing the line captures well and one thing it may miss.</li>
+</ul>
+<p><strong>5. Grouped check using <code>section</code></strong></p>
+<ul>
+<li>Create a scatterplot of <code>study_hours_week</code> versus <code>final_exam_score</code> colored by <code>section</code>.</li>
+<li>Compare the overall pattern to the within-section patterns.</li>
+<li>Explain whether one overall line may hide meaningful section related structure.</li>
+</ul>
+<p><strong>6. Influential or unusual observations</strong></p>
+<ul>
+<li>Identify at least one observation that looks unusual in the scatterplot or regression diagnostics.</li>
+<li>Provide evidence using a diagnostic such as residual size, leverage, Cook’s distance, or a refit after removing one point.</li>
+<li>Explain how the interpretation changes, or does not change, when the unusual observation is considered.</li>
+</ul>
+<p><strong>7. Secondary check for shape or interpretation</strong></p>
+<p>Choose <strong>one</strong> of these pairs:</p>
+<ul>
+<li><code>sleep_hours</code> and <code>final_exam_score</code></li>
+<li><code>caffeine_mg_day</code> and <code>final_exam_score</code></li>
+</ul>
+<p>For your chosen pair:</p>
+<ul>
+<li>create a scatterplot</li>
+<li>describe the apparent form of the relationship</li>
+<li>explain why a single number such as (r) may not tell the whole story</li>
+<li>state whether a simple linear interpretation seems fully adequate</li>
+</ul>
+<p><strong>8. Language audit of AI output</strong></p>
+<p>Select one AI generated interpretation and audit the wording.</p>
+<p>You must identify:</p>
+<ul>
+<li>one phrase that is statistically appropriate</li>
+<li>one phrase that is too strong, too causal, or too confident</li>
+<li>one phrase that needs more evidence or more precise wording</li>
+</ul>
+<p>Then rewrite the interpretation in better language.</p>
+<p><strong>9. Final revised interpretation</strong></p>
+<p>Write a short interpretation, in your own words, that includes all of the following:</p>
+<ul>
+<li>what the overall association suggests</li>
+<li>what cautions are needed because the data are observational</li>
+<li>what section or unusual point checks added to your understanding</li>
+<li>what you can and cannot conclude</li>
+</ul>
+<p><strong>10. Judgment and caution</strong></p>
+<p>Write 4 to 6 sentences answering:</p>
+<ul>
+<li>Is the simple correlation and regression line a useful first summary</li>
+<li>What important limitations or cautions must accompany it</li>
+<li>What human checks mattered most in your group</li>
+<li>What additional data or design would be needed to support a stronger causal claim</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-write-the-human-authored-synthesis-group" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-write-the-human-authored-synthesis-group">Step 5 Write the Human Authored Synthesis (group)</h3>
+<p>Length target: 400 to 600 words.</p>
+<p>Your synthesis must include:</p>
+<ul>
+<li>your investigation question</li>
+<li>at least two reasons AI generated interpretation can become too strong in correlation or regression tasks</li>
+<li>evidence from your checks on observational context, subgroup structure, or influential observations</li>
+<li>a revised interpretation written in precise statistical language</li>
+<li>a short recommended routine for checking AI generated regression or correlation interpretations before trusting them</li>
+</ul>
+<p>Your synthesis must be written in your own words.</p>
+</section>
+<section id="step-6-presentation-slides-group" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-presentation-slides-group">Step 6 Presentation slides (group)</h3>
+<p>Use this exact slide structure:</p>
+<ul>
+<li>Our question</li>
+<li>What AI suggested</li>
+<li>What we audited and checked</li>
+<li>Our final interpretation, with evidence</li>
+<li>One takeaway for future data science work</li>
+</ul>
+<p>Time: 12 to 15 minutes.</p>
+</section>
+</section>
+<section id="individual-reflection-each-student" class="level2">
+<h2 class="anchored" data-anchor-id="individual-reflection-each-student">Individual Reflection (each student)</h2>
+<p>Write 150 to 200 words answering:</p>
+<ul>
+<li>What did AI help you learn</li>
+<li>What did AI oversimplify or phrase too strongly</li>
+<li>What did you contribute as a human thinker</li>
+<li>How will you change your AI use in future data work</li>
+</ul>
+<p>Your reflection must match your assigned role.</p>
+<!-- ## Participation (non-presenting students) -->
+<!-- Please scan the QR code, or go to `[your form link here]` to share what you learned from this activity. -->
 
 
 </section>
@@ -1266,7 +1264,7 @@ Warning
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_5.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

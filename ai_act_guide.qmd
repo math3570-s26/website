@@ -21,9 +21,7 @@ This assignment rewards **thinking, judgment, and learning**, NOT perfect answer
 :::
 ::::
 
-
 ::: {.callout-tip collapse="true"}
-
 ## Purpose
 
 In this activity, you will use an AI as a learning partner to explore a data science concept from this course. The goal is **NOT to report what AI says**. The goal is to learn to:
@@ -65,12 +63,7 @@ Your group will:
 4.  Produce a corrected, human-authored explanation
 
 5.  Present your findings to the class
-
 :::
-
-
-
-
 
 ## Group Structure
 
@@ -171,8 +164,9 @@ This reflection is used to assess individual understanding and contribution.
 
 -   Submit your AI Interaction Log, Human-Authored Synthesis, and Individual Reflection as a single PDF, or provide a direct link to downloadable PDFs. Indicate who plays which role.
 -   Submit your slides in your preferred format, or provide a direct link to view the slides.
--   Email all materials to <cheng-han.yu@marquette.edu>.
+-   Email all materials to [cheng-han.yu\@marquette.edu](mailto:cheng-han.yu@marquette.edu){.email}.
 -   Deadline: **11:59 PM on the day your team presents**.
+-   No late submission of any work is allowed.
 
 ## Evaluation Criteria {#sec-grading}
 
@@ -188,7 +182,6 @@ Individual reflections will be used to adjust individual scores if contributions
 
 <!-- Your total AI activity grade =  -->
 
-
 ## Rubric Summary
 
 | Criterion                              | Points  |
@@ -198,17 +191,16 @@ Individual reflections will be used to adjust individual scores if contributions
 | Critical Evaluation of AI              | 25      |
 | Data Science Understanding & Synthesis | 25      |
 | Presentation and Q&A                   | 10      |
-| Participation*                         |  5      |
+| Participation\*                        | 5       |
 | **Total**                              | **100** |
 
 ### Participation
 
-- The presenting group must prepare one or more questions for the other five groups.
+-   The presenting group must prepare one or more questions for the other five groups.
 
-- Each non-presenting group must ask the presenting group at least one question. 
-- Each student must submit a brief note describing what they learned from the presentation.
+-   Each non-presenting group must ask the presenting group at least one question.
 
-
+-   Each student must submit a brief note describing what they learned from the presentation and the activity.
 
 ::: {.callout-note collapse="true"}
 ## Full rubric (expand to view)
@@ -240,7 +232,7 @@ This rubric is used for **all groups**, regardless of topic. Grades reflect **ho
 **Evaluates**: Whether AI was used strategically to support learning.
 
 | Level | Description | Points |
-|-------------|----------------------------------------------|-------------|
+|---------------|------------------------------------------|---------------|
 | **Excellent** | Prompts are clear, targeted, and iterative. Each prompt has a specific learning goal, and follow-up prompts show refinement based on prior AI responses. | 18–20 |
 | **Competent** | Prompts are reasonable and relevant but mostly one-shot or broad. Limited evidence of iteration or strategic refinement. | 14–17 |
 | **Developing** | Prompts are vague, generic, or copied. Little connection between prompts and learning goals. | 8–13 |
@@ -251,7 +243,7 @@ This rubric is used for **all groups**, regardless of topic. Grades reflect **ho
 **Evaluates**: Transparency and completeness of AI documentation.
 
 | Level | Description | Points |
-|-------------|----------------------------------------------|-------------|
+|---------------|------------------------------------------|---------------|
 | **Excellent** | AI interaction log is complete, well-organized, and clearly annotated. Goals, strengths, and limitations of AI responses are explicitly documented. | 14–15 |
 | **Competent** | AI interaction log is mostly complete with basic annotations. Some explanations lack depth or clarity. | 11–13 |
 | **Developing** | AI interaction log is incomplete or weakly annotated. Limited explanation of AI strengths or limitations. | 6–10 |
@@ -262,7 +254,7 @@ This rubric is used for **all groups**, regardless of topic. Grades reflect **ho
 **Evaluates**: Ability to question, critique, and challenge AI responses.
 
 | Level | Description | Points |
-|-------------|----------------------------------------------|-------------|
+|---------------|------------------------------------------|---------------|
 | **Excellent** | Clearly identifies specific limitations, assumptions, or errors in AI output and explains why they matter using statistical reasoning. | 23–25 |
 | **Competent** | Identifies some limitations or weaknesses in AI output, but explanations are partial or underdeveloped. | 18–22 |
 | **Developing** | Mentions limitations superficially or inconsistently. Limited justification or reasoning. | 10–17 |
@@ -273,7 +265,7 @@ This rubric is used for **all groups**, regardless of topic. Grades reflect **ho
 **Evaluates**: Depth, accuracy, and originality of the group’s explanation.
 
 | Level | Description | Points |
-|-------------|----------------------------------------------|-------------|
+|---------------|------------------------------------------|---------------|
 | **Excellent** | Explanation is accurate, conceptually clear, and fully human-authored. Demonstrates strong statistical reasoning and clearly improves upon AI output. | 27–30 |
 | **Competent** | Explanation is mostly accurate and understandable but adds limited insight beyond AI output. Minor gaps or imprecision. | 21–26 |
 | **Developing** | Explanation shows partial understanding, conceptual gaps, or heavy reliance on AI phrasing. | 12–20 |
@@ -284,7 +276,7 @@ This rubric is used for **all groups**, regardless of topic. Grades reflect **ho
 **Evaluates**: Clarity and structure of the group presentation.
 
 | Level | Description | Points |
-|-------------|---------------------------------------------|-------------|
+|---------------|------------------------------------------|---------------|
 | **Excellent** | Presentation is well-structured, clear, and focused on reasoning. Effectively explains what AI missed and what the group learned. | 9–10 |
 | **Competent** | Presentation is understandable but uneven or overly descriptive. Some focus on content rather than reasoning. | 7–8 |
 | **Developing** | Presentation lacks clarity or structure. Key points are unclear or poorly explained. | 4–6 |
@@ -300,11 +292,7 @@ Individual reflections may be used to **adjust individual scores up or down** if
 -   A student did not meaningfully contribute to the group’s work
 
 <!-- --- -->
-
 :::
-
-
-
 
 <!-- --- -->
 

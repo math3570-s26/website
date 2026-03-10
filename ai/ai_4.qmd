@@ -1,0 +1,380 @@
+---
+title: "AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend"
+subtitle: "Synthetic online orders delivery population"
+categories: "AI activity"
+# author: "Dr. Cheng-Han Yu"
+date-modified: today
+editor: source
+---
+
+> Simulation is powerful, but only when the simulated process matches the real question. AI can be helpful, but a correct looking answer is not enough by itself. In probability and statistics, we still need to define the trial clearly, match the sampling process to the question, validate the result, and explain what it means.
+
+You will use an AI tool as a learning partner to investigate a core data science reality:
+simulation is not just generating random numbers. It requires a clearly defined trial, a correct event or statistic, enough repetitions, validation against a benchmark whenever possible, and human judgment about whether the final result is trustworthy.
+
+You are graded on how you **think, validate, interpret, and explain**, not on whether AI makes mistakes.
+
+::: {.callout-note title="Learning something new is part of this activity"}
+
+::: {style="font-size: 1.1em;"}
+You are **not** expected to already know every probability model or simulation idea that might be relevant here. Part of this activity is using AI to help you learn **one new idea beyond our current class coverage**.
+
+For example, AI may introduce:
+
+- a named probability model you have not learned yet
+- a new way to think about sampling from a finite population
+- a new method for checking whether a simulation is stable
+- a new distinction between exact probability and Monte Carlo approximation
+
+Your job is **not** to blindly trust that new idea. Your job is to:
+
+1. ask AI to explain it in plain language
+2. decide whether it actually matches our activity setup
+3. connect it back to course ideas you already know
+4. explain what you learned, in your own words
+
+If AI introduces a concept we have not formally covered, you may use it as a learning tool, but you must still explain the simulation logic in clear plain language.
+:::
+
+:::
+
+
+::: {.callout-note title="Auditing means evaluation, not error hunting"}
+
+::: {style="font-size: 1.1em;"}
+In this activity, **auditing** does not mean trying to prove that AI is wrong.
+
+It means evaluating AI output as a statistical work product:
+
+- Does it answer the actual question?
+- Does the code match the stated method?
+- What assumptions are being made?
+- What should be checked before trusting the result?
+- What evidence supports the conclusion?
+- What should be accepted, revised, validated, or extended?
+
+Sometimes AI will be wrong or incomplete. Sometimes AI will be mostly correct. In either case, your job is to evaluate the output carefully and explain why your final result is trustworthy.
+:::
+
+:::
+
+
+::: {.callout-note title="Goal of this activity"}
+
+::: {style="font-size: 1.1em;"}
+
+By the end of this activity, your group will do five things:
+
+1. Define a probability question and a statistical simulation question using a known finite population.
+2. Use AI to propose a simulation workflow, then audit that workflow for alignment, assumptions, and trustworthiness.
+3. Run one probability simulation and one sampling distribution simulation using repeated simple random samples.
+4. Validate the main simulation results with benchmarks and stability checks.
+5. Extend the simulation to a new but related question and explain what changes.
+:::
+
+:::
+
+
+::: {.callout-note title="To Do"}
+
+::: {style="font-size: 1.1em;"}
+
+1. Download the dataset from the [Dataset](#dataset) section below.
+2. Write your investigation question (2 to 3 sentences). [Step 1](#step-1-define-your-investigation-question-before-using-ai) in Tasks.
+3. Run 3 to 5 AI prompts that cover probability setup, simulation design, validation, interpretation, and one new idea. [Step 2](#step-2-use-ai-strategically-3-to-5-prompts) in Tasks.
+4. Complete checklist items 1 to 6 first. [Step 4](#step-4-run-the-simulations-and-complete-the-required-validation-checks)
+5. Build your sampling distribution visualizations and finish checklist items 7 to 12. [Step 4](#step-4-run-the-simulations-and-complete-the-required-validation-checks)
+6. Draft your synthesis, then build slides using the required 5 slide structure. [Step 5](#step-5-write-the-human-authored-synthesis-group) and [Step 6](#step-6-presentation-slides-group)
+:::
+
+:::
+
+## Assigned Roles (3 students)
+
+[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high quality, cohesive work.
+
+### Prompt Engineer
+
+Responsibilities
+
+- Create 3 to 5 purposeful AI prompts
+- Save AI responses and build the AI Interaction Log
+- Write annotations for each prompt and response pair
+
+### Data Science Auditor
+
+Responsibilities
+
+- Evaluate whether the AI output matches the statistical question
+- Check whether AI defined the correct trial, event, statistic, and sampling rule
+- Design and run validation and stress test checks after simulation
+- Explain what the group accepted, revised, validated, or extended, and why
+
+### Synthesizer
+
+Responsibilities
+
+- Write the Human Authored Synthesis in clear course language
+- Build slides using the required structure
+- Ensure the final work is consistent and concise
+
+## Dataset
+
+Required file
+
+- `topic4-population.csv`
+
+Dataset notes
+
+- `README_OnlineOrdersSimulation_Topic4.txt`
+
+## What you will submit
+
+- Group submissions
+  - AI Interaction Log
+  - Human Authored Synthesis
+  - Slides for a 12 to 15 minute presentation
+- Individual submission
+  - Individual Reflection (150 to 200 words)
+
+## Step by step tasks
+
+### Step 1 Define your investigation question (before using AI)
+
+Write 2 to 3 sentences answering:
+
+- What probability question are we trying to estimate
+- What statistical simulation question are we trying to study
+- What exactly counts as one trial or one repeated sample
+- Why simulation is useful here
+
+For this activity, your group must include both required targets below:
+
+1. Probability target
+
+Estimate the probability that a simple random sample of 20 orders, drawn **without replacement** from the population, contains **at least 9 late deliveries**.
+
+2. Statistical simulation target
+
+Study the sampling distribution of $\hat{p}$, the sample proportion of late deliveries, under repeated simple random samples **without replacement** from the population.
+
+You must compare two sample sizes:
+
+- $n = 20$
+- $n = 60$
+
+Example investigation question you may use or adapt:
+
+> “We want to estimate the probability that a simple random sample of 20 orders contains at least 9 late deliveries, and we want to study how the sampling distribution of $\hat{p}$ changes when the sample size increases from 20 to 60. Because this file is a full finite population, simulation lets us compare our simulated results to known population truths and check whether our method and interpretation are trustworthy.”
+
+### Step 2 Use AI strategically (3 to 5 prompts)
+
+[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.
+
+Your prompts must be purposeful and iterative.
+
+Prompt requirements
+
+- At least 1 prompt asking AI to define one simulation trial clearly
+- At least 1 prompt asking AI about sampling with replacement versus without replacement
+- At least 1 prompt asking AI how many repetitions are needed and how to check simulation stability
+- At least 1 prompt asking AI how to validate the simulation using a known benchmark from the population
+- At least 1 prompt asking AI how to interpret the sampling distribution of $\hat{p}$
+- At least 1 prompt asking AI to teach you one new probability or simulation idea that we have not fully covered in class yet, and to explain it in plain language
+
+#### Suggested prompt starters (you may adapt)
+
+- “I have a full finite population of online orders. I want to estimate the probability that a sample of 20 orders contains at least 9 late deliveries. What exactly should one simulation trial do?”
+- “My population is stored in a CSV file. Should I simulate with replacement or without replacement if the question says simple random sample from the population? Why?”
+- “What is the difference between the true population proportion of late deliveries and the Monte Carlo estimate from a simulation?”
+- “How many repetitions should I use for a probability simulation, and how can I tell whether my estimate is stable?”
+- “I want to simulate the sampling distribution of $\hat{p}$ for $n = 20$ and $n = 60$. What summaries and plots should I use, and what mistakes should I avoid when interpreting them?”
+- “Teach me one new probability or simulation idea that might be relevant here, but explain it in plain language first.”
+- “What validation checks would help me trust a simulation answer, even if the code runs and looks correct?”
+
+### Step 3 Create the AI Interaction Log
+
+For each prompt, include:
+
+- Prompt goal
+- The AI response excerpt you used
+- Your annotation:
+  - What AI got right
+  - What AI assumed
+  - What needed validation or clarification
+  - What your group accepted, revised, or extended
+
+At least one entry in your AI Interaction Log must show how AI helped you learn **one new idea** that was not already part of the course, and how you translated that idea into plain language your group actually understands.
+
+Important rule
+
+- You may not paste AI text into your final synthesis verbatim.
+
+### Step 4 Run the simulations and complete the required validation checks
+
+Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. A short summary without numbers or outputs does not count as evidence.
+
+::: {.callout-note title="Required simulation checklist" collapse="true"}
+**1. Rows and columns**
+
+- Confirm the dataset has 300 rows and 12 columns after import.
+
+**2. Population truth**
+
+- Compute the true population proportion of `late_delivery == "Yes"`.
+- Report the count of late deliveries and the count of non late deliveries.
+- Explain why this population truth is useful when validating a simulation.
+
+**3. Define one trial correctly**
+
+For the probability question, define one trial in words.
+
+Your definition must make clear:
+
+- the population you are sampling from
+- the sample size
+- whether sampling is with or without replacement
+- what event counts as a success
+
+**4. Small pilot check**
+
+Run a small pilot simulation with 10 to 20 repetitions.
+
+- Show a few trial outputs
+- Explain how you checked that each trial matched your verbal definition
+- State one bug or misunderstanding that could appear at this stage
+
+**5. Main probability simulation**
+
+Run a large simulation with at least 5000 repetitions to estimate:
+
+$$
+P(\text{at least 9 late deliveries in a sample of 20})
+$$
+
+Requirements:
+
+- Use simple random samples **without replacement**
+- Report the Monte Carlo estimate
+- State the seed you used
+- Explain why more than a handful of repetitions is necessary
+
+**6. Audit one AI suggested workflow**
+
+Choose one AI suggested simulation setup, code chunk, or explanation and audit it.
+
+Your audit must answer all of the following:
+
+- Did your group accept it as is, revise it, or reject it?
+- Why?
+- What evidence did you use to support that decision?
+- If the AI output was mostly correct, what did you still validate or clarify?
+- If the AI output was weak or wrong, how did you correct it?
+
+Your goal here is not to force an error. Your goal is to evaluate whether the AI output is trustworthy and complete for this activity.
+
+**7. Sampling distribution simulation**
+
+Simulate the sampling distribution of $\hat{p}$ for `late_delivery == "Yes"` using repeated simple random samples **without replacement**.
+
+Requirements:
+
+- At least 2000 repetitions for $n = 20$
+- At least 2000 repetitions for $n = 60$
+- Save the simulated $\hat{p}$ values for both sample sizes
+
+**8. Sampling distribution evidence**
+
+Create visual evidence for the two sampling distributions.
+
+Requirements:
+
+- use plots such as histograms, dot plots, or density style plots
+- report the center and spread for each sample size
+- compare each simulated center to the true population proportion
+- explain how the spread changes when the sample size increases
+
+**9. Stability or Monte Carlo uncertainty**
+
+Do one of the following:
+
+- rerun one simulation with a different seed and compare the estimate
+- increase the number of repetitions and compare the estimate
+- compute and report a Monte Carlo standard error for the probability estimate
+
+Then explain what this tells you about simulation reliability.
+
+**10. Required extension**
+
+Choose **one** new but related variation below.
+
+- Change the sample size from 20 to 40 for the probability question.
+- Change the event from “at least 9 late deliveries” to “between 6 and 8 late deliveries, inclusive.”
+- Estimate the probability using both late delivery counts and sample proportions, then explain the connection.
+- Compare the probability estimate using 1000 repetitions and 10000 repetitions.
+
+For your chosen extension:
+
+- state your prediction **before** simulating
+- justify the prediction in plain language
+- run the new simulation
+- explain what changed and why
+
+**11. Learn something new**
+
+Write 2 to 4 sentences answering:
+
+- What new probability or simulation idea did AI introduce to your group?
+- How did you restate that idea in plain language?
+- Did that new idea genuinely help your understanding, or did it mostly add confusion?
+
+**12. Judgment and caution**
+
+Write 4 to 6 sentences answering:
+
+- What was the most important design choice in your simulation?
+- What did your group most need to validate before trusting the result?
+- Why are your final simulation answers more trustworthy than a quick unverified answer?
+- What additional check would you do before using simulation results in a real report?
+:::
+
+### Step 5 Write the Human Authored Synthesis (group)
+
+Length target: 400 to 600 words.
+
+Your synthesis must include:
+
+- Your investigation question
+- At least two important simulation design or validation decisions, supported by evidence from your checklist
+- A clear explanation of how your group evaluated AI output, not just whether AI was right or wrong
+- A short recommended workflow for planning, validating, and extending a simulation study
+- A brief explanation of one new idea your group learned through AI and how you translated it into plain language
+
+Your synthesis must be written in your own words.
+
+### Step 6 Presentation slides (group)
+
+Use this exact slide structure:
+
+- Our question
+- What AI suggested
+- What we audited and validated
+- Our final understanding, with evidence
+- One takeaway for future data science work
+
+Time: 12 to 15 minutes.
+
+## Individual Reflection (each student)
+
+Write 150 to 200 words answering:
+
+- What did AI help you learn?
+- What did you need to validate, clarify, or revise?
+- What did you contribute as a human thinker?
+- How will you change your AI use in future data work?
+
+Your reflection must match your assigned role.
+
+<!-- ## Participation (non-presenting students) -->
+
+<!-- Please scan the QR code, or go to `[your form link here]` to share what you learned from this activity. -->

@@ -28,11 +28,12 @@ sample(teams, 1)
 ```{r}
 teams <- c("The Data Scientists", "Stat Padders", "Data Divers", "Plot Squad")
 set.seed(3570)
-sample(teams, 1)
+sample(teams, 4)
 ```
 
--   Activity 4 is presented by team .
+-   Activity 4 is presented by team [**Stat Padders**]{.blue}:  Jared, DJ, Raj.
 
--   Activity 5 is presented by team .
+-   Activity 5 is presented by team [**Plot Squad**]{.blue}: Dominic, Wyatt, Drishtant, Tyler.
 
--   Activity 6 is presented by team .
+-   Activity 6 is presented by team [**Data Divers**]{.blue}: Karlo, Beth, Jack.
+

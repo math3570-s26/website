@@ -1,0 +1,490 @@
+---
+title: "Mini Project 3"
+subtitle: "Supervised Learning and Model Evaluation"
+format: html
+editor: source
+categories: "Mini Project"
+date-modified: today
+execute:
+  echo: true
+  eval: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| echo: false
+library(tidyverse)
+```
+
+## Overview
+
+In **Mini Project 1**, your team explored data and told a short story with visuals. In **Mini Project 2**, your team built a cleaning pipeline and created a trustworthy, analysis ready table.
+
+In **Mini Project 3**, your team will take one more step: **use data to make a prediction and evaluate how well it works on new data**.
+
+Complete the Quarto file by
+
+1. Defining a clear prediction task
+2. Choosing a target variable and a small set of predictors
+3. Splitting the data into a training set and a test set
+4. Fitting **2 simple supervised learning models**
+5. Comparing model performance on the test set
+6. Explaining results and limitations in plain language
+
+Keep the project simple and honest. Do NOT do advanced tuning, deep learning, or a large number of models.
+
+## What you will submit
+
+Show, in your Posit Cloud,
+
+1. The **rendered HTML report**
+2. The **complete version of this source qmd file**
+3. **Any data file you used**, only if it is not a built in package data set
+4. Any cleaned data file you created for this project, if applicable
+
+## What you will present
+
+A **10 minute** team presentation that explains
+
+1. What your prediction task was
+2. Which variables you used
+3. How you split the data
+4. Which 2 models you compared
+5. Which model performed better on the test set
+6. What your team learned and what the model cannot tell us
+
+## Team Info
+
+- **Team Name**: [Your Team Name]{.blue}
+
+- Team members and roles for this project:
+
+  1. **Project lead** (keeps time, coordinates tasks): [Your Member Name(s)]{.blue}
+  2. **Data and feature lead** (prepares target and predictors): [Your Member Name(s)]{.blue}
+  3. **Modeling lead** (fits models and organizes output): [Your Member Name(s)]{.blue}
+  4. **Evaluation and presentation lead** (compares models and prepares presentation): [Your Member Name(s)]{.blue}
+
+[Role note]: Each student plays a specific role for accountability, but teammates are welcome to work together, help, and learn from each other to produce high quality and cohesive work. If your team has 3 members, one person may take on two roles.
+
+## Project rules
+
+Keep the project simple.
+
+1. Choose **one** prediction question
+2. Use **one** data set
+3. Use **no more than 6 predictors**
+4. If you do a classification project, choose a **binary** target variable
+5. Fit **exactly 2 simple models**
+6. Use **one** training and test split
+7. Use **1 or 2 evaluation metrics**
+8. Explain results in plain language
+9. Do NOT claim causation
+10. Do NOT overstate what your model can do
+
+## Step 1: Choose a data set
+
+Choose one option below. Two teams may use the same data set.
+
+### Data sets
+
+1. `penguins` data set from R package [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/)
+2. `mpg` data set from R package [`ggplot2`](https://ggplot2.tidyverse.org/reference/mpg.html)
+3. `loans_full_schema` data set from R package [`openintro`](https://www.openintro.org/)
+4. Your cleaned data from **Mini Project 2**, with instructor approval
+5. Your own data set, with instructor approval
+
+:::: callout-warning
+::: {style="font-size: 1.1em;"}
+
+Choose a data set and target that are manageable for a short team project. Your goal is not to build the most accurate model possible. Your goal is to demonstrate a clear and correct prediction workflow.
+
+:::
+::::
+
+Use the code chunk `import-data` below to import your data, and call the main table `data_raw`.
+
+```{r}
+#| label: import-data
+## Import your data here
+## Example:
+## data_raw <- palmerpenguins::penguins
+data_raw <- 
+```
+
+### Quick description of your data set
+
+Answer the following questions.
+
+1. What does one row represent
+
+[**Answer:**]{.blue}
+
+2. Why is this data set suitable for a prediction task
+
+[**Answer:**]{.blue}
+
+3. What variable do you want to predict
+
+[**Answer:**]{.blue}
+
+4. Is your task a **regression** problem or a **classification** problem
+
+[**Answer:**]{.blue}
+
+## Step 2: Mini proposal
+
+Write short answers. Keep them specific.
+
+1. What is your prediction question
+
+[**Answer:**]{.blue}
+
+2. Who might care about this prediction question
+
+[**Answer:**]{.blue}
+
+3. What is your target variable
+
+[**Answer:**]{.blue}
+
+4. Which predictors do you plan to use, and why
+
+[**Answer:**]{.blue}
+
+5. Why is this a reasonable introductory project
+
+[**Answer:**]{.blue}
+
+6. What is one challenge or limitation you expect
+
+[**Answer:**]{.blue}
+
+## Step 3: Prepare your modeling data
+
+Create a table called `data` that is ready for modeling.
+
+Keep this preparation light and focused. You may
+
+1. Select useful variables
+2. Filter rows
+3. Handle missing values
+4. Recode values
+5. Create a small number of simple derived variables
+
+Do NOT turn this into another full wrangling project. If major cleaning was already done in **Mini Project 2**, briefly summarize that and then move on.
+
+```{r}
+#| label: prepare-data
+## Prepare your modeling data here
+data <- 
+```
+
+### Describe your modeling data
+
+1. How many rows are in `data`
+
+[**Answer:**]{.blue}
+
+2. What is the target variable
+
+[**Answer:**]{.blue}
+
+3. Which predictors did you keep
+
+[**Answer:**]{.blue}
+
+4. Did you remove any rows or variables, and why
+
+[**Answer:**]{.blue}
+
+## Step 4: Quick check of the target and predictors
+
+Before fitting models, inspect your variables.
+
+```{r}
+#| label: quick-check
+## Check your target and predictors here
+## Suggestions:
+## glimpse(data)
+## summary(data)
+```
+
+### Target check
+
+Describe the target variable.
+
+1. If regression, what is its range and general distribution
+2. If classification, what are the class counts
+
+[**Answer:**]{.blue}
+
+### Predictor check
+
+Describe any issues you noticed with the predictors, such as missing values, unusual values, or highly unbalanced categories.
+
+[**Answer:**]{.blue}
+
+## Step 5: Split the data into training and test sets
+
+Use one train and test split. Set a seed so that the split can be reproduced.
+
+A common choice is about **80 percent** for training and the rest for testing.
+
+```{r}
+#| label: split-data
+set.seed(3570)
+
+## Create training and test sets here
+## Example logic:
+## n <- nrow(data)
+## train_id <- sample(seq_len(n), size = round(0.75 * n))
+## train <- data[train_id, ]
+## test  <- data[-train_id, ]
+```
+
+### Why do we split the data
+
+In 2 to 4 sentences, explain why the test set is important.
+
+[**Answer:**]{.blue}
+
+### Split summary
+
+1. Number of rows in training set: [**Answer:**]{.blue}
+2. Number of rows in test set: [**Answer:**]{.blue}
+
+If classification, report the class counts in both sets.
+
+[**Answer:**]{.blue}
+
+## Step 6: Model 1
+
+Choose a simple first model.
+
+### Recommended Model 1
+
+1. If regression, use **linear regression**
+2. If classification, use **logistic regression**
+
+If you want to use a different Model 1, get instructor approval.
+
+### Model 1 formula
+
+Write your model formula in words.
+
+[**Answer:**]{.blue}
+
+```{r}
+#| label: fit-model-1
+## Fit Model 1 here
+model_1 <- 
+```
+
+### Model 1 interpretation
+
+Briefly describe what Model 1 is doing.
+
+[**Answer:**]{.blue}
+
+## Step 7: Model 2
+
+Choose a second simple model that is different from Model 1.
+
+### Recommended Model 2
+
+1. If regression, use a **decision tree for regression**
+2. If classification, use a **decision tree for classification**
+
+If you want to use a different Model 2, get instructor approval.
+
+### Why choose this second model
+
+[**Answer:**]{.blue}
+
+```{r}
+#| label: fit-model-2
+## Fit Model 2 here
+model_2 <- 
+```
+
+### Model 2 interpretation
+
+Briefly describe what Model 2 is doing.
+
+[**Answer:**]{.blue}
+
+## Step 8: Make predictions on the test set
+
+Use both models to predict the target variable on the test set.
+
+```{r}
+#| label: predictions
+## Create predictions from both models here
+## Suggested output names:
+## pred_1
+## pred_2
+```
+
+## Step 9: Evaluate model performance
+
+Use the test set only.
+
+### If your project is regression
+
+Choose **1 or 2** of the following:
+
+1. RMSE (root mean square error)
+2. MAE (mean absolute error)
+3. $R^2$
+
+Also include **one simple plot** such as predicted versus actual values.
+
+### If your project is classification
+
+Choose **1 or 2** of the following:
+
+1. Accuracy
+2. Misclassification rate
+3. Sensitivity
+4. Specificity
+
+Also include a **confusion matrix**.
+
+```{r}
+#| label: evaluate-models
+## Evaluate Model 1 and Model 2 here
+## Report your test set performance clearly
+```
+
+### Results summary
+
+Fill in the performance of both models.
+
+#### Model 1
+
+[**Answer:**]{.blue}
+
+#### Model 2
+
+[**Answer:**]{.blue}
+
+### Which model did better
+
+[**Answer:**]{.blue}
+
+### Was the difference large or small
+
+[**Answer:**]{.blue}
+
+## Step 10: Show one helpful output
+
+Create **one** output that helps the audience understand the model results.
+
+Examples:
+
+1. A confusion matrix
+2. A predicted versus actual plot
+3. A small table comparing metrics
+4. A simple visualization of prediction errors
+
+```{r}
+#| label: helpful-output
+## Add one helpful output here
+```
+
+Explain why this output helps the audience understand the results.
+
+[**Answer:**]{.blue}
+
+## Step 11: Interpret the results in plain language
+
+Answer the following questions.
+
+1. What did your team learn from this prediction task
+
+[**Answer:**]{.blue}
+
+2. What can your model do reasonably well
+
+[**Answer:**]{.blue}
+
+3. Where might your model fail or be less reliable
+
+[**Answer:**]{.blue}
+
+4. What should we be careful **not** to claim from this project
+
+[**Answer:**]{.blue}
+
+5. If you had more time, what is one reasonable next step
+
+[**Answer:**]{.blue}
+
+## Step 12: Model honesty checklist
+
+Confirm that your report shows the following:
+
+1. You clearly defined a prediction question
+2. You identified the target and predictors
+3. You used a reproducible train and test split
+4. You fit **exactly 2** models
+5. You evaluated performance on the **test set**
+6. You explained results in plain language
+7. You discussed at least one limitation
+8. You did not overclaim what the model means
+
+Revise your report if needed.
+
+## Step 13: Team reflection
+
+Each team member writes 2 to 4 sentences:
+
+1. What you contributed
+2. One thing you learned about supervised learning
+3. One thing you would improve next time
+
+#### Member 1: your name
+
+[**Answer:**]{.blue}
+
+#### Member 2: your name
+
+[**Answer:**]{.blue}
+
+#### Member 3: your name
+
+[**Answer:**]{.blue}
+
+#### Member 4: your name (if applicable)
+
+[**Answer:**]{.blue}
+
+## Step 14: Presentation plan
+
+Plan a **10 minute** talk with the suggested structure:
+
+1. About 1 minute: data set and prediction question
+2. About 2 minutes: target, predictors, and data preparation
+3. About 2 minutes: train and test split
+4. About 2 minutes: Model 1 and Model 2
+5. About 2 minutes: test set results and comparison
+6. About 1 minute: takeaway and limitations
+
+### Presentation order
+
+```{r}
+#| eval: true
+teams <- c("Team 1","Superb Statisticians", "The Data Scientists", "Stat Padders", "Data Divers", "Plot Squad")
+set.seed(19)
+sample(teams, 6, replace = FALSE)
+```
+
+## Grading guide
+
+Total 15 points:
+
+1. **Clear** prediction question, target, and predictors (3 pts)
+2. **Reasonable** train and test workflow and appropriate model setup (4 pts)
+3. **Correct** evaluation and honest comparison of the 2 models (4 pts)
+4. **Clear** interpretation, limitations, and communication (4 pts)

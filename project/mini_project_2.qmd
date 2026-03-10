@@ -1,0 +1,421 @@
+---
+title: "Mini Project 2"
+subtitle: "Data Wrangling, Reproducibility, and Pipelines"
+format: html
+editor: source
+categories: "Mini Project"
+date-modified: today
+execute:
+  echo: true
+  eval: false
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+```
+
+## Overview
+
+In **Mini Project 1**, your team explored a data set and told a short story with visuals. In this second mini project, your team will focus on a different but equally important part of data science: **turning messy data into a clean, analysis ready table**.
+
+[Focus on practice]: Complete the Quarto file by
+
+1. Identifying problems in a raw data set
+2. Building a simple, readable cleaning pipeline
+3. Checking that your cleaned data makes sense
+4. Explaining your choices in plain language
+
+This is a **data wrangling project**. Focus on **cleaning, organizing, and documenting** your data. Do NOT do complex modeling. Keep any analysis brief and descriptive.
+
+### What you will submit
+
+Show, in your Posit Cloud,
+
+1. The **rendered HTML report**
+2. The **complete version of this source qmd file**
+3. **Any raw data file you used**, only if it is not a built in package data set
+4. One exported cleaned data file named **`data_clean.csv`**
+
+### What you will present
+
+A **10 minute** team presentation that explains
+
+1. What was messy or unclear in the original data
+2. What your cleaning pipeline did
+3. Why the final cleaned table is more trustworthy and useful
+
+## Team Info
+
+* **Team Name**: [Your Team Name]{.blue}
+
+* Team members and roles for this project:
+
+  1. **Project lead** (keeps time, coordinates tasks): [Your Member Name(s)]{.blue}
+  2. **Pipeline builder** (writes and organizes the cleaning code): [Your Member Name(s)]{.blue}
+  3. **Quality checker** (checks missing values, duplicates, odd values): [Your Member Name(s)]{.blue}
+  4. **Documentation writer** (explains steps and prepares presentation): [Your Member Name(s)]{.blue}
+
+[Role note]: Each student plays a specific role for accountability, but teammates are welcome to work together, help, and learn from each other to produce high quality and cohesive work. If your team has 3 members, one person may take on two roles.
+
+## Step 1: Choose a data set
+
+Choose one option below. Two teams may use the same data set.
+
+:::: callout-warning
+::: {style="font-size: 1.1em;"}
+
+This project should involve **more wrangling than Mini Project 1**. If you reuse your Mini Project 1 data set, your team must clearly show that this project involves **new and meaningful cleaning work**, not just light filtering or renaming.
+
+Aim for a data set where you can complete at least **4 meaningful wrangling tasks**.
+
+:::
+::::
+
+### Data sets
+
+* `billboard` data set from R package [`tidyr`](https://tidyr.tidyverse.org/reference/billboard.html)
+
+* `who2` data set from R package [`tidyr`](https://tidyr.tidyverse.org/reference/who.html)
+
+* `relig_income` data set from R package [`tidyr`](https://tidyr.tidyverse.org/reference/relig_income.html)
+
+<!-- * `weather` data set from R package [`nycflights13`](https://nycflights13.tidyverse.org/) -->
+
+* `penguins_raw` data set from R package [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/) 
+
+<!-- * `flights` data set from R package [`nycflights13`](https://nycflights13.tidyverse.org/) -->
+
+<!-- * *Your Mini Project 1 data set again, but with new wrangling goals* -->
+
+* *Your own data set, with instructor approval*. Choose a data set that is manageable for a short team project. Your goal is not to clean a huge data set, but to demonstrate a clear and meaningful workflow.
+
+[Tip]: If you use `penguins_raw`, you may want to clean the column names first so they are easier to work with.
+
+Use the code chunk `import-data` below to import your data, and call the main raw data table `data_raw`.
+
+```{r}
+#| label: import-data
+## Import your data
+## If you use more than one raw table, load them here and explain them below.
+# data_raw <- tidyr::billboard
+# # or
+# data_raw <- palmerpenguins::penguins_raw
+```
+
+### Quick description of your data set
+
+Answer the following questions.
+
+1. What does one row represent
+
+[**Answer:**]{.blue}
+
+2. What makes this data set messy, incomplete, or hard to use right away
+
+[**Answer:**]{.blue}
+
+3. What might someone want to do with the cleaned version of this data
+
+[**Answer:**]{.blue}
+
+4. If you are using more than one raw table, what does each table contribute
+
+[**Answer:**]{.blue}
+
+## Step 2: Planning notes
+
+Write short answers. Keep them specific.
+
+1. What is the goal of your cleaning pipeline
+
+[**Answer:**]{.blue}
+
+2. Who would benefit from having this cleaned table
+
+[**Answer:**]{.blue}
+
+3. List at least 4 wrangling tasks you expect to do
+
+[**Answer:**]{.blue}
+
+4. What will your final cleaned table allow someone to do more easily
+
+[**Answer:**]{.blue}
+
+5. What is one challenge you expect to face
+
+[**Answer:**]{.blue}
+
+## Step 3: Quick raw data check
+
+Before cleaning, inspect the data and identify problems.
+
+### 3.1 First look
+
+```{r}
+#| label: raw-check
+## Check your data in your own way
+## Suggestions:
+## glimpse(data_raw)
+## summary(data_raw)
+## nrow(data_raw)
+## ncol(data_raw)
+```
+
+In 2 to 4 sentences, describe what you noticed about the structure of the raw data.
+
+[**Answer:**]{.blue}
+
+### 3.2 Missing values
+
+```{r}
+#| label: missing-values
+missing_counts <- data_raw |>
+  summarise(across(everything(), ~ sum(is.na(.x)))) |>
+  pivot_longer(cols = everything(), names_to = "variable", values_to = "n_missing") |>
+  arrange(desc(n_missing))
+
+missing_counts
+```
+
+What missing value issues do you notice, and how do you plan to handle them?
+
+[**Answer:**]{.blue}
+
+### 3.3 Duplicate rows or repeated records
+
+```{r}
+#| label: duplicates
+## Example ideas:
+## nrow(data_raw)
+## nrow(distinct(data_raw))
+## data_raw |> count(...) |> arrange(desc(n))
+```
+
+Do you see any duplicate rows, repeated records, or values that need attention?
+
+[**Answer:**]{.blue}
+
+### 3.4 Other issues
+
+Look for at least one more issue, such as unclear names, wrong data types, dates stored as text, values that need recoding, or columns that should be reshaped.
+
+```{r}
+#| label: other-issues
+## Check one more issue here
+```
+
+Describe the issue and why it matters.
+
+[**Answer:**]{.blue}
+
+## Step 4: Build your cleaning pipeline
+
+Create a new object `data` that is ready for later analysis.
+
+Your pipeline should include at least **4 meaningful wrangling actions**. Possible actions include:
+
+1. Selecting useful columns
+2. Renaming columns
+3. Filtering rows
+4. Recoding values
+5. Converting data types
+6. Parsing dates or times
+7. Separating or combining columns
+8. Pivoting longer or wider
+9. Handling missing values
+10. Creating one or two derived variables
+11. Removing duplicates
+12. Joining a small lookup table
+
+Use the code chunk `clean` below to clean your `data_raw`, and save the cleaned data as `data`.
+
+```{r}
+#| label: clean
+## Build your cleaning pipeline here
+## Keep it readable with line breaks and comments
+```
+
+### Describe your main cleaning steps
+
+In plain language, explain the main changes you made.
+
+1. [**Step 1:**]{.blue}
+2. [**Step 2:**]{.blue}
+3. [**Step 3:**]{.blue}
+4. [**Step 4:**]{.blue}
+5. [**Optional additional step:**]{.blue}
+
+### Why your pipeline is readable
+
+What did you do to make your code easier for another person to follow?
+
+[**Answer:**]{.blue}
+
+## Step 5: Check your cleaned data
+
+Now verify that your cleaned table makes sense.
+
+### 5.1 Final structure
+
+```{r}
+#| label: final-structure
+glimpse(data)
+summary(data)
+```
+
+What looks better or clearer in `data` compared with `data_raw`?
+
+[**Answer:**]{.blue}
+
+### 5.2 Quality checks
+
+Run at least **3 checks** that help you trust the cleaned data.
+
+Possible checks:
+
+1. Missing values after cleaning
+2. No duplicate rows
+3. Valid ranges for key variables
+4. Number of rows before and after cleaning
+5. Category levels look reasonable
+6. Joined rows matched as expected
+
+```{r}
+#| label: quality-checks
+## Add at least 3 checks here
+```
+
+Summarize what your checks show.
+
+[**Answer:**]{.blue}
+
+### 5.3 Export your cleaned data
+
+```{r}
+#| label: export-cleaned
+write_csv(data, "data_clean.csv")
+```
+
+## Step 6: Show that your table is analysis ready
+
+Your final report should show that the cleaned table is easier to understand and use.
+
+### 6.1 Preview of cleaned data
+
+```{r}
+#| label: preview-cleaned
+## Show a small preview of the cleaned data
+## Example: slice_head(data, n = 10)
+```
+
+In 2 to 3 sentences, explain why this table is more usable than the raw version.
+
+[**Answer:**]{.blue}
+
+### 6.2 Mini data dictionary
+
+Create a small table that explains **5 to 8 important variables** in your cleaned data.
+
+```{r}
+#| label: data-dictionary
+## Create a tibble with columns like:
+## variable, meaning, type
+```
+
+### 6.3 One simple summary that the cleaned table now supports
+
+Create **one** simple summary table or plot that would have been harder to make from the raw data. Keep it descriptive only.
+
+```{r}
+#| label: simple-summary
+## Example: a grouped summary table or a simple plot
+```
+
+What does this summary show, and how does it demonstrate that your cleaned table is useful?
+
+[**Answer:**]{.blue}
+
+### 6.4 Handoff note
+
+Imagine another student will use your cleaned data next.
+
+<!-- Imagine you are handing this cleaned table to a teammate who will do the next step of analysis. -->
+
+[Write 4 to 6 sentences.]{.blue} Include:
+
+1. What this cleaned table is for
+2. What one row represents
+3. Which variables are most important
+4. One limitation that still remains
+5. One reasonable next analysis someone could do
+
+## Step 7: Pipeline quality checklist
+
+Confirm that your report shows the following:
+
+1. You clearly explained what was messy in the raw data
+2. Your cleaning code can be rerun from top to bottom
+3. Your cleaned table is saved as `data`
+4. You exported `data_clean.csv`
+5. You ran at least 3 checks on the final data
+6. Your explanations are in plain language
+7. You did not overcomplicate the project
+
+Revise your report if needed.
+
+## Step 8: Team reflection
+
+Each team member writes 2 to 4 sentences:
+
+1. What you contributed
+2. One thing you learned about data wrangling
+3. One thing you would improve next time
+
+#### Member 1: your name
+
+[**Answer:**]{.blue}
+
+#### Member 2: your name
+
+[**Answer:**]{.blue}
+
+#### Member 3: your name
+
+[**Answer:**]{.blue}
+
+#### Member 4: your name (if applicable)
+
+[**Answer:**]{.blue}
+
+## Step 9: Presentation plan
+
+Plan a **10 minute** talk with the suggested structure:
+
+1. About 1 minute: context and purpose of the cleaned table
+2. About 2 minutes: what was messy or unclear in the raw data
+3. About 3 minutes: your main wrangling steps
+4. About 2 minutes: your quality checks and what they showed
+5. About 2 minutes: the final cleaned table, next use, and takeaway
+
+### Presentation order
+
+```{r}
+#| eval: true
+teams <- c("Team 1", "Superb Statisticians", "The Data Scientists", "Stat Padders", "Data Divers", "Plot Squad")
+set.seed(2026)
+sample(teams, 6, replace = FALSE)
+```
+
+## Grading guide
+
+Total 15 points:
+
+1. **Clear** purpose and clear identification of raw data issues (3 pts)
+2. **Meaningful** wrangling pipeline and clear documentation of steps (6 pts)
+3. **Reproducible** workflow, quality checks, and usable final cleaned table (3 pts)
+4. Presentation **clarity** and **timing** (3 pts)

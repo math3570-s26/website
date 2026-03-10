@@ -7,7 +7,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 
 ::: column-screen-inset-right
 | Week | Date | Topic | Materials | Lab Activity | AI Activity | Project |
-|:---------:|-----------|-----------|:---------:|:---------:|:---------:|-----------|
+|:--:|----|----|:--:|:--:|:--:|----|
 | 1 | Tue, Jan 13 | Greetings; Overview of Data Science | [🖥️syllabus](slides/01-syllabus-slides.html) [🖥️overview](slides/02-datascience-slides.html) |  |  |  |
 |  | Thu, Jan 15 | Posit Cloud | [🖥️posit](slides/03-posit-slides.html) | [📋 posit](/exercise/lab00-posit.html) [📋01](/exercise/lab01-rscript.html) |  |  |
 | 2 | Tue, Jan 20 | Git and GitHub | [🖥️git](slides/04-git-slides.html) | [📋github](/exercise/lab00-git.html) |  |  |
@@ -50,5 +50,5 @@ knitr::knit_exit()
 ```
 
 |   |   |   | Prepare | Slides | AE | Labs | HW | Present | Project |
-|--------|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|----|----|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Week | Date | Topic | 📖 | 🖥️ | 📋 | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️ | ✅ | 📂 |

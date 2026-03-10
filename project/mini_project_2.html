@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Mini Project 2 – MATH/COSC 3570 - Spring 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-238b7dab1bde4684d4de8122b9beee70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Mini Project 2 – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="Data Wrangling, Reproducibility, and Pipelines">
+<meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Mini Project 2</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://d2l.mu.edu/d2l/home/630428" title="D2L" class="quarto-navigation-tool px-1" aria-label="D2L"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">AI Activities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai_act_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai_example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Project Example</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Project Topics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mini Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topics and Works</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-description-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-work-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Group and Proposal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
+  <li><a href="#what-you-will-present" id="toc-what-you-will-present" class="nav-link" data-scroll-target="#what-you-will-present">What you will present</a></li>
+  </ul></li>
+  <li><a href="#team-info" id="toc-team-info" class="nav-link" data-scroll-target="#team-info">Team Info</a></li>
+  <li><a href="#step-1-choose-a-data-set" id="toc-step-1-choose-a-data-set" class="nav-link" data-scroll-target="#step-1-choose-a-data-set">Step 1: Choose a data set</a>
+  <ul class="collapse">
+  <li><a href="#data-sets" id="toc-data-sets" class="nav-link" data-scroll-target="#data-sets">Data sets</a></li>
+  <li><a href="#quick-description-of-your-data-set" id="toc-quick-description-of-your-data-set" class="nav-link" data-scroll-target="#quick-description-of-your-data-set">Quick description of your data set</a></li>
+  </ul></li>
+  <li><a href="#step-2-planning-notes" id="toc-step-2-planning-notes" class="nav-link" data-scroll-target="#step-2-planning-notes">Step 2: Planning notes</a></li>
+  <li><a href="#step-3-quick-raw-data-check" id="toc-step-3-quick-raw-data-check" class="nav-link" data-scroll-target="#step-3-quick-raw-data-check">Step 3: Quick raw data check</a>
+  <ul class="collapse">
+  <li><a href="#first-look" id="toc-first-look" class="nav-link" data-scroll-target="#first-look">3.1 First look</a></li>
+  <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values">3.2 Missing values</a></li>
+  <li><a href="#duplicate-rows-or-repeated-records" id="toc-duplicate-rows-or-repeated-records" class="nav-link" data-scroll-target="#duplicate-rows-or-repeated-records">3.3 Duplicate rows or repeated records</a></li>
+  <li><a href="#other-issues" id="toc-other-issues" class="nav-link" data-scroll-target="#other-issues">3.4 Other issues</a></li>
+  </ul></li>
+  <li><a href="#step-4-build-your-cleaning-pipeline" id="toc-step-4-build-your-cleaning-pipeline" class="nav-link" data-scroll-target="#step-4-build-your-cleaning-pipeline">Step 4: Build your cleaning pipeline</a>
+  <ul class="collapse">
+  <li><a href="#describe-your-main-cleaning-steps" id="toc-describe-your-main-cleaning-steps" class="nav-link" data-scroll-target="#describe-your-main-cleaning-steps">Describe your main cleaning steps</a></li>
+  <li><a href="#why-your-pipeline-is-readable" id="toc-why-your-pipeline-is-readable" class="nav-link" data-scroll-target="#why-your-pipeline-is-readable">Why your pipeline is readable</a></li>
+  </ul></li>
+  <li><a href="#step-5-check-your-cleaned-data" id="toc-step-5-check-your-cleaned-data" class="nav-link" data-scroll-target="#step-5-check-your-cleaned-data">Step 5: Check your cleaned data</a>
+  <ul class="collapse">
+  <li><a href="#final-structure" id="toc-final-structure" class="nav-link" data-scroll-target="#final-structure">5.1 Final structure</a></li>
+  <li><a href="#quality-checks" id="toc-quality-checks" class="nav-link" data-scroll-target="#quality-checks">5.2 Quality checks</a></li>
+  <li><a href="#export-your-cleaned-data" id="toc-export-your-cleaned-data" class="nav-link" data-scroll-target="#export-your-cleaned-data">5.3 Export your cleaned data</a></li>
+  </ul></li>
+  <li><a href="#step-6-show-that-your-table-is-analysis-ready" id="toc-step-6-show-that-your-table-is-analysis-ready" class="nav-link" data-scroll-target="#step-6-show-that-your-table-is-analysis-ready">Step 6: Show that your table is analysis ready</a>
+  <ul class="collapse">
+  <li><a href="#preview-of-cleaned-data" id="toc-preview-of-cleaned-data" class="nav-link" data-scroll-target="#preview-of-cleaned-data">6.1 Preview of cleaned data</a></li>
+  <li><a href="#mini-data-dictionary" id="toc-mini-data-dictionary" class="nav-link" data-scroll-target="#mini-data-dictionary">6.2 Mini data dictionary</a></li>
+  <li><a href="#one-simple-summary-that-the-cleaned-table-now-supports" id="toc-one-simple-summary-that-the-cleaned-table-now-supports" class="nav-link" data-scroll-target="#one-simple-summary-that-the-cleaned-table-now-supports">6.3 One simple summary that the cleaned table now supports</a></li>
+  <li><a href="#handoff-note" id="toc-handoff-note" class="nav-link" data-scroll-target="#handoff-note">6.4 Handoff note</a></li>
+  </ul></li>
+  <li><a href="#step-7-pipeline-quality-checklist" id="toc-step-7-pipeline-quality-checklist" class="nav-link" data-scroll-target="#step-7-pipeline-quality-checklist">Step 7: Pipeline quality checklist</a></li>
+  <li><a href="#step-8-team-reflection" id="toc-step-8-team-reflection" class="nav-link" data-scroll-target="#step-8-team-reflection">Step 8: Team reflection</a></li>
+  <li><a href="#step-9-presentation-plan" id="toc-step-9-presentation-plan" class="nav-link" data-scroll-target="#step-9-presentation-plan">Step 9: Presentation plan</a>
+  <ul class="collapse">
+  <li><a href="#presentation-order" id="toc-presentation-order" class="nav-link" data-scroll-target="#presentation-order">Presentation order</a></li>
+  </ul></li>
+  <li><a href="#grading-guide" id="toc-grading-guide" class="nav-link" data-scroll-target="#grading-guide">Grading guide</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mini Project 2</h1>
+<p class="subtitle lead">Data Wrangling, Reproducibility, and Pipelines</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Mini Project</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 10, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>In <strong>Mini Project 1</strong>, your team explored a data set and told a short story with visuals. In this second mini project, your team will focus on a different but equally important part of data science: <strong>turning messy data into a clean, analysis ready table</strong>.</p>
+<ol type="1">
+<li>Identifying problems in a raw data set</li>
+<li>Building a simple, readable cleaning pipeline</li>
+<li>Checking that your cleaned data makes sense</li>
+<li>Explaining your choices in plain language</li>
+</ol>
+<p>This is a <strong>data wrangling project</strong>. Focus on <strong>cleaning, organizing, and documenting</strong> your data. Do NOT do complex modeling. Keep any analysis brief and descriptive.</p>
+<section id="what-you-will-submit" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h3>
+<p>Show, in your Posit Cloud,</p>
+<ol type="1">
+<li>The <strong>rendered HTML report</strong></li>
+<li>The <strong>complete version of this source qmd file</strong></li>
+<li><strong>Any raw data file you used</strong>, only if it is not a built in package data set</li>
+<li>One exported cleaned data file named <strong><code>data_clean.csv</code></strong></li>
+</ol>
+</section>
+<section id="what-you-will-present" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-will-present">What you will present</h3>
+<p>A <strong>10 minute</strong> team presentation that explains</p>
+<ol type="1">
+<li>What was messy or unclear in the original data</li>
+<li>What your cleaning pipeline did</li>
+<li>Why the final cleaned table is more trustworthy and useful</li>
+</ol>
+</section>
+</section>
+<section id="team-info" class="level2">
+<h2 class="anchored" data-anchor-id="team-info">Team Info</h2>
+<ul>
+<li><p><strong>Team Name</strong>: <span class="blue">Your Team Name</span></p></li>
+<li><p>Team members and roles for this project:</p>
+<ol type="1">
+<li><strong>Project lead</strong> (keeps time, coordinates tasks): <span class="blue">Your Member Name(s)</span></li>
+<li><strong>Pipeline builder</strong> (writes and organizes the cleaning code): <span class="blue">Your Member Name(s)</span></li>
+<li><strong>Quality checker</strong> (checks missing values, duplicates, odd values): <span class="blue">Your Member Name(s)</span></li>
+<li><strong>Documentation writer</strong> (explains steps and prepares presentation): <span class="blue">Your Member Name(s)</span></li>
+</ol></li>
+</ul>
+</section>
+<section id="step-1-choose-a-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-choose-a-data-set">Step 1: Choose a data set</h2>
+<p>Choose one option below. Two teams may use the same data set.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>This project should involve <strong>more wrangling than Mini Project 1</strong>. If you reuse your Mini Project 1 data set, your team must clearly show that this project involves <strong>new and meaningful cleaning work</strong>, not just light filtering or renaming.</p>
+<p>Aim for a data set where you can complete at least <strong>4 meaningful wrangling tasks</strong>.</p>
+</div>
+</div>
+</div>
+<section id="data-sets" class="level3">
+<h3 class="anchored" data-anchor-id="data-sets">Data sets</h3>
+<ul>
+<li><p><code>billboard</code> data set from R package <a href="https://tidyr.tidyverse.org/reference/billboard.html"><code>tidyr</code></a></p></li>
+<li><p><code>who2</code> data set from R package <a href="https://tidyr.tidyverse.org/reference/who.html"><code>tidyr</code></a></p></li>
+<li><p><code>relig_income</code> data set from R package <a href="https://tidyr.tidyverse.org/reference/relig_income.html"><code>tidyr</code></a></p></li>
+</ul>
+<!-- * `weather` data set from R package [`nycflights13`](https://nycflights13.tidyverse.org/) -->
+<ul>
+<li><code>penguins_raw</code> data set from R package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a></li>
+</ul>
+<!-- * `flights` data set from R package [`nycflights13`](https://nycflights13.tidyverse.org/) -->
+<!-- * *Your Mini Project 1 data set again, but with new wrangling goals* -->
+<ul>
+<li><em>Your own data set, with instructor approval</em>. Choose a data set that is manageable for a short team project. Your goal is not to clean a huge data set, but to demonstrate a clear and meaningful workflow.</li>
+</ul>
+<p>Use the code chunk <code>import-data</code> below to import your data, and call the main raw data table <code>data_raw</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Import your data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="do">## If you use more than one raw table, load them here and explain them below.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># data_raw &lt;- tidyr::billboard</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # or</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># data_raw &lt;- palmerpenguins::penguins_raw</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="quick-description-of-your-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="quick-description-of-your-data-set">Quick description of your data set</h3>
+<p>Answer the following questions.</p>
+<ol type="1">
+<li>What does one row represent</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="2" type="1">
+<li>What makes this data set messy, incomplete, or hard to use right away</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="3" type="1">
+<li>What might someone want to do with the cleaned version of this data</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="4" type="1">
+<li>If you are using more than one raw table, what does each table contribute</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-2-planning-notes" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-planning-notes">Step 2: Planning notes</h2>
+<p>Write short answers. Keep them specific.</p>
+<ol type="1">
+<li>What is the goal of your cleaning pipeline</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="2" type="1">
+<li>Who would benefit from having this cleaned table</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="3" type="1">
+<li>List at least 4 wrangling tasks you expect to do</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="4" type="1">
+<li>What will your final cleaned table allow someone to do more easily</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="5" type="1">
+<li>What is one challenge you expect to face</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="step-3-quick-raw-data-check" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-quick-raw-data-check">Step 3: Quick raw data check</h2>
+<p>Before cleaning, inspect the data and identify problems.</p>
+<section id="first-look" class="level3">
+<h3 class="anchored" data-anchor-id="first-look">3.1 First look</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Check your data in your own way</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Suggestions:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="do">## glimpse(data_raw)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">## summary(data_raw)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="do">## nrow(data_raw)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="do">## ncol(data_raw)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>In 2 to 4 sentences, describe what you noticed about the structure of the raw data.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="missing-values" class="level3">
+<h3 class="anchored" data-anchor-id="missing-values">3.2 Missing values</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>missing_counts <span class="ot">&lt;-</span> data_raw <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(.x)))) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">"variable"</span>, <span class="at">values_to =</span> <span class="st">"n_missing"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n_missing))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>missing_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>What missing value issues do you notice, and how do you plan to handle them?</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="duplicate-rows-or-repeated-records" class="level3">
+<h3 class="anchored" data-anchor-id="duplicate-rows-or-repeated-records">3.3 Duplicate rows or repeated records</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Example ideas:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="do">## nrow(data_raw)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">## nrow(distinct(data_raw))</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">## data_raw |&gt; count(...) |&gt; arrange(desc(n))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Do you see any duplicate rows, repeated records, or values that need attention?</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="other-issues" class="level3">
+<h3 class="anchored" data-anchor-id="other-issues">3.4 Other issues</h3>
+<p>Look for at least one more issue, such as unclear names, wrong data types, dates stored as text, values that need recoding, or columns that should be reshaped.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Check one more issue here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Describe the issue and why it matters.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-4-build-your-cleaning-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-build-your-cleaning-pipeline">Step 4: Build your cleaning pipeline</h2>
+<p>Create a new object <code>data</code> that is ready for later analysis.</p>
+<p>Your pipeline should include at least <strong>4 meaningful wrangling actions</strong>. Possible actions include:</p>
+<ol type="1">
+<li>Selecting useful columns</li>
+<li>Renaming columns</li>
+<li>Filtering rows</li>
+<li>Recoding values</li>
+<li>Converting data types</li>
+<li>Parsing dates or times</li>
+<li>Separating or combining columns</li>
+<li>Pivoting longer or wider</li>
+<li>Handling missing values</li>
+<li>Creating one or two derived variables</li>
+<li>Removing duplicates</li>
+<li>Joining a small lookup table</li>
+</ol>
+<p>Use the code chunk <code>clean</code> below to clean your <code>data_raw</code>, and save the cleaned data as <code>data</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Build your cleaning pipeline here</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Keep it readable with line breaks and comments</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="describe-your-main-cleaning-steps" class="level3">
+<h3 class="anchored" data-anchor-id="describe-your-main-cleaning-steps">Describe your main cleaning steps</h3>
+<p>In plain language, explain the main changes you made.</p>
+<ol type="1">
+<li><span class="blue"><strong>Step 1:</strong></span></li>
+<li><span class="blue"><strong>Step 2:</strong></span></li>
+<li><span class="blue"><strong>Step 3:</strong></span></li>
+<li><span class="blue"><strong>Step 4:</strong></span></li>
+<li><span class="blue"><strong>Optional additional step:</strong></span></li>
+</ol>
+</section>
+<section id="why-your-pipeline-is-readable" class="level3">
+<h3 class="anchored" data-anchor-id="why-your-pipeline-is-readable">Why your pipeline is readable</h3>
+<p>What did you do to make your code easier for another person to follow?</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-5-check-your-cleaned-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-check-your-cleaned-data">Step 5: Check your cleaned data</h2>
+<p>Now verify that your cleaned table makes sense.</p>
+<section id="final-structure" class="level3">
+<h3 class="anchored" data-anchor-id="final-structure">5.1 Final structure</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>What looks better or clearer in <code>data</code> compared with <code>data_raw</code>?</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="quality-checks" class="level3">
+<h3 class="anchored" data-anchor-id="quality-checks">5.2 Quality checks</h3>
+<p>Run at least <strong>3 checks</strong> that help you trust the cleaned data.</p>
+<p>Possible checks:</p>
+<ol type="1">
+<li>Missing values after cleaning</li>
+<li>No duplicate rows</li>
+<li>Valid ranges for key variables</li>
+<li>Number of rows before and after cleaning</li>
+<li>Category levels look reasonable</li>
+<li>Joined rows matched as expected</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add at least 3 checks here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Summarize what your checks show.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="export-your-cleaned-data" class="level3">
+<h3 class="anchored" data-anchor-id="export-your-cleaned-data">5.3 Export your cleaned data</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(data, <span class="st">"data_clean.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="step-6-show-that-your-table-is-analysis-ready" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-show-that-your-table-is-analysis-ready">Step 6: Show that your table is analysis ready</h2>
+<p>Your final report should show that the cleaned table is easier to understand and use.</p>
+<section id="preview-of-cleaned-data" class="level3">
+<h3 class="anchored" data-anchor-id="preview-of-cleaned-data">6.1 Preview of cleaned data</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Show a small preview of the cleaned data</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Example: slice_head(data, n = 10)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>In 2 to 3 sentences, explain why this table is more usable than the raw version.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="mini-data-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="mini-data-dictionary">6.2 Mini data dictionary</h3>
+<p>Create a small table that explains <strong>5 to 8 important variables</strong> in your cleaned data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a tibble with columns like:</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="do">## variable, meaning, type</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="one-simple-summary-that-the-cleaned-table-now-supports" class="level3">
+<h3 class="anchored" data-anchor-id="one-simple-summary-that-the-cleaned-table-now-supports">6.3 One simple summary that the cleaned table now supports</h3>
+<p>Create <strong>one</strong> simple summary table or plot that would have been harder to make from the raw data. Keep it descriptive only.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Example: a grouped summary table or a simple plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>What does this summary show, and how does it demonstrate that your cleaned table is useful?</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="handoff-note" class="level3">
+<h3 class="anchored" data-anchor-id="handoff-note">6.4 Handoff note</h3>
+<p>Imagine another student will use your cleaned data next.</p>
+<!-- Imagine you are handing this cleaned table to a teammate who will do the next step of analysis. -->
+<p><span class="blue">Write 4 to 6 sentences.</span> Include:</p>
+<ol type="1">
+<li>What this cleaned table is for</li>
+<li>What one row represents</li>
+<li>Which variables are most important</li>
+<li>One limitation that still remains</li>
+<li>One reasonable next analysis someone could do</li>
+</ol>
+</section>
+</section>
+<section id="step-7-pipeline-quality-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-pipeline-quality-checklist">Step 7: Pipeline quality checklist</h2>
+<p>Confirm that your report shows the following:</p>
+<ol type="1">
+<li>You clearly explained what was messy in the raw data</li>
+<li>Your cleaning code can be rerun from top to bottom</li>
+<li>Your cleaned table is saved as <code>data</code></li>
+<li>You exported <code>data_clean.csv</code></li>
+<li>You ran at least 3 checks on the final data</li>
+<li>Your explanations are in plain language</li>
+<li>You did not overcomplicate the project</li>
+</ol>
+<p>Revise your report if needed.</p>
+</section>
+<section id="step-8-team-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-team-reflection">Step 8: Team reflection</h2>
+<p>Each team member writes 2 to 4 sentences:</p>
+<ol type="1">
+<li>What you contributed</li>
+<li>One thing you learned about data wrangling</li>
+<li>One thing you would improve next time</li>
+</ol>
+<section id="member-1-your-name" class="level4">
+<h4 class="anchored" data-anchor-id="member-1-your-name">Member 1: your name</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="member-2-your-name" class="level4">
+<h4 class="anchored" data-anchor-id="member-2-your-name">Member 2: your name</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="member-3-your-name" class="level4">
+<h4 class="anchored" data-anchor-id="member-3-your-name">Member 3: your name</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="member-4-your-name-if-applicable" class="level4">
+<h4 class="anchored" data-anchor-id="member-4-your-name-if-applicable">Member 4: your name (if applicable)</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-9-presentation-plan" class="level2">
+<h2 class="anchored" data-anchor-id="step-9-presentation-plan">Step 9: Presentation plan</h2>
+<p>Plan a <strong>10 minute</strong> talk with the suggested structure:</p>
+<ol type="1">
+<li>About 1 minute: context and purpose of the cleaned table</li>
+<li>About 2 minutes: what was messy or unclear in the raw data</li>
+<li>About 3 minutes: your main wrangling steps</li>
+<li>About 2 minutes: your quality checks and what they showed</li>
+<li>About 2 minutes: the final cleaned table, next use, and takeaway</li>
+</ol>
+<section id="presentation-order" class="level3">
+<h3 class="anchored" data-anchor-id="presentation-order">Presentation order</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Team 1"</span>, <span class="st">"Superb Statisticians"</span>, <span class="st">"The Data Scientists"</span>, <span class="st">"Stat Padders"</span>, <span class="st">"Data Divers"</span>, <span class="st">"Plot Squad"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(teams, <span class="dv">6</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Data Divers"          "Team 1"               "Plot Squad"          
+[4] "Superb Statisticians" "Stat Padders"         "The Data Scientists" </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="grading-guide" class="level2">
+<h2 class="anchored" data-anchor-id="grading-guide">Grading guide</h2>
+<p>Total 15 points:</p>
+<ol type="1">
+<li><strong>Clear</strong> purpose and clear identification of raw data issues (3 pts)</li>
+<li><strong>Meaningful</strong> wrangling pipeline and clear documentation of steps (6 pts)</li>
+<li><strong>Reproducible</strong> workflow, quality checks, and usable final cleaned table (3 pts)</li>
+<li>Presentation <strong>clarity</strong> and <strong>timing</strong> (3 pts)</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/math3570-s26\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2026, Cheng-Han Yu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

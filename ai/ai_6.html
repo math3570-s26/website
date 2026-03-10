@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend – MATH/COSC 3570 - Spring 2026</title>
+<title>AI Activity 6: Classification, Trust, and Human Judgment – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,38 +72,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend – MATH/COSC 3570 - Spring 2026">
-<meta property="og:description" content="Synthetic online orders delivery population">
+<meta property="og:title" content="AI Activity 6: Classification, Trust, and Human Judgment – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="Subscription churn classification dataset">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
 
@@ -278,7 +249,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AI Activity 6: Classification, Trust, and Human Judgment</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -427,16 +398,17 @@ window.Quarto = {
   <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
   <li><a href="#step-by-step-tasks" id="toc-step-by-step-tasks" class="nav-link" data-scroll-target="#step-by-step-tasks">Step by step tasks</a>
   <ul class="collapse">
-  <li><a href="#step-1-define-your-investigation-question-before-using-ai" id="toc-step-1-define-your-investigation-question-before-using-ai" class="nav-link" data-scroll-target="#step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</a></li>
-  <li><a href="#step-2-use-ai-strategically-3-to-5-prompts" id="toc-step-2-use-ai-strategically-3-to-5-prompts" class="nav-link" data-scroll-target="#step-2-use-ai-strategically-3-to-5-prompts">Step 2 Use AI strategically (3 to 5 prompts)</a></li>
+  <li><a href="#step-1-define-your-prediction-question-and-trust-criteria-before-using-ai" id="toc-step-1-define-your-prediction-question-and-trust-criteria-before-using-ai" class="nav-link" data-scroll-target="#step-1-define-your-prediction-question-and-trust-criteria-before-using-ai">Step 1 Define your prediction question and trust criteria (before using AI)</a></li>
+  <li><a href="#step-2-use-ai-strategically" id="toc-step-2-use-ai-strategically" class="nav-link" data-scroll-target="#step-2-use-ai-strategically">Step 2 Use AI strategically</a></li>
   <li><a href="#step-3-create-the-ai-interaction-log" id="toc-step-3-create-the-ai-interaction-log" class="nav-link" data-scroll-target="#step-3-create-the-ai-interaction-log">Step 3 Create the AI Interaction Log</a></li>
-  <li><a href="#step-4-run-the-simulations-and-complete-the-required-validation-checks" id="toc-step-4-run-the-simulations-and-complete-the-required-validation-checks" class="nav-link" data-scroll-target="#step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4 Run the simulations and complete the required validation checks</a></li>
+  <li><a href="#step-4-audit-build-and-evaluate-the-classification-workflow" id="toc-step-4-audit-build-and-evaluate-the-classification-workflow" class="nav-link" data-scroll-target="#step-4-audit-build-and-evaluate-the-classification-workflow">Step 4 Audit, build, and evaluate the classification workflow</a></li>
   <li><a href="#step-5-write-the-human-authored-synthesis-group" id="toc-step-5-write-the-human-authored-synthesis-group" class="nav-link" data-scroll-target="#step-5-write-the-human-authored-synthesis-group">Step 5 Write the Human Authored Synthesis (group)</a></li>
   <li><a href="#step-6-presentation-slides-group" id="toc-step-6-presentation-slides-group" class="nav-link" data-scroll-target="#step-6-presentation-slides-group">Step 6 Presentation slides (group)</a></li>
   </ul></li>
   <li><a href="#individual-reflection-each-student" id="toc-individual-reflection-each-student" class="nav-link" data-scroll-target="#individual-reflection-each-student">Individual Reflection (each student)</a></li>
+  <li><a href="#participation-non-presenting-students" id="toc-participation-non-presenting-students" class="nav-link" data-scroll-target="#participation-non-presenting-students">Participation (non-presenting students)</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_4.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_6.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -444,8 +416,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend</h1>
-<p class="subtitle lead">Synthetic online orders delivery population</p>
+<h1 class="title">AI Activity 6: Classification, Trust, and Human Judgment</h1>
+<p class="subtitle lead">Subscription churn classification dataset</p>
   <div class="quarto-categories">
     <div class="quarto-category">AI activity</div>
   </div>
@@ -472,65 +444,10 @@ window.Quarto = {
 
 
 <blockquote class="blockquote">
-<p>Simulation is powerful, but only when the simulated process matches the real question. AI can be helpful, but a correct looking answer is not enough by itself. In probability and statistics, we still need to define the trial clearly, match the sampling process to the question, validate the result, and explain what it means.</p>
+<p>A classification model can look impressive and still be untrustworthy. AI can help write code quickly, but AI is not good at deciding which variables should be used, which metric matters most, or whether a workflow would be responsible in a real project. Humans still have to define the question, check the workflow, and justify the final model.</p>
 </blockquote>
-<p>You will use an AI tool as a learning partner to investigate a core data science reality: simulation is not just generating random numbers. It requires a clearly defined trial, a correct event or statistic, enough repetitions, validation against a benchmark whenever possible, and human judgment about whether the final result is trustworthy.</p>
-<p>You are graded on how you <strong>think, validate, interpret, and explain</strong>, not on whether AI makes mistakes.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Learning something new is part of this activity">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning something new is part of this activity
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div style="font-size: 1.1em;">
-<p>You are <strong>not</strong> expected to already know every probability model or simulation idea that might be relevant here. Part of this activity is using AI to help you learn <strong>one new idea beyond our current class coverage</strong>.</p>
-<p>For example, AI may introduce:</p>
-<ul>
-<li>a named probability model you have not learned yet</li>
-<li>a new way to think about sampling from a finite population</li>
-<li>a new method for checking whether a simulation is stable</li>
-<li>a new distinction between exact probability and Monte Carlo approximation</li>
-</ul>
-<p>Your job is <strong>not</strong> to blindly trust that new idea. Your job is to:</p>
-<ol type="1">
-<li>ask AI to explain it in plain language</li>
-<li>decide whether it actually matches our activity setup</li>
-<li>connect it back to course ideas you already know</li>
-<li>explain what you learned, in your own words</li>
-</ol>
-<p>If AI introduces a concept we have not formally covered, you may use it as a learning tool, but you must still explain the simulation logic in clear plain language.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Auditing means evaluation, not error hunting">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Auditing means evaluation, not error hunting
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div style="font-size: 1.1em;">
-<p>In this activity, <strong>auditing</strong> does not mean trying to prove that AI is wrong.</p>
-<p>It means evaluating AI output as a statistical work product:</p>
-<ul>
-<li>Does it answer the actual question?</li>
-<li>Does the code match the stated method?</li>
-<li>What assumptions are being made?</li>
-<li>What should be checked before trusting the result?</li>
-<li>What evidence supports the conclusion?</li>
-<li>What should be accepted, revised, validated, or extended?</li>
-</ul>
-<p>Sometimes AI will be wrong or incomplete. Sometimes AI will be mostly correct. In either case, your job is to evaluate the output carefully and explain why your final result is trustworthy.</p>
-</div>
-</div>
-</div>
+<p>You will use an AI tool as a learning partner to investigate a core data science reality: building a classifier is not enough. A trustworthy classification workflow requires human judgment about leakage, evaluation, reproducibility, and interpretation.</p>
+<p>You are graded on how you think, validate, explain, and justify, not on whether AI gives perfect answers.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Goal of this activity">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -544,12 +461,42 @@ window.Quarto = {
 <div style="font-size: 1.1em;">
 <p>By the end of this activity, your group will do five things:</p>
 <ol type="1">
-<li>Define a probability question and a statistical simulation question using a known finite population.</li>
-<li>Use AI to propose a simulation workflow, then audit that workflow for alignment, assumptions, and trustworthiness.</li>
-<li>Run one probability simulation and one sampling distribution simulation using repeated simple random samples.</li>
-<li>Validate the main simulation results with benchmarks and stability checks.</li>
-<li>Extend the simulation to a new but related question and explain what changes.</li>
+<li>Define a clear binary classification question.</li>
+<li>Use AI to propose a classification workflow.</li>
+<li>Audit whether the AI workflow is aligned, trustworthy, and reproducible.</li>
+<li>Build and evaluate a classifier using appropriate validation steps.</li>
+<li>Explain why human judgment is still essential in a data science project, even when AI generated code is correct.</li>
 </ol>
+<p>Your grade depends on your reasoning, evidence, and explanation, not on whether AI makes obvious mistakes.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="A key learning target">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A key learning target
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>Part of this activity is to learn what AI is <strong>not</strong> good at doing on its own.</p>
+<p>AI is often helpful for:</p>
+<ul>
+<li>generating starter code</li>
+<li>explaining common metrics</li>
+<li>suggesting modeling workflows</li>
+</ul>
+<p>AI is often <strong>not</strong> good at:</p>
+<ul>
+<li>understanding what information would really be available at prediction time</li>
+<li>deciding which metric matters most for the real decision</li>
+<li>recognizing target leakage unless you ask very carefully</li>
+<li>knowing whether a workflow is trustworthy enough for real use</li>
+<li>replacing human responsibility for documentation, justification, and communication</li>
+</ul>
 </div>
 </div>
 </div>
@@ -566,10 +513,9 @@ window.Quarto = {
 <div style="font-size: 1.1em;">
 <ol type="1">
 <li>Download the dataset from the <a href="#dataset">Dataset</a> section below.</li>
-<li>Write your investigation question (2 to 3 sentences). <a href="#step-1-define-your-investigation-question-before-using-ai">Step 1</a> in Tasks.</li>
-<li>Run 3 to 5 AI prompts that cover probability setup, simulation design, validation, interpretation, and one new idea. <a href="#step-2-use-ai-strategically-3-to-5-prompts">Step 2</a> in Tasks.</li>
-<li>Complete checklist items 1 to 6 first. <a href="#step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4</a></li>
-<li>Build your sampling distribution visualizations and finish checklist items 7 to 12. <a href="#step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4</a></li>
+<li>Write your prediction question and trust criteria before using AI. <a href="#step-1-define-your-prediction-question-and-trust-criteria-before-using-ai">Step 1</a> in Tasks.</li>
+<li>Run 3 to 5 AI prompts that cover workflow design, leakage, evaluation, and interpretation. <a href="#step-2-use-ai-strategically-3-to-5-prompts">Step 2</a> in Tasks.</li>
+<li>Audit the workflow and complete checklist items 1 to 6 first. <a href="#step-4-audit-build-and-evaluate-the-classification-workflow">Step 4</a></li>
 <li>Draft your synthesis, then build slides using the required 5 slide structure. <a href="#step-5-write-the-human-authored-synthesis-group">Step 5</a> and <a href="#step-6-presentation-slides-group">Step 6</a></li>
 </ol>
 </div>
@@ -591,10 +537,10 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="data-science-auditor">Data Science Auditor</h3>
 <p>Responsibilities</p>
 <ul>
-<li>Evaluate whether the AI output matches the statistical question</li>
-<li>Check whether AI defined the correct trial, event, statistic, and sampling rule</li>
-<li>Design and run validation and stress test checks after simulation</li>
-<li>Explain what the group accepted, revised, validated, or extended, and why</li>
+<li>Evaluate whether the AI workflow matches the prediction question</li>
+<li>Identify assumptions, limitations, and places that require validation</li>
+<li>Check for leakage, weak metric choices, and missing reproducibility steps</li>
+<li>Explain what the group accepted, revised, rejected, or extended, and why</li>
 </ul>
 </section>
 <section id="synthesizer" class="level3">
@@ -603,7 +549,7 @@ window.Quarto = {
 <ul>
 <li>Write the Human Authored Synthesis in clear course language</li>
 <li>Build slides using the required structure</li>
-<li>Ensure the final work is consistent and concise</li>
+<li>Ensure the final work is consistent, concise, and evidence based</li>
 </ul>
 </section>
 </section>
@@ -611,12 +557,18 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <p>Required file</p>
 <ul>
-<li><a href="../documents/topic4-population.csv"><code>topic4-population.csv</code></a></li>
+<li><a href="../documents/topic6-data.csv"><code>topic6-data.csv</code></a></li>
 </ul>
 <p>Dataset notes</p>
 <ul>
-<li><a href="../documents/README_OnlineOrdersSimulation_Topic4.txt"><code>README_OnlineOrdersSimulation_Topic4.txt</code></a></li>
+<li><a href="../documents/README_SubscriptionChurnClassification_Topic6.txt"><code>README_SubscriptionChurnClassification_Topic6.txt</code></a></li>
 </ul>
+<p>Main outcome variable</p>
+<ul>
+<li><code>churn_next_30d</code></li>
+</ul>
+<p>Important note</p>
+<p><strong>Not every variable in the file should automatically be used as a predictor. Part of the activity is deciding which variables are appropriate for a trustworthy predictive model.</strong></p>
 </section>
 <section id="what-you-will-submit" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h2>
@@ -635,57 +587,42 @@ window.Quarto = {
 </section>
 <section id="step-by-step-tasks" class="level2">
 <h2 class="anchored" data-anchor-id="step-by-step-tasks">Step by step tasks</h2>
-<section id="step-1-define-your-investigation-question-before-using-ai" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</h3>
-<p>Write 2 to 3 sentences answering:</p>
-<ul>
-<li>What probability question are we trying to estimate</li>
-<li>What statistical simulation question are we trying to study</li>
-<li>What exactly counts as one trial or one repeated sample</li>
-<li>Why simulation is useful here</li>
-</ul>
-<p>For this activity, your group must include both required targets below:</p>
+<section id="step-1-define-your-prediction-question-and-trust-criteria-before-using-ai" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-define-your-prediction-question-and-trust-criteria-before-using-ai">Step 1 Define your prediction question and trust criteria (before using AI)</h3>
+<p>Write 2 to 4 sentences that answer these questions:</p>
 <ol type="1">
-<li>Probability target</li>
+<li>What is the outcome you want to predict</li>
+<li>At what point in time are you imagining the prediction is made</li>
+<li>What kind of mistake would be more costly: missing likely churners or wrongly flagging non-churners</li>
+<li>What would make you trust or not trust a model in this setting</li>
 </ol>
-<p>Estimate the probability that a simple random sample of 20 orders, drawn <strong>without replacement</strong> from the population, contains <strong>at least 9 late deliveries</strong>.</p>
-<ol start="2" type="1">
-<li>Statistical simulation target</li>
-</ol>
-<p>Study the sampling distribution of <span class="math inline">\(\hat{p}\)</span>, the sample proportion of late deliveries, under repeated simple random samples <strong>without replacement</strong> from the population.</p>
-<p>You must compare two sample sizes:</p>
-<ul>
-<li><span class="math inline">\(n = 20\)</span></li>
-<li><span class="math inline">\(n = 60\)</span></li>
-</ul>
-<p>Example investigation question you may use or adapt:</p>
+<p>Example starting point:</p>
 <blockquote class="blockquote">
-<p>“We want to estimate the probability that a simple random sample of 20 orders contains at least 9 late deliveries, and we want to study how the sampling distribution of <span class="math inline">\(\hat{p}\)</span> changes when the sample size increases from 20 to 60. Because this file is a full finite population, simulation lets us compare our simulated results to known population truths and check whether our method and interpretation are trustworthy.”</p>
+<p>“We want to predict whether a customer will churn in the next 30 days. The prediction should be made before the churn decision is already obvious, so we should think carefully about whether every variable would really be available at that time. Missing likely churners may be costly if the company wants to intervene early, so we may care about recall in addition to accuracy.”</p>
 </blockquote>
 </section>
-<section id="step-2-use-ai-strategically-3-to-5-prompts" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-use-ai-strategically-3-to-5-prompts">Step 2 Use AI strategically (3 to 5 prompts)</h3>
-<p>[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.</p>
+<section id="step-2-use-ai-strategically" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-use-ai-strategically">Step 2 Use AI strategically</h3>
+<p><strong>[Note:] You may run several prompts, but keep the 5 most useful and meaningful prompts for reporting.</strong></p>
 <p>Your prompts must be purposeful and iterative.</p>
 <p>Prompt requirements</p>
 <ul>
-<li>At least 1 prompt asking AI to define one simulation trial clearly</li>
-<li>At least 1 prompt asking AI about sampling with replacement versus without replacement</li>
-<li>At least 1 prompt asking AI how many repetitions are needed and how to check simulation stability</li>
-<li>At least 1 prompt asking AI how to validate the simulation using a known benchmark from the population</li>
-<li>At least 1 prompt asking AI how to interpret the sampling distribution of <span class="math inline">\(\hat{p}\)</span></li>
-<li>At least 1 prompt asking AI to teach you one new probability or simulation idea that we have not fully covered in class yet, and to explain it in plain language</li>
+<li>At least 1 prompt asking AI to propose a reproducible binary classification workflow</li>
+<li>At least 1 prompt asking AI how to detect or think about target leakage or suspicious predictors</li>
+<li>At least 1 prompt asking AI which metrics matter when the outcome is not perfectly balanced</li>
+<li>At least 1 prompt asking AI how to validate whether the workflow is trustworthy</li>
+<li>At least 1 prompt asking AI to explain one classification idea in plain language that is new to you</li>
 </ul>
 <section id="suggested-prompt-starters-you-may-adapt" class="level4">
 <h4 class="anchored" data-anchor-id="suggested-prompt-starters-you-may-adapt">Suggested prompt starters (you may adapt)</h4>
 <ul>
-<li><p><em>“I have a full finite population of online orders. I want to estimate the probability that a sample of 20 orders contains at least 9 late deliveries. What exactly should one simulation trial do?”</em></p></li>
-<li><p><em>“My population is stored in a CSV file. Should I simulate with replacement or without replacement if the question says simple random sample from the population? Why?”</em></p></li>
-<li><p><em>“What is the difference between the true population proportion of late deliveries and the Monte Carlo estimate from a simulation?”</em></p></li>
-<li><p><em>“How many repetitions should I use for a probability simulation, and how can I tell whether my estimate is stable?”</em></p></li>
-<li><p><em>“I want to simulate the sampling distribution of <span class="math inline">\(\hat{p}\)</span> for <span class="math inline">\(n = 20\)</span> and <span class="math inline">\(n = 60\)</span>. What summaries and plots should I use, and what mistakes should I avoid when interpreting them?”</em></p></li>
-<li><p><em>“Teach me one new probability or simulation idea that might be relevant here, but explain it in plain language first.”</em></p></li>
-<li><p><em>“What validation checks would help me trust a simulation answer, even if the code runs and looks correct?”</em></p></li>
+<li><p><em>“I have a customer churn dataset and want a reproducible binary classification workflow in R. What steps should I follow from train/test split to model evaluation?”</em></p></li>
+<li><p><em>“Some variables may only be known after a customer has basically decided to churn. How can I identify suspicious predictors or target leakage?”</em></p></li>
+<li><p><em>“Why can accuracy be misleading in a classification problem, and what other metrics should I report?”</em></p></li>
+<li><p><em>“How should I compare a classification model to a simple baseline?”</em></p></li>
+<li><p><em>“How can I explain precision, recall, and confusion matrix in plain language to non-technical stakeholders?”</em></p></li>
+<li><p><em>“I want a simple, interpretable classifier for a binary outcome in R. Would logistic regression or a decision tree be more appropriate here, and why?”</em></p></li>
+<li><p><em>“Teach me one new classification concept in plain language that would help me evaluate AI generated model output more carefully.”</em></p></li>
 </ul>
 </section>
 </section>
@@ -698,135 +635,109 @@ window.Quarto = {
 <li>Your annotation:
 <ul>
 <li>What AI got right</li>
-<li>What AI assumed</li>
-<li>What needed validation or clarification</li>
-<li>What your group accepted, revised, or extended</li>
+<li>What assumptions AI made</li>
+<li>What needed verification, clarification, or revision</li>
+<li>What your group accepted, revised, rejected, or extended</li>
 </ul></li>
 </ul>
-<p>At least one entry in your AI Interaction Log must show how AI helped you learn <strong>one new idea</strong> that was not already part of the course, and how you translated that idea into plain language your group actually understands.</p>
 <p>Important rule</p>
 <ul>
 <li>You may not paste AI text into your final synthesis verbatim.</li>
 </ul>
 </section>
-<section id="step-4-run-the-simulations-and-complete-the-required-validation-checks" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4 Run the simulations and complete the required validation checks</h3>
-<p>Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. A short summary without numbers or outputs does not count as evidence.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Required simulation checklist">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<section id="step-4-audit-build-and-evaluate-the-classification-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-audit-build-and-evaluate-the-classification-workflow">Step 4 Audit, build, and evaluate the classification workflow</h3>
+<p>Use AI as a collaborator, but your group must decide what is trustworthy and justify those decisions. Complete the validation checklist below. Your evidence can be screenshots, printed outputs, code excerpts, or short summaries of what you observed. A short summary without evidence does not count.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Required classification, trust, and reproducibility checklist">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Required simulation checklist
+<span class="screen-reader-only">Note</span>Required classification, trust, and reproducibility checklist
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1. Rows and columns</strong></p>
+<p><strong>1. Rows and columns in the original data</strong></p>
 <ul>
-<li>Confirm the dataset has 300 rows and 12 columns after import.</li>
+<li>Confirm that the dataset has 650 rows and 18 columns after import.</li>
+<li>Report those dimensions clearly.</li>
 </ul>
-<p><strong>2. Population truth</strong></p>
+<p><strong>2. Outcome balance and baseline thinking</strong></p>
 <ul>
-<li>Compute the true population proportion of <code>late_delivery == "Yes"</code>.</li>
-<li>Report the count of late deliveries and the count of non late deliveries.</li>
-<li>Explain why this population truth is useful when validating a simulation.</li>
+<li>Report the counts of <code>Yes</code> and <code>No</code> for <code>churn_next_30d</code>.</li>
+<li>Compute the accuracy of a naive baseline classifier that always predicts the majority class.</li>
+<li>Explain why this baseline matters before celebrating your model.</li>
 </ul>
-<p><strong>3. Define one trial correctly</strong></p>
-<p>For the probability question, define one trial in words.</p>
-<p>Your definition must make clear:</p>
+<p><strong>3. Identify suspicious predictors or leakage risks</strong></p>
 <ul>
-<li>the population you are sampling from</li>
-<li>the sample size</li>
-<li>whether sampling is with or without replacement</li>
-<li>what event counts as a success</li>
+<li>Review all variables and identify at least one predictor that you believe should <strong>not</strong> be used in a trustworthy model.</li>
+<li>Justify your decision using timing, logic, or domain reasoning.</li>
+<li>State whether AI helped you notice this issue or whether your group noticed it first.</li>
 </ul>
-<p><strong>4. Small pilot check</strong></p>
-<p>Run a small pilot simulation with 10 to 20 repetitions.</p>
+<p><strong>4. Train/test split and reproducibility</strong></p>
 <ul>
-<li>Show a few trial outputs</li>
-<li>Explain how you checked that each trial matched your verbal definition</li>
-<li>State one bug or misunderstanding that could appear at this stage</li>
+<li>Split the data into training and test sets.</li>
+<li>Set and report a random seed.</li>
+<li>Report the split proportion and the sizes of the training and test sets.</li>
+<li>Explain why evaluating on the same data used for training would weaken trust in the result.</li>
 </ul>
-<p><strong>5. Main probability simulation</strong></p>
-<p>Run a large simulation with at least 5000 repetitions to estimate:</p>
-<p><span class="math display">\[
-P(\text{at least 9 late deliveries in a sample of 20})
-\]</span></p>
+<p><strong>5. Fit one interpretable classifier</strong></p>
+<p>Choose <strong>one</strong> of the following:</p>
+<ul>
+<li>logistic regression</li>
+<li>decision tree</li>
+</ul>
 <p>Requirements:</p>
 <ul>
-<li>Use simple random samples <strong>without replacement</strong></li>
-<li>Report the Monte Carlo estimate</li>
-<li>State the seed you used</li>
-<li>Explain why more than a handful of repetitions is necessary</li>
+<li>Use <code>churn_next_30d</code> as the response.</li>
+<li>Exclude at least one suspicious predictor if you judged it to be leakage or otherwise inappropriate.</li>
+<li>Clearly list the predictors you used.</li>
+<li>Explain in 2 to 4 sentences why your chosen classifier is interpretable enough for this activity.</li>
 </ul>
-<p><strong>6. Audit one AI suggested workflow</strong></p>
-<p>Choose one AI suggested simulation setup, code chunk, or explanation and audit it.</p>
-<p>Your audit must answer all of the following:</p>
+<p><strong>6. Evaluate performance on the test set</strong></p>
+<p>Provide all of the following on the test set:</p>
 <ul>
-<li>Did your group accept it as is, revise it, or reject it?</li>
-<li>Why?</li>
-<li>What evidence did you use to support that decision?</li>
-<li>If the AI output was mostly correct, what did you still validate or clarify?</li>
-<li>If the AI output was weak or wrong, how did you correct it?</li>
+<li>confusion matrix</li>
+<li>accuracy</li>
+<li>precision</li>
+<li>recall (or sensitivity)</li>
 </ul>
-<p>Your goal here is not to force an error. Your goal is to evaluate whether the AI output is trustworthy and complete for this activity.</p>
-<p><strong>7. Sampling distribution simulation</strong></p>
-<p>Simulate the sampling distribution of <span class="math inline">\(\hat{p}\)</span> for <code>late_delivery == "Yes"</code> using repeated simple random samples <strong>without replacement</strong>.</p>
-<p>Requirements:</p>
+<p>Then answer:</p>
 <ul>
-<li>At least 2000 repetitions for <span class="math inline">\(n = 20\)</span></li>
-<li>At least 2000 repetitions for <span class="math inline">\(n = 60\)</span></li>
-<li>Save the simulated <span class="math inline">\(\hat{p}\)</span> values for both sample sizes</li>
+<li>Why is accuracy alone not enough here</li>
+<li>Which metric matters more in your stated decision context, and why</li>
 </ul>
-<p><strong>8. Sampling distribution evidence</strong></p>
-<p>Create visual evidence for the two sampling distributions.</p>
-<p>Requirements:</p>
+<p><strong>7. Compare against the baseline</strong></p>
 <ul>
-<li>use plots such as histograms, dot plots, or density style plots</li>
-<li>report the center and spread for each sample size</li>
-<li>compare each simulated center to the true population proportion</li>
-<li>explain how the spread changes when the sample size increases</li>
+<li>Compare your classifier’s test performance to the majority class baseline.</li>
+<li>State whether the classifier meaningfully improves on the baseline.</li>
+<li>Explain whether the improvement is large enough to justify trust or only shows limited value.</li>
 </ul>
-<p><strong>9. Stability or Monte Carlo uncertainty</strong></p>
-<p>Do one of the following:</p>
+<p><strong>8. Threshold choice is a human decision</strong></p>
+<p>If your model provides predicted probabilities, compare at least two classification thresholds, such as 0.50 and 0.30.</p>
 <ul>
-<li>rerun one simulation with a different seed and compare the estimate</li>
-<li>increase the number of repetitions and compare the estimate</li>
-<li>compute and report a Monte Carlo standard error for the probability estimate</li>
+<li>Show how the confusion matrix or metrics change.</li>
+<li>Explain which threshold seems more appropriate in your context.</li>
+<li>State why AI should not choose the threshold automatically without human input.</li>
 </ul>
-<p>Then explain what this tells you about simulation reliability.</p>
-<p><strong>10. Required extension</strong></p>
-<p>Choose <strong>one</strong> new but related variation below.</p>
+<p>If you use a decision tree that does not naturally emphasize thresholding, explain what comparable human tuning or decision choice still matters.</p>
+<p><strong>9. One grouped performance check</strong></p>
+<p>Choose one grouping variable such as <code>region</code>, <code>senior</code>, or <code>contract_type</code>.</p>
 <ul>
-<li>Change the sample size from 20 to 40 for the probability question.</li>
-<li>Change the event from “at least 9 late deliveries” to “between 6 and 8 late deliveries, inclusive.”</li>
-<li>Estimate the probability using both late delivery counts and sample proportions, then explain the connection.</li>
-<li>Compare the probability estimate using 1000 repetitions and 10000 repetitions.</li>
+<li>Report one metric by group, or compare confusion matrix patterns across groups.</li>
+<li>Explain whether overall performance hides meaningful subgroup differences.</li>
+<li>State why a human should check this instead of trusting one overall metric.</li>
 </ul>
-<p>For your chosen extension:</p>
-<ul>
-<li>state your prediction <strong>before</strong> simulating</li>
-<li>justify the prediction in plain language</li>
-<li>run the new simulation</li>
-<li>explain what changed and why</li>
-</ul>
-<p><strong>11. Learn something new</strong></p>
-<p>Write 2 to 4 sentences answering:</p>
-<ul>
-<li>What new probability or simulation idea did AI introduce to your group?</li>
-<li>How did you restate that idea in plain language?</li>
-<li>Did that new idea genuinely help your understanding, or did it mostly add confusion?</li>
-</ul>
-<p><strong>12. Judgment and caution</strong></p>
+<p><strong>10. Trust judgment</strong></p>
 <p>Write 4 to 6 sentences answering:</p>
 <ul>
-<li>What was the most important design choice in your simulation?</li>
-<li>What did your group most need to validate before trusting the result?</li>
-<li>Why are your final simulation answers more trustworthy than a quick unverified answer?</li>
-<li>What additional check would you do before using simulation results in a real report?</li>
+<li>What part of the AI suggested workflow was genuinely useful</li>
+<li>What part still required human judgment</li>
+<li>Whether your final classifier is trustworthy enough to use, and in what limited sense</li>
+<li>What additional information or validation would be needed before using this model in a real decision setting</li>
 </ul>
 </div>
 </div>
@@ -837,11 +748,10 @@ P(\text{at least 9 late deliveries in a sample of 20})
 <p>Length target: 400 to 600 words.</p>
 <p>Your synthesis must include:</p>
 <ul>
-<li>Your investigation question</li>
-<li>At least two important simulation design or validation decisions, supported by evidence from your checklist</li>
-<li>A clear explanation of how your group evaluated AI output, not just whether AI was right or wrong</li>
-<li>A short recommended workflow for planning, validating, and extending a simulation study</li>
-<li>A brief explanation of one new idea your group learned through AI and how you translated it into plain language</li>
+<li>Your prediction question and why it required human judgment</li>
+<li>At least two trust related decisions your group made, supported by evidence from your checklist</li>
+<li>A clear explanation of what AI was helpful for and what AI was not good at doing by itself</li>
+<li>A short recommended workflow for building a classification model that is more trustworthy and reproducible</li>
 </ul>
 <p>Your synthesis must be written in your own words.</p>
 </section>
@@ -849,11 +759,11 @@ P(\text{at least 9 late deliveries in a sample of 20})
 <h3 class="anchored" data-anchor-id="step-6-presentation-slides-group">Step 6 Presentation slides (group)</h3>
 <p>Use this exact slide structure:</p>
 <ul>
-<li>Our question</li>
+<li>Our prediction question</li>
 <li>What AI suggested</li>
-<li>What we audited and validated</li>
-<li>Our final understanding, with evidence</li>
-<li>One takeaway for future data science work</li>
+<li>What we audited, validated, and revised</li>
+<li>Our final workflow and evidence</li>
+<li>One lesson about why humans still matter in data science</li>
 </ul>
 <p>Time: 12 to 15 minutes.</p>
 </section>
@@ -862,14 +772,16 @@ P(\text{at least 9 late deliveries in a sample of 20})
 <h2 class="anchored" data-anchor-id="individual-reflection-each-student">Individual Reflection (each student)</h2>
 <p>Write 150 to 200 words answering:</p>
 <ul>
-<li>What did AI help you learn?</li>
-<li>What did you need to validate, clarify, or revise?</li>
-<li>What did you contribute as a human thinker?</li>
-<li>How will you change your AI use in future data work?</li>
+<li>What did AI help you do</li>
+<li>What did AI fail to decide well on its own</li>
+<li>What did you contribute as a human thinker</li>
+<li>How will this activity change the way you use AI in future data science work</li>
 </ul>
 <p>Your reflection must match your assigned role.</p>
-<!-- ## Participation (non-presenting students) -->
-<!-- Please scan the QR code, or go to `[your form link here]` to share what you learned from this activity. -->
+</section>
+<section id="participation-non-presenting-students" class="level2">
+<h2 class="anchored" data-anchor-id="participation-non-presenting-students">Participation (non-presenting students)</h2>
+<p>Please scan the QR code, or go to <code>[your form link here]</code> to share what you learned from this activity.</p>
 
 
 </section>
@@ -1295,7 +1207,7 @@ P(\text{at least 9 late deliveries in a sample of 20})
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_4.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_6.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

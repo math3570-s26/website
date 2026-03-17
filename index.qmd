@@ -7,7 +7,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 
 ::: column-screen-inset-right
 | Week | Date | Topic | Materials | Lab Activity | AI Activity | Project |
-|:--:|----|----|:--:|:--:|:--:|----|
+|:---------:|-----------|-----------|:---------:|:---------:|:---------:|-----------|
 | 1 | Tue, Jan 13 | Greetings; Overview of Data Science | [🖥️syllabus](slides/01-syllabus-slides.html) [🖥️overview](slides/02-datascience-slides.html) |  |  |  |
 |  | Thu, Jan 15 | Posit Cloud | [🖥️posit](slides/03-posit-slides.html) | [📋 posit](/exercise/lab00-posit.html) [📋01](/exercise/lab01-rscript.html) |  |  |
 | 2 | Tue, Jan 20 | Git and GitHub | [🖥️git](slides/04-git-slides.html) | [📋github](/exercise/lab00-git.html) |  |  |
@@ -26,7 +26,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 |  | Thu, Mar 5 | Data Wrangling - tidyr | [🖥️ tidyr](/slides/14-tidyr-slides.html) | [📋17](/exercise/lab17-tidyr.html) | [Activity 2](ai/ai_2.html) |  |
 | 9 | Tue, Mar 10 | ***NO CLASS: Spring break*** |  |  |  |  |
 |  | Thu, Mar 12 | ***NO CLASS: Spring break*** |  |  |  |  |
-| 10 | Tue, Mar 17 | Probabilistic and Statistical Simulation | 🖥️probstat | 📋18 📋19 |  |  |
+| 10 | Tue, Mar 17 | Probabilistic and Statistical Simulation | [🖥️probstat](/slides/15-probstat-slides.html) | [📋18](/exercise/lab18-prob.html) [📋19](/exercise/lab19-ci.html) |  |  |
 |  | Thu, Mar 19 | Linear Regression | 🖥️linear-regression |  | [Activity 3](ai/ai_3.html) |  |
 | 11 | Tue, Mar 24 | Multiple Linear Regression |  | 📋20 |  |  |
 |  | **Thu, Mar 26** | **Mini Project 2 Presentation: Data Wrangling and Pipelines** |  |  |  |  |
@@ -50,5 +50,5 @@ knitr::knit_exit()
 ```
 
 |   |   |   | Prepare | Slides | AE | Labs | HW | Present | Project |
-|----|----|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|--------|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | Week | Date | Topic | 📖 | 🖥️ | 📋 | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️ | ✅ | 📂 |

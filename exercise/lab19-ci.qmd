@@ -46,7 +46,7 @@ par(mar = c(3.5, 3.5, 0, 0), mgp = c(2.5, 1, 0))
 mu <- 120; sig <- 5 
 al <- 0.05; M <- 100; n <- 16
 
-set.seed(2024)
+set.seed(2026)
 x_rep <- replicate(M, rnorm(n, mu, sig))
 xbar_rep <- apply(x_rep, 2, mean)
 E <- qnorm(p = 1 - al / 2) * sig / sqrt(n)

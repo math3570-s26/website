@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
+<title>Probability and Statistics 🎲 – MATH/COSC 3570 - Spring 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-38b22635d8ba2828809dae622215a440.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta property="og:title" content="Probability and Statistics r emo::ji('game_die') – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="MATH/COSC 3570 Introduction to Data Science">
+<meta property="og:image" content="https://math3570-s26.github.io/website/slides/images/02-datascience/data-science-model.png">
+<meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
+<meta property="og:image:height" content="190">
+<meta property="og:image:width" content="517">
+</head>
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Probability and Statistics 🎲</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://d2l.mu.edu/d2l/home/630428" title="D2L" class="quarto-navigation-tool px-1" aria-label="D2L"><i class="bi bi-person-fill"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">AI Activities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai_act_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai_example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Project Example</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Project Topics</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mini Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topics and Works</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-description-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-work-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Group and Proposal</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="15-probstat-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Probability and Statistics 🎲</h1>
+<p class="subtitle lead">MATH/COSC 3570 Introduction to Data Science</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="section" class="level1" data-visibility="hidden"><h1 data-visibility="hidden"></h1>
+<section id="section-1" class="level2"><h2 class="anchored" data-anchor-id="section-1"></h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/02-datascience/data-science-model.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="why-study-probability" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="why-study-probability">Why Study Probability</h2>
+<ul>
+<li>We live in a world full of chances and uncertainty!</li>
+</ul>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Mar 29, 2022</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/chance_03292022.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<p><strong>Mar 22, 2023</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/chance03222023.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<p><strong>Mar 18, 2024</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/chance_2024.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="section-2" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="section-2"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/monopoly.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/slot.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/blackjack.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="why-study-probability-1" class="level2"><h2 class="anchored" data-anchor-id="why-study-probability-1">Why Study Probability</h2>
+<ul>
+<li><p><em>Probability</em> is the <strong>study of chance</strong>, the <strong>language of uncertainty</strong>.</p></li>
+<li>
+<p>We could do data science without any probability involved. However, what we can learn from data will be much limited. Why?</p>
+<ul>
+<li><p><span class="green">Every time you collect a data set, you obtain a <em>different</em> one. Your data are affected by some <em>chance</em> or <em>random noises</em>!</span></p></li>
+<li><p><span class="green">Represent our uncertainty and ignorance about some event happening.</span></p></li>
+</ul>
+</li>
+<li><p>Knowledge of probability is essential for data science, especially when we want to <em>quantify uncertainty</em> about what we learn from our data.</p></li>
+</ul>
+<div class="notes">
+<ul>
+<li>
+<em>Probability</em> is the <strong>study of chance</strong>, the <strong>language of uncertainty</strong>.</li>
+<li>If you wanna study chance or uncertainty formally and rigorously, you cannot do it without probability involved.</li>
+<li>We could do data science without any probability involved. However, what we can learn from data will be much limited. Why?
+<ul>
+<li>Every time you collect a data set, you obtain a <em>different</em> one. Your data point is like a random variable that follows some distribution. Or your data are sampled from some population associated with some probability distribution.</li>
+<li>Your data are affected by <strong>chance</strong> in some way!</li>
+</ul>
+</li>
+<li>Knowledge of probability becomes essential for data science, especially when we want to <em>quantify uncertainty</em> about what we learn from our data. We’ll talk more about how to quantify uncertainty about the accuracy of our estimators or predictions in the next lecture. OK.</li>
+</ul>
+</div>
+</section><section id="probability-as-relative-frequency" class="level2"><h2 class="anchored" data-anchor-id="probability-as-relative-frequency">Probability as Relative Frequency</h2>
+<ul>
+<li><p>The <em>probability</em> that some outcome of a process will be obtained is the <strong>relative frequency</strong> with which that outcome would be obtained if the process were repeated <strong>a large number of times</strong>.</p></li>
+<li>
+<p>Example:</p>
+<ul>
+<li>
+<strong>toss a coin</strong>: probability of getting heads 🪙</li>
+<li>
+<strong>pick a ball (red/blue) in an urn</strong>: probability of getting a red ball 🔴 🔵</li>
+</ul>
+</li>
+</ul>
+<p>. . .</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stdout">
+<pre><code>      Frequency Relative Frequency
+Heads         4                0.4
+Tails         6                0.6
+Total        10                1.0
+---------------------
+      Frequency Relative Frequency
+Heads       512               0.51
+Tails       488               0.49
+Total      1000               1.00
+---------------------</code></pre>
+</div>
+</div>
+<ul>
+<li>If we repeat tossing the coin 10 times, the probability of obtaining heads is 40%.</li>
+<li>If 1000 times, the probability is 51.2%.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/coin.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>There are more than one way to define a probability, and one common way is to view probability as relative frequency.</li>
+<li>And the definition is as follows.</li>
+<li>The <em>probability</em> that some outcome/event of a process/experiment will be obtained is the <strong>relative frequency</strong> with which that outcome would be obtained if the experiment were <em>repeated a large number of times</em> under <em>similar (identical theoretically) conditions</em>.</li>
+<li>Mathematically, we actually require infinite number of repetitions and identical condition.</li>
+<li>Here are examples whose probability can be interpreted as relative frequency.</li>
+<li>Suppose we toss or flip a coin, we can ask what’s the probability of getting heads.</li>
+<li>Or if the experiment is picking a ball (red/blue) in an urn, we can ask what’s the probability of getting heads.</li>
+<li>Take tossing a coin as example. To get the probability of getting heads or least the approximate of it. We can toss the coin many times, and then count the number of times that heads shows up, and get the relative frequency.</li>
+<li>So here, if I toss a coin 10 times, the relative frequency is 0.4, and so the probability of getting heads is approximately 0.4.</li>
+<li>And if I toss a coin 1000 times instead, the approximate probability becomes 51.4%.</li>
+</ul>
+</div>
+</section><section id="issues-of-relative-frequency" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="issues-of-relative-frequency">Issues of <strong>Relative Frequency</strong>
+</h2>
+<ul>
+<li>😕 How large of a number is large enough?</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>😕 Meaning of “under similar conditions”</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>😕 The relative frequency is reliable under identical conditions?</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>👉 We only obtain an approximation instead of exact value.</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>😂 How do you compute the probability that Chicago Cubs wins the World Series next year?</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://media.giphy.com/media/EKURBxKKkw0uY/giphy.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>This relative frequency definition of probability actually has some issues.</li>
+<li>How large of a number is large enough? is 100 large enough, 1000? We actually don’t know, and this is case by case, for some complicated calculations, we need huge number to get a good approximation</li>
+<li>Meaning of “under similar conditions” is unclear. We may not be able to have similar conditions every time we toss a coin. (air flow, the way of tossing a coin)</li>
+<li>The relative frequency is reliable under identical conditions? Maybe a very skilled person can toss a fair coin in a way that heads always shows up. In this case, is the relative frequency reliable? We don’t know.</li>
+<li>We only obtain an approximation instead of exact value. because we never be able to repeat the experiment infinite number of times.</li>
+</ul>
+</div>
+</section><section id="monte-carlo-simulation-for-categorical-data" class="level2"><h2 class="anchored" data-anchor-id="monte-carlo-simulation-for-categorical-data">Monte Carlo Simulation for Categorical Data</h2>
+<div class="columns">
+<div class="column" style="width:90%;">
+<ul>
+<li>We get a bag of 5 balls colored in <span class="red"><strong>red</strong></span> or <span class="blue"><strong>blue</strong></span>.</li>
+</ul>
+<div class="question">
+<p>Without peeking at the bag, how do we approximate the probability of getting a red ball?</p>
+</div>
+</div><div class="column" style="width:10%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/sack.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<div class="alert">
+<p><strong>Monte Carlo Simulation:</strong> Repeat drawing a ball at random a large number of times to approximate the probability by the relative frequency of getting a red ball.</p>
+</div>
+<p>. . .</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bag_balls</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "blue"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mc_sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span><span class="op">(</span><span class="fl">10000</span>, </span>
+<span>                    <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">bag_balls</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">mc_sim</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "blue" "red"  "blue" "blue" "blue" "blue"</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">freq_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">mc_sim</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>mc_sim
+blue  red 
+6005 3995 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">freq_table</span> <span class="op">/</span> <span class="fl">10000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>mc_sim
+blue  red 
+ 0.6  0.4 </code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<div class="question">
+<p>So how many red balls in the bag?</p>
+</div>
+<div class="notes">
+<ul>
+<li>A so-called Monte Carlo Simulation demonstrate the idea of relative frequency as an approximation to a probability.</li>
+<li>Suppose we have 2 red balls and 3 blue ones in a bag. We wanna know what is the probability of getting a red ball?</li>
+<li>If each ball is equally likely to be chosen (picking at random), apparently, <span class="math inline">\(Pr(red) = 0.4\)</span>. # draw a ball at random from bag_balls, a # vector of length 5 with value red/blue</li>
+<li>The idea of <strong>Monte Carlo Simulation:</strong> is that We repeat the experiment (drawing a ball) a large number of times to obtain the relative frequency of red ball to approximate the probability of getting a red ball, which is exactly what we do for tossing a coin before.</li>
+<li>The code is shown right here.</li>
+<li>First we can use rep() function to generate the bag that has 2 red balls and 3 blue balls.</li>
+<li>To draw a ball at random, we can use the function sample(). It produces one random outcome.</li>
+<li>To do a Monte Carlo Simulation, we can use replicate() function, which allows us to repeat the same job number of times.</li>
+<li>So here, I repeatedly draw a ball 10000 times.</li>
+<li>Finally, we can check the frequency table or frequency distribution using table() function.</li>
+<li>To get the relative frequency, just divided by the total number of repetitions.</li>
+<li>You can see that the result of MC simulation approximates the true probability very well.</li>
+</ul>
+</div>
+</section><section id="random-seed-set.seed" class="level2"><h2 class="anchored" data-anchor-id="random-seed-set.seed">Random Seed <code>set.seed()</code>
+</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bag_balls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "red"  "red"  "blue" "blue" "blue"</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<ul>
+<li>When doing sampling, we use <strong>random number generators</strong>, and results vary from sample to sample.</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>To ensure the results are the same every time we do sampling, set the <strong>random seed</strong> to a specific number by <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## same result!</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2026</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bag_balls</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "blue" "red"  "blue"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2026</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">bag_balls</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "blue" "red"  "blue"</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>When we do sampling, we use random number generators in the computer language, and sampling results vary from sample to sample. This time you get red, next time you get blue.</li>
+<li>To ensure the results are exactly the same every time you do sampling, set the R random seed to a specific number by <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code>
+</li>
+<li>For example, if you set the seed at 1000, then every time you draw a ball, the ball is always blue.</li>
+</ul>
+</div>
+</section><section id="with-and-without-replacement" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="with-and-without-replacement">With and without replacement</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">bag_balls</span>, <span class="fl">6</span><span class="op">)</span></span>
+<span><span class="co"># Error in sample.int(length(x), size, replace, prob): </span></span>
+<span><span class="co"># cannot take a sample larger than the population when 'replace = FALSE'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><br></p>
+<p>. . .</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">bag_balls</span>, <span class="fl">6</span>, </span>
+<span>       replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "blue" "blue" "blue" "blue" "blue" "blue"</code></pre>
+</div>
+</div>
+<p><br></p>
+<p>. . .</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mc_sim_rep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">bag_balls</span>, </span>
+<span>                     size <span class="op">=</span> <span class="fl">10000</span>, </span>
+<span>                     replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">mc_sim_rep</span><span class="op">)</span> <span class="op">/</span> <span class="fl">10000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>mc_sim_rep
+blue  red 
+0.59 0.41 </code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>The sample() function can actually draw lots of balls. But be careful about the with and without replacement issue.</li>
+<li>The default setting is draw without replacement.</li>
+<li>So when we try to draw 6 balls at once, it renders an error, saying cannot take a sample larger than the population when ‘replace = FALSE’. Basically we only 5 balls, without replacement, once a ball is drawn, the ball is out of bag, and only 4 balls remain in the bag. So without replacement, we can at most draw 5 balls, which is the entire population.</li>
+<li>And if we wanna draw more than 5 times from the same bag, we got to specify replace = TRUE.</li>
+<li>And we can actually do the MC simulation using just the sample() function like sample(balls, size = B, replace = TRUE)</li>
+<li>This means that we return the ball back to the bag after selecting it, and we repeatedly draw a ball continually B times basically under the same conditions.</li>
+<li>Not surprisingly, we get results very similar to those previously obtained using replicate() function.</li>
+</ul>
+</div>
+</section><section id="normal-gaussian-distribution-nmu-sigma2" class="level2"><h2 class="anchored" data-anchor-id="normal-gaussian-distribution-nmu-sigma2">Normal (Gaussian) Distribution <span class="math inline">\(N(\mu, \sigma^2)\)</span>
+</h2>
+<ul>
+<li>Density curve</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/nor-den-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:68.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Normal Distribution is also called Gaussian distribution.</li>
+<li>It has two parameters that determine its density function and its density curve or distribution shape.</li>
+<li>One is its mean <span class="math inline">\(\mu\)</span>, the other variance <span class="math inline">\(\sigma^2\)</span>.</li>
+<li>It has a bell-shaped density curve symmetric about it mean.</li>
+</ul>
+</div>
+</section><section id="draw-random-values-from-nmu-sigma2" class="level2"><h2 class="anchored" data-anchor-id="draw-random-values-from-nmu-sigma2">Draw Random Values from <span class="math inline">\(N(\mu, \sigma^2)\)</span>
+</h2>
+<ul>
+<li>
+<code>rnorm(n, mean, sd)</code>: Draw <span class="math inline">\(n\)</span> observations from a normal distribution with mean <code>mean</code> and standard deviation <code>sd</code>.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## the default mean = 0 and sd = 1 (standard normal)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -1.033  0.311 -0.881  0.022  1.657</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<ul>
+<li>
+<span class="math inline">\(100\)</span> random draws from <span class="math inline">\(N(0, 1)\)</span>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/nor-den-draw-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>We use <code>rnorm(n, mean, sd)</code> to draw n observations from the normal distribution with mean <code>mean</code> and standard deviation <code>sd</code>.</li>
+<li>the default distribution is standard normal (mean is 0 and sd is 1)</li>
+<li>So we can easily draw normal samples as many as we want.</li>
+<li>All those red points are random draws from the standard normal.</li>
+<li>You can see that most of the points are around the mean because the density around the mean is higher.</li>
+<li>Also, we can see when we draw normal samples, it is very difficult to get a sample with a very extreme value because its corresponding density value is quite small.</li>
+<li>Therefore, we tend to underestimate the population variance if we use the sample data to estimate it. And that’s one of the reason why we divided by n - 1 in the sample variance formula to sort of correct this underestimation.</li>
+</ul>
+</div>
+</section><section id="histogram-of-normal-data-n-20" class="level2"><h2 class="anchored" data-anchor-id="histogram-of-normal-data-n-20">Histogram of Normal Data (n = 20)</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nor_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>We talked about this before. In statistics, we hope the sampled data to be as representative of population as possible.</li>
+<li>Suppose the population is normal. If the sample is a random sample, we hope the sample size to be large. The larger the sample size, the more representative of population the sample is.</li>
+<li>Here, the sample size is just 20. And you can see the sample data does not look very normal.</li>
+</ul>
+</div>
+</section><section id="histogram-of-normal-data-n-200" class="level2"><h2 class="anchored" data-anchor-id="histogram-of-normal-data-n-200">Histogram of Normal Data (n = 200)</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nor_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">200</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>When n = 200, the sample start looking like a normal distribution.</li>
+</ul>
+</div>
+</section><section id="histogram-of-normal-data-n-5000" class="level2"><h2 class="anchored" data-anchor-id="histogram-of-normal-data-n-5000">Histogram of Normal Data (n = 5000)</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nor_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">5000</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>When n = 5000, the sample is very representative of its population</li>
+</ul>
+</div>
+</section><section id="compute-normal-probabilities" class="level2"><h2 class="anchored" data-anchor-id="compute-normal-probabilities">Compute Normal Probabilities</h2>
+<ul>
+<li>
+<code>dnorm(x, mean, sd)</code> to compute the <strong>density value</strong> <span class="math inline">\(f(x)\)</span> (<strong>NOT</strong> probability)</li>
+<li>
+<code>pnorm(q, mean, sd)</code> to compute <span class="math inline">\(P(X \leq q)\)</span>
+</li>
+<li>
+<code>pnorm(q, mean, sd, lower.tail = FALSE)</code> to compute <span class="math inline">\(P(X &gt; q)\)</span>
+</li>
+<li>
+<code>pnorm(q2, mean, sd) - pnorm(q1, mean, sd)</code> to compute <span class="math inline">\(P(q_1\leq X \leq q_2)\)</span>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/nor-den-area-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:52.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>We can use <code>dnorm(x, mean, sd)</code> to compute the <strong>density value</strong> <span class="math inline">\(f(x)\)</span> (<strong>NOT</strong> probability)</li>
+<li>
+<code>pnorm(q, mean, sd)</code> to compute <span class="math inline">\(P(X \leq q)\)</span>
+</li>
+<li>
+<code>pnorm(q, mean, sd, lower.tail = FALSE)</code> to compute <span class="math inline">\(P(X &gt; q)\)</span>
+</li>
+<li>
+<code>pnorm(q_1, mean, sd) - pnorm(q_2, mean, sd)</code> to compute <span class="math inline">\(P(q_1\leq X \leq q_2)\)</span>
+</li>
+</ul>
+</div>
+</section><section id="normal-quantiles" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="normal-quantiles">Normal Quantiles</h2>
+<ul>
+<li><p>To get the p-th percentile (quantile), the normal variable value <span class="math inline">\(q\)</span> given the cumulative probability <span class="math inline">\(p\)</span>, we use <code>qnorm(p, mean, sd)</code>.</p></li>
+<li><p>Find a normal variable value <span class="math inline">\(q\)</span> so that <span class="math inline">\(P(X\leq q) = p\)</span>.</p></li>
+<li><p><code>qnorm</code> is the opposite of <code>pnorm</code>.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">q_95</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">qnorm</a></span><span class="op">(</span><span class="fl">0.95</span><span class="op">)</span></span>
+<span><span class="va">q_95</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.6</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="va">q_95</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.95</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>To get the p-th percentile (quantile), the normal variable value <span class="math inline">\(q\)</span>, given the cumulative probability <span class="math inline">\(p\)</span>, we use <code>qnorm(p, mean, sd)</code>.</li>
+<li>We find <span class="math inline">\(q\)</span> such that <span class="math inline">\(P(X\leq q) = p\)</span>.</li>
+<li>
+<code>qnorm</code> is the opposite of <code>pnorm</code>.</li>
+<li>
+<code>qnorm</code> gives you a normal r.v. value, <code>pnorm</code> gives you a probability.</li>
+</ul>
+</div>
+</section><section id="distributions-and-their-r-function" class="level2"><h2 class="anchored" data-anchor-id="distributions-and-their-r-function">Distributions and Their R Function</h2>
+<div class="xsmall">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/r_prob_fcn.jpeg" class="img-fluid figure-img" style="width:56.0%"></p>
+<figcaption>Source: https://www.oreilly.com/library/view/the-r-book/9780470510247/ch007-sec013.html</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Here shows other R functions for computing other distributions. Because each distribution has its own parameters, when you use it, remember to specify the parameter values in function arguments.</li>
+</ul>
+</div>
+</section><section id="normal-curve" class="level2"><h2 class="anchored" data-anchor-id="normal-curve"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">Normal Curve</a></h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">xlim</span><span class="op">(</span><span class="op">-</span><span class="fl">5</span>, <span class="fl">5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_function</span><span class="op">(</span>fun <span class="op">=</span> <span class="va">dnorm</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fl">2</span>, sd <span class="op">=</span> <span class="fl">.5</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/unnamed-chunk-15-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:63.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="section-3" class="level2"><h2 class="anchored" data-anchor-id="section-3"></h2>
+<div class="lab">
+<p><span style="color:blue"> <strong>18-probability</strong> </span></p>
+<p>In <strong>lab.qmd</strong> <code>## Lab 18</code> section,</p>
+<!-- - Create the R script **lab16-probability.R** -->
+<ul>
+<li>Plot the probability function <span class="math inline">\(P(X = x)\)</span> of <span class="math inline">\(X \sim \text{binomial}(n = 5, \pi = 0.3)\)</span>.</li>
+</ul>
+<p>To use ggplot,</p>
+<ol type="1">
+<li>Create a data frame saving all possible values of <span class="math inline">\(x\)</span> and their corresponding probability using <code>dbinom(x, size = ___, prob = ___)</code>.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+      x       y
+  &lt;int&gt;   &lt;dbl&gt;
+1     0 0.168  
+2     1 0.360  
+3     2 0.309  
+4     3 0.132  
+5     4 0.0284 
+6     5 0.00243</code></pre>
+</div>
+</div>
+</div>
+</section><section id="section-4" class="level2"><h2 class="anchored" data-anchor-id="section-4"></h2>
+<div class="lab">
+<p><br> 2. Add <code>geom_col()</code></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/binom-ggplt-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>scale_x_continuous(breaks = seq(0, 5, by = 1))</li>
+</ul>
+</div>
+</section><section id="probability-vs.-statistics" class="level2"><h2 class="anchored" data-anchor-id="probability-vs.-statistics">Probability vs.&nbsp;Statistics</h2>
+<!-- - Probability is the language of statistical inference and prediction.  -->
+<ul>
+<li>
+<span style="color:blue"> <strong>Probability</strong> </span>: We <em>know</em> the process generating the data and are interested in properties of observations.</li>
+<li>
+<span style="color:blue"> <strong>Statistics</strong> </span>: We <em>observed</em> the data (sample) and are interested in determining what is the process generating the data (population).</li>
+</ul>
+<div class="xsmall">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/15-probstat/data_generating.png" class="img-fluid figure-img" style="width:89.0%"></p>
+<figcaption>Figure 1.1 in All of Statistics (Wasserman 2003)</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+</section><section id="terminology" class="level2"><h2 class="anchored" data-anchor-id="terminology">Terminology</h2>
+<ul>
+<li><p><strong>Population</strong> <span class="green">(<strong>Data generating process</strong>)</span>: a group of subjects we are interested in studying</p></li>
+<li><p><strong>Sample</strong> <span class="green">(<strong>Data</strong>)</span>: a (<em>representative</em>) subset of our population of interest</p></li>
+<li><p><strong>Parameter</strong>: a <em>unknown</em> <em>fixed</em> numerical quantity derived from the population <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+<li><p><strong>Statistic</strong>: a numerical quantity derived from a sample</p></li>
+<li><p>Common population parameters of interest and their corresponding sample statistic:</p></li>
+</ul>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: center;">Quantity</th>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Statistic (Point estimate)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Mean</td>
+<td style="text-align: center;"><span class="math inline">\(\mu\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\overline{x}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Variance</td>
+<td style="text-align: center;"><span class="math inline">\(\sigma^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(s^2\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Standard deviation</td>
+<td style="text-align: center;"><span class="math inline">\(\sigma\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(s\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">proportion</td>
+<td style="text-align: center;"><span class="math inline">\(p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\hat{p}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="notes">
+<ul>
+<li>First just review some terminologies.</li>
+<li>A <strong>Population</strong>is a group of individuals or objects we are interested in studying. It could be as small as a single family. Other examples are all Marquette students, all Marquette faculty, all American people, or all people in the world.</li>
+<li>A Sample is a (representative) subset of our population of interest.</li>
+<li>An important word here is representative. The sample should look like its population. The more alike, the better for the accuracy of statistical inference. So if your population is all people in the US. The sample collected in Wisconsin is not representative at all. If your population is all Marquette students, the sample collected from computer science is not representative. The sample should include all different majors and years that have proportions similar to the proportions of all students. Right.</li>
+<li>A <strong>Parameter</strong> a <em>unknown</em> <em>fixed</em> numerical quantity derived from the population</li>
+<li>A <strong>Statistic</strong>: a numerical quantity derived from a sample</li>
+<li>One goal of statistical inference is to estimate population parameters using our sample data, or statistics calculated from our sample data. (proportion of fraternity/sororities)</li>
+</ul>
+</div>
+</section><section id="point-estimation" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="point-estimation">Point Estimation</h2>
+<!-- ::: {.question} -->
+<!-- If you can **only use one single number** to guess the unknown population mean $\mu$, what would you like to use? -->
+<!-- ::: -->
+<!-- . . . -->
+<div class="alert">
+<p>The one single point used to estimate the unknown parameter is called a <strong>point estimator</strong>.</p>
+</div>
+<p>. . .</p>
+<ul>
+<li>
+<p>A <strong>point estimator</strong> is any function of data <span class="math inline">\((X_1, X_2, \dots, X_n)\)</span> <em>(Before actually being collected).</em></p>
+<ul>
+<li>
+<strong>Any statistic is a point estimator</strong>.</li>
+</ul>
+</li>
+<li><p>A <strong>point estimate</strong> is a value of a point estimator used to estimate a population parameter. <em>(A value calculated by the collected data).</em></p></li>
+<li><p>Sample mean <span class="math inline">\((\overline{X})\)</span> is a statistic and a point estimator for the population mean <span class="math inline">\(\mu\)</span>.</p></li>
+</ul>
+<div class="notes">
+<ul>
+<li>We used data from samples to calculate sample statistics, which can then be used as (point) estimates for population parameters.</li>
+<li>For example, suppose <span class="math inline">\(X_i \sim N(\mu, \sigma^2)\)</span>, we use sample mean <span class="math inline">\(\overline{X}\)</span> as an estimator for population mean <span class="math inline">\(\mu\)</span>.<br>
+</li>
+<li>It can be shown that <span class="math inline">\(\overline{X}\)</span> is the <em>best</em> estimator for <span class="math inline">\(\mu\)</span> in some sense. (MATH 4710)</li>
+<li>But here is a question. What is the downside to using point estimates?</li>
+<li>If you just use one single number to estimate another number, with pretty high chance, the two numbers will not be equal, due to randomness of your sample and the sample may not be representative enough.</li>
+</ul>
+</div>
+</section><section id="point-estimates-are-not-enough" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="point-estimates-are-not-enough">Point Estimates Are Not Enough</h2>
+<div class="question">
+<p>If you want to estimate <span class="math inline">\(\mu\)</span>, do you prefer to report a range of values the parameter might be in, or a single estimate like <span class="math inline">\(\overline{x}\)</span>?</p>
+</div>
+<div class="question">
+<p>If you want to catch a fish, do you prefer a spear or a net?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/spear.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/net.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Due to variation of <span class="math inline">\(\overline{X}\)</span>, if we report a point estimate <span class="math inline">\(\overline{x}\)</span>, we probably won’t hit the exact <span class="math inline">\(\mu\)</span>.</li>
+<li>If we report <em>a range of plausible values</em>, we have a better shot at capturing the parameter!</li>
+</ul>
+<div class="notes">
+<ul>
+<li>If you want to catch a fish, do you prefer a spear or a net?</li>
+<li>Unless you are an expert spear fisher, I guess you would prefer using a net, right? Because you are more likely to actually catch the fish than if you are actually fishing with a spear.</li>
+</ul>
+</div>
+</section><section id="confidence-intervals" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="confidence-intervals">Confidence Intervals</h2>
+<p>A plausible range of values is called a <strong>confidence interval (CI)</strong>.</p>
+<ul>
+<li><p>To construct a CI we need to quantify the variability of our sample mean. <!-- - For example, if we want to construct a confidence interval for a population mean, we need to come up with a plausible range of values around our observed sample mean. --> <!-- - This range depends on how *precise* and *reliable* our $\overline{X}$ is as an estimate of $\mu$. --></p></li>
+<li>
+<p>Quantifying this uncertainty requires a measurement of how much we would expect the sample statistic to vary from sample to sample.</p>
+<ul>
+<li>That is the <em>variance</em> of the sampling distribution of the sample mean!</li>
+</ul>
+</li>
+</ul>
+<div class="question">
+<p>Do we know the sampling distribution of <span class="math inline">\(\overline{X}\)</span>?</p>
+</div>
+<ul>
+<li>By CLT, <span class="math inline">\(\overline{X} \sim N(\mu, \frac{\sigma^2}{n})\)</span> <strong>regardless of what the population distribution is</strong>.</li>
+</ul>
+<div class="alert">
+<p>👉 The larger variation of <span class="math inline">\(\overline{X}\)</span> is, the wider the CI for <span class="math inline">\(\mu\)</span> will be.</p>
+</div>
+<div class="notes">
+<ul>
+<li>The variability of the sample mean determines the size of CI.</li>
+<li>This range depends on how <em>precise</em> and <em>reliable</em> our <span class="math inline">\(\overline{X}\)</span> is as an estimate of <span class="math inline">\(\mu\)</span>.</li>
+<li>If the variation of our sample mean is pretty large, meaning that every time we collect a sample, the sample mean varies a lot from one to another, then we are more uncertain about the value of <span class="math inline">\(\mu\)</span>.</li>
+<li>And that mean the plausible range of values for <span class="math inline">\(\mu\)</span> will be pretty wide, or the CI will be much wider.</li>
+</ul>
+</div>
+</section><section id="confidence-intervals-1" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="confidence-intervals-1">Confidence Intervals</h2>
+<p>A plausible range of values for <span class="math inline">\(\mu\)</span> is called a <strong>confidence interval (CI)</strong>.</p>
+<div class="question">
+<p>Do we know the sampling distribution of <span class="math inline">\(\overline{X}\)</span>?</p>
+</div>
+<ul>
+<li>Central Limit Theorem: <span class="math inline">\(\overline{X} \sim N(\mu, \frac{\sigma^2}{n})\)</span> <strong>regardless of what the population distribution is</strong>.</li>
+</ul>
+<div class="xsmall">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/IllustrationCentralTheorem.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Source: Wiki</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+</section><section id="alpha100-confidence-interval-for-mu" class="level2"><h2 class="anchored" data-anchor-id="alpha100-confidence-interval-for-mu">
+<span class="math inline">\((1 - \alpha)100\%\)</span> Confidence Interval for <span class="math inline">\(\mu\)</span>
+</h2>
+<!-- - With CLT, $\overline{X}$ is approximately $N\left(\mu, \frac{\sigma^2}{n}\right)$. -->
+<ul>
+<li>With <span class="math inline">\(z_{\alpha/2}\)</span> being <span class="math inline">\((1-\alpha/2)\)</span> quantile of <span class="math inline">\(N(0, 1)\)</span>, <span class="math inline">\((1 - \alpha)100\%\)</span> confidence interval for <span class="math inline">\(\mu\)</span> is <span class="math display">\[\left(\overline{X} - z_{\alpha/2} \frac{\sigma}{\sqrt{n}}, \,\, \overline{X} + z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right)\]</span>
+</li>
+</ul>
+<p>. . .</p>
+<div class="question">
+<p>What if <span class="math inline">\(\sigma\)</span> is unknown?</p>
+</div>
+<p>. . .</p>
+<!-- + Use sample variance $s^2$ to replace $\sigma^2$. -->
+<ul>
+<li>
+<span class="math inline">\((1 - \alpha)100\%\)</span> confidence interval for <span class="math inline">\(\mu\)</span> becomes <span class="math display">\[\left(\overline{X} - t_{\alpha/2, n-1} \frac{S}{\sqrt{n}},\,\, \overline{X} + t_{\alpha/2, n-1}\frac{S}{\sqrt{n}}\right),\]</span> where <span class="math inline">\(t_{\alpha/2, n-1}\)</span> is the <span class="math inline">\((1-\alpha/2)\)</span> quantile of <strong>Student-t</strong> distribution with degrees of freedom <span class="math inline">\(n-1\)</span>.</li>
+</ul></section><section id="interpreting-a-95-confidence-interval" class="level2"><h2 class="anchored" data-anchor-id="interpreting-a-95-confidence-interval">Interpreting a 95% Confidence Interval</h2>
+<ul>
+<li>
+<em>We are 95% <strong>confident</strong> that</em> blah blah blah . . .</li>
+</ul>
+<blockquote class="blockquote">
+<p>If we were able to collect our sample data many times and build the corresponding confidence intervals, we would expect about 95% of those intervals would contain the true population parameter.</p>
+</blockquote>
+<p>. . .</p>
+<p>However,</p>
+<ul>
+<li><p>We never know if in fact 95% of them do, or whether any particular interval contains the true parameter! 😱</p></li>
+<li><p>❌ <strong>Cannot</strong> say <em>“There is a 95% <strong>chance/probability</strong> that the true parameter is in the confidence interval.”</em></p></li>
+<li><p>In practice we may only be able to collect one single data set.</p></li>
+</ul>
+<div class="notes">
+<ul>
+<li>We usually say we are 95% <strong>confident</strong> that blah blah blah. What do we mean by that?</li>
+<li>Imagine that you ask your friends to go to a party this weekend, and they say oh I’m 95% confident that I like. You’d be like, what’s wrong with you, i’m never inviting you.</li>
+<li>When we say We are 95% <strong>confident</strong>, it has a very specific meaning.
+<ul>
+<li>It means that Suppose we were able to collect our sample dataset many times and build the corresponding confidence intervals.</li>
+<li>We would expect about 95% of those intervals would contain the true population parameter.</li>
+</ul>
+</li>
+<li>However, we never know if in fact 95% of them do, or whether any particular interval contains the true parameter (maybe none of them do!). Because we don’t know the true value is.</li>
+<li>We <strong>cannot</strong> say<br>
+“There is a 95% <strong>chance/probability</strong> that the true parameter is in the confidence interval.”</li>
+</ul>
+</div>
+</section><section id="confidence-interval-simulation" class="level2"><h2 class="anchored" data-anchor-id="confidence-interval-simulation">95% Confidence Interval Simulation</h2>
+<p><span class="math inline">\(X_1, \dots, X_n \sim N(\mu, \sigma^2)\)</span> where <span class="math inline">\(\mu = 120\)</span> and <span class="math inline">\(\sigma = 5\)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/unnamed-chunk-21-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="simulate-100-cis-for-mu-when-sigma-is-known" class="level2"><h2 class="anchored" data-anchor-id="simulate-100-cis-for-mu-when-sigma-is-known">Simulate 100 CIs for <span class="math inline">\(\mu\)</span> when <span class="math inline">\(\sigma\)</span> is known</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Algorithm</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Simulation Result</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="instructions">
+<p><strong>Algorithm</strong></p>
+<ul>
+<li>Generate 100 sampled data of size <span class="math inline">\(n\)</span>: <span class="math inline">\((x_1^1, x_2^1, \dots, x_n^1), \dots (x_1^{100}, x_2^{100}, \dots, x_n^{100})\)</span>, where <span class="math inline">\(x_i^m \sim N(\mu, \sigma^2)\)</span>.</li>
+<li>Obtain 100 sample means <span class="math inline">\((\overline{x}^1, \dots, \overline{x}^{100})\)</span>.</li>
+<li>For each <span class="math inline">\(m = 1, 2, \dots, 100\)</span>, compute the corresponding confidence interval <span class="math display">\[\left(\overline{x}^m - z_{\alpha/2} \frac{\sigma}{\sqrt{n}}, \overline{x}^m + z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right)\]</span>
+</li>
+</ul>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/unnamed-chunk-22-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:72.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mu</span> <span class="op">&lt;-</span> <span class="fl">120</span>; <span class="va">sig</span> <span class="op">&lt;-</span> <span class="fl">5</span> </span>
+<span><span class="va">al</span> <span class="op">&lt;-</span> <span class="fl">0.05</span>; <span class="va">M</span> <span class="op">&lt;-</span> <span class="fl">100</span>; <span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">16</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2026</span><span class="op">)</span></span>
+<span><span class="va">x_rep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span><span class="op">(</span><span class="va">M</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">mu</span>, <span class="va">sig</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">xbar_rep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">x_rep</span>, <span class="fl">2</span>, <span class="va">mean</span><span class="op">)</span></span>
+<span><span class="va">E</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">qnorm</a></span><span class="op">(</span>p <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="va">al</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span> <span class="op">*</span> <span class="va">sig</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
+<span><span class="va">ci_lwr</span> <span class="op">&lt;-</span> <span class="va">xbar_rep</span> <span class="op">-</span> <span class="va">E</span></span>
+<span><span class="va">ci_upr</span> <span class="op">&lt;-</span> <span class="va">xbar_rep</span> <span class="op">+</span> <span class="va">E</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="cn">NULL</span>, xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">ci_lwr</span>, <span class="va">ci_upr</span><span class="op">)</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">100</span><span class="op">)</span>, </span>
+<span>     xlab <span class="op">=</span> <span class="st">"95% CI"</span>, ylab <span class="op">=</span> <span class="st">"Sample"</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">mu_out</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">mu</span> <span class="op">&lt;</span> <span class="va">ci_lwr</span> <span class="op">|</span> <span class="va">mu</span> <span class="op">&gt;</span> <span class="va">ci_upr</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/segments.html">segments</a></span><span class="op">(</span>x0 <span class="op">=</span> <span class="va">ci_lwr</span>, y0 <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="va">M</span>, x1 <span class="op">=</span> <span class="va">ci_upr</span>, col <span class="op">=</span> <span class="st">"navy"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/segments.html">segments</a></span><span class="op">(</span>x0 <span class="op">=</span> <span class="va">ci_lwr</span><span class="op">[</span><span class="va">mu_out</span><span class="op">]</span>, y0 <span class="op">=</span> <span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">M</span><span class="op">)</span><span class="op">[</span><span class="va">mu_out</span><span class="op">]</span>, x1 <span class="op">=</span> <span class="va">ci_upr</span><span class="op">[</span><span class="va">mu_out</span><span class="op">]</span>, col <span class="op">=</span> <span class="fl">2</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="va">mu</span>, col <span class="op">=</span> <span class="st">"#FFCC00"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Al right. So here illustrates the idea of confidence intervals. Suppose the true population mean is 120. And I draw a sample of the same size 100 times, and calculate 100 CIs accordingly.</li>
+<li>Because each sample is different, we are gonna have a different CI as well.</li>
+<li>Here 4 of them are not covering the true population mean.</li>
+<li>Again the CI varies from sample to sample. We will not get exactly 5 CIs not covering the true population mean among 100 CIs, but about 5 of them do. It could be 3, it could be 7.</li>
+</ul>
+</div>
+</section><section id="section-5" class="level2"><h2 class="anchored" data-anchor-id="section-5"></h2>
+<div class="lab">
+<p><span style="color:blue"> <strong>19-Confidence Interval</strong> </span> <!-- - Create the R script **lab17-confint.R** --></p>
+<p>In <strong>lab.qmd</strong> <code>## Lab 19</code> section,</p>
+<ul>
+<li>Run the code I give you for simulating 100 <span class="math inline">\(95\%\)</span> CIs. Change the random generator seed to another number you like.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(a number you like) Birthday? Lucky number?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>How many CIs do not cover the true mean <span class="math inline">\(\mu\)</span>?</li>
+</ul>
+</div>
+</section></section><section id="section-6" class="level1" data-background-color="#ffde57"><h1 data-background-color="#ffde57"></h1>
+<div class="center">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" class="img-fluid" width="650"><img src="images/15-probstat/scipy.png" class="img-fluid" width="550"></p>
+</div>
+<!-- ::: {.left} -->
+<!-- <h1> Joining Data Frames </h1> -->
+<!-- ::: -->
+<section id="random-generator" class="level2"><h2 class="anchored" data-anchor-id="random-generator"><a href="https://numpy.org/doc/stable/reference/random/generator.html#numpy.random.Generator">Random Generator</a></h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>
+<code>random.Generator.choice()</code>: Generates a random sample from a given array</li>
+</ul>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>bag_balls <span class="op">=</span> [<span class="st">'red'</span>] <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> [<span class="st">'blue'</span>] <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co">## set a random number generator </span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">2025</span>) <span class="co">## R set.seed()</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co">## sampling from bag_balls </span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>rng.choice(bag_balls, size <span class="op">=</span> <span class="dv">6</span>, replace <span class="op">=</span> <span class="va">True</span>) <span class="co">## R sample()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array(['blue', 'blue', 'blue', 'red', 'blue', 'blue'], dtype='&lt;U4')</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>rng.normal(loc<span class="op">=</span><span class="fl">0.0</span>, scale<span class="op">=</span><span class="fl">1.0</span>, size<span class="op">=</span><span class="dv">5</span>) <span class="co"># R rnorm()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([-1.12919278, -2.44186665,  0.7653914 , -0.75970935,  0.26699619])</code></pre>
+</div>
+</div>
+</section><section id="normal-distribution-from-scipy" class="level2"><h2 class="anchored" data-anchor-id="normal-distribution-from-scipy">Normal Distribution from <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html#scipy.stats.norm">SciPy</a>
+</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/reticulate/">reticulate</a></span><span class="op">)</span>; <span class="fu"><a href="https://rstudio.github.io/reticulate/reference/py_install.html">py_install</a></span><span class="op">(</span><span class="st">"scipy"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>. . .</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>norm.pdf(x, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>) <span class="co">## R dnorm()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.3989422804014327</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(x, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co">## R pnorm()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.5</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="fl">0.95</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>norm.ppf(q, <span class="dv">0</span>, <span class="dv">1</span>)  <span class="co">## Percent point function. R qnorm() </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.6448536269514722</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>norm.rvs(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1</span>) <span class="co">## R rnorm()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([-0.19802244])</code></pre>
+</div>
+</div>
+</section><section id="normal-curve-plotting" class="level2"><h2 class="anchored" data-anchor-id="normal-curve-plotting">Normal Curve Plotting</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>sig <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">0.1</span>) <span class="op">*</span> sig <span class="op">+</span> mu</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>hx <span class="op">=</span> norm.pdf(x, mu, sig)</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>plt.plot(x, hx)</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'density'</span>)</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'N(100, 15^2)'</span>)</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/15-probstat/unnamed-chunk-35-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script></section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>Another methodology called Bayesian statistics assumes parameters are unknown but <em>random</em>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/math3570-s26\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2026, Cheng-Han Yu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/slides/15-probstat.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

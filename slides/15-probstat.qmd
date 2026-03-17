@@ -1,41 +1,19 @@
 ---
 title: "Probability and Statistics  `r emo::ji('game_die')`"
-subtitle: "MATH/COSC 3570 Introduction to Data Science"
-author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
-# date: "`r format(Sys.time(), '%B %d %Y')`"
-# macros: _macros.tex # import a list of TeX/LaTeX definitions
+title-slide-attributes:
+  data-background-image: ../images/bg.png
+  # data-background-size: stretch
+  # data-slide-number: none
 format: 
-  revealjs:
-    #     - "macros.tex"
-    html-math-method:
-      method: mathjax
-      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    # include-in-header:
-    highlight-style: arrow
-    code-block-bg: true
-    self-contained: false
-    slide-number: c/t
-    incremental: false
-    width: 1800
-    height: 1000
-    margin: 0.05
-    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
-    footer: "[math3570-s26.github.io/website](https://math3570-s26.github.io/website/)"
-    theme: ["simple", "slides.scss"]
-    multiplex: false
-    code-link: true
-    fig-cap-location: bottom
-    fig-align: center
-    transition: none ## fade slide convex concave zoom
-    code-line-numbers: false
-    title-slide-attributes:
-      # data-background-color: "#447099"
-      data-background-image: ../images/bg.png
-      # data-background-size: cover
-      # data-background-color: "#698ED5"
-editor: source
-execute:
-  freeze: true
+  live-revealjs: 
+    output-file: 15-probstat-slides.html
+    df-print: default
+webr:
+  cell-options:
+    autorun: false
+  packages:
+    - tidyverse
+execute: 
   echo: true
 ---
 

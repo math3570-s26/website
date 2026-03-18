@@ -27,9 +27,9 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | 9 | Tue, Mar 10 | ***NO CLASS: Spring break*** |  |  |  |  |
 |  | Thu, Mar 12 | ***NO CLASS: Spring break*** |  |  |  |  |
 | 10 | Tue, Mar 17 | Probabilistic and Statistical Simulation | [🖥️probstat](/slides/15-probstat-slides.html) | [📋18](/exercise/lab18-prob.html) [📋19](/exercise/lab19-ci.html) |  |  |
-|  | Thu, Mar 19 | Linear Regression | 🖥️linear-regression |  | [Activity 3](ai/ai_3.html) |  |
-| 11 | Tue, Mar 24 | Multiple Linear Regression |  | 📋20 |  |  |
-|  | **Thu, Mar 26** | **Mini Project 2 Presentation: Data Wrangling and Pipelines** |  |  |  |  |
+|  | Thu, Mar 19 | Linear Regression | [🖥️linear-regression](/slides/16-linear-reg-slides.html) | [📋20](/exercise/lab20-slr.html) |  |  |
+| 11 | Tue, Mar 24 | Multiple Linear Regression |  |  | [Activity 3](ai/ai_3.html) |  |
+|  | **Thu, Mar 26** | [**Mini Project 2 Presentation: Data Wrangling and Pipelines**](/project/mini_project_2.html) |  |  |  |  |
 | 12 | Tue, Mar 31 | Logistic Regression | 🖥️logistic-regression |  | Activity 4 |  |
 |  | Thu, Apr 2 | ***NO CLASS: Easter break*** |  |  |  |  |
 | 13 | Tue, Apr 7 | Logistic Regression |  | 📋21 |  |  |
@@ -39,7 +39,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | 15 | Tue, Apr 21 | Principal Component Analysis | 🖥️Principal Component Analysis |  |  |  |
 |  | Thu, Apr 23 | Principal Component Analysis |  | 📋23 | Activity 6 | 📂 Final Project Proposal Due |
 | 16 | Tue, Apr 28 | K-Means Clustering | 🖥️K-means Clustering |  |  |  |
-|  | Thu, Apr 30 | K-Means Clustering |  | 📋24 |  |  |
+|  | Thu, Apr 30 | K-Means Clustering [SDSS Conference](https://ww2.amstat.org/meetings/sdss/2026/) |  | 📋24 |  |  |
 | 17 | **Mon, May 4** | **Final Project Presentation (10:30 AM - 12:30 PM)** |  |  |  | 📂 Final Project Materials Due |
 :::
 

@@ -299,6 +299,13 @@ Use this exact slide structure:
 
 Time: 12 to 15 minutes.
 
+```{r}
+#| echo: false
+#| column: margin
+knitr::include_graphics("../images/QRCode_ai3.png")
+```
+
+
 ## Individual Reflection (each student)
 
 Write 150 to 200 words answering:

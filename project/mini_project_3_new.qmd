@@ -1,0 +1,525 @@
+---
+title: "Mini Project 3"
+subtitle: "A Python Prediction Challenge"
+format: html
+editor: source
+categories: "Mini Project"
+date-modified: today
+execute:
+  echo: true
+  eval: false
+  warning: false
+  message: false
+---
+```{r}
+#| eval: false
+#| message: false
+library(reticulate)
+py_install("seaborn")
+```
+
+## Overview
+
+In **Mini Project 1**, your team explored data in **R** and told a short story with visuals. In **Mini Project 2**, your team used **R** to clean, reshape, and organize data into a trustworthy analysis-ready table.
+
+In **Mini Project 3**, your team will switch to **Python** and take the next step: **build a simple prediction model and evaluate how well it works on new data**.
+
+Think of your team as a small beginner data science studio. A client has asked for a quick first prediction tool. Your job is **not** to build the most advanced model. Your job is to build a **clear, correct, honest, and reproducible** workflow.
+
+This project should stay at an **introductory data science** level. Keep it simple.
+
+### Your task
+
+Complete this Quarto file by doing the following:
+
+1. Choose one prediction question
+2. Import data into Python
+3. Prepare a small modeling data set
+4. Split the data into a training set and a test set
+5. Fit **2 simple supervised learning models**
+6. Compare model performance on the **test set**
+7. Explain what the results mean, and what they do **not** mean
+
+This is **not** a competition to get the highest possible accuracy. It is a project about learning the prediction workflow.
+
+## AI use is allowed
+
+You are allowed to use AI tools to help with this project. For example, AI may help you:
+
+1. Write or debug Python code
+2. Explain error messages
+3. Suggest ways to clean or recode variables
+4. Remind you how to calculate evaluation metrics
+5. Help revise your writing for clarity
+
+However, your team is still responsible for all final work. You must:
+
+1. Check that the code actually runs
+2. Check that the model setup is appropriate
+3. Check that the interpretation is statistically correct
+4. Follow the course AI policy and clearly document your AI use when required
+
+Do **not** copy AI output into your report without checking it carefully.
+
+## What you will submit
+
+Show, in your Posit Cloud project or other approved course environment:
+
+1. The **rendered HTML report**
+2. The **complete source `.qmd` file**
+3. **Any data file you used**, if it is not built into a Python package
+4. Any cleaned data file you created for this project, if applicable
+
+## What you will present
+
+A **10 minute** team presentation that explains:
+
+1. Your prediction question
+2. Your data and variables
+3. Your train and test split
+4. The 2 models you compared
+5. Which model performed better on the test set
+6. What your team learned, including limitations
+
+## Team Info
+
+- **Team Name**: [Your Team Name]{.blue}
+
+- Team members and roles for this project:
+
+  1. **Project lead** (keeps time, coordinates tasks): [Your Member Name(s)]{.blue}
+  2. **Python workflow lead** (imports data, prepares code): [Your Member Name(s)]{.blue}
+  3. **Modeling lead** (fits models, organizes outputs): [Your Member Name(s)]{.blue}
+  4. **Evaluation and presentation lead** (compares models, prepares slides): [Your Member Name(s)]{.blue}
+
+[Role note]: Each student has a role for accountability, but teammates should still help one another and learn together. If your team has 3 members, one person may take on two roles.
+
+## Project rules
+
+1. Choose **one** prediction question
+2. Use **one** data set
+3. Use **no more than 6 predictors**
+4. If you do classification, use a **binary** target variable
+5. Fit **exactly 2 simple models**
+6. Use **one** train and test split
+7. Use **1 or 2 evaluation metrics**
+8. Explain results in plain language
+9. Do **not** claim causation
+10. Do **not** overstate what your model can do
+11. Do **not** use advanced tuning, random forests, boosting, deep learning, or many competing models
+
+## Python setup
+
+Use code like the block below to load the packages you need in your working version of the project.
+
+
+```{python}
+#| eval: true
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier, plot_tree
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+```
+
+## Step 1: Choose your prediction challenge
+
+Choose **one** data set and create **one** clear prediction question.
+
+### Suggested data options
+
+1. `titanic` from `seaborn`  
+   Example question: Can we predict whether a passenger survived?
+
+2. `mpg` from `seaborn`  
+   Example question: Can we predict a car's `mpg`?
+
+3. `penguins` from `seaborn`  
+   Example question: Can we predict whether a penguin is Gentoo or not?
+
+4. Your cleaned data from **Mini Project 2**, exported as a `.csv` file and imported into Python
+
+5. Your own data set, with instructor approval
+
+:::: callout-warning
+Choose a data set and target that are manageable for a short team project. Your goal is not to build the most accurate model possible. Your goal is to demonstrate a clear prediction workflow that you understand.
+::::
+
+### Import your data
+
+Use the chunk below to import your data and call the main table `data_raw`.
+
+```{python}
+
+# Example 1
+# data_raw = sns.load_dataset("titanic")
+# data_raw
+# # Example 2
+# data_raw = sns.load_dataset("mpg")
+# data_raw
+# # Example 3
+# data_raw = sns.load_dataset("penguins")
+# data_raw
+# Example 4
+# data_raw = pd.read_csv("your_clean_data.csv")
+
+# data_raw = ...
+```
+
+### Quick description
+
+1. What does one row represent?
+
+[**Answer:**]{.blue}
+
+2. What is your prediction question?
+
+[**Answer:**]{.blue}
+
+3. What is your target variable?
+
+[**Answer:**]{.blue}
+
+4. Is your task **regression** or **classification**?
+
+[**Answer:**]{.blue}
+
+5. Who might care about this prediction question?
+
+[**Answer:**]{.blue}
+
+## Step 2: Prepare your modeling data
+
+Create a table called `data` that is ready for modeling.
+
+Keep this preparation focused. You may:
+
+1. Select a small set of useful variables
+2. Filter rows
+3. Handle missing values
+4. Recode a variable
+5. Create a small number of simple derived variables
+6. Convert categorical variables into dummy variables if needed
+
+Do **not** turn this into another major wrangling project.
+
+```{python}
+
+# Prepare your modeling data here
+# Example ideas:
+# data = data_raw[[...]].dropna().copy()
+# data["high_mpg"] = (data["mpg"] >= data["mpg"].median()).astype(int)
+# data = pd.get_dummies(data, drop_first=True)
+
+data = ...
+```
+
+### Describe your modeling data
+
+1. How many rows are in `data`?
+
+[**Answer:**]{.blue}
+
+2. What is the target variable?
+
+[**Answer:**]{.blue}
+
+3. Which predictors did you keep, and why?
+
+[**Answer:**]{.blue}
+
+4. Did you remove any rows or variables? If yes, why?
+
+[**Answer:**]{.blue}
+
+## Step 3: Check the target and predictors
+
+Before modeling, inspect the variables you plan to use.
+
+```{python}
+
+# Suggestions:
+# data.head()
+# data.info()
+# data.describe(include="all")
+```
+
+
+### Quick check
+
+1. If regression, what is the range and general distribution of the target?
+2. If classification, what are the class counts?
+3. Did you notice any issues, such as missing values, unusual values, or imbalanced classes?
+
+[**Answer:**]{.blue}
+
+## Step 4: Create training and test sets
+
+Use **one** reproducible train and test split.
+
+A common choice is about **80 percent** for training and **20 percent** for testing.
+
+```{python}
+
+# Define your predictors and target
+# Example:
+# X = data.drop(columns=["target_name"])
+# y = data["target_name"]
+
+X = ...
+y = ...
+
+# For classification, you may use stratify=y
+# For regression, use stratify=None
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.20,
+    random_state=3570,
+    stratify=None,
+)
+```
+
+### Why do we split the data?
+
+In 2 to 4 sentences, explain why the test set matters.
+
+[**Answer:**]{.blue}
+
+### Split summary
+
+1. Number of rows in training set: [**Answer:**]{.blue}
+2. Number of rows in test set: [**Answer:**]{.blue}
+
+If classification, report the class counts in both sets.
+
+[**Answer:**]{.blue}
+
+## Step 5: Fit Model 1
+
+### Recommended Model 1
+
+1. If regression, use **linear regression**
+2. If classification, use **logistic regression**
+
+If you want a different Model 1, get instructor approval.
+
+### Model 1 formula in words
+
+Describe your model in words.
+
+[**Answer:**]{.blue}
+
+```{python}
+
+# Fit Model 1 here
+# Examples:
+# model_1 = LinearRegression()
+# model_1 = LogisticRegression(max_iter=1000)
+
+model_1 = ...
+model_1.fit(X_train, y_train)
+```
+
+### What is Model 1 doing?
+
+[**Answer:**]{.blue}
+
+## Step 6: Fit Model 2
+
+### Recommended Model 2
+
+1. If regression, use a **decision tree regressor**
+2. If classification, use a **decision tree classifier**
+
+To keep the model simple and interpretable, use a **small tree**. For example, you may set `max_depth = 3` or `max_depth = 4`.
+
+If you want a different Model 2, get instructor approval.
+
+### Why did you choose this second model?
+
+[**Answer:**]{.blue}
+
+```{python}
+
+# Fit Model 2 here
+# Examples:
+# model_2 = DecisionTreeRegressor(max_depth=3, random_state=3570)
+# model_2 = DecisionTreeClassifier(max_depth=3, random_state=3570)
+
+model_2 = ...
+model_2.fit(X_train, y_train)
+```
+
+### What is Model 2 doing?
+
+[**Answer:**]{.blue}
+
+## Step 7: Make predictions and evaluate both models
+
+Use the **test set only** for evaluation.
+
+```{python}
+
+# Predictions
+# For regression, predict() returns predicted values.
+# For classification, predict() returns predicted class labels.
+pred_1 = model_1.predict(X_test)
+pred_2 = model_2.predict(X_test)
+```
+
+### If your project is regression
+
+Choose **1 or 2** of the following:
+
+1. RMSE
+2. MAE
+3. $R^2$
+
+You should also include **one simple plot**, such as predicted versus actual values.
+
+```{python}
+
+# Example regression metrics
+# rmse_1 = mean_squared_error(y_test, pred_1, squared=False)
+# mae_1 = mean_absolute_error(y_test, pred_1)
+# r2_1 = r2_score(y_test, pred_1)
+```
+
+### If your project is classification
+
+Choose **1 or 2** of the following:
+
+1. Accuracy
+2. Misclassification rate
+3. Sensitivity
+4. Specificity
+
+You should also include a **confusion matrix**.
+
+If you want predicted probabilities, use `predict_proba()`. If you want class labels, use `predict()`.
+
+```{python}
+
+# Example classification metrics
+# acc_1 = accuracy_score(y_test, pred_1)
+# cm_1 = confusion_matrix(y_test, pred_1)
+```
+
+```{python}
+
+# Evaluate Model 1 and Model 2 here
+```
+
+### Results summary
+
+#### Model 1
+
+[**Answer:**]{.blue}
+
+#### Model 2
+
+[**Answer:**]{.blue}
+
+### Which model did better on the test set?
+
+[**Answer:**]{.blue}
+
+### Was the difference large or small?
+
+[**Answer:**]{.blue}
+
+## Step 8: Show one helpful output
+
+Create **one** output that helps the audience understand the results.
+
+Examples:
+
+1. A confusion matrix
+2. A predicted versus actual plot
+3. A small comparison table of metrics
+4. A simple plot of prediction errors
+5. A shallow decision tree plot
+
+```{python}
+
+# Add one helpful output here
+```
+
+Explain why this output helps the audience understand the results.
+
+[**Answer:**]{.blue}
+
+## Step 9: Explain the results honestly
+
+Answer the following questions.
+
+1. What did your team learn from this prediction task?
+
+[**Answer:**]{.blue}
+
+2. What can your model do reasonably well?
+
+[**Answer:**]{.blue}
+
+3. Where might your model fail or be less reliable?
+
+[**Answer:**]{.blue}
+
+4. What should we be careful **not** to claim from this project?
+
+[**Answer:**]{.blue}
+
+5. If you had more time, what is one reasonable next step?
+
+[**Answer:**]{.blue}
+
+## Step 10: Team reflection
+
+Each team member writes **2 to 4 sentences**:
+
+1. What you contributed
+2. One thing you learned about supervised learning in Python
+3. One thing you would improve next time
+
+#### Member 1: your name
+
+[**Answer:**]{.blue}
+
+#### Member 2: your name
+
+[**Answer:**]{.blue}
+
+#### Member 3: your name
+
+[**Answer:**]{.blue}
+
+#### Member 4: your name (if applicable)
+
+[**Answer:**]{.blue}
+
+## Step 11: Presentation plan
+
+Plan a **10 minute** talk with the following structure:
+
+1. About 1 minute: data set and prediction question
+2. About 2 minutes: data preparation and chosen variables
+3. About 2 minutes: train and test split
+4. About 2 minutes: Model 1 and Model 2
+5. About 2 minutes: test set results and comparison
+6. About 1 minute: takeaway and limitations
+
+Presentation order will be announced in class.
+
+## Grading guide
+
+Total 15 points:
+
+1. **Clear** prediction question, target, and predictors (3 pts)
+2. **Reasonable** Python workflow, train and test split, and model setup (4 pts)
+3. **Correct** evaluation and honest comparison of the 2 models (4 pts)
+4. **Clear** interpretation, limitations, and communication (4 pts)

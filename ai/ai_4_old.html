@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AI Activities – MATH/COSC 3570 - Spring 2026</title>
+<title>AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,69 +20,30 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./project.html" rel="next">
-<link href="./ai_example.html" rel="prev">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-238b7dab1bde4684d4de8122b9beee70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2e0ab3ffcb189ca14a0af92b40aeab37.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-238b7dab1bde4684d4de8122b9beee70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-18d5c2534bc5b4fe0e2f75fb19d6b544.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,35 +71,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -170,7 +102,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="AI Activities – MATH/COSC 3570 - Spring 2026">
+<meta property="og:title" content="AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="Synthetic online orders delivery population">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
 
@@ -345,7 +278,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai.html">AI Project Topics</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -359,9 +292,9 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
@@ -387,19 +320,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -416,19 +349,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai_act_guide.html" class="sidebar-item-text sidebar-link">
+  <a href="../ai_act_guide.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai_example.html" class="sidebar-item-text sidebar-link">
+  <a href="../ai_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AI Project Example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AI Project Topics</span></a>
   </div>
 </li>
@@ -445,7 +378,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project.html" class="sidebar-item-text sidebar-link">
+  <a href="../project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Topics and Works</span></a>
   </div>
 </li>
@@ -462,13 +395,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-description-final.html" class="sidebar-item-text sidebar-link">
+  <a href="../present-description-final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-work-final.html" class="sidebar-item-text sidebar-link">
+  <a href="../present-work-final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Group and Proposal</span></a>
   </div>
 </li>
@@ -479,16 +412,40 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assigned-roles-3-students" id="toc-assigned-roles-3-students" class="nav-link active" data-scroll-target="#assigned-roles-3-students">Assigned Roles (3 students)</a>
+  <ul class="collapse">
+  <li><a href="#prompt-engineer" id="toc-prompt-engineer" class="nav-link" data-scroll-target="#prompt-engineer">Prompt Engineer</a></li>
+  <li><a href="#data-science-auditor" id="toc-data-science-auditor" class="nav-link" data-scroll-target="#data-science-auditor">Data Science Auditor</a></li>
+  <li><a href="#synthesizer" id="toc-synthesizer" class="nav-link" data-scroll-target="#synthesizer">Synthesizer</a></li>
+  </ul></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
+  <li><a href="#step-by-step-tasks" id="toc-step-by-step-tasks" class="nav-link" data-scroll-target="#step-by-step-tasks">Step by step tasks</a>
+  <ul class="collapse">
+  <li><a href="#step-1-define-your-investigation-question-before-using-ai" id="toc-step-1-define-your-investigation-question-before-using-ai" class="nav-link" data-scroll-target="#step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</a></li>
+  <li><a href="#step-2-use-ai-strategically-3-to-5-prompts" id="toc-step-2-use-ai-strategically-3-to-5-prompts" class="nav-link" data-scroll-target="#step-2-use-ai-strategically-3-to-5-prompts">Step 2 Use AI strategically (3 to 5 prompts)</a></li>
+  <li><a href="#step-3-create-the-ai-interaction-log" id="toc-step-3-create-the-ai-interaction-log" class="nav-link" data-scroll-target="#step-3-create-the-ai-interaction-log">Step 3 Create the AI Interaction Log</a></li>
+  <li><a href="#step-4-run-the-simulations-and-complete-the-required-validation-checks" id="toc-step-4-run-the-simulations-and-complete-the-required-validation-checks" class="nav-link" data-scroll-target="#step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4 Run the simulations and complete the required validation checks</a></li>
+  <li><a href="#step-5-write-the-human-authored-synthesis-group" id="toc-step-5-write-the-human-authored-synthesis-group" class="nav-link" data-scroll-target="#step-5-write-the-human-authored-synthesis-group">Step 5 Write the Human Authored Synthesis (group)</a></li>
+  <li><a href="#step-6-presentation-slides-group" id="toc-step-6-presentation-slides-group" class="nav-link" data-scroll-target="#step-6-presentation-slides-group">Step 6 Presentation slides (group)</a></li>
+  </ul></li>
+  <li><a href="#individual-reflection-each-student" id="toc-individual-reflection-each-student" class="nav-link" data-scroll-target="#individual-reflection-each-student">Individual Reflection (each student)</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_4_old.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ai_act_guide.html">AI Activities</a></li><li class="breadcrumb-item"><a href="./ai.html">AI Project Topics</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI Activities</h1>
+<h1 class="title">AI Activity 4: Probabilistic and Statistical Simulation: Validate, Interpret, and Extend</h1>
+<p class="subtitle lead">Synthetic online orders delivery population</p>
 </div>
 
 
@@ -497,6 +454,12 @@ window.Quarto = {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 23, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -505,142 +468,410 @@ window.Quarto = {
 </header>
 
 
+<blockquote class="blockquote">
+<p>Simulation is powerful, but only when the simulated process matches the real question. AI can be helpful, but a correct looking answer is not enough by itself. In probability and statistics, we still need to define the trial clearly, match the sampling process to the question, validate the result, and explain what it means.</p>
+</blockquote>
+<p>You will use an AI tool as a learning partner to investigate a core data science reality: simulation is not just generating random numbers. It requires a clearly defined trial, a correct event or statistic, enough repetitions, validation against a benchmark whenever possible, and human judgment about whether the final result is trustworthy.</p>
+<p>You are graded on how you <strong>think, validate, interpret, and explain</strong>, not on whether AI makes mistakes.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Learning something new is part of this activity">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning something new is part of this activity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>You are <strong>not</strong> expected to already know every probability model or simulation idea that might be relevant here. Part of this activity is using AI to help you learn <strong>one new idea beyond our current class coverage</strong>.</p>
+<p>For example, AI may introduce:</p>
 <ul>
-<li><p>Activity 1 is presented by <span class="blue"><strong>Superb Statisticians</strong></span>: Aaron, Connor, and Danielle.</p></li>
-<li><p>Activity 2 is presented by <span class="blue"><strong>Team 1</strong></span>: Sophia, Maya, Kaitlyn.</p></li>
+<li>a named probability model you have not learned yet</li>
+<li>a new way to think about sampling from a finite population</li>
+<li>a new method for checking whether a simulation is stable</li>
+<li>a new distinction between exact probability and Monte Carlo approximation</li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Team 1"</span>, <span class="st">"The Data Scientists"</span>, <span class="st">"Stat Padders"</span>, <span class="st">"Data Divers"</span>, <span class="st">""</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3570</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(teams, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Team 1"</code></pre>
+<p>Your job is <strong>not</strong> to blindly trust that new idea. Your job is to:</p>
+<ol type="1">
+<li>ask AI to explain it in plain language</li>
+<li>decide whether it actually matches our activity setup</li>
+<li>connect it back to course ideas you already know</li>
+<li>explain what you learned, in your own words</li>
+</ol>
+<p>If AI introduces a concept we have not formally covered, you may use it as a learning tool, but you must still explain the simulation logic in clear plain language.</p>
 </div>
 </div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Auditing means evaluation, not error hunting">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Auditing means evaluation, not error hunting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>In this activity, <strong>auditing</strong> does not mean trying to prove that AI is wrong.</p>
+<p>It means evaluating AI output as a statistical work product:</p>
 <ul>
-<li>Activity 3 is presented by team <span class="blue"><strong>The Data Scientists</strong></span>: Eliza, Miranda, Lauren.</li>
+<li>Does it answer the actual question?</li>
+<li>Does the code match the stated method?</li>
+<li>What assumptions are being made?</li>
+<li>What should be checked before trusting the result?</li>
+<li>What evidence supports the conclusion?</li>
+<li>What should be accepted, revised, validated, or extended?</li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The Data Scientists"</span>, <span class="st">"Stat Padders"</span>, <span class="st">"Data Divers"</span>, <span class="st">"Plot Squad"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3570</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(teams, <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "The Data Scientists" "Stat Padders"        "Plot Squad"         
-[4] "Data Divers"        </code></pre>
+<p>Sometimes AI will be wrong or incomplete. Sometimes AI will be mostly correct. In either case, your job is to evaluate the output carefully and explain why your final result is trustworthy.</p>
 </div>
 </div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Goal of this activity">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Goal of this activity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<p>By the end of this activity, your group will do five things:</p>
+<ol type="1">
+<li>Define a probability question and a statistical simulation question using a known finite population.</li>
+<li>Use AI to propose a simulation workflow, then audit that workflow for alignment, assumptions, and trustworthiness.</li>
+<li>Run one probability simulation and one sampling distribution simulation using repeated simple random samples.</li>
+<li>Validate the main simulation results with benchmarks and stability checks.</li>
+<li>Extend the simulation to a new but related question and explain what changes.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="To Do">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>To Do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="font-size: 1.1em;">
+<ol type="1">
+<li>Download the dataset from the <a href="#dataset">Dataset</a> section below.</li>
+<li>Write your investigation question (2 to 3 sentences). <a href="#step-1-define-your-investigation-question-before-using-ai">Step 1</a> in Tasks.</li>
+<li>Run 3 to 5 AI prompts that cover probability setup, simulation design, validation, interpretation, and one new idea. <a href="#step-2-use-ai-strategically-3-to-5-prompts">Step 2</a> in Tasks.</li>
+<li>Complete checklist items 1 to 6 first. <a href="#step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4</a></li>
+<li>Build your sampling distribution visualizations and finish checklist items 7 to 12. <a href="#step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4</a></li>
+<li>Draft your synthesis, then build slides using the required 5 slide structure. <a href="#step-5-write-the-human-authored-synthesis-group">Step 5</a> and <a href="#step-6-presentation-slides-group">Step 6</a></li>
+</ol>
+</div>
+</div>
+</div>
+<section id="assigned-roles-3-students" class="level2">
+<h2 class="anchored" data-anchor-id="assigned-roles-3-students">Assigned Roles (3 students)</h2>
+<p>[NOTE:] Each student has a designated role for accountability. However, teammates are encouraged to collaborate, support one another, and learn together in order to produce high quality, cohesive work.</p>
+<section id="prompt-engineer" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-engineer">Prompt Engineer</h3>
+<p>Responsibilities</p>
 <ul>
-<li><p>Activity 4 is presented by team <span class="blue"><strong>Stat Padders</strong></span>: Jared, DJ, Raj.</p></li>
-<li><p>Activity 5 is presented by team <span class="blue"><strong>Plot Squad</strong></span>: Dominic, Wyatt, Drishtant, Tyler.</p></li>
-<li><p>Activity 6 is presented by team <span class="blue"><strong>Data Divers</strong></span>: Karlo, Beth, Jack.</p></li>
+<li>Create 3 to 5 purposeful AI prompts</li>
+<li>Save AI responses and build the AI Interaction Log</li>
+<li>Write annotations for each prompt and response pair</li>
 </ul>
+</section>
+<section id="data-science-auditor" class="level3">
+<h3 class="anchored" data-anchor-id="data-science-auditor">Data Science Auditor</h3>
+<p>Responsibilities</p>
+<ul>
+<li>Evaluate whether the AI output matches the statistical question</li>
+<li>Check whether AI defined the correct trial, event, statistic, and sampling rule</li>
+<li>Design and run validation and stress test checks after simulation</li>
+<li>Explain what the group accepted, revised, validated, or extended, and why</li>
+</ul>
+</section>
+<section id="synthesizer" class="level3">
+<h3 class="anchored" data-anchor-id="synthesizer">Synthesizer</h3>
+<p>Responsibilities</p>
+<ul>
+<li>Write the Human Authored Synthesis in clear course language</li>
+<li>Build slides using the required structure</li>
+<li>Ensure the final work is consistent and concise</li>
+</ul>
+</section>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>Required file</p>
+<ul>
+<li><a href="../documents/topic4-population.csv"><code>topic4-population.csv</code></a></li>
+</ul>
+<p>Dataset notes</p>
+<ul>
+<li><a href="../documents/README_OnlineOrdersSimulation_Topic4.txt"><code>README_OnlineOrdersSimulation_Topic4.txt</code></a></li>
+</ul>
+</section>
+<section id="what-you-will-submit" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h2>
+<ul>
+<li>Group submissions
+<ul>
+<li>AI Interaction Log</li>
+<li>Human Authored Synthesis</li>
+<li>Slides for a 12 to 15 minute presentation</li>
+</ul></li>
+<li>Individual submission
+<ul>
+<li>Individual Reflection (150 to 200 words)</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-by-step-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-tasks">Step by step tasks</h2>
+<section id="step-1-define-your-investigation-question-before-using-ai" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-define-your-investigation-question-before-using-ai">Step 1 Define your investigation question (before using AI)</h3>
+<p>Write 2 to 3 sentences answering:</p>
+<ul>
+<li>What probability question are we trying to estimate</li>
+<li>What statistical simulation question are we trying to study</li>
+<li>What exactly counts as one trial or one repeated sample</li>
+<li>Why simulation is useful here</li>
+</ul>
+<p>For this activity, your group must include both required targets below:</p>
+<ol type="1">
+<li>Probability target</li>
+</ol>
+<p>Estimate the probability that a simple random sample of 20 orders, drawn <strong>without replacement</strong> from the population, contains <strong>at least 9 late deliveries</strong>.</p>
+<ol start="2" type="1">
+<li>Statistical simulation target</li>
+</ol>
+<p>Study the sampling distribution of <span class="math inline">\(\hat{p}\)</span>, the sample proportion of late deliveries, under repeated simple random samples <strong>without replacement</strong> from the population.</p>
+<p>You must compare two sample sizes:</p>
+<ul>
+<li><span class="math inline">\(n = 20\)</span></li>
+<li><span class="math inline">\(n = 60\)</span></li>
+</ul>
+<p>Example investigation question you may use or adapt:</p>
+<blockquote class="blockquote">
+<p>“We want to estimate the probability that a simple random sample of 20 orders contains at least 9 late deliveries, and we want to study how the sampling distribution of <span class="math inline">\(\hat{p}\)</span> changes when the sample size increases from 20 to 60. Because this file is a full finite population, simulation lets us compare our simulated results to known population truths and check whether our method and interpretation are trustworthy.”</p>
+</blockquote>
+</section>
+<section id="step-2-use-ai-strategically-3-to-5-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-use-ai-strategically-3-to-5-prompts">Step 2 Use AI strategically (3 to 5 prompts)</h3>
+<p>[Note:] You may run several prompts, but keep 5 most useful and meaningful prompts for reporting.</p>
+<p>Your prompts must be purposeful and iterative.</p>
+<p>Prompt requirements</p>
+<ul>
+<li>At least 1 prompt asking AI to define one simulation trial clearly</li>
+<li>At least 1 prompt asking AI about sampling with replacement versus without replacement</li>
+<li>At least 1 prompt asking AI how many repetitions are needed and how to check simulation stability</li>
+<li>At least 1 prompt asking AI how to validate the simulation using a known benchmark from the population</li>
+<li>At least 1 prompt asking AI how to interpret the sampling distribution of <span class="math inline">\(\hat{p}\)</span></li>
+<li>At least 1 prompt asking AI to teach you one new probability or simulation idea that we have not fully covered in class yet, and to explain it in plain language</li>
+</ul>
+<section id="suggested-prompt-starters-you-may-adapt" class="level4">
+<h4 class="anchored" data-anchor-id="suggested-prompt-starters-you-may-adapt">Suggested prompt starters (you may adapt)</h4>
+<ul>
+<li><p><em>“I have a full finite population of online orders. I want to estimate the probability that a sample of 20 orders contains at least 9 late deliveries. What exactly should one simulation trial do?”</em></p></li>
+<li><p><em>“My population is stored in a CSV file. Should I simulate with replacement or without replacement if the question says simple random sample from the population? Why?”</em></p></li>
+<li><p><em>“What is the difference between the true population proportion of late deliveries and the Monte Carlo estimate from a simulation?”</em></p></li>
+<li><p><em>“How many repetitions should I use for a probability simulation, and how can I tell whether my estimate is stable?”</em></p></li>
+<li><p><em>“I want to simulate the sampling distribution of <span class="math inline">\(\hat{p}\)</span> for <span class="math inline">\(n = 20\)</span> and <span class="math inline">\(n = 60\)</span>. What summaries and plots should I use, and what mistakes should I avoid when interpreting them?”</em></p></li>
+<li><p><em>“Teach me one new probability or simulation idea that might be relevant here, but explain it in plain language first.”</em></p></li>
+<li><p><em>“What validation checks would help me trust a simulation answer, even if the code runs and looks correct?”</em></p></li>
+</ul>
+</section>
+</section>
+<section id="step-3-create-the-ai-interaction-log" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-create-the-ai-interaction-log">Step 3 Create the AI Interaction Log</h3>
+<p>For each prompt, include:</p>
+<ul>
+<li>Prompt goal</li>
+<li>The AI response excerpt you used</li>
+<li>Your annotation:
+<ul>
+<li>What AI got right</li>
+<li>What AI assumed</li>
+<li>What needed validation or clarification</li>
+<li>What your group accepted, revised, or extended</li>
+</ul></li>
+</ul>
+<p>At least one entry in your AI Interaction Log must show how AI helped you learn <strong>one new idea</strong> that was not already part of the course, and how you translated that idea into plain language your group actually understands.</p>
+<p>Important rule</p>
+<ul>
+<li>You may not paste AI text into your final synthesis verbatim.</li>
+</ul>
+</section>
+<section id="step-4-run-the-simulations-and-complete-the-required-validation-checks" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-run-the-simulations-and-complete-the-required-validation-checks">Step 4 Run the simulations and complete the required validation checks</h3>
+<p>Import the required file, then complete the validation checklist below. Your evidence can be screenshots, printed outputs, or short summaries of what you observed. A short summary without numbers or outputs does not count as evidence.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Required simulation checklist">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Required simulation checklist
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. Rows and columns</strong></p>
+<ul>
+<li>Confirm the dataset has 300 rows and 12 columns after import.</li>
+</ul>
+<p><strong>2. Population truth</strong></p>
+<ul>
+<li>Compute the true population proportion of <code>late_delivery == "Yes"</code>.</li>
+<li>Report the count of late deliveries and the count of non late deliveries.</li>
+<li>Explain why this population truth is useful when validating a simulation.</li>
+</ul>
+<p><strong>3. Define one trial correctly</strong></p>
+<p>For the probability question, define one trial in words.</p>
+<p>Your definition must make clear:</p>
+<ul>
+<li>the population you are sampling from</li>
+<li>the sample size</li>
+<li>whether sampling is with or without replacement</li>
+<li>what event counts as a success</li>
+</ul>
+<p><strong>4. Small pilot check</strong></p>
+<p>Run a small pilot simulation with 10 to 20 repetitions.</p>
+<ul>
+<li>Show a few trial outputs</li>
+<li>Explain how you checked that each trial matched your verbal definition</li>
+<li>State one bug or misunderstanding that could appear at this stage</li>
+</ul>
+<p><strong>5. Main probability simulation</strong></p>
+<p>Run a large simulation with at least 5000 repetitions to estimate:</p>
+<p><span class="math display">\[
+P(\text{at least 9 late deliveries in a sample of 20})
+\]</span></p>
+<p>Requirements:</p>
+<ul>
+<li>Use simple random samples <strong>without replacement</strong></li>
+<li>Report the Monte Carlo estimate</li>
+<li>State the seed you used</li>
+<li>Explain why more than a handful of repetitions is necessary</li>
+</ul>
+<p><strong>6. Audit one AI suggested workflow</strong></p>
+<p>Choose one AI suggested simulation setup, code chunk, or explanation and audit it.</p>
+<p>Your audit must answer all of the following:</p>
+<ul>
+<li>Did your group accept it as is, revise it, or reject it?</li>
+<li>Why?</li>
+<li>What evidence did you use to support that decision?</li>
+<li>If the AI output was mostly correct, what did you still validate or clarify?</li>
+<li>If the AI output was weak or wrong, how did you correct it?</li>
+</ul>
+<p>Your goal here is not to force an error. Your goal is to evaluate whether the AI output is trustworthy and complete for this activity.</p>
+<p><strong>7. Sampling distribution simulation</strong></p>
+<p>Simulate the sampling distribution of <span class="math inline">\(\hat{p}\)</span> for <code>late_delivery == "Yes"</code> using repeated simple random samples <strong>without replacement</strong>.</p>
+<p>Requirements:</p>
+<ul>
+<li>At least 2000 repetitions for <span class="math inline">\(n = 20\)</span></li>
+<li>At least 2000 repetitions for <span class="math inline">\(n = 60\)</span></li>
+<li>Save the simulated <span class="math inline">\(\hat{p}\)</span> values for both sample sizes</li>
+</ul>
+<p><strong>8. Sampling distribution evidence</strong></p>
+<p>Create visual evidence for the two sampling distributions.</p>
+<p>Requirements:</p>
+<ul>
+<li>use plots such as histograms, dot plots, or density style plots</li>
+<li>report the center and spread for each sample size</li>
+<li>compare each simulated center to the true population proportion</li>
+<li>explain how the spread changes when the sample size increases</li>
+</ul>
+<p><strong>9. Stability or Monte Carlo uncertainty</strong></p>
+<p>Do one of the following:</p>
+<ul>
+<li>rerun one simulation with a different seed and compare the estimate</li>
+<li>increase the number of repetitions and compare the estimate</li>
+<li>compute and report a Monte Carlo standard error for the probability estimate</li>
+</ul>
+<p>Then explain what this tells you about simulation reliability.</p>
+<p><strong>10. Required extension</strong></p>
+<p>Choose <strong>one</strong> new but related variation below.</p>
+<ul>
+<li>Change the sample size from 20 to 40 for the probability question.</li>
+<li>Change the event from “at least 9 late deliveries” to “between 6 and 8 late deliveries, inclusive.”</li>
+<li>Estimate the probability using both late delivery counts and sample proportions, then explain the connection.</li>
+<li>Compare the probability estimate using 1000 repetitions and 10000 repetitions.</li>
+</ul>
+<p>For your chosen extension:</p>
+<ul>
+<li>state your prediction <strong>before</strong> simulating</li>
+<li>justify the prediction in plain language</li>
+<li>run the new simulation</li>
+<li>explain what changed and why</li>
+</ul>
+<p><strong>11. Learn something new</strong></p>
+<p>Write 2 to 4 sentences answering:</p>
+<ul>
+<li>What new probability or simulation idea did AI introduce to your group?</li>
+<li>How did you restate that idea in plain language?</li>
+<li>Did that new idea genuinely help your understanding, or did it mostly add confusion?</li>
+</ul>
+<p><strong>12. Judgment and caution</strong></p>
+<p>Write 4 to 6 sentences answering:</p>
+<ul>
+<li>What was the most important design choice in your simulation?</li>
+<li>What did your group most need to validate before trusting the result?</li>
+<li>Why are your final simulation answers more trustworthy than a quick unverified answer?</li>
+<li>What additional check would you do before using simulation results in a real report?</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-write-the-human-authored-synthesis-group" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-write-the-human-authored-synthesis-group">Step 5 Write the Human Authored Synthesis (group)</h3>
+<p>Length target: 400 to 600 words.</p>
+<p>Your synthesis must include:</p>
+<ul>
+<li>Your investigation question</li>
+<li>At least two important simulation design or validation decisions, supported by evidence from your checklist</li>
+<li>A clear explanation of how your group evaluated AI output, not just whether AI was right or wrong</li>
+<li>A short recommended workflow for planning, validating, and extending a simulation study</li>
+<li>A brief explanation of one new idea your group learned through AI and how you translated it into plain language</li>
+</ul>
+<p>Your synthesis must be written in your own words.</p>
+</section>
+<section id="step-6-presentation-slides-group" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-presentation-slides-group">Step 6 Presentation slides (group)</h3>
+<p>Use this exact slide structure:</p>
+<ul>
+<li>Our question</li>
+<li>What AI suggested</li>
+<li>What we audited and validated</li>
+<li>Our final understanding, with evidence</li>
+<li>One takeaway for future data science work</li>
+</ul>
+<p>Time: 12 to 15 minutes.</p>
+</section>
+</section>
+<section id="individual-reflection-each-student" class="level2">
+<h2 class="anchored" data-anchor-id="individual-reflection-each-student">Individual Reflection (each student)</h2>
+<p>Write 150 to 200 words answering:</p>
+<ul>
+<li>What did AI help you learn?</li>
+<li>What did you need to validate, clarify, or revise?</li>
+<li>What did you contribute as a human thinker?</li>
+<li>How will you change your AI use in future data work?</li>
+</ul>
+<p>Your reflection must match your assigned role.</p>
+<!-- ## Participation (non-presenting students) -->
+<!-- Please scan the QR code, or go to `[your form link here]` to share what you learned from this activity. -->
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-No.
-</th>
-
-<th>
-Title
-</th>
-
-<th>
-Content
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="QUklMjBhY3Rpdml0eQ==" data-listing-file-modified-sort="1771339929025" data-listing-reading-time-sort="7" data-listing-word-count-sort="1260" data-listing-title-sort="AI Activity 1: Data Importing and Hidden Assumptions" data-listing-filename-sort="ai_1.qmd">
-<td>
-<a href="./ai/ai_1.html" class="title listing-title">AI Activity 1: Data Importing and Hidden Assumptions</a>
-</td>
-<td>
-<span class="listing-subtitle">NYC Airbnb Open Data 2019 listings dataset</span>
-</td>
-<td>
-<span class="listing-description">Importing data is not a neutral step. Import tools make assumptions about missing values, data types, dates, text encoding, and formatting. When assumptions are wrong, the…</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="QUklMjBhY3Rpdml0eQ==" data-listing-file-modified-sort="1772724555299" data-listing-reading-time-sort="8" data-listing-word-count-sort="1471" data-listing-title-sort="AI Activity 2: Tidy vs Untidy Data: When Rules Are Not Enough" data-listing-filename-sort="ai_2.qmd">
-<td>
-<a href="./ai/ai_2.html" class="title listing-title">AI Activity 2: Tidy vs Untidy Data: When Rules Are Not Enough</a>
-</td>
-<td>
-<span class="listing-subtitle">NYC Airbnb 2019 neighborhood summary dataset</span>
-</td>
-<td>
-<span class="listing-description">Tidy data rules are helpful, but real data work often requires choices. There can be more than one reasonable tidy format, depending on the question you want to answer.</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="QUklMjBhY3Rpdml0eQ==" data-listing-file-modified-sort="1773024119759" data-listing-reading-time-sort="9" data-listing-word-count-sort="1617" data-listing-title-sort="AI Activity 3: Dirty Data and Misleading Visualizations: When AI Plots Too Fast" data-listing-filename-sort="ai_3.qmd">
-<td>
-<a href="./ai/ai_3.html" class="title listing-title">AI Activity 3: Dirty Data and Misleading Visualizations: When AI Plots Too Fast</a>
-</td>
-<td>
-<span class="listing-subtitle">Messy retail orders and returns dataset</span>
-</td>
-<td>
-<span class="listing-description">A visualization can look polished and still be wrong. If data are dirty, a quick AI-generated plot may quietly mix categories, misread dates, double-count rows, or summarize…</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="QUklMjBhY3Rpdml0eQ==" data-listing-file-modified-sort="1774297299627" data-listing-reading-time-sort="10" data-listing-word-count-sort="1890" data-listing-title-sort="AI Activity 4: Probabilistic and Statistical Simulation" data-listing-filename-sort="ai_4.qmd">
-<td>
-<a href="./ai/ai_4.html" class="title listing-title">AI Activity 4: Probabilistic and Statistical Simulation</a>
-</td>
-<td>
-<span class="listing-subtitle">Validate, interpret, and extend a simulation study</span>
-</td>
-<td>
-<span class="listing-description">Simulation is useful only when the simulated process matches the actual question. In this activity, AI can help you learn, but your group must still define the trial…</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="QUklMjBhY3Rpdml0eQ==" data-listing-file-modified-sort="1773111486165" data-listing-reading-time-sort="9" data-listing-word-count-sort="1789" data-listing-title-sort="AI Activity 5: Correlation, Regression, and Overinterpretation: When Association Is Not Explanation" data-listing-filename-sort="ai_5.qmd">
-<td>
-<a href="./ai/ai_5.html" class="title listing-title">AI Activity 5: Correlation, Regression, and Overinterpretation: When Association Is Not Explanation</a>
-</td>
-<td>
-<span class="listing-subtitle">Student habits and exam outcomes</span>
-</td>
-<td>
-<span class="listing-description">Correlation and regression can summarize patterns, but those summaries are easy to overinterpret. AI may generate polished interpretations that sound persuasive while…</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-categories="QUklMjBhY3Rpdml0eQ==" data-listing-file-modified-sort="1773161022550" data-listing-reading-time-sort="9" data-listing-word-count-sort="1721" data-listing-title-sort="AI Activity 6: Classification, Trust, and Human Judgment" data-listing-filename-sort="ai_6.qmd">
-<td>
-<a href="./ai/ai_6.html" class="title listing-title">AI Activity 6: Classification, Trust, and Human Judgment</a>
-</td>
-<td>
-<span class="listing-subtitle">Subscription churn classification dataset</span>
-</td>
-<td>
-<span class="listing-description">A classification model can look impressive and still be untrustworthy. AI can help write code quickly, but AI is not good at deciding which variables should be used, which…</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1053,18 +1284,6 @@ Content
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./ai_example.html" class="pagination-link" aria-label="AI Project Example">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">AI Project Example</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./project.html" class="pagination-link" aria-label="Topics and Works">
-        <span class="nav-page-text">Topics and Works</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1073,7 +1292,7 @@ Content
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/ai/ai_4_old.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

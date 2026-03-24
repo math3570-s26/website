@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mini Project 1 – MATH/COSC 3570 - Spring 2026</title>
+<title>Mini Project 3 – MATH/COSC 3570 - Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,9 +107,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Mini Project 1 – MATH/COSC 3570 - Spring 2026">
-<meta property="og:description" content="Exploratory Data Storytelling via Data Visualization">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Mini Project 3 – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="A Python Prediction Challenge">
 <meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
 </head>
 
@@ -284,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Mini Project 1</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Mini Project 3</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -425,47 +454,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
+  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task">Your task</a></li>
+  </ul></li>
+  <li><a href="#ai-use-is-allowed" id="toc-ai-use-is-allowed" class="nav-link" data-scroll-target="#ai-use-is-allowed">AI use is allowed</a></li>
   <li><a href="#what-you-will-submit" id="toc-what-you-will-submit" class="nav-link" data-scroll-target="#what-you-will-submit">What you will submit</a></li>
   <li><a href="#what-you-will-present" id="toc-what-you-will-present" class="nav-link" data-scroll-target="#what-you-will-present">What you will present</a></li>
-  </ul></li>
   <li><a href="#team-info" id="toc-team-info" class="nav-link" data-scroll-target="#team-info">Team Info</a></li>
-  <li><a href="#step-1-choose-a-data-set" id="toc-step-1-choose-a-data-set" class="nav-link" data-scroll-target="#step-1-choose-a-data-set">Step 1: Choose a data set</a>
+  <li><a href="#project-rules" id="toc-project-rules" class="nav-link" data-scroll-target="#project-rules">Project rules</a></li>
+  <li><a href="#python-setup" id="toc-python-setup" class="nav-link" data-scroll-target="#python-setup">Python setup</a></li>
+  <li><a href="#step-1-choose-your-prediction-challenge" id="toc-step-1-choose-your-prediction-challenge" class="nav-link" data-scroll-target="#step-1-choose-your-prediction-challenge">Step 1: Choose your prediction challenge</a>
   <ul class="collapse">
-  <li><a href="#data-sets" id="toc-data-sets" class="nav-link" data-scroll-target="#data-sets">Data sets</a></li>
-  <li><a href="#quick-description-of-your-data-set" id="toc-quick-description-of-your-data-set" class="nav-link" data-scroll-target="#quick-description-of-your-data-set">Quick description of your data set</a></li>
+  <li><a href="#suggested-data-options" id="toc-suggested-data-options" class="nav-link" data-scroll-target="#suggested-data-options">Suggested data options</a></li>
+  <li><a href="#import-your-data" id="toc-import-your-data" class="nav-link" data-scroll-target="#import-your-data">Import your data</a></li>
+  <li><a href="#quick-description" id="toc-quick-description" class="nav-link" data-scroll-target="#quick-description">Quick description</a></li>
   </ul></li>
-  <li><a href="#step-2-mini-proposal" id="toc-step-2-mini-proposal" class="nav-link" data-scroll-target="#step-2-mini-proposal">Step 2: Mini proposal</a></li>
-  <li><a href="#step-3-quick-data-check-and-light-cleaning" id="toc-step-3-quick-data-check-and-light-cleaning" class="nav-link" data-scroll-target="#step-3-quick-data-check-and-light-cleaning">Step 3: Quick data check and light cleaning</a>
+  <li><a href="#step-2-prepare-your-modeling-data" id="toc-step-2-prepare-your-modeling-data" class="nav-link" data-scroll-target="#step-2-prepare-your-modeling-data">Step 2: Prepare your modeling data</a>
   <ul class="collapse">
-  <li><a href="#first-look" id="toc-first-look" class="nav-link" data-scroll-target="#first-look">3.1 First look</a></li>
-  <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values">3.2 Missing values</a></li>
-  <li><a href="#create-a-working-clean-table" id="toc-create-a-working-clean-table" class="nav-link" data-scroll-target="#create-a-working-clean-table">3.3 Create a working clean table</a></li>
+  <li><a href="#describe-your-modeling-data" id="toc-describe-your-modeling-data" class="nav-link" data-scroll-target="#describe-your-modeling-data">Describe your modeling data</a></li>
   </ul></li>
-  <li><a href="#step-4-exploration" id="toc-step-4-exploration" class="nav-link" data-scroll-target="#step-4-exploration">Step 4: Exploration</a>
+  <li><a href="#step-3-check-the-target-and-predictors" id="toc-step-3-check-the-target-and-predictors" class="nav-link" data-scroll-target="#step-3-check-the-target-and-predictors">Step 3: Check the target and predictors</a>
   <ul class="collapse">
-  <li><a href="#exploratory-plot-1" id="toc-exploratory-plot-1" class="nav-link" data-scroll-target="#exploratory-plot-1">Exploratory plot 1</a></li>
-  <li><a href="#exploratory-plot-2" id="toc-exploratory-plot-2" class="nav-link" data-scroll-target="#exploratory-plot-2">Exploratory plot 2</a></li>
-  <li><a href="#exploratory-plot-3" id="toc-exploratory-plot-3" class="nav-link" data-scroll-target="#exploratory-plot-3">Exploratory plot 3</a></li>
-  <li><a href="#exploratory-plot-4" id="toc-exploratory-plot-4" class="nav-link" data-scroll-target="#exploratory-plot-4">Exploratory plot 4</a></li>
-  <li><a href="#decision" id="toc-decision" class="nav-link" data-scroll-target="#decision">Decision</a></li>
+  <li><a href="#quick-check" id="toc-quick-check" class="nav-link" data-scroll-target="#quick-check">Quick check</a></li>
   </ul></li>
-  <li><a href="#step-5-build-your-mini-data-story" id="toc-step-5-build-your-mini-data-story" class="nav-link" data-scroll-target="#step-5-build-your-mini-data-story">Step 5: Build your mini data story</a>
+  <li><a href="#step-4-create-training-and-test-sets" id="toc-step-4-create-training-and-test-sets" class="nav-link" data-scroll-target="#step-4-create-training-and-test-sets">Step 4: Create training and test sets</a>
   <ul class="collapse">
-  <li><a href="#story-opening" id="toc-story-opening" class="nav-link" data-scroll-target="#story-opening">5.1 Story opening</a></li>
-  <li><a href="#final-visual-1" id="toc-final-visual-1" class="nav-link" data-scroll-target="#final-visual-1">5.2 Final visual 1</a></li>
-  <li><a href="#final-visual-2" id="toc-final-visual-2" class="nav-link" data-scroll-target="#final-visual-2">5.4 Final visual 2</a></li>
-  <li><a href="#final-visual-3" id="toc-final-visual-3" class="nav-link" data-scroll-target="#final-visual-3">5.5 Final visual 3</a></li>
-  <li><a href="#closing" id="toc-closing" class="nav-link" data-scroll-target="#closing">5.6 Closing</a></li>
+  <li><a href="#why-do-we-split-the-data" id="toc-why-do-we-split-the-data" class="nav-link" data-scroll-target="#why-do-we-split-the-data">Why do we split the data?</a></li>
+  <li><a href="#split-summary" id="toc-split-summary" class="nav-link" data-scroll-target="#split-summary">Split summary</a></li>
   </ul></li>
-  <li><a href="#step-6-visual-quality-checklist" id="toc-step-6-visual-quality-checklist" class="nav-link" data-scroll-target="#step-6-visual-quality-checklist">Step 6: Visual quality checklist</a></li>
-  <li><a href="#step-7-team-reflection" id="toc-step-7-team-reflection" class="nav-link" data-scroll-target="#step-7-team-reflection">Step 7: Team reflection</a></li>
-  <li><a href="#step-7-presentation-plan" id="toc-step-7-presentation-plan" class="nav-link" data-scroll-target="#step-7-presentation-plan">Step 7: Presentation plan</a>
+  <li><a href="#step-5-fit-model-1" id="toc-step-5-fit-model-1" class="nav-link" data-scroll-target="#step-5-fit-model-1">Step 5: Fit Model 1</a>
   <ul class="collapse">
-  <li><a href="#presentation-order" id="toc-presentation-order" class="nav-link" data-scroll-target="#presentation-order">Presentation order</a></li>
+  <li><a href="#recommended-model-1" id="toc-recommended-model-1" class="nav-link" data-scroll-target="#recommended-model-1">Recommended Model 1</a></li>
+  <li><a href="#model-1-formula-in-words" id="toc-model-1-formula-in-words" class="nav-link" data-scroll-target="#model-1-formula-in-words">Model 1 formula in words</a></li>
+  <li><a href="#what-is-model-1-doing" id="toc-what-is-model-1-doing" class="nav-link" data-scroll-target="#what-is-model-1-doing">What is Model 1 doing?</a></li>
   </ul></li>
+  <li><a href="#step-6-fit-model-2" id="toc-step-6-fit-model-2" class="nav-link" data-scroll-target="#step-6-fit-model-2">Step 6: Fit Model 2</a>
+  <ul class="collapse">
+  <li><a href="#recommended-model-2" id="toc-recommended-model-2" class="nav-link" data-scroll-target="#recommended-model-2">Recommended Model 2</a></li>
+  <li><a href="#why-did-you-choose-this-second-model" id="toc-why-did-you-choose-this-second-model" class="nav-link" data-scroll-target="#why-did-you-choose-this-second-model">Why did you choose this second model?</a></li>
+  <li><a href="#what-is-model-2-doing" id="toc-what-is-model-2-doing" class="nav-link" data-scroll-target="#what-is-model-2-doing">What is Model 2 doing?</a></li>
+  </ul></li>
+  <li><a href="#step-7-make-predictions-and-evaluate-both-models" id="toc-step-7-make-predictions-and-evaluate-both-models" class="nav-link" data-scroll-target="#step-7-make-predictions-and-evaluate-both-models">Step 7: Make predictions and evaluate both models</a>
+  <ul class="collapse">
+  <li><a href="#if-your-project-is-regression" id="toc-if-your-project-is-regression" class="nav-link" data-scroll-target="#if-your-project-is-regression">If your project is regression</a></li>
+  <li><a href="#if-your-project-is-classification" id="toc-if-your-project-is-classification" class="nav-link" data-scroll-target="#if-your-project-is-classification">If your project is classification</a></li>
+  <li><a href="#results-summary" id="toc-results-summary" class="nav-link" data-scroll-target="#results-summary">Results summary</a></li>
+  <li><a href="#which-model-did-better-on-the-test-set" id="toc-which-model-did-better-on-the-test-set" class="nav-link" data-scroll-target="#which-model-did-better-on-the-test-set">Which model did better on the test set?</a></li>
+  <li><a href="#was-the-difference-large-or-small" id="toc-was-the-difference-large-or-small" class="nav-link" data-scroll-target="#was-the-difference-large-or-small">Was the difference large or small?</a></li>
+  </ul></li>
+  <li><a href="#step-8-show-one-helpful-output" id="toc-step-8-show-one-helpful-output" class="nav-link" data-scroll-target="#step-8-show-one-helpful-output">Step 8: Show one helpful output</a></li>
+  <li><a href="#step-9-explain-the-results-honestly" id="toc-step-9-explain-the-results-honestly" class="nav-link" data-scroll-target="#step-9-explain-the-results-honestly">Step 9: Explain the results honestly</a></li>
+  <li><a href="#step-10-team-reflection" id="toc-step-10-team-reflection" class="nav-link" data-scroll-target="#step-10-team-reflection">Step 10: Team reflection</a></li>
+  <li><a href="#step-11-presentation-plan" id="toc-step-11-presentation-plan" class="nav-link" data-scroll-target="#step-11-presentation-plan">Step 11: Presentation plan</a></li>
   <li><a href="#grading-guide" id="toc-grading-guide" class="nav-link" data-scroll-target="#grading-guide">Grading guide</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_3_release_renderable.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -473,8 +515,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mini Project 1</h1>
-<p class="subtitle lead">Exploratory Data Storytelling via Data Visualization</p>
+<h1 class="title">Mini Project 3</h1>
+<p class="subtitle lead">A Python Prediction Challenge</p>
   <div class="quarto-categories">
     <div class="quarto-category">Mini Project</div>
   </div>
@@ -500,29 +542,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>In this mini project, your team will <strong>explore one data set and tell a short data story with visuals</strong>.</p>
+<p>In <strong>Mini Project 1</strong>, your team explored data in <strong>R</strong> and told a short story with visuals. In <strong>Mini Project 2</strong>, your team used <strong>R</strong> to clean, reshape, and organize data into a trustworthy analysis-ready table.</p>
+<p>In <strong>Mini Project 3</strong>, your team will switch to <strong>Python</strong> and take the next step: <strong>build a simple prediction model and evaluate how well it works on new data</strong>.</p>
+<p>Think of your team as a small beginner data science studio. A client has asked for a quick first prediction tool. Your job is <strong>not</strong> to build the most advanced model. Your job is to build a <strong>clear, correct, honest, and reproducible</strong> workflow.</p>
+<p>This project should stay at an <strong>introductory data science</strong> level. Keep it simple.</p>
+<section id="your-task" class="level3">
+<h3 class="anchored" data-anchor-id="your-task">Your task</h3>
+<p>Complete this Quarto file by doing the following:</p>
 <ol type="1">
-<li>Asking a clear question for a real audience</li>
-<li>Exploring with a few plots</li>
-<li>Choosing the best evidence</li>
-<li>Writing a short, readable story</li>
+<li>Choose one prediction question</li>
+<li>Import data into Python</li>
+<li>Prepare a small modeling data set</li>
+<li>Split the data into a training set and a test set</li>
+<li>Fit <strong>2 simple supervised learning models</strong></li>
+<li>Compare model performance on the <strong>test set</strong></li>
+<li>Explain what the results mean, and what they do <strong>not</strong> mean</li>
 </ol>
-<p>This is an exploratory project. Use <strong>descriptive analysis only</strong>. Do NOT run hypothesis tests and do NOT fit complex models.</p>
-<section id="what-you-will-submit" class="level3">
-<h3 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h3>
-<p>Show, in your Posit Cloud,</p>
+<p>This is <strong>not</strong> a competition to get the highest possible accuracy. It is a project about learning the prediction workflow.</p>
+</section>
+</section>
+<section id="ai-use-is-allowed" class="level2">
+<h2 class="anchored" data-anchor-id="ai-use-is-allowed">AI use is allowed</h2>
+<p>You are allowed to use AI tools to help with this project. For example, AI may help you:</p>
+<ol type="1">
+<li>Write or debug Python code</li>
+<li>Explain error messages</li>
+<li>Suggest ways to clean or recode variables</li>
+<li>Remind you how to calculate evaluation metrics</li>
+<li>Help revise your writing for clarity</li>
+</ol>
+<p>However, your team is still responsible for all final work. You must:</p>
+<ol type="1">
+<li>Check that the code actually runs</li>
+<li>Check that the model setup is appropriate</li>
+<li>Check that the interpretation is statistically correct</li>
+<li>Follow the course AI policy and clearly document your AI use when required</li>
+</ol>
+<p>Do <strong>not</strong> copy AI output into your report without checking it carefully.</p>
+</section>
+<section id="what-you-will-submit" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-submit">What you will submit</h2>
+<p>Show, in your Posit Cloud project or other approved course environment:</p>
 <ol type="1">
 <li>The <strong>rendered HTML report</strong></li>
-<li>The <strong>complete version of this source qmd file</strong></li>
-<li><strong>Any data file you used</strong>, only if it is not a built in package data set</li>
+<li>The <strong>complete source <code>.qmd</code> file</strong></li>
+<li><strong>Any data file you used</strong>, if it is not built into a Python package</li>
+<li>Any cleaned data file you created for this project, if applicable</li>
 </ol>
 </section>
-<section id="what-you-will-present" class="level3">
-<h3 class="anchored" data-anchor-id="what-you-will-present">What you will present</h3>
-<p>A <strong>10 minute</strong> team presentation that summarizes your story and highlights your 3 final visuals.</p>
-</section>
+<section id="what-you-will-present" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-present">What you will present</h2>
+<p>A <strong>10 minute</strong> team presentation that explains:</p>
+<ol type="1">
+<li>Your prediction question</li>
+<li>Your data and variables</li>
+<li>Your train and test split</li>
+<li>The 2 models you compared</li>
+<li>Which model performed better on the test set</li>
+<li>What your team learned, including limitations</li>
+</ol>
 </section>
 <section id="team-info" class="level2">
 <h2 class="anchored" data-anchor-id="team-info">Team Info</h2>
@@ -531,15 +614,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Team members and roles for this project:</p>
 <ol type="1">
 <li><strong>Project lead</strong> (keeps time, coordinates tasks): <span class="blue">Your Member Name(s)</span></li>
-<li><strong>Data wrangler</strong> (loads data, checks quality, makes a clean table): <span class="blue">Your Member Name(s)</span></li>
-<li><strong>Visualization designer</strong> (builds plots, improves readability): <span class="blue">Your Member Name(s)</span></li>
-<li><strong>Storyteller</strong> (writes narrative, connects visuals to claims): <span class="blue">Your Member Name(s)</span></li>
+<li><strong>Python workflow lead</strong> (imports data, prepares code): <span class="blue">Your Member Name(s)</span></li>
+<li><strong>Modeling lead</strong> (fits models, organizes outputs): <span class="blue">Your Member Name(s)</span></li>
+<li><strong>Evaluation and presentation lead</strong> (compares models, prepares slides): <span class="blue">Your Member Name(s)</span></li>
 </ol></li>
 </ul>
 </section>
-<section id="step-1-choose-a-data-set" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-choose-a-data-set">Step 1: Choose a data set</h2>
-<p>Choose one option below. Two teams may use the same data set.</p>
+<section id="project-rules" class="level2">
+<h2 class="anchored" data-anchor-id="project-rules">Project rules</h2>
+<ol type="1">
+<li>Choose <strong>one</strong> prediction question</li>
+<li>Use <strong>one</strong> data set</li>
+<li>Use <strong>no more than 6 predictors</strong></li>
+<li>If you do classification, use a <strong>binary</strong> target variable</li>
+<li>Fit <strong>exactly 2 simple models</strong></li>
+<li>Use <strong>one</strong> train and test split</li>
+<li>Use <strong>1 or 2 evaluation metrics</strong></li>
+<li>Explain results in plain language</li>
+<li>Do <strong>not</strong> claim causation</li>
+<li>Do <strong>not</strong> overstate what your model can do</li>
+<li>Do <strong>not</strong> use advanced tuning, random forests, boosting, deep learning, or many competing models</li>
+</ol>
+</section>
+<section id="python-setup" class="level2">
+<h2 class="anchored" data-anchor-id="python-setup">Python setup</h2>
+<p>The code below is shown as a <strong>starter template</strong> for the project handout. In this posted version, the document is rendered as plain markdown so the page can compile even if Python is not installed locally. When your team starts working on the project, switch to a Python-enabled Quarto document in your course environment.</p>
+<p>Use the chunk below to load the packages you need.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression, LogisticRegression</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeRegressor, DecisionTreeClassifier, plot_tree</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, mean_absolute_error, r2_score, accuracy_score, confusion_matrix, ConfusionMatrixDisplay</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="step-1-choose-your-prediction-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-choose-your-prediction-challenge">Step 1: Choose your prediction challenge</h2>
+<p>Choose <strong>one</strong> data set and create <strong>one</strong> clear prediction question.</p>
+<section id="suggested-data-options" class="level3">
+<h3 class="anchored" data-anchor-id="suggested-data-options">Suggested data options</h3>
+<ol type="1">
+<li><p><code>titanic</code> from <code>seaborn</code><br>
+Example question: Can we predict whether a passenger survived?</p></li>
+<li><p><code>mpg</code> from <code>seaborn</code><br>
+Example question: Can we predict a car’s <code>mpg</code>?</p></li>
+<li><p><code>penguins</code> from <code>seaborn</code><br>
+Example question: Can we predict whether a penguin is Gentoo or not?</p></li>
+<li><p>Your cleaned data from <strong>Mini Project 2</strong>, exported as a <code>.csv</code> file and imported into Python</p></li>
+<li><p>Your own data set, with instructor approval</p></li>
+</ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -550,247 +677,321 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div style="font-size: 1.1em;">
-<p>If another team uses the same data set, it would be much better if your story is meaningfully different. Your team may differ on</p>
-<ol type="1">
-<li>Audience</li>
-<li>Focus variables or outcome</li>
-<li>Comparison frame (group comparison, relationship, ranking, time trend, and so on)</li>
-</ol>
+<p>Choose a data set and target that are manageable for a short team project. Your goal is not to build the most accurate model possible. Your goal is to demonstrate a clear prediction workflow that you understand.</p>
 </div>
 </div>
-</div>
-<section id="data-sets" class="level3">
-<h3 class="anchored" data-anchor-id="data-sets">Data sets</h3>
-<ul>
-<li><p><code>penguins</code> data set from R package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a></p></li>
-<li><p><code>flights</code> data set from R package <a href="https://nycflights13.tidyverse.org/index.html"><code>nycflights13</code></a></p></li>
-<li><p><code>gapminder</code> data set from R package <a href="https://jennybc.github.io/gapminder/"><code>gapminder</code></a></p></li>
-<li><p><code>diamonds</code> data set from R package <a href="https://ggplot2.tidyverse.org/reference/diamonds.html"><code>ggplot2</code></a></p></li>
-<li><p><em>Your own data set!</em></p></li>
-</ul>
-<p>Using the code chunk <code>import-data</code> below to import your data, and call the data set <code>data_raw</code>.</p>
+</section>
+<section id="import-your-data" class="level3">
+<h3 class="anchored" data-anchor-id="import-your-data">Import your data</h3>
+<p>Use the chunk below to import your data and call the main table <code>data_raw</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Import your data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data_raw <span class="ot">&lt;-</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 1</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data_raw = sns.load_dataset("titanic")</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 2</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># data_raw = sns.load_dataset("mpg")</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 3</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># data_raw = sns.load_dataset("penguins")</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 4</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># data_raw = pd.read_csv("your_clean_data.csv")</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="quick-description-of-your-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="quick-description-of-your-data-set">Quick description of your data set</h3>
-<p>Answer the following questions.</p>
+<section id="quick-description" class="level3">
+<h3 class="anchored" data-anchor-id="quick-description">Quick description</h3>
 <ol type="1">
-<li>What does one row represent</li>
+<li>What does one row represent?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 <ol start="2" type="1">
-<li>What are columns you think might matter for your story</li>
+<li>What is your prediction question?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 <ol start="3" type="1">
-<li>Who might care about this data</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-</section>
-<section id="step-2-mini-proposal" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-mini-proposal">Step 2: Mini proposal</h2>
-<p>Write short answers. Keep it specific.</p>
-<ol type="1">
-<li>Audience: Who is your audience</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="2" type="1">
-<li>Investigation question: One sentence</li>
-</ol>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-<ol start="3" type="1">
-<li>Your current guess: One sentence</li>
+<li>What is your target variable?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 <ol start="4" type="1">
-<li>Focus variables: List some variables you plan to use</li>
+<li>Is your task <strong>regression</strong> or <strong>classification</strong>?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 <ol start="5" type="1">
-<li>Comparison frame: Choose one or two (group comparison, relationship, ranking, time trend, etc.)</li>
+<li>Who might care about this prediction question?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 </section>
-<section id="step-3-quick-data-check-and-light-cleaning" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-quick-data-check-and-light-cleaning">Step 3: Quick data check and light cleaning</h2>
-<p>Your goal is to understand what you have. Keep cleaning minimal.</p>
-<section id="first-look" class="level3">
-<h3 class="anchored" data-anchor-id="first-look">3.1 First look</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Check your data (you can use your own way to check the data)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_raw)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data_raw)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
-<section id="missing-values" class="level3">
-<h3 class="anchored" data-anchor-id="missing-values">3.2 Missing values</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>missing_counts <span class="ot">=</span> data_raw <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(.x)))) <span class="sc">|&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">"variable"</span>, <span class="at">values_to =</span> <span class="st">"n_missing"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n_missing))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>missing_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>In 2 to 4 sentences, describe what missing values you noticed and how you plan to handle them.</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="create-a-working-clean-table" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-working-clean-table">3.3 Create a working clean table</h3>
-<p>Create a new object <code>data</code> with:</p>
+<section id="step-2-prepare-your-modeling-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-prepare-your-modeling-data">Step 2: Prepare your modeling data</h2>
+<p>Create a table called <code>data</code> that is ready for modeling.</p>
+<p>Keep this preparation focused. You may:</p>
 <ol type="1">
-<li><strong>Clean column names if needed</strong></li>
-<li><strong>Only the columns you might use</strong></li>
-<li><strong>Any simple recodes you need</strong></li>
+<li>Select a small set of useful variables</li>
+<li>Filter rows</li>
+<li>Handle missing values</li>
+<li>Recode a variable</li>
+<li>Create a small number of simple derived variables</li>
+<li>Convert categorical variables into dummy variables if needed</li>
 </ol>
-<p>Use the code chunk <code>clean</code> below to clean your <code>data_raw</code>, and save the new cleaned data called <code>data</code> that is ready for analysis.</p>
+<p>Do <strong>not</strong> turn this into another major wrangling project.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Clean your data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare your modeling data here</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Example ideas:</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># data = data_raw[[...]].dropna().copy()</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># data["high_mpg"] = (data["mpg"] &gt;= data["mpg"].median()).astype(int)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># data = pd.get_dummies(data, drop_first=True)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Describe what you changed and why, in plain language:</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
+<section id="describe-your-modeling-data" class="level3">
+<h3 class="anchored" data-anchor-id="describe-your-modeling-data">Describe your modeling data</h3>
 <ol type="1">
-<li></li>
-<li></li>
-<li></li>
-</ol>
-</section>
-</section>
-<section id="step-4-exploration" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-exploration">Step 4: Exploration</h2>
-<p>Create 4 quick exploratory plots. These are NOT final. They help you decide what story to tell.</p>
-<p>Suggestions:</p>
-<ol type="1">
-<li>One <strong>distribution plot</strong></li>
-<li>One <strong>bar plot or count plot</strong></li>
-<li>One <strong>relationship plot (two numeric variables)</strong></li>
-<li>One plot that <strong>compares groups</strong></li>
-</ol>
-<section id="exploratory-plot-1" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-1">Exploratory plot 1</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(data, aes(x = ...)) + geom_...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>What you learned (1 to 2 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="exploratory-plot-2" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-2">Exploratory plot 2</h3>
-<p>What you learned (1 to 2 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="exploratory-plot-3" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-3">Exploratory plot 3</h3>
-<p>What you learned (1 to 2 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="exploratory-plot-4" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-plot-4">Exploratory plot 4</h3>
-<p>What you learned (2 to 3 sentences):</p>
-<p><span class="blue"><strong>Answer:</strong></span></p>
-</section>
-<section id="decision" class="level3">
-<h3 class="anchored" data-anchor-id="decision">Decision</h3>
-<ol type="1">
-<li>What is the most interesting pattern you found</li>
+<li>How many rows are in <code>data</code>?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 <ol start="2" type="1">
-<li>Revised investigation question (one sentence)</li>
+<li>What is the target variable?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 <ol start="3" type="1">
-<li>Which 3 visuals will become your final visuals, and why</li>
+<li>Which predictors did you keep, and why?</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="4" type="1">
+<li>Did you remove any rows or variables? If yes, why?</li>
 </ol>
 <p><span class="blue"><strong>Answer:</strong></span></p>
 </section>
 </section>
-<section id="step-5-build-your-mini-data-story" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-build-your-mini-data-story">Step 5: Build your mini data story</h2>
-<p>Your final report must include:</p>
-<ol type="1">
-<li>A short opening paragraph that <strong>sets context and states the question</strong> (4 to 6 sentences)</li>
-<li>Exactly 3 final visuals, each with a short interpretation paragraph (3 to 5 sentences) <!-- 3. One small summary table (5 to 15 rows, or a simple grouped summary)  --></li>
-<li>A short closing paragraph with takeaways, limitations, and next steps (4 to 5 sentences)</li>
-</ol>
-<p>Keep the whole report short. Aim for about 1 to 2 pages when rendered.</p>
-<section id="story-opening" class="level3">
-<h3 class="anchored" data-anchor-id="story-opening">5.1 Story opening</h3>
-<p><span class="blue">Write your opening paragraph in this section.</span> Include</p>
-<ol type="1">
-<li><strong>Context:</strong> What is the setting in plain language</li>
-<li><strong>Audience:</strong> Who should care about this story</li>
-<li><strong>Investigation question:</strong> What are you trying to learn</li>
-<li><strong>Why it matters:</strong> What decision or understanding this could support</li>
-<li><strong>Data description:</strong> Name the data set and explain what one row represents</li>
-<li><strong>Preview:</strong> Briefly state what your three visuals will show</li>
-</ol>
-</section>
-<section id="final-visual-1" class="level3">
-<h3 class="anchored" data-anchor-id="final-visual-1">5.2 Final visual 1</h3>
+<section id="step-3-check-the-target-and-predictors" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-check-the-target-and-predictors">Step 3: Check the target and predictors</h2>
+<p>Before modeling, inspect the variables you plan to use.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Suggestions:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data.head()</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># data.info()</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># data.describe(include="all")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><span class="blue">Interpretation (3 to 4 sentences)</span>. Include:</p>
+<section id="quick-check" class="level3">
+<h3 class="anchored" data-anchor-id="quick-check">Quick check</h3>
 <ol type="1">
-<li><strong>What is shown:</strong> What is on the x axis and y axis, and what groups or colors mean</li>
-<li><strong>Key pattern:</strong> Describe the main visible pattern using directional language and comparisons</li>
-<li><strong>Evidence:</strong> Mention at least one concrete detail (an approximate value, a ranking, or a noticeable gap)</li>
-<li><strong>Connection:</strong> Explain how this plot helps answer your investigation question</li>
-<li><strong>Caveat:</strong> State one caution, such as missing values, outliers, or “this is association, not causation”</li>
+<li>If regression, what is the range and general distribution of the target?</li>
+<li>If classification, what are the class counts?</li>
+<li>Did you notice any issues, such as missing values, unusual values, or imbalanced classes?</li>
 </ol>
-<p><strong>[Tip:]</strong> <strong>Avoid describing every point</strong>. Focus on what you want your audience to notice.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
 </section>
-<section id="final-visual-2" class="level3">
-<h3 class="anchored" data-anchor-id="final-visual-2">5.4 Final visual 2</h3>
+</section>
+<section id="step-4-create-training-and-test-sets" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-create-training-and-test-sets">Step 4: Create training and test sets</h2>
+<p>Use <strong>one</strong> reproducible train and test split.</p>
+<p>A common choice is about <strong>80 percent</strong> for training and <strong>20 percent</strong> for testing.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your predictors and target</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Example:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># X = data.drop(columns=["target_name"])</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># y = data["target_name"]</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> ...</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ...</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># For classification, you may use stratify=y</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># For regression, use stratify=None</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    X,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    y,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.20</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">3570</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    stratify<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><span class="blue">Interpretation (3 to 4 sentences)</span>: Include the same suggested points as visual 1.</p>
+<section id="why-do-we-split-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="why-do-we-split-the-data">Why do we split the data?</h3>
+<p>In 2 to 4 sentences, explain why the test set matters.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
 </section>
-<section id="final-visual-3" class="level3">
-<h3 class="anchored" data-anchor-id="final-visual-3">5.5 Final visual 3</h3>
+<section id="split-summary" class="level3">
+<h3 class="anchored" data-anchor-id="split-summary">Split summary</h3>
+<ol type="1">
+<li>Number of rows in training set: <span class="blue"><strong>Answer:</strong></span></li>
+<li>Number of rows in test set: <span class="blue"><strong>Answer:</strong></span></li>
+</ol>
+<p>If classification, report the class counts in both sets.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-5-fit-model-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-fit-model-1">Step 5: Fit Model 1</h2>
+<section id="recommended-model-1" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-model-1">Recommended Model 1</h3>
+<ol type="1">
+<li>If regression, use <strong>linear regression</strong></li>
+<li>If classification, use <strong>logistic regression</strong></li>
+</ol>
+<p>If you want a different Model 1, get instructor approval.</p>
+</section>
+<section id="model-1-formula-in-words" class="level3">
+<h3 class="anchored" data-anchor-id="model-1-formula-in-words">Model 1 formula in words</h3>
+<p>Describe your model in words.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a clean, readable plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit Model 1 here</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Examples:</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># model_1 = LinearRegression()</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># model_1 = LogisticRegression(max_iter=1000)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>model_1 <span class="op">=</span> ...</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>model_1.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><span class="blue">Interpretation (3 to 4 sentences)</span>: Include the same suggested points as visual 1.</p>
 </section>
-<section id="closing" class="level3">
-<h3 class="anchored" data-anchor-id="closing">5.6 Closing</h3>
-<p><span class="blue">Write your closing paragraph.</span> Include:</p>
+<section id="what-is-model-1-doing" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-model-1-doing">What is Model 1 doing?</h3>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-6-fit-model-2" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-fit-model-2">Step 6: Fit Model 2</h2>
+<section id="recommended-model-2" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-model-2">Recommended Model 2</h3>
 <ol type="1">
-<li><strong>Your answer:</strong> State your best answer to the investigation question (one sentence)</li>
-<li><strong>Support:</strong> Point to your strongest visual evidence (one to two sentences)</li>
-<li><strong>Limitation:</strong> Name one limitation of the data or your approach (one sentence)</li>
-<li><strong>Next step:</strong> State one concrete next step you would take with more time (one sentence)</li>
-<li><strong>So what:</strong> Explain what this means for your audience (one sentence)</li>
+<li>If regression, use a <strong>decision tree regressor</strong></li>
+<li>If classification, use a <strong>decision tree classifier</strong></li>
 </ol>
-<p><strong>[Tip:]</strong> Keep claims <strong>descriptive and reasonable</strong>. Do not overstate certainty.</p>
+<p>To keep the model simple and interpretable, use a <strong>small tree</strong>. For example, you may set <code>max_depth = 3</code> or <code>max_depth = 4</code>.</p>
+<p>If you want a different Model 2, get instructor approval.</p>
+</section>
+<section id="why-did-you-choose-this-second-model" class="level3">
+<h3 class="anchored" data-anchor-id="why-did-you-choose-this-second-model">Why did you choose this second model?</h3>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit Model 2 here</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Examples:</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># model_2 = DecisionTreeRegressor(max_depth=3, random_state=3570)</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># model_2 = DecisionTreeClassifier(max_depth=3, random_state=3570)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>model_2 <span class="op">=</span> ...</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>model_2.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="what-is-model-2-doing" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-model-2-doing">What is Model 2 doing?</h3>
+<p><span class="blue"><strong>Answer:</strong></span></p>
 </section>
 </section>
-<section id="step-6-visual-quality-checklist" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-visual-quality-checklist">Step 6: Visual quality checklist</h2>
-<p>For each final plot, confirm:</p>
+<section id="step-7-make-predictions-and-evaluate-both-models" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-make-predictions-and-evaluate-both-models">Step 7: Make predictions and evaluate both models</h2>
+<p>Use the <strong>test set only</strong> for evaluation.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Predictions</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pred_1 <span class="op">=</span> model_1.predict(X_test)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>pred_2 <span class="op">=</span> model_2.predict(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="if-your-project-is-regression" class="level3">
+<h3 class="anchored" data-anchor-id="if-your-project-is-regression">If your project is regression</h3>
+<p>Choose <strong>1 or 2</strong> of the following:</p>
 <ol type="1">
-<li>Title and axis labels are descriptive</li>
-<li>Units are clear when relevant</li>
-<li>Text is readable at presentation size</li>
-<li>Legend is readable, or direct labels are used</li>
-<li>If you filtered rows, you said so in the text</li>
+<li>RMSE</li>
+<li>MAE</li>
+<li><span class="math inline">\(R^2\)</span></li>
 </ol>
-<p>Improve your plots accordingly.</p>
+<p>You should also include <strong>one simple plot</strong>, such as predicted versus actual values.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example regression metrics</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># rmse_1 = mean_squared_error(y_test, pred_1, squared=False)</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># mae_1 = mean_absolute_error(y_test, pred_1)</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># r2_1 = r2_score(y_test, pred_1)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="step-7-team-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-team-reflection">Step 7: Team reflection</h2>
-<p>Each team member writes 2 to 4 sentences:</p>
+<section id="if-your-project-is-classification" class="level3">
+<h3 class="anchored" data-anchor-id="if-your-project-is-classification">If your project is classification</h3>
+<p>Choose <strong>1 or 2</strong> of the following:</p>
+<ol type="1">
+<li>Accuracy</li>
+<li>Misclassification rate</li>
+<li>Sensitivity</li>
+<li>Specificity</li>
+</ol>
+<p>You should also include a <strong>confusion matrix</strong>.</p>
+<p>For logistic regression, if <code>predict()</code> does not directly give class labels in the way you expect, convert predicted probabilities into class labels using a threshold such as 0.5.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example classification metrics</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># acc_1 = accuracy_score(y_test, pred_1)</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># cm_1 = confusion_matrix(y_test, pred_1)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluate Model 1 and Model 2 here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="results-summary" class="level3">
+<h3 class="anchored" data-anchor-id="results-summary">Results summary</h3>
+<section id="model-1" class="level4">
+<h4 class="anchored" data-anchor-id="model-1">Model 1</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="model-2" class="level4">
+<h4 class="anchored" data-anchor-id="model-2">Model 2</h4>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="which-model-did-better-on-the-test-set" class="level3">
+<h3 class="anchored" data-anchor-id="which-model-did-better-on-the-test-set">Which model did better on the test set?</h3>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="was-the-difference-large-or-small" class="level3">
+<h3 class="anchored" data-anchor-id="was-the-difference-large-or-small">Was the difference large or small?</h3>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+</section>
+<section id="step-8-show-one-helpful-output" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-show-one-helpful-output">Step 8: Show one helpful output</h2>
+<p>Create <strong>one</strong> output that helps the audience understand the results.</p>
+<p>Examples:</p>
+<ol type="1">
+<li>A confusion matrix</li>
+<li>A predicted versus actual plot</li>
+<li>A small comparison table of metrics</li>
+<li>A simple plot of prediction errors</li>
+<li>A shallow decision tree plot</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add one helpful output here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Explain why this output helps the audience understand the results.</p>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="step-9-explain-the-results-honestly" class="level2">
+<h2 class="anchored" data-anchor-id="step-9-explain-the-results-honestly">Step 9: Explain the results honestly</h2>
+<p>Answer the following questions.</p>
+<ol type="1">
+<li>What did your team learn from this prediction task?</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="2" type="1">
+<li>What can your model do reasonably well?</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="3" type="1">
+<li>Where might your model fail or be less reliable?</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="4" type="1">
+<li>What should we be careful <strong>not</strong> to claim from this project?</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+<ol start="5" type="1">
+<li>If you had more time, what is one reasonable next step?</li>
+</ol>
+<p><span class="blue"><strong>Answer:</strong></span></p>
+</section>
+<section id="step-10-team-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="step-10-team-reflection">Step 10: Team reflection</h2>
+<p>Each team member writes <strong>2 to 4 sentences</strong>:</p>
 <ol type="1">
 <li>What you contributed</li>
-<li>One thing you learned</li>
+<li>One thing you learned about supervised learning in Python</li>
 <li>One thing you would improve next time</li>
 </ol>
 <section id="member-1-your-name" class="level4">
@@ -810,36 +1011,27 @@ Warning
 <p><span class="blue"><strong>Answer:</strong></span></p>
 </section>
 </section>
-<section id="step-7-presentation-plan" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-presentation-plan">Step 7: Presentation plan</h2>
-<p>Plan a 10 minute talk with the suggested structure:</p>
+<section id="step-11-presentation-plan" class="level2">
+<h2 class="anchored" data-anchor-id="step-11-presentation-plan">Step 11: Presentation plan</h2>
+<p>Plan a <strong>10 minute</strong> talk with the following structure:</p>
 <ol type="1">
-<li>About 1 minute: context, audience, question</li>
-<li>About 2 minutes: data set, key variables, and any cleaning choices</li>
-<li>About 5 minutes: your 3 visuals and the story they tell</li>
-<li>About 2 minutes: takeaway, limitation, next step</li>
+<li>About 1 minute: data set and prediction question</li>
+<li>About 2 minutes: data preparation and chosen variables</li>
+<li>About 2 minutes: train and test split</li>
+<li>About 2 minutes: Model 1 and Model 2</li>
+<li>About 2 minutes: test set results and comparison</li>
+<li>About 1 minute: takeaway and limitations</li>
 </ol>
-<section id="presentation-order" class="level3">
-<h3 class="anchored" data-anchor-id="presentation-order">Presentation order</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Team 1"</span>, <span class="st">"Superb Statisticians"</span>, <span class="st">"The Data Scientists"</span>, <span class="st">"Stat Padders"</span>, <span class="st">"Data Divers"</span>, <span class="st">""</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3570</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(teams, <span class="dv">6</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Team 1"               "Stat Padders"         "Superb Statisticians"
-[4] "The Data Scientists"  ""                     "Data Divers"         </code></pre>
-</div>
-</div>
-</section>
+<p>Presentation order will be announced in class.</p>
 </section>
 <section id="grading-guide" class="level2">
 <h2 class="anchored" data-anchor-id="grading-guide">Grading guide</h2>
 <p>Total 15 points:</p>
 <ol type="1">
-<li><strong>Clear</strong> question and audience (3 pts)</li>
-<li><strong>Evidence-based</strong> story with 3 <strong>high-quality</strong> visuals (6 pts)</li>
-<li><strong>Reproducible</strong> workflow and <strong>readable</strong> report (3 pts)</li>
-<li>Presentation <strong>clarity</strong> and <strong>timing</strong> (3 pts)</li>
+<li><strong>Clear</strong> prediction question, target, and predictors (3 pts)</li>
+<li><strong>Reasonable</strong> Python workflow, train and test split, and model setup (4 pts)</li>
+<li><strong>Correct</strong> evaluation and honest comparison of the 2 models (4 pts)</li>
+<li><strong>Clear</strong> interpretation, limitations, and communication (4 pts)</li>
 </ol>
 
 
@@ -1266,7 +1458,7 @@ Warning
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/project/mini_project_3_release_renderable.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

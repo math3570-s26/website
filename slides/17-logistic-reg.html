@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
+<title>Logistic Regression  – MATH/COSC 3570 - Spring 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-38b22635d8ba2828809dae622215a440.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta property="og:title" content="Logistic Regression r fontawesome::fa(&quot;computer&quot;) – MATH/COSC 3570 - Spring 2026">
+<meta property="og:description" content="MATH/COSC 3570 Introduction to Data Science">
+<meta property="og:image" content="https://math3570-s26.github.io/website/slides/images/17-logistic-reg/spam_filter.jpg">
+<meta property="og:site_name" content="MATH/COSC 3570 - Spring 2026">
+</head>
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Logistic Regression <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg>
+</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/math3570-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://d2l.mu.edu/d2l/home/630428" title="D2L" class="quarto-navigation-tool px-1" aria-label="D2L"><i class="bi bi-person-fill"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">AI Activities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai_act_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai_example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Project Example</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Project Topics</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mini Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topics and Works</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-description-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../present-work-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Group and Proposal</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="16-logistic-reg-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Logistic Regression <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg>
+</h1>
+<p class="subtitle lead">MATH/COSC 3570 Introduction to Data Science</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="section" class="level1" data-visibility="hidden"><h1 data-visibility="hidden"></h1>
+<section id="regression-vs.-classification" class="level2"><h2 class="anchored" data-anchor-id="regression-vs.-classification">Regression vs.&nbsp;Classification</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="center">
+<p><strong>Normal vs.&nbsp;Spam/Phishing</strong></p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/17-logistic-reg/spam_filter.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="center">
+<p><strong>Fake vs.&nbsp;True</strong></p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/17-logistic-reg/fake_news.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="center">
+<p><strong>Normal vs.&nbsp;COVID vs.&nbsp;Smoking</strong></p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/17-logistic-reg/covid_lung.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li><p>The response <span class="math inline">\(Y\)</span> in linear regression is <em>numerical</em>.</p></li>
+<li><p>In many situations, <span class="math inline">\(Y\)</span> is <em>categorical</em>!</p></li>
+<li><p>A process of predicting categorical response is known as <strong>classification</strong>.</p></li>
+</ul>
+<div class="notes">
+<ul>
+<li>eye color</li>
+<li>car brand</li>
+<li>true vs.&nbsp;fake news</li>
+</ul>
+</div>
+</section><section id="regression-function-fx-vs.-classifier-cx" class="level2"><h2 class="anchored" data-anchor-id="regression-function-fx-vs.-classifier-cx">Regression Function <span class="math inline">\(f(x)\)</span> vs.&nbsp;Classifier <span class="math inline">\(C(x)\)</span>
+</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/17-logistic-reg/regression.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<div class="xsmall">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/17-logistic-reg/classification.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Source: https://daviddalpiaz.github.io/r4sl/classification-overview.html</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>There are many classification tools, or <strong>classifiers</strong> used to predict a categorical response.</li>
+</ul>
+</div>
+</section><section id="classification-example" class="level2"><h2 class="anchored" data-anchor-id="classification-example">Classification Example</h2>
+<ul>
+<li><p>Predict whether people will default on their credit card payment <span class="math inline">\((Y)\)</span> <code>yes</code> or <code>no</code>, based on monthly credit card balance <span class="math inline">\((X)\)</span>.</p></li>
+<li><p>Use the training sample <span class="math inline">\(\{(x_1, y_1), \dots, (x_n, y_n)\}\)</span> to build a classifier.</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/credit_card.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="why-not-linear-regression" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="why-not-linear-regression">Why Not Linear Regression?</h2>
+<ul>
+<li>Most of the time, we code categories using numbers!</li>
+</ul>
+<p><span class="math inline">\(Y =\begin{cases}
+    0  &amp; \quad \text{if not default}\\
+    1  &amp; \quad \text{if default}
+     \end{cases}\)</span></p>
+<ul>
+<li>
+<span class="math inline">\(Y = \beta_0 + \beta_1X + \epsilon\)</span>, <span class="math inline">\(\, X =\)</span> credit card balance</li>
+</ul>
+<div class="question">
+<p>Any potential issue of this dummy variable approach?</p>
+</div>
+<!-- - Linear regression assumes that the response is -->
+<!--   + Normally distributed -->
+<!--   + Constant variance -->
+<!--   + Independent -->
+<div class="notes">
+<ul>
+<li>
+<span class="math inline">\(Y\)</span> is categorical but coded as dummy variable or indicator variable</li>
+<li>Fit linear regression and treat it as a numerical variable.</li>
+</ul>
+</div>
+</section><section id="why-not-linear-regression-1" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="why-not-linear-regression-1">Why Not Linear Regression?</h2>
+<ul>
+<li>
+<span class="math inline">\(\hat{Y} = b_0 + b_1X\)</span> estimates <span class="math inline">\(P(Y = 1 \mid X) = P(default = yes \mid balance)\)</span> <!-- - Brown bars are data points. -->
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/lm_default-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:72.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="why-not-linear-regression-2" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="why-not-linear-regression-2">Why Not Linear Regression?</h2>
+<ul>
+<li><span class="math inline">\(\hat{Y} = b_0 + b_1X\)</span></li>
+<li><strong>Some estimates might be outside <span class="math inline">\([0, 1]\)</span>.</strong></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:72.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="binary-classification-by-probability" class="level2"><h2 class="anchored" data-anchor-id="binary-classification-by-probability">Binary Classification by Probability</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Most of the time, we code categories using numbers!</li>
+</ul>
+<p><span class="math inline">\(Y =\begin{cases}
+    0  &amp; \quad \text{if not default}\\
+    1  &amp; \quad \text{if default}
+     \end{cases}\)</span></p>
+<ul>
+<li><p>First predict the <strong>probability</strong> of each category of <span class="math inline">\(Y\)</span>.</p></li>
+<li><p>Predict probability of <code>default</code> using a <span style="color:blue"><strong>S-shaped</strong> curve</span>.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/glm_default-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- # Binary Logistic Regression -->
+</section><section id="framing-the-problem-binary-responses" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="framing-the-problem-binary-responses">Framing the Problem: Binary Responses</h2>
+<ul>
+<li>Treat each outcome (<code>default</code> <span class="math inline">\((y = 1)\)</span> and <code>not default</code> <span class="math inline">\((y = 0)\)</span>) as success and failure arising from separate <strong>Bernoulli</strong> trials.</li>
+</ul>
+<div class="question">
+<p>What is a Bernoulli trial?</p>
+</div>
+<div class="question">
+<p>What is a binomial trial?</p>
+</div>
+<ul>
+<li>A Bernoulli trial is a special case of a binomial trial when the number of trials is one:
+<ul>
+<li>
+<strong>exactly two</strong> possible outcomes, “success” and “failure”</li>
+<li>the probability of success <span class="math inline">\(\pi\)</span> is <strong>constant</strong>
+</li>
+</ul>
+</li>
+</ul>
+<div class="question">
+<p>In the default credit card example,</p>
+<ul>
+<li><p>do we have exactly two outcomes?</p></li>
+<li><p>do we have constant probability? <span class="math inline">\(P(y_1 = 1) = P(y_2 = 1) = \cdots = P(y_n = 1) = \pi?\)</span></p></li>
+</ul>
+</div>
+</section><section id="framing-the-problem-binary-responses-1" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="framing-the-problem-binary-responses-1">Framing the Problem: Binary Responses</h2>
+<ul>
+<li>
+<p>Training data <span class="math inline">\((x_1, y_1), \dots, (x_n, y_n)\)</span> where</p>
+<ul>
+<li>
+<span class="math inline">\(y_i = 1\)</span> (<code>default</code>)</li>
+<li>
+<span class="math inline">\(y_i = 0\)</span> (<code>not default</code>).</li>
+</ul>
+</li>
+<li><p>We first predict <span class="math inline">\(P(y_i = 1 \mid x_i) = \pi(x_i) = \pi_i\)</span></p></li>
+<li><p>The probability <span class="math inline">\(\pi\)</span> <em>changes with</em> the value of predictor <span class="math inline">\(x\)</span>!</p></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li><p><span class="math inline">\(X =\)</span> <code>balance</code>. <span class="math inline">\(x_1 = 2000\)</span> has a larger <span class="math inline">\(\pi_1 = \pi(2000)\)</span> than <span class="math inline">\(\pi_2 = \pi(500)\)</span> with <span class="math inline">\(x_2 = 500\)</span>.</p></li>
+<li><p>Credit cards with a higher balance is more likely to be default.</p></li>
+</ul></section><section id="binary-responses-with-nonconstant-probability" class="level2"><h2 class="anchored" data-anchor-id="binary-responses-with-nonconstant-probability">Binary Responses with Nonconstant Probability</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<!-- - Two outcomes: `default` $(y = 1)$ and `not default` $(y = 0)$ -->
+<ul>
+<li>
+<p>Training data <span class="math inline">\((x_1, y_1), \dots, (x_n, y_n)\)</span> where</p>
+<ul>
+<li>
+<span class="math inline">\(y_i = 1\)</span> (<code>default</code>)</li>
+<li>
+<span class="math inline">\(y_i = 0\)</span> (<code>not default</code>).</li>
+</ul>
+</li>
+<li><p>First predict <span class="math inline">\(P(y_i = 1 \mid x_i) = \pi(x_i) = \pi_i\)</span></p></li>
+<li><p><span class="blue"><strong>The probability <span class="math inline">\(\pi\)</span> <em>changes with</em> the value of predictor <span class="math inline">\(x\)</span>!</strong></span></p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<!-- $y_i \mid x_i \stackrel{indep}{\sim} \text{Bernoulli}(\pi(x_i)) = \text{binomial}(m=1,\pi = \pi(x_i))$ -->
+<ul>
+<li><p><span class="math inline">\(X =\)</span> <code>balance</code>. <span class="math inline">\(x_1 = 2000\)</span> has a larger <span class="math inline">\(\pi_1 = \pi(2000)\)</span> than <span class="math inline">\(\pi_2 = \pi(500)\)</span> with <span class="math inline">\(x_2 = 500\)</span>.</p></li>
+<li><p>Credit cards with a higher balance is more likely to be default.</p></li>
+</ul></section><section id="logistic-regression" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="logistic-regression">Logistic Regression</h2>
+<div class="center">
+<p>Instead of predicting <span class="math inline">\(y_i\)</span> directly, we use predictors to model its <em>probability</em> of success, <span class="math inline">\(\pi_i\)</span>.</p>
+</div>
+<div class="center">
+<p>But how?</p>
+</div>
+<p>. . .</p>
+<ul>
+<li>
+<strong>Transform <span class="math inline">\(\pi \in (0, 1)\)</span> into another variable <span class="math inline">\(\eta \in (-\infty, \infty)\)</span>. Then construct a linear predictor on <span class="math inline">\(\eta\)</span></strong>: <span class="math display">\[\eta_i = \beta_0 + \beta_1 x_i\]</span>
+</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<strong>Logit function:</strong> For <span class="math inline">\(0 &lt; \pi &lt; 1\)</span>
+</li>
+</ul>
+<p><span class="math display">\[\eta = \text{logit}(\pi) = \ln\left(\frac{\pi}{1-\pi}\right)\]</span></p>
+<ul>
+<li>The <em>logit</em> function takes a value <span class="math inline">\(\pi \in (0, 1)\)</span> and maps it to a value <span class="math inline">\(\eta \in (-\infty, \infty)\)</span>.</li>
+</ul></section><section id="logit-function-eta-textlogitpi-lnleftfracpi1-piright" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="logit-function-eta-textlogitpi-lnleftfracpi1-piright">Logit function <span class="math inline">\(\eta = \text{logit}(\pi) = \ln\left(\frac{\pi}{1-\pi}\right)\)</span>
+</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-10-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:72.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="logistic-function" class="level2"><h2 class="anchored" data-anchor-id="logistic-function">Logistic Function</h2>
+<ul>
+<li>Assume <span class="math inline">\(\pi\)</span> is affected by the linear function <span class="math inline">\(\beta_0 + \beta_1x\)</span> with the <strong>logistic</strong> transformation:</li>
+</ul>
+<p><span class="math display">\[\pi(x) = \frac{1}{1+\exp(-(\beta_0 + \beta_1x))}\]</span></p>
+<p>. . .</p>
+<div class="question">
+<p>Does the logistic function guarantee that <span class="math inline">\(\pi \in (0, 1)\)</span> for any value of <span class="math inline">\(\beta_0\)</span>, <span class="math inline">\(\beta_1\)</span>, and <span class="math inline">\(x\)</span>?</p>
+</div>
+<p>. . .</p>
+<p>Goal: Get estimates <span class="math inline">\(\hat{\beta}_0\)</span> and <span class="math inline">\(\hat{\beta}_1\)</span>, and therefore <span class="math inline">\(\hat{\pi}\)</span>!</p>
+<!-- $$\small \pi_i = \frac{1}{1+\exp(-(\beta_0+\beta_1 x_{i}))} = \frac{1}{1 + \exp(-\eta_i)}$$ -->
+<p><span class="math display">\[\small \hat{\pi}(x) = \frac{1}{1+\exp(-\hat{\beta}_0-\hat{\beta}_1 x_{})}\]</span></p>
+</section><section id="logistic-function-1" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="logistic-function-1">Logistic Function</h2>
+<ul>
+<li><p>The <em>logistic</em> function takes a value <span class="math inline">\(\eta \in (-\infty, \infty)\)</span> and maps it to a value <span class="math inline">\(\pi \in (0, 1)\)</span>.</p></li>
+<li><p><strong>Logistic function</strong>: <span class="math display">\[\pi = \text{logistic}(\eta) = \frac{1}{1+\exp(-\eta)} \in (0, 1)\]</span></p></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>So once <span class="math inline">\(\eta\)</span> is estimated by the linear predictor, we use the logistic function to transform <span class="math inline">\(\eta\)</span> back to the probability.</li>
+</ul></section><section id="logistic-function-pix-textlogisticbeta_0-beta_1x-fracexpbeta_0-beta_1-x1expbeta_0-beta_1-x" class="level2"><h2 class="anchored" data-anchor-id="logistic-function-pix-textlogisticbeta_0-beta_1x-fracexpbeta_0-beta_1-x1expbeta_0-beta_1-x">Logistic Function <span class="math inline">\(\pi(x) = \text{logistic}(\beta_0 + \beta_1x) = \frac{\exp(\beta_0 + \beta_1 x)}{1+\exp(\beta_0 + \beta_1 x)}\)</span>
+</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:72.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="section-1" class="level2"><h2 class="anchored" data-anchor-id="section-1"></h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>beta_0 says where the switch happens</p>
+<p>beta_1 says how quickly the switch happens</p>
+<p>negative beta_1 means the switch goes the other way</p>
+</div>
+</section><section id="simple-binary-logistic-regression-model" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="simple-binary-logistic-regression-model">Simple Binary Logistic Regression Model</h2>
+<p>For <span class="math inline">\(i = 1, \dots, n\)</span>, and with one predictor <span class="math inline">\(X\)</span>: <span class="math display">\[(Y_i \mid X = x_i) = \begin{cases}   1       &amp; \quad \text{with probability } \pi(x_i)\\
+    0  &amp; \quad \text{with probability } 1 - \pi(x_i) \end{cases}\]</span> <!-- $$\ln \left( \frac{\pi(x_i)}{1 - \pi(x_i)} \right) = \beta_0+\beta_1 x_{i}$$ --></p>
+<p><span class="math display">\[\pi(x_i) = \frac{1}{1+\exp(-(\beta_0+\beta_1 x_{i}))}\]</span> <!-- - The $\text{logit}(\pi_i)$ is a **link function** that *links* the linear predictor and the mean of $Y_i$. --></p>
+<p>Goal: Get estimates <span class="math inline">\(\hat{\beta}_0\)</span> and <span class="math inline">\(\hat{\beta}_1\)</span>, and therefore <span class="math inline">\(\hat{\pi}\)</span>!</p>
+<!-- $$\small \pi_i = \frac{1}{1+\exp(-(\beta_0+\beta_1 x_{i}))} = \frac{1}{1 + \exp(-\eta_i)}$$ -->
+<p><span class="math display">\[\small \hat{\pi}(x) = \frac{1}{1+\exp(-\hat{\beta}_0-\hat{\beta}_1 x_{})}\]</span></p>
+<div class="notes">
+<ul>
+<li>with sample size <span class="math inline">\(n\)</span> and with <span class="math inline">\(k\)</span> predictors, we have the logistic regression model like this</li>
+<li>First, we have a probability distribution <strong>Bernoulli</strong> describing how the outcome or response data are generated.
+<ul>
+<li>
+<span class="math inline">\(Y_i \mid {\bf x}_i; \pi_i \sim \text{Bern}(p_i)\)</span>, <span class="math inline">\({\bf x}_i = (x_{1,i}, \cdots, x_{k,i})\)</span>, <span class="math inline">\(i = 1, \dots, n\)</span>
+</li>
+</ul>
+</li>
+<li>Then we have a link function, logit function, that relates the linear regression to the parameter of the outcome distribution, which is the parameter <span class="math inline">\(p\)</span>, the probability of success in the Bernoulli distribution.
+<ul>
+<li><span class="math inline">\(\text{logit}(\pi_i) = \eta_i = \beta_0+\beta_1 x_{1,i} + \cdots + \beta_k x_{k,i}\)</span></li>
+</ul>
+</li>
+</ul>
+</div>
+</section><section id="probability-curve" class="level2"><h2 class="anchored" data-anchor-id="probability-curve">Probability Curve</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>The relationship between <span class="math inline">\(\pi(x)\)</span> and <span class="math inline">\(x\)</span> is not linear! <span class="math display">\[\pi(x) = \frac{1}{1+\exp(-\beta_0-\beta_1 x)}\]</span>
+</li>
+<li>The amount that <span class="math inline">\(\pi(x)\)</span> changes due to a one-unit change in <span class="math inline">\(x\)</span> depends on the current value of <span class="math inline">\(x\)</span>.</li>
+<li>Regardless of the value of <span class="math inline">\(x\)</span>, if <span class="math inline">\(\beta_1 &gt; 0\)</span>, increasing <span class="math inline">\(x\)</span> will be increasing <span class="math inline">\(\pi(x)\)</span>.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-14-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section><section id="interpretation-of-coefficients" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="interpretation-of-coefficients">Interpretation of Coefficients</h2>
+<p>The ratio <span class="math inline">\(\frac{\pi}{1-\pi} \in (0, \infty)\)</span> is called the <strong>odds</strong> of some event.</p>
+<ul>
+<li>Example: If 1 in 5 people will default, the odds is 1/4 since <span class="math inline">\(\pi = 0.2\)</span> implies an odds of <span class="math inline">\(0.2/(1−0.2) = 1/4\)</span>.</li>
+</ul>
+<p><span class="math display">\[\ln \left( \frac{\pi(x)}{1 - \pi(x)} \right)= \beta_0 + \beta_1x\]</span></p>
+<ul>
+<li>Increasing <span class="math inline">\(x\)</span> by one unit
+<ul>
+<li>changes the <strong>log-odds</strong> by <span class="math inline">\(\beta_1\)</span>
+</li>
+<li>multiplies the odds by <span class="math inline">\(e^{\beta_1}\)</span>
+</li>
+</ul>
+</li>
+</ul>
+<div class="alert">
+<ul>
+<li>
+<span class="math inline">\(\beta_1\)</span> does <em>not</em> correspond to the change in <span class="math inline">\(\pi(x)\)</span> associated with a one-unit increase in <span class="math inline">\(x\)</span>.</li>
+<li>
+<span class="math inline">\(\beta_1\)</span> is the change in <strong>log odds</strong> associated with one-unit increase in <span class="math inline">\(x\)</span>.</li>
+</ul>
+</div>
+</section><section id="fit-logistic-regression" class="level2"><h2 class="anchored" data-anchor-id="fit-logistic-regression">Fit Logistic Regression</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bodydata</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/body.csv"</span><span class="op">)</span></span>
+<span><span class="va">body</span> <span class="op">&lt;-</span> <span class="va">bodydata</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">select</span><span class="op">(</span><span class="va">GENDER</span>, <span class="va">HEIGHT</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>GENDER <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">GENDER</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">body</span> <span class="op">|&gt;</span> <span class="fu">slice</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  GENDER HEIGHT
+  &lt;fct&gt;   &lt;dbl&gt;
+1 0        172 
+2 1        186 
+3 0        154.
+4 1        160.</code></pre>
+</div>
+</div>
+<ul>
+<li><p><code>GENDER = 1</code> if Male</p></li>
+<li><p><code>GENDER = 0</code> if Female</p></li>
+<li><p>Use <code>HEIGHT</code> (centimeter, 1 cm = 0.39 in) to predict/classify <code>GENDER</code>: whether one is male or female.</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="tiny">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/17-logistic-reg/height.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Source: https://www.thetealmango.com/featured/average-male-and-female-height-worldwide/</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="logistic-regression---data-summary" class="level2"><h2 class="anchored" data-anchor-id="logistic-regression---data-summary">Logistic Regression - Data Summary</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">body</span><span class="op">$</span><span class="va">GENDER</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  0   1 
+147 153 </code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">body</span> <span class="op">|&gt;</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">GENDER</span>, y <span class="op">=</span> <span class="va">HEIGHT</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-18-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="60%"} -->
+<!-- ```{r} -->
+<!-- table(body$GENDER) -->
+<!-- tapply(body$HEIGHT, body$GENDER, summary) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: {.column width="40%"} -->
+<!-- ```{r} -->
+<!-- #| out-width: "100%" -->
+<!-- body |> ggplot(aes(x = GENDER,  -->
+<!--                    y = HEIGHT)) + -->
+<!--     geom_boxplot() -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- :::: -->
+</section><section id="logistic-regression---model-fitting" class="level2"><h2 class="anchored" data-anchor-id="logistic-regression---model-fitting">Logistic Regression - Model Fitting</h2>
+<ul>
+<li><p>Specify the model with <code>logistic_reg()</code> <a href="https://parsnip.tidymodels.org/reference/logistic_reg.html#:~:text=logistic_reg()%20defines%20a%20generalized,by%20setting%20the%20model%20engine."><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/parsnip.png" class="img-fluid" width="60" alt="parsnip"></a></p></li>
+<li><p>Use <code>"glm"</code> instead of <code>"lm"</code> as the engine</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span>
+<span><span class="fu">show_engines</span><span class="op">(</span><span class="st">"logistic_reg"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 2
+  engine    mode          
+  &lt;chr&gt;     &lt;chr&gt;         
+1 glm       classification
+2 glmnet    classification
+3 LiblineaR classification
+4 spark     classification
+5 keras     classification
+6 stan      classification
+7 brulee    classification</code></pre>
+</div>
+</div>
+<!-- # ```{r} -->
+<!-- # logis_mdl <- parsnip::logistic_reg() |>  -->
+<!-- #     set_engine("glm")  -->
+<!-- # ``` -->
+<!-- ## Logistic Regression - Model Fitting -->
+</section><section id="logistic-regression-model-result" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="logistic-regression-model-result">Logistic Regression Model Result</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># logis_out$fit$coefficients</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><span class="math inline">\(\hat{\eta} = \ln \left( \frac{\hat{\pi}}{1 - \hat{\pi}}\right) = -40.55 + 0.24 \times \text{HEIGHT}\)</span></li>
+</ul>
+<!-- . . . --><!-- - $\hat{\eta}(x) = \hat{\beta}_0 + \hat{\beta}_1x$ --><!-- - $\hat{\eta}(x+1) = \hat{\beta}_0 + \hat{\beta}_1(x+1)$ --><!-- - $\hat{\eta}(x+1) - \hat{\eta}(x) = \hat{\beta}_1 = \ln(\text{odds}_{x+1}) - \ln(\text{odds}_{x}) = \ln \left( \frac{\text{odds}_{x+1}}{\text{odds}_{x}} \right)$ --><p>. . .</p>
+<ul>
+<li>One cm increase in <code>HEIGHT</code> increases the <em>log odds</em> of being male by 0.24 units.</li>
+<li>The <strong>odds ratio</strong>, <span class="math inline">\(\widehat{OR} = \frac{\text{odds}_{x+1}}{\text{odds}_{x}} = e^{\hat{\beta}_1} = e^{0.24} = 1.273\)</span>.</li>
+<li>The odds of being male increases by 27.3% with additional one cm of <code>HEIGHT</code>.</li>
+</ul></section><section id="logistic-regression---model-fitting-1" class="level2"><h2 class="anchored" data-anchor-id="logistic-regression---model-fitting-1">Logistic Regression - Model Fitting</h2>
+<ul>
+<li>Define <code>family = "binomial"</code>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">logis_out</span> <span class="op">&lt;-</span> <span class="fu">logistic_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">fit</span><span class="op">(</span><span class="va">GENDER</span> <span class="op">~</span> <span class="va">HEIGHT</span>, </span>
+<span>        data <span class="op">=</span> <span class="va">body</span>, </span>
+<span>        family <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span></span>
+<span><span class="va">logis_out_fit</span> <span class="op">&lt;-</span> <span class="va">logis_out</span><span class="op">$</span><span class="va">fit</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>. . .</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">logis_out_fit</span><span class="op">$</span><span class="va">coefficients</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)      HEIGHT 
+    -40.548       0.242 </code></pre>
+</div>
+</div>
+<p>. . .</p>
+<section id="prgender-1-when-height-is-170-cm" class="level4"><h4 class="anchored" data-anchor-id="prgender-1-when-height-is-170-cm">Pr(GENDER = 1) When HEIGHT is 170 cm</h4>
+<!-- - $\hat{\eta} = \ln \left( \frac{\hat{\pi}}{1 - \hat{\pi}}\right) = -40.55 + 0.24 \times \text{HEIGHT}$ -->
+<p><span class="math display">\[ \hat{\pi}(x = 170) = \frac{1}{1+\exp(-\hat{\beta}_0-\hat{\beta}_1 x)} = \frac{1}{1+\exp(-(-40.55) - 0.24 \times 170)} = 63.3\%\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">logis_out_fit</span>, newdata <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>HEIGHT <span class="op">=</span> <span class="fl">170</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"response"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    1 
+0.633 </code></pre>
+</div>
+</div>
+<!-- . . . -->
+<!-- :::{.question} -->
+<!-- What is the probability of being male when `HEIGHT` is 160? What about `HEIGHT` 180? -->
+<!-- ::: -->
+</section></section><section id="probability-curve-1" class="level2"><h2 class="anchored" data-anchor-id="probability-curve-1">Probability Curve</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pi_hat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">logis_out</span><span class="op">$</span><span class="va">fit</span>, type <span class="op">=</span> <span class="st">"response"</span><span class="op">)</span></span>
+<span><span class="va">pi_hat</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     1      2      3      4      5      6 
+0.7369 0.9880 0.0383 0.1480 0.9383 0.4375 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">body</span><span class="op">$</span><span class="va">HEIGHT</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 172 186 154 160 179 167</code></pre>
+</div>
+</div>
+<!-- ```{r} -->
+<!-- predict(logis_out$fit, newdata = data.frame(HEIGHT = c(160, 170, 180)), type = "response") -->
+<!-- ``` -->
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/default-predict-viz-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li><strong><span class="pink">160 cm, Pr(male) = 0.13</span></strong></li>
+<li><strong><span class="yellow">170 cm, Pr(male) = 0.63</span></strong></li>
+<li><strong><span class="green">180 cm, Pr(male) = 0.95</span></strong></li>
+</ul>
+</div>
+</div>
+</section><section id="section-2" class="level2"><h2 class="anchored" data-anchor-id="section-2"></h2>
+<div class="lab">
+<p><span style="color:blue"> <strong>21-Logistic Regression</strong> </span></p>
+<p>In <strong>lab.qmd</strong> <code>## Lab 21</code> section,</p>
+<ul>
+<li><p>Use our fitted logistic regression model to predict whether you are male or female! Change <code>175</code> to your height (cm).</p></li>
+<li><p>Use <a href="https://www.rapidtables.com/convert/length/feet-inch-to-cm.html">the converter</a> to get your height in cm!</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Fit the logistic regression</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">logis_out_fit</span>, newdata <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>HEIGHT <span class="op">=</span> <span class="fl">175</span><span class="op">)</span>, </span>
+<span>        type <span class="op">=</span> <span class="st">"response"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    1 
+0.853 </code></pre>
+</div>
+</div>
+<!-- - Suppose data are collected with $X =$ hours studied, and $Y =$ receive an A or not in 3570. We fit a logistic regression and the estimated coefficients are $b_0 = −3$, $b_1 = 0.05$. -->
+<!--     + Estimate the probability that a student who studies for 40 hours gets an A in the class. -->
+<!--     + How many hours would the student need to study to have a 50% chance of getting an A in the class? -->
+</div>
+</section></section><section id="section-3" class="level1" data-background-color="#ffde57" data-background-image="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" data-background-size="40%" data-background-position="90% 50%"><h1 data-background-color="#ffde57" data-background-image="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" data-background-size="40%" data-background-position="90% 50%"></h1>
+<div class="left">
+<h1>
+sklearn.linear_model
+</h1>
+</div>
+<section id="sklearn.linear_model.logisticregression" class="level2"><h2 class="anchored" data-anchor-id="sklearn.linear_model.logisticregression"><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">sklearn.linear_model.LogisticRegression</a></h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/reticulate/">reticulate</a></span><span class="op">)</span>; <span class="fu"><a href="https://rstudio.github.io/reticulate/reference/py_install.html">py_install</a></span><span class="op">(</span><span class="st">"scikit-learn"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>body <span class="op">=</span> pd.read_csv(<span class="st">'./data/body.csv'</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array(body[[<span class="st">'HEIGHT'</span>]]) <span class="co">## 2d array with one column</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array(body[<span class="st">'GENDER'</span>]) <span class="co">## 1d array</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">0</span>:<span class="dv">4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([[172. ],
+       [186. ],
+       [154.4],
+       [160.5]])</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">0</span>:<span class="dv">4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([0, 1, 0, 1])</code></pre>
+</div>
+</div>
+</section><section id="sklearn.linear_model.logisticregression-1" class="level2"><h2 class="anchored" data-anchor-id="sklearn.linear_model.logisticregression-1"><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">sklearn.linear_model.LogisticRegression</a></h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> LogisticRegression().fit(x, y)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>clf.coef_</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([[0.24154889]])</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>clf.intercept_</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([-40.51727266])</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>new_height <span class="op">=</span> np.array([<span class="dv">160</span>, <span class="dv">170</span>, <span class="dv">180</span>]).reshape(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>clf.predict(new_height)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([0, 1, 1])</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>clf.predict_proba(new_height)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([[0.86639467, 0.13360533],
+       [0.36678399, 0.63321601],
+       [0.04919451, 0.95080549]])</code></pre>
+</div>
+</div>
+</section></section><section id="evaluation" class="level1"><h1>Evaluation</h1>
+<!-- # Evaluation Metrics -->
+<section id="evaluation-metrics" class="level2"><h2 class="anchored" data-anchor-id="evaluation-metrics">Evaluation Metrics<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+</h2>
+<ul>
+<li><strong>Confusion Matrix</strong></li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th>True 0</th>
+<th>True 1</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Predict 0</strong></td>
+<td><strong>True Negative (TN)</strong></td>
+<td><strong>False Negative (FN)</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Predict 1</strong></td>
+<td><strong>False Positive (FP)</strong></td>
+<td><strong>True Positive (TP)</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>Sensitivity (True Positive Rate)</strong> <span class="math inline">\(= P( \text{predict 1} \mid \text{true 1}) = \frac{TP}{TP+FN}\)</span></p></li>
+<li><p><strong>Specificity (True Negative Rate)</strong> <span class="math inline">\(= P( \text{predict 0} \mid \text{true 0}) = \frac{TN}{FP+TN}\)</span></p></li>
+<li><p><strong>Accuracy</strong> <span class="math inline">\(= \frac{TP + TN}{TP+FN+FP+TN}\)</span></p></li>
+</ul>
+<!-- . . . --><!-- A *good* classifier is one which the *test accuracy rate is highest*. --></section><section id="confusion-matrix" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pred_prob</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">logis_out_fit</span>, type <span class="op">=</span> <span class="st">"response"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## true observations</span></span>
+<span><span class="va">gender_true</span> <span class="op">&lt;-</span> <span class="va">body</span><span class="op">$</span><span class="va">GENDER</span></span>
+<span></span>
+<span><span class="co">## predicted labels</span></span>
+<span><span class="va">gender_pred</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">pred_prob</span> <span class="op">&gt;</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">*</span> <span class="fl">1</span></span>
+<span></span>
+<span><span class="co">## confusion matrix</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">gender_pred</span>, <span class="va">gender_true</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           gender_true
+gender_pred   0   1
+          0 118  29
+          1  29 124</code></pre>
+</div>
+</div>
+</section><section id="receiver-operating-characteristic-roc-curve" class="level2"><h2 class="anchored" data-anchor-id="receiver-operating-characteristic-roc-curve">Receiver Operating Characteristic (ROC) Curve</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th>True 0</th>
+<th>True 1</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Predict 0</strong></td>
+<td><strong>True Negative (TN)</strong></td>
+<td><strong>False Negative (FN)</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Predict 1</strong></td>
+<td><strong>False Positive (FP)</strong></td>
+<td><strong>True Positive (TP)</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<strong>Receiver operating characteristic (ROC) curve</strong> plots True Positive Rate (Sensitivity) vs.&nbsp;False Positive Rate (1 - Specificity)</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-34-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="roc-curve-using-yardstick-of-tidymodels" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="roc-curve-using-yardstick-of-tidymodels">
+<a href="https://yardstick.tidymodels.org/reference/roc_curve.html">ROC Curve</a> using <a href="https://yardstick.tidymodels.org/"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/thumbs/yardstick.png" class="img-fluid" width="60" alt="yardstick of Tidymodels"></a>
+</h2>
+<!-- ![yardstick of Tidymodels](https://raw.githubusercontent.com/rstudio/hex-stickers/main/thumbs/yardstick.png){width="50"} -->
+<!-- [yardstick of Tidymodels](https://yardstick.tidymodels.org/) -->
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roc_df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>truth <span class="op">=</span> <span class="va">gender_true</span>,</span>
+<span>                 prob <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="va">pred_prob</span>,</span>
+<span>                 pred <span class="op">=</span> <span class="va">gender_pred</span><span class="op">)</span></span>
+<span><span class="va">roc_df</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 300 × 3
+  truth   prob  pred
+  &lt;fct&gt;  &lt;dbl&gt; &lt;dbl&gt;
+1 0     0.263      1
+2 1     0.0120     1
+3 0     0.962      0
+4 1     0.852      0
+5 1     0.0617     1
+6 1     0.562      0
+# ℹ 294 more rows</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/main/thumbs/yardstick.png") -->
+<!-- ``` -->
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gender_roc</span> <span class="op">&lt;-</span> </span>
+<span>     <span class="fu">yardstick</span><span class="fu">::</span><span class="fu"><a href="https://yardstick.tidymodels.org/reference/roc_curve.html">roc_curve</a></span><span class="op">(</span><span class="va">roc_df</span>, <span class="va">truth</span>, <span class="va">prob</span><span class="op">)</span></span>
+<span><span class="va">gender_roc</span> <span class="op">|&gt;</span> <span class="fu">slice</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="op">(</span><span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">-</span><span class="fl">4</span><span class="op">)</span><span class="op">:</span><span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 3
+   .threshold specificity sensitivity
+        &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+ 1 -Inf           0           1      
+ 2    0.00207     0           1      
+ 3    0.00426     0.00654     1      
+ 4    0.00492     0.0131      1      
+ 5    0.00673     0.0196      1      
+ 6    0.994       1           0.0272 
+ 7    0.996       1           0.0204 
+ 8    0.997       1           0.0136 
+ 9    1.000       1           0.00680
+10  Inf           1           0      </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section id="roc-curve-using-yardstick-of-tidymodels-1" class="level2" data-visibility="hidden"><h2 data-visibility="hidden" class="anchored" data-anchor-id="roc-curve-using-yardstick-of-tidymodels-1">ROC Curve using <a href="https://yardstick.tidymodels.org/"><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/main/thumbs/yardstick.png" class="img-fluid" width="60" alt="yardstick of Tidymodels"></a>
+</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gender_roc</span> <span class="op">|&gt;</span> <span class="fu">autoplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">theme</span><span class="op">(</span>axis.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>,</span>
+<span>          axis.text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">16</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-37-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>theme(axis.title = element_text(size = 20), axis.text = element_text(size = 16))</li>
+</ul>
+</div>
+</section><section id="comparing-models" class="level2"><h2 class="anchored" data-anchor-id="comparing-models">Comparing Models</h2>
+<div class="question">
+<p>Which model performs better?</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/17-logistic-reg/unnamed-chunk-38-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script></section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>More on <a href="https://en.wikipedia.org/wiki/Sensitivity_and_specificity">Wiki page</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script><script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/math3570-s26\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2026, Cheng-Han Yu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><ul><li><a href="https://github.com/math3570-s26/website/edit/main/slides/17-logistic-reg.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/math3570-s26/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

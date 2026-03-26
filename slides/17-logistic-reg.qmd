@@ -6,7 +6,7 @@ title-slide-attributes:
   # data-slide-number: none
 format: 
   live-revealjs: 
-    output-file: 16-logistic-reg-slides.html
+    output-file: 17-logistic-reg-slides.html
     df-print: default
 webr:
   cell-options:

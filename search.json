@@ -2864,141 +2864,141 @@
     "text": "GenAI and Academic Integrity\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n. . ."
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#regression-vs.-classification",
-    "href": "slides/16-logistic-reg-slides.html#regression-vs.-classification",
+    "objectID": "slides/17-logistic-reg-slides.html#regression-vs.-classification",
+    "href": "slides/17-logistic-reg-slides.html#regression-vs.-classification",
     "title": "Logistic Regression \n",
     "section": "Regression vs. Classification",
     "text": "Regression vs. Classification\n\n\n\nNormal vs. Spam/Phishing\n\n\n\n\n\n\n\n\n\n\n\nFake vs. True\n\n\n\n\n\n\n\n\n\n\n\nNormal vs. COVID vs. Smoking\n\n\n\n\n\n\n\n\n\n\n\nThe response \\(Y\\) in linear regression is numerical.\nIn many situations, \\(Y\\) is categorical!\nA process of predicting categorical response is known as classification.\n\n\neye color\ncar brand\ntrue vs. fake news"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#regression-function-fx-vs.-classifier-cx",
-    "href": "slides/16-logistic-reg-slides.html#regression-function-fx-vs.-classifier-cx",
+    "objectID": "slides/17-logistic-reg-slides.html#regression-function-fx-vs.-classifier-cx",
+    "href": "slides/17-logistic-reg-slides.html#regression-function-fx-vs.-classifier-cx",
     "title": "Logistic Regression \n",
     "section": "Regression Function \\(f(x)\\) vs. Classifier \\(C(x)\\)\n",
     "text": "Regression Function \\(f(x)\\) vs. Classifier \\(C(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://daviddalpiaz.github.io/r4sl/classification-overview.html\n\n\n\n\n\nThere are many classification tools, or classifiers used to predict a categorical response."
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#classification-example",
-    "href": "slides/16-logistic-reg-slides.html#classification-example",
+    "objectID": "slides/17-logistic-reg-slides.html#classification-example",
+    "href": "slides/17-logistic-reg-slides.html#classification-example",
     "title": "Logistic Regression \n",
     "section": "Classification Example",
     "text": "Classification Example\n\nPredict whether people will default on their credit card payment \\((Y)\\) yes or no, based on monthly credit card balance \\((X)\\).\nUse the training sample \\(\\{(x_1, y_1), \\dots, (x_n, y_n)\\}\\) to build a classifier."
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#binary-classification-by-probability",
-    "href": "slides/16-logistic-reg-slides.html#binary-classification-by-probability",
+    "objectID": "slides/17-logistic-reg-slides.html#binary-classification-by-probability",
+    "href": "slides/17-logistic-reg-slides.html#binary-classification-by-probability",
     "title": "Logistic Regression \n",
     "section": "Binary Classification by Probability",
     "text": "Binary Classification by Probability\n\n\n\nMost of the time, we code categories using numbers!\n\n\\(Y =\\begin{cases}\n    0  & \\quad \\text{if not default}\\\\\n    1  & \\quad \\text{if default}\n     \\end{cases}\\)\n\nFirst predict the probability of each category of \\(Y\\).\nPredict probability of default using a S-shaped curve."
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#binary-responses-with-nonconstant-probability",
-    "href": "slides/16-logistic-reg-slides.html#binary-responses-with-nonconstant-probability",
+    "objectID": "slides/17-logistic-reg-slides.html#binary-responses-with-nonconstant-probability",
+    "href": "slides/17-logistic-reg-slides.html#binary-responses-with-nonconstant-probability",
     "title": "Logistic Regression \n",
     "section": "Binary Responses with Nonconstant Probability",
     "text": "Binary Responses with Nonconstant Probability\n\n\n\n\n\nTraining data \\((x_1, y_1), \\dots, (x_n, y_n)\\) where\n\n\n\\(y_i = 1\\) (default)\n\n\\(y_i = 0\\) (not default).\n\n\nFirst predict \\(P(y_i = 1 \\mid x_i) = \\pi(x_i) = \\pi_i\\)\nThe probability \\(\\pi\\) changes with the value of predictor \\(x\\)!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(X =\\) balance. \\(x_1 = 2000\\) has a larger \\(\\pi_1 = \\pi(2000)\\) than \\(\\pi_2 = \\pi(500)\\) with \\(x_2 = 500\\).\nCredit cards with a higher balance is more likely to be default."
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#logistic-function",
-    "href": "slides/16-logistic-reg-slides.html#logistic-function",
+    "objectID": "slides/17-logistic-reg-slides.html#logistic-function",
+    "href": "slides/17-logistic-reg-slides.html#logistic-function",
     "title": "Logistic Regression \n",
     "section": "Logistic Function",
     "text": "Logistic Function\n\nAssume \\(\\pi\\) is affected by the linear function \\(\\beta_0 + \\beta_1x\\) with the logistic transformation:\n\n\\[\\pi(x) = \\frac{1}{1+\\exp(-(\\beta_0 + \\beta_1x))}\\]\n\n\nDoes the logistic function guarantee that \\(\\pi \\in (0, 1)\\) for any value of \\(\\beta_0\\), \\(\\beta_1\\), and \\(x\\)?\n\n\n\nGoal: Get estimates \\(\\hat{\\beta}_0\\) and \\(\\hat{\\beta}_1\\), and therefore \\(\\hat{\\pi}\\)!\n\n\\[\\small \\hat{\\pi}(x) = \\frac{1}{1+\\exp(-\\hat{\\beta}_0-\\hat{\\beta}_1 x_{})}\\]"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#logistic-function-pix-textlogisticbeta_0-beta_1x-fracexpbeta_0-beta_1-x1expbeta_0-beta_1-x",
-    "href": "slides/16-logistic-reg-slides.html#logistic-function-pix-textlogisticbeta_0-beta_1x-fracexpbeta_0-beta_1-x1expbeta_0-beta_1-x",
+    "objectID": "slides/17-logistic-reg-slides.html#logistic-function-pix-textlogisticbeta_0-beta_1x-fracexpbeta_0-beta_1-x1expbeta_0-beta_1-x",
+    "href": "slides/17-logistic-reg-slides.html#logistic-function-pix-textlogisticbeta_0-beta_1x-fracexpbeta_0-beta_1-x1expbeta_0-beta_1-x",
     "title": "Logistic Regression \n",
     "section": "Logistic Function \\(\\pi(x) = \\text{logistic}(\\beta_0 + \\beta_1x) = \\frac{\\exp(\\beta_0 + \\beta_1 x)}{1+\\exp(\\beta_0 + \\beta_1 x)}\\)\n",
     "text": "Logistic Function \\(\\pi(x) = \\text{logistic}(\\beta_0 + \\beta_1x) = \\frac{\\exp(\\beta_0 + \\beta_1 x)}{1+\\exp(\\beta_0 + \\beta_1 x)}\\)"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#section-1",
-    "href": "slides/16-logistic-reg-slides.html#section-1",
+    "objectID": "slides/17-logistic-reg-slides.html#section-1",
+    "href": "slides/17-logistic-reg-slides.html#section-1",
     "title": "Logistic Regression \n",
     "section": "",
     "text": "beta_0 says where the switch happens\nbeta_1 says how quickly the switch happens\nnegative beta_1 means the switch goes the other way"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#probability-curve",
-    "href": "slides/16-logistic-reg-slides.html#probability-curve",
+    "objectID": "slides/17-logistic-reg-slides.html#probability-curve",
+    "href": "slides/17-logistic-reg-slides.html#probability-curve",
     "title": "Logistic Regression \n",
     "section": "Probability Curve",
     "text": "Probability Curve\n\n\n\nThe relationship between \\(\\pi(x)\\) and \\(x\\) is not linear! \\[\\pi(x) = \\frac{1}{1+\\exp(-\\beta_0-\\beta_1 x)}\\]\n\nThe amount that \\(\\pi(x)\\) changes due to a one-unit change in \\(x\\) depends on the current value of \\(x\\).\nRegardless of the value of \\(x\\), if \\(\\beta_1 &gt; 0\\), increasing \\(x\\) will be increasing \\(\\pi(x)\\)."
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#fit-logistic-regression",
-    "href": "slides/16-logistic-reg-slides.html#fit-logistic-regression",
+    "objectID": "slides/17-logistic-reg-slides.html#fit-logistic-regression",
+    "href": "slides/17-logistic-reg-slides.html#fit-logistic-regression",
     "title": "Logistic Regression \n",
     "section": "Fit Logistic Regression",
     "text": "Fit Logistic Regression\n\n\n\nbodydata &lt;- read_csv(\"./data/body.csv\")\nbody &lt;- bodydata |&gt; \n    select(GENDER, HEIGHT) |&gt; \n    mutate(GENDER = as.factor(GENDER))\nbody |&gt; slice(1:4)\n\n# A tibble: 4 × 2\n  GENDER HEIGHT\n  &lt;fct&gt;   &lt;dbl&gt;\n1 0        172 \n2 1        186 \n3 0        154.\n4 1        160.\n\n\n\nGENDER = 1 if Male\nGENDER = 0 if Female\nUse HEIGHT (centimeter, 1 cm = 0.39 in) to predict/classify GENDER: whether one is male or female.\n\n\n\n\n\n\n\nSource: https://www.thetealmango.com/featured/average-male-and-female-height-worldwide/"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#logistic-regression---data-summary",
-    "href": "slides/16-logistic-reg-slides.html#logistic-regression---data-summary",
+    "objectID": "slides/17-logistic-reg-slides.html#logistic-regression---data-summary",
+    "href": "slides/17-logistic-reg-slides.html#logistic-regression---data-summary",
     "title": "Logistic Regression \n",
     "section": "Logistic Regression - Data Summary",
     "text": "Logistic Regression - Data Summary\n\ntable(body$GENDER)\n\n\n  0   1 \n147 153 \n\n\n\nbody |&gt; ggplot(aes(x = GENDER, y = HEIGHT)) + geom_boxplot()"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#logistic-regression---model-fitting",
-    "href": "slides/16-logistic-reg-slides.html#logistic-regression---model-fitting",
+    "objectID": "slides/17-logistic-reg-slides.html#logistic-regression---model-fitting",
+    "href": "slides/17-logistic-reg-slides.html#logistic-regression---model-fitting",
     "title": "Logistic Regression \n",
     "section": "Logistic Regression - Model Fitting",
     "text": "Logistic Regression - Model Fitting\n\nSpecify the model with logistic_reg() \nUse \"glm\" instead of \"lm\" as the engine\n\n\nlibrary(tidymodels)\nshow_engines(\"logistic_reg\")\n\n# A tibble: 7 × 2\n  engine    mode          \n  &lt;chr&gt;     &lt;chr&gt;         \n1 glm       classification\n2 glmnet    classification\n3 LiblineaR classification\n4 spark     classification\n5 keras     classification\n6 stan      classification\n7 brulee    classification"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#logistic-regression---model-fitting-1",
-    "href": "slides/16-logistic-reg-slides.html#logistic-regression---model-fitting-1",
+    "objectID": "slides/17-logistic-reg-slides.html#logistic-regression---model-fitting-1",
+    "href": "slides/17-logistic-reg-slides.html#logistic-regression---model-fitting-1",
     "title": "Logistic Regression \n",
     "section": "Logistic Regression - Model Fitting",
     "text": "Logistic Regression - Model Fitting\n\nDefine family = \"binomial\"\n\n\n\nlogis_out &lt;- logistic_reg() |&gt; \n    fit(GENDER ~ HEIGHT, \n        data = body, \n        family = \"binomial\")\nlogis_out_fit &lt;- logis_out$fit\n\n\n\nlogis_out_fit$coefficients\n\n(Intercept)      HEIGHT \n    -40.548       0.242 \n\n\n\n\nPr(GENDER = 1) When HEIGHT is 170 cm\n\n\\[ \\hat{\\pi}(x = 170) = \\frac{1}{1+\\exp(-\\hat{\\beta}_0-\\hat{\\beta}_1 x)} = \\frac{1}{1+\\exp(-(-40.55) - 0.24 \\times 170)} = 63.3\\%\\]\n\npredict(logis_out_fit, newdata = data.frame(HEIGHT = 170), type = \"response\")\n\n    1 \n0.633"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#probability-curve-1",
-    "href": "slides/16-logistic-reg-slides.html#probability-curve-1",
+    "objectID": "slides/17-logistic-reg-slides.html#probability-curve-1",
+    "href": "slides/17-logistic-reg-slides.html#probability-curve-1",
     "title": "Logistic Regression \n",
     "section": "Probability Curve",
     "text": "Probability Curve\n\npi_hat &lt;- predict(logis_out$fit, type = \"response\")\npi_hat |&gt; head()\n\n     1      2      3      4      5      6 \n0.7369 0.9880 0.0383 0.1480 0.9383 0.4375 \n\nbody$HEIGHT |&gt; head()\n\n[1] 172 186 154 160 179 167\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n160 cm, Pr(male) = 0.13\n170 cm, Pr(male) = 0.63\n180 cm, Pr(male) = 0.95"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#section-2",
-    "href": "slides/16-logistic-reg-slides.html#section-2",
+    "objectID": "slides/17-logistic-reg-slides.html#section-2",
+    "href": "slides/17-logistic-reg-slides.html#section-2",
     "title": "Logistic Regression \n",
     "section": "",
     "text": "21-Logistic Regression \nIn lab.qmd ## Lab 21 section,\n\nUse our fitted logistic regression model to predict whether you are male or female! Change 175 to your height (cm).\nUse the converter to get your height in cm!\n\n\n# Fit the logistic regression\n\npredict(logis_out_fit, newdata = data.frame(HEIGHT = 175), \n        type = \"response\")\n\n    1 \n0.853"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#sklearn.linear_model.logisticregression",
-    "href": "slides/16-logistic-reg-slides.html#sklearn.linear_model.logisticregression",
+    "objectID": "slides/17-logistic-reg-slides.html#sklearn.linear_model.logisticregression",
+    "href": "slides/17-logistic-reg-slides.html#sklearn.linear_model.logisticregression",
     "title": "Logistic Regression \n",
     "section": "sklearn.linear_model.LogisticRegression",
     "text": "sklearn.linear_model.LogisticRegression\n\nlibrary(reticulate); py_install(\"scikit-learn\")\n\n\nimport numpy as np\nimport pandas as pd\nfrom sklearn.linear_model import LogisticRegression\n\n\n\n\nbody = pd.read_csv('./data/body.csv')\nx = np.array(body[['HEIGHT']]) ## 2d array with one column\ny = np.array(body['GENDER']) ## 1d array\n\n\nx[0:4]\n\narray([[172. ],\n       [186. ],\n       [154.4],\n       [160.5]])\n\ny[0:4]\n\narray([0, 1, 0, 1])"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#sklearn.linear_model.logisticregression-1",
-    "href": "slides/16-logistic-reg-slides.html#sklearn.linear_model.logisticregression-1",
+    "objectID": "slides/17-logistic-reg-slides.html#sklearn.linear_model.logisticregression-1",
+    "href": "slides/17-logistic-reg-slides.html#sklearn.linear_model.logisticregression-1",
     "title": "Logistic Regression \n",
     "section": "sklearn.linear_model.LogisticRegression",
     "text": "sklearn.linear_model.LogisticRegression\n\nclf = LogisticRegression().fit(x, y)\nclf.coef_\n\narray([[0.24154889]])\n\nclf.intercept_\n\narray([-40.51727266])\n\n\n\n\n\nnew_height = np.array([160, 170, 180]).reshape(-1, 1)\n\n\nclf.predict(new_height)\n\narray([0, 1, 1])\n\n\n\n\n\n\nclf.predict_proba(new_height)\n\narray([[0.86639467, 0.13360533],\n       [0.36678399, 0.63321601],\n       [0.04919451, 0.95080549]])"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#evaluation-metrics",
-    "href": "slides/16-logistic-reg-slides.html#evaluation-metrics",
+    "objectID": "slides/17-logistic-reg-slides.html#evaluation-metrics",
+    "href": "slides/17-logistic-reg-slides.html#evaluation-metrics",
     "title": "Logistic Regression \n",
     "section": "Evaluation Metrics1\n",
     "text": "Evaluation Metrics1\n\n\nConfusion Matrix\n\n\n\n\n\n\n\n\n\nTrue 0\nTrue 1\n\n\n\nPredict 0\nTrue Negative (TN)\nFalse Negative (FN)\n\n\nPredict 1\nFalse Positive (FP)\nTrue Positive (TP)\n\n\n\n\nSensitivity (True Positive Rate) \\(= P( \\text{predict 1} \\mid \\text{true 1}) = \\frac{TP}{TP+FN}\\)\nSpecificity (True Negative Rate) \\(= P( \\text{predict 0} \\mid \\text{true 0}) = \\frac{TN}{FP+TN}\\)\nAccuracy \\(= \\frac{TP + TN}{TP+FN+FP+TN}\\)\n\nMore on Wiki page."
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#receiver-operating-characteristic-roc-curve",
-    "href": "slides/16-logistic-reg-slides.html#receiver-operating-characteristic-roc-curve",
+    "objectID": "slides/17-logistic-reg-slides.html#receiver-operating-characteristic-roc-curve",
+    "href": "slides/17-logistic-reg-slides.html#receiver-operating-characteristic-roc-curve",
     "title": "Logistic Regression \n",
     "section": "Receiver Operating Characteristic (ROC) Curve",
     "text": "Receiver Operating Characteristic (ROC) Curve\n\n\n\n\n\n\n\n\nTrue 0\nTrue 1\n\n\n\nPredict 0\nTrue Negative (TN)\nFalse Negative (FN)\n\n\nPredict 1\nFalse Positive (FP)\nTrue Positive (TP)\n\n\n\n\n\nReceiver operating characteristic (ROC) curve plots True Positive Rate (Sensitivity) vs. False Positive Rate (1 - Specificity)"
   },
   {
-    "objectID": "slides/16-logistic-reg-slides.html#comparing-models",
-    "href": "slides/16-logistic-reg-slides.html#comparing-models",
+    "objectID": "slides/17-logistic-reg-slides.html#comparing-models",
+    "href": "slides/17-logistic-reg-slides.html#comparing-models",
     "title": "Logistic Regression \n",
     "section": "Comparing Models",
     "text": "Comparing Models\n\nWhich model performs better?"

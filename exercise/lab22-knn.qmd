@@ -56,7 +56,7 @@ body <- bodydata |>
     mutate(GENDER = as.factor(GENDER))
 
 ## training and test data
-set.seed(2025)
+set.seed(2026)
 df_split <- initial_split(data = body, prop = 0.8)
 df_trn <- training(df_split)
 df_tst <- testing(df_split)
@@ -93,7 +93,7 @@ X = body[['HEIGHT', 'WAIST']]
 y = body['GENDER']
 
 ## training and test data
-X_trn, X_tst, y_trn, y_tst = train_test_split(X, y, test_size=0.2, random_state=2025)
+X_trn, X_tst, y_trn, y_tst = train_test_split(X, y, test_size=0.2, random_state=2026)
 
 ## KNN training
 knn = KNeighborsClassifier(n_neighbors = 3)

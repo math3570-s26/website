@@ -30,7 +30,7 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 |  | Thu, Mar 19 | Linear Regression | [🖥️linear-regression](/slides/16-linear-reg-slides.html) | [📋20](/exercise/lab20-slr.html) |  |  |
 | 11 | Tue, Mar 24 | Multiple Linear Regression |  |  | [Activity 3](ai/ai_3.html) |  |
 |  | **Thu, Mar 26** | [**Mini Project 2 Presentation: Data Wrangling and Pipelines**](/project/mini_project_2.html) |  |  |  |  |
-| 12 | Tue, Mar 31 | Logistic Regression | [🖥️logistic-regression](/slides/17-logistic-reg-slides.html) | [📋21](/exercise/lab21-logistic.html) | [Activity 4](ai/ai_4.html) |  |
+| 12 | Tue, Mar 31 | Logistic Regression | [🖥️logistic-regression](/slides/17-logistic-reg-slides.html) | [📋21](/exercise/lab21-logistic.html) [body.csv](/slides/data/body.csv) | [Activity 4](ai/ai_4.html) |  |
 |  | Thu, Apr 2 | ***NO CLASS: Easter break*** |  |  |  |  |
 | 13 | Tue, Apr 7 | Logistic Regression; Data Splitting | 🖥️ K-Nearest Neighbors |  |  |  |
 |  | Thu, Apr 9 | K-Nearest Neighbors |  |  | Activity 5 |  |

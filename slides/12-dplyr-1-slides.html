@@ -6,11 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.19">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MATH/COSC 3570 - Spring 2026 – Data Wrangling - one data frame 🛠</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-532d7cf0118a87c113db4841f54938d0.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-eec6eec107f2af84d44e541b84d083fe.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -337,7 +337,7 @@ Grammar of Data Manipulation
           display:block!important;
       }</style></aside></section><section id="data-us-gun-murders-by-state-for-2010" class="slide level2"><h2>Data: US gun murders by state for 2010</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">murders</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/murders.csv"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">murders</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/murders.csv"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 5
   state      abb   region population total
@@ -378,8 +378,8 @@ Grammar of Data Manipulation
 </li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">murders</span> <span class="op">&lt;-</span> <span class="va">murders</span> <span class="op">|&gt;</span>  </span>
-<span>     <span class="fu">mutate</span><span class="op">(</span>rate <span class="op">=</span> <span class="va">total</span> <span class="op">/</span> <span class="va">population</span> <span class="op">*</span> <span class="fl">100000</span><span class="op">)</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">murders</span> <span class="op">&lt;-</span> <span class="va">murders</span> <span class="op">|&gt;</span>  </span>
+<span>     <span class="fu">mutate</span><span class="op">(</span>rate <span class="op">=</span> <span class="va">total</span> <span class="op">/</span> <span class="va">population</span> <span class="op">*</span> <span class="fl">100000</span><span class="op">)</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 6
   state      abb   region population total  rate
@@ -437,10 +437,10 @@ Grammar of Data Manipulation
 </li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter the data table to only show the entries for which </span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter the data table to only show the entries for which </span></span>
 <span><span class="co"># the murder rate is lower than 0.7</span></span>
 <span><span class="va">murders</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 6
   state         abb   region        population total  rate
@@ -471,9 +471,9 @@ Grammar of Data Manipulation
       }</style></aside></section><section id="filter-for-many-conditions-at-once" class="slide level2"><h2>
 <code>filter()</code> for Many Conditions at Once</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span>  </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span>  </span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">rate</span> <span class="op">&gt;</span> <span class="fl">0.1</span> <span class="op">&amp;</span> <span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span>,  <span class="co">#&lt;&lt;</span></span>
-<span>           <span class="va">region</span> <span class="op">==</span> <span class="st">"Northeast"</span><span class="op">)</span>  <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>           <span class="va">region</span> <span class="op">==</span> <span class="st">"Northeast"</span><span class="op">)</span>  <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 6
   state         abb   region    population total  rate
@@ -502,9 +502,9 @@ Grammar of Data Manipulation
       }</style></aside></section><section id="slice-for-certain-rows-using-indexes" class="slide level2"><h2>
 <a href="https://dplyr.tidyverse.org/reference/slice.html"><code>slice()</code></a> for Certain Rows using Indexes</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># 3rd to 6th row</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># 3rd to 6th row</span></span>
 <span><span class="va">murders</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu">slice</span><span class="op">(</span><span class="fl">3</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu">slice</span><span class="op">(</span><span class="fl">3</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 6
   state      abb   region population total  rate
@@ -522,7 +522,7 @@ Grammar of Data Manipulation
 </div>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">6</span>, <span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">6</span>, <span class="op">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 6
   state      abb   region population total  rate
@@ -555,8 +555,8 @@ Grammar of Data Manipulation
 </section><section id="distinct-to-filter-for-unique-rows" class="slide level2"><h2>
 <a href="https://dplyr.tidyverse.org/reference/distinct.html"><code>distinct()</code></a> to Filter for Unique Rows</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Select only unique/distinct rows from a data frame</span></span>
-<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">region</span><span class="op">)</span>  <span class="co">## default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Select only unique/distinct rows from a data frame</span></span>
+<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">region</span><span class="op">)</span>  <span class="co">## default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 1
   region       
@@ -566,7 +566,7 @@ Grammar of Data Manipulation
 3 Northeast    
 4 North Central</code></pre>
 </div>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">region</span>, .keep_all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co">## keep all other variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">region</span>, .keep_all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co">## keep all other variables</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 6
   state       abb   region        population total  rate
@@ -599,7 +599,7 @@ Grammar of Data Manipulation
       }</style></aside></section><section id="distinct-grabs-first-row-of-the-unique-value" class="slide level2"><h2>
 <code>distinct()</code> Grabs First Row of The Unique Value</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">region</span>, .keep_all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">region</span>, .keep_all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 6
   state       abb   region        population total  rate
@@ -611,7 +611,7 @@ Grammar of Data Manipulation
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">slice</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">slice</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 6
   state      abb   region population total  rate
@@ -630,15 +630,15 @@ Grammar of Data Manipulation
 <li><p><strong>The order of variable names matters!</strong></p></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">murders</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">murders</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "state"      "abb"        "region"     "population" "total"     
 [6] "rate"      </code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># select three columns, assign this to a new object</span></span>
-<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="va">region</span>, <span class="va">rate</span>, <span class="va">state</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># select three columns, assign this to a new object</span></span>
+<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="va">region</span>, <span class="va">rate</span>, <span class="va">state</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 3
   region  rate state     
@@ -672,8 +672,8 @@ Grammar of Data Manipulation
       }</style></aside></section><section id="select-to-exclude-variables" class="slide level2"><h2>
 <code>select()</code> to Exclude Variables</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## exclude variable population</span></span>
-<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="op">-</span><span class="va">population</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## exclude variable population</span></span>
+<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="op">-</span><span class="va">population</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 5
   state      abb   region total  rate
@@ -703,13 +703,13 @@ Grammar of Data Manipulation
       }</style></aside></section><section id="select-a-range-of-variables" class="slide level2"><h2>
 <code>select()</code> a Range of Variables</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">murders</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">murders</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "state"      "abb"        "region"     "population" "total"     
 [6] "rate"      </code></pre>
 </div>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## from region to rate</span></span>
-<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="va">region</span><span class="op">:</span><span class="va">rate</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## from region to rate</span></span>
+<span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="va">region</span><span class="op">:</span><span class="va">rate</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 4
   region population total  rate
@@ -744,7 +744,7 @@ Grammar of Data Manipulation
 <code>starts_with()</code> is a <a href="https://tidyselect.r-lib.org/index.html"><strong>tidy-select</strong></a> helper function.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="fu">starts_with</span><span class="op">(</span><span class="st">"r"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="fu">starts_with</span><span class="op">(</span><span class="st">"r"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 2
   region  rate
@@ -779,7 +779,7 @@ Grammar of Data Manipulation
 <code>ends_with()</code> is a <a href="https://tidyselect.r-lib.org/reference/index.html"><strong>tidy-select</strong></a> helper function.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="fu">ends_with</span><span class="op">(</span><span class="st">"ion"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="fu">ends_with</span><span class="op">(</span><span class="st">"ion"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 2
   region population
@@ -850,8 +850,8 @@ Grammar of Data Manipulation
 </li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">new_table</span> <span class="op">&lt;-</span> <span class="fu">select</span><span class="op">(</span><span class="va">murders</span>, <span class="va">state</span>, <span class="va">region</span>, <span class="va">rate</span><span class="op">)</span> </span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">new_table</span>, <span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">new_table</span> <span class="op">&lt;-</span> <span class="fu">select</span><span class="op">(</span><span class="va">murders</span>, <span class="va">state</span>, <span class="va">region</span>, <span class="va">rate</span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">new_table</span>, <span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
   state         region         rate
@@ -889,8 +889,8 @@ Grammar of Data Manipulation
 <li>Method 2: Apply one function onto the other with no intermediate object</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## not so easy to read and understand</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="fu">select</span><span class="op">(</span><span class="va">murders</span>, <span class="va">state</span>, <span class="va">region</span>, <span class="va">rate</span><span class="op">)</span>, <span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## not so easy to read and understand</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="fu">select</span><span class="op">(</span><span class="va">murders</span>, <span class="va">state</span>, <span class="va">region</span>, <span class="va">rate</span><span class="op">)</span>, <span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
   state         region         rate
@@ -924,9 +924,9 @@ Grammar of Data Manipulation
 <p><strong>data &gt; <em>select()</em> &gt; data after selecting &gt; <em>filter()</em> &gt; data after selecting and filtering</strong></p>
 </blockquote>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu">select</span><span class="op">(</span><span class="va">state</span>, <span class="va">region</span>, <span class="va">rate</span><span class="op">)</span> <span class="op">|&gt;</span>  </span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">rate</span> <span class="op">&lt;</span> <span class="fl">0.7</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
   state         region         rate
@@ -959,8 +959,8 @@ Grammar of Data Manipulation
 <code>summarize()</code> provides a data frame that summarizes the statistics we compute.</li>
 </ul>
 <!-- - The output is always a data frame. --><div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">heights</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/heights.csv"</span><span class="op">)</span></span>
-<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">heights</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">heights</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/heights.csv"</span><span class="op">)</span></span>
+<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">heights</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,050
 Columns: 2
@@ -987,23 +987,23 @@ $ height &lt;dbl&gt; 75, 70, 68, 74, 61, 65, 66, 62, 66, 67, 72, 72, 69, 68, 69,
       }</style></aside></section><section id="summarizing-data-summarize-1" class="slide level2"><h2>Summarizing Data – <code>summarize()</code>
 </h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">s</span> <span class="op">&lt;-</span> <span class="va">heights</span> <span class="op">|&gt;</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">s</span> <span class="op">&lt;-</span> <span class="va">heights</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span> <span class="op">==</span> <span class="st">"Female"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu">summarize</span><span class="op">(</span>avg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span>,  </span>
 <span>              stdev <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span>,</span>
 <span>              med <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span>, </span>
-<span>              min <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>              min <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
     avg stdev   med   min
   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 1  64.9  3.76  65.0    51</code></pre>
 </div>
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">s</span><span class="op">$</span><span class="va">avg</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">s</span><span class="op">$</span><span class="va">avg</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 64.9</code></pre>
 </div>
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">s</span><span class="op">$</span><span class="va">min</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">s</span><span class="op">$</span><span class="va">min</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 51</code></pre>
 </div>
@@ -1033,9 +1033,9 @@ $ height &lt;dbl&gt; 75, 70, 68, 74, 61, 65, 66, 62, 66, 67, 72, 72, 69, 68, 69,
 <li>One variable <code>quans</code> that has 3 values. The output is a 3 by 1 data frame.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">s2</span> <span class="op">&lt;-</span> <span class="va">heights</span> <span class="op">|&gt;</span>  </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">s2</span> <span class="op">&lt;-</span> <span class="va">heights</span> <span class="op">|&gt;</span>  </span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span> <span class="op">==</span> <span class="st">"Female"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu">summarize</span><span class="op">(</span>quans <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">height</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="fl">0.9</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu">summarize</span><span class="op">(</span>quans <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">height</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="fl">0.9</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
 dplyr 1.1.0.
@@ -1068,8 +1068,8 @@ dplyr 1.1.0.
       }</style></aside></section><section id="grouping-group_by" class="slide level2"><h2>Grouping – <code>group_by()</code>
 </h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">heights_group</span> <span class="op">&lt;-</span> <span class="va">heights</span> <span class="op">|&gt;</span> </span>
-<span>     <span class="fu">group_by</span><span class="op">(</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span>  <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">heights_group</span> <span class="op">&lt;-</span> <span class="va">heights</span> <span class="op">|&gt;</span> </span>
+<span>     <span class="fu">group_by</span><span class="op">(</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span>  <span class="co">#&lt;&lt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,050 × 2
 # Groups:   sex [2]
@@ -1085,7 +1085,7 @@ dplyr 1.1.0.
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">heights_group</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">heights_group</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "grouped_df" "tbl_df"     "tbl"        "data.frame"</code></pre>
 </div>
@@ -1118,10 +1118,10 @@ dplyr 1.1.0.
 <code>summarize()</code> applies the summarization to <strong>each group separately</strong>.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">heights</span> <span class="op">|&gt;</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">heights</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu">group_by</span><span class="op">(</span><span class="va">sex</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu">summarize</span><span class="op">(</span>avg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span>, stdev <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span>, </span>
-<span>              med <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span>, min <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>              med <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span>, min <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   sex      avg stdev   med   min
@@ -1132,9 +1132,9 @@ dplyr 1.1.0.
 </div>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span>  </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders</span> <span class="op">|&gt;</span>  </span>
 <span>    <span class="fu">group_by</span><span class="op">(</span><span class="va">region</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu">summarize</span><span class="op">(</span>median_rate <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">rate</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu">summarize</span><span class="op">(</span>median_rate <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">rate</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 2
   region        median_rate
@@ -1171,9 +1171,9 @@ dplyr 1.1.0.
 <code>arrange()</code> orders entire data tables.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## order the states by population size</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## order the states by population size</span></span>
 <span><span class="va">murders</span> <span class="op">|&gt;</span>  </span>
-<span>    <span class="fu">arrange</span><span class="op">(</span><span class="va">population</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu">arrange</span><span class="op">(</span><span class="va">population</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 6
   state                abb   region        population total   rate
@@ -1222,7 +1222,7 @@ dplyr 1.1.0.
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a aria-hidden="true" tabindex="-1"></a>_______ <span class="ot">&lt;-</span> _______ <span class="sc">|&gt;</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a aria-hidden="true" tabindex="-1"></a>_______ <span class="ot">&lt;-</span> _______ <span class="sc">|&gt;</span> </span>
 <span id="cb78-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(_______) <span class="sc">|&gt;</span> </span>
 <span id="cb78-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(_______) <span class="sc">|&gt;</span> </span>
 <span id="cb78-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(_______)</span>
@@ -1230,7 +1230,7 @@ dplyr 1.1.0.
 <span id="cb78-6"><a aria-hidden="true" tabindex="-1"></a>_______ <span class="sc">|&gt;</span>  </span>
 <span id="cb78-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(______) <span class="sc">|&gt;</span> </span>
 <span id="cb78-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(______) <span class="sc">|&gt;</span> </span>
-<span id="cb78-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(_______)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb78-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(_______)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
@@ -1273,12 +1273,12 @@ Data Manipulation
           display:block!important;
       }</style></aside></section><section id="section-6" class="slide level2"><h2></h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb81-2"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb81-2"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a aria-hidden="true" tabindex="-1"></a>murders <span class="op">=</span> pd.read_csv(<span class="st">'./data/murders.csv'</span>)</span>
-<span id="cb82-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a aria-hidden="true" tabindex="-1"></a>murders <span class="op">=</span> pd.read_csv(<span class="st">'./data/murders.csv'</span>)</span>
+<span id="cb82-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   state abb         region  population  total
 0                Alabama  AL          South     4779736    135
@@ -1341,11 +1341,11 @@ Data Manipulation
 <li><p><span class="green">Have to use <code>murders.total</code> and <code>murders.population</code> instead of <code>total</code> and <code>popution</code>.</span></p></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a aria-hidden="true" tabindex="-1"></a>murders <span class="op">=</span> murders.assign(</span>
-<span id="cb84-2"><a aria-hidden="true" tabindex="-1"></a>    rate <span class="op">=</span> <span class="bu">round</span>(murders.total <span class="op">/</span> murders.population <span class="op">*</span> <span class="dv">100000</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a aria-hidden="true" tabindex="-1"></a>murders <span class="op">=</span> murders.assign(</span>
+<span id="cb84-2"><a aria-hidden="true" tabindex="-1"></a>    rate <span class="op">=</span> <span class="bu">round</span>(murders.total <span class="op">/</span> murders.population <span class="op">*</span> <span class="dv">100000</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.head(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.head(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        state abb region  population  total  rate
 0     Alabama  AL  South     4779736    135  2.82
@@ -1374,7 +1374,7 @@ Data Manipulation
 <li><p><span class="green">Cannot write <code>murders.rate</code>, and should use <code>rate</code>.</span></p></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.query(expr<span class="op">=</span><span class="st">"rate &lt; 0.7"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.query(expr<span class="op">=</span><span class="st">"rate &lt; 0.7"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            state abb         region  population  total  rate
 11         Hawaii  HI           West     1360301      7  0.51
@@ -1391,7 +1391,7 @@ Data Manipulation
 <li><p><span class="green">Have to be strings</span></p></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.<span class="bu">filter</span>(items<span class="op">=</span>[<span class="st">'region'</span>, <span class="st">'rate'</span>, <span class="st">'state'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.<span class="bu">filter</span>(items<span class="op">=</span>[<span class="st">'region'</span>, <span class="st">'rate'</span>, <span class="st">'state'</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           region   rate                 state
 0           South   2.82               Alabama
@@ -1453,18 +1453,18 @@ Data Manipulation
 <li><code>dplyr::group_by() + dplyr::summarize()</code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a aria-hidden="true" tabindex="-1"></a>heights <span class="op">=</span> pd.read_csv(<span class="st">'./data/heights.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a aria-hidden="true" tabindex="-1"></a>heights <span class="op">=</span> pd.read_csv(<span class="st">'./data/heights.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a aria-hidden="true" tabindex="-1"></a>heights.groupby(by<span class="op">=</span><span class="st">'sex'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a aria-hidden="true" tabindex="-1"></a>heights.groupby(by<span class="op">=</span><span class="st">'sex'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;pandas.api.typing.DataFrameGroupBy object at 0x347442930&gt;</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">## a data frame</span></span>
-<span id="cb94-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(heights.groupby(by<span class="op">=</span><span class="st">'sex'</span>).agg(func<span class="op">=</span>[<span class="st">'mean'</span>, <span class="st">'std'</span>, <span class="st">'median'</span>, <span class="st">'min'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">## a data frame</span></span>
+<span id="cb94-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(heights.groupby(by<span class="op">=</span><span class="st">'sex'</span>).agg(func<span class="op">=</span>[<span class="st">'mean'</span>, <span class="st">'std'</span>, <span class="st">'median'</span>, <span class="st">'min'</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           height                           
              mean       std     median   min
@@ -1480,7 +1480,7 @@ Male    69.314755  3.611024  69.000000  50.0</code></pre>
 <li><code><a href="https://dplyr.tidyverse.org/reference/arrange.html">dplyr::arrange()</a></code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.sort_values(<span class="st">'population'</span>).head(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.sort_values(<span class="st">'population'</span>).head(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   state abb         region  population  total   rate
 50               Wyoming  WY           West      563626      5   0.89
@@ -1495,7 +1495,7 @@ Male    69.314755  3.611024  69.000000  50.0</code></pre>
 <li><code>dplyr::arrange(desc())</code></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.sort_values(<span class="st">'rate'</span>, ascending <span class="op">=</span> <span class="va">False</span>).head(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(murders.sort_values(<span class="st">'rate'</span>, ascending <span class="op">=</span> <span class="va">False</span>).head(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   state abb         region  population  total   rate
 8   District of Columbia  DC          South      601723     99  16.45

@@ -33,8 +33,8 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 | 12 | Tue, Mar 31 | Logistic Regression | [🖥️logistic-regression](/slides/17-logistic-reg-slides.html) | [📋21](/exercise/lab21-logistic.html) [body.csv](/slides/data/body.csv) | [Activity 4](ai/ai_4.html) |  |
 |  | Thu, Apr 2 | ***NO CLASS: Easter break*** |  |  |  |  |
 | 13 | Tue, Apr 7 | Logistic Regression; Data Splitting | [🖥️ K-nearest neighbors](/slides/18-knn-slides.html) |  |  |  |
-|  | Thu, Apr 9 | K-Nearest Neighbors |  | 📋22 | Activity 5 |  |
-| 14 | Tue, Apr 14 | Decision Trees | 🖥️ decision Trees |  |  |  |
+|  | Thu, Apr 9 | K-Nearest Neighbors |  | [📋22](/exercise/lab22-knn.html) |  |  |
+| 14 | Tue, Apr 14 | Decision Trees | [🖥️ decision Trees](/slides/19-trees-slides.html) |  | Activity 5 |  |
 |  | Thu, Apr 16 | Principal Component Analysis | 🖥️principal component analysis |  |  |  |
 | 15 | **Tue, Apr 21** | **Mini Project 3 Presentation: Supervised Learning** |  |  |  |  |
 |  | Thu, Apr 23 | Principal Component Analysis |  | 📋23 | Activity 6 | 📂 Final Project Proposal Due |

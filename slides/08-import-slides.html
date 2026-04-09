@@ -6,11 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.19">
+<meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MATH/COSC 3570 - Spring 2026 – Data Importing </title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-eec6eec107f2af84d44e541b84d083fe.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-532d7cf0118a87c113db4841f54938d0.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -294,7 +294,7 @@ Rectangular Data
 <p><strong>Be careful</strong>: The suffix usually tells us what type of file it is, but no guarantee that these always match.</p>
 </div>
 <div class="cell" data-layout-align="center" data-highlight.output="true">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_lines.html">read_lines</a></span><span class="op">(</span><span class="st">"./data/murders.csv"</span>, n_max <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>  <span class="co">## there is a header</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_lines.html">read_lines</a></span><span class="op">(</span><span class="st">"./data/murders.csv"</span>, n_max <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>  <span class="co">## there is a header</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "state,abb,region,population,total" "Alabama,AL,South,4779736,135"     
 [3] "Alaska,AK,West,710231,19"         </code></pre>
@@ -322,13 +322,13 @@ Rectangular Data
 </section><section id="reading-data" class="slide level2"><h2>Reading Data</h2>
 <p><code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> prints out a column specification giving us <strong>delimiter</strong>, <strong>name</strong> and <strong>type</strong> of each column.</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders_csv</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"./data/murders.csv"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">murders_csv</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"./data/murders.csv"</span><span class="op">)</span></span>
 <span><span class="co"># Rows: 51 Columns: 5</span></span>
 <span><span class="co"># ── Column specification ─────────────</span></span>
 <span><span class="co"># Delimiter: ","</span></span>
 <span><span class="co"># chr (3): state, abb, region</span></span>
 <span><span class="co"># dbl (2): population, total</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">murders_csv</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">murders_csv</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   state      abb   region population total
@@ -342,8 +342,8 @@ Rectangular Data
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## View data in RStudio</span></span>
-<span><span class="fu">view</span><span class="op">(</span><span class="va">murders_csv</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## View data in RStudio</span></span>
+<span><span class="fu">view</span><span class="op">(</span><span class="va">murders_csv</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes"><ul>
 <li>OK. Let’s try to read the murders.csv file into R. We use read_csv(), and in the first argument, we tell R its file path. Your path is generally not the same as my path, so you get to change it to your path.</li>
@@ -380,7 +380,7 @@ Rectangular Data
 <strong>Type coercion</strong><sup>1</sup> happens and all column elements are transformed to character type.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/df-na.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/df-na.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre class="my_class500"><code># A tibble: 9 × 3
   x     y              z     
@@ -422,8 +422,8 @@ Rectangular Data
 <li>Specify the values that are used to represent missing values by argument <code>na</code>.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/df-na.csv"</span>, </span>
-<span>         na <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"NA"</span>, <span class="st">"."</span>, <span class="st">"9999"</span>, <span class="st">"Not applicable"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/df-na.csv"</span>, </span>
+<span>         na <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"NA"</span>, <span class="st">"."</span>, <span class="st">"9999"</span>, <span class="st">"Not applicable"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -473,10 +473,10 @@ Rectangular Data
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/df-na.csv"</span>, </span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"./data/df-na.csv"</span>, </span>
 <span>         col_types <span class="op">=</span> <span class="fu">cols</span><span class="op">(</span><span class="fu">col_double</span><span class="op">(</span><span class="op">)</span>, </span>
 <span>                     <span class="fu">col_character</span><span class="op">(</span><span class="op">)</span>, </span>
-<span>                     <span class="fu">col_character</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span>                     <span class="fu">col_character</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
 e.g.:
@@ -500,11 +500,11 @@ e.g.:
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">problems</span><span class="op">(</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">problems</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co"># A tibble: 1 × 5</span></span>
 <span><span class="co">#     row   col expected actual file </span></span>
 <span><span class="co">#   &lt;int&gt; &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;</span></span>
-<span><span class="co"># 1     7     1 a double .      "" </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="co"># 1     7     1 a double .      "" </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div></div>
 <aside class="notes"><ul>
@@ -598,7 +598,7 @@ e.g.:
           display:block!important;
       }</style></aside></section><section id="writing-data-1" class="slide level2"><h2>Writing Data</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">iris</span>, n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">iris</span>, n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 1          5.1         3.5          1.4         0.2  setosa
@@ -607,10 +607,10 @@ e.g.:
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## save iris data to "./data/iris.csv"</span></span>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## save iris data to "./data/iris.csv"</span></span>
 <span><span class="va">iris</span> <span class="op">|&gt;</span> <span class="fu">write_csv</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"./data/iris.csv"</span><span class="op">)</span></span>
 <span><span class="va">df_iris</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"./data/iris.csv"</span><span class="op">)</span></span>
-<span><span class="va">df_iris</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="va">df_iris</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 5
   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -638,14 +638,14 @@ e.g.:
 <li>Import <strong>ssa_male_prob.csv</strong> in the data folder using <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> and call it <code>ssa_male</code>.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a>ssa_male <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read____</span>(____________)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a>ssa_male <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read____</span>(____________)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Plot <code>Age</code> (x-axis) vs.&nbsp;<code>LifeExp</code> (y-axis). The type is “line”, and the line color is blue. Add x-label, y-label and title to your plot.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> _____, <span class="at">y =</span> _____, <span class="at">type =</span> ______, <span class="at">col =</span> ______,</span>
-<span id="cb29-2"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> ______, <span class="at">ylab =</span> _______, <span class="at">main =</span> ____________)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> _____, <span class="at">y =</span> _____, <span class="at">type =</span> ______, <span class="at">col =</span> ______,</span>
+<span id="cb29-2"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> ______, <span class="at">ylab =</span> _______, <span class="at">main =</span> ____________)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <!-- - Use `lines()` to add a line of `Age` (x-axis) vs. `LifeExp` (y-axis) for `Male` to the plot. The color is blue. -->
 <!-- ```{r} -->
@@ -658,13 +658,13 @@ e.g.:
 <li>Save the data <code>penguins_raw</code> in the R <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code> package</a> to “./data/penguins_df.csv”. Print <code>penguins_df.csv</code> out.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">_________</span>(palmerpenguins)</span>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">_________</span>(palmerpenguins)</span>
 <span id="cb30-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">write______</span>()</span>
-<span id="cb30-3"><a aria-hidden="true" tabindex="-1"></a>penguins_df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb30-3"><a aria-hidden="true" tabindex="-1"></a>penguins_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <aside class="notes"><div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="va">ssa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"./data/ssa-death-probability.csv"</span><span class="op">)</span></span>
 <span><span class="va">ssa_male</span> <span class="op">&lt;-</span> <span class="va">ssa</span><span class="op">[</span><span class="va">ssa</span><span class="op">$</span><span class="va">Sex</span> <span class="op">==</span> <span class="st">"Male"</span>, <span class="op">]</span></span>
 <span><span class="va">ssa_female</span> <span class="op">&lt;-</span> <span class="va">ssa</span><span class="op">[</span><span class="va">ssa</span><span class="op">$</span><span class="va">Sex</span> <span class="op">==</span> <span class="st">"Female"</span>, <span class="op">]</span></span>
@@ -672,7 +672,7 @@ e.g.:
 <span>     type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="fl">2</span>, lwd <span class="op">=</span> <span class="fl">3</span>,</span>
 <span>     xlab <span class="op">=</span> <span class="st">"Age"</span>, ylab <span class="op">=</span> <span class="st">"Life Exp"</span>,</span>
 <span>     main <span class="op">=</span> <span class="st">"Age vs. Life Exp by Gender"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">ssa_male</span><span class="op">$</span><span class="va">Age</span>, <span class="va">ssa_male</span><span class="op">$</span><span class="va">LifeExp</span>, col <span class="op">=</span> <span class="fl">4</span>, lwd <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">ssa_male</span><span class="op">$</span><span class="va">Age</span>, <span class="va">ssa_male</span><span class="op">$</span><span class="va">LifeExp</span>, col <span class="op">=</span> <span class="fl">4</span>, lwd <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -741,8 +741,8 @@ Read Excel Data
 <li>The <code><a href="https://readxl.tidyverse.org/reference/excel_sheets.html">excel_sheets()</a></code> gives us the names of all the sheets in an Excel file.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://readxl.tidyverse.org/reference/excel_sheets.html">excel_sheets</a></span><span class="op">(</span><span class="st">"./data/2010_bigfive_regents.xls"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://readxl.tidyverse.org/reference/excel_sheets.html">excel_sheets</a></span><span class="op">(</span><span class="st">"./data/2010_bigfive_regents.xls"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Sheet1" "Sheet2" "Sheet3"</code></pre>
 </div>
@@ -767,13 +767,13 @@ Read Excel Data
 <li>The sheet names can be passed to the <code>sheet</code> argument to read sheets other than the first.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readxl.tidyverse.org/reference/excel_sheets.html">excel_sheets</a></span><span class="op">(</span><span class="st">"./data/2010_bigfive_regents.xls"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readxl.tidyverse.org/reference/excel_sheets.html">excel_sheets</a></span><span class="op">(</span><span class="st">"./data/2010_bigfive_regents.xls"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Sheet1" "Sheet2" "Sheet3"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">data_xls</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_xls</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"./data/2010_bigfive_regents.xls"</span>, </span>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="va">data_xls</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_xls</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"./data/2010_bigfive_regents.xls"</span>, </span>
 <span>                      sheet <span class="op">=</span> <span class="st">"Sheet3"</span>, </span>
-<span>                      skip <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span>                      skip <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 19 × 6
   Scores `131024` `113804` `104201` `103886` `91756`
@@ -817,11 +817,11 @@ Read Excel Data
 </div>
 </section><section id="pd.read_csv" class="slide level2"><h2><code>pd.read_csv</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb38-2"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb38-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-4"><a aria-hidden="true" tabindex="-1"></a>py_df <span class="op">=</span> pd.read_csv(<span class="st">'./data/murders.csv'</span>)</span>
-<span id="cb38-5"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(py_df.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb38-5"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(py_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        state abb region  population  total
 0     Alabama  AL  South     4779736    135
@@ -833,13 +833,13 @@ Read Excel Data
 </div>
 </section><section id="pd.dataframe.to_csv" class="slide level2"><h2><code>pd.DataFrame.to_csv</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> {<span class="st">"x"</span>:[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], </span>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> {<span class="st">"x"</span>:[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], </span>
 <span id="cb40-2"><a aria-hidden="true" tabindex="-1"></a>     <span class="st">"y"</span>:[<span class="st">'a'</span>, <span class="st">'b'</span>,<span class="st">'c'</span>]}</span>
 <span id="cb40-3"><a aria-hidden="true" tabindex="-1"></a>wdf <span class="op">=</span> pd.DataFrame(w)</span>
 <span id="cb40-4"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb40-5"><a aria-hidden="true" tabindex="-1"></a>wdf.to_csv(<span class="st">"./data/wdf.csv"</span>)</span>
 <span id="cb40-6"><a aria-hidden="true" tabindex="-1"></a>mydf <span class="op">=</span> pd.read_csv(<span class="st">'./data/wdf.csv'</span>)</span>
-<span id="cb40-7"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mydf.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb40-7"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mydf.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Unnamed: 0  x  y
 0           0  1  a
@@ -848,10 +848,10 @@ Read Excel Data
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">## index = False means don't write row names</span></span>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">## index = False means don't write row names</span></span>
 <span id="cb42-2"><a aria-hidden="true" tabindex="-1"></a>wdf.to_csv(<span class="st">"./data/wdf.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb42-3"><a aria-hidden="true" tabindex="-1"></a>mydf <span class="op">=</span> pd.read_csv(<span class="st">'./data/wdf.csv'</span>)</span>
-<span id="cb42-4"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mydf.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb42-4"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mydf.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   x  y
 0  1  a

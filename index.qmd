@@ -34,9 +34,9 @@ tbl-colwidths: [5,8,20,10,10,8,8]
 |  | Thu, Apr 2 | ***NO CLASS: Easter break*** |  |  |  |  |
 | 13 | Tue, Apr 7 | Logistic Regression; Data Splitting | [🖥️ K-nearest neighbors](/slides/18-knn-slides.html) |  |  |  |
 |  | Thu, Apr 9 | K-Nearest Neighbors |  | [📋22](/exercise/lab22-knn.html) |  |  |
-| 14 | Tue, Apr 14 | Decision Trees | [🖥️ decision Trees](/slides/19-trees-slides.html) |  | Activity 5 |  |
-|  | Thu, Apr 16 | Principal Component Analysis | 🖥️principal component analysis |  |  |  |
-| 15 | **Tue, Apr 21** | **Mini Project 3 Presentation: Supervised Learning** |  |  |  |  |
+| 14 | Tue, Apr 14 | Decision Trees | [🖥️ decision Trees](/slides/19-trees-slides.html) |  | [Activity 5](ai/ai_5.html) |  |
+|  | Thu, Apr 16 | Principal Component Analysis | [🖥️principal component analysis](/slides/20-pca-slides.html) |  |  |  |
+| 15 | **Tue, Apr 21** | [**Mini Project 3 Presentation: Supervised Learning**](/project/mini_project_3_new.html) |  |  |  |  |
 |  | Thu, Apr 23 | Principal Component Analysis |  | 📋23 | Activity 6 | 📂 Final Project Proposal Due |
 | 16 | Tue, Apr 28 | K-Means Clustering | 🖥️K-means clustering |  |  |  |
 |  | Thu, Apr 30 | K-Means Clustering [SDSS Conference](https://ww2.amstat.org/meetings/sdss/2026/) |  | 📋24 |  |  |

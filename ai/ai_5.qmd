@@ -318,17 +318,25 @@ Use this exact slide structure:
 
 Time: 12 to 15 minutes.
 
+```{r}
+#| echo: false
+#| column: margin
+knitr::include_graphics("../images/QRCode_ai5.png")
+```
+
+
 ## Individual Reflection (each student)
 
 Write 150 to 200 words answering:
 
-- What did AI help you learn
-- What did AI oversimplify or phrase too strongly
-- What did you contribute as a human thinker
-- How will you change your AI use in future data work
+* What did AI help you learn
+* What did AI miss or oversimplify
+* What did you contribute as a human thinker
+* How will you change your AI use in future data work
 
 Your reflection must match your assigned role.
 
-<!-- ## Participation (non-presenting students) -->
 
-<!-- Please scan the QR code, or go to `[your form link here]` to share what you learned from this activity. -->
+## Participation (non-presenting students)
+
+Please scan the QR code, or go to <https://forms.cloud.microsoft/r/pTkMpv3Qed> to share what you learned from this activity.

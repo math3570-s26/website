@@ -17,7 +17,6 @@ execute:
   echo: true
 ---
 
-
 #  {visibility="hidden"}
 
 \def\bx{\mathbf{x}}
@@ -100,35 +99,34 @@ knitr::knit_hooks$set(output = function(x, options) {
 theme_set(theme_minimal(base_size = 20))
 ```
 
-# {background-color="#CDECCF"}  {visibility="hidden"}
+# {background-color="#CDECCF"} {visibility="hidden"}
 
-::: {.left}
-<h1> Decision Trees </h1>
-<h2> Simple rules, visual structure, flexible predictions </h2>
+::: left
+<h1>Decision Trees</h1>
+
+<h2>Simple rules, visual structure, flexible predictions</h2>
 :::
-
 
 ## Why Do We Care About Trees?
 
 <!-- A tree predicts by **_splitting data into smaller and smaller groups_**. -->
 
-- A **decision tree** predicts by asking a sequence of simple questions.
+-   A **decision tree** predicts by asking a sequence of simple questions.
 
-- Each question splits the data into smaller and more **homogeneous** groups.
+-   Each question splits the data into smaller and more **homogeneous** groups.
 
-- Trees can be used for both **classification** and **regression**.
+-   Trees can be used for both **classification** and **regression**.
 
 . . .
 
-:::: {.columns}
-
+:::::::: columns
 ::: {.column width="33%"}
 ### Email
 
-Contains many links?  
+Contains many links?\
 → Yes
 
-Contains suspicious words?  
+Contains suspicious words?\
 → Yes
 
 **Classify as: Spam**
@@ -138,19 +136,16 @@ Contains suspicious words?
 #| out-width: 55%
 knitr::include_graphics("./images/17-logistic-reg/spam_filter.jpg")
 ```
-
 :::
 
-::: {.column width="33%"}
-
+:::: {.column width="33%"}
 ::: fragment
-
 ### Loans
 
-Income high enough?  
+Income high enough?\
 → Yes
 
-Debt too large?  
+Debt too large?\
 → No
 
 **Classify as: Approve**
@@ -160,21 +155,17 @@ Debt too large?
 #| out-width: 55%
 knitr::include_graphics("./images/17-logistic-reg/credit_card.jpeg")
 ```
-
 :::
+::::
 
-:::
-
-::: {.column width="33%"}
-
+:::: {.column width="33%"}
 ::: fragment
-
 ### Biology
 
-Petal length < 2.5 cm?  
+Petal length \< 2.5 cm?\
 → Yes
 
-Petal width < 1 cm?  
+Petal width \< 1 cm?\
 → Yes
 
 **Classify as: Setosa**
@@ -184,42 +175,34 @@ Petal width < 1 cm?
 #| out-width: 50%
 knitr::include_graphics("./images/19-trees/iris_setosa.png")
 ```
-
 :::
-
-:::
-
-
 ::::
-
-
-
+::::::::
 
 ## The Main Idea
 
-
-
-:::{.center}
-[_Instead of fitting one single equation, a tree repeatedly splits the **predictor** space into regions._]{.green}
+::: center
+[*Instead of fitting one single equation, a tree repeatedly splits the **predictor** space into regions.*]{.green}
 :::
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
+-   Start with all training data at the **root**.
 
-- Start with all training data at the **root**.
-- Ask a question such as `Petal.Length < 2.5?`
-- Split the data into two child nodes.
-- Keep splitting until the groups are simple enough.
-- At the end, each **leaf** makes a prediction.
+-   Ask a question such as `Petal.Length < 2.5?`
 
-- **Root node**: the first split
-- **Internal node**: a question
-- **Leaf (terminal) node**: the final prediction
-<!-- - **Path**: the sequence of questions followed by one observation -->
+-   Split the data into two child nodes.
 
+-   Keep splitting until the groups are simple enough.
+
+-   At the end, each **leaf** makes a prediction.
+
+-   **Root node**: the first split
+
+-   **Internal node**: a question
+
+-   **Leaf (terminal) node**: the final prediction <!-- - **Path**: the sequence of questions followed by one observation -->
 :::
-
 
 ::: {.column width="50%"}
 <!-- ## A Toy Tree -->
@@ -247,20 +230,12 @@ graph TD
     class F virginica;
     
 ```
-
-
 :::
-
-::::
-
-
-
+:::::
 
 ## Trees Split the Predictor Space
 
-
-:::: {.columns}
-
+::::: columns
 ::: {.column width="40%"}
 <!-- ## A Toy Tree -->
 
@@ -287,16 +262,12 @@ graph TD
     class F virginica;
     
 ```
-
-
 :::
 
-
 ::: {.column width="60%"}
-
-- A tree usually makes **axis parallel splits**.
-- In two predictors, these splits create rectangles.
-- Every rectangle corresponds to one leaf.
+-   A tree usually makes **axis parallel splits**.
+-   In two predictors, these splits create rectangles.
+-   Every rectangle corresponds to one leaf.
 
 ```{r}
 #| echo: false
@@ -324,15 +295,10 @@ ggplot(iris_tbl, aes(Petal.Length, Petal.Width, color = Species)) +
   ) +
   theme(legend.position = "bottom")
 ```
-
 :::
-
-::::
+:::::
 
 . . .
-
-
-
 
 ## How Does the Tree Choose a Split?
 
@@ -350,21 +316,19 @@ where $p_k$ is the proportion of class $k$ inside a node.
 
 . . .
 
-- If a node is all one class, Gini = 0.
-- If a node is a mixture of classes, Gini is larger.
-- The tree searches over many candidate questions and picks the split that most reduces impurity.
-
+-   If a node is all one class, Gini = 0.
+-   If a node is a mixture of classes, Gini is larger.
+-   The tree searches over many candidate questions and picks the split that most reduces impurity.
 
 ## Gini Intuition
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
 **Almost pure leaf**
 
-- 9 setosa
-- 1 versicolor
-- 0 virginica
+-   9 setosa
+-   1 versicolor
+-   0 virginica
 
 $$
 \text{Gini} = 1 - (0.9^2 + 0.1^2 + 0^2) = 0.18
@@ -374,50 +338,44 @@ $$
 ::: {.column width="50%"}
 **Mixed leaf**
 
-- 4 setosa
-- 3 versicolor
-- 3 virginica
+-   4 setosa
+-   3 versicolor
+-   3 virginica
 
 $$
 \text{Gini} = 1 - (0.4^2 + 0.3^2 + 0.3^2) = 0.66
 $$
 :::
-
-::::
+:::::
 
 . . .
 
-:::{.center}
+::: center
 [*Smaller Gini means a cleaner, easier to classify node.*]{.green}
 :::
 
-
 ## How Does Prediction Work?
 
-:::: {.columns}
-
-::: {.column width="60%"}
+:::::: columns
+:::: {.column width="60%"}
 To classify a new observation:
 
-1. Start at the root.
-2. Check the first rule.
-3. Move left or right.
-4. Continue until you reach a leaf.
-5. Predict the majority class in that leaf.
+1.  Start at the root.
+2.  Check the first rule.
+3.  Move left or right.
+4.  Continue until you reach a leaf.
+5.  Predict the majority class in that leaf.
 
 ::: fragment
-
 A leaf can also report estimated class probabilities.
 
 Example:
 
-- Leaf contains 18 versicolor and 2 virginica.
-- Predicted class = `versicolor`
-- Estimated probabilities: 0.90 and 0.10
-
+-   Leaf contains 18 versicolor and 2 virginica.
+-   Predicted class = `versicolor`
+-   Estimated probabilities: 0.90 and 0.10
 :::
-
-:::
+::::
 
 ::: {.column width="40%"}
 <!-- ## A Toy Tree -->
@@ -445,66 +403,54 @@ graph TD
     class F virginica;
     
 ```
-
 :::
-
-::::
-
+::::::
 
 ## Classification Trees vs. Regression Trees {visibility="hidden"}
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
 **Classification tree**
 
-- response is categorical
-- each leaf predicts a class
-- impurity often measured by Gini or entropy
+-   response is categorical
+-   each leaf predicts a class
+-   impurity often measured by Gini or entropy
 :::
 
 ::: {.column width="50%"}
 **Regression tree**
 
-- response is numerical
-- each leaf predicts an average
-- split quality often measured by reduction in squared error
+-   response is numerical
+-   each leaf predicts an average
+-   split quality often measured by reduction in squared error
 :::
-
-::::
+:::::
 
 . . .
 
 The structure is the same. Only the prediction target changes.
 
-
 ## Why Are Trees Popular?
 
-:::: {.columns}
-
-::: {.column width="50%"}
-
-- Very interpretable
-- Handle nonlinear relationships naturally
-- Capture interactions automatically
-- Need little preprocessing
-- Work with numerical and categorical predictors
+:::::: columns
+:::: {.column width="50%"}
+-   Very interpretable
+-   Handle nonlinear relationships naturally
+-   Capture interactions automatically
+-   Need little preprocessing
+-   Work with numerical and categorical predictors
 
 ::: fragment
-
 But they also have weaknesses:
 
-- can overfit
-- can be unstable
-- one small data change can change the tree a lot
-- axis parallel splits can be too rigid
-
+-   can overfit
+-   can be unstable
+-   one small data change can change the tree a lot
+-   axis parallel splits can be too rigid
 :::
-
-:::
+::::
 
 ::: {.column width="50%"}
-
 ```{r}
 #| echo: false
 #| fig-asp: 0.75
@@ -531,9 +477,8 @@ ggplot(iris_tbl, aes(Petal.Length, Petal.Width, color = Species)) +
   ) +
   theme(legend.position = "bottom")
 ```
-
 :::
-::::
+::::::
 
 ## Overfitting and Pruning
 
@@ -543,24 +488,23 @@ A very deep tree can memorize the training data.
 
 Common controls:
 
-- `tree_depth`: limit how deep the tree can grow
-- `min_n`: require enough observations before a split
-- `cost_complexity`: penalize unnecessary splits
+-   `tree_depth`: limit how deep the tree can grow
+-   `min_n`: require enough observations before a split
+-   `cost_complexity`: penalize unnecessary splits
 
 . . .
 
-:::{.center}
+::: center
 [*A shallow tree is often easier to explain and generalizes better.*]{.green}
 :::
 
-
 # {background-color="#A7D5E8" background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/parsnip.png" background-size="28%" background-position="90% 50%"} {visibility="hidden"}
 
-::: {.left}
-<h1> A Basic Example in R </h1>
-<h2> iris species from petal measurements </h2>
-:::
+::: left
+<h1>A Basic Example in R</h1>
 
+<h2>iris species from petal measurements</h2>
+:::
 
 ## Load and Prepare Data
 
@@ -577,7 +521,6 @@ iris_tree
 
 <!-- We will use only two predictors so the tree is easy to read. -->
 
-
 ## Training and Test Data
 
 ```{r}
@@ -590,7 +533,6 @@ test_tbl  <- testing(iris_split)
 dim(train_tbl)
 dim(test_tbl)
 ```
-
 
 ## Recipe and Model {visibility="hidden"}
 
@@ -608,19 +550,14 @@ tree_spec <- decision_tree(
 
 . . .
 
-- `tree_depth = 2` keeps the tree simple.
-- `cost_complexity` discourages unnecessary splits.
-
+-   `tree_depth = 2` keeps the tree simple.
+-   `cost_complexity` discourages unnecessary splits.
 
 ## Fit the Tree
 
-
-:::: {.columns}
-
-::: {.column width="35%"}
-
+::::::: columns
+:::: {.column width="35%"}
 ::: midi
-
 ```{r}
 #| code-line-numbers: false
 #| classes: my_class600
@@ -645,33 +582,25 @@ tree_fit <- workflow() |>
   add_model(tree_spec) |>
   fit(data = train_tbl)
 ```
-
 :::
 
-- `tree_depth = 2` keeps the tree simple.
-- `cost_complexity` discourages unnecessary splits.
-
-:::
-
+-   `tree_depth = 2` keeps the tree simple.
+-   `cost_complexity` discourages unnecessary splits.
+::::
 
 <!-- :::: {.columns} -->
 
-::: {.column width="65%"}
-
+:::: {.column width="65%"}
 ::: middle
-
 ```{r}
 #| echo: false
 #| classes: my_classfull
 #| class-output: my_classfull
 tree_fit
 ```
-
 :::
-
-:::
-
 ::::
+:::::::
 
 ## Visualize the Fitted Tree
 
@@ -693,16 +622,13 @@ rpart.plot(
 )
 ```
 
-
-
 ## Prediction on the Test Data
 
 <!-- :::: {.columns} -->
 
 <!-- ::: {.column width="55%"} -->
 
-::: middle
-
+:::: middle
 ```{r}
 #| code-line-numbers: false
 pred_tbl <- bind_cols(test_tbl, predict(tree_fit, test_tbl),
@@ -710,58 +636,52 @@ pred_tbl <- bind_cols(test_tbl, predict(tree_fit, test_tbl),
 pred_tbl[sample(1:30, 5), ] |> select(-c("Petal.Length", "Petal.Width"))
 ```
 
-
-
 <!-- ::: -->
 
 <!-- ::: {.column width="45%"} -->
 
 ::: fragment
-
 ```{r}
 #| code-line-numbers: false
 tree_pred <- predict(tree_fit, test_tbl) |> pull(.pred_class)
 table(truth = test_tbl$Species, pred = tree_pred)
 mean(tree_pred == test_tbl$Species)
 ```
-
 :::
-
-:::
+::::
 
 <!-- ::: -->
 
 <!-- :::: -->
 
 ::: notes
-- The fitted tree gives explicit rules.
-- The rules are easy to explain to another person.
-- The model is nonlinear without writing a complicated equation.
-- Tree tuning matters because a tree can be too shallow or too deep.
-- Decision trees are rule based models.
-- They are interpretable and flexible.
-- They work for both classification and regression.
-- They can overfit, so tuning and pruning matter.
-- They are a natural bridge to random forests and boosting later.
+-   The fitted tree gives explicit rules.
+-   The rules are easy to explain to another person.
+-   The model is nonlinear without writing a complicated equation.
+-   Tree tuning matters because a tree can be too shallow or too deep.
+-   Decision trees are rule based models.
+-   They are interpretable and flexible.
+-   They work for both classification and regression.
+-   They can overfit, so tuning and pruning matter.
+-   They are a natural bridge to random forests and boosting later.
 :::
-
 
 ## What Should Students Notice? {visibility="hidden"}
 
-- The fitted tree gives explicit rules.
-- The rules are easy to explain to another person.
-- The model is nonlinear without writing a complicated equation.
-- Tree tuning matters because a tree can be too shallow or too deep.
+-   The fitted tree gives explicit rules.
+-   The rules are easy to explain to another person.
+-   The model is nonlinear without writing a complicated equation.
+-   Tree tuning matters because a tree can be too shallow or too deep.
 
+#  {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" background-size="40%" background-position="90% 50%"}
 
-# {background-color="#ffde57" background-image="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" background-size="40%" background-position="90% 50%"}
-
-::: {.left}
+::: left
 <!-- <h1> A Basic Example in Python </h1> -->
-<!-- <h2> sklearn.tree.DecisionTreeClassifier </h2> -->
-<h1> sklearn.tree.DecisionTreeClassifier </h1>
-:::
 
+<!-- <h2> sklearn.tree.DecisionTreeClassifier </h2> -->
+
+<h1>sklearn.tree.DecisionTreeClassifier</h1>
+:::
 
 ## Load Packages and Data
 
@@ -812,11 +732,9 @@ tree.fit(X_trn, y_trn)
 In scikit-learn, ccp_alpha is defined as the complexity parameter for Minimal Cost-Complexity Pruning, and the chosen subtree is the largest one with cost complexity smaller than ccp_alpha. In rpart, cp is the complexity parameter used to trim or prune the tree. These are very closely related CART-style pruning controls, but because the implementations are in different libraries, you should not assume that 0.001 in scikit-learn and 0.001 in rpart will always give exactly the same final tree.
 :::
 
-
 ## Visualize the Tree
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Tree
 
 ```{python}
@@ -835,8 +753,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-
 ## Code
 
 ```{python}
@@ -850,9 +766,7 @@ plot_tree(
 )
 plt.show()
 ```
-
 :::
-
 
 ## Prediction and Accuracy
 
@@ -871,11 +785,9 @@ confusion_matrix(y_tst, y_pred)
 accuracy_score(y_tst, y_pred)
 ```
 
-
 ## R Code {visibility="hidden"}
 
 ::: midi
-
 ```{r}
 #| eval: false
 #| class-source: my_classfull
@@ -914,14 +826,11 @@ tree_pred <- predict(tree_fit, test_tbl) |>
 table(truth = test_tbl$Species, pred = tree_pred)
 mean(tree_pred == test_tbl$Species)
 ```
-
 :::
-
 
 ## Python Code {visibility="hidden"}
 
 ::: midi
-
 ```{python}
 #| eval: false
 import pandas as pd
@@ -955,14 +864,12 @@ y_pred = tree.predict(X_tst)
 confusion_matrix(y_tst, y_pred)
 accuracy_score(y_tst, y_pred)
 ```
-
 :::
-
 
 ## Takeaway {visibility="hidden"}
 
-- Decision trees are rule based models.
-- They are interpretable and flexible.
-- They work for both classification and regression.
-- They can overfit, so tuning and pruning matter.
-- They are a natural bridge to random forests and boosting later.
+-   Decision trees are rule based models.
+-   They are interpretable and flexible.
+-   They work for both classification and regression.
+-   They can overfit, so tuning and pruning matter.
+-   They are a natural bridge to random forests and boosting later.

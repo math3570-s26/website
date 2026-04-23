@@ -1,6 +1,6 @@
 ---
-title: "MATH/COSC 3570 Final Project Guidelines"
-date-modified: today
+title: "Final Project Guidelines"
+subtitle: "Team Data Science Report"
 author: "Dr. Cheng-Han Yu"
 format:
   html:
@@ -10,27 +10,17 @@ format:
 
 This project is the final team assignment for the course. The goal is to bring together the skills you have practiced throughout the semester in one clear, thoughtful, and well organized written report.
 
-
-A report template qmd file can be download
-<a href="./doc/final_project_report_template_checked.qmd" download>here</a>
-
-A report template PDF file can be download [here](./final_project_report_template_checked.qmd).
-
-
 ::: {.callout-note title="Quick Start"}
 -   Work in **teams of 3**.
 -   Submit **one final written report per team**.
--   Submit **one single PDF** that includes the main report, references, and appendix.
--   Use a **real dataset** and investigate **one focused question**.
+-   Use a **real dataset** and investigate **one (at most two) focused question**.
 -   Include data preparation, exploratory analysis, at least one course method, results, and limitations.
 -   No presentation is required.
 :::
 
-<!-- ::: {.callout-tip title="Purpose"} -->
-
-<!-- This project is not about using the most advanced method possible. It is about showing that you can carry out a complete data science workflow and communicate your reasoning clearly. -->
-
-<!-- ::: -->
+::: {.callout-tip title="Purpose"}
+This project is not about using the most advanced method possible. It is about showing that you can carry out a complete data science workflow and communicate your reasoning clearly.
+:::
 
 ## Learning Objectives
 
@@ -66,7 +56,7 @@ Your project should:
 -   include at least **one method from the course**
 -   remain at a level your team can explain clearly and honestly
 
-*You may compare more than one method, but this is optional.*
+You may compare more than one method for possible extra credits, but this is optional.
 
 ::: {.callout-warning title="Avoid Overly Ambitious Projects"}
 Avoid projects that depend on very advanced methods, very messy multi-source data collection, or a broad question that your team cannot answer well in the time available.
@@ -76,11 +66,7 @@ Avoid projects that depend on very advanced methods, very messy multi-source dat
 
 You may use a public dataset or another dataset approved by the instructor.
 
-::: callout-important
--   You may not use the dataset from your mini-projects.
-
--   Your dataset should be large enough and rich enough to support meaningful analysis.
-:::
+Your dataset should be large enough and rich enough to support meaningful analysis, but still manageable for an introductory project.
 
 In your report, clearly explain:
 
@@ -128,7 +114,7 @@ Use at least **one method from the course** in a meaningful way. Possible choice
 -   principal component analysis
 -   k-means clustering
 
-[You are welcome to use another method, but please get approval from Dr. Yu first.]{.blue}
+You are welcome to use another machine learning method; however, please first get approved by Dr. Yu.
 
 ### 6. Results
 
@@ -155,11 +141,7 @@ Discuss important limitations of your analysis. Possible issues include:
 
 Summarize the main takeaway of the project in plain language.
 
-### 9. References
-
-List the dataset source and any other references you used.
-
-### 10. Appendix
+### 9. Appendix
 
 Include the following in an appendix:
 
@@ -184,7 +166,7 @@ A shorter report is acceptable if it is complete, clear, and substantive. A long
 
 AI use is allowed, but your team remains responsible for the accuracy, quality, and clarity of the final report.
 
-Include a short AI use statement in the appendix. This statement should do **one** of the following:
+Include a short AI use statement in the appendix. This statement should do one of the following:
 
 -   state that your team did **not** use AI tools for the project, or
 -   briefly explain **which tool or tools** were used, **what they were used for**, and **how your team checked or revised the output**
@@ -211,8 +193,7 @@ If contributions were not fully equal, state that honestly and professionally. I
 
 ## Submission
 
--   Submit **one single PDF per team**.
--   The PDF should include the **main report, references, and appendix**.
+-   Submit **one final written report per team**.
 -   No presentation is required.
 -   Submit the report by the posted course deadline.
 
@@ -260,4 +241,3 @@ Before submitting, make sure your report:
 -   discusses limitations honestly
 -   includes an **AI use statement**
 -   includes a **team contribution statement**
--   is submitted as **one single PDF**

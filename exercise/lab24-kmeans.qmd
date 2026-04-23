@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
     fig.align = "center",
     out.width = "100%",
     fig.retina = 10,
-    fig.path = "../slides/images/20-kmeans/",
+    fig.path = "../slides/images/21-kmeans/",
     message = FALSE,
     global.par = TRUE
 )

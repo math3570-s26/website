@@ -1,6 +1,6 @@
 ---
-title: "MATH/COSC 3570 Final Project Guidelines"
-date-modified: today
+title: "Final Project Guidelines"
+subtitle: "Team Data Science Report"
 author: "Dr. Cheng-Han Yu"
 format:
   html:
@@ -9,13 +9,6 @@ format:
 ---
 
 This project is the final team assignment for the course. The goal is to bring together the skills you have practiced throughout the semester in one clear, thoughtful, and well organized written report.
-
-
-A report template qmd file can be download
-<a href="./doc/final_project_report_template_checked.qmd" download>here</a>
-
-A report template PDF file can be download [here](./final_project_report_template_checked.qmd).
-
 
 ::: {.callout-note title="Quick Start"}
 -   Work in **teams of 3**.
@@ -27,9 +20,7 @@ A report template PDF file can be download [here](./final_project_report_templat
 :::
 
 <!-- ::: {.callout-tip title="Purpose"} -->
-
 <!-- This project is not about using the most advanced method possible. It is about showing that you can carry out a complete data science workflow and communicate your reasoning clearly. -->
-
 <!-- ::: -->
 
 ## Learning Objectives
@@ -76,11 +67,13 @@ Avoid projects that depend on very advanced methods, very messy multi-source dat
 
 You may use a public dataset or another dataset approved by the instructor.
 
-::: callout-important
--   You may not use the dataset from your mini-projects.
+::: {.callout-important}
+- You may not use the dataset from your mini-projects.
 
--   Your dataset should be large enough and rich enough to support meaningful analysis.
+- Your dataset should be large enough and rich enough to support meaningful analysis.
 :::
+
+
 
 In your report, clearly explain:
 

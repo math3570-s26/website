@@ -1,0 +1,165 @@
+---
+title: "Write a clear and informative project title here"
+subtitle: "MATH 3570 Intro to Data Science Spring 2026"
+author: "Your Team Name"
+date: today
+format:
+  pdf:
+    number-sections: true
+    colorlinks: true
+    geometry:
+      - margin=1in
+    fontsize: 11pt
+    linestretch: 1.15
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+Replace all bracketed text with your own writing. Delete any instructional notes that are not part of your final report.
+
+# Introduction
+
+\[In 1 to 3 paragraphs, introduce the topic, explain why it matters, and state the main goal of the project.\]
+
+## Research Question
+
+\[State your one main question clearly. Keep the project focused.\]
+
+# Data Description
+
+## Data Source
+
+\[Explain where the data came from. Include the source name, website, organization, or publication if applicable.\]
+
+## Observational Units
+
+\[Explain what one row of the data represents. For example, one person, one house, one song, one county, and so on.\]
+
+## Key Variables
+
+\[Briefly describe the most important variables used in your project. You do not need to list every variable in the full dataset, only the variables that matter for your analysis.\]
+
+## Data Limitations or Quality Concerns
+
+\[Briefly discuss any important issues in the dataset, such as missing values, measurement problems, unclear definitions, limited scope, or possible bias.\]
+
+# Data Preparation
+
+\[Explain how you prepared the data for analysis. Write this as a clear narrative, not only as code.\]
+
+Possible items to describe if relevant:
+
+-   handling missing values
+-   filtering observations
+-   recoding variables
+-   reshaping data
+-   joining datasets
+-   creating new variables
+
+## Summary of Data Preparation
+
+\[Write 1 short paragraph summarizing the most important preparation steps and why they were necessary.\]
+
+# Exploratory Analysis
+
+\[Use this section to help the reader understand the data before you apply a method. Each figure or table should have a clear purpose and should be discussed in words.\]
+
+## Summary Table
+
+\[Insert at least 1 summary table here. Introduce it in words and explain what the reader should notice.\]
+
+## Figure 1
+
+\[Insert Figure 1 here. Then explain what the figure shows and why it matters for your project question.\]
+
+## Figure 2
+
+\[Insert Figure 2 here. Then explain what the figure shows and why it matters for your project question.\]
+
+## Figure 3
+
+\[Insert Figure 3 here. Then explain what the figure shows and why it matters for your project question.\]
+
+\[Add more figures if they are useful, but do not include plots only to fill space.\]
+
+# Method
+
+\[Explain the method or methods you used. Use clear language. The goal is to show that you understand what the method does and why it is appropriate for your question.\]
+
+## Chosen Method
+
+\[Name the method here, such as multiple linear regression, logistic regression, decision tree, k-nearest neighbors, principal component analysis, or k-means clustering.\]
+
+## Why This Method Was Used
+
+\[Explain why this method fits your project question and your data.\]
+
+## Important Details
+
+\[Briefly explain any key choices you made, such as predictor variables, training and testing split, tuning choices, selected number of clusters, or principal components interpreted.\]
+
+# Results
+
+\[Present the main findings from your method. Focus on the results that help answer your question.\]
+
+## Main Findings
+
+\[Explain the most important results in plain language.\]
+
+## Interpretation
+
+\[Interpret the results carefully in context. Avoid overstating what the analysis shows. Be especially careful about prediction versus explanation and association versus causation.\]
+
+# Limitations
+
+\[Discuss important limitations of the data, method, and conclusions. This section should be honest and thoughtful.\]
+
+Possible ideas to discuss if relevant:
+
+-   missing information
+-   possible bias
+-   model assumptions
+-   measurement error
+-   limited generalizability
+-   small sample size
+-   uncertainty in the conclusions
+
+# Conclusion
+
+\[Write a short conclusion that answers the main project question as clearly as possible. Summarize the most important takeaway in plain language.\]
+
+# References
+
+\[List any sources you used, such as the dataset source, articles, documentation, or other references.\]
+
+# Appendix A. AI Use Statement
+
+Our team used the following AI tool or tools: \[name of tool or tools\].
+
+AI was used for the following tasks:
+
+-   \[example: brainstorming possible project questions\]
+-   \[example: helping explain code errors\]
+-   \[example: improving wording or editing sentences\]
+-   \[example: suggesting visualization ideas\]
+
+To check and revise the AI output, our team:
+
+-   \[example: verified results using our own code and analysis\]
+-   \[example: corrected inaccurate or vague explanations\]
+-   \[example: rewrote parts of the text in our own words\]
+-   \[example: compared suggestions against course materials and dataset documentation\]
+
+Final responsibility for the accuracy and clarity of the report remained with our team.
+
+# Appendix B. Team Contribution Statement
+
+Use the format below and revise it to match your project honestly.
+
+-   **Team Member 1 Name:** \[main contributions\]
+-   **Team Member 2 Name:** \[main contributions\]
+-   **Team Member 3 Name:** \[main contributions\]
+
+\[Add 1 to 2 sentences describing how your team divided the work, communicated, and reviewed the final report together. If contributions were not fully equal, state that professionally and honestly.\]

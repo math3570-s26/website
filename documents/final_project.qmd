@@ -1,0 +1,265 @@
+---
+title: "Final Project Guidelines"
+subtitle: "Team Data Science Report"
+author: "Dr. Cheng-Han Yu"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+This project is the final team assignment for the course. The goal is to bring together the skills you have practiced throughout the semester in one clear, thoughtful, and well organized written report.
+
+<!-- Unlike the earlier plan in the syllabus, the final project does **not** require a presentation. Your team will submit **one written report only**. -->
+
+::: {.callout-note title="Quick Start"}
+-   Work in **teams of 3**.
+-   Submit **one final written report per team**.
+-   Use a **real dataset** and investigate **one (at most two) focused question**.
+-   Include data preparation, exploratory analysis, at least one course method, results, and limitations.
+-   No presentation is required.
+:::
+
+::: {.callout-tip title="Purpose"}
+This project is not about using the most advanced method possible. It is about showing that you can carry out a complete data science workflow and communicate your reasoning clearly.
+:::
+
+## Learning Objectives
+
+By completing this project, you should be able to:
+
+1.  pose a focused question that can be investigated with data
+2.  describe, clean, and prepare a real dataset for analysis
+3.  use visualizations and summaries to explore patterns in data
+4.  apply at least one method from the course appropriately
+5.  interpret results carefully and communicate conclusions clearly
+6.  discuss limitations, uncertainty, and possible improvements
+
+## Task Overview
+
+Your team will:
+
+1.  choose a dataset and a focused project question
+2.  describe the data source, observational units, and key variables
+3.  clean and prepare the data for analysis
+4.  carry out exploratory analysis using tables and visualizations
+5.  apply at least one course method
+6.  interpret results in context
+7.  write a clear final report
+
+## Project Scope
+
+A strong project is usually **focused and well executed**, not overly ambitious.
+
+Your project should:
+
+-   investigate **one main question**
+-   use **one main dataset** or two datasets that can be combined in a simple and well explained way
+-   include at least **one method from the course**
+-   remain at a level your team can explain clearly and honestly
+
+You may compare more than one method for possible extra credits, but this is optional.
+
+::: {.callout-warning title="Avoid Overly Ambitious Projects"}
+Avoid projects that depend on very advanced methods, very messy multi-source data collection, or a broad question that your team cannot answer well in the time available.
+:::
+
+## Data Requirements
+
+You may use a public dataset or another dataset approved by the instructor.
+
+Your dataset should be large enough and rich enough to support meaningful analysis, but still manageable for an introductory project.
+
+In your report, clearly explain:
+
+-   where the data came from
+-   what the observational units are
+-   what the important variables mean
+-   any important limitations or quality concerns in the data
+
+## Required Report Components
+
+Your final report should include all of the following.
+
+### 1. Introduction
+
+State the main question clearly and explain why it is worth investigating.
+
+### 2. Data Description
+
+Describe the data source, observational units, key variables, and any important data quality issues.
+
+### 3. Data Preparation
+
+Explain how the data were prepared for analysis. Depending on the project, this may include:
+
+-   handling missing values
+-   filtering observations
+-   recoding variables
+-   reshaping or joining data
+-   creating new variables
+
+### 4. Exploratory Analysis
+
+Include informative summary statistics and visualizations that help the reader understand the data and the project question.
+
+Each figure or table should be discussed in words. Do not include plots only to fill space.
+
+### 5. Method
+
+Use at least **one method from the course** in a meaningful way. Possible choices include:
+
+-   multiple linear regression
+-   logistic regression
+-   decision trees
+-   k-nearest neighbors
+-   principal component analysis
+-   k-means clustering
+
+You are welcome to use another machine learning method; however, please first get approved by Dr. Yu.
+
+### 6. Results
+
+Explain what your analysis found. Interpret results in context using clear language.
+
+Your report should show that you understand the difference between:
+
+-   prediction and explanation
+-   association and causation
+-   statistical patterns and strong conclusions
+
+### 7. Limitations
+
+Discuss important limitations of your analysis. Possible issues include:
+
+-   data quality
+-   missing information
+-   possible bias
+-   modeling assumptions
+-   limited scope of conclusions
+-   what could be improved with more time or better data
+
+### 8. Conclusion
+
+Summarize the main takeaway of the project in plain language.
+
+### 9. Appendix
+
+Include the following in an appendix:
+
+-   brief AI use statement, if applicable
+-   short team contribution statement
+
+## Report Expectations
+
+Your report should:
+
+-   be clearly written and well organized
+-   include a title and all team member names
+-   include at least **3 informative figures**
+-   include at least **1 summary table**
+-   use at least **1 course method** or **a method approved by Dr. Yu**
+-   explain results in complete sentences, not only code or output
+-   be approximately **5 to 8 pages**, not counting references or appendix
+
+A shorter report is acceptable if it is complete, clear, and substantive. A longer report is not automatically better.
+
+## AI Use
+
+You may use AI tools as part of your workflow, but your team remains responsible for the accuracy, quality, and clarity of the final report.
+
+If you use AI, include a short appendix that states:
+
+-   which tool or tools you used
+-   what kinds of tasks AI helped with
+-   how your team checked, revised, or verified the output
+
+AI should support your thinking, not replace it.
+
+## Submission
+
+-   Submit **one final written report per team**.
+-   No presentation is required.
+-   Submit the report by the posted course deadline.
+
+## Evaluation Criteria
+
+Your project will be evaluated based on:
+
+-   clarity and focus of the project question
+-   quality of data understanding and preparation
+-   usefulness and interpretation of exploratory analysis
+-   appropriateness and correctness of the method
+-   quality of interpretation and discussion of limitations
+-   organization and writing quality of the final report
+
+## Rubric Summary
+
+| Criterion                              |  Points |
+|:---------------------------------------|--------:|
+| Question and motivation                |      10 |
+| Data understanding and preparation     |      20 |
+| Exploratory analysis and visualization |      20 |
+| Method choice and implementation       |      20 |
+| Interpretation and limitations         |      20 |
+| Writing quality and organization       |      10 |
+| **Total**                              | **100** |
+
+## Grading Rubric
+
+### Question and Motivation (10 points)
+
+-   **Excellent (9 to 10):** Research question is clear, focused, and meaningful. Motivation is strong and appropriate for the data.
+-   **Good (7 to 8):** Research question is clear but could be more focused or better motivated.
+-   **Satisfactory (5 to 6):** Research question is present but somewhat vague or weakly motivated.
+-   **Needs Improvement (0 to 4):** Research question is unclear, too broad, or poorly matched to the data.
+
+### Data Understanding and Preparation (20 points)
+
+-   **Excellent (18 to 20):** Data source, units, variables, and preparation steps are clearly explained. Cleaning decisions are thoughtful and appropriate.
+-   **Good (14 to 17):** Data and preparation are mostly clear, with minor gaps in explanation or justification.
+-   **Satisfactory (10 to 13):** Basic data description and preparation are present, but important details are missing or unclear.
+-   **Needs Improvement (0 to 9):** Data source, variables, or preparation steps are poorly explained or inadequate.
+
+### Exploratory Analysis and Visualization (20 points)
+
+-   **Excellent (18 to 20):** Visualizations and summaries are informative, well chosen, and clearly interpreted. They support the project question effectively.
+-   **Good (14 to 17):** Visualizations and summaries are useful, with some interpretation and relevance.
+-   **Satisfactory (10 to 13):** Some exploratory work is present, but it is limited, weakly interpreted, or not well connected to the question.
+-   **Needs Improvement (0 to 9):** Exploratory analysis is minimal, unclear, or poorly presented.
+
+### Method Choice and Implementation (20 points)
+
+-   **Excellent (18 to 20):** Method is appropriate, correctly applied, and clearly explained. The analysis shows strong understanding of course ideas.
+-   **Good (14 to 17):** Method is appropriate and mostly correct, with minor issues in explanation or execution.
+-   **Satisfactory (10 to 13):** Method is used but only at a basic level, or there are noticeable weaknesses in fit, explanation, or relevance.
+-   **Needs Improvement (0 to 9):** Method is inappropriate, incorrectly applied, or insufficiently explained.
+
+### Interpretation and Limitations (20 points)
+
+-   **Excellent (18 to 20):** Results are interpreted carefully and accurately in context. Limitations are thoughtful, honest, and substantive.
+-   **Good (14 to 17):** Interpretation is mostly accurate, and limitations are discussed with reasonable care.
+-   **Satisfactory (10 to 13):** Interpretation is somewhat superficial or occasionally overstated. Limitations are present but limited.
+-   **Needs Improvement (0 to 9):** Interpretation is unclear, overstated, or inaccurate. Limitations are missing or very weak.
+
+### Writing Quality and Organization (10 points)
+
+-   **Excellent (9 to 10):** Report is polished, well organized, easy to follow, and professionally written.
+-   **Good (7 to 8):** Report is clear and organized, with only minor issues in flow or writing quality.
+-   **Satisfactory (5 to 6):** Report is readable but uneven in clarity, organization, or polish.
+-   **Needs Improvement (0 to 4):** Report is difficult to follow, poorly organized, or contains substantial writing issues.
+
+## Submission Checklist
+
+Before submitting, make sure your report:
+
+-   states a clear question
+-   explains the dataset clearly
+-   shows meaningful data cleaning and preparation
+-   includes at least **3 informative figures**
+-   includes at least **1 summary table**
+-   uses at least **1 course method or a method approved by Dr. Yu**
+-   interprets results carefully
+-   discusses limitations honestly
+-   includes AI use disclosure if applicable
+-   includes a team contribution statement

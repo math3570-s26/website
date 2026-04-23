@@ -292,7 +292,15 @@ Use this exact slide structure:
 
 Time: 12 to 15 minutes.
 
-## Individual Reflection (each student)
+
+```{r}
+#| echo: false
+#| column: margin
+knitr::include_graphics("../images/QRCode_ai6.png")
+```
+
+
+## Individual Reflection (presenting students)
 
 Write 150 to 200 words answering:
 
@@ -303,6 +311,7 @@ Write 150 to 200 words answering:
 
 Your reflection must match your assigned role.
 
+
 ## Participation (non-presenting students)
 
-Please scan the QR code, or go to `[your form link here]` to share what you learned from this activity.
+Please scan the QR code, or go to <https://forms.cloud.microsoft/r/4ryuhhwQ8r> to share what you learned from this activity.

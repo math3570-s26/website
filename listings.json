@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/project.html",
+    "items": [
+      "/project/mini_project_1.html",
+      "/project/mini_project_2.html",
+      "/project/mini_project_3_new.html"
+    ]
+  },
+  {
     "listing": "/ai.html",
     "items": [
       "/ai/ai_1.html",
@@ -9,15 +17,6 @@
       "/ai/ai_5.html",
       "/ai/ai_6.html",
       "/ai/ai_6_shortened.html"
-    ]
-  },
-  {
-    "listing": "/project.html",
-    "items": [
-      "/project/mini_project_1.html",
-      "/project/mini_project_2.html",
-      "/project/mini_project_3_new.html",
-      "/project/mini_project_3.html"
     ]
   }
 ]

@@ -2,7 +2,7 @@ project:
   type: website
   render:
     - "*.qmd"
-    - "!doc/*.qmd"
+    - "!documents/*.qmd"
 website:
   page-navigation: true
   title: "MATH/COSC 3570 - Spring 2026"
@@ -72,7 +72,7 @@ website:
         contents:
           - href: present-description-final.qmd
             text: Guideline and Policy
-          - href: final_project_report_template_checked.qmd
+          - href: documents/final_project_report_template_checked.qmd
             text: Final Project Report Template
 
 

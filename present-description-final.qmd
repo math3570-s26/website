@@ -11,10 +11,10 @@ format:
 This project is the final team assignment for the course. The goal is to bring together the skills you have practiced throughout the semester in one clear, thoughtful, and well organized written report.
 
 
-A report template qmd file can be download
-<a href="./doc/final_project_report_template_checked.qmd" download>here</a>
+A report template **qmd** file can be download
+<a href="./documents/final_project_report_template_checked.qmd" download>here</a>
 
-A report template PDF file can be download [here](./final_project_report_template_checked.qmd).
+A report template **PDF** file can be download [here](./final_project_report_template_checked.qmd)
 
 
 ::: {.callout-note title="Quick Start"}
